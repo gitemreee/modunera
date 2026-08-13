@@ -23,6 +23,10 @@
   --brand:#8D321F;--brand-dark:#6f2718;--wine:#8D321F;
   --forest:#3A4027;--forest-950:#2B2D31;--forest-900:#3A4027;--forest-800:#4d5737;--forest-700:#66704b;
   --sand:#C29B72;--sand-2:#ead9c8;--clay:#8D321F;
+  /* brand tokens under their documented names; the aliases below keep the 164-class
+     v1 contract working without repainting the site */
+  --brand-beige:#C29B72;--brand-terracotta:#8D321F;--brand-olive:#3A4027;
+  --brand-charcoal:#2B2D31;--brand-cream:#F4E9DA;
   --paper:#faf8f5;--paper-2:#f1ece5;--ink:#2B2D31;--muted:#6c6a66;
   --line:rgba(43,45,49,.14);--line-strong:rgba(43,45,49,.26);
   --shadow:0 1px 2px rgba(43,45,49,.07);--shadow-soft:0 1px 2px rgba(43,45,49,.05);
@@ -77,10 +81,20 @@ p{margin:0 0 10px}
 .section-header{gap:32px;margin-bottom:26px;align-items:end}
 .section-header p{color:var(--muted);max-width:60ch;margin:0}
 
+/* --- Brand lockup ---------------------------------------------------------
+   The master logo is a 3.97:1 lockup (terracotta roof/mountain mark plus a
+   charcoal wordmark) on transparency. object-fit:contain keeps the ratio no
+   matter what box it lands in; the header surface stays light so the charcoal
+   wordmark reads. */
+.brand{display:flex;align-items:center}
+.brand img{width:150px;height:auto;max-height:38px;object-fit:contain}
+/* On the charcoal footer the wordmark would disappear, so the lockup is
+   rendered white there. */
+.footer .brand img,.factory-copy .brand img{filter:brightness(0) invert(1);opacity:.92}
+
 /* --- Navigation ----------------------------------------------------------- */
 .nav{background:rgba(250,248,245,.94);backdrop-filter:blur(16px) saturate(1.05);border-bottom:1px solid var(--line)}
 .nav-inner{height:62px;gap:18px}
-.brand img{width:150px;max-height:38px;object-fit:contain}
 .nav-links{gap:22px;font-size:.82rem;font-weight:750;letter-spacing:-.005em}
 .nav-links>a,.nav-dropdown>button{padding:20px 0}
 .nav-links>a:after{bottom:14px;height:2px;background:var(--terracotta)}
@@ -206,9 +220,7 @@ p{margin:0 0 10px}
 /* --- Footer --------------------------------------------------------------- */
 .footer{padding:44px 0 0}
 .footer-grid{gap:26px}
-/* The logo is a terracotta mark plus a charcoal wordmark on transparency, so the
-   wordmark disappears against the charcoal footer. Render it as a white lockup. */
-.footer .brand img,.factory-copy .brand img{width:150px;max-height:34px;filter:brightness(0) invert(1);opacity:.92}
+.footer .brand img{max-height:34px}
 .footer h4{color:rgba(255,255,255,.5)}
 .footer a{font-size:var(--fs-small)}
 .footer-bottom{margin-top:30px;padding:16px 0;font-size:var(--fs-label);letter-spacing:.04em}
@@ -222,6 +234,32 @@ p{margin:0 0 10px}
 .adv-card .num{display:block;font-size:var(--fs-label);letter-spacing:.14em;color:var(--terracotta);font-weight:800;margin-bottom:9px}
 .adv-card h3{margin:0 0 5px}
 .adv-card p{font-size:var(--fs-small);color:var(--muted);margin:0}
+
+/* Brand overture band — the one premium placement of the sunrise-glow lockup,
+   at the top of the two home pages. The band's gradient is sampled from the
+   artwork itself (corners #1C1C21, bright centre #9A3A22) so the image dissolves
+   into the page rather than sitting inside a card. No border, no radius.
+   Above 768px the glow artwork is served; at or below it the <picture> falls
+   back to the white master lockup and the glow is recreated in CSS, because the
+   artwork's wordmark would be about ten pixels tall on a phone. */
+.brand-band{background:#1c1c21;display:block;overflow:hidden;line-height:0;
+  animation:brand-rise 900ms cubic-bezier(.22,.7,.3,1) both}
+/* Full bleed on tablet and up: the artwork's own gradient becomes the band, so
+   there is no edge where a card or frame could appear. object-fit:cover trims the
+   composition vertically and leaves the centred lockup untouched. */
+.brand-band img{display:block;width:100%;height:clamp(240px,24vw,340px);object-fit:cover;
+  object-position:center 56%;border:0;border-radius:0;box-shadow:none}
+@keyframes brand-rise{from{opacity:0;transform:translateY(8px);filter:brightness(.84)}to{opacity:1;transform:none;filter:brightness(1)}}
+/* On phones the <picture> falls back to the white master lockup, so the band
+   paints the glow itself rather than shipping a 1774px artwork whose wordmark
+   would be about ten pixels tall. */
+@media(max-width:768px){
+  .brand-band{background:radial-gradient(ellipse 78% 96% at 50% 46%,#7d3520 0%,#46251f 38%,#2a2023 70%,#1c1c21 100%);
+    display:grid;place-items:center;min-height:176px;padding:30px 16px;line-height:normal}
+  .brand-band img{width:min(320px,76vw);height:auto;max-height:82px;object-fit:contain;
+    filter:drop-shadow(0 0 22px rgba(194,155,114,.5)) drop-shadow(0 0 58px rgba(141,50,31,.55))}
+}
+@media(prefers-reduced-motion:reduce){.brand-band{animation:none}}
 
 /* Key-figure strip */
 .kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp-gap);margin:18px 0}

@@ -64,7 +64,7 @@ function head({ file, lang, title, description, image = "hero-forest.webp", alte
   const root = rootFor(file);
   const canonical = canonicalFor(file);
   const locale = lang === "de" ? "de_DE" : "en_GB";
-  return `<!doctype html><html lang="${lang === "de" ? "de-DE" : "en"}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)}</title><meta name="description" content="${esc(description)}"><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><meta name="theme-color" content="#C29B72"><link rel="canonical" href="${canonical}">${alternateDe ? `<link rel="alternate" hreflang="de" href="${alternateDe}">` : ""}${alternateEn ? `<link rel="alternate" hreflang="en" href="${alternateEn}">` : ""}${alternateDe ? `<link rel="alternate" hreflang="x-default" href="${alternateDe}">` : ""}<link rel="stylesheet" href="${root}assets/css/styles.css"><link rel="icon" type="image/png" href="${root}assets/images/modunera-mark.png"><meta property="og:type" content="website"><meta property="og:site_name" content="MODUNERA"><meta property="og:locale" content="${locale}"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${BASE}assets/images/gallery/${image}"><meta name="twitter:card" content="summary_large_image">${schemas(schema)}</head><body>`;
+  return `<!doctype html><html lang="${lang === "de" ? "de-DE" : "en"}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)}</title><meta name="description" content="${esc(description)}"><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><meta name="theme-color" content="#C29B72"><link rel="canonical" href="${canonical}">${alternateDe ? `<link rel="alternate" hreflang="de" href="${alternateDe}">` : ""}${alternateEn ? `<link rel="alternate" hreflang="en" href="${alternateEn}">` : ""}${alternateDe ? `<link rel="alternate" hreflang="x-default" href="${alternateDe}">` : ""}<link rel="stylesheet" href="${root}assets/css/styles.css"><link rel="icon" type="image/png" href="${root}assets/brand/modunera-mark-v1.png"><meta property="og:type" content="website"><meta property="og:site_name" content="MODUNERA"><meta property="og:locale" content="${locale}"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${BASE}assets/images/gallery/${image}"><meta name="twitter:card" content="summary_large_image">${schemas(schema)}</head><body>`;
 }
 
 /* --- navigation ----------------------------------------------------------
@@ -168,7 +168,7 @@ function nav(root, lang) {
       return `<div class="nav-dropdown"><button type="button">${item.label}</button><div class="nav-menu">${entries}</div></div>`;
     })
     .join("");
-  return `<nav class="nav" aria-label="${m.label}"><div class="container nav-inner"><a class="brand" href="${root}${m.home}"><img src="${root}assets/images/modunera-logo.png" alt="MODUNERA"></a><div class="nav-links">${links}</div><div class="nav-actions"><a class="lang-switch" href="${root}${m.switchTo}">DE · EN</a><a class="btn btn-primary" href="${waLink(m.ctaMsg)}" target="_blank" rel="noopener">${m.cta}</a><button class="mobile-toggle" aria-label="${m.toggle}">☰</button></div></div></nav>`;
+  return `<nav class="nav" aria-label="${m.label}"><div class="container nav-inner">${brandLockup(root, root + m.home, lang)}<div class="nav-links">${links}</div><div class="nav-actions"><a class="lang-switch" href="${root}${m.switchTo}">DE · EN</a><a class="btn btn-primary" href="${waLink(m.ctaMsg)}" target="_blank" rel="noopener">${m.cta}</a><button class="mobile-toggle" aria-label="${m.toggle}">☰</button></div></div></nav>`;
 }
 
 function chrome(root, lang) {
@@ -176,9 +176,38 @@ function chrome(root, lang) {
   return `<a class="skip" href="#main">${m.skip}</a><div class="scroll-progress"></div>${nav(root, lang)}`;
 }
 
+/* --- brand assets ---------------------------------------------------------
+   assets/brand/ holds the two master files under their original names plus the
+   derivatives tools/generate-brand-assets.py produces from them. The old
+   assets/images/modunera-logo.png and modunera-mark.png stay in place as legacy
+   until every reference has been verified as gone.                          */
+
+const BRAND = "assets/brand/";
+const LOGO = "modunera-master-logo-mountain-v1";
+const LOGO_W = 600;
+const LOGO_H = 151;
+const MARK = "modunera-mark-v1.png";
+const GLOW = "modunera-digital-sunrise-glow-v1";
+
+function brandLockup(root, href, lang) {
+  const src = `${root}${BRAND}${LOGO}`;
+  const label = lang === "de" ? "Modunera Startseite" : "Modunera home";
+  // Never lazy: the lockup is above the fold on every page. width/height carry the
+  // intrinsic ratio so the header reserves its box before the image arrives.
+  return `<a class="brand" href="${href}" aria-label="${label}"><img src="${src}-600.png" srcset="${src}-300.png 300w, ${src}-600.png 600w, ${src}-900.png 900w" sizes="150px" width="${LOGO_W}" height="${LOGO_H}" alt="Modunera" decoding="async"></a>`;
+}
+
+function brandBand(root, lang) {
+  const src = `${root}${BRAND}${GLOW}`;
+  const alt = lang === "de" ? "Modunera" : "Modunera";
+  // A <picture> so exactly one file is fetched: the glow artwork on tablet and up,
+  // the white master lockup on phones where the artwork's wordmark would be tiny.
+  return `<section class="brand-band" id="brand-overture" aria-label="${lang === "de" ? "Marke" : "Brand"}"><picture><source media="(min-width:769px)" type="image/webp" srcset="${src}-900.webp 900w, ${src}-1400.webp 1400w" sizes="(max-width:1200px) 92vw, 1060px"><source media="(min-width:769px)" type="image/jpeg" srcset="${src}-1400.jpg"><img src="${root}${BRAND}${LOGO}-white-600.png" alt="${alt}" decoding="async" fetchpriority="high"></picture></section>`;
+}
+
 function footer(root, lang) {
   const de = lang === "de";
-  return `<section class="cta-band"><div class="container cta-inner"><div><h2>${de ? "Projekt in 2 Minuten starten." : "Start your project in two minutes."}</h2><p>${de ? "Zielland, Nutzung und Wunschmodell per WhatsApp senden – wir strukturieren den nächsten Schritt." : "Send your country, intended use and preferred model via WhatsApp and we will structure the next step."}</p></div><a class="btn btn-light" href="${waLink(de ? "Hallo MODUNERA, mein Zielland ist: __. Nutzung: __. Wunschgröße/Modell: __. Bitte kontaktieren Sie mich." : "Hello MODUNERA. Destination country: __. Intended use: __. Preferred size/model: __. Please contact me.")}" target="_blank" rel="noopener">${de ? "WhatsApp-Anfrage →" : "WhatsApp enquiry →"}</a></div></section><footer class="footer"><div class="container"><div class="footer-grid"><div><a class="brand" href="${root}${de ? "index.html" : "en/"}"><img src="${root}assets/images/modunera-logo.png" alt="MODUNERA"></a><p>${de ? "Tiny Houses als Kernprodukt. Dazu Modulbau, Stahlbau, Bungalows und maßgefertigte Möbel – direkt aus eigener Produktion für Europa." : "Tiny houses are our core product, complemented by modular buildings, steel structures, bungalows and bespoke furniture for Europe."}</p><a href="tel:${PHONE_TEL}">${PHONE_DISPLAY}</a></div><div><h4>${de ? "Länder" : "Countries"}</h4><a href="${root}${de ? "laender/deutschland/" : "en/countries/germany/"}">${de ? "Deutschland" : "Germany"}</a><a href="${root}${de ? "laender/niederlande/" : "en/countries/netherlands/"}">${de ? "Niederlande" : "Netherlands"}</a><a href="${root}${de ? "laender/daenemark/" : "en/countries/denmark/"}">${de ? "Dänemark" : "Denmark"}</a><a href="${root}${de ? "laender/luxemburg/" : "en/countries/luxembourg/"}">Luxembourg</a><a href="${root}${de ? "laender/schweiz/" : "en/countries/switzerland/"}">${de ? "Schweiz" : "Switzerland"}</a></div><div><h4>${de ? "Vergleichen" : "Compare"}</h4><a href="${root}${de ? "modellvergleich/" : "en/model-comparison/"}">${de ? "Modellvergleich" : "Model comparison"}</a><a href="${root}${de ? "preisvergleich/" : "en/price-comparison/"}">${de ? "Preisvergleich" : "Price comparison"}</a><a href="${root}${de ? "vorteile/" : "en/advantages/"}">${de ? "Vorteile" : "Advantages"}</a><a href="${root}studio/">Design Studio</a></div><div><h4>${de ? "Wissen" : "Knowledge"}</h4><a href="${root}${de ? "ratgeber/" : "en/guides/"}">${de ? "Ratgeber" : "Guides"}</a><a href="${root}${de ? "blog/europa/" : "en/guides/"}">${de ? "Europa-Guides" : "Europe guides"}</a><a href="${root}${de ? "faq/europa/" : "en/faq/"}">FAQ</a><a href="${root}kontakt/">${de ? "Kontakt" : "Contact"}</a></div></div><div class="footer-bottom"><span>© <span data-year>2026</span> MODUNERA. ${de ? "Alle Rechte vorbehalten." : "All rights reserved."}</span><span>${de ? "Hinweise ersetzen keine Behörden-, Rechts-, Steuer- oder Statikberatung." : "Guidance does not replace authority, legal, tax or structural advice."}</span></div></div></footer><div class="floating-actions"><a href="${waLink(de ? "Hallo MODUNERA, ich interessiere mich für ein Tiny House. Bitte kontaktieren Sie mich." : "Hello MODUNERA, I am interested in a tiny house. Please contact me.")}" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a><a href="tel:${PHONE_TEL}" aria-label="${de ? "Telefon" : "Phone"}">☎</a></div><script src="${root}assets/js/main.js"></script></body></html>`;
+  return `<section class="cta-band"><div class="container cta-inner"><div><h2>${de ? "Projekt in 2 Minuten starten." : "Start your project in two minutes."}</h2><p>${de ? "Zielland, Nutzung und Wunschmodell per WhatsApp senden – wir strukturieren den nächsten Schritt." : "Send your country, intended use and preferred model via WhatsApp and we will structure the next step."}</p></div><a class="btn btn-light" href="${waLink(de ? "Hallo MODUNERA, mein Zielland ist: __. Nutzung: __. Wunschgröße/Modell: __. Bitte kontaktieren Sie mich." : "Hello MODUNERA. Destination country: __. Intended use: __. Preferred size/model: __. Please contact me.")}" target="_blank" rel="noopener">${de ? "WhatsApp-Anfrage →" : "WhatsApp enquiry →"}</a></div></section><footer class="footer"><div class="container"><div class="footer-grid"><div>${brandLockup(root, root + (de ? "index.html" : "en/"), lang)}<p>${de ? "Tiny Houses als Kernprodukt. Dazu Modulbau, Stahlbau, Bungalows und maßgefertigte Möbel – direkt aus eigener Produktion für Europa." : "Tiny houses are our core product, complemented by modular buildings, steel structures, bungalows and bespoke furniture for Europe."}</p><a href="tel:${PHONE_TEL}">${PHONE_DISPLAY}</a></div><div><h4>${de ? "Länder" : "Countries"}</h4><a href="${root}${de ? "laender/deutschland/" : "en/countries/germany/"}">${de ? "Deutschland" : "Germany"}</a><a href="${root}${de ? "laender/niederlande/" : "en/countries/netherlands/"}">${de ? "Niederlande" : "Netherlands"}</a><a href="${root}${de ? "laender/daenemark/" : "en/countries/denmark/"}">${de ? "Dänemark" : "Denmark"}</a><a href="${root}${de ? "laender/luxemburg/" : "en/countries/luxembourg/"}">Luxembourg</a><a href="${root}${de ? "laender/schweiz/" : "en/countries/switzerland/"}">${de ? "Schweiz" : "Switzerland"}</a></div><div><h4>${de ? "Vergleichen" : "Compare"}</h4><a href="${root}${de ? "modellvergleich/" : "en/model-comparison/"}">${de ? "Modellvergleich" : "Model comparison"}</a><a href="${root}${de ? "preisvergleich/" : "en/price-comparison/"}">${de ? "Preisvergleich" : "Price comparison"}</a><a href="${root}${de ? "vorteile/" : "en/advantages/"}">${de ? "Vorteile" : "Advantages"}</a><a href="${root}studio/">Design Studio</a></div><div><h4>${de ? "Wissen" : "Knowledge"}</h4><a href="${root}${de ? "ratgeber/" : "en/guides/"}">${de ? "Ratgeber" : "Guides"}</a><a href="${root}${de ? "blog/europa/" : "en/guides/"}">${de ? "Europa-Guides" : "Europe guides"}</a><a href="${root}${de ? "faq/europa/" : "en/faq/"}">FAQ</a><a href="${root}kontakt/">${de ? "Kontakt" : "Contact"}</a></div></div><div class="footer-bottom"><span>© <span data-year>2026</span> MODUNERA. ${de ? "Alle Rechte vorbehalten." : "All rights reserved."}</span><span>${de ? "Hinweise ersetzen keine Behörden-, Rechts-, Steuer- oder Statikberatung." : "Guidance does not replace authority, legal, tax or structural advice."}</span></div></div></footer><div class="floating-actions"><a href="${waLink(de ? "Hallo MODUNERA, ich interessiere mich für ein Tiny House. Bitte kontaktieren Sie mich." : "Hello MODUNERA, I am interested in a tiny house. Please contact me.")}" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a><a href="tel:${PHONE_TEL}" aria-label="${de ? "Telefon" : "Phone"}">☎</a></div><script src="${root}assets/js/main.js"></script></body></html>`;
 }
 
 const faqMarkup = (items) =>
@@ -895,6 +924,63 @@ async function rewriteNavigation() {
   return changed;
 }
 
+/* Repoints every brand reference on the site at assets/brand/. Covers the pages
+   this layer does not regenerate — the 7,572 legacy German pages still carry
+   their own footer, and they were using the 3.97:1 wordmark as a favicon, which
+   renders as an illegible smear at 32px. */
+async function rewriteBrand() {
+  const files = (await walk(ROOT)).filter((f) => extname(f).toLowerCase() === ".html");
+  let changed = 0;
+  for (const file of files) {
+    const rel = relative(ROOT, file).replaceAll("\\", "/");
+    const root = rootFor(rel);
+    const original = await readFile(file, "utf8");
+    const lang = /<html\s+lang="en"/i.test(original) ? "en" : "de";
+    let html = original;
+
+    html = html.replace(/<a class="brand"([^>]*)><img[^>]*><\/a>/g, (match, attrs) => {
+      const href = (attrs.match(/href="([^"]*)"/) ?? [, ""])[1];
+      return brandLockup(root, href, lang);
+    });
+
+    html = html.replace(/<link rel="icon"[^>]*>/g, `<link rel="icon" type="image/png" href="${root}${BRAND}${MARK}">`);
+
+    // catches both the plain string form and the ImageObject form used by the guides
+    html = html.replaceAll(`${BASE}assets/images/modunera-logo.png`, `${BASE}${BRAND}${LOGO}-600.png`);
+    html = html.replaceAll(`${BASE}assets/images/modunera-mark.png`, `${BASE}${BRAND}${MARK}`);
+
+    if (html !== original) {
+      await writeFile(file, html, "utf8");
+      changed += 1;
+    }
+  }
+  return changed;
+}
+
+/* The sunrise-glow lockup gets exactly one placement per language: an overture
+   band above the existing hero, so the working photo hero and its CTAs stay. */
+async function insertBrandBand() {
+  let added = 0;
+  for (const [rel, lang] of [["index.html", "de"], ["en/index.html", "en"]]) {
+    const file = join(ROOT, rel);
+    const html = await readFile(file, "utf8");
+    if (html.includes('id="brand-overture"')) continue;
+    const anchor = '<main id="main">';
+    if (!html.includes(anchor)) throw new Error(`brand band anchor missing in ${rel}`);
+    const root = rootFor(rel);
+    // The band sits at the top of the page, so its artwork is the LCP candidate on
+    // desktop. No framework image component here, so preload it by hand — matching
+    // the <picture> media query so phones never fetch it.
+    const preload = `<link rel="preload" as="image" media="(min-width:769px)" type="image/webp" imagesrcset="${root}${BRAND}${GLOW}-900.webp 900w, ${root}${BRAND}${GLOW}-1400.webp 1400w" imagesizes="(max-width:1200px) 92vw, 1060px">`;
+    const next = html
+      .replace("</head>", `${preload}</head>`)
+      .replace(anchor, anchor + brandBand(root, lang));
+    await writeFile(file, next, "utf8");
+    added += 1;
+  }
+  return added;
+}
+
 async function buildSitemaps() {
   const all = await walk(ROOT, []);
   const skip = new Set(["admin-demo", "customer-portal", "saved-designs", "booking"]);
@@ -948,6 +1034,8 @@ async function main() {
   }
 
   const navChanged = await rewriteNavigation();
+  const bandsAdded = await insertBrandBand();
+  const brandChanged = await rewriteBrand();
   const sitemap = await buildSitemaps();
 
   // keep the build report in step, since validate-modunera.mjs reports its sitemap_urls
@@ -968,6 +1056,8 @@ async function main() {
     categorisedGuides: posts.length,
     marketGuides: MARKET_GUIDES.length * 2,
     navigationRewritten: navChanged,
+    brandRewritten: brandChanged,
+    brandBands: bandsAdded,
     sitemap,
   }));
 }
