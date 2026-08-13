@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.mctiny.com/de/sitemap.xml
+Sitemap: https://www.mctiny.com/de/image-sitemap.xml

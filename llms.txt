@@ -1,0 +1,17 @@
+# MC Tiny
+
+> Premium Tiny Houses für Deutschland und Europa. Eigene Produktion, acht Modelle, Standortplanung und Konfiguration.
+
+- Hauptseite: https://www.mctiny.com/de/
+- Modelle: https://www.mctiny.com/de/#modelle
+- Konfigurator: https://www.mctiny.com/de/konfigurator/
+- Standorte: https://www.mctiny.com/de/standorte/
+- Ratgeber: https://www.mctiny.com/de/blog/
+- FAQ: https://www.mctiny.com/de/faq/
+- Redaktion: https://www.mctiny.com/de/redaktion/
+- Telefon: +90 553 543 5342
+
+Maschinenlesbare Daten:
+- https://www.mctiny.com/de/data/knowledge-graph.json
+- https://www.mctiny.com/de/data/answer-library.json
+- https://www.mctiny.com/de/data/locations.json

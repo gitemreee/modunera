@@ -1,0 +1,58 @@
+{
+  "version": "6.0",
+  "generated_at": "2026-07-20",
+  "brand": "MC Tiny",
+  "phone": "+90 553 543 5342",
+  "html_pages": 7573,
+  "location_pages": 7423,
+  "blog_pages": 111,
+  "faq_items": 160,
+  "model_pages": 8,
+  "interactive_modules": [
+    "visual configurator",
+    "saved designs",
+    "model comparison",
+    "delivery estimator",
+    "land readiness check",
+    "energy savings calculator",
+    "Airbnb/glamping ROI calculator",
+    "AI planning assistant",
+    "lead capture",
+    "booking request",
+    "customer production portal demo",
+    "local CRM export demo"
+  ],
+  "seo_assets": [
+    "sitemap index",
+    "10 sitemap files",
+    "image sitemap",
+    "robots.txt",
+    "structured data",
+    "keyword strategy CSV",
+    "location pages",
+    "Academy content",
+    "FAQ center",
+    "hreflang foundation"
+  ],
+  "brochure_pdf_pages": 97,
+  "brochure_source": "Mc-Tiny-germany.pdf",
+  "static_demo_limitations": [
+    "CRM/email/analytics require credentials",
+    "true free-rotation 3D requires CAD/GLB files",
+    "customer portal requires authenticated backend",
+    "legal pages require company and counsel-approved data",
+    "prices/logistics require final commercial tables",
+    "projects/testimonials require real approved references"
+  ],
+  "design_system": "Scandinavian premium: warm ivory, softened forest, burgundy brand accent, strong Manrope typography",
+  "v6_changes": [
+    "transparent PNG logo across header and footer",
+    "removed visible top telephone bar from all HTML pages",
+    "new homepage hero composition",
+    "stronger typography hierarchy",
+    "lighter palette with reduced green saturation",
+    "redesigned buttons, cards, forms and studio controls",
+    "mobile visual and spacing refinements",
+    "Netlify deployment configuration"
+  ]
+}
