@@ -4,12 +4,12 @@
   "description": "Premium tiny houses and modular living for Europe",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f8f3ed",
+  "background_color": "#faf8f5",
   "theme_color": "#C29B72",
   "icons": [
     {
-      "src": "/assets/images/modunera-mark.png",
-      "sizes": "2048x2048",
+      "src": "/assets/brand/modunera-mark-v1.png",
+      "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     }
