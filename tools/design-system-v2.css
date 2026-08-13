@@ -1,0 +1,291 @@
+/* ============================================================================
+   MODUNERA Design System v2 — "precision catalogue"
+   ----------------------------------------------------------------------------
+   Replaces the v1 editorial-luxury language (hero headlines up to 125px, 112px
+   section padding, 285-500px card minimums, 30px radii, heavy drop shadows)
+   with a denser, catalogue-like system: a compact type scale, hairline rules
+   instead of pillowy shadows, sharp 8px radii, tabular figures for specs and
+   prices, and tighter grids so more of the offer fits on one screen.
+
+   The corporate palette is unchanged: beige #C29B72, terracotta #8D321F,
+   olive #3A4027, charcoal #2B2D31.
+
+   This file is appended verbatim to assets/css/styles.css by updateBrandCss()
+   in tools/build-modunera-europe.mjs, between the palette markers. It layers on
+   top of the existing 164-class contract rather than replacing it, so any
+   component it does not mention keeps its v1 styling and nothing can break.
+   Edit this file, then re-run the build — never edit the generated block.
+   ============================================================================ */
+
+/* --- Tokens --------------------------------------------------------------- */
+:root{
+  --beige:#C29B72;--terracotta:#8D321F;--olive:#3A4027;--charcoal:#2B2D31;
+  --brand:#8D321F;--brand-dark:#6f2718;--wine:#8D321F;
+  --forest:#3A4027;--forest-950:#2B2D31;--forest-900:#3A4027;--forest-800:#4d5737;--forest-700:#66704b;
+  --sand:#C29B72;--sand-2:#ead9c8;--clay:#8D321F;
+  --paper:#faf8f5;--paper-2:#f1ece5;--ink:#2B2D31;--muted:#6c6a66;
+  --line:rgba(43,45,49,.14);--line-strong:rgba(43,45,49,.26);
+  --shadow:0 1px 2px rgba(43,45,49,.07);--shadow-soft:0 1px 2px rgba(43,45,49,.05);
+  --max:1200px;
+  /* compact type scale */
+  --fs-display:clamp(2.1rem,4vw,3.4rem);
+  --fs-h1:clamp(1.85rem,3vw,2.7rem);
+  --fs-h2:clamp(1.45rem,2.2vw,2rem);
+  --fs-h3:1.12rem;
+  --fs-body:.95rem;
+  --fs-small:.83rem;
+  --fs-label:.68rem;
+  /* rhythm */
+  --sp-section:60px;
+  --sp-gap:14px;
+  --r:8px;
+}
+
+/* --- Base ----------------------------------------------------------------- */
+html,body{background:var(--paper);color:var(--charcoal)}
+body{font-family:var(--display);font-size:var(--fs-body);font-weight:500;line-height:1.55;letter-spacing:0}
+::selection{background:var(--beige);color:var(--charcoal)}
+.serif{font-family:var(--display)}
+
+h1,h2,h3,h4{font-family:var(--display);letter-spacing:-.021em;text-wrap:balance}
+h1{font-size:var(--fs-h1);font-weight:800;line-height:1.1;margin:10px 0 0}
+h2{font-size:var(--fs-h2);font-weight:800;line-height:1.16;margin:8px 0 14px}
+h3{font-size:var(--fs-h3);font-weight:750;line-height:1.3;margin:0 0 6px;letter-spacing:-.012em}
+h4{font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
+p{margin:0 0 10px}
+
+/* Small uppercase micro-label — the system's signature mark */
+.eyebrow,.hero-kicker,.model-label,.blog-meta,.project-caption,.editorial-caption{
+  font-size:var(--fs-label);font-weight:800;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--terracotta);line-height:1.4
+}
+.eyebrow{display:inline-flex;align-items:center;gap:8px}
+.eyebrow:before{content:"";width:16px;height:2px;background:var(--terracotta);flex:none}
+.muted,.legal-note{color:var(--muted);font-size:var(--fs-small)}
+
+/* Specs, prices and counts read as data, not prose */
+.model-specs,.spec-pills,.model-price,.studio-price,.tool-result,.data-strip,.compare table,
+.stat-line strong,.benefit-number,.num,.state-card>span,.price-figure{
+  font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1
+}
+
+/* --- Layout --------------------------------------------------------------- */
+.container{width:min(var(--max),calc(100% - 32px))}
+.section{padding:var(--sp-section) 0}
+.section-tight{padding:38px 0}
+.section-soft{background:var(--paper-2)}
+.section-header{gap:32px;margin-bottom:26px;align-items:end}
+.section-header p{color:var(--muted);max-width:60ch;margin:0}
+
+/* --- Navigation ----------------------------------------------------------- */
+.nav{background:rgba(250,248,245,.94);backdrop-filter:blur(16px) saturate(1.05);border-bottom:1px solid var(--line)}
+.nav-inner{height:62px;gap:18px}
+.brand img{width:150px;max-height:38px;object-fit:contain}
+.nav-links{gap:22px;font-size:.82rem;font-weight:750;letter-spacing:-.005em}
+.nav-links>a,.nav-dropdown>button{padding:20px 0}
+.nav-links>a:after{bottom:14px;height:2px;background:var(--terracotta)}
+.nav-menu{top:52px;left:-16px;min-width:288px;border-radius:var(--r);padding:8px;border:1px solid var(--line);box-shadow:0 10px 30px rgba(43,45,49,.12)}
+/* v1 laid label and sublabel side by side, which wraps badly once the sublabel is
+   more than a word or two. Stack them instead. */
+.nav-menu a{display:block;padding:9px 11px;border-radius:6px;font-size:.83rem;font-weight:750}
+.nav-menu a>span{display:block}
+.nav-menu small{display:block;font-size:var(--fs-label);letter-spacing:.06em;color:var(--muted);font-weight:650;margin-top:1px;text-transform:none}
+.nav-dropdown>button:after{content:"›";display:inline-block;margin-left:5px;font-size:1em;transform:rotate(90deg);opacity:.5}
+.lang-switch{border-radius:6px;padding:7px 10px;font-size:var(--fs-label);letter-spacing:.08em}
+.mobile-toggle{color:var(--charcoal);font-weight:800}
+
+/* --- Buttons -------------------------------------------------------------- */
+.btn{min-height:40px;padding:0 16px;border-radius:6px;font-size:.76rem;font-weight:800;letter-spacing:.055em}
+.btn:hover{transform:none}
+.btn-primary{background:var(--terracotta);color:#fff;box-shadow:none}
+.btn-primary:hover{background:var(--brand-dark)}
+.btn-sand{background:var(--beige);color:var(--charcoal)}
+.btn-light{background:#fff;color:var(--charcoal);border-color:var(--line)}
+.btn-dark{background:var(--charcoal);color:#fff}
+.btn-outline{border-color:var(--line-strong);background:transparent;color:var(--charcoal)}
+.btn-outline:hover{border-color:var(--terracotta);color:var(--terracotta)}
+.btn-ghost{border-color:rgba(255,255,255,.4);color:#fff;background:transparent}
+.icon-btn{width:40px;height:40px}
+
+/* --- Hero ----------------------------------------------------------------- */
+/* v1 filled the viewport; v2 caps the hero so the offer starts above the fold. */
+.hero{min-height:0;height:auto;max-height:none}
+.hero-content{padding:52px 0 58px}
+.hero h1{font-size:var(--fs-display);font-weight:820;line-height:1.05;letter-spacing:-.028em;max-width:19ch;margin:12px 0 14px}
+.hero-panel{padding:34px 38px;border-radius:var(--r);background:rgba(250,248,245,.95)}
+.hero-panel p{font-size:.98rem;max-width:52ch;color:var(--muted)}
+.hero-actions{gap:10px;margin-top:18px}
+.hero-proof{margin-top:20px;font-size:var(--fs-small)}
+.page-hero{padding:44px 0 32px;background:linear-gradient(120deg,#f0e6da 0%,#faf8f5 58%,#eceade 100%)}
+.page-hero+.section,.page-hero+section .container>.kpi-row:first-child{padding-top:32px}
+.page-hero:after{background:radial-gradient(circle,rgba(141,50,31,.1),rgba(141,50,31,0) 70%)}
+/* v1 sized these with their own clamps (up to 101px and 104px), which outrank a
+   bare h1 selector — they have to be overridden by name. */
+.page-hero h1,.country-hero h1{font-size:var(--fs-h1);font-weight:820;line-height:1.08;letter-spacing:-.028em;max-width:24ch;margin:8px 0 0;color:var(--charcoal)}
+.location-hero h1,.article-visual-hero h1{font-size:var(--fs-h1);font-weight:820;line-height:1.08;letter-spacing:-.028em;margin:8px 0 10px}
+.page-hero p,.country-hero p{font-size:.95rem;max-width:64ch;color:var(--muted);margin-top:10px}
+.country-hero,.location-hero{min-height:0}
+.location-hero-content,.country-hero .container{padding-top:40px;padding-bottom:40px}
+.breadcrumbs{font-size:var(--fs-label);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+
+/* --- Cards: the core density change --------------------------------------- */
+/* v1: 20-30px radii, 24px padding, 285-500px minimum heights. v2 trims all
+   three so a grid of eight models fits where three used to. */
+.state-card,.journey-card,.benefit-card,.quality-card,.value-card,.blog-card,
+.option-card,.compare-card,.trust-item,.process-item,.tool-pane,.answer-box,.notice{
+  border-radius:var(--r);box-shadow:none
+}
+.state-card,.journey-card,.benefit-card,.option-card,.compare-card{
+  border:1px solid var(--line);background:#fff;padding:16px 17px;transition:border-color .18s,background .18s
+}
+.state-card:hover,.journey-card:hover,.option-card:hover,.compare-card:hover{border-color:var(--terracotta);background:#fff}
+.journey-card{min-height:0;gap:10px;padding:17px}
+.journey-card .num{font-size:var(--fs-label);letter-spacing:.14em;color:var(--terracotta);font-weight:800}
+.journey-card h3{margin:8px 0 4px}
+.journey-card p{font-size:var(--fs-small);color:var(--muted);margin:0}
+.journey-card .arrow{font-size:.9rem;color:var(--terracotta)}
+.state-card h3{margin:4px 0 3px}
+.state-card p{font-size:var(--fs-small);color:var(--muted);margin:0}
+.state-card>span{font-size:var(--fs-label);letter-spacing:.13em;text-transform:uppercase;color:var(--terracotta);font-weight:800}
+.model-card{min-height:300px;border-radius:var(--r)}
+.model-content{padding:18px}
+.model-display{min-height:0}
+.value-card,.quality-card{border:1px solid var(--line);background:#fff;overflow:hidden}
+.value-card.feature{min-height:0}
+.benefit-number{font-size:1.5rem;font-weight:800;color:var(--terracotta);line-height:1}
+
+/* Grids get one more column, since the cards are smaller */
+.state-grid{grid-template-columns:repeat(5,1fr);gap:var(--sp-gap)}
+.journey-grid{grid-template-columns:repeat(4,1fr);gap:var(--sp-gap)}
+.quality-grid,.benefit-grid{gap:var(--sp-gap)}
+.value-grid{grid-auto-rows:minmax(160px,auto);gap:var(--sp-gap)}
+.model-grid{grid-template-columns:repeat(4,1fr);gap:var(--sp-gap)}
+.blog-grid{gap:var(--sp-gap)}
+.places-list,.state-place-grid{grid-template-columns:repeat(4,1fr);gap:8px}
+.state-place-grid a,.places-list a{border-radius:6px;padding:10px 12px;font-size:var(--fs-small)}
+.data-strip,.process-grid{gap:var(--sp-gap)}
+/* v1 clipped this rail; with the tighter type the copy can wrap, so let it grow */
+.trust-grid{overflow:visible}
+.trust-item{padding:16px 18px}
+.trust-item strong{font-size:.92rem;font-weight:800}
+.trust-item span{font-size:var(--fs-label);letter-spacing:.09em;text-transform:uppercase;font-weight:750}
+
+/* --- Editorial / feature blocks ------------------------------------------- */
+.editorial-split,.wide-feature,.model-highlight,.factory-band{border-radius:var(--r);overflow:hidden}
+.editorial-copy{padding:34px}
+.wide-copy{padding:34px}
+.visual{height:auto;min-height:190px}
+.answer-box{border-left:3px solid var(--terracotta);background:#f6efe9;border-radius:0 var(--r) var(--r) 0;padding:14px 16px;margin:16px 0}
+.answer-box strong{font-size:var(--fs-label);letter-spacing:.13em;text-transform:uppercase;color:var(--terracotta)}
+.answer-box p{margin:5px 0 0;font-size:.9rem}
+.source-link{display:inline-block;color:var(--beige);font-weight:800;margin-top:12px;font-size:var(--fs-small)}
+.section-dark,.technical-panel,.tool-result,.config-summary{background:var(--olive);border-radius:var(--r)}
+.factory-copy,.footer{background:var(--charcoal)}
+.cta-band{background:var(--terracotta);padding:34px 0}
+.cta-inner h2{margin:0;font-size:var(--fs-h2)}
+.cta-inner>div p{margin:5px 0 0;color:rgba(255,255,255,.84);font-size:var(--fs-small)}
+
+/* --- Tables: comparison is a first-class component in v2 ------------------- */
+.compare{border:1px solid var(--line);border-radius:var(--r);background:#fff;overflow:auto}
+.compare table{width:100%;border-collapse:collapse;font-size:var(--fs-small)}
+.compare th{background:var(--paper-2);text-align:left;font-size:var(--fs-label);letter-spacing:.11em;
+  text-transform:uppercase;color:var(--charcoal);font-weight:800;padding:10px 12px;
+  border-bottom:1px solid var(--line-strong);position:sticky;top:0;white-space:nowrap}
+.compare td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+.compare tr:last-child td{border-bottom:0}
+.compare tbody tr:hover{background:var(--paper)}
+.compare td strong{font-weight:800}
+.price-figure{font-weight:800;color:var(--charcoal);white-space:nowrap}
+.price-note{display:block;font-size:var(--fs-label);color:var(--muted);letter-spacing:.04em;text-transform:none;font-weight:600;margin-top:2px}
+
+/* --- FAQ ------------------------------------------------------------------ */
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-question{padding:13px 0;font-size:.92rem;font-weight:750;text-align:left;gap:14px}
+.faq-answer p{font-size:.9rem;color:var(--muted);padding-bottom:12px;margin:0}
+
+/* --- Footer --------------------------------------------------------------- */
+.footer{padding:44px 0 0}
+.footer-grid{gap:26px}
+/* The logo is a terracotta mark plus a charcoal wordmark on transparency, so the
+   wordmark disappears against the charcoal footer. Render it as a white lockup. */
+.footer .brand img,.factory-copy .brand img{width:150px;max-height:34px;filter:brightness(0) invert(1);opacity:.92}
+.footer h4{color:rgba(255,255,255,.5)}
+.footer a{font-size:var(--fs-small)}
+.footer-bottom{margin-top:30px;padding:16px 0;font-size:var(--fs-label);letter-spacing:.04em}
+.floating-actions a:first-child{background:var(--terracotta);border-color:var(--terracotta)}
+.floating-actions a{width:44px;height:44px}
+
+/* --- v2 components -------------------------------------------------------- */
+/* Advantage grid — used by the Vorteile / Advantages pages */
+.adv-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp-gap)}
+.adv-card{border:1px solid var(--line);border-radius:var(--r);background:#fff;padding:17px}
+.adv-card .num{display:block;font-size:var(--fs-label);letter-spacing:.14em;color:var(--terracotta);font-weight:800;margin-bottom:9px}
+.adv-card h3{margin:0 0 5px}
+.adv-card p{font-size:var(--fs-small);color:var(--muted);margin:0}
+
+/* Key-figure strip */
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp-gap);margin:18px 0}
+.kpi{border:1px solid var(--line);border-radius:var(--r);background:#fff;padding:14px 16px}
+.kpi b{display:block;font-size:1.5rem;font-weight:800;line-height:1.1;font-variant-numeric:tabular-nums;color:var(--charcoal)}
+.kpi span{display:block;font-size:var(--fs-label);letter-spacing:.11em;text-transform:uppercase;color:var(--muted);font-weight:800;margin-top:4px}
+
+/* Blog hub: category rail + compact post rows */
+.cat-rail{display:flex;flex-wrap:wrap;gap:7px;margin:16px 0 22px}
+.cat-chip{border:1px solid var(--line);border-radius:999px;padding:6px 13px;font-size:var(--fs-small);
+  font-weight:750;background:#fff;color:var(--charcoal);white-space:nowrap}
+.cat-chip:hover,.cat-chip[aria-current=true]{border-color:var(--terracotta);color:var(--terracotta)}
+.post-list{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.post-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;border:1px solid var(--line);
+  border-radius:6px;background:#fff;padding:11px 14px;transition:border-color .18s}
+.post-row:hover{border-color:var(--terracotta)}
+.post-row strong{font-weight:750;font-size:.88rem;line-height:1.35}
+.post-row span{font-size:var(--fs-label);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:800;white-space:nowrap}
+.cat-block{margin-bottom:26px}
+.cat-block>h2{display:flex;align-items:baseline;gap:10px;margin-bottom:12px}
+.cat-block>h2 span{font-size:var(--fs-label);letter-spacing:.12em;color:var(--muted);font-weight:800}
+
+/* --- Responsive ----------------------------------------------------------- */
+@media(max-width:1180px){
+  .nav-links{gap:15px;font-size:.78rem}
+  .brand img{width:136px}
+  .state-grid,.model-grid{grid-template-columns:repeat(3,1fr)}
+  .journey-grid,.adv-grid,.kpi-row{grid-template-columns:repeat(3,1fr)}
+  .places-list,.state-place-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:920px){
+  :root{--sp-section:42px}
+  .section-header,.editorial-split,.model-stage,.factory-band,.faq-preview,.studio-shell,
+  .tools-shell,.article-shell,.model-highlight{grid-template-columns:minmax(0,1fr)}
+  .section-header>*,.editorial-split>*,.article-shell>*,.article>*,.wide-copy,.visual,
+  .faq-item,.faq-question,.state-card,.place-card,.state-place-grid a>*,.places-list a>*{min-width:0}
+  .state-place-grid a,.places-list a{flex-wrap:wrap;overflow-wrap:anywhere}
+  .compare{max-width:100%}
+  h1,h2,h3,h4,p,li,.eyebrow,.faq-question,.state-card,.answer-box,.source-link,.post-row{overflow-wrap:anywhere}
+  .state-grid,.model-grid,.journey-grid,.adv-grid,.kpi-row{grid-template-columns:repeat(2,1fr)}
+  .post-list{grid-template-columns:minmax(0,1fr)}
+  .hero-content{padding:38px 0 42px}
+  .hero-panel,.editorial-copy,.wide-copy{padding:26px}
+  /* the drawer was positioned for v1's 88px bar; the v2 bar is 62px, which left a
+     strip the page showed through, and the desktop link padding made it very tall */
+  .nav-links{top:62px;max-height:calc(100vh - 62px);background:var(--paper);padding:14px 20px}
+  .nav-links>a,.nav-dropdown>button{padding:9px 0}
+  .nav-dropdown{width:100%}
+  .nav-dropdown>button{display:flex;justify-content:space-between;align-items:center;width:100%}
+  .nav-dropdown>button:after{transform:none}
+  .nav-dropdown.open>button:after{transform:rotate(90deg)}
+  .nav-menu{padding:0 0 8px 12px;min-width:0;border-left:2px solid var(--line)}
+  .nav-menu a{padding:7px 0}
+  .nav-menu small{display:none}
+}
+@media(max-width:640px){
+  :root{--sp-section:34px;--fs-body:.93rem}
+  .brand img{width:128px}
+  .nav-inner{height:56px}
+  .nav-links{top:56px;max-height:calc(100vh - 56px)}
+  .state-grid,.model-grid,.journey-grid,.adv-grid,.kpi-row,.data-strip,.process-grid,
+  .places-list,.state-place-grid{grid-template-columns:minmax(0,1fr)}
+  .state-place-grid a,.places-list a{flex-direction:column;align-items:flex-start;gap:5px}
+  .hero-panel,.editorial-copy,.wide-copy{padding:20px}
+  .cta-band{padding:26px 0}
+  .post-row{flex-direction:column;gap:3px}
+}

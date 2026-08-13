@@ -445,17 +445,10 @@ async function updateExistingText() {
 
 async function updateBrandCss() {
   const file = join(ROOT, "assets/css/styles.css");
+  const designSystem = await readFile(join(ROOT, "tools/design-system-v2.css"), "utf8");
   let css = await readFile(file, "utf8");
   css = css.replace(/\/\* MODUNERA BRAND PALETTE START \*\/[\s\S]*?\/\* MODUNERA BRAND PALETTE END \*\//g, "").trimEnd();
-  css += `\n\n/* MODUNERA BRAND PALETTE START */
-:root{--beige:#C29B72;--terracotta:#8D321F;--olive:#3A4027;--charcoal:#2B2D31;--brand:#8D321F;--brand-dark:#6f2718;--wine:#8D321F;--forest:#3A4027;--forest-950:#2B2D31;--forest-900:#3A4027;--forest-800:#4d5737;--forest-700:#66704b;--sand:#C29B72;--sand-2:#ead9c8;--clay:#8D321F;--paper:#f8f3ed;--paper-2:#efe5da;--ink:#2B2D31;--muted:#676560;--line:rgba(43,45,49,.13);--shadow:0 24px 80px rgba(43,45,49,.14);--shadow-soft:0 12px 42px rgba(43,45,49,.08)}
-html,body{background:var(--paper);color:var(--charcoal)}.nav{background:rgba(248,243,237,.96)}.nav-links{gap:20px}.brand img{width:190px;max-height:64px;object-fit:contain}.btn-primary{background:var(--terracotta);box-shadow:0 14px 28px rgba(141,50,31,.22)}.btn-primary:hover{background:#6f2718}.btn-sand{background:var(--beige);color:var(--charcoal)}.btn-dark,.section-dark,.technical-panel,.tool-result,.config-summary{background:var(--olive)}.factory-copy,.footer{background:var(--charcoal)}.cta-band{background:var(--terracotta)}.eyebrow,.hero-kicker,.model-label,.blog-meta,.journey-card .num,.state-card>span{color:var(--terracotta)}.hero h1 em,.stat-line strong{color:var(--terracotta)}.answer-box{border-left-color:var(--terracotta);background:#f5e9e3}.page-hero{background:linear-gradient(135deg,#efe2d5 0%,#fbf8f4 62%,#e5e5d8 100%)}.page-hero:after{background:radial-gradient(circle,rgba(141,50,31,.15),rgba(141,50,31,0) 70%)}.country-hero{min-height:720px}.source-link{display:block;color:var(--beige);font-weight:800;margin-top:18px}.cta-inner>div p{margin:8px 0 0;color:rgba(255,255,255,.82)}.state-card{color:var(--charcoal)}.state-card:hover{border-color:rgba(141,50,31,.35)}.floating-actions a:first-child{background:var(--terracotta);border-color:var(--terracotta)}
-@media(max-width:1180px){.nav-links{gap:13px;font-size:.75rem}.brand img{width:166px}}
-@media(max-width:640px){.brand img{width:154px}.country-hero{min-height:650px}.cta-inner>div p{font-size:.88rem}}
-/* Mobile hardening. Grid items keep min-width:auto, so on narrow screens the widest German compound word and the 850px comparison table stretch their track and scroll the whole page sideways. Constrain the tracks, let those blocks shrink, and keep the wide table scrolling inside its own container. */
-@media(max-width:920px){.section-header,.editorial-split,.model-stage,.factory-band,.faq-preview,.studio-shell,.tools-shell,.article-shell,.model-highlight{grid-template-columns:minmax(0,1fr)}.section-header>*,.editorial-split>*,.article-shell>*,.article>*,.wide-copy,.visual,.faq-item,.faq-question,.state-card,.place-card,.state-place-grid a>*,.places-list a>*{min-width:0}.state-place-grid a,.places-list a{flex-wrap:wrap;overflow-wrap:anywhere}.compare{max-width:100%}h1,h2,h3,h4,p,li,.eyebrow,.faq-question,.state-card,.answer-box,.source-link{overflow-wrap:anywhere}}
-@media(max-width:640px){.state-place-grid,.places-list,.state-grid,.data-strip,.process-grid{grid-template-columns:minmax(0,1fr)}.state-place-grid a,.places-list a{flex-direction:column;align-items:flex-start;gap:6px}.state-place-grid a>*,.places-list a>*{min-width:0}.wide-copy{padding:38px 22px}}
-/* MODUNERA BRAND PALETTE END */\n`;
+  css += `\n\n/* MODUNERA BRAND PALETTE START */\n${designSystem.trim()}\n/* MODUNERA BRAND PALETTE END */\n`;
   await writeFile(file, css, "utf8");
 }
 

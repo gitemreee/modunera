@@ -26,6 +26,9 @@ jobs:
       - name: Build countries, locations, services and guides
         run: node tools/build-modunera-europe.mjs
 
+      - name: Apply the v2 layer (navigation, comparisons, guide hub)
+        run: node tools/build-modunera-v2.mjs
+
       - name: Validate generated site
         shell: bash
         run: |
