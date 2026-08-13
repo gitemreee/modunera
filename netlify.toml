@@ -1,6 +1,56 @@
 [build]
   publish = "."
 
+# The product codes moved from MC to MD, so the eight model URLs moved with them.
+# The old paths are indexed, so they redirect permanently rather than 404.
+[[redirects]]
+  from = "/modelle/mc-1/*"
+  to = "/modelle/md-1/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/modelle/mc-2/*"
+  to = "/modelle/md-2/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/modelle/mc-3/*"
+  to = "/modelle/md-3/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/modelle/mc-4/*"
+  to = "/modelle/md-4/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/modelle/mc-5/*"
+  to = "/modelle/md-5/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/modelle/mc-6/*"
+  to = "/modelle/md-6/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/modelle/mc-7/*"
+  to = "/modelle/md-7/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/modelle/mc-8/*"
+  to = "/modelle/md-8/:splat"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]

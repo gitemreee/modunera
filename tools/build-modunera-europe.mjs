@@ -447,6 +447,9 @@ async function updateBrandCss() {
   const file = join(ROOT, "assets/css/styles.css");
   const designSystem = await readFile(join(ROOT, "tools/design-system-v2.css"), "utf8");
   let css = await readFile(file, "utf8");
+  // the brand claim is set in a handwriting face, so it joins the existing request
+  css = css.replace(/@import url\('https:\/\/fonts\.googleapis\.com[^']*'\);/,
+    "@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght,SOFT@9..144,400..700,50&family=Caveat:wght@500;600;700&display=swap');");
   css = css.replace(/\/\* MODUNERA BRAND PALETTE START \*\/[\s\S]*?\/\* MODUNERA BRAND PALETTE END \*\//g, "").trimEnd();
   css += `\n\n/* MODUNERA BRAND PALETTE START */\n${designSystem.trim()}\n/* MODUNERA BRAND PALETTE END */\n`;
   await writeFile(file, css, "utf8");

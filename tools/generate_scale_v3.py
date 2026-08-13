@@ -64,14 +64,14 @@ IMAGES = [
 ]
 
 MODELS = [
-    {'id':'mc-1','name':'MC 1','length':'8,00 oder 9,70 m','layout':'1 Loft','positioning':'Panorama, Tageslicht und großzügiger Wohnbereich','image':'mc1-exterior.webp'},
-    {'id':'mc-2','name':'MC 2','length':'9,00 m','layout':'2 Lofts','positioning':'Familien, Gäste und getrennte Schlafbereiche','image':'mc2-exterior.webp'},
-    {'id':'mc-3','name':'MC 3','length':'8,00 oder 9,70 m','layout':'Loft + optionaler Raum','positioning':'Privatsphäre, Homeoffice und flexible Nutzung','image':'mc3-exterior.webp'},
-    {'id':'mc-4','name':'MC 4','length':'8,00 oder 9,00 m','layout':'Loft, Zimmer und Veranda','positioning':'Ferienhaus, Vermietung und Außenleben','image':'mc4-exterior.webp'},
-    {'id':'mc-5','name':'MC 5','length':'8,00 oder 9,00 m','layout':'Loft + optionaler Raum','positioning':'Urbanes Design mit warmen Naturmaterialien','image':'mc5-exterior.webp'},
-    {'id':'mc-6','name':'MC 6','length':'8,00 oder 9,00 m','layout':'Chalet-Konzept','positioning':'Hohe Decken, Glasflächen und Naturerlebnis','image':'mc6-exterior.webp'},
-    {'id':'mc-7','name':'MC 7','length':'8,00 m','layout':'1 Loft','positioning':'Studio, Büro und asymmetrische Architektur','image':'mc7-exterior.webp'},
-    {'id':'mc-8','name':'MC 8','length':'8,00 m','layout':'1 Loft','positioning':'Kompakter Komfort und effizienter Stauraum','image':'mc8-exterior.webp'},
+    {'id':'mc-1','name':'MD 1','length':'8,00 oder 9,70 m','layout':'1 Loft','positioning':'Panorama, Tageslicht und großzügiger Wohnbereich','image':'mc1-exterior.webp'},
+    {'id':'mc-2','name':'MD 2','length':'9,00 m','layout':'2 Lofts','positioning':'Familien, Gäste und getrennte Schlafbereiche','image':'mc2-exterior.webp'},
+    {'id':'mc-3','name':'MD 3','length':'8,00 oder 9,70 m','layout':'Loft + optionaler Raum','positioning':'Privatsphäre, Homeoffice und flexible Nutzung','image':'mc3-exterior.webp'},
+    {'id':'mc-4','name':'MD 4','length':'8,00 oder 9,00 m','layout':'Loft, Zimmer und Veranda','positioning':'Ferienhaus, Vermietung und Außenleben','image':'mc4-exterior.webp'},
+    {'id':'mc-5','name':'MD 5','length':'8,00 oder 9,00 m','layout':'Loft + optionaler Raum','positioning':'Urbanes Design mit warmen Naturmaterialien','image':'mc5-exterior.webp'},
+    {'id':'mc-6','name':'MD 6','length':'8,00 oder 9,00 m','layout':'Chalet-Konzept','positioning':'Hohe Decken, Glasflächen und Naturerlebnis','image':'mc6-exterior.webp'},
+    {'id':'mc-7','name':'MD 7','length':'8,00 m','layout':'1 Loft','positioning':'Studio, Büro und asymmetrische Architektur','image':'mc7-exterior.webp'},
+    {'id':'mc-8','name':'MD 8','length':'8,00 m','layout':'1 Loft','positioning':'Kompakter Komfort und effizienter Stauraum','image':'mc8-exterior.webp'},
 ]
 
 KEYWORD_PATTERNS = [
@@ -256,7 +256,7 @@ def nav(root: str) -> str:
 
 def footer(root: str) -> str:
     return f'''<section class="cta-band"><div class="container cta-inner"><h2>Planen Sie Ihr Tiny House für Deutschland.</h2><a class="btn btn-light" href="{root}konfigurator/">Preis berechnen →</a></div></section>
-<footer class="footer"><div class="container"><div class="footer-grid"><div><a class="brand" href="{root}index.html"><img src="{root}assets/images/modunera-logo.png" alt="MODUNERA"></a><p>Premium Tiny Houses für Deutschland und Europa. Eigene Produktion, durchdachte Grundrisse und projektbezogene Konfiguration.</p><a href="tel:{PHONE_TEL}">{PHONE_DISPLAY}</a></div><div><h4>Modelle</h4><a href="{root}modelle/mc-1/">MC 1</a><a href="{root}modelle/mc-2/">MC 2</a><a href="{root}modelle/mc-3/">MC 3</a><a href="{root}modelle/mc-6/">MC 6 Chalet</a><a href="{root}index.html#modelle">Alle Modelle</a></div><div><h4>Planung</h4><a href="{root}konfigurator/">Tiny House konfigurieren</a><a href="{root}standorte/">Deutschland-Standorte</a><a href="{root}tiny-house-preise/">Preise</a><a href="{root}tiny-house-deutschland/">Deutschland</a><a href="{root}tiny-house-fuer-airbnb/">Airbnb & Glamping</a></div><div><h4>Wissen</h4><a href="{root}blog/">Ratgeber</a><a href="{root}faq/">FAQ</a><a href="{root}qualitaet/">Material & Qualität</a><a href="{root}nachhaltigkeit/">Nachhaltigkeit</a><a href="{root}redaktion/">Redaktionsstandard</a></div></div><div class="footer-bottom"><span>© <span data-year>2026</span> MODUNERA. Alle Rechte vorbehalten.</span><span>Impressum · Datenschutz · Cookie-Einstellungen</span></div></div></footer>
+<footer class="footer"><div class="container"><div class="footer-grid"><div><a class="brand" href="{root}index.html"><img src="{root}assets/images/modunera-logo.png" alt="MODUNERA"></a><p>Premium Tiny Houses für Deutschland und Europa. Eigene Produktion, durchdachte Grundrisse und projektbezogene Konfiguration.</p><a href="tel:{PHONE_TEL}">{PHONE_DISPLAY}</a></div><div><h4>Modelle</h4><a href="{root}modelle/md-1/">MD 1</a><a href="{root}modelle/md-2/">MD 2</a><a href="{root}modelle/md-3/">MD 3</a><a href="{root}modelle/md-6/">MD 6 Chalet</a><a href="{root}index.html#modelle">Alle Modelle</a></div><div><h4>Planung</h4><a href="{root}konfigurator/">Tiny House konfigurieren</a><a href="{root}standorte/">Deutschland-Standorte</a><a href="{root}tiny-house-preise/">Preise</a><a href="{root}tiny-house-deutschland/">Deutschland</a><a href="{root}tiny-house-fuer-airbnb/">Airbnb & Glamping</a></div><div><h4>Wissen</h4><a href="{root}blog/">Ratgeber</a><a href="{root}faq/">FAQ</a><a href="{root}qualitaet/">Material & Qualität</a><a href="{root}nachhaltigkeit/">Nachhaltigkeit</a><a href="{root}redaktion/">Redaktionsstandard</a></div></div><div class="footer-bottom"><span>© <span data-year>2026</span> MODUNERA. Alle Rechte vorbehalten.</span><span>Impressum · Datenschutz · Cookie-Einstellungen</span></div></div></footer>
 <div class="floating-actions"><a href="https://wa.me/{WA}" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a><a href="tel:{PHONE_TEL}" aria-label="Telefon">☎</a></div><div class="cookie"><strong>Ihre Privatsphäre</strong><p class="legal-note">Diese Demo speichert nur Ihre Cookie-Auswahl lokal. Analyse- und Marketingdienste sind noch nicht aktiviert.</p><div class="cookie-actions"><button class="btn btn-dark" data-cookie="essential">Nur notwendig</button><button class="btn btn-primary" data-cookie="all">Alle akzeptieren</button></div></div>'''
 
 
@@ -312,7 +312,7 @@ def location_faqs(p: Place) -> list[tuple[str,str]]:
         (f'Kann ein MODUNERA Tiny House nach {p.name} geliefert werden?', f'Eine Lieferung nach {p.name} wird projektbezogen geprüft. Entscheidend sind Abmessungen, Gewicht, Route, Zufahrt, Rangierfläche und Entladepunkt. Die finale Transportplanung erfolgt nach Standortfreigabe.'),
         (f'Benötige ich in {p.name} eine Genehmigung?', f'Mobilität oder Räder bedeuten nicht automatisch Genehmigungsfreiheit. Nutzung, Aufstellungsdauer, Grundstück und lokale Planungsvorgaben müssen mit der zuständigen Gemeinde oder Bauaufsicht für {p.name} geklärt werden.'),
         (f'Ist ein Tiny House in {p.name} winterfest?', f'Die MODUNERA-Modelle können für eine ganzjährige Nutzung konfiguriert werden. Dämmung, Fenster, Wärmebrücken, Lüftung und Heizleistung müssen jedoch auf das konkrete Klima und Grundstück in {p.name} abgestimmt werden.'),
-        (f'Welches Modell passt für {p.name}?', f'Für Paare und Panoramaorientierung eignet sich häufig MC 1; Familien profitieren von MC 2 mit zwei Lofts; MC 3 und MC 4 bieten zusätzliche Raumtrennung; MC 6 setzt einen starken Chalet-Akzent. Die endgültige Auswahl richtet sich nach Personenanzahl, Nutzung und Standort.'),
+        (f'Welches Modell passt für {p.name}?', f'Für Paare und Panoramaorientierung eignet sich häufig MD 1; Familien profitieren von MD 2 mit zwei Lofts; MD 3 und MD 4 bieten zusätzliche Raumtrennung; MD 6 setzt einen starken Chalet-Akzent. Die endgültige Auswahl richtet sich nach Personenanzahl, Nutzung und Standort.'),
         (f'Kann ich das Tiny House individuell ausstatten?', 'Ja. Fassade, Innenraum, Küche, Bad, Möbel, Heiz- und Kühlsystem, Solartechnik sowie weitere Optionen können innerhalb der technischen und gewichtsspezifischen Grenzen projektbezogen konfiguriert werden.')
     ]
 
@@ -448,7 +448,7 @@ def build_faqs() -> list[dict]:
         'nachhaltigkeit':['Flächenverbrauch','Materialeinsatz','Energieeffizienz','Solarstrom','Wasserverbrauch','Langlebigkeit','Reparierbarkeit','Fassadenpflege','CO₂-Betrachtung','Rückbau','Mehrfachnutzung','lokale Anschlüsse','Abfall','Holzherkunft','Lebenszyklus','Greenwashing'],
         'business':['Airbnb','Glamping','Ferienpark','Serienproduktion','Betreiberkonzept','Auslastung','Rendite','Gästekomfort','Reinigung','Wartung','Zielgruppe','Preisstrategie','Standortmix','Corporate Housing','Pop-up Office','Händler'],
         'service':['Produktionsdauer','Planungsphase','Bemusterung','Änderungswünsche','Fabrikbesuch','Qualitätsbericht','Garantie','Gewährleistung','Ersatzteile','Wartung','Fernsupport','Dokumente','Sprachen','Projektmanager','After Sales','Reklamation'],
-        'modelle':['MC 1','MC 2','MC 3','MC 4','MC 5','MC 6','MC 7','MC 8','8 Meter','9 Meter','9,70 Meter','ein Loft','zwei Lofts','Veranda','Chalet','Modellvergleich']
+        'modelle':['MD 1','MD 2','MD 3','MD 4','MD 5','MD 6','MD 7','MD 8','8 Meter','9 Meter','9,70 Meter','ein Loft','zwei Lofts','Veranda','Chalet','Modellvergleich']
     }
     faqs=[]
     for cat,items in subjects.items():

@@ -9,7 +9,7 @@
         so the country and city landing pages could not reach the models, the
         tools or the 110 guides. Every <nav class="nav"> on the site is replaced
         with the v2 menu.
-     2. the pages the site was missing: MC 1-MC 8 comparison, country price
+     2. the pages the site was missing: MD 1-MD 8 comparison, country price
         comparison, tiny-house advantages, and a guide hub with categories that
         finally surfaces the existing German guides.
      3. six new market guides for the Netherlands, Denmark, Luxembourg and
@@ -86,7 +86,7 @@ const MENU = {
     ctaMsg: "Hallo MODUNERA, ich wünsche eine schnelle Ersteinschätzung für mein Tiny-House-Projekt.",
     items: [
       { label: "Tiny Houses", menu: [
-        ["katalog/", "Alle Modelle", "MC 1 bis MC 8"],
+        ["katalog/", "Alle Modelle", "MD 1 bis MD 8"],
         ["modellvergleich/", "Modellvergleich", "Maße, Grundriss, Preis"],
         ["studio/", "Design Studio", "Live konfigurieren"],
         ["konfigurator/", "Konfigurator", "Budget kalkulieren"],
@@ -111,8 +111,11 @@ const MENU = {
         ["leistungen/moebel-nach-mass/", "Möbel nach Maß", "Küchen und Einbauten"],
       ]},
       { label: "Ratgeber", menu: [
-        ["ratgeber/", "Ratgeber-Hub", "Alle Themen nach Kategorie"],
+        ["ratgeber/", "Ratgeber-Hub", "110 Beiträge in 9 Kategorien"],
+        ["blog/", "Blog", "Alle Beiträge chronologisch"],
         ["blog/europa/", "Europa-Guides", "Recht, Transport, Vergleich"],
+        ["ratgeber/genehmigung-und-recht/", "Genehmigung & Recht", "Bauantrag, Stellplatz, Versicherung"],
+        ["ratgeber/kosten-und-finanzierung/", "Kosten & Finanzierung", "Preise, Kauf, Rendite"],
         ["faq/", "FAQ", "160 Antworten"],
         ["faq/europa/", "Europa-FAQ", "Genehmigung, Zoll, Lieferung"],
         ["downloads/", "Dokumente", "Pläne und technische Daten"],
@@ -130,7 +133,7 @@ const MENU = {
     ctaMsg: "Hello MODUNERA, I would like a quick project assessment for a tiny house.",
     items: [
       { label: "Tiny houses", menu: [
-        ["en/model-comparison/", "Model comparison", "MC 1 to MC 8 side by side"],
+        ["en/model-comparison/", "Model comparison", "MD 1 to MD 8 side by side"],
         ["studio/", "Design studio", "Configure live"],
       ]},
       { label: "Countries", menu: [
@@ -189,27 +192,40 @@ const LOGO = "modunera-master-logo-mountain-v1";
 const LOGO_W = 600;
 const LOGO_H = 151;
 const MARK = "modunera-mark-v1.png";
-const GLOW = "modunera-digital-sunrise-glow-v1";
+
+const CLAIM = "Design Your Nature";
 
 function brandLockup(root, href, lang) {
   const src = `${root}${BRAND}${LOGO}`;
-  const label = lang === "de" ? "Modunera Startseite" : "Modunera home";
+  const label = lang === "de" ? "MODUNERA Startseite" : "MODUNERA home";
   // Never lazy: the lockup is above the fold on every page. width/height carry the
   // intrinsic ratio so the header reserves its box before the image arrives.
-  return `<a class="brand" href="${href}" aria-label="${label}"><img src="${src}-600.png" srcset="${src}-300.png 300w, ${src}-600.png 600w, ${src}-900.png 900w" sizes="150px" width="${LOGO_W}" height="${LOGO_H}" alt="Modunera" decoding="async"></a>`;
+  // The claim rides inside the link so it stays glued to the lockup at every width.
+  return `<a class="brand" href="${href}" aria-label="${label}"><img src="${src}-600.png" srcset="${src}-300.png 300w, ${src}-600.png 600w, ${src}-900.png 900w" sizes="150px" width="${LOGO_W}" height="${LOGO_H}" alt="MODUNERA" decoding="async"><span class="brand-claim">${CLAIM}</span></a>`;
 }
 
-function brandBand(root, lang) {
-  const src = `${root}${BRAND}${GLOW}`;
-  const alt = lang === "de" ? "Modunera" : "Modunera";
-  // A <picture> so exactly one file is fetched: the glow artwork on tablet and up,
-  // the white master lockup on phones where the artwork's wordmark would be tiny.
-  return `<section class="brand-band" id="brand-overture" aria-label="${lang === "de" ? "Marke" : "Brand"}"><picture><source media="(min-width:769px)" type="image/webp" srcset="${src}-900.webp 900w, ${src}-1400.webp 1400w" sizes="(max-width:1200px) 92vw, 1060px"><source media="(min-width:769px)" type="image/jpeg" srcset="${src}-1400.jpg"><img src="${root}${BRAND}${LOGO}-white-600.png" alt="${alt}" decoding="async" fetchpriority="high"></picture></section>`;
+/* WhatsApp dock. Replaces the old two-icon rail on every page: a launcher in the
+   brand green, and a panel naming what we build so the first message arrives with
+   context. It opens itself once per visitor and remembers the dismissal. */
+const WA_MARK = `<svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C8.9 3 3.1 8.8 3.1 15.94c0 2.28.6 4.5 1.74 6.46L3 29.5l7.28-1.9a12.9 12.9 0 0 0 5.76 1.37h.01c7.14 0 12.94-5.8 12.94-12.94C29 8.8 23.18 3 16.04 3Zm0 23.6h-.01c-1.83 0-3.62-.49-5.19-1.42l-.37-.22-3.85 1 1.03-3.75-.24-.39a10.6 10.6 0 0 1-1.63-5.68c0-5.93 4.83-10.76 10.77-10.76 2.88 0 5.58 1.12 7.61 3.16a10.7 10.7 0 0 1 3.15 7.61c0 5.94-4.83 10.75-10.77 10.75Zm5.9-8.05c-.32-.16-1.91-.94-2.21-1.05-.3-.11-.51-.16-.73.16-.21.32-.83 1.05-1.02 1.26-.19.22-.38.24-.7.08-.32-.16-1.36-.5-2.6-1.6-.96-.86-1.6-1.92-1.79-2.24-.19-.32-.02-.5.14-.66.14-.14.32-.38.48-.56.16-.19.21-.32.32-.54.11-.21.05-.4-.03-.56-.08-.16-.73-1.75-1-2.4-.26-.63-.53-.54-.73-.55l-.62-.01c-.21 0-.56.08-.86.4-.29.32-1.12 1.1-1.12 2.67 0 1.58 1.15 3.1 1.31 3.32.16.21 2.26 3.45 5.48 4.84.77.33 1.36.53 1.83.68.77.24 1.47.21 2.02.13.62-.09 1.91-.78 2.18-1.54.27-.76.27-1.4.19-1.54-.08-.13-.29-.21-.61-.37Z"/></svg>`;
+
+const WA_SERVICES = {
+  de: ["Tiny Houses", "Modulbau", "Stahlbau", "Bungalows", "Möbel nach Maß"],
+  en: ["Tiny houses", "Modular buildings", "Steel structures", "Bungalows", "Bespoke furniture"],
+};
+
+function whatsappDock(lang) {
+  const de = lang === "de";
+  const message = de
+    ? "Hallo MODUNERA. Zielland/Ort: __. Nutzung: __. Personen: __. Budget: __. Bitte senden Sie mir eine Ersteinschätzung."
+    : "Hello MODUNERA. Destination/place: __. Intended use: __. People: __. Budget: __. Please send a first assessment.";
+  const services = WA_SERVICES[lang].map((s) => `<li>${esc(s)}</li>`).join("");
+  return `<div class="wa-dock" id="waDock"><div class="wa-panel" role="dialog" aria-label="${de ? "WhatsApp Kontakt" : "WhatsApp contact"}"><div class="wa-head">${WA_MARK}<div><strong>MODUNERA</strong><span>${de ? "Antwort meist am selben Tag" : "Usually replies the same day"}</span></div><button class="wa-close" type="button" aria-label="${de ? "Schließen" : "Close"}">✕</button></div><div class="wa-body"><p>${de ? "Wir fertigen in eigener Produktion und liefern nach Europa:" : "We manufacture in our own production and deliver across Europe:"}</p><ul class="wa-services">${services}</ul><a class="wa-cta" href="${waLink(message)}" target="_blank" rel="noopener">${WA_MARK}${de ? "Projekt starten" : "Start your project"}</a></div></div><div class="wa-rail"><a class="wa-call" href="tel:${PHONE_TEL}" aria-label="${de ? "Telefon" : "Phone"}">☎</a><button class="wa-launch" type="button" aria-label="${de ? "WhatsApp öffnen" : "Open WhatsApp"}" aria-expanded="false">${WA_MARK}</button></div></div><script>(function(){var d=document.getElementById("waDock");if(!d)return;var b=d.querySelector(".wa-launch"),c=d.querySelector(".wa-close"),K="modunera-wa-dismissed";function set(o){d.classList.toggle("open",o);b.setAttribute("aria-expanded",o?"true":"false")}b.addEventListener("click",function(){set(!d.classList.contains("open"))});c.addEventListener("click",function(){set(false);try{localStorage.setItem(K,"1")}catch(e){}});try{if(!localStorage.getItem(K))setTimeout(function(){set(true)},innerWidth<560?2600:1400)}catch(e){}})();</script>`;
 }
 
 function footer(root, lang) {
   const de = lang === "de";
-  return `<section class="cta-band"><div class="container cta-inner"><div><h2>${de ? "Projekt in 2 Minuten starten." : "Start your project in two minutes."}</h2><p>${de ? "Zielland, Nutzung und Wunschmodell per WhatsApp senden – wir strukturieren den nächsten Schritt." : "Send your country, intended use and preferred model via WhatsApp and we will structure the next step."}</p></div><a class="btn btn-light" href="${waLink(de ? "Hallo MODUNERA, mein Zielland ist: __. Nutzung: __. Wunschgröße/Modell: __. Bitte kontaktieren Sie mich." : "Hello MODUNERA. Destination country: __. Intended use: __. Preferred size/model: __. Please contact me.")}" target="_blank" rel="noopener">${de ? "WhatsApp-Anfrage →" : "WhatsApp enquiry →"}</a></div></section><footer class="footer"><div class="container"><div class="footer-grid"><div>${brandLockup(root, root + (de ? "index.html" : "en/"), lang)}<p>${de ? "Tiny Houses als Kernprodukt. Dazu Modulbau, Stahlbau, Bungalows und maßgefertigte Möbel – direkt aus eigener Produktion für Europa." : "Tiny houses are our core product, complemented by modular buildings, steel structures, bungalows and bespoke furniture for Europe."}</p><a href="tel:${PHONE_TEL}">${PHONE_DISPLAY}</a></div><div><h4>${de ? "Länder" : "Countries"}</h4><a href="${root}${de ? "laender/deutschland/" : "en/countries/germany/"}">${de ? "Deutschland" : "Germany"}</a><a href="${root}${de ? "laender/niederlande/" : "en/countries/netherlands/"}">${de ? "Niederlande" : "Netherlands"}</a><a href="${root}${de ? "laender/daenemark/" : "en/countries/denmark/"}">${de ? "Dänemark" : "Denmark"}</a><a href="${root}${de ? "laender/luxemburg/" : "en/countries/luxembourg/"}">Luxembourg</a><a href="${root}${de ? "laender/schweiz/" : "en/countries/switzerland/"}">${de ? "Schweiz" : "Switzerland"}</a></div><div><h4>${de ? "Vergleichen" : "Compare"}</h4><a href="${root}${de ? "modellvergleich/" : "en/model-comparison/"}">${de ? "Modellvergleich" : "Model comparison"}</a><a href="${root}${de ? "preisvergleich/" : "en/price-comparison/"}">${de ? "Preisvergleich" : "Price comparison"}</a><a href="${root}${de ? "vorteile/" : "en/advantages/"}">${de ? "Vorteile" : "Advantages"}</a><a href="${root}studio/">Design Studio</a></div><div><h4>${de ? "Wissen" : "Knowledge"}</h4><a href="${root}${de ? "ratgeber/" : "en/guides/"}">${de ? "Ratgeber" : "Guides"}</a><a href="${root}${de ? "blog/europa/" : "en/guides/"}">${de ? "Europa-Guides" : "Europe guides"}</a><a href="${root}${de ? "faq/europa/" : "en/faq/"}">FAQ</a><a href="${root}kontakt/">${de ? "Kontakt" : "Contact"}</a></div></div><div class="footer-bottom"><span>© <span data-year>2026</span> MODUNERA. ${de ? "Alle Rechte vorbehalten." : "All rights reserved."}</span><span>${de ? "Hinweise ersetzen keine Behörden-, Rechts-, Steuer- oder Statikberatung." : "Guidance does not replace authority, legal, tax or structural advice."}</span></div></div></footer><div class="floating-actions"><a href="${waLink(de ? "Hallo MODUNERA, ich interessiere mich für ein Tiny House. Bitte kontaktieren Sie mich." : "Hello MODUNERA, I am interested in a tiny house. Please contact me.")}" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a><a href="tel:${PHONE_TEL}" aria-label="${de ? "Telefon" : "Phone"}">☎</a></div><script src="${root}assets/js/main.js"></script></body></html>`;
+  return `<section class="cta-band"><div class="container cta-inner"><div><h2>${de ? "Projekt in 2 Minuten starten." : "Start your project in two minutes."}</h2><p>${de ? "Zielland, Nutzung und Wunschmodell per WhatsApp senden – wir strukturieren den nächsten Schritt." : "Send your country, intended use and preferred model via WhatsApp and we will structure the next step."}</p></div><a class="btn btn-light" href="${waLink(de ? "Hallo MODUNERA, mein Zielland ist: __. Nutzung: __. Wunschgröße/Modell: __. Bitte kontaktieren Sie mich." : "Hello MODUNERA. Destination country: __. Intended use: __. Preferred size/model: __. Please contact me.")}" target="_blank" rel="noopener">${de ? "WhatsApp-Anfrage →" : "WhatsApp enquiry →"}</a></div></section><footer class="footer"><div class="container"><div class="footer-grid"><div>${brandLockup(root, root + (de ? "index.html" : "en/"), lang)}<p>${de ? "Tiny Houses als Kernprodukt. Dazu Modulbau, Stahlbau, Bungalows und maßgefertigte Möbel – direkt aus eigener Produktion für Europa." : "Tiny houses are our core product, complemented by modular buildings, steel structures, bungalows and bespoke furniture for Europe."}</p><a href="tel:${PHONE_TEL}">${PHONE_DISPLAY}</a></div><div><h4>${de ? "Länder" : "Countries"}</h4><a href="${root}${de ? "laender/deutschland/" : "en/countries/germany/"}">${de ? "Deutschland" : "Germany"}</a><a href="${root}${de ? "laender/niederlande/" : "en/countries/netherlands/"}">${de ? "Niederlande" : "Netherlands"}</a><a href="${root}${de ? "laender/daenemark/" : "en/countries/denmark/"}">${de ? "Dänemark" : "Denmark"}</a><a href="${root}${de ? "laender/luxemburg/" : "en/countries/luxembourg/"}">Luxembourg</a><a href="${root}${de ? "laender/schweiz/" : "en/countries/switzerland/"}">${de ? "Schweiz" : "Switzerland"}</a></div><div><h4>${de ? "Vergleichen" : "Compare"}</h4><a href="${root}${de ? "modellvergleich/" : "en/model-comparison/"}">${de ? "Modellvergleich" : "Model comparison"}</a><a href="${root}${de ? "preisvergleich/" : "en/price-comparison/"}">${de ? "Preisvergleich" : "Price comparison"}</a><a href="${root}${de ? "vorteile/" : "en/advantages/"}">${de ? "Vorteile" : "Advantages"}</a><a href="${root}studio/">Design Studio</a></div><div><h4>${de ? "Wissen" : "Knowledge"}</h4><a href="${root}${de ? "ratgeber/" : "en/guides/"}">${de ? "Ratgeber" : "Guides"}</a><a href="${root}${de ? "blog/europa/" : "en/guides/"}">${de ? "Europa-Guides" : "Europe guides"}</a><a href="${root}${de ? "faq/europa/" : "en/faq/"}">FAQ</a><a href="${root}kontakt/">${de ? "Kontakt" : "Contact"}</a></div></div><div class="footer-bottom"><span>© <span data-year>2026</span> MODUNERA. ${de ? "Alle Rechte vorbehalten." : "All rights reserved."}</span><span>${de ? "Hinweise ersetzen keine Behörden-, Rechts-, Steuer- oder Statikberatung." : "Guidance does not replace authority, legal, tax or structural advice."}</span></div></div></footer>${whatsappDock(lang)}<script src="${root}assets/js/main.js"></script></body></html>`;
 }
 
 const faqMarkup = (items) =>
@@ -265,7 +281,7 @@ const COUNTRY_LABELS = {
   CH: { de: "Schweiz", en: "Switzerland", deSlug: "schweiz", enSlug: "switzerland" },
 };
 
-/* --- MC 1-MC 8 comparison ------------------------------------------------- */
+/* --- MD 1-MD 8 comparison ------------------------------------------------- */
 
 function modelComparisonPage(pricing, lang) {
   const de = lang === "de";
@@ -276,26 +292,26 @@ function modelComparisonPage(pricing, lang) {
 
   const rows = models
     .map(([id, m]) => {
-      const n = "MC " + id.slice(2);
+      const n = "MD " + id.slice(2);
       return `<tr><td><strong>${n}</strong></td><td>${m.lengths}</td><td>${de ? m.layout_de : m.layout_en}</td><td>${de ? m.focus_de : m.focus_en}</td><td>${de ? m.use_de : m.use_en}</td><td><span class="price-figure">${de ? "ab" : "from"} ${eur(m.base_eur, lang)}</span><span class="price-note">${de ? "ab Werk, Basis" : "ex works, base"}</span></td></tr>`;
     })
     .join("");
 
   const faqs = de
     ? [
-        ["Welches Modell ist das günstigste?", `MC 7 startet mit ${eur(cheapest, lang)} ab Werk in der Basisausstattung. Der Gesamtpreis hängt danach von Länge, Innenausbau, Fassade, Heizung, Energie und Lieferung ab.`],
+        ["Welches Modell ist das günstigste?", `MD 7 startet mit ${eur(cheapest, lang)} ab Werk in der Basisausstattung. Der Gesamtpreis hängt danach von Länge, Innenausbau, Fassade, Heizung, Energie und Lieferung ab.`],
         ["Worin unterscheiden sich die Modelle wirklich?", "Vor allem im Grundriss: Anzahl der Lofts, ob ein zusätzlicher abgeschlossener Raum vorhanden ist und ob eine Veranda Teil der Konstruktion ist. Die Bauweise, der Stahlrahmen und die Ausstattungslinien sind über alle Modelle vergleichbar."],
         ["Kann ich einen Grundriss anpassen?", "Grundriss-, Material- und Möbelanpassungen sind projektbezogen möglich, weil Rahmen, Hülle, Ausbau und Möbel aus eigener Produktion kommen. Umfang und Auswirkung auf Preis und Termin werden vor der Bestellung schriftlich festgehalten."],
         ["Sind die Preise verbindlich?", "Nein. Es sind Indikationen ab Werk in Basisausstattung. Verbindlich ist ausschließlich ein geprüftes Angebot, das Ausstattung, Transport, Zielland und Baustellenbedingungen berücksichtigt."],
       ]
     : [
-        ["Which model is the most affordable?", `MC 7 starts at ${eur(cheapest, lang)} ex works in base specification. The final figure then depends on length, interior, facade, heating, energy and delivery.`],
+        ["Which model is the most affordable?", `MD 7 starts at ${eur(cheapest, lang)} ex works in base specification. The final figure then depends on length, interior, facade, heating, energy and delivery.`],
         ["What actually differs between the models?", "Mainly the layout: the number of lofts, whether a separate enclosed room is included and whether a veranda is part of the structure. Construction, the steel frame and the specification lines are comparable across the range."],
         ["Can a layout be adapted?", "Layout, material and furniture changes are possible per project because the frame, envelope, interior and furniture all come from our own production. Scope and the effect on price and schedule are recorded in writing before ordering."],
         ["Are the prices binding?", "No. They are ex-works indications in base specification. Only a checked quotation that reflects specification, transport, destination country and site conditions is binding."],
       ];
 
-  const title = de ? "Modellvergleich MC 1–MC 8: Maße, Grundriss und Preis | MODUNERA" : "Model comparison MC 1–MC 8: size, layout and price | MODUNERA";
+  const title = de ? "Modellvergleich MD 1–MD 8: Maße, Grundriss und Preis | MODUNERA" : "Model comparison MD 1–MD 8: size, layout and price | MODUNERA";
   const description = de
     ? "Alle acht MODUNERA Tiny-House-Modelle im direkten Vergleich: Längen, Grundriss, Ausrichtung, typische Nutzung und Preisindikation ab Werk."
     : "All eight MODUNERA tiny house models side by side: lengths, layout, focus, typical use and ex-works price indication.";
@@ -310,19 +326,19 @@ function modelComparisonPage(pricing, lang) {
         {
           "@context": "https://schema.org", "@type": "ItemList",
           itemListElement: models.map(([id, m], i) => ({
-            "@type": "ListItem", position: i + 1, name: "MC " + id.slice(2),
-            item: { "@type": "Product", name: "MODUNERA MC " + id.slice(2), brand: { "@type": "Brand", name: "MODUNERA" },
+            "@type": "ListItem", position: i + 1, name: "MD " + id.slice(2),
+            item: { "@type": "Product", name: "MODUNERA MD " + id.slice(2), brand: { "@type": "Brand", name: "MODUNERA" },
               offers: { "@type": "Offer", priceCurrency: "EUR", price: m.base_eur, availability: "https://schema.org/PreOrder" } },
           })),
         },
       ],
     }) +
     chrome(root, lang) +
-    `<main id="main"><section class="page-hero"><div class="container"><div class="breadcrumbs">${de ? "MODUNERA · Modelle" : "MODUNERA · Models"}</div><div class="eyebrow">${de ? "Acht Ausgangsmodelle" : "Eight base models"}</div><h1>${de ? "MC 1 bis MC 8 im direkten Vergleich." : "MC 1 to MC 8 side by side."}</h1><p>${de ? "Alle Modelle teilen Stahlrahmen, Bauweise und Ausstattungslinien. Der Unterschied liegt im Grundriss und in der Nutzung, für die das Modell ausgelegt ist." : "Every model shares the steel frame, the construction method and the specification lines. What differs is the layout and the use the model is designed for."}</p></div></section>` +
+    `<main id="main"><section class="page-hero"><div class="container"><div class="breadcrumbs">${de ? "MODUNERA · Modelle" : "MODUNERA · Models"}</div><div class="eyebrow">${de ? "Acht Ausgangsmodelle" : "Eight base models"}</div><h1>${de ? "MD 1 bis MD 8 im direkten Vergleich." : "MD 1 to MD 8 side by side."}</h1><p>${de ? "Alle Modelle teilen Stahlrahmen, Bauweise und Ausstattungslinien. Der Unterschied liegt im Grundriss und in der Nutzung, für die das Modell ausgelegt ist." : "Every model shares the steel frame, the construction method and the specification lines. What differs is the layout and the use the model is designed for."}</p></div></section>` +
     `<section class="section"><div class="container"><div class="kpi-row"><div class="kpi"><b>8</b><span>${de ? "Ausgangsmodelle" : "Base models"}</span></div><div class="kpi"><b>8–9,70 m</b><span>${de ? "Längenoptionen" : "Length options"}</span></div><div class="kpi"><b>2,55 m</b><span>${de ? "Mobile Breite" : "Mobile width"}</span></div><div class="kpi"><b>${eur(cheapest, lang)}</b><span>${de ? "Einstieg ab Werk" : "Entry, ex works"}</span></div></div>` +
     `<div class="compare"><table><thead><tr><th>${de ? "Modell" : "Model"}</th><th>${de ? "Länge" : "Length"}</th><th>${de ? "Grundriss" : "Layout"}</th><th>${de ? "Ausrichtung" : "Focus"}</th><th>${de ? "Typische Nutzung" : "Typical use"}</th><th>${de ? "Preisindikation" : "Price indication"}</th></tr></thead><tbody>${rows}</tbody></table></div>` +
     `<div class="answer-box"><strong>${de ? "Was der Preis nicht enthält" : "What the price excludes"}</strong><p>${de ? "Die Indikation gilt ab Werk in Basisausstattung. Transport, Kran, Fundament, Anschlüsse, Zoll, Einfuhrumsatzsteuer und lokale Leistungen kommen projektbezogen hinzu. Der Preisvergleich je Zielland zeigt die Logistikseite." : "The indication is ex works in base specification. Transport, crane, foundation, connections, customs, import VAT and local works are added per project. The country price comparison covers the logistics side."}</p></div>` +
-    `<div class="hero-actions"><a class="btn btn-primary" href="${root}${de ? "preisvergleich/" : "en/price-comparison/"}">${de ? "Preisvergleich je Land →" : "Price comparison by country →"}</a><a class="btn btn-outline" href="${root}studio/">${de ? "Im Design Studio konfigurieren" : "Configure in the design studio"}</a><a class="btn btn-outline" href="${waLink(de ? "Hallo MODUNERA, ich vergleiche die Modelle MC 1–MC 8. Zielland: __. Nutzung: __. Personen: __. Budget: __. Bitte senden Sie mir eine Ersteinschätzung." : "Hello MODUNERA, I am comparing models MC 1–MC 8. Destination country: __. Intended use: __. People: __. Budget: __. Please send a first assessment.")}" target="_blank" rel="noopener">${de ? "WhatsApp-Projektcheck" : "WhatsApp project check"}</a></div>` +
+    `<div class="hero-actions"><a class="btn btn-primary" href="${root}${de ? "preisvergleich/" : "en/price-comparison/"}">${de ? "Preisvergleich je Land →" : "Price comparison by country →"}</a><a class="btn btn-outline" href="${root}studio/">${de ? "Im Design Studio konfigurieren" : "Configure in the design studio"}</a><a class="btn btn-outline" href="${waLink(de ? "Hallo MODUNERA, ich vergleiche die Modelle MD 1–MD 8. Zielland: __. Nutzung: __. Personen: __. Budget: __. Bitte senden Sie mir eine Ersteinschätzung." : "Hello MODUNERA, I am comparing models MD 1–MD 8. Destination country: __. Intended use: __. People: __. Budget: __. Please send a first assessment.")}" target="_blank" rel="noopener">${de ? "WhatsApp-Projektcheck" : "WhatsApp project check"}</a></div>` +
     disclaimer(de) +
     `</div></section><section class="section section-soft"><div class="container"><h2>FAQ</h2><div class="faq-list">${faqMarkup(faqs)}</div></div></section></main>` +
     footer(root, lang)
@@ -347,13 +363,13 @@ function priceComparisonPage(pricing, lang) {
       const delivery = d.eur
         ? `<span class="price-figure">${eur(d.eur, lang)}</span>${note ? `<span class="price-note">${esc(note)}</span>` : ""}`
         : `<span class="price-figure">${de ? "auf Anfrage" : "on request"}</span><span class="price-note">${esc(note ?? "")}</span>`;
-      const from = d.eur ? `<span class="price-figure">${eur(entry + d.eur, lang)}</span><span class="price-note">${de ? "MC 7 Basis + Lieferung" : "MC 7 base + delivery"}</span>` : `<span class="price-figure">${de ? "auf Anfrage" : "on request"}</span>`;
+      const from = d.eur ? `<span class="price-figure">${eur(entry + d.eur, lang)}</span><span class="price-note">${de ? "MD 7 Basis + Lieferung" : "MD 7 base + delivery"}</span>` : `<span class="price-figure">${de ? "auf Anfrage" : "on request"}</span>`;
       return `<tr><td><strong><a href="${link}">${name}</a></strong></td><td>${delivery}</td><td>${from}</td><td>${de ? "Ja – Standort- und Nutzungsprüfung bei der zuständigen Stelle" : "Yes – site and use check with the competent authority"}</td></tr>`;
     })
     .join("");
 
   const modelRows = Object.entries(pricing.models)
-    .map(([id, m]) => `<tr><td><strong>MC ${id.slice(2)}</strong></td><td>${m.lengths}</td><td>${de ? m.layout_de : m.layout_en}</td><td><span class="price-figure">${eur(m.base_eur, lang)}</span></td></tr>`)
+    .map(([id, m]) => `<tr><td><strong>MD ${id.slice(2)}</strong></td><td>${m.lengths}</td><td>${de ? m.layout_de : m.layout_en}</td><td><span class="price-figure">${eur(m.base_eur, lang)}</span></td></tr>`)
     .join("");
 
   const faqs = de
@@ -765,13 +781,13 @@ const MARKET_GUIDES = [
       sections: [
         ["1. Zuerst die Nutzungsart, dann die Kalkulation", ["Ferienvermietung ist eine eigene Nutzungsart. Ob sie am Standort zulässig ist, entscheidet die Kommune – unabhängig davon, ob das Gebäude mobil ist. Wer erst kauft und dann prüft, riskiert eine nicht nutzbare Einheit.", "In Ferienparks und auf gewerblichen Stellplätzen ist der Rahmen häufig bereits gesetzt, was den Weg deutlich verkürzt."]],
         ["2. Saison schlägt Tagespreis", ["Die Auslastung über das Jahr bestimmt den Ertrag stärker als der Preis pro Nacht. Eine winterfeste Ausführung verlängert die Saison und verändert damit die Rechnung grundlegend.", "Dänemark und die Niederlande haben starke Sommer- und Randsaisons; die Schweiz kann mit Bergbezug eine zweite Wintersaison erschließen."]],
-        ["3. Ausstattung, die Bewertungen erzeugt", ["Bad, Küche, Schlafkomfort, Heizung und Schallschutz entscheiden über Bewertungen und Wiederbuchungen. Genau hier zahlt sich integrierte Möbelfertigung aus, weil Stauraum und Bettmaße zum Grundriss passen statt nachträglich hineingestellt zu werden.", "Ein überdachter Außenbereich – wie beim MC 4 – verlängert die nutzbare Saison und ist in Bildern sofort sichtbar."]],
+        ["3. Ausstattung, die Bewertungen erzeugt", ["Bad, Küche, Schlafkomfort, Heizung und Schallschutz entscheiden über Bewertungen und Wiederbuchungen. Genau hier zahlt sich integrierte Möbelfertigung aus, weil Stauraum und Bettmaße zum Grundriss passen statt nachträglich hineingestellt zu werden.", "Ein überdachter Außenbereich – wie beim MD 4 – verlängert die nutzbare Saison und ist in Bildern sofort sichtbar."]],
         ["4. Betrieb ist ein Kostenblock", ["Reinigung, Wäsche, Check-in, Wartung, Versicherung und Plattformgebühren gehören in jede Rechnung. Sie werden bei der ersten Kalkulation regelmäßig unterschätzt.", "Wer mehrere Einheiten plant, verteilt diese Kosten besser – das ist häufig der eigentliche Skaleneffekt."]],
         ["5. Realistisch statt versprochen", ["Belastbare Zahlen entstehen aus lokalen Vergleichsobjekten, nicht aus Musterrechnungen. MODUNERA liefert Modell, Ausstattung und Dokumentation; die Ertragsannahmen gehören zum Standort und zum Betreiber."]],
       ],
       faqs: [
         ["Darf ich ein Tiny House als Ferienwohnung vermieten?", "Das hängt von der Zulässigkeit der Nutzungsart am Standort ab und wird kommunal geprüft. Diese Frage gehört vor die Bestellung."],
-        ["Welches Modell eignet sich für Vermietung?", "Häufig MC 2 wegen der zwei getrennten Lofts und MC 4 wegen der Veranda. Entscheidend sind Gästezahl, Saison und Lage."],
+        ["Welches Modell eignet sich für Vermietung?", "Häufig MD 2 wegen der zwei getrennten Lofts und MD 4 wegen der Veranda. Entscheidend sind Gästezahl, Saison und Lage."],
         ["Garantiert MODUNERA eine Rendite?", "Nein. Auslastung und Preise hängen von Lage, Nachfrage, Betrieb und Wettbewerb ab. Verbindliche Ertragszusagen wären unseriös."],
         ["Wie schnell ist eine Einheit einsatzbereit?", "Nach Lieferung sind Aufstellung, Anschlüsse und Ausstattung nötig. Der Zeitbedarf hängt vom Standort ab, nicht vom Modell."],
       ],
@@ -783,13 +799,13 @@ const MARKET_GUIDES = [
       sections: [
         ["1. Use class first, calculation second", ["Holiday rental is a use class of its own. Whether it is admissible on the site is decided by the municipality, regardless of whether the building is mobile. Buying first and checking afterwards risks an unusable unit.", "In holiday parks and on commercial pitches the framework is often already in place, which shortens the path considerably."]],
         ["2. Season beats nightly rate", ["Occupancy across the year drives income more than the price per night. A winter-capable build extends the season and fundamentally changes the calculation.", "Denmark and the Netherlands have strong summer and shoulder seasons; Switzerland can open a second winter season where there is a mountain context."]],
-        ["3. Specification that produces reviews", ["Bathroom, kitchen, sleeping comfort, heating and acoustics decide reviews and rebookings. This is exactly where integrated furniture production pays off, because storage and bed dimensions follow the layout instead of being placed into it afterwards.", "A covered outdoor area – as on the MC 4 – extends the usable season and is immediately visible in photographs."]],
+        ["3. Specification that produces reviews", ["Bathroom, kitchen, sleeping comfort, heating and acoustics decide reviews and rebookings. This is exactly where integrated furniture production pays off, because storage and bed dimensions follow the layout instead of being placed into it afterwards.", "A covered outdoor area – as on the MD 4 – extends the usable season and is immediately visible in photographs."]],
         ["4. Operations are a cost block", ["Cleaning, laundry, check-in, maintenance, insurance and platform fees belong in every calculation. They are regularly underestimated in a first estimate.", "Planning several units spreads these costs better, and that is often the real economy of scale."]],
         ["5. Realistic rather than promised", ["Dependable figures come from local comparable properties, not from example calculations. MODUNERA supplies the model, specification and documentation; the revenue assumptions belong to the site and the operator."]],
       ],
       faqs: [
         ["May I rent out a tiny house as a holiday home?", "That depends on whether the use class is admissible on the site and is assessed by the municipality. The question belongs before ordering."],
-        ["Which model suits rental use?", "Frequently the MC 2 for its two separate lofts and the MC 4 for its veranda. Guest numbers, season and location are decisive."],
+        ["Which model suits rental use?", "Frequently the MD 2 for its two separate lofts and the MD 4 for its veranda. Guest numbers, season and location are decisive."],
         ["Does MODUNERA guarantee a return?", "No. Occupancy and rates depend on location, demand, operations and competition. Binding revenue promises would not be credible."],
         ["How quickly is a unit ready to operate?", "After delivery, siting, connections and fit-out are required. The time needed depends on the site rather than the model."],
       ],
@@ -965,28 +981,23 @@ async function rewriteBrand() {
   return changed;
 }
 
-/* The sunrise-glow lockup gets exactly one placement per language: an overture
-   band above the existing hero, so the working photo hero and its CTAs stay. */
-async function insertBrandBand() {
-  let added = 0;
-  for (const [rel, lang] of [["index.html", "de"], ["en/index.html", "en"]]) {
-    const file = join(ROOT, rel);
-    const html = await readFile(file, "utf8");
-    if (html.includes('id="brand-overture"')) continue;
-    const anchor = '<main id="main">';
-    if (!html.includes(anchor)) throw new Error(`brand band anchor missing in ${rel}`);
-    const root = rootFor(rel);
-    // The band sits at the top of the page, so its artwork is the LCP candidate on
-    // desktop. No framework image component here, so preload it by hand — matching
-    // the <picture> media query so phones never fetch it.
-    const preload = `<link rel="preload" as="image" media="(min-width:769px)" type="image/webp" imagesrcset="${root}${BRAND}${GLOW}-900.webp 900w, ${root}${BRAND}${GLOW}-1400.webp 1400w" imagesizes="(max-width:1200px) 92vw, 1060px">`;
-    const next = html
-      .replace("</head>", `${preload}</head>`)
-      .replace(anchor, anchor + brandBand(root, lang));
-    await writeFile(file, next, "utf8");
-    added += 1;
+/* Swaps the legacy two-icon rail for the WhatsApp dock on the pages this layer
+   does not regenerate — the 7,572 German pages carry their own footer. */
+async function rewriteWhatsapp() {
+  const files = (await walk(ROOT)).filter((f) => extname(f).toLowerCase() === ".html");
+  let changed = 0;
+  for (const file of files) {
+    const rel = relative(ROOT, file).replaceAll("\\", "/");
+    const original = await readFile(file, "utf8");
+    if (!original.includes('<div class="floating-actions">')) continue;
+    const lang = /<html\s+lang="en"/i.test(original) ? "en" : "de";
+    const html = original.replace(/<div class="floating-actions">[\s\S]*?<\/div>/, whatsappDock(lang));
+    if (html !== original) {
+      await writeFile(file, html, "utf8");
+      changed += 1;
+    }
   }
-  return added;
+  return changed;
 }
 
 async function buildSitemaps() {
@@ -1042,8 +1053,8 @@ async function main() {
   }
 
   const navChanged = await rewriteNavigation();
-  const bandsAdded = await insertBrandBand();
   const brandChanged = await rewriteBrand();
+  const waChanged = await rewriteWhatsapp();
   const sitemap = await buildSitemaps();
 
   // keep the build report in step, since validate-modunera.mjs reports its sitemap_urls
@@ -1065,7 +1076,7 @@ async function main() {
     marketGuides: MARKET_GUIDES.length * 2,
     navigationRewritten: navChanged,
     brandRewritten: brandChanged,
-    brandBands: bandsAdded,
+    whatsappDocks: waChanged,
     sitemap,
   }));
 }

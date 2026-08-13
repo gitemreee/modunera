@@ -23,91 +23,91 @@
     },
     {
       "@type": "Product",
-      "@id": "https://modunera.com/modelle/mc-1/#product",
-      "name": "MC 1",
+      "@id": "https://modunera.com/modelle/md-1/#product",
+      "name": "MD 1",
       "brand": {
         "@type": "Brand",
         "name": "MODUNERA"
       },
       "description": "Panorama, Tageslicht und großzügiger Wohnbereich",
-      "url": "https://modunera.com/modelle/mc-1/"
+      "url": "https://modunera.com/modelle/md-1/"
     },
     {
       "@type": "Product",
-      "@id": "https://modunera.com/modelle/mc-2/#product",
-      "name": "MC 2",
+      "@id": "https://modunera.com/modelle/md-2/#product",
+      "name": "MD 2",
       "brand": {
         "@type": "Brand",
         "name": "MODUNERA"
       },
       "description": "Familien, Gäste und getrennte Schlafbereiche",
-      "url": "https://modunera.com/modelle/mc-2/"
+      "url": "https://modunera.com/modelle/md-2/"
     },
     {
       "@type": "Product",
-      "@id": "https://modunera.com/modelle/mc-3/#product",
-      "name": "MC 3",
+      "@id": "https://modunera.com/modelle/md-3/#product",
+      "name": "MD 3",
       "brand": {
         "@type": "Brand",
         "name": "MODUNERA"
       },
       "description": "Privatsphäre, Homeoffice und flexible Nutzung",
-      "url": "https://modunera.com/modelle/mc-3/"
+      "url": "https://modunera.com/modelle/md-3/"
     },
     {
       "@type": "Product",
-      "@id": "https://modunera.com/modelle/mc-4/#product",
-      "name": "MC 4",
+      "@id": "https://modunera.com/modelle/md-4/#product",
+      "name": "MD 4",
       "brand": {
         "@type": "Brand",
         "name": "MODUNERA"
       },
       "description": "Ferienhaus, Vermietung und Außenleben",
-      "url": "https://modunera.com/modelle/mc-4/"
+      "url": "https://modunera.com/modelle/md-4/"
     },
     {
       "@type": "Product",
-      "@id": "https://modunera.com/modelle/mc-5/#product",
-      "name": "MC 5",
+      "@id": "https://modunera.com/modelle/md-5/#product",
+      "name": "MD 5",
       "brand": {
         "@type": "Brand",
         "name": "MODUNERA"
       },
       "description": "Urbanes Design mit warmen Naturmaterialien",
-      "url": "https://modunera.com/modelle/mc-5/"
+      "url": "https://modunera.com/modelle/md-5/"
     },
     {
       "@type": "Product",
-      "@id": "https://modunera.com/modelle/mc-6/#product",
-      "name": "MC 6",
+      "@id": "https://modunera.com/modelle/md-6/#product",
+      "name": "MD 6",
       "brand": {
         "@type": "Brand",
         "name": "MODUNERA"
       },
       "description": "Hohe Decken, Glasflächen und Naturerlebnis",
-      "url": "https://modunera.com/modelle/mc-6/"
+      "url": "https://modunera.com/modelle/md-6/"
     },
     {
       "@type": "Product",
-      "@id": "https://modunera.com/modelle/mc-7/#product",
-      "name": "MC 7",
+      "@id": "https://modunera.com/modelle/md-7/#product",
+      "name": "MD 7",
       "brand": {
         "@type": "Brand",
         "name": "MODUNERA"
       },
       "description": "Studio, Büro und asymmetrische Architektur",
-      "url": "https://modunera.com/modelle/mc-7/"
+      "url": "https://modunera.com/modelle/md-7/"
     },
     {
       "@type": "Product",
-      "@id": "https://modunera.com/modelle/mc-8/#product",
-      "name": "MC 8",
+      "@id": "https://modunera.com/modelle/md-8/#product",
+      "name": "MD 8",
       "brand": {
         "@type": "Brand",
         "name": "MODUNERA"
       },
       "description": "Kompakter Komfort und effizienter Stauraum",
-      "url": "https://modunera.com/modelle/mc-8/"
+      "url": "https://modunera.com/modelle/md-8/"
     }
   ]
 }

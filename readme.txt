@@ -4,7 +4,7 @@ Phone updated: +90 553 543 5342
 
 Included:
 - Premium German homepage
-- MC 1-8 detail pages with brochure images
+- MD 1-8 detail pages with brochure images
 - Live price configurator with WhatsApp summary
 - 40+ searchable FAQs
 - 10 long-form blog articles

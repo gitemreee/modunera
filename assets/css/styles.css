@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght,SOFT@9..144,400..700,50&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght,SOFT@9..144,400..700,50&family=Caveat:wght@500;600;700&display=swap');
 
 
 /* MODUNERA Europe Platform V4 — immersive commerce + SEO compatible */
@@ -314,6 +314,11 @@ body{font-family:var(--display);font-size:var(--fs-body);font-weight:500;line-he
 h1,h2,h3,h4{font-family:var(--display);letter-spacing:-.021em;text-wrap:balance}
 h1{font-size:var(--fs-h1);font-weight:800;line-height:1.1;margin:10px 0 0}
 h2{font-size:var(--fs-h2);font-weight:800;line-height:1.16;margin:8px 0 14px}
+/* v1 sized these per component, from a fixed 2.72rem up to a 115px clamp, so a bare
+   h2 rule never reached them. They all follow the compact scale now. */
+.section-header h2,.editorial-copy h2,.factory-copy h2,.wide-copy h2,.closing-cta h2,
+.article-content h2,.cta-inner h2,.faq-preview h2,.model-highlight h2{
+  font-size:var(--fs-h2);font-weight:800;line-height:1.16;letter-spacing:-.021em;margin:8px 0 14px}
 h3{font-size:var(--fs-h3);font-weight:750;line-height:1.3;margin:0 0 6px;letter-spacing:-.012em}
 h4{font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 10px}
 p{margin:0 0 10px}
@@ -346,8 +351,15 @@ p{margin:0 0 10px}
    charcoal wordmark) on transparency. object-fit:contain keeps the ratio no
    matter what box it lands in; the header surface stays light so the charcoal
    wordmark reads. */
-.brand{display:flex;align-items:center}
+.brand{display:flex;align-items:center;gap:12px}
 .brand img{width:150px;height:auto;max-height:38px;object-fit:contain}
+/* Brand line: "Design Your Nature" set in a handwriting face beside the lockup.
+   The webfont is loaded with the rest of the type; the fallbacks are real cursive
+   faces so the line still reads as handwriting if it does not arrive. */
+.brand-claim{font-family:"Caveat","Segoe Script","Bradley Hand","Snell Roundhand",cursive;
+  font-size:1.12rem;font-weight:600;line-height:1;color:var(--terracotta);
+  white-space:nowrap;letter-spacing:.01em;padding-top:2px}
+.footer .brand-claim,.brand-claim.on-dark{color:var(--brand-beige)}
 /* On the charcoal footer the wordmark would disappear, so the lockup is
    rendered white there. */
 .footer .brand img,.factory-copy .brand img{filter:brightness(0) invert(1);opacity:.92}
@@ -365,7 +377,13 @@ p{margin:0 0 10px}
 .nav-menu a>span{display:block}
 .nav-menu small{display:block;font-size:var(--fs-label);letter-spacing:.06em;color:var(--muted);font-weight:650;margin-top:1px;text-transform:none}
 .nav-dropdown>button:after{content:"›";display:inline-block;margin-left:5px;font-size:1em;transform:rotate(90deg);opacity:.5}
-.lang-switch{border-radius:6px;padding:7px 10px;font-size:var(--fs-label);letter-spacing:.08em}
+/* v1 hid the language switch below 1120px, which left phones with no route to the
+   English site at all. It stays visible at every width. */
+.lang-switch{display:inline-flex;align-items:center;white-space:nowrap;border-radius:6px;
+  padding:7px 10px;font-size:var(--fs-label);letter-spacing:.08em;
+  border:1px solid var(--line-strong);background:#fff;color:var(--charcoal)}
+.lang-switch:hover{border-color:var(--terracotta);color:var(--terracotta)}
+.nav-actions{gap:8px}
 .mobile-toggle{color:var(--charcoal);font-weight:800}
 
 /* --- Buttons -------------------------------------------------------------- */
@@ -423,7 +441,16 @@ p{margin:0 0 10px}
 .state-card>span{font-size:var(--fs-label);letter-spacing:.13em;text-transform:uppercase;color:var(--terracotta);font-weight:800}
 .model-card{min-height:300px;border-radius:var(--r)}
 .model-content{padding:18px}
-.model-display{min-height:0}
+/* .model-display holds only absolutely positioned children, so min-height is the
+   single thing giving it height. It needs a real value, not 0. */
+.model-display{min-height:clamp(340px,48vw,460px);border-radius:var(--r)}
+.model-display-content{padding:22px}
+.model-display h3{font-size:clamp(1.6rem,3.4vw,2.4rem);font-weight:820;line-height:1.1;letter-spacing:-.025em;margin:0 0 6px}
+.model-display p{font-size:var(--fs-small);max-width:52ch}
+.model-tab{border-radius:6px;padding:11px 13px}
+.model-tab strong{font-size:.95rem;font-weight:800}
+.model-tab span{font-size:var(--fs-label);letter-spacing:.1em;text-transform:uppercase}
+.model-stage{grid-template-columns:210px minmax(0,1fr);gap:14px}
 .value-card,.quality-card{border:1px solid var(--line);background:#fff;overflow:hidden}
 .value-card.feature{min-height:0}
 .benefit-number{font-size:1.5rem;font-weight:800;color:var(--terracotta);line-height:1}
@@ -495,31 +522,58 @@ p{margin:0 0 10px}
 .adv-card h3{margin:0 0 5px}
 .adv-card p{font-size:var(--fs-small);color:var(--muted);margin:0}
 
-/* Brand overture band — the one premium placement of the sunrise-glow lockup,
-   at the top of the two home pages. The band's gradient is sampled from the
-   artwork itself (corners #1C1C21, bright centre #9A3A22) so the image dissolves
-   into the page rather than sitting inside a card. No border, no radius.
-   Above 768px the glow artwork is served; at or below it the <picture> falls
-   back to the white master lockup and the glow is recreated in CSS, because the
-   artwork's wordmark would be about ten pixels tall on a phone. */
-.brand-band{background:#1c1c21;display:block;overflow:hidden;line-height:0;
-  animation:brand-rise 900ms cubic-bezier(.22,.7,.3,1) both}
-/* Full bleed on tablet and up: the artwork's own gradient becomes the band, so
-   there is no edge where a card or frame could appear. object-fit:cover trims the
-   composition vertically and leaves the centred lockup untouched. */
-.brand-band img{display:block;width:100%;height:clamp(240px,24vw,340px);object-fit:cover;
-  object-position:center 56%;border:0;border-radius:0;box-shadow:none}
-@keyframes brand-rise{from{opacity:0;transform:translateY(8px);filter:brightness(.84)}to{opacity:1;transform:none;filter:brightness(1)}}
-/* On phones the <picture> falls back to the white master lockup, so the band
-   paints the glow itself rather than shipping a 1774px artwork whose wordmark
-   would be about ten pixels tall. */
-@media(max-width:768px){
-  .brand-band{background:radial-gradient(ellipse 78% 96% at 50% 46%,#7d3520 0%,#46251f 38%,#2a2023 70%,#1c1c21 100%);
-    display:grid;place-items:center;min-height:176px;padding:30px 16px;line-height:normal}
-  .brand-band img{width:min(320px,76vw);height:auto;max-height:82px;object-fit:contain;
-    filter:drop-shadow(0 0 22px rgba(194,155,114,.5)) drop-shadow(0 0 58px rgba(141,50,31,.55))}
+/* WhatsApp widget — replaces the old two-icon floating rail. A launcher in the
+   brand green with the WhatsApp glyph, and a panel that names what we build so the
+   first message arrives with context. It opens itself once per visitor; the
+   dismissal is remembered, so it never nags on the next page. */
+.wa-dock{position:fixed;right:16px;bottom:16px;z-index:1400;display:flex;flex-direction:column;
+  align-items:flex-end;gap:10px;font-family:var(--display)}
+.wa-panel{width:min(316px,calc(100vw - 32px));background:#fff;border:1px solid var(--line);
+  border-radius:14px;box-shadow:0 18px 44px rgba(43,45,49,.22);overflow:hidden;
+  transform-origin:100% 100%;opacity:0;visibility:hidden;transform:translateY(10px) scale(.97);
+  transition:opacity .24s ease-out,transform .24s ease-out,visibility .24s}
+.wa-dock.open .wa-panel{opacity:1;visibility:visible;transform:none}
+.wa-head{display:flex;align-items:center;gap:10px;background:#075E54;color:#fff;padding:12px 14px}
+.wa-head svg{width:26px;height:26px;flex:none}
+.wa-head strong{display:block;font-size:.86rem;font-weight:800;line-height:1.2}
+.wa-head span{display:block;font-size:var(--fs-label);letter-spacing:.06em;color:rgba(255,255,255,.78);font-weight:650}
+.wa-close{margin-left:auto;background:none;border:0;color:#fff;font-size:1.15rem;line-height:1;
+  cursor:pointer;padding:2px 4px;opacity:.75}
+.wa-close:hover{opacity:1}
+.wa-body{padding:13px 14px 14px}
+.wa-body>p{margin:0 0 9px;font-size:var(--fs-small);color:var(--muted);line-height:1.45}
+.wa-services{display:flex;flex-wrap:wrap;gap:5px;margin:0 0 12px;padding:0;list-style:none}
+.wa-services li{font-size:var(--fs-label);letter-spacing:.04em;font-weight:750;color:var(--charcoal);
+  background:var(--paper-2);border-radius:999px;padding:5px 9px}
+.wa-cta{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:40px;
+  border-radius:8px;background:#25D366;color:#0b2e26;font-size:.78rem;font-weight:800;
+  letter-spacing:.04em;text-transform:uppercase}
+.wa-cta:hover{background:#1eb958}
+.wa-cta svg{width:17px;height:17px}
+.wa-rail{display:flex;flex-direction:column;gap:9px;align-items:flex-end}
+.wa-launch{width:54px;height:54px;border:0;border-radius:50%;background:#25D366;cursor:pointer;
+  display:grid;place-items:center;box-shadow:0 8px 22px rgba(37,211,102,.42);transition:transform .18s}
+.wa-launch:hover{transform:scale(1.05)}
+.wa-launch svg{width:30px;height:30px}
+.wa-call{width:44px;height:44px;border-radius:50%;background:#fff;border:1px solid var(--line-strong);
+  display:grid;place-items:center;color:var(--charcoal);font-size:1rem}
+.wa-call:hover{border-color:var(--terracotta);color:var(--terracotta)}
+@media(max-width:560px){
+  /* Compact on phones: it opens itself, so it has to sit lightly over the hero
+     rather than bury the primary call to action. */
+  .wa-dock{right:12px;bottom:12px;gap:8px}
+  .wa-launch{width:48px;height:48px}.wa-launch svg{width:26px;height:26px}
+  .wa-call{width:40px;height:40px}
+  .wa-panel{width:min(292px,calc(100vw - 24px))}
+  .wa-head{padding:9px 11px}
+  .wa-head svg{width:22px;height:22px}
+  .wa-body{padding:10px 11px 11px}
+  .wa-body>p{margin-bottom:7px;font-size:.76rem}
+  .wa-services{gap:4px;margin-bottom:9px}
+  .wa-services li{padding:4px 7px;font-size:.62rem}
+  .wa-cta{min-height:36px;font-size:.72rem}
 }
-@media(prefers-reduced-motion:reduce){.brand-band{animation:none}}
+@media(prefers-reduced-motion:reduce){.wa-panel{transition:none}}
 
 /* Key-figure strip */
 .kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp-gap);margin:18px 0}
@@ -573,8 +627,21 @@ p{margin:0 0 10px}
   .nav-dropdown.open>button:after{transform:rotate(90deg)}
   .nav-menu{padding:0 0 8px 12px;min-width:0;border-left:2px solid var(--line)}
   .nav-menu a{padding:7px 0}
-  .nav-menu small{display:none}
+  .nav-menu small{font-size:.66rem;letter-spacing:.03em}
+  /* v1's own media query hid this; put it back so phones can reach the English site */
+  .nav-actions .lang-switch{display:inline-flex}
+  .nav-actions>.btn{display:none}
+  .brand-claim{font-size:1rem}
 }
+/* Phone header: lockup, handwritten claim, language, hamburger — in that order */
+@media(max-width:560px){
+  .nav-inner{gap:8px}
+  .brand{gap:8px}
+  .brand img{width:104px;max-height:28px}
+  .brand-claim{font-size:.9rem}
+  .lang-switch{padding:6px 7px;font-size:.6rem;letter-spacing:.05em}
+}
+@media(max-width:380px){.brand-claim{display:none}}
 @media(max-width:640px){
   :root{--sp-section:34px;--fs-body:.93rem}
   .brand img{width:128px}
@@ -584,6 +651,16 @@ p{margin:0 0 10px}
   .places-list,.state-place-grid{grid-template-columns:minmax(0,1fr)}
   .state-place-grid a,.places-list a{flex-direction:column;align-items:flex-start;gap:5px}
   .hero-panel,.editorial-copy,.wide-copy{padding:20px}
+  /* The panel was covering 83% of the hero, so the photograph behind it was barely
+     visible. Anchor it to the bottom and trim it so the image gets the upper half. */
+  .hero{min-height:520px;height:auto;align-items:flex-end}
+  .hero-content{padding:0 0 16px;align-items:flex-end}
+  .hero-panel{width:100%;background:rgba(250,248,245,.96)}
+  .hero h1{font-size:1.85rem;margin:8px 0 10px}
+  .hero-panel p{font-size:.9rem;max-width:none}
+  .hero-proof{display:none}
+  .hero-actions{flex-direction:row;gap:8px;margin-top:14px}
+  .hero-actions .btn{flex:1 1 0;min-width:0;padding:0 10px;font-size:.66rem;text-align:center}
   .cta-band{padding:26px 0}
   .post-row{flex-direction:column;gap:3px}
 }

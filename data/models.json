@@ -1,63 +1,63 @@
 [
   {
-    "id": "mc-1",
-    "name": "MC 1",
+    "id": "md-1",
+    "name": "MD 1",
     "length": "8,00 oder 9,70 m",
     "layout": "1 Loft",
     "positioning": "Panorama, Tageslicht und großzügiger Wohnbereich",
     "image": "mc1-exterior.webp"
   },
   {
-    "id": "mc-2",
-    "name": "MC 2",
+    "id": "md-2",
+    "name": "MD 2",
     "length": "9,00 m",
     "layout": "2 Lofts",
     "positioning": "Familien, Gäste und getrennte Schlafbereiche",
     "image": "mc2-exterior.webp"
   },
   {
-    "id": "mc-3",
-    "name": "MC 3",
+    "id": "md-3",
+    "name": "MD 3",
     "length": "8,00 oder 9,70 m",
     "layout": "Loft + optionaler Raum",
     "positioning": "Privatsphäre, Homeoffice und flexible Nutzung",
     "image": "mc3-exterior.webp"
   },
   {
-    "id": "mc-4",
-    "name": "MC 4",
+    "id": "md-4",
+    "name": "MD 4",
     "length": "8,00 oder 9,00 m",
     "layout": "Loft, Zimmer und Veranda",
     "positioning": "Ferienhaus, Vermietung und Außenleben",
     "image": "mc4-exterior.webp"
   },
   {
-    "id": "mc-5",
-    "name": "MC 5",
+    "id": "md-5",
+    "name": "MD 5",
     "length": "8,00 oder 9,00 m",
     "layout": "Loft + optionaler Raum",
     "positioning": "Urbanes Design mit warmen Naturmaterialien",
     "image": "mc5-exterior.webp"
   },
   {
-    "id": "mc-6",
-    "name": "MC 6",
+    "id": "md-6",
+    "name": "MD 6",
     "length": "8,00 oder 9,00 m",
     "layout": "Chalet-Konzept",
     "positioning": "Hohe Decken, Glasflächen und Naturerlebnis",
     "image": "mc6-exterior.webp"
   },
   {
-    "id": "mc-7",
-    "name": "MC 7",
+    "id": "md-7",
+    "name": "MD 7",
     "length": "8,00 m",
     "layout": "1 Loft",
     "positioning": "Studio, Büro und asymmetrische Architektur",
     "image": "mc7-exterior.webp"
   },
   {
-    "id": "mc-8",
-    "name": "MC 8",
+    "id": "md-8",
+    "name": "MD 8",
     "length": "8,00 m",
     "layout": "1 Loft",
     "positioning": "Kompakter Komfort und effizienter Stauraum",

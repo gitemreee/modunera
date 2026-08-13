@@ -2,7 +2,7 @@
 
 ## Included
 - Immersive German homepage and redesigned shared style system
-- MC 1–MC 8 model selector
+- MD 1–MD 8 model selector
 - Interactive visual configurator with pricing, saving, sharing and print-to-PDF
 - Model comparison, delivery estimate, land-readiness, energy saving and hospitality ROI tools
 - Rule-based MODUNERA planning assistant on all pages
