@@ -1000,6 +1000,36 @@ async function rewriteWhatsapp() {
   return changed;
 }
 
+/* Hero slideshow. Five stills, crossfaded by CSS alone — no library, no script.
+   Only the first is fetched at high priority; the rest are hints-lowered so they
+   never compete with the page. */
+const HERO_SLIDES = 5;
+
+function heroSlides(root) {
+  const imgs = Array.from({ length: HERO_SLIDES }, (_, i) => {
+    const base = `${root}assets/images/hero-slides/slide-${i + 1}`;
+    const priority = i === 0 ? 'fetchpriority="high"' : 'fetchpriority="low"';
+    return `<img src="${base}-1400.webp" srcset="${base}-760.webp 760w, ${base}-1400.webp 1400w" sizes="100vw" alt="" decoding="async" ${priority}>`;
+  }).join("");
+  return `<div class="hero-slides" aria-hidden="true">${imgs}</div>`;
+}
+
+/* Puts the slideshow inside the existing .hero-media wrapper on both home pages.
+   Idempotent: it only fills the wrapper when it is still empty. */
+async function insertHeroSlides() {
+  let added = 0;
+  for (const rel of ["index.html", "en/index.html"]) {
+    const file = join(ROOT, rel);
+    const html = await readFile(file, "utf8");
+    if (html.includes('class="hero-slides"')) continue;
+    if (!html.includes('<div class="hero-media"></div>')) throw new Error(`hero-media wrapper missing in ${rel}`);
+    const next = html.replace('<div class="hero-media"></div>', `<div class="hero-media">${heroSlides(rootFor(rel))}</div>`);
+    await writeFile(file, next, "utf8");
+    added += 1;
+  }
+  return added;
+}
+
 async function buildSitemaps() {
   const all = await walk(ROOT, []);
   const skip = new Set(["admin-demo", "customer-portal", "saved-designs", "booking"]);
@@ -1053,6 +1083,7 @@ async function main() {
   }
 
   const navChanged = await rewriteNavigation();
+  const heroSlideshows = await insertHeroSlides();
   const brandChanged = await rewriteBrand();
   const waChanged = await rewriteWhatsapp();
   const sitemap = await buildSitemaps();
@@ -1075,6 +1106,7 @@ async function main() {
     categorisedGuides: posts.length,
     marketGuides: MARKET_GUIDES.length * 2,
     navigationRewritten: navChanged,
+    heroSlideshows,
     brandRewritten: brandChanged,
     whatsappDocks: waChanged,
     sitemap,

@@ -80,6 +80,25 @@ def main():
     resize_to_width(glow, 1400).save(out, "JPEG", quality=84, optimize=True, progressive=True)
     print(f"  {out.name}: {out.stat().st_size // 1024} KB")
 
+    hero_slides()
+
+
+def hero_slides():
+    """Downscale the five hero stills. The originals total 1.1 MB, which is far too
+    much to push at a phone for a background slideshow."""
+    gallery = BRAND.parent / "images" / "gallery"
+    out = BRAND.parent / "images" / "hero-slides"
+    out.mkdir(exist_ok=True)
+    sources = ["hero-forest.webp", "mc1-exterior.webp", "mc4-exterior.webp",
+               "mc6-exterior.webp", "nature-pool.webp"]
+    for index, name in enumerate(sources, 1):
+        image = Image.open(gallery / name).convert("RGB")
+        for width in (760, 1400):
+            path = out / f"slide-{index}-{width}.webp"
+            resize_to_width(image, width).save(path, "WEBP", quality=78, method=6)
+        print(f"  slide-{index} <- {name}: "
+              f"{(out / f'slide-{index}-760.webp').stat().st_size // 1024} KB mobile")
+
 
 if __name__ == "__main__":
     main()
