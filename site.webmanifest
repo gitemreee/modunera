@@ -1,1 +1,17 @@
-{"name": "Modunera Europe Platform", "short_name": "Modunera", "start_url": "./", "display": "standalone", "background_color": "#f7f5ef", "theme_color": "#0a261c", "icons": [{"src": "assets/images/mc-tiny-logo.png", "sizes": "512x512", "type": "image/png"}]}
+{
+  "name": "MODUNERA",
+  "short_name": "MODUNERA",
+  "description": "Premium tiny houses and modular living for Europe",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8f3ed",
+  "theme_color": "#C29B72",
+  "icons": [
+    {
+      "src": "/assets/images/modunera-mark.png",
+      "sizes": "2048x2048",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

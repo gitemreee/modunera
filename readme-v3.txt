@@ -11,7 +11,7 @@ Sitemap files: 9
 Phone: +90 553 543 5342
 
 IMPORTANT PRODUCTION CHECKS
-1. Replace/confirm canonical domain if mctiny.com/de/ is not the final live URL.
+1. Replace/confirm canonical domain if modunera.com/ is not the final live URL.
 2. Reconcile every location against the latest official Destatis GV-ISys municipality register before claiming complete municipal coverage.
 3. Editorially review local. legal. pricing. transport and technical content before mass indexation.
 4. Connect real forms. CRM. analytics consent. Impressum and Datenschutz.

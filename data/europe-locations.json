@@ -1,0 +1,301 @@
+{
+  "NL": {
+    "country": "Niederlande",
+    "regions": [
+      {
+        "name": "Drenthe",
+        "slug": "drenthe",
+        "count": 67
+      },
+      {
+        "name": "Friesland",
+        "slug": "friesland",
+        "count": 117
+      },
+      {
+        "name": "Gelderland",
+        "slug": "gelderland",
+        "count": 238
+      },
+      {
+        "name": "Groningen",
+        "slug": "groningen",
+        "count": 73
+      },
+      {
+        "name": "Limburg",
+        "slug": "limburg",
+        "count": 186
+      },
+      {
+        "name": "Noord-Brabant",
+        "slug": "noord-brabant",
+        "count": 272
+      },
+      {
+        "name": "Noord-Holland",
+        "slug": "noord-holland",
+        "count": 154
+      },
+      {
+        "name": "Utrecht",
+        "slug": "utrecht",
+        "count": 80
+      },
+      {
+        "name": "Zeeland",
+        "slug": "zeeland",
+        "count": 62
+      },
+      {
+        "name": "Zuid-Holland",
+        "slug": "zuid-holland",
+        "count": 180
+      },
+      {
+        "name": "Overijssel",
+        "slug": "overijssel",
+        "count": 77
+      },
+      {
+        "name": "Flevoland",
+        "slug": "flevoland",
+        "count": 19
+      }
+    ],
+    "count": 1525
+  },
+  "DK": {
+    "country": "Dänemark",
+    "regions": [
+      {
+        "name": "Hovedstaden",
+        "slug": "hovedstaden",
+        "count": 79
+      },
+      {
+        "name": "Midtjylland",
+        "slug": "midtjylland",
+        "count": 100
+      },
+      {
+        "name": "Nordjylland",
+        "slug": "nordjylland",
+        "count": 56
+      },
+      {
+        "name": "Sjælland",
+        "slug": "sj-lland",
+        "count": 91
+      },
+      {
+        "name": "Syddanmark",
+        "slug": "syddanmark",
+        "count": 106
+      }
+    ],
+    "count": 432
+  },
+  "LU": {
+    "country": "Luxemburg",
+    "regions": [
+      {
+        "name": "Capellen",
+        "slug": "capellen",
+        "count": 20
+      },
+      {
+        "name": "Clervaux",
+        "slug": "clervaux",
+        "count": 5
+      },
+      {
+        "name": "Diekirch",
+        "slug": "diekirch",
+        "count": 12
+      },
+      {
+        "name": "Echternach",
+        "slug": "echternach",
+        "count": 8
+      },
+      {
+        "name": "Esch-sur-Alzette",
+        "slug": "esch-sur-alzette",
+        "count": 27
+      },
+      {
+        "name": "Grevenmacher",
+        "slug": "grevenmacher",
+        "count": 11
+      },
+      {
+        "name": "Luxembourg",
+        "slug": "luxembourg",
+        "count": 44
+      },
+      {
+        "name": "Mersch",
+        "slug": "mersch",
+        "count": 16
+      },
+      {
+        "name": "Redange",
+        "slug": "redange",
+        "count": 10
+      },
+      {
+        "name": "Remich",
+        "slug": "remich",
+        "count": 9
+      },
+      {
+        "name": "Vianden",
+        "slug": "vianden",
+        "count": 3
+      },
+      {
+        "name": "Wiltz",
+        "slug": "wiltz",
+        "count": 7
+      }
+    ],
+    "count": 172
+  },
+  "CH": {
+    "country": "Schweiz",
+    "regions": [
+      {
+        "name": "Aargau",
+        "slug": "aargau",
+        "count": 116
+      },
+      {
+        "name": "Appenzell Innerrhoden",
+        "slug": "appenzell-innerrhoden",
+        "count": 4
+      },
+      {
+        "name": "Appenzell Ausserrhoden",
+        "slug": "appenzell-ausserrhoden",
+        "count": 12
+      },
+      {
+        "name": "Bern",
+        "slug": "bern",
+        "count": 167
+      },
+      {
+        "name": "Basel-Landschaft",
+        "slug": "basel-landschaft",
+        "count": 44
+      },
+      {
+        "name": "Basel-Stadt",
+        "slug": "basel-stadt",
+        "count": 3
+      },
+      {
+        "name": "Fribourg",
+        "slug": "fribourg",
+        "count": 52
+      },
+      {
+        "name": "Genève",
+        "slug": "geneve",
+        "count": 31
+      },
+      {
+        "name": "Glarus",
+        "slug": "glarus",
+        "count": 11
+      },
+      {
+        "name": "Graubünden",
+        "slug": "graubuenden",
+        "count": 53
+      },
+      {
+        "name": "Jura",
+        "slug": "jura",
+        "count": 18
+      },
+      {
+        "name": "Luzern",
+        "slug": "luzern",
+        "count": 61
+      },
+      {
+        "name": "Neuchâtel",
+        "slug": "neuchatel",
+        "count": 27
+      },
+      {
+        "name": "Nidwalden",
+        "slug": "nidwalden",
+        "count": 9
+      },
+      {
+        "name": "Obwalden",
+        "slug": "obwalden",
+        "count": 7
+      },
+      {
+        "name": "St. Gallen",
+        "slug": "st-gallen",
+        "count": 69
+      },
+      {
+        "name": "Schaffhausen",
+        "slug": "schaffhausen",
+        "count": 12
+      },
+      {
+        "name": "Solothurn",
+        "slug": "solothurn",
+        "count": 43
+      },
+      {
+        "name": "Schwyz",
+        "slug": "schwyz",
+        "count": 27
+      },
+      {
+        "name": "Thurgau",
+        "slug": "thurgau",
+        "count": 46
+      },
+      {
+        "name": "Ticino",
+        "slug": "ticino",
+        "count": 58
+      },
+      {
+        "name": "Uri",
+        "slug": "uri",
+        "count": 10
+      },
+      {
+        "name": "Vaud",
+        "slug": "vaud",
+        "count": 108
+      },
+      {
+        "name": "Valais / Wallis",
+        "slug": "valais-wallis",
+        "count": 64
+      },
+      {
+        "name": "Zug",
+        "slug": "zug",
+        "count": 9
+      },
+      {
+        "name": "Zürich",
+        "slug": "zuerich",
+        "count": 364
+      }
+    ],
+    "count": 1425
+  }
+}

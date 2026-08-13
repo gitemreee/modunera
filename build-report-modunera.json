@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-08-13",
+  "brand": "MODUNERA",
+  "domain": "https://modunera.com/",
+  "core_business": "Tiny houses",
+  "target_markets": {
+    "NL": {
+      "regions": 12,
+      "locations": 1525
+    },
+    "DK": {
+      "regions": 5,
+      "locations": 432
+    },
+    "LU": {
+      "regions": 12,
+      "locations": 172
+    },
+    "CH": {
+      "regions": 26,
+      "locations": 1425
+    }
+  },
+  "generated_location_pages": 7108,
+  "generated_country_pages": 10,
+  "generated_service_pages": 10,
+  "generated_guide_pages": 16,
+  "sitemap_urls": 14827,
+  "sitemap_files": 8,
+  "whatsapp": "+905535435342",
+  "colors": {
+    "beige": "#C29B72",
+    "terracotta": "#8D321F",
+    "olive": "#3A4027",
+    "charcoal": "#2B2D31"
+  }
+}

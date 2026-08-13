@@ -1,7 +1,7 @@
 {
   "version": "6.0",
   "generated_at": "2026-07-20",
-  "brand": "Modunera",
+  "brand": "MODUNERA",
   "phone": "+90 553 543 5342",
   "html_pages": 7573,
   "location_pages": 7423,
@@ -35,7 +35,7 @@
     "hreflang foundation"
   ],
   "brochure_pdf_pages": 97,
-  "brochure_source": "Mc-Tiny-germany.pdf",
+  "brochure_source": "MODUNERA-germany.pdf",
   "static_demo_limitations": [
     "CRM/email/analytics require credentials",
     "true free-rotation 3D requires CAD/GLB files",

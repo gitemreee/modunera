@@ -1,0 +1,61 @@
+{
+  "reviewed_at": "2026-08-13",
+  "target_markets": [
+    "DE",
+    "NL",
+    "DK",
+    "LU",
+    "CH"
+  ],
+  "competitor_markets": {
+    "Poland": {
+      "observed_strengths": [
+        "established European delivery",
+        "mature model ranges",
+        "public warranty propositions"
+      ],
+      "examples": [
+        "REDUKT",
+        "Aurora Company",
+        "Mobi House"
+      ]
+    },
+    "Romania": {
+      "observed_strengths": [
+        "experienced export manufacturers",
+        "four-season positioning",
+        "custom and hospitality offers"
+      ],
+      "examples": [
+        "Eco Tiny House",
+        "Kubo TinyHouse",
+        "Solido"
+      ]
+    }
+  },
+  "modunera_positioning": [
+    "tiny-house core offer with eight base models",
+    "own production",
+    "integrated bespoke furniture",
+    "digital configuration and tools",
+    "country and local landing architecture",
+    "structured WhatsApp qualification"
+  ],
+  "policy": "Use verifiable differentiators; do not publish unsupported blanket superiority claims.",
+  "sources": [
+    "https://redukt.eu/en/",
+    "https://auroracompany.pl/en/",
+    "https://mobihouse.pl/en",
+    "https://kubo-tinyhouse.com/en/",
+    "https://www.ecotiny.house/",
+    "https://trade.ec.europa.eu/access-to-markets/en/content/eu-turkiye-customs-union",
+    "https://eur-lex.europa.eu/eli/reg/2018/858/oj/eng",
+    "https://transport.ec.europa.eu/document/download/45e1073e-373a-4156-966b-0523915dec9f_en?filename=SWD_2023_70_implementation_report_amendments_dir_96_53.pdf",
+    "https://verwaltung.bund.de/leistungsverzeichnis/de/leistung/99012070006001",
+    "https://www.gesetze-im-internet.de/stvo_2013/__22.html",
+    "https://www.government.nl/themes/building-and-housing/environment-and-planning-act/the-environment-and-planning-portal",
+    "https://lifeindenmark.borger.dk/housing-and-moving/construction/building-permit",
+    "https://guichet.public.lu/en/citoyens/logement/construction-renovation-transformation/certificats-energiepass/certificat-autorisation-construire.html",
+    "https://www.ch.ch/en/housing/homeownership/planning-application-and-building-permit/"
+  ]
+}

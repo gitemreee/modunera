@@ -1,17 +1,18 @@
-# Modunera
+# MODUNERA
 
-> Premium Tiny Houses für Deutschland und Europa. Eigene Produktion, acht Modelle, Standortplanung und Konfiguration.
+MODUNERA manufactures premium tiny houses in Türkiye for projects in Germany, the Netherlands, Denmark, Luxembourg and Switzerland. Tiny houses are the core offer; modular buildings, steel structures, bungalows and bespoke furniture are additional project-based capabilities.
 
-- Hauptseite: https://modunera.com/
-- Modelle: https://modunera.com/#modelle
-- Konfigurator: https://modunera.com/konfigurator/
-- Standorte: https://modunera.com/standorte/
-- Ratgeber: https://modunera.com/blog/
-- FAQ: https://modunera.com/faq/
-- Redaktion: https://modunera.com/redaktion/
-- Telefon: +90 553 543 5342
+## Primary pages
+- https://modunera.com/
+- https://modunera.com/en/
+- https://modunera.com/laender/
+- https://modunera.com/en/countries/
+- https://modunera.com/leistungen/
+- https://modunera.com/blog/europa/
+- https://modunera.com/faq/europa/
 
-Maschinenlesbare Daten:
-- https://modunera.com/data/knowledge-graph.json
-- https://modunera.com/data/answer-library.json
-- https://modunera.com/data/locations.json
+## Contact
+- Phone and WhatsApp: +90 553 543 5342
+
+## Editorial boundary
+Country, permit, customs and transport content is general guidance reviewed on 2026-08-13. It does not replace current authority, legal, customs, tax, structural or energy advice. Project approval and deliverability are confirmed only after document, site and route checks.
