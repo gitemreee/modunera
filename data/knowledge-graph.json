@@ -3,9 +3,9 @@
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://www.mctiny.com/de/#organization",
-      "name": "MC Tiny",
-      "url": "https://www.mctiny.com/de/",
+      "@id": "https://modunera.com/#organization",
+      "name": "Modunera",
+      "url": "https://modunera.com/",
       "telephone": "+90 553 543 5342",
       "description": "Tiny-House-Hersteller mit eigener Produktion für Deutschland und Europa.",
       "areaServed": [
@@ -23,91 +23,91 @@
     },
     {
       "@type": "Product",
-      "@id": "https://www.mctiny.com/de/modelle/mc-1/#product",
+      "@id": "https://modunera.com/modelle/mc-1/#product",
       "name": "MC 1",
       "brand": {
         "@type": "Brand",
-        "name": "MC Tiny"
+        "name": "Modunera"
       },
       "description": "Panorama, Tageslicht und großzügiger Wohnbereich",
-      "url": "https://www.mctiny.com/de/modelle/mc-1/"
+      "url": "https://modunera.com/modelle/mc-1/"
     },
     {
       "@type": "Product",
-      "@id": "https://www.mctiny.com/de/modelle/mc-2/#product",
+      "@id": "https://modunera.com/modelle/mc-2/#product",
       "name": "MC 2",
       "brand": {
         "@type": "Brand",
-        "name": "MC Tiny"
+        "name": "Modunera"
       },
       "description": "Familien, Gäste und getrennte Schlafbereiche",
-      "url": "https://www.mctiny.com/de/modelle/mc-2/"
+      "url": "https://modunera.com/modelle/mc-2/"
     },
     {
       "@type": "Product",
-      "@id": "https://www.mctiny.com/de/modelle/mc-3/#product",
+      "@id": "https://modunera.com/modelle/mc-3/#product",
       "name": "MC 3",
       "brand": {
         "@type": "Brand",
-        "name": "MC Tiny"
+        "name": "Modunera"
       },
       "description": "Privatsphäre, Homeoffice und flexible Nutzung",
-      "url": "https://www.mctiny.com/de/modelle/mc-3/"
+      "url": "https://modunera.com/modelle/mc-3/"
     },
     {
       "@type": "Product",
-      "@id": "https://www.mctiny.com/de/modelle/mc-4/#product",
+      "@id": "https://modunera.com/modelle/mc-4/#product",
       "name": "MC 4",
       "brand": {
         "@type": "Brand",
-        "name": "MC Tiny"
+        "name": "Modunera"
       },
       "description": "Ferienhaus, Vermietung und Außenleben",
-      "url": "https://www.mctiny.com/de/modelle/mc-4/"
+      "url": "https://modunera.com/modelle/mc-4/"
     },
     {
       "@type": "Product",
-      "@id": "https://www.mctiny.com/de/modelle/mc-5/#product",
+      "@id": "https://modunera.com/modelle/mc-5/#product",
       "name": "MC 5",
       "brand": {
         "@type": "Brand",
-        "name": "MC Tiny"
+        "name": "Modunera"
       },
       "description": "Urbanes Design mit warmen Naturmaterialien",
-      "url": "https://www.mctiny.com/de/modelle/mc-5/"
+      "url": "https://modunera.com/modelle/mc-5/"
     },
     {
       "@type": "Product",
-      "@id": "https://www.mctiny.com/de/modelle/mc-6/#product",
+      "@id": "https://modunera.com/modelle/mc-6/#product",
       "name": "MC 6",
       "brand": {
         "@type": "Brand",
-        "name": "MC Tiny"
+        "name": "Modunera"
       },
       "description": "Hohe Decken, Glasflächen und Naturerlebnis",
-      "url": "https://www.mctiny.com/de/modelle/mc-6/"
+      "url": "https://modunera.com/modelle/mc-6/"
     },
     {
       "@type": "Product",
-      "@id": "https://www.mctiny.com/de/modelle/mc-7/#product",
+      "@id": "https://modunera.com/modelle/mc-7/#product",
       "name": "MC 7",
       "brand": {
         "@type": "Brand",
-        "name": "MC Tiny"
+        "name": "Modunera"
       },
       "description": "Studio, Büro und asymmetrische Architektur",
-      "url": "https://www.mctiny.com/de/modelle/mc-7/"
+      "url": "https://modunera.com/modelle/mc-7/"
     },
     {
       "@type": "Product",
-      "@id": "https://www.mctiny.com/de/modelle/mc-8/#product",
+      "@id": "https://modunera.com/modelle/mc-8/#product",
       "name": "MC 8",
       "brand": {
         "@type": "Brand",
-        "name": "MC Tiny"
+        "name": "Modunera"
       },
       "description": "Kompakter Komfort und effizienter Stauraum",
-      "url": "https://www.mctiny.com/de/modelle/mc-8/"
+      "url": "https://modunera.com/modelle/mc-8/"
     }
   ]
 }

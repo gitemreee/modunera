@@ -1,1 +1,1 @@
-{"name": "MC Tiny Europe Platform", "short_name": "MC Tiny", "start_url": "./", "display": "standalone", "background_color": "#f7f5ef", "theme_color": "#0a261c", "icons": [{"src": "assets/images/mc-tiny-logo.png", "sizes": "512x512", "type": "image/png"}]}
+{"name": "Modunera Europe Platform", "short_name": "Modunera", "start_url": "./", "display": "standalone", "background_color": "#f7f5ef", "theme_color": "#0a261c", "icons": [{"src": "assets/images/mc-tiny-logo.png", "sizes": "512x512", "type": "image/png"}]}

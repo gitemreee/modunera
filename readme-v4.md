@@ -1,11 +1,11 @@
-# MC Tiny Europe Platform V4
+# Modunera Europe Platform V4
 
 ## Included
 - Immersive German homepage and redesigned shared style system
 - MC 1–MC 8 model selector
 - Interactive visual configurator with pricing, saving, sharing and print-to-PDF
 - Model comparison, delivery estimate, land-readiness, energy saving and hospitality ROI tools
-- Rule-based MC Tiny planning assistant on all pages
+- Rule-based Modunera planning assistant on all pages
 - Lead capture workflow (localStorage + WhatsApp in static mode)
 - Factory, projects, document center and customer production-status demo
 - Legal placeholders and cookie preference layer
