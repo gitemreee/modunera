@@ -1,0 +1,80 @@
+name: Build MODUNERA Europe expansion
+
+on:
+  push:
+    branches:
+      - codex/modunera-europe-growth
+    paths:
+      - ".github/workflows/build-modunera.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  build-site:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Check out expansion branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Apply MODUNERA rebrand
+        run: node tools/rebrand-modunera.mjs
+
+      - name: Build countries, locations, services and guides
+        run: node tools/build-modunera-europe.mjs
+
+      - name: Validate generated site
+        shell: bash
+        run: |
+          set -euo pipefail
+          node tools/validate-modunera.mjs
+          test -f assets/images/modunera-logo.png
+          test -f assets/images/modunera-mark.png
+          test -f laender/niederlande/index.html
+          test -f en/countries/netherlands/index.html
+          test -f leistungen/moebel-nach-mass/index.html
+          test -f blog/europa/tiny-house-transport-tuerkei-europa/index.html
+          test -f faq/europa/index.html
+
+          html_count=$(find . -type f -name 'index.html' | wc -l)
+          if [ "$html_count" -lt 14700 ]; then
+            echo "Expected at least 14,700 HTML pages; found $html_count."
+            exit 1
+          fi
+
+          if grep -RIlE 'MC Tiny|MC TINY|mctiny\.com|mc-tiny-logo\.png|Mc-Tiny|MCTINY' \
+            --include='*.html' --include='*.xml' --include='*.json' \
+            --include='*.js' --include='*.css' --include='*.txt' \
+            --include='*.md' --include='*.csv' --include='*.py' \
+            --include='*.webmanifest' \
+            --exclude='rebrand-modunera.mjs' \
+            --exclude='build-modunera-europe.mjs' \
+            --exclude='validate-modunera.mjs' \
+            --exclude-dir='.git' --exclude-dir='.github' . | grep -q .; then
+            echo "Legacy brand references remain in public text files."
+            exit 1
+          fi
+
+          grep -q '#C29B72' assets/css/styles.css
+          grep -q '#8D321F' assets/css/styles.css
+          grep -q '#3A4027' assets/css/styles.css
+          grep -q '#2B2D31' assets/css/styles.css
+          grep -q '905535435342' index.html
+          grep -q 'https://modunera.com/sitemap.xml' robots.txt
+
+      - name: Commit generated site
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No generated changes were required."
+          else
+            git commit -m "Build MODUNERA Europe growth site"
+            git push origin HEAD:codex/modunera-europe-growth
+          fi

@@ -1,4 +1,4 @@
-# Modunera Europe Platform — V6
+# MODUNERA Europe Platform — V6
 
 V6 introduces a full visual-system upgrade while preserving the existing SEO, GEO, blog, FAQ, configurator and location-page architecture.
 
@@ -8,7 +8,7 @@ V6 introduces a full visual-system upgrade while preserving the existing SEO, GE
 - Removed the visible telephone top bar across all pages
 - Softer Scandinavian forest palette with warm ivory surfaces
 - Stronger Manrope-based typography and heavier display hierarchy
-- Burgundy brand accent derived from the Modunera identity
+- Burgundy brand accent derived from the MODUNERA identity
 - New premium homepage hero with a light editorial content panel
 - Cleaner navigation, buttons, cards, forms, model selector and footer
 - Reworked Design Studio hero and option-selection interface

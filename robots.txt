@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /admin-demo/
+Disallow: /customer-portal/
 Sitemap: https://modunera.com/sitemap.xml
 Sitemap: https://modunera.com/image-sitemap.xml

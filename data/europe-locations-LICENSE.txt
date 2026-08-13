@@ -1,0 +1,12 @@
+European location source attribution
+
+The location names and coordinates in europe-locations-source.json are derived
+from the GeoNames geographical database via the cities.json package:
+
+- GeoNames: https://www.geonames.org/
+- cities.json: https://github.com/lutangar/cities.json
+- License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+  https://creativecommons.org/licenses/by/4.0/
+
+The MODUNERA build keeps only records for the Netherlands, Denmark, Luxembourg
+and Switzerland and adds project-specific slugs and page structure at build time.
