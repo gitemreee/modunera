@@ -1,0 +1,113 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.mctiny.com/de/#organization",
+      "name": "MC Tiny",
+      "url": "https://www.mctiny.com/de/",
+      "telephone": "+90 553 543 5342",
+      "description": "Tiny-House-Hersteller mit eigener Produktion für Deutschland und Europa.",
+      "areaServed": [
+        "DE",
+        "AT",
+        "CH",
+        "NL",
+        "BE",
+        "FR",
+        "SE",
+        "NO",
+        "DK",
+        "FI"
+      ]
+    },
+    {
+      "@type": "Product",
+      "@id": "https://www.mctiny.com/de/modelle/mc-1/#product",
+      "name": "MC 1",
+      "brand": {
+        "@type": "Brand",
+        "name": "MC Tiny"
+      },
+      "description": "Panorama, Tageslicht und großzügiger Wohnbereich",
+      "url": "https://www.mctiny.com/de/modelle/mc-1/"
+    },
+    {
+      "@type": "Product",
+      "@id": "https://www.mctiny.com/de/modelle/mc-2/#product",
+      "name": "MC 2",
+      "brand": {
+        "@type": "Brand",
+        "name": "MC Tiny"
+      },
+      "description": "Familien, Gäste und getrennte Schlafbereiche",
+      "url": "https://www.mctiny.com/de/modelle/mc-2/"
+    },
+    {
+      "@type": "Product",
+      "@id": "https://www.mctiny.com/de/modelle/mc-3/#product",
+      "name": "MC 3",
+      "brand": {
+        "@type": "Brand",
+        "name": "MC Tiny"
+      },
+      "description": "Privatsphäre, Homeoffice und flexible Nutzung",
+      "url": "https://www.mctiny.com/de/modelle/mc-3/"
+    },
+    {
+      "@type": "Product",
+      "@id": "https://www.mctiny.com/de/modelle/mc-4/#product",
+      "name": "MC 4",
+      "brand": {
+        "@type": "Brand",
+        "name": "MC Tiny"
+      },
+      "description": "Ferienhaus, Vermietung und Außenleben",
+      "url": "https://www.mctiny.com/de/modelle/mc-4/"
+    },
+    {
+      "@type": "Product",
+      "@id": "https://www.mctiny.com/de/modelle/mc-5/#product",
+      "name": "MC 5",
+      "brand": {
+        "@type": "Brand",
+        "name": "MC Tiny"
+      },
+      "description": "Urbanes Design mit warmen Naturmaterialien",
+      "url": "https://www.mctiny.com/de/modelle/mc-5/"
+    },
+    {
+      "@type": "Product",
+      "@id": "https://www.mctiny.com/de/modelle/mc-6/#product",
+      "name": "MC 6",
+      "brand": {
+        "@type": "Brand",
+        "name": "MC Tiny"
+      },
+      "description": "Hohe Decken, Glasflächen und Naturerlebnis",
+      "url": "https://www.mctiny.com/de/modelle/mc-6/"
+    },
+    {
+      "@type": "Product",
+      "@id": "https://www.mctiny.com/de/modelle/mc-7/#product",
+      "name": "MC 7",
+      "brand": {
+        "@type": "Brand",
+        "name": "MC Tiny"
+      },
+      "description": "Studio, Büro und asymmetrische Architektur",
+      "url": "https://www.mctiny.com/de/modelle/mc-7/"
+    },
+    {
+      "@type": "Product",
+      "@id": "https://www.mctiny.com/de/modelle/mc-8/#product",
+      "name": "MC 8",
+      "brand": {
+        "@type": "Brand",
+        "name": "MC Tiny"
+      },
+      "description": "Kompakter Komfort und effizienter Stauraum",
+      "url": "https://www.mctiny.com/de/modelle/mc-8/"
+    }
+  ]
+}

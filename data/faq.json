@@ -1,0 +1,802 @@
+[
+  {
+    "category": "kauf",
+    "question": "Wie beeinflusst Kaufpreis den Kauf eines Tiny House?",
+    "answer": "Kaufpreis sollte im Angebot klar definiert und in die Gesamtkostenrechnung aufgenommen werden. Vergleichen Sie nicht nur den Grundpreis, sondern Leistungsumfang, Ausnahmen, Transport, lokale Arbeiten, Zahlungsplan und dokumentierte Abnahme."
+  },
+  {
+    "category": "kauf",
+    "question": "Wie beeinflusst Angebotsvergleich den Kauf eines Tiny House?",
+    "answer": "Angebotsvergleich sollte im Angebot klar definiert und in die Gesamtkostenrechnung aufgenommen werden. Vergleichen Sie nicht nur den Grundpreis, sondern Leistungsumfang, Ausnahmen, Transport, lokale Arbeiten, Zahlungsplan und dokumentierte Abnahme."
+  },
+  {
+    "category": "kauf",
+    "question": "Wie beeinflusst Zahlungsplan den Kauf eines Tiny House?",
+    "answer": "Zahlungsplan sollte im Angebot klar definiert und in die Gesamtkostenrechnung aufgenommen werden. Vergleichen Sie nicht nur den Grundpreis, sondern Leistungsumfang, Ausnahmen, Transport, lokale Arbeiten, Zahlungsplan und dokumentierte Abnahme."
+  },
+  {
+    "category": "kauf",
+    "question": "Wie beeinflusst Finanzierung den Kauf eines Tiny House?",
+    "answer": "Finanzierung sollte im Angebot klar definiert und in die Gesamtkostenrechnung aufgenommen werden. Vergleichen Sie nicht nur den Grundpreis, sondern Leistungsumfang, Ausnahmen, Transport, lokale Arbeiten, Zahlungsplan und dokumentierte Abnahme."
+  },
+  {
+    "category": "kauf",
+    "question": "Wie beeinflusst Gesamtkosten den Kauf eines Tiny House?",
+    "answer": "Gesamtkosten sollte im Angebot klar definiert und in die Gesamtkostenrechnung aufgenommen werden. Vergleichen Sie nicht nur den Grundpreis, sondern Leistungsumfang, Ausnahmen, Transport, lokale Arbeiten, Zahlungsplan und dokumentierte Abnahme."
+  },
+  {
+    "category": "kauf",
+    "question": "Wie beeinflusst Ausstattungsbudget den Kauf eines Tiny House?",
+    "answer": "Ausstattungsbudget sollte im Angebot klar definiert und in die Gesamtkostenrechnung aufgenommen werden. Vergleichen Sie nicht nur den Grundpreis, sondern Leistungsumfang, Ausnahmen, Transport, lokale Arbeiten, Zahlungsplan und dokumentierte Abnahme."
+  },
+  {
+    "category": "kauf",
+    "question": "Wie beeinflusst Wiederverkaufswert den Kauf eines Tiny House?",
+    "answer": "Wiederverkaufswert sollte im Angebot klar definiert und in die Gesamtkostenrechnung aufgenommen werden. Vergleichen Sie nicht nur den Grundpreis, sondern Leistungsumfang, Ausnahmen, Transport, lokale Arbeiten, Zahlungsplan und dokumentierte Abnahme."
+  },
+  {
+    "category": "kauf",
+    "question": "Wie beeinflusst Vertragsumfang den Kauf eines Tiny House?",
+    "answer": "Vertragsumfang sollte im Angebot klar definiert und in die Gesamtkostenrechnung aufgenommen werden. Vergleichen Sie nicht nur den Grundpreis, sondern Leistungsumfang, Ausnahmen, Transport, lokale Arbeiten, Zahlungsplan und dokumentierte Abnahme."
+  },
+  {
+    "category": "kauf",
+    "question": "Wie beeinflusst Lieferumfang den Kauf eines Tiny House?",
+    "answer": "Lieferumfang sollte im Angebot klar definiert und in die Gesamtkostenrechnung aufgenommen werden. Vergleichen Sie nicht nur den Grundpreis, sondern Leistungsumfang, Ausnahmen, Transport, lokale Arbeiten, Zahlungsplan und dokumentierte Abnahme."
+  },
+  {
+    "category": "kauf",
+    "question": "Wie beeinflusst Preisbindung den Kauf eines Tiny House?",
+    "answer": "Preisbindung sollte im Angebot klar definiert und in die Gesamtkostenrechnung aufgenommen werden. Vergleichen Sie nicht nur den Grundpreis, sondern Leistungsumfang, Ausnahmen, Transport, lokale Arbeiten, Zahlungsplan und dokumentierte Abnahme."
+  },
+  {
+    "category": "kauf",
+    "question": "Wie beeinflusst Mehrkosten den Kauf eines Tiny House?",
+    "answer": "Mehrkosten sollte im Angebot klar definiert und in die Gesamtkostenrechnung aufgenommen werden. Vergleichen Sie nicht nur den Grundpreis, sondern Leistungsumfang, Ausnahmen, Transport, lokale Arbeiten, Zahlungsplan und dokumentierte Abnahme."
+  },
+  {
+    "category": "kauf",
+    "question": "Wie beeinflusst Budgetreserve den Kauf eines Tiny House?",
+    "answer": "Budgetreserve sollte im Angebot klar definiert und in die Gesamtkostenrechnung aufgenommen werden. Vergleichen Sie nicht nur den Grundpreis, sondern Leistungsumfang, Ausnahmen, Transport, lokale Arbeiten, Zahlungsplan und dokumentierte Abnahme."
+  },
+  {
+    "category": "kauf",
+    "question": "Wie beeinflusst Rabatte den Kauf eines Tiny House?",
+    "answer": "Rabatte sollte im Angebot klar definiert und in die Gesamtkostenrechnung aufgenommen werden. Vergleichen Sie nicht nur den Grundpreis, sondern Leistungsumfang, Ausnahmen, Transport, lokale Arbeiten, Zahlungsplan und dokumentierte Abnahme."
+  },
+  {
+    "category": "kauf",
+    "question": "Wie beeinflusst Serienbestellung den Kauf eines Tiny House?",
+    "answer": "Serienbestellung sollte im Angebot klar definiert und in die Gesamtkostenrechnung aufgenommen werden. Vergleichen Sie nicht nur den Grundpreis, sondern Leistungsumfang, Ausnahmen, Transport, lokale Arbeiten, Zahlungsplan und dokumentierte Abnahme."
+  },
+  {
+    "category": "kauf",
+    "question": "Wie beeinflusst Anzahlung den Kauf eines Tiny House?",
+    "answer": "Anzahlung sollte im Angebot klar definiert und in die Gesamtkostenrechnung aufgenommen werden. Vergleichen Sie nicht nur den Grundpreis, sondern Leistungsumfang, Ausnahmen, Transport, lokale Arbeiten, Zahlungsplan und dokumentierte Abnahme."
+  },
+  {
+    "category": "kauf",
+    "question": "Wie beeinflusst Abnahme den Kauf eines Tiny House?",
+    "answer": "Abnahme sollte im Angebot klar definiert und in die Gesamtkostenrechnung aufgenommen werden. Vergleichen Sie nicht nur den Grundpreis, sondern Leistungsumfang, Ausnahmen, Transport, lokale Arbeiten, Zahlungsplan und dokumentierte Abnahme."
+  },
+  {
+    "category": "planung",
+    "question": "Wie funktioniert Grundriss bei MC Tiny?",
+    "answer": "Grundriss wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "planung",
+    "question": "Wie funktioniert Loft bei MC Tiny?",
+    "answer": "Loft wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "planung",
+    "question": "Wie funktioniert separates Schlafzimmer bei MC Tiny?",
+    "answer": "separates Schlafzimmer wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "planung",
+    "question": "Wie funktioniert Küche bei MC Tiny?",
+    "answer": "Küche wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "planung",
+    "question": "Wie funktioniert Badezimmer bei MC Tiny?",
+    "answer": "Badezimmer wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "planung",
+    "question": "Wie funktioniert Stauraum bei MC Tiny?",
+    "answer": "Stauraum wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "planung",
+    "question": "Wie funktioniert Treppe bei MC Tiny?",
+    "answer": "Treppe wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "planung",
+    "question": "Wie funktioniert Tageslicht bei MC Tiny?",
+    "answer": "Tageslicht wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "planung",
+    "question": "Wie funktioniert Privatsphäre bei MC Tiny?",
+    "answer": "Privatsphäre wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "planung",
+    "question": "Wie funktioniert Familiennutzung bei MC Tiny?",
+    "answer": "Familiennutzung wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "planung",
+    "question": "Wie funktioniert Seniorennutzung bei MC Tiny?",
+    "answer": "Seniorennutzung wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "planung",
+    "question": "Wie funktioniert Homeoffice bei MC Tiny?",
+    "answer": "Homeoffice wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "planung",
+    "question": "Wie funktioniert Möblierung bei MC Tiny?",
+    "answer": "Möblierung wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "planung",
+    "question": "Wie funktioniert Haustiere bei MC Tiny?",
+    "answer": "Haustiere wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "planung",
+    "question": "Wie funktioniert Barrierearmut bei MC Tiny?",
+    "answer": "Barrierearmut wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "planung",
+    "question": "Wie funktioniert Individualisierung bei MC Tiny?",
+    "answer": "Individualisierung wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "recht",
+    "question": "Wie wird das Thema Baugenehmigung beim Tiny House geklärt?",
+    "answer": "Baugenehmigung ist standort- und nutzungsabhängig. Eine allgemeine Website-Antwort ersetzt keine schriftliche Prüfung durch Gemeinde, Bauaufsicht oder qualifizierte lokale Fachplanung. Halten Sie Grundstücksdaten, Nutzung, Abmessungen, Grundriss, Anschlüsse und Aufstelldauer bereit."
+  },
+  {
+    "category": "recht",
+    "question": "Wie wird das Thema Stellplatz beim Tiny House geklärt?",
+    "answer": "Stellplatz ist standort- und nutzungsabhängig. Eine allgemeine Website-Antwort ersetzt keine schriftliche Prüfung durch Gemeinde, Bauaufsicht oder qualifizierte lokale Fachplanung. Halten Sie Grundstücksdaten, Nutzung, Abmessungen, Grundriss, Anschlüsse und Aufstelldauer bereit."
+  },
+  {
+    "category": "recht",
+    "question": "Wie wird das Thema Dauerwohnen beim Tiny House geklärt?",
+    "answer": "Dauerwohnen ist standort- und nutzungsabhängig. Eine allgemeine Website-Antwort ersetzt keine schriftliche Prüfung durch Gemeinde, Bauaufsicht oder qualifizierte lokale Fachplanung. Halten Sie Grundstücksdaten, Nutzung, Abmessungen, Grundriss, Anschlüsse und Aufstelldauer bereit."
+  },
+  {
+    "category": "recht",
+    "question": "Wie wird das Thema Feriennutzung beim Tiny House geklärt?",
+    "answer": "Feriennutzung ist standort- und nutzungsabhängig. Eine allgemeine Website-Antwort ersetzt keine schriftliche Prüfung durch Gemeinde, Bauaufsicht oder qualifizierte lokale Fachplanung. Halten Sie Grundstücksdaten, Nutzung, Abmessungen, Grundriss, Anschlüsse und Aufstelldauer bereit."
+  },
+  {
+    "category": "recht",
+    "question": "Wie wird das Thema Gemeindeanfrage beim Tiny House geklärt?",
+    "answer": "Gemeindeanfrage ist standort- und nutzungsabhängig. Eine allgemeine Website-Antwort ersetzt keine schriftliche Prüfung durch Gemeinde, Bauaufsicht oder qualifizierte lokale Fachplanung. Halten Sie Grundstücksdaten, Nutzung, Abmessungen, Grundriss, Anschlüsse und Aufstelldauer bereit."
+  },
+  {
+    "category": "recht",
+    "question": "Wie wird das Thema Bauvoranfrage beim Tiny House geklärt?",
+    "answer": "Bauvoranfrage ist standort- und nutzungsabhängig. Eine allgemeine Website-Antwort ersetzt keine schriftliche Prüfung durch Gemeinde, Bauaufsicht oder qualifizierte lokale Fachplanung. Halten Sie Grundstücksdaten, Nutzung, Abmessungen, Grundriss, Anschlüsse und Aufstelldauer bereit."
+  },
+  {
+    "category": "recht",
+    "question": "Wie wird das Thema Grundstück beim Tiny House geklärt?",
+    "answer": "Grundstück ist standort- und nutzungsabhängig. Eine allgemeine Website-Antwort ersetzt keine schriftliche Prüfung durch Gemeinde, Bauaufsicht oder qualifizierte lokale Fachplanung. Halten Sie Grundstücksdaten, Nutzung, Abmessungen, Grundriss, Anschlüsse und Aufstelldauer bereit."
+  },
+  {
+    "category": "recht",
+    "question": "Wie wird das Thema Erschließung beim Tiny House geklärt?",
+    "answer": "Erschließung ist standort- und nutzungsabhängig. Eine allgemeine Website-Antwort ersetzt keine schriftliche Prüfung durch Gemeinde, Bauaufsicht oder qualifizierte lokale Fachplanung. Halten Sie Grundstücksdaten, Nutzung, Abmessungen, Grundriss, Anschlüsse und Aufstelldauer bereit."
+  },
+  {
+    "category": "recht",
+    "question": "Wie wird das Thema Abstandsflächen beim Tiny House geklärt?",
+    "answer": "Abstandsflächen ist standort- und nutzungsabhängig. Eine allgemeine Website-Antwort ersetzt keine schriftliche Prüfung durch Gemeinde, Bauaufsicht oder qualifizierte lokale Fachplanung. Halten Sie Grundstücksdaten, Nutzung, Abmessungen, Grundriss, Anschlüsse und Aufstelldauer bereit."
+  },
+  {
+    "category": "recht",
+    "question": "Wie wird das Thema Campingplatz beim Tiny House geklärt?",
+    "answer": "Campingplatz ist standort- und nutzungsabhängig. Eine allgemeine Website-Antwort ersetzt keine schriftliche Prüfung durch Gemeinde, Bauaufsicht oder qualifizierte lokale Fachplanung. Halten Sie Grundstücksdaten, Nutzung, Abmessungen, Grundriss, Anschlüsse und Aufstelldauer bereit."
+  },
+  {
+    "category": "recht",
+    "question": "Wie wird das Thema Meldeadresse beim Tiny House geklärt?",
+    "answer": "Meldeadresse ist standort- und nutzungsabhängig. Eine allgemeine Website-Antwort ersetzt keine schriftliche Prüfung durch Gemeinde, Bauaufsicht oder qualifizierte lokale Fachplanung. Halten Sie Grundstücksdaten, Nutzung, Abmessungen, Grundriss, Anschlüsse und Aufstelldauer bereit."
+  },
+  {
+    "category": "recht",
+    "question": "Wie wird das Thema Gewerbenutzung beim Tiny House geklärt?",
+    "answer": "Gewerbenutzung ist standort- und nutzungsabhängig. Eine allgemeine Website-Antwort ersetzt keine schriftliche Prüfung durch Gemeinde, Bauaufsicht oder qualifizierte lokale Fachplanung. Halten Sie Grundstücksdaten, Nutzung, Abmessungen, Grundriss, Anschlüsse und Aufstelldauer bereit."
+  },
+  {
+    "category": "recht",
+    "question": "Wie wird das Thema Airbnb beim Tiny House geklärt?",
+    "answer": "Airbnb ist standort- und nutzungsabhängig. Eine allgemeine Website-Antwort ersetzt keine schriftliche Prüfung durch Gemeinde, Bauaufsicht oder qualifizierte lokale Fachplanung. Halten Sie Grundstücksdaten, Nutzung, Abmessungen, Grundriss, Anschlüsse und Aufstelldauer bereit."
+  },
+  {
+    "category": "recht",
+    "question": "Wie wird das Thema lokale Satzung beim Tiny House geklärt?",
+    "answer": "lokale Satzung ist standort- und nutzungsabhängig. Eine allgemeine Website-Antwort ersetzt keine schriftliche Prüfung durch Gemeinde, Bauaufsicht oder qualifizierte lokale Fachplanung. Halten Sie Grundstücksdaten, Nutzung, Abmessungen, Grundriss, Anschlüsse und Aufstelldauer bereit."
+  },
+  {
+    "category": "recht",
+    "question": "Wie wird das Thema Dokumente beim Tiny House geklärt?",
+    "answer": "Dokumente ist standort- und nutzungsabhängig. Eine allgemeine Website-Antwort ersetzt keine schriftliche Prüfung durch Gemeinde, Bauaufsicht oder qualifizierte lokale Fachplanung. Halten Sie Grundstücksdaten, Nutzung, Abmessungen, Grundriss, Anschlüsse und Aufstelldauer bereit."
+  },
+  {
+    "category": "recht",
+    "question": "Wie wird das Thema Rechtsberatung beim Tiny House geklärt?",
+    "answer": "Rechtsberatung ist standort- und nutzungsabhängig. Eine allgemeine Website-Antwort ersetzt keine schriftliche Prüfung durch Gemeinde, Bauaufsicht oder qualifizierte lokale Fachplanung. Halten Sie Grundstücksdaten, Nutzung, Abmessungen, Grundriss, Anschlüsse und Aufstelldauer bereit."
+  },
+  {
+    "category": "technik",
+    "question": "Welche Bedeutung hat Stahlrahmen bei einem Tiny House?",
+    "answer": "Stahlrahmen beeinflusst Sicherheit, Komfort, Gewicht, Wartung oder Lebensdauer. Die konkrete Ausführung muss zur Nutzung, zum Standort und zur übrigen Konstruktion passen. Fordern Sie eine nachvollziehbare Spezifikation und projektbezogene Freigabe."
+  },
+  {
+    "category": "technik",
+    "question": "Welche Bedeutung hat Fahrgestell bei einem Tiny House?",
+    "answer": "Fahrgestell beeinflusst Sicherheit, Komfort, Gewicht, Wartung oder Lebensdauer. Die konkrete Ausführung muss zur Nutzung, zum Standort und zur übrigen Konstruktion passen. Fordern Sie eine nachvollziehbare Spezifikation und projektbezogene Freigabe."
+  },
+  {
+    "category": "technik",
+    "question": "Welche Bedeutung hat Thermowood bei einem Tiny House?",
+    "answer": "Thermowood beeinflusst Sicherheit, Komfort, Gewicht, Wartung oder Lebensdauer. Die konkrete Ausführung muss zur Nutzung, zum Standort und zur übrigen Konstruktion passen. Fordern Sie eine nachvollziehbare Spezifikation und projektbezogene Freigabe."
+  },
+  {
+    "category": "technik",
+    "question": "Welche Bedeutung hat Fenster bei einem Tiny House?",
+    "answer": "Fenster beeinflusst Sicherheit, Komfort, Gewicht, Wartung oder Lebensdauer. Die konkrete Ausführung muss zur Nutzung, zum Standort und zur übrigen Konstruktion passen. Fordern Sie eine nachvollziehbare Spezifikation und projektbezogene Freigabe."
+  },
+  {
+    "category": "technik",
+    "question": "Welche Bedeutung hat Verglasung bei einem Tiny House?",
+    "answer": "Verglasung beeinflusst Sicherheit, Komfort, Gewicht, Wartung oder Lebensdauer. Die konkrete Ausführung muss zur Nutzung, zum Standort und zur übrigen Konstruktion passen. Fordern Sie eine nachvollziehbare Spezifikation und projektbezogene Freigabe."
+  },
+  {
+    "category": "technik",
+    "question": "Welche Bedeutung hat Elektroinstallation bei einem Tiny House?",
+    "answer": "Elektroinstallation beeinflusst Sicherheit, Komfort, Gewicht, Wartung oder Lebensdauer. Die konkrete Ausführung muss zur Nutzung, zum Standort und zur übrigen Konstruktion passen. Fordern Sie eine nachvollziehbare Spezifikation und projektbezogene Freigabe."
+  },
+  {
+    "category": "technik",
+    "question": "Welche Bedeutung hat Brandschutz bei einem Tiny House?",
+    "answer": "Brandschutz beeinflusst Sicherheit, Komfort, Gewicht, Wartung oder Lebensdauer. Die konkrete Ausführung muss zur Nutzung, zum Standort und zur übrigen Konstruktion passen. Fordern Sie eine nachvollziehbare Spezifikation und projektbezogene Freigabe."
+  },
+  {
+    "category": "technik",
+    "question": "Welche Bedeutung hat Dach bei einem Tiny House?",
+    "answer": "Dach beeinflusst Sicherheit, Komfort, Gewicht, Wartung oder Lebensdauer. Die konkrete Ausführung muss zur Nutzung, zum Standort und zur übrigen Konstruktion passen. Fordern Sie eine nachvollziehbare Spezifikation und projektbezogene Freigabe."
+  },
+  {
+    "category": "technik",
+    "question": "Welche Bedeutung hat Fassade bei einem Tiny House?",
+    "answer": "Fassade beeinflusst Sicherheit, Komfort, Gewicht, Wartung oder Lebensdauer. Die konkrete Ausführung muss zur Nutzung, zum Standort und zur übrigen Konstruktion passen. Fordern Sie eine nachvollziehbare Spezifikation und projektbezogene Freigabe."
+  },
+  {
+    "category": "technik",
+    "question": "Welche Bedeutung hat Gewicht bei einem Tiny House?",
+    "answer": "Gewicht beeinflusst Sicherheit, Komfort, Gewicht, Wartung oder Lebensdauer. Die konkrete Ausführung muss zur Nutzung, zum Standort und zur übrigen Konstruktion passen. Fordern Sie eine nachvollziehbare Spezifikation und projektbezogene Freigabe."
+  },
+  {
+    "category": "technik",
+    "question": "Welche Bedeutung hat Korrosionsschutz bei einem Tiny House?",
+    "answer": "Korrosionsschutz beeinflusst Sicherheit, Komfort, Gewicht, Wartung oder Lebensdauer. Die konkrete Ausführung muss zur Nutzung, zum Standort und zur übrigen Konstruktion passen. Fordern Sie eine nachvollziehbare Spezifikation und projektbezogene Freigabe."
+  },
+  {
+    "category": "technik",
+    "question": "Welche Bedeutung hat Nassraum bei einem Tiny House?",
+    "answer": "Nassraum beeinflusst Sicherheit, Komfort, Gewicht, Wartung oder Lebensdauer. Die konkrete Ausführung muss zur Nutzung, zum Standort und zur übrigen Konstruktion passen. Fordern Sie eine nachvollziehbare Spezifikation und projektbezogene Freigabe."
+  },
+  {
+    "category": "technik",
+    "question": "Welche Bedeutung hat Wärmebrücken bei einem Tiny House?",
+    "answer": "Wärmebrücken beeinflusst Sicherheit, Komfort, Gewicht, Wartung oder Lebensdauer. Die konkrete Ausführung muss zur Nutzung, zum Standort und zur übrigen Konstruktion passen. Fordern Sie eine nachvollziehbare Spezifikation und projektbezogene Freigabe."
+  },
+  {
+    "category": "technik",
+    "question": "Welche Bedeutung hat Schallschutz bei einem Tiny House?",
+    "answer": "Schallschutz beeinflusst Sicherheit, Komfort, Gewicht, Wartung oder Lebensdauer. Die konkrete Ausführung muss zur Nutzung, zum Standort und zur übrigen Konstruktion passen. Fordern Sie eine nachvollziehbare Spezifikation und projektbezogene Freigabe."
+  },
+  {
+    "category": "technik",
+    "question": "Welche Bedeutung hat Qualitätskontrolle bei einem Tiny House?",
+    "answer": "Qualitätskontrolle beeinflusst Sicherheit, Komfort, Gewicht, Wartung oder Lebensdauer. Die konkrete Ausführung muss zur Nutzung, zum Standort und zur übrigen Konstruktion passen. Fordern Sie eine nachvollziehbare Spezifikation und projektbezogene Freigabe."
+  },
+  {
+    "category": "technik",
+    "question": "Welche Bedeutung hat Dokumentation bei einem Tiny House?",
+    "answer": "Dokumentation beeinflusst Sicherheit, Komfort, Gewicht, Wartung oder Lebensdauer. Die konkrete Ausführung muss zur Nutzung, zum Standort und zur übrigen Konstruktion passen. Fordern Sie eine nachvollziehbare Spezifikation und projektbezogene Freigabe."
+  },
+  {
+    "category": "energie",
+    "question": "Wie plane ich Winterfestigkeit für ein Tiny House?",
+    "answer": "Winterfestigkeit wird nicht isoliert gewählt. Klima, Nutzungsdauer, Dämmung, Fenster, Lüftung, Anschlussleistung und Nutzerprofil bilden ein System. Die Dimensionierung sollte technisch geprüft und auf den konkreten Standort abgestimmt werden."
+  },
+  {
+    "category": "energie",
+    "question": "Wie plane ich Dämmung für ein Tiny House?",
+    "answer": "Dämmung wird nicht isoliert gewählt. Klima, Nutzungsdauer, Dämmung, Fenster, Lüftung, Anschlussleistung und Nutzerprofil bilden ein System. Die Dimensionierung sollte technisch geprüft und auf den konkreten Standort abgestimmt werden."
+  },
+  {
+    "category": "energie",
+    "question": "Wie plane ich Heizung für ein Tiny House?",
+    "answer": "Heizung wird nicht isoliert gewählt. Klima, Nutzungsdauer, Dämmung, Fenster, Lüftung, Anschlussleistung und Nutzerprofil bilden ein System. Die Dimensionierung sollte technisch geprüft und auf den konkreten Standort abgestimmt werden."
+  },
+  {
+    "category": "energie",
+    "question": "Wie plane ich Wärmepumpe für ein Tiny House?",
+    "answer": "Wärmepumpe wird nicht isoliert gewählt. Klima, Nutzungsdauer, Dämmung, Fenster, Lüftung, Anschlussleistung und Nutzerprofil bilden ein System. Die Dimensionierung sollte technisch geprüft und auf den konkreten Standort abgestimmt werden."
+  },
+  {
+    "category": "energie",
+    "question": "Wie plane ich Fußbodenheizung für ein Tiny House?",
+    "answer": "Fußbodenheizung wird nicht isoliert gewählt. Klima, Nutzungsdauer, Dämmung, Fenster, Lüftung, Anschlussleistung und Nutzerprofil bilden ein System. Die Dimensionierung sollte technisch geprüft und auf den konkreten Standort abgestimmt werden."
+  },
+  {
+    "category": "energie",
+    "question": "Wie plane ich Klimaanlage für ein Tiny House?",
+    "answer": "Klimaanlage wird nicht isoliert gewählt. Klima, Nutzungsdauer, Dämmung, Fenster, Lüftung, Anschlussleistung und Nutzerprofil bilden ein System. Die Dimensionierung sollte technisch geprüft und auf den konkreten Standort abgestimmt werden."
+  },
+  {
+    "category": "energie",
+    "question": "Wie plane ich Lüftung für ein Tiny House?",
+    "answer": "Lüftung wird nicht isoliert gewählt. Klima, Nutzungsdauer, Dämmung, Fenster, Lüftung, Anschlussleistung und Nutzerprofil bilden ein System. Die Dimensionierung sollte technisch geprüft und auf den konkreten Standort abgestimmt werden."
+  },
+  {
+    "category": "energie",
+    "question": "Wie plane ich Feuchtigkeit für ein Tiny House?",
+    "answer": "Feuchtigkeit wird nicht isoliert gewählt. Klima, Nutzungsdauer, Dämmung, Fenster, Lüftung, Anschlussleistung und Nutzerprofil bilden ein System. Die Dimensionierung sollte technisch geprüft und auf den konkreten Standort abgestimmt werden."
+  },
+  {
+    "category": "energie",
+    "question": "Wie plane ich Solar für ein Tiny House?",
+    "answer": "Solar wird nicht isoliert gewählt. Klima, Nutzungsdauer, Dämmung, Fenster, Lüftung, Anschlussleistung und Nutzerprofil bilden ein System. Die Dimensionierung sollte technisch geprüft und auf den konkreten Standort abgestimmt werden."
+  },
+  {
+    "category": "energie",
+    "question": "Wie plane ich Batteriespeicher für ein Tiny House?",
+    "answer": "Batteriespeicher wird nicht isoliert gewählt. Klima, Nutzungsdauer, Dämmung, Fenster, Lüftung, Anschlussleistung und Nutzerprofil bilden ein System. Die Dimensionierung sollte technisch geprüft und auf den konkreten Standort abgestimmt werden."
+  },
+  {
+    "category": "energie",
+    "question": "Wie plane ich Off Grid für ein Tiny House?",
+    "answer": "Off Grid wird nicht isoliert gewählt. Klima, Nutzungsdauer, Dämmung, Fenster, Lüftung, Anschlussleistung und Nutzerprofil bilden ein System. Die Dimensionierung sollte technisch geprüft und auf den konkreten Standort abgestimmt werden."
+  },
+  {
+    "category": "energie",
+    "question": "Wie plane ich Warmwasser für ein Tiny House?",
+    "answer": "Warmwasser wird nicht isoliert gewählt. Klima, Nutzungsdauer, Dämmung, Fenster, Lüftung, Anschlussleistung und Nutzerprofil bilden ein System. Die Dimensionierung sollte technisch geprüft und auf den konkreten Standort abgestimmt werden."
+  },
+  {
+    "category": "energie",
+    "question": "Wie plane ich Energieverbrauch für ein Tiny House?",
+    "answer": "Energieverbrauch wird nicht isoliert gewählt. Klima, Nutzungsdauer, Dämmung, Fenster, Lüftung, Anschlussleistung und Nutzerprofil bilden ein System. Die Dimensionierung sollte technisch geprüft und auf den konkreten Standort abgestimmt werden."
+  },
+  {
+    "category": "energie",
+    "question": "Wie plane ich Verschattung für ein Tiny House?",
+    "answer": "Verschattung wird nicht isoliert gewählt. Klima, Nutzungsdauer, Dämmung, Fenster, Lüftung, Anschlussleistung und Nutzerprofil bilden ein System. Die Dimensionierung sollte technisch geprüft und auf den konkreten Standort abgestimmt werden."
+  },
+  {
+    "category": "energie",
+    "question": "Wie plane ich Frostschutz für ein Tiny House?",
+    "answer": "Frostschutz wird nicht isoliert gewählt. Klima, Nutzungsdauer, Dämmung, Fenster, Lüftung, Anschlussleistung und Nutzerprofil bilden ein System. Die Dimensionierung sollte technisch geprüft und auf den konkreten Standort abgestimmt werden."
+  },
+  {
+    "category": "energie",
+    "question": "Wie plane ich Sommerkomfort für ein Tiny House?",
+    "answer": "Sommerkomfort wird nicht isoliert gewählt. Klima, Nutzungsdauer, Dämmung, Fenster, Lüftung, Anschlussleistung und Nutzerprofil bilden ein System. Die Dimensionierung sollte technisch geprüft und auf den konkreten Standort abgestimmt werden."
+  },
+  {
+    "category": "transport",
+    "question": "Was ist bei Lieferung Deutschland zu beachten?",
+    "answer": "Lieferung Deutschland erfordert klare Angaben zu Abmessungen, Gewicht, Route, Zufahrt, Rangierfläche, Untergrund, Entladepunkt und Verantwortlichkeiten. Eine verbindliche Zusage erfolgt erst nach logistischer Prüfung."
+  },
+  {
+    "category": "transport",
+    "question": "Was ist bei Transportkosten zu beachten?",
+    "answer": "Transportkosten erfordert klare Angaben zu Abmessungen, Gewicht, Route, Zufahrt, Rangierfläche, Untergrund, Entladepunkt und Verantwortlichkeiten. Eine verbindliche Zusage erfolgt erst nach logistischer Prüfung."
+  },
+  {
+    "category": "transport",
+    "question": "Was ist bei Routenprüfung zu beachten?",
+    "answer": "Routenprüfung erfordert klare Angaben zu Abmessungen, Gewicht, Route, Zufahrt, Rangierfläche, Untergrund, Entladepunkt und Verantwortlichkeiten. Eine verbindliche Zusage erfolgt erst nach logistischer Prüfung."
+  },
+  {
+    "category": "transport",
+    "question": "Was ist bei Zufahrt zu beachten?",
+    "answer": "Zufahrt erfordert klare Angaben zu Abmessungen, Gewicht, Route, Zufahrt, Rangierfläche, Untergrund, Entladepunkt und Verantwortlichkeiten. Eine verbindliche Zusage erfolgt erst nach logistischer Prüfung."
+  },
+  {
+    "category": "transport",
+    "question": "Was ist bei Entladung zu beachten?",
+    "answer": "Entladung erfordert klare Angaben zu Abmessungen, Gewicht, Route, Zufahrt, Rangierfläche, Untergrund, Entladepunkt und Verantwortlichkeiten. Eine verbindliche Zusage erfolgt erst nach logistischer Prüfung."
+  },
+  {
+    "category": "transport",
+    "question": "Was ist bei Kran zu beachten?",
+    "answer": "Kran erfordert klare Angaben zu Abmessungen, Gewicht, Route, Zufahrt, Rangierfläche, Untergrund, Entladepunkt und Verantwortlichkeiten. Eine verbindliche Zusage erfolgt erst nach logistischer Prüfung."
+  },
+  {
+    "category": "transport",
+    "question": "Was ist bei Rangierfläche zu beachten?",
+    "answer": "Rangierfläche erfordert klare Angaben zu Abmessungen, Gewicht, Route, Zufahrt, Rangierfläche, Untergrund, Entladepunkt und Verantwortlichkeiten. Eine verbindliche Zusage erfolgt erst nach logistischer Prüfung."
+  },
+  {
+    "category": "transport",
+    "question": "Was ist bei Straßenzulassung zu beachten?",
+    "answer": "Straßenzulassung erfordert klare Angaben zu Abmessungen, Gewicht, Route, Zufahrt, Rangierfläche, Untergrund, Entladepunkt und Verantwortlichkeiten. Eine verbindliche Zusage erfolgt erst nach logistischer Prüfung."
+  },
+  {
+    "category": "transport",
+    "question": "Was ist bei Kennzeichen zu beachten?",
+    "answer": "Kennzeichen erfordert klare Angaben zu Abmessungen, Gewicht, Route, Zufahrt, Rangierfläche, Untergrund, Entladepunkt und Verantwortlichkeiten. Eine verbindliche Zusage erfolgt erst nach logistischer Prüfung."
+  },
+  {
+    "category": "transport",
+    "question": "Was ist bei Gewichtslimit zu beachten?",
+    "answer": "Gewichtslimit erfordert klare Angaben zu Abmessungen, Gewicht, Route, Zufahrt, Rangierfläche, Untergrund, Entladepunkt und Verantwortlichkeiten. Eine verbindliche Zusage erfolgt erst nach logistischer Prüfung."
+  },
+  {
+    "category": "transport",
+    "question": "Was ist bei Versicherung Transport zu beachten?",
+    "answer": "Versicherung Transport erfordert klare Angaben zu Abmessungen, Gewicht, Route, Zufahrt, Rangierfläche, Untergrund, Entladepunkt und Verantwortlichkeiten. Eine verbindliche Zusage erfolgt erst nach logistischer Prüfung."
+  },
+  {
+    "category": "transport",
+    "question": "Was ist bei Lieferzeit zu beachten?",
+    "answer": "Lieferzeit erfordert klare Angaben zu Abmessungen, Gewicht, Route, Zufahrt, Rangierfläche, Untergrund, Entladepunkt und Verantwortlichkeiten. Eine verbindliche Zusage erfolgt erst nach logistischer Prüfung."
+  },
+  {
+    "category": "transport",
+    "question": "Was ist bei Grenzabwicklung zu beachten?",
+    "answer": "Grenzabwicklung erfordert klare Angaben zu Abmessungen, Gewicht, Route, Zufahrt, Rangierfläche, Untergrund, Entladepunkt und Verantwortlichkeiten. Eine verbindliche Zusage erfolgt erst nach logistischer Prüfung."
+  },
+  {
+    "category": "transport",
+    "question": "Was ist bei Schäden zu beachten?",
+    "answer": "Schäden erfordert klare Angaben zu Abmessungen, Gewicht, Route, Zufahrt, Rangierfläche, Untergrund, Entladepunkt und Verantwortlichkeiten. Eine verbindliche Zusage erfolgt erst nach logistischer Prüfung."
+  },
+  {
+    "category": "transport",
+    "question": "Was ist bei Übergabe zu beachten?",
+    "answer": "Übergabe erfordert klare Angaben zu Abmessungen, Gewicht, Route, Zufahrt, Rangierfläche, Untergrund, Entladepunkt und Verantwortlichkeiten. Eine verbindliche Zusage erfolgt erst nach logistischer Prüfung."
+  },
+  {
+    "category": "transport",
+    "question": "Was ist bei Standortvorbereitung zu beachten?",
+    "answer": "Standortvorbereitung erfordert klare Angaben zu Abmessungen, Gewicht, Route, Zufahrt, Rangierfläche, Untergrund, Entladepunkt und Verantwortlichkeiten. Eine verbindliche Zusage erfolgt erst nach logistischer Prüfung."
+  },
+  {
+    "category": "nachhaltigkeit",
+    "question": "Wie trägt Flächenverbrauch zur Nachhaltigkeit eines Tiny House bei?",
+    "answer": "Flächenverbrauch kann die Umweltwirkung verbessern, wenn Größe, Material, Haltbarkeit, Energiebedarf und tatsächliche Nutzung zusammenpassen. Einzelne „grüne“ Merkmale reichen ohne Lebenszyklus- und Betriebsperspektive nicht aus."
+  },
+  {
+    "category": "nachhaltigkeit",
+    "question": "Wie trägt Materialeinsatz zur Nachhaltigkeit eines Tiny House bei?",
+    "answer": "Materialeinsatz kann die Umweltwirkung verbessern, wenn Größe, Material, Haltbarkeit, Energiebedarf und tatsächliche Nutzung zusammenpassen. Einzelne „grüne“ Merkmale reichen ohne Lebenszyklus- und Betriebsperspektive nicht aus."
+  },
+  {
+    "category": "nachhaltigkeit",
+    "question": "Wie trägt Energieeffizienz zur Nachhaltigkeit eines Tiny House bei?",
+    "answer": "Energieeffizienz kann die Umweltwirkung verbessern, wenn Größe, Material, Haltbarkeit, Energiebedarf und tatsächliche Nutzung zusammenpassen. Einzelne „grüne“ Merkmale reichen ohne Lebenszyklus- und Betriebsperspektive nicht aus."
+  },
+  {
+    "category": "nachhaltigkeit",
+    "question": "Wie trägt Solarstrom zur Nachhaltigkeit eines Tiny House bei?",
+    "answer": "Solarstrom kann die Umweltwirkung verbessern, wenn Größe, Material, Haltbarkeit, Energiebedarf und tatsächliche Nutzung zusammenpassen. Einzelne „grüne“ Merkmale reichen ohne Lebenszyklus- und Betriebsperspektive nicht aus."
+  },
+  {
+    "category": "nachhaltigkeit",
+    "question": "Wie trägt Wasserverbrauch zur Nachhaltigkeit eines Tiny House bei?",
+    "answer": "Wasserverbrauch kann die Umweltwirkung verbessern, wenn Größe, Material, Haltbarkeit, Energiebedarf und tatsächliche Nutzung zusammenpassen. Einzelne „grüne“ Merkmale reichen ohne Lebenszyklus- und Betriebsperspektive nicht aus."
+  },
+  {
+    "category": "nachhaltigkeit",
+    "question": "Wie trägt Langlebigkeit zur Nachhaltigkeit eines Tiny House bei?",
+    "answer": "Langlebigkeit kann die Umweltwirkung verbessern, wenn Größe, Material, Haltbarkeit, Energiebedarf und tatsächliche Nutzung zusammenpassen. Einzelne „grüne“ Merkmale reichen ohne Lebenszyklus- und Betriebsperspektive nicht aus."
+  },
+  {
+    "category": "nachhaltigkeit",
+    "question": "Wie trägt Reparierbarkeit zur Nachhaltigkeit eines Tiny House bei?",
+    "answer": "Reparierbarkeit kann die Umweltwirkung verbessern, wenn Größe, Material, Haltbarkeit, Energiebedarf und tatsächliche Nutzung zusammenpassen. Einzelne „grüne“ Merkmale reichen ohne Lebenszyklus- und Betriebsperspektive nicht aus."
+  },
+  {
+    "category": "nachhaltigkeit",
+    "question": "Wie trägt Fassadenpflege zur Nachhaltigkeit eines Tiny House bei?",
+    "answer": "Fassadenpflege kann die Umweltwirkung verbessern, wenn Größe, Material, Haltbarkeit, Energiebedarf und tatsächliche Nutzung zusammenpassen. Einzelne „grüne“ Merkmale reichen ohne Lebenszyklus- und Betriebsperspektive nicht aus."
+  },
+  {
+    "category": "nachhaltigkeit",
+    "question": "Wie trägt CO₂-Betrachtung zur Nachhaltigkeit eines Tiny House bei?",
+    "answer": "CO₂-Betrachtung kann die Umweltwirkung verbessern, wenn Größe, Material, Haltbarkeit, Energiebedarf und tatsächliche Nutzung zusammenpassen. Einzelne „grüne“ Merkmale reichen ohne Lebenszyklus- und Betriebsperspektive nicht aus."
+  },
+  {
+    "category": "nachhaltigkeit",
+    "question": "Wie trägt Rückbau zur Nachhaltigkeit eines Tiny House bei?",
+    "answer": "Rückbau kann die Umweltwirkung verbessern, wenn Größe, Material, Haltbarkeit, Energiebedarf und tatsächliche Nutzung zusammenpassen. Einzelne „grüne“ Merkmale reichen ohne Lebenszyklus- und Betriebsperspektive nicht aus."
+  },
+  {
+    "category": "nachhaltigkeit",
+    "question": "Wie trägt Mehrfachnutzung zur Nachhaltigkeit eines Tiny House bei?",
+    "answer": "Mehrfachnutzung kann die Umweltwirkung verbessern, wenn Größe, Material, Haltbarkeit, Energiebedarf und tatsächliche Nutzung zusammenpassen. Einzelne „grüne“ Merkmale reichen ohne Lebenszyklus- und Betriebsperspektive nicht aus."
+  },
+  {
+    "category": "nachhaltigkeit",
+    "question": "Wie trägt lokale Anschlüsse zur Nachhaltigkeit eines Tiny House bei?",
+    "answer": "lokale Anschlüsse kann die Umweltwirkung verbessern, wenn Größe, Material, Haltbarkeit, Energiebedarf und tatsächliche Nutzung zusammenpassen. Einzelne „grüne“ Merkmale reichen ohne Lebenszyklus- und Betriebsperspektive nicht aus."
+  },
+  {
+    "category": "nachhaltigkeit",
+    "question": "Wie trägt Abfall zur Nachhaltigkeit eines Tiny House bei?",
+    "answer": "Abfall kann die Umweltwirkung verbessern, wenn Größe, Material, Haltbarkeit, Energiebedarf und tatsächliche Nutzung zusammenpassen. Einzelne „grüne“ Merkmale reichen ohne Lebenszyklus- und Betriebsperspektive nicht aus."
+  },
+  {
+    "category": "nachhaltigkeit",
+    "question": "Wie trägt Holzherkunft zur Nachhaltigkeit eines Tiny House bei?",
+    "answer": "Holzherkunft kann die Umweltwirkung verbessern, wenn Größe, Material, Haltbarkeit, Energiebedarf und tatsächliche Nutzung zusammenpassen. Einzelne „grüne“ Merkmale reichen ohne Lebenszyklus- und Betriebsperspektive nicht aus."
+  },
+  {
+    "category": "nachhaltigkeit",
+    "question": "Wie trägt Lebenszyklus zur Nachhaltigkeit eines Tiny House bei?",
+    "answer": "Lebenszyklus kann die Umweltwirkung verbessern, wenn Größe, Material, Haltbarkeit, Energiebedarf und tatsächliche Nutzung zusammenpassen. Einzelne „grüne“ Merkmale reichen ohne Lebenszyklus- und Betriebsperspektive nicht aus."
+  },
+  {
+    "category": "nachhaltigkeit",
+    "question": "Wie trägt Greenwashing zur Nachhaltigkeit eines Tiny House bei?",
+    "answer": "Greenwashing kann die Umweltwirkung verbessern, wenn Größe, Material, Haltbarkeit, Energiebedarf und tatsächliche Nutzung zusammenpassen. Einzelne „grüne“ Merkmale reichen ohne Lebenszyklus- und Betriebsperspektive nicht aus."
+  },
+  {
+    "category": "business",
+    "question": "Wie plane ich Airbnb als Tiny-House-Geschäftsmodell?",
+    "answer": "Airbnb sollte mit Zielgruppe, Standort, Genehmigung, Investitionskosten, Auslastung, Reinigung, Wartung und konservativer Erlösplanung bewertet werden. MC Tiny kann Produkt- und Serienkonfiguration unterstützen; Wirtschaftlichkeitsannahmen bleiben Betreiberverantwortung."
+  },
+  {
+    "category": "business",
+    "question": "Wie plane ich Glamping als Tiny-House-Geschäftsmodell?",
+    "answer": "Glamping sollte mit Zielgruppe, Standort, Genehmigung, Investitionskosten, Auslastung, Reinigung, Wartung und konservativer Erlösplanung bewertet werden. MC Tiny kann Produkt- und Serienkonfiguration unterstützen; Wirtschaftlichkeitsannahmen bleiben Betreiberverantwortung."
+  },
+  {
+    "category": "business",
+    "question": "Wie plane ich Ferienpark als Tiny-House-Geschäftsmodell?",
+    "answer": "Ferienpark sollte mit Zielgruppe, Standort, Genehmigung, Investitionskosten, Auslastung, Reinigung, Wartung und konservativer Erlösplanung bewertet werden. MC Tiny kann Produkt- und Serienkonfiguration unterstützen; Wirtschaftlichkeitsannahmen bleiben Betreiberverantwortung."
+  },
+  {
+    "category": "business",
+    "question": "Wie plane ich Serienproduktion als Tiny-House-Geschäftsmodell?",
+    "answer": "Serienproduktion sollte mit Zielgruppe, Standort, Genehmigung, Investitionskosten, Auslastung, Reinigung, Wartung und konservativer Erlösplanung bewertet werden. MC Tiny kann Produkt- und Serienkonfiguration unterstützen; Wirtschaftlichkeitsannahmen bleiben Betreiberverantwortung."
+  },
+  {
+    "category": "business",
+    "question": "Wie plane ich Betreiberkonzept als Tiny-House-Geschäftsmodell?",
+    "answer": "Betreiberkonzept sollte mit Zielgruppe, Standort, Genehmigung, Investitionskosten, Auslastung, Reinigung, Wartung und konservativer Erlösplanung bewertet werden. MC Tiny kann Produkt- und Serienkonfiguration unterstützen; Wirtschaftlichkeitsannahmen bleiben Betreiberverantwortung."
+  },
+  {
+    "category": "business",
+    "question": "Wie plane ich Auslastung als Tiny-House-Geschäftsmodell?",
+    "answer": "Auslastung sollte mit Zielgruppe, Standort, Genehmigung, Investitionskosten, Auslastung, Reinigung, Wartung und konservativer Erlösplanung bewertet werden. MC Tiny kann Produkt- und Serienkonfiguration unterstützen; Wirtschaftlichkeitsannahmen bleiben Betreiberverantwortung."
+  },
+  {
+    "category": "business",
+    "question": "Wie plane ich Rendite als Tiny-House-Geschäftsmodell?",
+    "answer": "Rendite sollte mit Zielgruppe, Standort, Genehmigung, Investitionskosten, Auslastung, Reinigung, Wartung und konservativer Erlösplanung bewertet werden. MC Tiny kann Produkt- und Serienkonfiguration unterstützen; Wirtschaftlichkeitsannahmen bleiben Betreiberverantwortung."
+  },
+  {
+    "category": "business",
+    "question": "Wie plane ich Gästekomfort als Tiny-House-Geschäftsmodell?",
+    "answer": "Gästekomfort sollte mit Zielgruppe, Standort, Genehmigung, Investitionskosten, Auslastung, Reinigung, Wartung und konservativer Erlösplanung bewertet werden. MC Tiny kann Produkt- und Serienkonfiguration unterstützen; Wirtschaftlichkeitsannahmen bleiben Betreiberverantwortung."
+  },
+  {
+    "category": "business",
+    "question": "Wie plane ich Reinigung als Tiny-House-Geschäftsmodell?",
+    "answer": "Reinigung sollte mit Zielgruppe, Standort, Genehmigung, Investitionskosten, Auslastung, Reinigung, Wartung und konservativer Erlösplanung bewertet werden. MC Tiny kann Produkt- und Serienkonfiguration unterstützen; Wirtschaftlichkeitsannahmen bleiben Betreiberverantwortung."
+  },
+  {
+    "category": "business",
+    "question": "Wie plane ich Wartung als Tiny-House-Geschäftsmodell?",
+    "answer": "Wartung sollte mit Zielgruppe, Standort, Genehmigung, Investitionskosten, Auslastung, Reinigung, Wartung und konservativer Erlösplanung bewertet werden. MC Tiny kann Produkt- und Serienkonfiguration unterstützen; Wirtschaftlichkeitsannahmen bleiben Betreiberverantwortung."
+  },
+  {
+    "category": "business",
+    "question": "Wie plane ich Zielgruppe als Tiny-House-Geschäftsmodell?",
+    "answer": "Zielgruppe sollte mit Zielgruppe, Standort, Genehmigung, Investitionskosten, Auslastung, Reinigung, Wartung und konservativer Erlösplanung bewertet werden. MC Tiny kann Produkt- und Serienkonfiguration unterstützen; Wirtschaftlichkeitsannahmen bleiben Betreiberverantwortung."
+  },
+  {
+    "category": "business",
+    "question": "Wie plane ich Preisstrategie als Tiny-House-Geschäftsmodell?",
+    "answer": "Preisstrategie sollte mit Zielgruppe, Standort, Genehmigung, Investitionskosten, Auslastung, Reinigung, Wartung und konservativer Erlösplanung bewertet werden. MC Tiny kann Produkt- und Serienkonfiguration unterstützen; Wirtschaftlichkeitsannahmen bleiben Betreiberverantwortung."
+  },
+  {
+    "category": "business",
+    "question": "Wie plane ich Standortmix als Tiny-House-Geschäftsmodell?",
+    "answer": "Standortmix sollte mit Zielgruppe, Standort, Genehmigung, Investitionskosten, Auslastung, Reinigung, Wartung und konservativer Erlösplanung bewertet werden. MC Tiny kann Produkt- und Serienkonfiguration unterstützen; Wirtschaftlichkeitsannahmen bleiben Betreiberverantwortung."
+  },
+  {
+    "category": "business",
+    "question": "Wie plane ich Corporate Housing als Tiny-House-Geschäftsmodell?",
+    "answer": "Corporate Housing sollte mit Zielgruppe, Standort, Genehmigung, Investitionskosten, Auslastung, Reinigung, Wartung und konservativer Erlösplanung bewertet werden. MC Tiny kann Produkt- und Serienkonfiguration unterstützen; Wirtschaftlichkeitsannahmen bleiben Betreiberverantwortung."
+  },
+  {
+    "category": "business",
+    "question": "Wie plane ich Pop-up Office als Tiny-House-Geschäftsmodell?",
+    "answer": "Pop-up Office sollte mit Zielgruppe, Standort, Genehmigung, Investitionskosten, Auslastung, Reinigung, Wartung und konservativer Erlösplanung bewertet werden. MC Tiny kann Produkt- und Serienkonfiguration unterstützen; Wirtschaftlichkeitsannahmen bleiben Betreiberverantwortung."
+  },
+  {
+    "category": "business",
+    "question": "Wie plane ich Händler als Tiny-House-Geschäftsmodell?",
+    "answer": "Händler sollte mit Zielgruppe, Standort, Genehmigung, Investitionskosten, Auslastung, Reinigung, Wartung und konservativer Erlösplanung bewertet werden. MC Tiny kann Produkt- und Serienkonfiguration unterstützen; Wirtschaftlichkeitsannahmen bleiben Betreiberverantwortung."
+  },
+  {
+    "category": "service",
+    "question": "Wie funktioniert Produktionsdauer bei MC Tiny?",
+    "answer": "Produktionsdauer wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "service",
+    "question": "Wie funktioniert Planungsphase bei MC Tiny?",
+    "answer": "Planungsphase wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "service",
+    "question": "Wie funktioniert Bemusterung bei MC Tiny?",
+    "answer": "Bemusterung wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "service",
+    "question": "Wie funktioniert Änderungswünsche bei MC Tiny?",
+    "answer": "Änderungswünsche wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "service",
+    "question": "Wie funktioniert Fabrikbesuch bei MC Tiny?",
+    "answer": "Fabrikbesuch wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "service",
+    "question": "Wie funktioniert Qualitätsbericht bei MC Tiny?",
+    "answer": "Qualitätsbericht wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "service",
+    "question": "Wie funktioniert Garantie bei MC Tiny?",
+    "answer": "Garantie wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "service",
+    "question": "Wie funktioniert Gewährleistung bei MC Tiny?",
+    "answer": "Gewährleistung wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "service",
+    "question": "Wie funktioniert Ersatzteile bei MC Tiny?",
+    "answer": "Ersatzteile wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "service",
+    "question": "Wie funktioniert Wartung bei MC Tiny?",
+    "answer": "Wartung wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "service",
+    "question": "Wie funktioniert Fernsupport bei MC Tiny?",
+    "answer": "Fernsupport wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "service",
+    "question": "Wie funktioniert Dokumente bei MC Tiny?",
+    "answer": "Dokumente wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "service",
+    "question": "Wie funktioniert Sprachen bei MC Tiny?",
+    "answer": "Sprachen wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "service",
+    "question": "Wie funktioniert Projektmanager bei MC Tiny?",
+    "answer": "Projektmanager wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "service",
+    "question": "Wie funktioniert After Sales bei MC Tiny?",
+    "answer": "After Sales wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "service",
+    "question": "Wie funktioniert Reklamation bei MC Tiny?",
+    "answer": "Reklamation wird im Projektablauf transparent abgegrenzt. Anforderungen, technische Machbarkeit, Termin, Verantwortlichkeiten und Dokumentation werden vor Freigabe festgehalten. Verbindlich sind ausschließlich Angebot und Vertrag."
+  },
+  {
+    "category": "modelle",
+    "question": "Was sollte ich über MC 1 wissen?",
+    "answer": "MC 1 ist Teil der MC-Tiny-Modell- oder Ausstattungslogik. Entscheidend sind Personenanzahl, Nutzung, gewünschte Raumtrennung, Standort, technische Ausstattung und Gewicht. Der Modellvergleich und die technische Beratung grenzen die passende Konfiguration ein."
+  },
+  {
+    "category": "modelle",
+    "question": "Was sollte ich über MC 2 wissen?",
+    "answer": "MC 2 ist Teil der MC-Tiny-Modell- oder Ausstattungslogik. Entscheidend sind Personenanzahl, Nutzung, gewünschte Raumtrennung, Standort, technische Ausstattung und Gewicht. Der Modellvergleich und die technische Beratung grenzen die passende Konfiguration ein."
+  },
+  {
+    "category": "modelle",
+    "question": "Was sollte ich über MC 3 wissen?",
+    "answer": "MC 3 ist Teil der MC-Tiny-Modell- oder Ausstattungslogik. Entscheidend sind Personenanzahl, Nutzung, gewünschte Raumtrennung, Standort, technische Ausstattung und Gewicht. Der Modellvergleich und die technische Beratung grenzen die passende Konfiguration ein."
+  },
+  {
+    "category": "modelle",
+    "question": "Was sollte ich über MC 4 wissen?",
+    "answer": "MC 4 ist Teil der MC-Tiny-Modell- oder Ausstattungslogik. Entscheidend sind Personenanzahl, Nutzung, gewünschte Raumtrennung, Standort, technische Ausstattung und Gewicht. Der Modellvergleich und die technische Beratung grenzen die passende Konfiguration ein."
+  },
+  {
+    "category": "modelle",
+    "question": "Was sollte ich über MC 5 wissen?",
+    "answer": "MC 5 ist Teil der MC-Tiny-Modell- oder Ausstattungslogik. Entscheidend sind Personenanzahl, Nutzung, gewünschte Raumtrennung, Standort, technische Ausstattung und Gewicht. Der Modellvergleich und die technische Beratung grenzen die passende Konfiguration ein."
+  },
+  {
+    "category": "modelle",
+    "question": "Was sollte ich über MC 6 wissen?",
+    "answer": "MC 6 ist Teil der MC-Tiny-Modell- oder Ausstattungslogik. Entscheidend sind Personenanzahl, Nutzung, gewünschte Raumtrennung, Standort, technische Ausstattung und Gewicht. Der Modellvergleich und die technische Beratung grenzen die passende Konfiguration ein."
+  },
+  {
+    "category": "modelle",
+    "question": "Was sollte ich über MC 7 wissen?",
+    "answer": "MC 7 ist Teil der MC-Tiny-Modell- oder Ausstattungslogik. Entscheidend sind Personenanzahl, Nutzung, gewünschte Raumtrennung, Standort, technische Ausstattung und Gewicht. Der Modellvergleich und die technische Beratung grenzen die passende Konfiguration ein."
+  },
+  {
+    "category": "modelle",
+    "question": "Was sollte ich über MC 8 wissen?",
+    "answer": "MC 8 ist Teil der MC-Tiny-Modell- oder Ausstattungslogik. Entscheidend sind Personenanzahl, Nutzung, gewünschte Raumtrennung, Standort, technische Ausstattung und Gewicht. Der Modellvergleich und die technische Beratung grenzen die passende Konfiguration ein."
+  },
+  {
+    "category": "modelle",
+    "question": "Was sollte ich über 8 Meter wissen?",
+    "answer": "8 Meter ist Teil der MC-Tiny-Modell- oder Ausstattungslogik. Entscheidend sind Personenanzahl, Nutzung, gewünschte Raumtrennung, Standort, technische Ausstattung und Gewicht. Der Modellvergleich und die technische Beratung grenzen die passende Konfiguration ein."
+  },
+  {
+    "category": "modelle",
+    "question": "Was sollte ich über 9 Meter wissen?",
+    "answer": "9 Meter ist Teil der MC-Tiny-Modell- oder Ausstattungslogik. Entscheidend sind Personenanzahl, Nutzung, gewünschte Raumtrennung, Standort, technische Ausstattung und Gewicht. Der Modellvergleich und die technische Beratung grenzen die passende Konfiguration ein."
+  },
+  {
+    "category": "modelle",
+    "question": "Was sollte ich über 9,70 Meter wissen?",
+    "answer": "9,70 Meter ist Teil der MC-Tiny-Modell- oder Ausstattungslogik. Entscheidend sind Personenanzahl, Nutzung, gewünschte Raumtrennung, Standort, technische Ausstattung und Gewicht. Der Modellvergleich und die technische Beratung grenzen die passende Konfiguration ein."
+  },
+  {
+    "category": "modelle",
+    "question": "Was sollte ich über ein Loft wissen?",
+    "answer": "ein Loft ist Teil der MC-Tiny-Modell- oder Ausstattungslogik. Entscheidend sind Personenanzahl, Nutzung, gewünschte Raumtrennung, Standort, technische Ausstattung und Gewicht. Der Modellvergleich und die technische Beratung grenzen die passende Konfiguration ein."
+  },
+  {
+    "category": "modelle",
+    "question": "Was sollte ich über zwei Lofts wissen?",
+    "answer": "zwei Lofts ist Teil der MC-Tiny-Modell- oder Ausstattungslogik. Entscheidend sind Personenanzahl, Nutzung, gewünschte Raumtrennung, Standort, technische Ausstattung und Gewicht. Der Modellvergleich und die technische Beratung grenzen die passende Konfiguration ein."
+  },
+  {
+    "category": "modelle",
+    "question": "Was sollte ich über Veranda wissen?",
+    "answer": "Veranda ist Teil der MC-Tiny-Modell- oder Ausstattungslogik. Entscheidend sind Personenanzahl, Nutzung, gewünschte Raumtrennung, Standort, technische Ausstattung und Gewicht. Der Modellvergleich und die technische Beratung grenzen die passende Konfiguration ein."
+  },
+  {
+    "category": "modelle",
+    "question": "Was sollte ich über Chalet wissen?",
+    "answer": "Chalet ist Teil der MC-Tiny-Modell- oder Ausstattungslogik. Entscheidend sind Personenanzahl, Nutzung, gewünschte Raumtrennung, Standort, technische Ausstattung und Gewicht. Der Modellvergleich und die technische Beratung grenzen die passende Konfiguration ein."
+  },
+  {
+    "category": "modelle",
+    "question": "Was sollte ich über Modellvergleich wissen?",
+    "answer": "Modellvergleich ist Teil der MC-Tiny-Modell- oder Ausstattungslogik. Entscheidend sind Personenanzahl, Nutzung, gewünschte Raumtrennung, Standort, technische Ausstattung und Gewicht. Der Modellvergleich und die technische Beratung grenzen die passende Konfiguration ein."
+  }
+]
