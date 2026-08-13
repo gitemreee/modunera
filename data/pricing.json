@@ -3,20 +3,111 @@
   "currency": "EUR",
   "updated": "2026-08-13",
   "models": {
-    "mc1": { "base_eur": 44900, "lengths": "8,00 / 9,70 m", "layout_de": "1 Loft", "layout_en": "1 loft", "focus_de": "Panorama, Tageslicht, großzügiger Wohnbereich", "focus_en": "Panorama glazing, daylight, generous living area", "use_de": "Wohnen, Ferienhaus", "use_en": "Living, holiday home" },
-    "mc2": { "base_eur": 52900, "lengths": "9,00 m", "layout_de": "2 Lofts", "layout_en": "2 lofts", "focus_de": "Getrennte Schlafbereiche für Familien und Gäste", "focus_en": "Separate sleeping areas for families and guests", "use_de": "Familie, Vermietung", "use_en": "Family, rental" },
-    "mc3": { "base_eur": 47900, "lengths": "8,00 / 9,70 m", "layout_de": "Loft + optionaler Raum", "layout_en": "Loft + optional room", "focus_de": "Flexibler Zusatzraum für Büro oder Gast", "focus_en": "Flexible extra room for office or guest", "use_de": "Homeoffice, Gästehaus", "use_en": "Home office, guest house" },
-    "mc4": { "base_eur": 50900, "lengths": "8,00 / 9,00 m", "layout_de": "Loft, Zimmer und Veranda", "layout_en": "Loft, room and veranda", "focus_de": "Überdachter Außenbereich als Teil des Grundrisses", "focus_en": "Covered outdoor area as part of the layout", "use_de": "Ferienpark, Glamping", "use_en": "Holiday park, glamping" },
-    "mc5": { "base_eur": 46900, "lengths": "8,00 / 9,00 m", "layout_de": "Loft + optionaler Raum", "layout_en": "Loft + optional room", "focus_de": "Kompakte Alternative mit Zusatzraum", "focus_en": "Compact alternative with an extra room", "use_de": "Wohnen, Büro", "use_en": "Living, office" },
-    "mc6": { "base_eur": 54900, "lengths": "8,00 / 9,00 m", "layout_de": "Chalet-Konzept", "layout_en": "Chalet concept", "focus_de": "Steildach, Berg- und Vier-Jahreszeiten-Charakter", "focus_en": "Pitched roof, alpine and four-season character", "use_de": "Berglage, Resort", "use_en": "Mountain sites, resort" },
-    "mc7": { "base_eur": 42900, "lengths": "8,00 m", "layout_de": "1 Loft", "layout_en": "1 loft", "focus_de": "Einstiegsmodell mit klarem Grundriss", "focus_en": "Entry model with a straightforward layout", "use_de": "Einstieg, Vermietung", "use_en": "Entry level, rental" },
-    "mc8": { "base_eur": 45900, "lengths": "8,00 m", "layout_de": "1 Loft", "layout_en": "1 loft", "focus_de": "Kompakt mit gehobener Ausstattungslinie", "focus_en": "Compact with an upgraded specification line", "use_de": "Wohnen, Office", "use_en": "Living, office" }
+    "mc1": {
+      "base_eur": 44900,
+      "lengths": "8,00 / 9,70 m",
+      "layout_de": "1 Loft",
+      "layout_en": "1 loft",
+      "focus_de": "Panorama, Tageslicht, großzügiger Wohnbereich",
+      "focus_en": "Panorama glazing, daylight, generous living area",
+      "use_de": "Wohnen, Ferienhaus",
+      "use_en": "Living, holiday home"
+    },
+    "mc2": {
+      "base_eur": 52900,
+      "lengths": "9,00 m",
+      "layout_de": "2 Lofts",
+      "layout_en": "2 lofts",
+      "focus_de": "Getrennte Schlafbereiche für Familien und Gäste",
+      "focus_en": "Separate sleeping areas for families and guests",
+      "use_de": "Familie, Vermietung",
+      "use_en": "Family, rental"
+    },
+    "mc3": {
+      "base_eur": 47900,
+      "lengths": "8,00 / 9,70 m",
+      "layout_de": "Loft + optionaler Raum",
+      "layout_en": "Loft + optional room",
+      "focus_de": "Flexibler Zusatzraum für Büro oder Gast",
+      "focus_en": "Flexible extra room for office or guest",
+      "use_de": "Homeoffice, Gästehaus",
+      "use_en": "Home office, guest house"
+    },
+    "mc4": {
+      "base_eur": 50900,
+      "lengths": "8,00 / 9,00 m",
+      "layout_de": "Loft, Zimmer und Veranda",
+      "layout_en": "Loft, room and veranda",
+      "focus_de": "Überdachter Außenbereich als Teil des Grundrisses",
+      "focus_en": "Covered outdoor area as part of the layout",
+      "use_de": "Ferienpark, Glamping",
+      "use_en": "Holiday park, glamping"
+    },
+    "mc5": {
+      "base_eur": 46900,
+      "lengths": "8,00 / 9,00 m",
+      "layout_de": "Loft + optionaler Raum",
+      "layout_en": "Loft + optional room",
+      "focus_de": "Kompakte Alternative mit Zusatzraum",
+      "focus_en": "Compact alternative with an extra room",
+      "use_de": "Wohnen, Büro",
+      "use_en": "Living, office"
+    },
+    "mc6": {
+      "base_eur": 54900,
+      "lengths": "8,00 / 9,00 m",
+      "layout_de": "Chalet-Konzept",
+      "layout_en": "Chalet concept",
+      "focus_de": "Steildach, Berg- und Vier-Jahreszeiten-Charakter",
+      "focus_en": "Pitched roof, alpine and four-season character",
+      "use_de": "Berglage, Resort",
+      "use_en": "Mountain sites, resort"
+    },
+    "mc7": {
+      "base_eur": 42900,
+      "lengths": "8,00 m",
+      "layout_de": "1 Loft",
+      "layout_en": "1 loft",
+      "focus_de": "Einstiegsmodell mit klarem Grundriss",
+      "focus_en": "Entry model with a straightforward layout",
+      "use_de": "Einstieg, Vermietung",
+      "use_en": "Entry level, rental"
+    },
+    "mc8": {
+      "base_eur": 45900,
+      "lengths": "8,00 m",
+      "layout_de": "1 Loft",
+      "layout_en": "1 loft",
+      "focus_de": "Kompakt mit gehobener Ausstattungslinie",
+      "focus_en": "Compact with an upgraded specification line",
+      "use_de": "Wohnen, Office",
+      "use_en": "Living, office"
+    }
   },
   "delivery": {
-    "DE": { "tariff": "de", "eur": 6800 },
-    "NL": { "tariff": "nl", "eur": 7600 },
-    "CH": { "tariff": "ch", "eur": 7900 },
-    "DK": { "tariff": "scandi", "eur": 10500, "note_de": "Skandinavien-Tarif des Konfigurators", "note_en": "Configurator's Scandinavia tariff" },
-    "LU": { "tariff": null, "eur": null, "note_de": "Kein hinterlegter Tarif – projektbezogen auf Anfrage", "note_en": "No stored tariff – quoted per project on request" }
+    "DE": {
+      "tariff": "de",
+      "eur": 6800
+    },
+    "NL": {
+      "tariff": "nl",
+      "eur": 7600
+    },
+    "CH": {
+      "tariff": "ch",
+      "eur": 7900
+    },
+    "DK": {
+      "tariff": "scandi",
+      "eur": 10500,
+      "note_de": "Skandinavien-Tarif des Konfigurators",
+      "note_en": "Configurator's Scandinavia tariff"
+    },
+    "LU": {
+      "tariff": "lu",
+      "eur": 7000,
+      "note_de": "Durchschnittswert – Route projektbezogen bestätigt",
+      "note_en": "Average figure – route confirmed per project"
+    }
   }
 }

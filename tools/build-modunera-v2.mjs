@@ -37,7 +37,9 @@ const esc = (v) => String(v).replaceAll("&", "&amp;").replaceAll("<", "&lt;").re
 const canonicalFor = (file) => BASE + file.replace(/index\.html$/, "");
 const rootFor = (file) => (dirname(file) === "." ? "" : "../".repeat(dirname(file).split("/").length));
 const waLink = (msg) => `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
-const eur = (n) => new Intl.NumberFormat("de-DE").format(n) + " €";
+// German pages group with dots, English pages with commas: "7.000 €" reads as
+// seven euros to an English speaker, so the separator has to follow the page language.
+const eur = (n, lang = "de") => new Intl.NumberFormat(lang === "de" ? "de-DE" : "en-GB").format(n) + " €";
 
 async function put(file, content) {
   const target = join(ROOT, file);
@@ -232,20 +234,26 @@ const disclaimer = (de) =>
 
 async function loadPricing() {
   const pricing = JSON.parse(await readFile(join(ROOT, "data/pricing.json"), "utf8"));
-  const js = await readFile(join(ROOT, "assets/js/configurator.js"), "utf8");
+  // studio.js is what /studio/ and /konfigurator/ actually load; configurator.js is
+  // dead code still in the tree, checked too so the two cannot silently diverge.
+  const sources = ["assets/js/studio.js", "assets/js/configurator.js"];
   const drift = [];
-  for (const [id, model] of Object.entries(pricing.models)) {
-    const found = js.match(new RegExp(`${id}:\\{name:'[^']*',base:(\\d+)`));
-    if (!found) drift.push(`${id}: not found in configurator.js`);
-    else if (Number(found[1]) !== model.base_eur) drift.push(`${id}: configurator ${found[1]} vs pricing.json ${model.base_eur}`);
+  for (const source of sources) {
+    const js = await readFile(join(ROOT, source), "utf8");
+    const name = source.split("/").pop();
+    for (const [id, model] of Object.entries(pricing.models)) {
+      const found = js.match(new RegExp(id + ":\\{name:'[^']*',base:(\\d+)"));
+      if (!found) drift.push(`${id}: not found in ${name}`);
+      else if (Number(found[1]) !== model.base_eur) drift.push(`${id}: ${name} ${found[1]} vs pricing.json ${model.base_eur}`);
+    }
+    for (const [code, d] of Object.entries(pricing.delivery)) {
+      if (!d.tariff) continue;
+      const found = js.match(new RegExp("[{,]" + d.tariff + ":(\\d+)"));
+      if (!found) drift.push(`delivery ${code}: tariff "${d.tariff}" not found in ${name}`);
+      else if (Number(found[1]) !== d.eur) drift.push(`delivery ${code}: ${name} ${found[1]} vs pricing.json ${d.eur}`);
+    }
   }
-  for (const [code, d] of Object.entries(pricing.delivery)) {
-    if (!d.tariff) continue;
-    const found = js.match(new RegExp(`[{,]${d.tariff}:(\\d+)`));
-    if (!found) drift.push(`delivery ${code}: tariff "${d.tariff}" not found in configurator.js`);
-    else if (Number(found[1]) !== d.eur) drift.push(`delivery ${code}: configurator ${found[1]} vs pricing.json ${d.eur}`);
-  }
-  if (drift.length) throw new Error("pricing.json has drifted from configurator.js:\n  " + drift.join("\n  "));
+  if (drift.length) throw new Error("pricing.json has drifted from the configurator sources:\n  " + drift.join("\n  "));
   return pricing;
 }
 
@@ -269,19 +277,19 @@ function modelComparisonPage(pricing, lang) {
   const rows = models
     .map(([id, m]) => {
       const n = "MC " + id.slice(2);
-      return `<tr><td><strong>${n}</strong></td><td>${m.lengths}</td><td>${de ? m.layout_de : m.layout_en}</td><td>${de ? m.focus_de : m.focus_en}</td><td>${de ? m.use_de : m.use_en}</td><td><span class="price-figure">ab ${eur(m.base_eur)}</span><span class="price-note">${de ? "ab Werk, Basis" : "ex works, base"}</span></td></tr>`;
+      return `<tr><td><strong>${n}</strong></td><td>${m.lengths}</td><td>${de ? m.layout_de : m.layout_en}</td><td>${de ? m.focus_de : m.focus_en}</td><td>${de ? m.use_de : m.use_en}</td><td><span class="price-figure">${de ? "ab" : "from"} ${eur(m.base_eur, lang)}</span><span class="price-note">${de ? "ab Werk, Basis" : "ex works, base"}</span></td></tr>`;
     })
     .join("");
 
   const faqs = de
     ? [
-        ["Welches Modell ist das günstigste?", `MC 7 startet mit ${eur(cheapest)} ab Werk in der Basisausstattung. Der Gesamtpreis hängt danach von Länge, Innenausbau, Fassade, Heizung, Energie und Lieferung ab.`],
+        ["Welches Modell ist das günstigste?", `MC 7 startet mit ${eur(cheapest, lang)} ab Werk in der Basisausstattung. Der Gesamtpreis hängt danach von Länge, Innenausbau, Fassade, Heizung, Energie und Lieferung ab.`],
         ["Worin unterscheiden sich die Modelle wirklich?", "Vor allem im Grundriss: Anzahl der Lofts, ob ein zusätzlicher abgeschlossener Raum vorhanden ist und ob eine Veranda Teil der Konstruktion ist. Die Bauweise, der Stahlrahmen und die Ausstattungslinien sind über alle Modelle vergleichbar."],
         ["Kann ich einen Grundriss anpassen?", "Grundriss-, Material- und Möbelanpassungen sind projektbezogen möglich, weil Rahmen, Hülle, Ausbau und Möbel aus eigener Produktion kommen. Umfang und Auswirkung auf Preis und Termin werden vor der Bestellung schriftlich festgehalten."],
         ["Sind die Preise verbindlich?", "Nein. Es sind Indikationen ab Werk in Basisausstattung. Verbindlich ist ausschließlich ein geprüftes Angebot, das Ausstattung, Transport, Zielland und Baustellenbedingungen berücksichtigt."],
       ]
     : [
-        ["Which model is the most affordable?", `MC 7 starts at ${eur(cheapest)} ex works in base specification. The final figure then depends on length, interior, facade, heating, energy and delivery.`],
+        ["Which model is the most affordable?", `MC 7 starts at ${eur(cheapest, lang)} ex works in base specification. The final figure then depends on length, interior, facade, heating, energy and delivery.`],
         ["What actually differs between the models?", "Mainly the layout: the number of lofts, whether a separate enclosed room is included and whether a veranda is part of the structure. Construction, the steel frame and the specification lines are comparable across the range."],
         ["Can a layout be adapted?", "Layout, material and furniture changes are possible per project because the frame, envelope, interior and furniture all come from our own production. Scope and the effect on price and schedule are recorded in writing before ordering."],
         ["Are the prices binding?", "No. They are ex-works indications in base specification. Only a checked quotation that reflects specification, transport, destination country and site conditions is binding."],
@@ -311,7 +319,7 @@ function modelComparisonPage(pricing, lang) {
     }) +
     chrome(root, lang) +
     `<main id="main"><section class="page-hero"><div class="container"><div class="breadcrumbs">${de ? "MODUNERA · Modelle" : "MODUNERA · Models"}</div><div class="eyebrow">${de ? "Acht Ausgangsmodelle" : "Eight base models"}</div><h1>${de ? "MC 1 bis MC 8 im direkten Vergleich." : "MC 1 to MC 8 side by side."}</h1><p>${de ? "Alle Modelle teilen Stahlrahmen, Bauweise und Ausstattungslinien. Der Unterschied liegt im Grundriss und in der Nutzung, für die das Modell ausgelegt ist." : "Every model shares the steel frame, the construction method and the specification lines. What differs is the layout and the use the model is designed for."}</p></div></section>` +
-    `<section class="section"><div class="container"><div class="kpi-row"><div class="kpi"><b>8</b><span>${de ? "Ausgangsmodelle" : "Base models"}</span></div><div class="kpi"><b>8–9,70 m</b><span>${de ? "Längenoptionen" : "Length options"}</span></div><div class="kpi"><b>2,55 m</b><span>${de ? "Mobile Breite" : "Mobile width"}</span></div><div class="kpi"><b>${eur(cheapest)}</b><span>${de ? "Einstieg ab Werk" : "Entry, ex works"}</span></div></div>` +
+    `<section class="section"><div class="container"><div class="kpi-row"><div class="kpi"><b>8</b><span>${de ? "Ausgangsmodelle" : "Base models"}</span></div><div class="kpi"><b>8–9,70 m</b><span>${de ? "Längenoptionen" : "Length options"}</span></div><div class="kpi"><b>2,55 m</b><span>${de ? "Mobile Breite" : "Mobile width"}</span></div><div class="kpi"><b>${eur(cheapest, lang)}</b><span>${de ? "Einstieg ab Werk" : "Entry, ex works"}</span></div></div>` +
     `<div class="compare"><table><thead><tr><th>${de ? "Modell" : "Model"}</th><th>${de ? "Länge" : "Length"}</th><th>${de ? "Grundriss" : "Layout"}</th><th>${de ? "Ausrichtung" : "Focus"}</th><th>${de ? "Typische Nutzung" : "Typical use"}</th><th>${de ? "Preisindikation" : "Price indication"}</th></tr></thead><tbody>${rows}</tbody></table></div>` +
     `<div class="answer-box"><strong>${de ? "Was der Preis nicht enthält" : "What the price excludes"}</strong><p>${de ? "Die Indikation gilt ab Werk in Basisausstattung. Transport, Kran, Fundament, Anschlüsse, Zoll, Einfuhrumsatzsteuer und lokale Leistungen kommen projektbezogen hinzu. Der Preisvergleich je Zielland zeigt die Logistikseite." : "The indication is ex works in base specification. Transport, crane, foundation, connections, customs, import VAT and local works are added per project. The country price comparison covers the logistics side."}</p></div>` +
     `<div class="hero-actions"><a class="btn btn-primary" href="${root}${de ? "preisvergleich/" : "en/price-comparison/"}">${de ? "Preisvergleich je Land →" : "Price comparison by country →"}</a><a class="btn btn-outline" href="${root}studio/">${de ? "Im Design Studio konfigurieren" : "Configure in the design studio"}</a><a class="btn btn-outline" href="${waLink(de ? "Hallo MODUNERA, ich vergleiche die Modelle MC 1–MC 8. Zielland: __. Nutzung: __. Personen: __. Budget: __. Bitte senden Sie mir eine Ersteinschätzung." : "Hello MODUNERA, I am comparing models MC 1–MC 8. Destination country: __. Intended use: __. People: __. Budget: __. Please send a first assessment.")}" target="_blank" rel="noopener">${de ? "WhatsApp-Projektcheck" : "WhatsApp project check"}</a></div>` +
@@ -337,15 +345,15 @@ function priceComparisonPage(pricing, lang) {
       const link = root + (de ? `laender/${label.deSlug}/` : `en/countries/${label.enSlug}/`);
       const note = de ? d.note_de : d.note_en;
       const delivery = d.eur
-        ? `<span class="price-figure">${eur(d.eur)}</span>${note ? `<span class="price-note">${esc(note)}</span>` : ""}`
+        ? `<span class="price-figure">${eur(d.eur, lang)}</span>${note ? `<span class="price-note">${esc(note)}</span>` : ""}`
         : `<span class="price-figure">${de ? "auf Anfrage" : "on request"}</span><span class="price-note">${esc(note ?? "")}</span>`;
-      const from = d.eur ? `<span class="price-figure">${eur(entry + d.eur)}</span><span class="price-note">${de ? "MC 7 Basis + Lieferung" : "MC 7 base + delivery"}</span>` : `<span class="price-figure">${de ? "auf Anfrage" : "on request"}</span>`;
+      const from = d.eur ? `<span class="price-figure">${eur(entry + d.eur, lang)}</span><span class="price-note">${de ? "MC 7 Basis + Lieferung" : "MC 7 base + delivery"}</span>` : `<span class="price-figure">${de ? "auf Anfrage" : "on request"}</span>`;
       return `<tr><td><strong><a href="${link}">${name}</a></strong></td><td>${delivery}</td><td>${from}</td><td>${de ? "Ja – Standort- und Nutzungsprüfung bei der zuständigen Stelle" : "Yes – site and use check with the competent authority"}</td></tr>`;
     })
     .join("");
 
   const modelRows = Object.entries(pricing.models)
-    .map(([id, m]) => `<tr><td><strong>MC ${id.slice(2)}</strong></td><td>${m.lengths}</td><td>${de ? m.layout_de : m.layout_en}</td><td><span class="price-figure">${eur(m.base_eur)}</span></td></tr>`)
+    .map(([id, m]) => `<tr><td><strong>MC ${id.slice(2)}</strong></td><td>${m.lengths}</td><td>${de ? m.layout_de : m.layout_en}</td><td><span class="price-figure">${eur(m.base_eur, lang)}</span></td></tr>`)
     .join("");
 
   const faqs = de
@@ -378,7 +386,7 @@ function priceComparisonPage(pricing, lang) {
     }) +
     chrome(root, lang) +
     `<main id="main"><section class="page-hero"><div class="container"><div class="breadcrumbs">${de ? "MODUNERA · Budget" : "MODUNERA · Budget"}</div><div class="eyebrow">${de ? "Fünf Zielmärkte" : "Five target markets"}</div><h1>${de ? "Was ein Tiny House je Zielland kostet." : "What a tiny house costs by destination."}</h1><p>${de ? "Der Werkspreis ist überall gleich. Unterschiede entstehen bei Logistik, Abgaben und Vorbereitung am Grundstück. Diese Seite trennt die Posten, damit ein Budget belastbar wird." : "The ex-works price is identical everywhere. Differences come from logistics, duties and site preparation. This page separates those items so a budget holds up."}</p></div></section>` +
-    `<section class="section"><div class="container"><div class="kpi-row"><div class="kpi"><b>${eur(entry)}</b><span>${de ? "Einstieg ab Werk" : "Entry, ex works"}</span></div><div class="kpi"><b>${eur(top)}</b><span>${de ? "Größtes Basismodell" : "Largest base model"}</span></div><div class="kpi"><b>5</b><span>${de ? "Zielmärkte" : "Target markets"}</span></div><div class="kpi"><b>8</b><span>${de ? "Modelle" : "Models"}</span></div></div>` +
+    `<section class="section"><div class="container"><div class="kpi-row"><div class="kpi"><b>${eur(entry, lang)}</b><span>${de ? "Einstieg ab Werk" : "Entry, ex works"}</span></div><div class="kpi"><b>${eur(top, lang)}</b><span>${de ? "Größtes Basismodell" : "Largest base model"}</span></div><div class="kpi"><b>5</b><span>${de ? "Zielmärkte" : "Target markets"}</span></div><div class="kpi"><b>8</b><span>${de ? "Modelle" : "Models"}</span></div></div>` +
     `<h2>${de ? "Lieferung und Einstiegsbudget je Land" : "Delivery and entry budget by country"}</h2><div class="compare"><table><thead><tr><th>${de ? "Zielland" : "Destination"}</th><th>${de ? "Lieferindikation" : "Delivery indication"}</th><th>${de ? "Einstiegsbudget" : "Entry budget"}</th><th>${de ? "Genehmigungsprüfung nötig" : "Permit check required"}</th></tr></thead><tbody>${rows}</tbody></table></div>` +
     `<div class="answer-box"><strong>${de ? "Wie diese Zahlen entstehen" : "How these figures are produced"}</strong><p>${de ? "Die Lieferindikationen entsprechen exakt den Tarifen, die der MODUNERA Konfigurator rechnet. Für Luxemburg ist derzeit kein Tarif hinterlegt; die Route wird projektbezogen kalkuliert. Das Einstiegsbudget kombiniert das günstigste Basismodell mit der Lieferindikation und enthält keine Abgaben, kein Fundament und keine Anschlüsse." : "The delivery indications match the tariffs the MODUNERA configurator applies. No tariff is stored for Luxembourg at present; that route is calculated per project. The entry budget combines the most affordable base model with the delivery indication and excludes duties, foundation and connections."}</p></div>` +
     `<h2>${de ? "Modellpreise ab Werk" : "Model prices ex works"}</h2><div class="compare"><table><thead><tr><th>${de ? "Modell" : "Model"}</th><th>${de ? "Länge" : "Length"}</th><th>${de ? "Grundriss" : "Layout"}</th><th>${de ? "Basis ab Werk" : "Base, ex works"}</th></tr></thead><tbody>${modelRows}</tbody></table></div>` +
@@ -474,7 +482,7 @@ function advantagesPage(pricing, lang) {
     }) +
     chrome(root, lang) +
     `<main id="main"><section class="page-hero"><div class="container"><div class="breadcrumbs">${de ? "MODUNERA · Vorteile" : "MODUNERA · Advantages"}</div><div class="eyebrow">${de ? "Sachlich statt werblich" : "Factual, not promotional"}</div><h1>${de ? "Was ein Tiny House wirklich besser macht." : "What a tiny house genuinely does better."}</h1><p>${de ? "Acht Vorteile, die sich an Zahlen, Terminen und Dokumenten festmachen lassen – und danach fünf Punkte, die ein Tiny House nicht löst. Beides gehört in eine Kaufentscheidung." : "Eight advantages that can be tied to figures, schedules and documents – followed by five things a tiny house does not solve. A purchase decision needs both."}</p></div></section>` +
-    `<section class="section"><div class="container"><div class="kpi-row"><div class="kpi"><b>${eur(entry)}</b><span>${de ? "Einstieg ab Werk" : "Entry, ex works"}</span></div><div class="kpi"><b>8</b><span>${de ? "Modelle" : "Models"}</span></div><div class="kpi"><b>5</b><span>${de ? "Zielmärkte" : "Target markets"}</span></div><div class="kpi"><b>2,55 m</b><span>${de ? "Mobile Breite" : "Mobile width"}</span></div></div>` +
+    `<section class="section"><div class="container"><div class="kpi-row"><div class="kpi"><b>${eur(entry, lang)}</b><span>${de ? "Einstieg ab Werk" : "Entry, ex works"}</span></div><div class="kpi"><b>8</b><span>${de ? "Modelle" : "Models"}</span></div><div class="kpi"><b>5</b><span>${de ? "Zielmärkte" : "Target markets"}</span></div><div class="kpi"><b>2,55 m</b><span>${de ? "Mobile Breite" : "Mobile width"}</span></div></div>` +
     `<h2>${de ? "Acht Vorteile" : "Eight advantages"}</h2><div class="adv-grid">${ADVANTAGES[lang].map(([t, p], i) => `<div class="adv-card"><span class="num">${String(i + 1).padStart(2, "0")}</span><h3>${t}</h3><p>${p}</p></div>`).join("")}</div>` +
     `<h2 style="margin-top:34px">${de ? "Fünf Punkte, die ein Tiny House nicht löst" : "Five things a tiny house does not solve"}</h2><p class="muted">${de ? "Diese Liste kostet uns gelegentlich eine Anfrage. Sie erspart beiden Seiten ein Projekt, das am Standort scheitert." : "This list occasionally costs us an enquiry. It also saves both sides a project that fails on site."}</p><div class="adv-grid">${LIMITS[lang].map(([t, p]) => `<div class="adv-card"><span class="num">${de ? "Grenze" : "Limit"}</span><h3>${t}</h3><p>${p}</p></div>`).join("")}</div>` +
     `<div class="answer-box"><strong>${de ? "Nächster Schritt" : "Next step"}</strong><p>${de ? "Die schnellste Klärung ist der Standort: Adresse oder Flurstück, geplante Nutzung, Personenanzahl und Budget. Damit lässt sich in einem Durchgang sagen, ob ein Modell passt und welche Prüfungen anstehen." : "The fastest clarification is the site: address or parcel, intended use, number of people and budget. With that we can say in one pass whether a model fits and which checks are due."}</p></div>` +
