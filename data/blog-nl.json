@@ -1,0 +1,320 @@
+{
+  "_comment": "The Dutch blog. Nine subjects written for the Dutch market rather than translated from the German library: the Omgevingswet, the Omgevingsloket, the gemeente as the deciding authority and Dutch ground conditions are what a buyer here actually runs into. Each subject carries five sections of two paragraphs and three questions, and the five-market appendix is appended by extendArticles() on top.",
+  "path": "blog",
+  "hub": {
+    "eyebrow": "Blog",
+    "title": "Tiny house blog: vergunning, kosten, techniek en transport | MODUNERA",
+    "h1": "Alles waar een Nederlands tiny house-project werkelijk op vastloopt.",
+    "lead": "Negen onderwerpen, geschreven voor kopers in Nederland. Per onderwerp: wat u moet beslissen, wat het kost, en waar projecten in de praktijk stranden.",
+    "closing": "Vragen over uw eigen perceel? Stuur de bestemming, het beoogde gebruik en een foto van de oprit via WhatsApp — dan krijgt u een eerste inschatting terug."
+  },
+  "labels": {
+    "readMore": "Lees verder",
+    "allPosts": "Alle onderwerpen",
+    "faq": "Veelgestelde vragen",
+    "related": "Verder lezen",
+    "questions": "Vragen per land",
+    "models": "Bekijk MD 1 – MD 8",
+    "posts": "onderwerpen",
+    "hubLink": "Terug naar het blog"
+  },
+  "categories": [
+    {
+      "slug": "vergunning-en-recht",
+      "name": "Vergunning en recht",
+      "h1": "Vergunning voor een tiny house: waar het in Nederland op vastzit.",
+      "lead": "Niet het huis beslist of het mag staan, maar het perceel. Bestemming, gebruik en standduur wegen zwaarder dan de vraag of er wielen onder zitten.",
+      "sections": [
+        ["Het bestemmingsplan gaat vóór het model", [
+          "Sinds 1 januari 2024 bundelt de Omgevingswet de regels van gemeente, provincie, waterschap en Rijk in één omgevingsplan. Wat op uw perceel is toegestaan, staat daar — en dat is de eerste vraag, niet de laatste. Een tiny house op een agrarische bestemming is geen kwestie van onderhandelen over de afmeting; het is een kwestie van de functie die het perceel heeft gekregen.",
+          "Controleer via het Omgevingsloket wat er voor uw adres geldt voordat u een model kiest. Blijkt wonen niet toegestaan, dan is de vervolgvraag of de gemeente bereid is af te wijken — en dat is een traject van maanden, niet van weken. Wie deze volgorde omdraait, koopt een huis waarvoor nog geen plek bestaat."
+        ]],
+        ["Wielen leveren geen vrijstelling op", [
+          "Een chassis maakt van een gebouw geen voertuig. Zodra een tiny house op één plek staat en als woning wordt gebruikt, beoordeelt de gemeente het als bouwwerk. De vraag of het verplaatsbaar is speelt hooguit een rol bij tijdelijke plaatsing, en zelfs dan geldt een maximale termijn die het omgevingsplan bepaalt.",
+          "Voor transport over de weg gelden andere regels dan voor bewoning. Een breedte boven 2,55 meter maakt de rit exceptioneel vervoer met ontheffing en begeleiding. Daarom houdt MODUNERA alle acht modellen op precies die basisbreedte: het scheelt ontheffingen, kosten en wachttijd bij de levering."
+        ]],
+        ["Tijdelijk wonen is een eigen spoor", [
+          "Mantelzorgwoningen, tijdelijke huisvesting en pilotprojecten voor flexwonen hebben eigen routes. Sommige gemeenten hebben beleid voor tijdelijke bewoning met een termijn van vijf tot tien jaar; andere hebben dat niet en behandelen elk verzoek los. Vraag daar expliciet naar — het scheelt vaak het verschil tussen een afwijzing en een vergunning.",
+          "Leg de afspraak schriftelijk vast. Een mondelinge toezegging van een medewerker aan de balie is geen besluit en bindt de gemeente niet. Een schriftelijke bevestiging van wat is toegestaan, met vermelding van de termijn, is het document dat u nodig heeft als er over vijf jaar iemand anders op het dossier zit."
+        ]],
+        ["Aansluitingen bepalen de haalbaarheid mee", [
+          "Water, elektriciteit en afvalwater zijn geen afronding maar onderdeel van de toelaatbaarheid. Een perceel zonder aansluiting op de riolering vraagt om een IBA of een andere goedgekeurde oplossing, en het waterschap heeft daar een oordeel over. Die beoordeling loopt parallel aan de gemeentelijke procedure, niet erna.",
+          "De afstand tot het net is vaak de grootste onvoorziene kostenpost. Netbeheerders rekenen per meter en hanteren wachttijden die in drukke regio's oplopen tot een jaar. Vraag een offerte aan zodra het perceel bekend is, niet zodra het huis besteld is."
+        ]],
+        ["Verzekering en eigendom horen bij de voorbereiding", [
+          "Een tiny house op eigen grond verzekert u anders dan een unit op gehuurde grond of op een recreatiepark. Verzekeraars willen weten of het object als onroerend of roerend geldt, hoe het is verankerd en of het permanent bewoond wordt. Die vragen zijn eenvoudig te beantwoorden — maar niet achteraf.",
+          "Op gehuurde grond is de opstalsituatie het punt om vooraf te regelen. Wie eigenaar is van het huis maar niet van de grond, wil zwart op wit hebben wat er gebeurt bij opzegging van de huur. Een opstalrecht of een heldere beëindigingsclausule voorkomt dat een verplaatsbaar huis in de praktijk toch vastzit."
+        ]]
+      ],
+      "faq": [
+        ["Heb ik altijd een vergunning nodig voor een tiny house?", "In de regel wel, zodra het als woning wordt gebruikt. De gemeente toetst aan het omgevingsplan; de bouwvorm is daarbij ondergeschikt aan de functie van het perceel. Vraag schriftelijk om uitsluitsel voordat u bestelt."],
+        ["Maakt een chassis het project vergunningvrij?", "Nee. Wielen zijn relevant voor het transport, niet voor de beoordeling als bouwwerk. Bij permanente plaatsing en bewoning geldt het gewoon als gebouw."],
+        ["Hoe lang duurt een aanvraag?", "Een reguliere procedure kent een beslistermijn van acht weken, met verlengingsmogelijkheid. Wijkt uw plan af van het omgevingsplan, dan duurt het aanzienlijk langer. Reken op maanden en plan de levering daarna."]
+      ]
+    },
+    {
+      "slug": "kosten-en-financiering",
+      "name": "Kosten en financiering",
+      "h1": "Wat een tiny house kost als alles is meegerekend.",
+      "lead": "De prijs af fabriek is het getal dat mensen vergelijken. Het is ook het getal dat het minst verklaart.",
+      "sections": [
+        ["Vier blokken vormen het budget", [
+          "Eerst de unit af fabriek. Daarna het transport naar Nederland, dat afhangt van route, afmeting en losplaats. Vervolgens de locatie: fundering, aansluitingen, kraan en bestrating. Tot slot de papieren kant — leges, adviseur, eventuele wijziging van het omgevingsplan en verzekering.",
+          "Wie alleen het eerste blok vergelijkt, vergelijkt ongeveer de helft van het project. De drie andere blokken variëren sterker per perceel dan de unit varieert per model, en ze zijn ook eerder te ramen dan de meeste kopers denken."
+        ]],
+        ["De locatie bepaalt meer dan de uitvoering", [
+          "Een perceel met riolering aan de erfgrens en een verharde oprit kost een fractie van een perceel waar honderd meter leiding en een kraanopstelling nodig zijn. Datzelfde geldt voor de fundering: schroefpalen op zandgrond zijn een dag werk, dezelfde palen in slappe veengrond vragen om een berekening en soms om een alternatief.",
+          "Vraag daarom eerst een indicatie van grondwerk, aansluitingen en lossing op — dan pas de modelkeuze. Het verschil tussen MD 1 en MD 8 in prijs is kleiner dan het verschil tussen twee percelen op tien kilometer van elkaar."
+        ]],
+        ["Financiering vraagt om een ander gesprek", [
+          "Een hypotheek veronderstelt onroerend goed op eigen grond met een vergunning. Ontbreekt een van die drie, dan valt het project doorgaans in de categorie persoonlijke lening of groenfinanciering, met kortere looptijd en hogere rente. Dat is geen probleem, maar het verandert de maandlast.",
+          "Breng de bank of geldverstrekker vroeg in beeld. Een offerte met specificatie, een schriftelijke bevestiging van de gemeente en een tekening zijn precies de stukken die zij vragen — en die MODUNERA voor de opdracht al kan leveren."
+        ]],
+        ["Btw en levering vanuit Türkiye", [
+          "Levering vanuit Türkiye naar Nederland loopt via de douaneunie. Met een A.TR-certificaat is geen invoerrecht verschuldigd voor de betrokken goederencategorieën; invoer-btw is dat wel, en die wordt bij invoer afgedragen. Voor zakelijke kopers is die btw in beginsel verrekenbaar, voor particulieren niet.",
+          "Reken de btw dus mee in het totaalbudget en niet als sluitpost. Vraag vooraf welke documenten meekomen — factuur, paklijst, A.TR, vervoersdocument — zodat de aangifte niet op een ontbrekend papier blijft liggen."
+        ]],
+        ["Wat u opzij moet leggen na oplevering", [
+          "Een compact gebouw is niet onderhoudsarm omdat het klein is. Gevelbehandeling, filters van de ventilatie, controle van de kitnaden en de jaarlijkse doorloop van de installatie vormen samen een voorspelbaar bedrag. Reserveer dat vanaf jaar één in plaats van bij de eerste tegenvaller.",
+          "Wie verhuurt, telt daar schoonmaak, linnengoed, platformkosten en een vervangingsreserve voor inrichting bij op. Die posten bepalen het rendement sterker dan de bezettingsgraad die in de eerste berekening wordt aangenomen."
+        ]]
+      ],
+      "faq": [
+        ["Wat kost een tiny house in Nederland compleet?", "Reken naast de unit op transport, fundering, aansluitingen, lossing en leges. Op een goed ontsloten perceel blijven die posten beperkt; op een afgelegen perceel kunnen ze de unitprijs benaderen. Vraag een indicatie per adres."],
+        ["Kan ik een hypotheek krijgen?", "Alleen bij onroerend goed op eigen grond met vergunning. In andere gevallen is een persoonlijke lening of groenfinanciering gebruikelijker, met kortere looptijd."],
+        ["Betaal ik invoerrechten bij levering uit Türkiye?", "Met een geldig A.TR-certificaat is er voor de betrokken categorieën geen invoerrecht. Invoer-btw is wel verschuldigd bij invoer in Nederland."]
+      ]
+    },
+    {
+      "slug": "techniek-en-constructie",
+      "name": "Techniek en constructie",
+      "h1": "Hoe een tiny house is opgebouwd — en wat u later niet meer wijzigt.",
+      "lead": "Bijna alles binnen kan na oplevering veranderen. De constructie, de isolatieopbouw en de leidingtracés niet.",
+      "sections": [
+        ["Het stalen frame draagt en reist", [
+          "De draagconstructie moet twee dingen tegelijk kunnen: een gebouw dragen en een rit over de weg doorstaan. Dat zijn verschillende belastingen. Een frame dat alleen op statische belasting is berekend, krijgt tijdens transport torsie te verduren waar het niet op is ontworpen.",
+          "Daarom wordt het frame in de fabriek gelast, behandeld en gecontroleerd voordat er ook maar een plaat op gaat. Wat daarna wordt dichtgemaakt, is niet meer te inspecteren zonder demontage — reden om juist die fase te documenteren."
+        ]],
+        ["De isolatieopbouw is een keten", [
+          "Isolatiedikte alleen zegt weinig. Wat telt is de volgorde: dampremmende laag aan de warme zijde, isolatie zonder onderbrekingen, spouw waar die nodig is, en een gevel die kan drogen. Eén verkeerd geplaatste folie maakt een verder correcte opbouw vochtgevoelig.",
+          "Koudebruggen zitten waar constructie door de schil steekt: bij het chassis, bij de dorpels en rond de kozijnen. Die punten worden op tekening opgelost, niet op de bouwplaats. Vraag om die details voordat u tekent."
+        ]],
+        ["Ramen bepalen comfort in twee richtingen", [
+          "Groot glas geeft ruimte en licht en is precies de plek waar warmte in de zomer binnenkomt en in de winter weglekt. Triple beglazing, de oriëntatie van de gevel en buitenzonwering zijn samen de oplossing; een van de drie alleen is dat niet.",
+          "In Nederland speelt de westenwind mee. Een grote glaspartij op het westen vraagt om beluchting en om zonwering die wind aankan. Dat is een keuze op tekening, geen accessoire achteraf."
+        ]],
+        ["Ventilatie is geen optie", [
+          "Een goed geïsoleerd, luchtdicht gebouw met twee bewoners produceert dagelijks liters vocht. Zonder gebalanceerde ventilatie met warmteterugwinning slaat dat neer op de koudste plek in de schil. Dat is de meest voorkomende schadeoorzaak bij compacte woningen, en de best te voorkomen.",
+          "Plan de kanalen mee in de indeling. Een WTW-unit die achteraf wordt ingepast, kost bergruimte die u in een compact huis nergens anders vindt."
+        ]],
+        ["Leidingtracés liggen vast bij productie", [
+          "Water, afvoer, elektra en data lopen door vloer en wanden. Wat daar ligt, ligt er voorgoed. Een extra aansluiting in de keuken of een leiding naar een buitenkraan is vóór productie een tekeningwijziging en daarna een sloopklus.",
+          "Loop de plattegrond daarom één keer door alsof u er woont: waar staat de wasmachine, waar hangt de tv, waar komt de laadkabel binnen. Die tien minuten schelen later meer dan welke materiaalkeuze ook."
+        ]]
+      ],
+      "faq": [
+        ["Kan ik de indeling later nog wijzigen?", "Losse inrichting en afwerking wel. De draagconstructie, de isolatieopbouw en de leidingtracés praktisch niet — die worden vóór productie vastgelegd."],
+        ["Waarom 2,55 meter breed?", "Dat is de maximale breedte voor regulier wegtransport in Europa. Breder betekent ontheffing, begeleiding en wachttijd. Alle acht MODUNERA-modellen blijven op die basis."],
+        ["Is mechanische ventilatie echt nodig?", "Ja. In een luchtdicht, goed geïsoleerd volume is gebalanceerde ventilatie met warmteterugwinning de enige betrouwbare manier om vocht af te voeren zonder warmte weg te gooien."]
+      ]
+    },
+    {
+      "slug": "energie-en-autarkie",
+      "name": "Energie en autarkie",
+      "h1": "Off-grid wonen in Nederland: wat technisch kan en wat de gemeente accepteert.",
+      "lead": "Panelen en accu's zijn het makkelijke deel. Of een woning zonder aansluiting wordt goedgekeurd, is een juridische vraag.",
+      "sections": [
+        ["Reken eerst de winter door", [
+          "Een dak vol panelen levert in juni een overschot en in december een fractie daarvan. De maat van uw installatie wordt bepaald door de donkerste weken, niet door het jaargemiddelde. Wie op jaartotalen rekent, komt in januari zonder stroom te zitten.",
+          "Bepaal daarom eerst het winterverbruik per dag, inclusief verwarming en warm water, en dimensioneer accu en opwekking daarop. Dat leidt vrijwel altijd tot een grotere accu dan de eerste schatting en tot een bijstookvoorziening."
+        ]],
+        ["Verwarming bepaalt de hele opzet", [
+          "Een luchtwarmtepomp is efficiënt en vraagt om elektriciteit precies wanneer de zon het minst levert. Een houtkachel is onafhankelijk maar vraagt om een goedgekeurd rookkanaal, opslag en toevoerlucht. Infraroodpanelen zijn eenvoudig en verbruiken het meest.",
+          "De keuze staat niet los van de isolatie. Bij een goed geïsoleerde, luchtdichte schil kan een kleine warmtepomp volstaan; bij een lichtere opbouw niet. Beslis die twee dus samen, en vóór productie."
+        ]],
+        ["Water en afvalwater zijn de echte drempel", [
+          "Stroom kunt u zelf opwekken; afvalwater moet ergens heen. In Nederland betekent dat riolering of een goedgekeurde IBA, met het waterschap als beoordelaar. Een composttoilet lost het zwarte water op, maar niet het grijze water uit douche en keuken.",
+          "Regenwateropvang werkt voor spoeling en tuin. Voor drinkwater vraagt het om filtratie en desinfectie die aantoonbaar voldoet — en dat is een installatie met onderhoud, geen eenmalige aanschaf."
+        ]],
+        ["Hybride is meestal de verstandige uitkomst", [
+          "Volledig off-grid is technisch haalbaar en zelden de goedkoopste of eenvoudigste route. Een netaansluiting met zonnepanelen en een accu geeft dezelfde zelfvoorziening in de zomer, zonder het risico van een week zonder zon in februari.",
+          "Kijk daarom eerst wat een aansluiting kost. Ligt het net op vijftig meter, dan is de rekensom snel gemaakt. Ligt het op een kilometer, dan verandert het antwoord — en dan is off-grid geen ideologie maar de goedkoopste optie."
+        ]],
+        ["Documenteer wat u installeert", [
+          "Certificaten van de installatie, de aarding, het rookkanaal en de drinkwaterbehandeling zijn wat verzekeraar en gemeente later opvragen. Verzamel ze bij oplevering; achteraf is het reconstrueren.",
+          "Datzelfde geldt bij verkoop. Een gedocumenteerde installatie met keuringsrapporten is aantoonbaar in orde; een ongedocumenteerde is voor de koper een risico dat in de prijs terugkomt."
+        ]]
+      ],
+      "faq": [
+        ["Kan een tiny house volledig off-grid in Nederland?", "Technisch ja. Bestuurlijk hangt het op afvalwater: riolering of een door het waterschap goedgekeurde IBA. Stroom en water zijn eenvoudiger op te lossen dan afvoer."],
+        ["Hoeveel accucapaciteit heb ik nodig?", "Reken op het winterverbruik per dag maal het aantal dagen dat u wilt overbruggen. Dat komt vrijwel altijd hoger uit dan de eerste schatting op jaargemiddelden."],
+        ["Warmtepomp of houtkachel?", "Een warmtepomp bij een goed geïsoleerde schil en een netaansluiting; een houtkachel als bijstook of bij beperkte opwekking. Beslis samen met de isolatiekeuze, vóór productie."]
+      ]
+    },
+    {
+      "slug": "indeling-en-interieur",
+      "name": "Indeling en interieur",
+      "h1": "Van 28 vierkante meter een huis maken, geen compromis.",
+      "lead": "Kleine woningen mislukken om twee redenen: te weinig berging en nergens alleen kunnen zijn. Beide zijn plattegrondkwesties.",
+      "sections": [
+        ["Berging is een maat, geen gedachte", [
+          "Twee mensen die permanent wonen hebben ruwweg zes tot acht kubieke meter berging nodig: kleding per seizoen, gereedschap, schoonmaak, voorraad, sportspullen. Tel dat op voordat u de indeling vastlegt, want achteraf komt het er niet meer bij.",
+          "De bruikbaarste bergruimte zit onder het bed, in de traptreden en in de volle hoogte van een wandkast. Losse kasten kosten vloeroppervlak dat u in een compact huis niet heeft."
+        ]],
+        ["Twee mensen hebben twee plekken nodig", [
+          "Een enkele open ruimte werkt tot het moment dat de een belt en de ander leest. Een deur, een niveauverschil of een gesloten loft is het verschil tussen prettig wonen en voortdurend uitwijken. MD 3 lost dat op met een afsluitbare kamer op de begane grond.",
+          "Denk ook aan geluid. Een tussenwand die alleen visueel scheidt, scheidt niets. Een massa-veer-massa-opbouw of een gevulde wand kost enkele centimeters en levert de rust op waarvoor u de kamer heeft gemaakt."
+        ]],
+        ["Werken vanuit huis vraagt om een vaste plek", [
+          "Een laptop op de eettafel werkt een week. Daarna wilt u een blad dat blijft staan, een stoel die deugt, licht van opzij en een achtergrond die presentabel is in beeld. Dat is ongeveer 1,2 bij 0,6 meter — te plannen, niet te improviseren.",
+          "Leg de aansluitingen daar meteen goed: stopcontacten op bladhoogte, een netwerkaansluiting en verlichting die niet in het scherm reflecteert. Dat zijn tekeningpunten, geen inrichtingskeuzes."
+        ]],
+        ["Licht van twee kanten maakt de ruimte", [
+          "Een raam aan één zijde maakt een smalle ruimte langer en donkerder. Daglicht van twee kanten, liefst op verschillende hoogtes, maakt hem breder. Een dakraam boven de loft doet meer voor het ruimtegevoel dan een groter raam in dezelfde gevel.",
+          "Houd rekening met privacy. Grote glaspartijen op een klein perceel vragen om beplanting, een schutting of gerichte oriëntatie — anders hangt er binnen een halfjaar een gordijn dat het hele ontwerp ongedaan maakt."
+        ]],
+        ["De keuken is het scharnierpunt", [
+          "In een compact huis staat de keuken in de woonruimte. Werkblad, afzuiging en geluid van apparatuur bepalen daarom hoe het wonen voelt. Een stille afzuiging en een vaatwasser in de laagste geluidsklasse zijn geen luxe maar comfort.",
+          "Reken op minimaal 1,2 meter aaneengesloten werkblad naast de kookplaat. Minder betekent dat er permanent iets op tafel staat, en dat is precies waar het gevoel van krapte begint."
+        ]]
+      ],
+      "faq": [
+        ["Hoeveel berging heb ik nodig?", "Voor twee bewoners ruwweg zes tot acht kubieke meter. Reken het op voordat de plattegrond vastligt; achteraf toevoegen kost vloeroppervlak."],
+        ["Werkt een loft als slaapkamer het hele jaar?", "Ja, mits ventilatie en stahoogte kloppen. Warme lucht stijgt, dus vraag naar de luchtafvoer bij de nok en naar de vrije hoogte bij het bed."],
+        ["Welk model past bij thuiswerken?", "MD 3 biedt een afsluitbare kamer op de begane grond. Wie vooral licht en overzicht wil, kiest MD 1 met de panoramagevel."]
+      ]
+    },
+    {
+      "slug": "transport-en-import",
+      "name": "Transport en import",
+      "h1": "Van de fabriek naar uw perceel: route, douane en de laatste honderd meter.",
+      "lead": "De rit door Europa is het voorspelbare deel. Wat misgaat, gaat mis in de laatste bocht.",
+      "sections": [
+        ["De breedte bepaalt de rit", [
+          "Tot 2,55 meter is transport regulier. Daarboven wordt het exceptioneel vervoer: ontheffing per land, soms begeleiding, vaste routes en tijdvensters. Dat kost geld en vooral tijd, en het maakt de planning afhankelijk van afgifte door meerdere instanties.",
+          "Alle acht MODUNERA-modellen blijven daarom op 2,55 meter basisbreedte. Het verschil zit in lengte, indeling en afwerkingsniveau — niet in een maat die de levering compliceert."
+        ]],
+        ["Douanepapieren horen vóór vertrek compleet te zijn", [
+          "Bij levering vanuit Türkiye reist het A.TR-certificaat mee, samen met factuur, paklijst en vervoersdocument. Ontbreekt er één, dan staat de zending stil aan de grens en lopen de kosten door. Vraag daarom vóór vertrek om een kopie van de complete set.",
+          "Invoer-btw wordt bij invoer in Nederland afgedragen. Zakelijke kopers verrekenen die in de aangifte; particulieren niet. Neem dat bedrag op in het budget en niet als verrassing achteraf."
+        ]],
+        ["De losplaats is de kritieke plek", [
+          "Toegangsbreedte, draaicirkel, hoogte onder takken en kabels, en de draagkracht van de ondergrond bepalen of de kraan kan staan. In Nederland is die laatste vaker het probleem dan de eerste: op veen en klei zakt een kraan weg zonder rijplaten.",
+          "Stuur foto's en maten van de oprit, de laatste bocht en de plek waar het huis komt te staan voordat de order wordt bevestigd. Een krappe toegang is oplosbaar — maar alleen als hij op tijd bekend is."
+        ]],
+        ["Plan de dag van levering als een dag met marge", [
+          "Kraan, chauffeur, eventuele verkeersmaatregel en de mensen die het huis stellen moeten op hetzelfde moment beschikbaar zijn. Eén uitloop verschuift de hele dag, en een kraan die wacht is een kostenpost per uur.",
+          "Spreek een tijdvenster af in plaats van een tijdstip, en houd de dag erna vrij. Dat is goedkoper dan een tweede kraaninzet."
+        ]],
+        ["Controleer bij oplevering, niet erna", [
+          "Loop het huis na met de paklijst in de hand: afmetingen, uitvoering, installatie, meterstanden, sleutels en documentatie. Wat op de dag zelf wordt vastgelegd, is een punt; wat een week later opduikt, is een discussie.",
+          "Fotografeer de staat bij aankomst, inclusief de buitenzijde en de onderzijde van het chassis. Dat is het bewijs dat u nodig heeft als er transportschade blijkt te zijn."
+        ]]
+      ],
+      "faq": [
+        ["Hoe lang duurt transport naar Nederland?", "Reken vanaf gereedmelding op enkele weken, afhankelijk van route, douaneafhandeling en beschikbaarheid van transport. Uw leveringsvenster wordt bij orderbevestiging vastgelegd."],
+        ["Wie regelt de kraan?", "Dat wordt per project afgesproken. Bepalend zijn toegang, draagkracht van de ondergrond en de opstelplaats — stuur daarom vooraf foto's en maten."],
+        ["Zijn er invoerrechten?", "Met een geldig A.TR-certificaat niet voor de betrokken categorieën. Invoer-btw is wel verschuldigd bij invoer in Nederland."]
+      ]
+    },
+    {
+      "slug": "gebruik-en-verdienmodel",
+      "name": "Gebruik en verdienmodel",
+      "h1": "Verhuren, glamping of zelf wonen: wat de rekening werkelijk draagt.",
+      "lead": "Bezettingsgraad is de aanname waar de meeste businesscases op stranden. De vaste lasten zijn wat overblijft.",
+      "sections": [
+        ["Begin bij wat is toegestaan, niet bij wat het opbrengt", [
+          "Recreatieve verhuur, permanente bewoning en bedrijfsmatig gebruik zijn juridisch drie verschillende dingen. Wat op uw perceel mag, staat in het omgevingsplan; gemeenten handhaven daar actiever op dan tien jaar geleden.",
+          "Een vergunning voor recreatief gebruik dekt geen permanente bewoning, ook niet als het huis er het hele jaar staat. Wie dat omdraait, riskeert een handhavingstraject dat de businesscase in één brief beëindigt."
+        ]],
+        ["Reken met een realistische bezetting", [
+          "Kustlocaties en natuurgebieden halen in het seizoen hoge bezetting en daarbuiten weinig. Een jaargemiddelde van veertig tot vijfenvijftig procent is voor een goed gepositioneerde unit realistisch; hogere aannames komen vrijwel altijd uit een verkooppraatje.",
+          "Bereken daarom twee scenario's: één op de bezetting die u verwacht en één op tien punten lager. Draagt het lagere scenario de vaste lasten niet, dan is het project afhankelijk van een goed jaar."
+        ]],
+        ["De variabele kosten zijn hoger dan verwacht", [
+          "Schoonmaak per wissel, linnengoed, platformcommissie, energie, verzekering, onderhoud en vervanging van inrichting lopen samen snel op tot een derde van de omzet. Bij korte verblijven is dat aandeel hoger, omdat het aantal wissels stijgt.",
+          "Langere verblijven verlagen de kosten per nacht en verhogen de netto-opbrengst, ook bij een lagere nachtprijs. Dat is vaak de eenvoudigste knop om aan te draaien."
+        ]],
+        ["Kwaliteit bepaalt de prijs, niet de vierkante meters", [
+          "Een goed bed, warm water dat blijft komen, stille ventilatie, snel internet en buitenruimte met privacy leveren betere recensies op dan een extra vierkante meter. Recensies bepalen de prijs die u volgend seizoen kunt vragen.",
+          "Winterse verhuur vraagt om een winteruitvoering: isolatie, verwarming die snel opkomt en beveiliging tegen bevriezing. Zonder dat staat de unit vijf maanden per jaar leeg."
+        ]],
+        ["Meerdere units veranderen het model", [
+          "Vanaf twee of drie eenheden dalen de kosten per unit voor aansluitingen, schoonmaak en beheer, terwijl de vergunningvraag zwaarder wordt: een cluster wordt eerder als recreatiebedrijf beoordeeld dan als losse plaatsing.",
+          "Vraag dat vooraf uit. Een plan voor één unit dat later wordt uitgebreid, loopt vaker vast op de bestemming dan een plan dat vanaf het begin voor drie is ingediend."
+        ]]
+      ],
+      "faq": [
+        ["Mag ik mijn tiny house verhuren?", "Alleen als het omgevingsplan recreatief of bedrijfsmatig gebruik toestaat. Vraag de gemeente schriftelijk om bevestiging voordat u investeert."],
+        ["Welke bezetting is realistisch?", "Voor een goed gepositioneerde unit veertig tot vijfenvijftig procent op jaarbasis. Reken uw businesscase ook door op tien punten lager."],
+        ["Loont verhuur in de winter?", "Alleen met een winteruitvoering: isolatie, snelle verwarming en vorstbeveiliging. Zonder dat staat de unit een groot deel van het jaar leeg."]
+      ]
+    },
+    {
+      "slug": "onderhoud-en-beheer",
+      "name": "Onderhoud en beheer",
+      "h1": "Wat een tiny house jaarlijks vraagt — en wat u kunt overslaan.",
+      "lead": "Een compact gebouw vergeeft verwaarlozing minder makkelijk dan een groot. De lijst met echt noodzakelijke punten is kort.",
+      "sections": [
+        ["De gevel is het meeste werk", [
+          "Hout leeft. Thermisch gemodificeerd hout is stabieler en heeft minder vaak behandeling nodig, maar vergrijst zonder onderhoud. Dat is esthetiek, geen schade — zolang de detaillering het water afvoert en de onderzijde vrij blijft van de grond.",
+          "Loop de gevel jaarlijks na op kitnaden, aansluitingen rond kozijnen en de onderste plank. Daar begint vocht, en daar is het nog met een tube kit op te lossen."
+        ]],
+        ["Ventilatie vraagt om filters, niet om aandacht", [
+          "De WTW-unit heeft twee filters die twee keer per jaar vervanging vragen. Vervuilde filters halveren het debiet, waardoor vocht binnenblijft en de unit harder werkt. Het is de goedkoopste onderhoudspost met het grootste effect.",
+          "Reinig ook de roosters en controleer of de afvoer van condens vrij is. Een verstopte condensafvoer geeft binnen een week een waterschade die maanden nawerkt."
+        ]],
+        ["Water en vorst zijn het winterrisico", [
+          "Leidingen in onverwarmde ruimten, buitenkranen en de aanvoer bij het chassis zijn de plekken waar bevriezing begint. Een aftapmogelijkheid en tracing lossen dat op; laat bij langdurige leegstand het systeem aftappen.",
+          "Bij verhuur is dat een procedure, geen goed voornemen. Leg vast wie aftapt, wanneer, en wie controleert dat het is gebeurd."
+        ]],
+        ["De installatie hoort één keer per jaar nagelopen", [
+          "Aardlekschakelaar testen, aarding controleren, rookmelders vervangen of testen, en bij een houtkachel het rookkanaal laten vegen. Dat is een halve dag werk en het is precies wat een verzekeraar na schade opvraagt.",
+          "Houd een logboek bij met datum en uitvoerder. Bij verkoop of schade is dat het verschil tussen aantonen en beweren."
+        ]],
+        ["Wat u níet hoeft te doen", [
+          "Een goed uitgevoerde schil vraagt geen jaarlijkse behandeling van binnen, geen periodieke controle van de constructie en geen onderhoud aan het chassis zolang de coating intact is. Overmatig onderhoud kost geld zonder levensduur toe te voegen.",
+          "Concentreer het budget op gevel, ventilatie, water en installatie. Dat zijn de vier punten die de levensduur van een compact gebouw daadwerkelijk bepalen."
+        ]]
+      ],
+      "faq": [
+        ["Hoe vaak moet de gevel behandeld worden?", "Thermisch gemodificeerd hout vraagt geen jaarlijkse behandeling. Wie de oorspronkelijke kleur wil houden, behandelt om de twee tot drie jaar; wie vergrijzing accepteert, controleert alleen de detaillering."],
+        ["Wat kost het onderhoud per jaar?", "Filters, gevelcontrole en de jaarlijkse doorloop van de installatie vormen samen een beperkt en voorspelbaar bedrag. Reserveer dat vanaf jaar één."],
+        ["Wat doe ik bij langdurige leegstand in de winter?", "Systeem aftappen of verwarming op een lage basistemperatuur laten staan, ventilatie in bedrijf houden en de afvoer van condens controleren."]
+      ]
+    },
+    {
+      "slug": "vergelijking-en-alternatieven",
+      "name": "Vergelijking en alternatieven",
+      "h1": "Tiny house, chalet, stacaravan of modulaire woning: waarin ze echt verschillen.",
+      "lead": "Ze worden vergeleken alsof het varianten van hetzelfde zijn. Dat zijn ze niet — ze verschillen in classificatie, levensduur en wat u ermee mag.",
+      "sections": [
+        ["Classificatie bepaalt wat mag", [
+          "Een stacaravan is een kampeermiddel, een chalet een recreatieverblijf, een tiny house doorgaans een bouwwerk en een modulaire woning zonder meer. Die indeling bepaalt de vergunningroute, de verzekerbaarheid en of permanente bewoning in beeld komt.",
+          "Wie op prijs vergelijkt zonder classificatie te betrekken, vergelijkt producten met verschillende rechten. Het goedkoopste object is zelden het object waarmee u mag doen wat u wilt."
+        ]],
+        ["Levensduur en restwaarde lopen ver uiteen", [
+          "Een stalen frame met een goed uitgevoerde schil gaat decennia mee en behoudt waarde. Lichte recreatieverblijven zijn ontworpen voor seizoensgebruik en verliezen sneller. Dat verschil komt terug bij verkoop, bij financiering en bij verzekering.",
+          "Vraag daarom naar de opbouw, niet naar de looks. Twee objecten die er van buiten hetzelfde uitzien, kunnen twintig jaar in levensduur verschillen."
+        ]],
+        ["Zelfbouw is goedkoper op papier", [
+          "Een casco zelf afbouwen bespaart arbeidsloon en kost tijd, gereedschap en een leercurve op de punten die er het meest toe doen: dampremmende laag, luchtdichting en installatie. Fouten daar zijn duur en pas na jaren zichtbaar.",
+          "Bovendien vragen verzekeraar en financier om certificaten die bij zelfbouw vaak ontbreken. Reken dat mee voordat u het verschil in aanschafprijs als besparing boekt."
+        ]],
+        ["Nieuw of tweedehands", [
+          "Een gebruikt tiny house kan een goede koop zijn, mits u de schil kunt beoordelen. Vraag naar de opbouw, naar foto's van de bouwfase en naar de onderhoudshistorie. Vocht in een dichtgemaakte wand is van buiten niet te zien.",
+          "Neem een vochtmeting mee en controleer de onderzijde van het chassis op corrosie. Dat zijn de twee punten waar een gunstige prijs meestal vandaan komt."
+        ]],
+        ["Waar MODUNERA staat", [
+          "Acht modellen op één technische basis, 2,55 meter breed voor regulier transport, stalen draagconstructie, fabrieksmatige afbouw en documentatie die meegaat. Dat is een positie tussen recreatieverblijf en woningbouw, gericht op langdurig gebruik.",
+          "Het is geen antwoord op elke vraag. Wie alleen een seizoensverblijf zoekt op een park met vaste voorzieningen, is met een chalet vaak beter uit. Wie permanent wil wonen of jarenlang wil verhuren, niet."
+        ]]
+      ],
+      "faq": [
+        ["Wat is het verschil met een chalet?", "Classificatie en opbouw. Een chalet is een recreatieverblijf voor seizoensgebruik; een tiny house met stalen frame en volwaardige schil is op langdurig gebruik ontworpen."],
+        ["Is zelfbouw goedkoper?", "In aanschaf wel, in totaal vaak niet. Damprem, luchtdichting en installatie zijn de punten waar fouten duur zijn, en certificaten ontbreken vaker bij zelfbouw."],
+        ["Waar let ik op bij tweedehands?", "Op de schil: vraag naar foto's van de bouwfase, meet vocht en controleer het chassis op corrosie. Dat verklaart meestal het prijsverschil."]
+      ]
+    }
+  ]
+}

@@ -63,6 +63,12 @@ const jsonLd = (data) => `<script type="application/ld+json">${JSON.stringify(da
 /* --- language configuration ---------------------------------------------- */
 
 const LOCALES = JSON.parse(await readFile(join(ROOT, "data/locales.json"), "utf8")).locales;
+/* nl, da and fr each get their own blog rather than a translation of the German
+   library: the reader in Denmark needs kommunen and BR18, the reader in the
+   Netherlands the Omgevingswet, and the French pages serve Luxembourg and
+   Suisse romande, where the vocabulary is different again. */
+const LOCALE_BLOG = Object.fromEntries(await Promise.all(["nl", "da", "fr"].map(async (code) =>
+  [code, JSON.parse(await readFile(join(ROOT, `data/blog-${code}.json`), "utf8"))])));
 const PRICING = JSON.parse(await readFile(join(ROOT, "data/pricing.json"), "utf8"));
 
 /* Section paths per language. German and English are fixed by the existing tree;
@@ -1060,6 +1066,113 @@ function localeGuidesPage(lang) {
   }) + body + footer(lang, rel);
 }
 
+function localeBlogUrl(lang, slug) {
+  const base = `${lang}/${LOCALE_BLOG[lang].path}`;
+  return slug ? `${base}/${slug}/index.html` : `${base}/index.html`;
+}
+
+function localeBlogHubPage(lang) {
+  const rel = localeBlogUrl(lang, null);
+  const root = rootFor(rel);
+  const p = PATHS[lang];
+  const u = UI[lang];
+  const b = LOCALE_BLOG[lang];
+  const l = b.labels;
+
+  const cards = b.categories.map((c) => `<article class="blog-card"><a href="${root}${lang}/${b.path}/${c.slug}/"><div class="blog-card-body"><span class="blog-card-cat">${esc(c.name)}</span><h3>${esc(c.h1)}</h3><p>${esc(c.lead)}</p><span class="blog-card-more">${esc(l.readMore)} →</span></div></a></article>`).join("");
+
+  const countryRows = COUNTRY_ORDER.map((c) => {
+    const name = COUNTRY_NAMES[lang][c].replace(/^the /, "");
+    return `<a class="post-row" href="${root}${p.questions}/${COUNTRY_SLUGS[lang][c]}/"><span>${esc(name)}</span><small>20 ${esc(QA.labels[lang].questions.toLowerCase())} →</small></a>`;
+  }).join("");
+
+  const body = `<main id="main"><header class="page-hero"><div class="container"><div class="breadcrumbs"><a href="${root}${p.home}">${esc(u.breadHome)}</a> · ${esc(b.hub.eyebrow)}</div><div class="eyebrow">${esc(b.hub.eyebrow)}</div><h1>${esc(b.hub.h1)}</h1><p>${esc(b.hub.lead)}</p><div class="hero-actions"><a class="btn btn-primary" href="${root}${p.models}/">${esc(l.models)}</a><a class="btn btn-outline" href="${root}${p.guides}/">${esc(LOCALES[lang].labels.guides)}</a></div></div></header>
+
+<section class="section"><div class="container"><div class="blog-grid">${cards}</div></div></section>
+
+<section class="section section-soft"><div class="container">${sectionHeader(QA.labels[lang].hub, QA.labels[lang].hubH1, esc(QA.labels[lang].hubLead))}<div class="post-list">${countryRows}</div><div style="margin-top:24px"><a class="btn btn-dark" href="${root}${p.questions}/">${esc(l.questions)} →</a></div></div></section>
+
+<section class="section"><div class="container"><div class="answer-box"><strong>MODUNERA</strong><p>${esc(b.hub.closing)}</p></div>${disclaimer(lang)}</div></section></main>`;
+
+  return head({
+    lang,
+    rel,
+    title: b.hub.title,
+    description: snippet(b.hub.h1, b.hub.lead),
+    alternates: { nl: localeBlogUrl("nl", null), da: localeBlogUrl("da", null), fr: localeBlogUrl("fr", null), de: "ratgeber/index.html", en: "en/blog/index.html" },
+    extraLd: [
+      breadcrumbLd([[u.breadHome, p.home], [b.hub.eyebrow, `${lang}/${b.path}/`]]),
+      {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        name: b.hub.h1,
+        description: b.hub.lead,
+        inLanguage: HTML_LANG[lang],
+        url: BASE + `${lang}/${b.path}/`,
+        blogPost: b.categories.map((c) => ({ "@type": "BlogPosting", headline: c.h1, url: BASE + `${lang}/${b.path}/${c.slug}/` })),
+      },
+    ],
+  }) + body + footer(lang, rel);
+}
+
+function localeBlogCategoryPage(lang, cat) {
+  const rel = localeBlogUrl(lang, cat.slug);
+  const root = rootFor(rel);
+  const p = PATHS[lang];
+  const u = UI[lang];
+  const b = LOCALE_BLOG[lang];
+  const l = b.labels;
+  const index = b.categories.findIndex((c) => c.slug === cat.slug);
+
+  const siblings = b.categories
+    .filter((c) => c.slug !== cat.slug)
+    .map((c) => `<a class="cat-chip" href="${root}${lang}/${b.path}/${c.slug}/">${esc(c.name)}</a>`)
+    .join("");
+
+  const toc = cat.sections
+    .map(([h2], i) => `<a href="#section-${i + 1}">${esc(h2)}</a>`)
+    .join("");
+
+  const article = cat.sections
+    .map(([h2, paras], i) => `<section id="section-${i + 1}"><h2>${esc(h2)}</h2>${paras.map((t) => `<p>${esc(t)}</p>`).join("")}</section>`)
+    .join("");
+
+  // the same subject in the other two locales, so the switch lands on the topic
+  const alternates = { de: "ratgeber/index.html", en: "en/blog/index.html" };
+  for (const code of ["nl", "da", "fr"]) alternates[code] = localeBlogUrl(code, LOCALE_BLOG[code].categories[index].slug);
+
+  const body = `<main id="main"><header class="page-hero"><div class="container"><div class="breadcrumbs"><a href="${root}${p.home}">${esc(u.breadHome)}</a> · <a href="${root}${lang}/${b.path}/">${esc(b.hub.eyebrow)}</a> · ${esc(cat.name)}</div><div class="eyebrow">${esc(cat.name)}</div><h1>${esc(cat.h1)}</h1><p>${esc(cat.lead)}</p></div></header>
+
+<section class="section"><div class="container article-shell"><article class="article"><div class="answer-box"><strong>${esc(cat.name)}</strong><p>${esc(cat.lead)}</p></div>${article}</article><aside class="article-aside"><div class="toc"><strong>${esc(l.allPosts)}</strong>${toc}</div></aside></div></section>
+
+<section class="section section-soft"><div class="container">${sectionHeader(l.faq, cat.name, esc(cat.lead))}<div class="faq-layout"><div>${faqMarkup(cat.faq)}</div></div>${disclaimer(lang)}</div></section>
+
+<section class="section"><div class="container">${sectionHeader(b.hub.eyebrow, l.related)}<div class="cat-rail">${siblings}</div><div style="margin-top:24px"><a class="btn btn-dark" href="${root}${lang}/${b.path}/">${esc(l.hubLink)} →</a></div></div></section></main>`;
+
+  return head({
+    lang,
+    rel,
+    title: `${cat.name}: ${TERM} | MODUNERA`,
+    description: snippet(cat.h1, cat.lead),
+    alternates,
+    extraLd: [
+      breadcrumbLd([[u.breadHome, p.home], [b.hub.eyebrow, `${lang}/${b.path}/`], [cat.name, `${lang}/${b.path}/${cat.slug}/`]]),
+      faqLd(cat.faq),
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: cat.h1,
+        description: cat.lead,
+        inLanguage: HTML_LANG[lang],
+        dateModified: UPDATED,
+        author: { "@type": "Organization", name: "MODUNERA" },
+        publisher: { "@type": "Organization", name: "MODUNERA", logo: { "@type": "ImageObject", url: BASE + "assets/brand/modunera-master-logo-mountain-v1-600.png" } },
+        mainEntityOfPage: BASE + `${lang}/${b.path}/${cat.slug}/`,
+      },
+    ],
+  }) + body + footer(lang, rel);
+}
+
 async function buildKnowledgePages() {
   let count = 0;
   await put(enBlogUrl(null), enBlogHubPage());
@@ -1071,6 +1184,12 @@ async function buildKnowledgePages() {
   for (const lang of ["nl", "da", "fr"]) {
     await put(`${PATHS[lang].guides}/index.html`, localeGuidesPage(lang));
     count += 1;
+    await put(localeBlogUrl(lang, null), localeBlogHubPage(lang));
+    count += 1;
+    for (const cat of LOCALE_BLOG[lang].categories) {
+      await put(localeBlogUrl(lang, cat.slug), localeBlogCategoryPage(lang, cat));
+      count += 1;
+    }
   }
   return count;
 }

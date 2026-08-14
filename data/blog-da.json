@@ -1,0 +1,320 @@
+{
+  "_comment": "The Danish blog. Nine subjects written for the Danish market rather than translated: kommunen decides, byggetilladelse and BR18 set the frame, and the coastal climate with salt-laden air and long heating seasons drives the construction advice. Five sections of two paragraphs and three questions per subject; extendArticles() appends the five-market appendix on top.",
+  "path": "blog",
+  "hub": {
+    "eyebrow": "Blog",
+    "title": "Tiny house blog: tilladelse, økonomi, teknik og transport | MODUNERA",
+    "h1": "Alt det, et dansk tiny house-projekt i praksis afhænger af.",
+    "lead": "Ni emner skrevet til købere i Danmark. Hvert emne dækker, hvad der skal besluttes, hvad det koster, og hvor projekter reelt går i stå.",
+    "closing": "Spørgsmål til din egen grund? Send anvendelse, planforhold og et foto af indkørslen på WhatsApp — så får du en første vurdering retur."
+  },
+  "labels": {
+    "readMore": "Læs videre",
+    "allPosts": "Alle emner",
+    "faq": "Ofte stillede spørgsmål",
+    "related": "Læs også",
+    "questions": "Spørgsmål per land",
+    "models": "Se MD 1 – MD 8",
+    "posts": "emner",
+    "hubLink": "Tilbage til bloggen"
+  },
+  "categories": [
+    {
+      "slug": "tilladelse-og-lovgivning",
+      "name": "Tilladelse og lovgivning",
+      "h1": "Byggetilladelse til tiny house: hvad kommunen faktisk vurderer.",
+      "lead": "Det er ikke huset, der afgør sagen, men grunden. Lokalplanen, den planlagte anvendelse og opstillingens varighed vejer tungere end hjulene under.",
+      "sections": [
+        ["Lokalplanen kommer før modelvalget", [
+          "Nybyggeri, tilbygning og ændret anvendelse kræver som udgangspunkt tilladelse. Kommunen behandler ansøgningen og vurderer den mod lokalplanen og kommuneplanen. Hvad der er tilladt på din grund, står der — og det er det første spørgsmål, ikke det sidste.",
+          "Er grunden udlagt til sommerhusområde, landzone eller byzone, ændrer det hele forløbet. En landzonetilladelse er en selvstændig sag med egen sagsbehandlingstid. Bestil ikke huset, før den vej er afklaret skriftligt."
+        ]],
+        ["Hjul giver ingen fritagelse", [
+          "Et chassis gør ikke en bygning til et køretøj. Så snart huset står permanent og bruges til beboelse, vurderes det som bebyggelse efter byggeloven. Flytbarheden har betydning for transporten, ikke for byggesagen.",
+          "For kørsel på vej gælder andre regler. Over 2,55 meter i bredden bliver turen særtransport med dispensation og eventuelt følgebil. Derfor holder alle otte MODUNERA-modeller sig på netop den grundbredde — det sparer dispensationer, omkostninger og ventetid."
+        ]],
+        ["Sommerhusområder har egne begrænsninger", [
+          "I sommerhusområder er helårsbeboelse som udgangspunkt ikke tilladt, med undtagelser for pensionister efter en årrækkes ejerskab. Reglerne håndhæves, og en tilladelse til fritidsformål dækker ikke helårsbrug.",
+          "Spørg kommunen direkte til den anvendelse, du reelt planlægger. Et ja til fritidsbrug er ikke et ja til at bo der, og forskellen opdages sjældent, før nogen anmelder det."
+        ]],
+        ["Tilslutninger indgår i vurderingen", [
+          "Vand, el og spildevand er ikke en afslutning, men en del af, om projektet kan lade sig gøre. Uden kloakering kræver spildevandet en godkendt løsning, og kommunens miljøafdeling vurderer den parallelt med byggesagen, ikke bagefter.",
+          "Afstanden til forsyningsnettet er ofte den største uforudsete post. Netselskaberne regner per meter og har ventetider, der i pressede områder løber op. Bed om et tilbud, så snart grunden er kendt."
+        ]],
+        ["Forsikring og ejerforhold hører til forberedelsen", [
+          "Et tiny house på egen grund forsikres anderledes end en enhed på lejet grund eller på en campingplads. Selskabet vil vide, om objektet regnes som fast ejendom, hvordan det er forankret, og om det bebos hele året.",
+          "På lejet grund er det aftalen om bygning på fremmed grund, der skal på plads først. Hvem ejer huset, hvad sker der ved opsigelse, og hvem betaler flytningen. Skriv det ned, mens alle er enige."
+        ]]
+      ],
+      "faq": [
+        ["Skal jeg altid have byggetilladelse?", "Som hovedregel ja, når huset bruges til beboelse. Kommunen vurderer mod lokalplan og kommuneplan; byggeformen betyder mindre end grundens anvendelse."],
+        ["Gør et chassis projektet tilladelsesfrit?", "Nej. Hjul har betydning for transporten, ikke for byggesagen. Ved permanent opstilling og beboelse vurderes huset som bebyggelse."],
+        ["Hvor lang tid tager sagsbehandlingen?", "Det varierer mellem kommuner og med sagens karakter. Kræver projektet landzonetilladelse eller dispensation, skal der regnes i måneder. Planlæg leveringen derefter."]
+      ]
+    },
+    {
+      "slug": "oekonomi-og-finansiering",
+      "name": "Økonomi og finansiering",
+      "h1": "Hvad et tiny house koster, når alt er talt med.",
+      "lead": "Prisen ab fabrik er det tal, folk sammenligner. Det er også det tal, der forklarer mindst.",
+      "sections": [
+        ["Fire blokke udgør budgettet", [
+          "Først enheden ab fabrik. Derefter transporten til Danmark, som afhænger af rute, mål og aflæsningsforhold. Så grunden: fundament, tilslutninger, kran og adgangsvej. Til sidst papirsiden — gebyrer, rådgiver, eventuel dispensation og forsikring.",
+          "Den, der kun sammenligner første blok, sammenligner cirka halvdelen af projektet. De tre andre varierer mere fra grund til grund, end enheden varierer fra model til model."
+        ]],
+        ["Grunden betyder mere end udstyrsniveauet", [
+          "En grund med kloak i skel og fast indkørsel koster en brøkdel af en grund, hvor der skal graves hundrede meter og lægges køreplader. Det samme gælder fundamentet: skruefundamenter i sandjord er en dags arbejde, i blød bund kræver de beregning og somme tider en anden løsning.",
+          "Bed derfor om et overslag på jordarbejde, tilslutninger og aflæsning, før du vælger model. Prisforskellen mellem MD 1 og MD 8 er mindre end forskellen mellem to grunde ti kilometer fra hinanden."
+        ]],
+        ["Finansiering er en anden samtale", [
+          "Realkredit forudsætter fast ejendom på egen grund med tilladelse. Mangler ét af de tre, ender projektet typisk i banklån eller grøn finansiering med kortere løbetid og højere rente. Det er ikke et problem, men det ændrer ydelsen.",
+          "Tag banken med tidligt. Et specificeret tilbud, en skriftlig bekræftelse fra kommunen og en tegning er præcis de bilag, de beder om — og dem kan MODUNERA levere før ordren."
+        ]],
+        ["Moms og levering fra Türkiye", [
+          "Levering fra Türkiye til Danmark sker gennem toldunionen. Med et A.TR-certifikat er der ikke told på de omfattede varekategorier; importmoms skal derimod betales ved indførsel. Erhvervskøbere kan som udgangspunkt afløfte den, private kan ikke.",
+          "Regn derfor momsen med i totalbudgettet fra begyndelsen. Bed om at få dokumentsættet på forhånd — faktura, pakkeliste, A.TR og transportdokument — så angivelsen ikke strander på et manglende papir."
+        ]],
+        ["Hvad du skal hensætte efter aflevering", [
+          "En kompakt bygning er ikke vedligeholdelsesfri, fordi den er lille. Facadebehandling, filtre til ventilationen, kontrol af fuger og det årlige eftersyn af installationen udgør tilsammen et forudsigeligt beløb. Sæt det til side fra år ét.",
+          "Udlejer man, kommer rengøring, linned, platformgebyr og en pulje til udskiftning af inventar oveni. De poster afgør afkastet mere end den belægning, den første beregning antager."
+        ]]
+      ],
+      "faq": [
+        ["Hvad koster et tiny house i Danmark samlet?", "Ud over enheden skal der regnes med transport, fundament, tilslutninger, aflæsning og gebyrer. På en godt tilgængelig grund er posterne begrænsede; på en afsides grund kan de nærme sig enhedens pris."],
+        ["Kan jeg få realkredit?", "Kun ved fast ejendom på egen grund med tilladelse. Ellers er banklån eller grøn finansiering det sædvanlige, med kortere løbetid."],
+        ["Er der told ved levering fra Türkiye?", "Med gyldigt A.TR-certifikat er der ikke told på de omfattede kategorier. Importmoms betales derimod ved indførsel i Danmark."]
+      ]
+    },
+    {
+      "slug": "teknik-og-konstruktion",
+      "name": "Teknik og konstruktion",
+      "h1": "Sådan er et tiny house bygget op — og hvad du ikke laver om bagefter.",
+      "lead": "Næsten alt indvendigt kan ændres efter aflevering. Konstruktionen, isoleringsopbygningen og rørføringen kan ikke.",
+      "sections": [
+        ["Stålrammen skal både bære og køre", [
+          "Den bærende konstruktion har to opgaver på én gang: at bære en bygning og at holde til en tur på vej. Det er forskellige belastninger. En ramme, der kun er dimensioneret statisk, får under transport en vridning, den ikke er tegnet til.",
+          "Derfor svejses, behandles og kontrolleres rammen på fabrikken, før der lægges plader på. Det, der lukkes inde bagefter, kan ikke inspiceres uden demontering — netop derfor dokumenteres den fase."
+        ]],
+        ["Isoleringsopbygningen er en kæde", [
+          "Isoleringstykkelse alene siger lidt. Rækkefølgen afgør: dampspærre på den varme side, isolering uden brud, ventileret hulrum hvor det hører hjemme, og en facade, der kan tørre ud. En forkert placeret folie gør en ellers korrekt opbygning fugtfølsom.",
+          "Kuldebroer opstår, hvor konstruktion går gennem klimaskærmen: ved chassis, ved bundremme og omkring vinduer. De punkter løses på tegning, ikke på pladsen. Bed om detaljerne, før du skriver under."
+        ]],
+        ["Vinduer afgør komforten begge veje", [
+          "Store glaspartier giver lys og rum og er samtidig der, hvor varmen kommer ind om sommeren og forsvinder om vinteren. Trelagsruder, facadens orientering og udvendig solafskærmning er løsningen tilsammen; ét af de tre alene er det ikke.",
+          "Ved kysten kommer saltholdig luft og vind til. Beslag, tætningslister og overfladebehandling skal vælges til det miljø, ellers er det vedligeholdet, der stiger, ikke energiforbruget."
+        ]],
+        ["Ventilation er ikke tilvalg", [
+          "En tæt, velisoleret bygning med to beboere producerer liter af fugt hver dag. Uden balanceret ventilation med varmegenvinding sætter den sig på det koldeste sted i klimaskærmen. Det er den hyppigste skadesårsag i kompakte boliger og den, der lettest undgås.",
+          "Planlæg kanalerne ind i planløsningen. En genvindingsenhed, der tilpasses bagefter, koster opbevaringsplads, du ikke har andre steder i et lille hus."
+        ]],
+        ["Rørføringen låses ved produktion", [
+          "Vand, afløb, el og data løber gennem gulv og vægge. Det, der ligger der, bliver liggende. Et ekstra udtag i køkkenet eller en føring til en udvendig hane er en tegningsændring før produktion og et nedrivningsarbejde bagefter.",
+          "Gå derfor planen igennem én gang, som om du bor der: hvor står vaskemaskinen, hvor hænger fjernsynet, hvor kommer ladekablet ind. De ti minutter betaler sig bedre end noget materialevalg."
+        ]]
+      ],
+      "faq": [
+        ["Kan planløsningen ændres senere?", "Løst inventar og overflader ja. Bærende konstruktion, isoleringsopbygning og rørføring praktisk talt ikke — de fastlægges før produktion."],
+        ["Hvorfor 2,55 meter bred?", "Det er den maksimale bredde for almindelig vejtransport i Europa. Bredere betyder dispensation, følgebil og ventetid. Alle otte modeller holder sig på det mål."],
+        ["Er mekanisk ventilation nødvendig?", "Ja. I et tæt, velisoleret volumen er balanceret ventilation med varmegenvinding den eneste pålidelige måde at fjerne fugt uden at smide varmen ud."]
+      ]
+    },
+    {
+      "slug": "energi-og-selvforsyning",
+      "name": "Energi og selvforsyning",
+      "h1": "Off-grid i Danmark: hvad der teknisk kan lade sig gøre, og hvad kommunen godkender.",
+      "lead": "Paneler og batteri er den lette del. Om en bolig uden tilslutning godkendes, er et myndighedsspørgsmål.",
+      "sections": [
+        ["Regn vinteren igennem først", [
+          "Et tag fuldt af paneler giver overskud i juni og en brøkdel af det i december. Anlæggets størrelse afgøres af de mørkeste uger, ikke af årsgennemsnittet. Den, der regner på årstal, står uden strøm i januar.",
+          "Fastlæg derfor vinterforbruget per døgn inklusive varme og varmt vand, og dimensionér batteri og produktion efter det. Det fører næsten altid til et større batteri end første skøn — og til en supplerende varmekilde."
+        ]],
+        ["Varmen bestemmer hele opsætningen", [
+          "En luft-til-vand-varmepumpe er effektiv og bruger el præcis når solen giver mindst. En brændeovn er uafhængig, men kræver godkendt skorsten, opbevaring og friskluftstilførsel. Elpaneler er enkle og bruger mest.",
+          "Valget hænger sammen med isoleringen. Ved en tæt, velisoleret skærm rækker en lille varmepumpe; ved en lettere opbygning gør den ikke. Beslut de to ting samtidig, og før produktion."
+        ]],
+        ["Vand og spildevand er den egentlige tærskel", [
+          "Strøm kan du producere selv; spildevand skal et sted hen. I Danmark betyder det kloak eller et godkendt nedsivningsanlæg, og kommunens miljøafdeling vurderer det. Et komposttoilet løser det sorte spildevand, men ikke gråvandet fra bad og køkken.",
+          "Regnvandsopsamling fungerer til toiletskyl og have. Til drikkevand kræver det filtrering og desinfektion, der kan dokumenteres — altså et anlæg med vedligehold, ikke en engangsanskaffelse."
+        ]],
+        ["Hybrid er som regel den fornuftige udgang", [
+          "Fuld selvforsyning er teknisk mulig og sjældent den billigste eller enkleste vej. En nettilslutning med solceller og batteri giver samme uafhængighed om sommeren uden risikoen for en uge uden sol i februar.",
+          "Se derfor først, hvad en tilslutning koster. Ligger nettet halvtreds meter væk, er regnestykket hurtigt lavet. Ligger det en kilometer væk, ændrer svaret sig — og så er off-grid ikke en holdning, men den billigste løsning."
+        ]],
+        ["Dokumentér det, du installerer", [
+          "Attester på installationen, jordingen, skorstenen og drikkevandsbehandlingen er det, forsikring og myndighed senere beder om. Saml dem ved aflevering; bagefter er det rekonstruktion.",
+          "Det samme gælder ved salg. Et dokumenteret anlæg med kontrolrapporter er påviseligt i orden; et udokumenteret er en risiko, køberen trækker fra prisen."
+        ]]
+      ],
+      "faq": [
+        ["Kan et tiny house være helt off-grid i Danmark?", "Teknisk ja. Myndighedsmæssigt hænger det på spildevandet: kloak eller et godkendt nedsivningsanlæg. Strøm og vand er lettere at løse end afløb."],
+        ["Hvor stort batteri skal jeg have?", "Regn vinterforbruget per døgn gange det antal døgn, du vil kunne klare. Det bliver næsten altid større end første skøn baseret på årsgennemsnit."],
+        ["Varmepumpe eller brændeovn?", "Varmepumpe ved velisoleret skærm og nettilslutning; brændeovn som supplement eller ved begrænset produktion. Beslut det sammen med isoleringen, før produktion."]
+      ]
+    },
+    {
+      "slug": "indretning-og-interioer",
+      "name": "Indretning og interiør",
+      "h1": "At gøre 28 kvadratmeter til et hjem frem for et kompromis.",
+      "lead": "Små boliger fejler af to grunde: for lidt opbevaring og ingen steder at være alene. Begge dele afgøres på planen.",
+      "sections": [
+        ["Opbevaring er et mål, ikke en tanke", [
+          "To personer i helårsbrug har groft regnet brug for seks til otte kubikmeter opbevaring: tøj per sæson, værktøj, rengøring, forråd, sportsudstyr. Læg det sammen, før planen låses, for bagefter kommer det ikke til.",
+          "Den mest brugbare opbevaring sidder under sengen, i trappetrinene og i et skab i fuld højde. Løse møbler koster gulvareal, du ikke har i et kompakt hus."
+        ]],
+        ["To mennesker har brug for to steder", [
+          "Ét åbent rum fungerer, indtil den ene taler i telefon og den anden læser. En dør, et niveauspring eller en lukket hems er forskellen på at bo godt og hele tiden at vige for hinanden. MD 3 løser det med et aflukkeligt rum i stueplan.",
+          "Tænk også på lyden. En skillevæg, der kun deler visuelt, deler ingenting. En opbygning med masse og isolering koster få centimeter og giver den ro, rummet var tænkt til."
+        ]],
+        ["Hjemmearbejde kræver en fast plads", [
+          "En bærbar på spisebordet holder en uge. Derefter vil man have en plade, der bliver stående, en ordentlig stol, sidelys og en baggrund, der kan ses på skærm. Det er cirka 1,2 gange 0,6 meter — noget man planlægger, ikke improviserer.",
+          "Læg udtagene rigtigt med det samme: stikkontakter i bordhøjde, netværksudtag og belysning, der ikke spejler i skærmen. Det er punkter på tegningen, ikke indretningsvalg."
+        ]],
+        ["Lys fra to sider skaber rummet", [
+          "Vindue i én side gør et smalt rum længere og mørkere. Dagslys fra to sider, gerne i forskellige højder, gør det bredere. Et ovenlys over hemsen gør mere for rumfornemmelsen end et større vindue i samme facade.",
+          "Husk indblik. Store glaspartier på en lille grund kræver beplantning, et hegn eller en bevidst orientering — ellers hænger der et gardin efter et halvt år, og så er hele idéen væk."
+        ]],
+        ["Køkkenet er omdrejningspunktet", [
+          "I et kompakt hus står køkkenet i opholdsrummet. Bordplade, emhætte og støj fra hvidevarer afgør derfor, hvordan det føles at bo der. En stille emhætte og en opvaskemaskine i laveste støjklasse er komfort, ikke luksus.",
+          "Regn med mindst 1,2 meter sammenhængende bordplade ved siden af kogepladen. Mindre betyder, at der permanent står noget fremme — og det er præcis der, følelsen af trange forhold begynder."
+        ]]
+      ],
+      "faq": [
+        ["Hvor meget opbevaring skal der til?", "For to beboere groft regnet seks til otte kubikmeter. Læg det sammen, før planløsningen låses; senere koster det gulvareal."],
+        ["Fungerer en hems som soveplads året rundt?", "Ja, hvis ventilation og frihøjde er i orden. Varm luft stiger, så spørg til luftafgangen ved kip og til den frie højde ved sengen."],
+        ["Hvilken model passer til hjemmearbejde?", "MD 3 har et aflukkeligt rum i stueplan. Vil man først og fremmest have lys og udsyn, er MD 1 med panoramafacaden valget."]
+      ]
+    },
+    {
+      "slug": "transport-og-import",
+      "name": "Transport og import",
+      "h1": "Fra fabrik til grund: rute, told og de sidste hundrede meter.",
+      "lead": "Turen gennem Europa er den forudsigelige del. Det, der går galt, går galt i det sidste sving.",
+      "sections": [
+        ["Bredden afgør turen", [
+          "Op til 2,55 meter er transporten almindelig. Derover bliver den særtransport: dispensation per land, undertiden følgebil, faste ruter og tidsvinduer. Det koster penge og især tid, og planlægningen bliver afhængig af flere myndigheders godkendelse.",
+          "Derfor holder alle otte MODUNERA-modeller sig på 2,55 meters grundbredde. Forskellen ligger i længde, disponering og udstyrsdybde — ikke i et mål, der komplicerer leveringen."
+        ]],
+        ["Tolddokumenterne skal være komplette før afgang", [
+          "Ved levering fra Türkiye følger A.TR-certifikatet med sammen med faktura, pakkeliste og transportdokument. Mangler ét, holder forsendelsen stille ved grænsen, og omkostningerne løber. Bed om en kopi af hele sættet før afgang.",
+          "Importmomsen betales ved indførsel i Danmark. Erhvervskøbere afløfter den i angivelsen, private gør ikke. Tag beløbet med i budgettet frem for som en overraskelse bagefter."
+        ]],
+        ["Aflæsningsstedet er det kritiske punkt", [
+          "Adgangsbredde, vendediameter, frihøjde under grene og ledninger samt bundens bæreevne afgør, om kranen kan stå. I Danmark er blød bund og smalle markveje oftere problemet end selve adgangen.",
+          "Send fotos og mål af indkørslen, det sidste sving og pladsen, hvor huset skal stå, før ordren bekræftes. En trang adgang kan løses — men kun hvis den er kendt i tide."
+        ]],
+        ["Planlæg leveringsdagen med luft", [
+          "Kran, chauffør, eventuel afspærring og de folk, der stiller huset op, skal være til rådighed samtidig. Én forsinkelse rykker hele dagen, og en ventende kran koster per time.",
+          "Aftal et tidsvindue frem for et klokkeslæt, og hold dagen efter fri. Det er billigere end en ekstra kranopstilling."
+        ]],
+        ["Kontrollér ved aflevering, ikke bagefter", [
+          "Gå huset igennem med pakkelisten i hånden: mål, udførelse, installation, målerstande, nøgler og dokumentation. Det, der noteres samme dag, er et punkt; det, der dukker op en uge senere, er en diskussion.",
+          "Fotografér tilstanden ved ankomst, også udvendigt og under chassiset. Det er dokumentationen, du har brug for, hvis der viser sig transportskade."
+        ]]
+      ],
+      "faq": [
+        ["Hvor lang tid tager transporten til Danmark?", "Regn fra færdigmelding med nogle uger afhængigt af rute, toldbehandling og transportkapacitet. Leveringsvinduet fastlægges ved ordrebekræftelsen."],
+        ["Hvem sørger for kranen?", "Det aftales per projekt. Adgang, bundens bæreevne og opstillingsplads er afgørende — send derfor fotos og mål på forhånd."],
+        ["Er der told?", "Med gyldigt A.TR-certifikat er der ikke told på de omfattede kategorier. Importmoms betales ved indførsel i Danmark."]
+      ]
+    },
+    {
+      "slug": "brug-og-forretningsmodel",
+      "name": "Brug og forretningsmodel",
+      "h1": "Udlejning, glamping eller egen bolig: hvad der reelt bærer regnestykket.",
+      "lead": "Belægningen er den antagelse, de fleste forretningsplaner strander på. De faste omkostninger er det, der bliver tilbage.",
+      "sections": [
+        ["Start med hvad der er tilladt, ikke med hvad det indbringer", [
+          "Feriemæssig udlejning, helårsbeboelse og erhvervsmæssig brug er tre juridisk forskellige ting. Hvad der er tilladt på din grund, står i lokalplanen, og kommunerne håndhæver mere aktivt end for ti år siden.",
+          "En tilladelse til fritidsformål dækker ikke helårsbeboelse, heller ikke selvom huset står der hele året. Vender man den om, risikerer man en påbudssag, der afslutter forretningsplanen med ét brev."
+        ]],
+        ["Regn med en realistisk belægning", [
+          "Kyst- og naturlokationer har høj belægning i sæsonen og lav udenfor. Et årsgennemsnit på fyrre til femoghalvtreds procent er realistisk for en velplaceret enhed; højere antagelser stammer næsten altid fra en salgstale.",
+          "Beregn derfor to scenarier: ét på den belægning, du forventer, og ét ti point lavere. Bærer det lave scenarie ikke de faste omkostninger, afhænger projektet af et godt år."
+        ]],
+        ["De variable omkostninger er højere end ventet", [
+          "Rengøring per skifte, linned, platformkommission, energi, forsikring, vedligehold og udskiftning af inventar løber tilsammen hurtigt op i en tredjedel af omsætningen. Ved korte ophold er andelen højere, fordi antallet af skifter stiger.",
+          "Længere ophold sænker omkostningen per nat og hæver nettoindtjeningen, selv ved en lavere døgnpris. Det er ofte den enkleste knap at dreje på."
+        ]],
+        ["Kvalitet sætter prisen, ikke kvadratmeterne", [
+          "En god seng, varmt vand der bliver ved, stille ventilation, hurtigt internet og udeareal med læ og privatliv giver bedre anmeldelser end en ekstra kvadratmeter. Anmeldelserne afgør den pris, du kan tage næste sæson.",
+          "Vinterudlejning kræver vinterudførelse: isolering, varme der kommer hurtigt, og frostsikring. Uden det står enheden tom fem måneder om året."
+        ]],
+        ["Flere enheder ændrer modellen", [
+          "Fra to-tre enheder falder omkostningen per enhed til tilslutninger, rengøring og drift, mens tilladelsesspørgsmålet bliver tungere: en klynge vurderes lettere som campingvirksomhed end som enkeltopstilling.",
+          "Afklar det på forhånd. En plan for én enhed, der siden udvides, strander oftere på planforholdene end en plan, der fra begyndelsen er indsendt for tre."
+        ]]
+      ],
+      "faq": [
+        ["Må jeg leje mit tiny house ud?", "Kun hvis lokalplanen tillader fritids- eller erhvervsmæssig brug. Bed kommunen om skriftlig bekræftelse, før du investerer."],
+        ["Hvilken belægning er realistisk?", "For en velplaceret enhed fyrre til femoghalvtreds procent på årsbasis. Regn også forretningsplanen igennem ti point lavere."],
+        ["Kan det betale sig at leje ud om vinteren?", "Kun med vinterudførelse: isolering, hurtig opvarmning og frostsikring. Uden det står enheden tom en stor del af året."]
+      ]
+    },
+    {
+      "slug": "drift-og-vedligehold",
+      "name": "Drift og vedligehold",
+      "h1": "Hvad et tiny house kræver hvert år — og hvad du kan lade være med.",
+      "lead": "En kompakt bygning tilgiver forsømmelse dårligere end en stor. Listen over det, der reelt kræver opmærksomhed, er kort.",
+      "sections": [
+        ["Facaden er det meste af arbejdet", [
+          "Træ arbejder. Termisk modificeret træ er mere stabilt og kræver sjældnere behandling, men gråner uden vedligehold. Det er æstetik, ikke skade — så længe detaljeringen leder vandet væk, og underkanten holdes fri af terræn.",
+          "Gå facaden efter en gang om året for fuger, tilslutninger omkring vinduer og den nederste bræddegang. Det er der, fugten begynder, og der den stadig kan klares med en fugepistol."
+        ]],
+        ["Ventilationen kræver filtre, ikke opsyn", [
+          "Genvindingsenheden har to filtre, der skal skiftes to gange om året. Tilstoppede filtre halverer luftmængden, så fugten bliver inde, og enheden arbejder hårdere. Det er den billigste vedligeholdspost med den største effekt.",
+          "Rens også ventilerne og kontrollér, at kondensafløbet er frit. Et stoppet kondensafløb giver en vandskade på en uge, der arbejder videre i måneder."
+        ]],
+        ["Vand og frost er vinterens risiko", [
+          "Rør i uopvarmede rum, udvendige haner og tilførslen ved chassiset er der, hvor frostsprængning begynder. En aftapningsmulighed og varmekabel løser det; ved længere tomgang tømmes systemet.",
+          "Ved udlejning er det en procedure, ikke en god hensigt. Skriv ned, hvem der tømmer, hvornår, og hvem der kontrollerer, at det er sket."
+        ]],
+        ["Installationen efterses en gang om året", [
+          "Test HFI-relæ, kontrollér jording, skift eller test røgalarmer, og få skorstenen fejet ved brændeovn. Det er en halv dags arbejde, og det er præcis det, forsikringen beder om efter en skade.",
+          "Før en logbog med dato og udførende. Ved salg eller skade er det forskellen på at kunne påvise og at kunne påstå."
+        ]],
+        ["Det du ikke behøver", [
+          "En korrekt udført klimaskærm kræver ingen årlig indvendig behandling, ingen periodisk kontrol af konstruktionen og intet vedligehold på chassiset, så længe belægningen er intakt. Overdrevent vedligehold koster penge uden at forlænge levetiden.",
+          "Koncentrér budgettet om facade, ventilation, vand og installation. Det er de fire punkter, der faktisk afgør en kompakt bygnings levetid."
+        ]]
+      ],
+      "faq": [
+        ["Hvor ofte skal facaden behandles?", "Termisk modificeret træ kræver ikke årlig behandling. Vil man bevare den oprindelige farve, behandles hvert andet til tredje år; accepterer man gråning, kontrolleres kun detaljeringen."],
+        ["Hvad koster vedligeholdet om året?", "Filtre, facadeeftersyn og det årlige installationseftersyn udgør et begrænset og forudsigeligt beløb. Sæt det til side fra år ét."],
+        ["Hvad gør jeg ved længere tomgang om vinteren?", "Tøm systemet eller hold en lav grundvarme, lad ventilationen køre, og kontrollér kondensafløbet."]
+      ]
+    },
+    {
+      "slug": "sammenligning-og-alternativer",
+      "name": "Sammenligning og alternativer",
+      "h1": "Tiny house, sommerhus, campingvogn eller modulbolig: hvor forskellen faktisk ligger.",
+      "lead": "De sammenlignes, som var de varianter af det samme. Det er de ikke — de adskiller sig i klassifikation, levetid og hvad man må bruge dem til.",
+      "sections": [
+        ["Klassifikationen afgør, hvad der er tilladt", [
+          "En campingvogn er et køretøj, et sommerhus en fritidsbolig, et tiny house som regel bebyggelse og en modulbolig uden videre. Den inddeling afgør tilladelsesvejen, forsikringsmuligheden og om helårsbeboelse overhovedet er i spil.",
+          "Sammenligner man på pris uden at inddrage klassifikationen, sammenligner man produkter med forskellige rettigheder. Det billigste objekt er sjældent det, man må bruge, som man vil."
+        ]],
+        ["Levetid og gensalgsværdi ligger langt fra hinanden", [
+          "En stålramme med en korrekt udført klimaskærm holder i årtier og bevarer værdi. Lette fritidsbygninger er tegnet til sæsonbrug og taber hurtigere. Den forskel dukker op ved salg, ved finansiering og hos forsikringen.",
+          "Spørg derfor til opbygningen, ikke til udseendet. To objekter, der udvendigt ligner hinanden, kan adskille sig tyve år i levetid."
+        ]],
+        ["Selvbyg er billigere på papiret", [
+          "At færdiggøre et råhus selv sparer arbejdsløn og koster tid, værktøj og en læringskurve netop på de punkter, der betyder mest: dampspærre, lufttæthed og installation. Fejl der er dyre og først synlige efter år.",
+          "Dertil kommer, at forsikring og långiver beder om attester, der ofte mangler ved selvbyg. Tag det med, før du bogfører prisforskellen som en besparelse."
+        ]],
+        ["Nyt eller brugt", [
+          "Et brugt tiny house kan være et godt køb, hvis man kan vurdere klimaskærmen. Spørg til opbygningen, til fotos fra byggefasen og til vedligeholdshistorikken. Fugt i en lukket væg kan ikke ses udefra.",
+          "Tag en fugtmåler med, og kontrollér chassisets underside for korrosion. Det er de to punkter, en fordelagtig pris som regel stammer fra."
+        ]],
+        ["Hvor MODUNERA står", [
+          "Otte modeller på ét teknisk grundlag, 2,55 meter bredde til almindelig transport, bærende stålkonstruktion, fabriksfærdig indretning og dokumentation, der følger med. Det er en position mellem fritidsbygning og boligbyggeri, tænkt til langvarig brug.",
+          "Det er ikke svaret på ethvert spørgsmål. Søger man kun et sæsonophold på en plads med faste faciliteter, er et sommerhus ofte bedre. Vil man bo permanent eller udleje i årevis, er det ikke."
+        ]]
+      ],
+      "faq": [
+        ["Hvad er forskellen på et sommerhus?", "Klassifikation og opbygning. Et sommerhus er en fritidsbolig til sæsonbrug; et tiny house med stålramme og fuld klimaskærm er tegnet til langvarig brug."],
+        ["Er selvbyg billigere?", "I anskaffelse ja, samlet ofte ikke. Dampspærre, lufttæthed og installation er der, hvor fejl er dyre, og attester mangler oftere ved selvbyg."],
+        ["Hvad skal jeg holde øje med ved brugt?", "Klimaskærmen: bed om fotos fra byggefasen, mål fugt og kontrollér chassiset for korrosion. Det forklarer som regel prisforskellen."]
+      ]
+    }
+  ]
+}

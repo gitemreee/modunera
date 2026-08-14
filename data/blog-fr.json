@@ -1,0 +1,320 @@
+{
+  "_comment": "The French-language blog. It serves three markets at once — France-style PLU vocabulary is not enough, because the readers who matter are in Luxembourg (autorisation du bourgmestre, PAG/PAP) and French-speaking Switzerland (autorisation cantonale, zone à bâtir). Nine subjects, five sections of two paragraphs and three questions each; extendArticles() appends the five-market appendix on top.",
+  "path": "blog",
+  "hub": {
+    "eyebrow": "Blog",
+    "title": "Blog tiny house : autorisation, coûts, technique et transport | MODUNERA",
+    "h1": "Ce dont dépend réellement un projet de tiny house francophone.",
+    "lead": "Neuf sujets écrits pour le Luxembourg, la Suisse romande et la Belgique francophone. Pour chacun : ce qu'il faut décider, ce que cela coûte, et où les projets s'arrêtent en pratique.",
+    "closing": "Une question sur votre terrain ? Envoyez le zonage, l'usage prévu et une photo de l'accès par WhatsApp — vous recevrez une première évaluation."
+  },
+  "labels": {
+    "readMore": "Lire la suite",
+    "allPosts": "Tous les sujets",
+    "faq": "Questions fréquentes",
+    "related": "À lire également",
+    "questions": "Questions par pays",
+    "models": "Voir MD 1 – MD 8",
+    "posts": "sujets",
+    "hubLink": "Retour au blog"
+  },
+  "categories": [
+    {
+      "slug": "autorisation-et-droit",
+      "name": "Autorisation et droit",
+      "h1": "Autorisation pour une tiny house : ce que l'autorité examine réellement.",
+      "lead": "Ce n'est pas la maison qui décide, c'est le terrain. Le zonage, l'usage prévu et la durée d'installation pèsent plus lourd que la présence de roues.",
+      "sections": [
+        ["Le zonage précède le choix du modèle", [
+          "Au Luxembourg, construire, transformer ou démolir requiert en principe l'autorisation préalable du bourgmestre, et le projet doit être conforme au PAG et au PAP de la commune. En Suisse, les constructions et installations ne peuvent en principe être érigées ou modifiées qu'avec une autorisation, et la distinction entre zone à bâtir et hors zone à bâtir est déterminante.",
+          "Dans les deux cas, la première question porte sur l'affectation du terrain, pas sur les dimensions de la maison. Une tiny house hors zone à bâtir n'est pas une affaire de négociation sur la taille : c'est une affaire d'affectation, et la réponse est le plus souvent non."
+        ]],
+        ["Les roues ne dispensent de rien", [
+          "Un châssis ne transforme pas un bâtiment en véhicule. Dès que la maison reste sur place et sert d'habitation, l'autorité l'examine comme une construction. La mobilité compte pour le transport, pas pour la procédure d'autorisation.",
+          "Sur la route, d'autres règles s'appliquent. Au-delà de 2,55 mètres de largeur, le trajet devient un transport exceptionnel avec dérogation et parfois escorte. C'est pourquoi les huit modèles MODUNERA restent sur cette largeur de base : moins de dérogations, moins de coûts, moins d'attente."
+        ]],
+        ["L'installation temporaire suit sa propre voie", [
+          "Les installations provisoires peuvent elles aussi être soumises à autorisation, avec une durée maximale fixée par la commune ou le canton. Certaines autorités disposent d'une pratique établie, d'autres traitent chaque demande isolément.",
+          "Demandez-le explicitement et faites confirmer par écrit. Une indication orale au guichet n'est pas une décision et n'engage pas l'autorité. Une confirmation écrite mentionnant la durée est le document dont vous aurez besoin dans cinq ans."
+        ]],
+        ["Les raccordements font partie de l'examen", [
+          "L'eau, l'électricité et les eaux usées ne sont pas une finition mais un élément de la recevabilité. Un terrain sans raccordement au réseau d'assainissement exige une solution agréée, et le service de l'environnement l'apprécie en parallèle de la demande, pas après.",
+          "La distance au réseau est souvent le poste imprévu le plus lourd. Les gestionnaires facturent au mètre et affichent des délais qui s'allongent dans les zones tendues. Demandez une offre dès que le terrain est connu."
+        ]],
+        ["Assurance et statut foncier se règlent en amont", [
+          "Une tiny house sur terrain propre ne s'assure pas comme une unité sur terrain loué ou sur un camping. L'assureur veut savoir si l'objet est considéré comme immeuble ou meuble, comment il est ancré et s'il est habité toute l'année.",
+          "Sur terrain loué, c'est le droit de superficie ou la clause de fin de bail qu'il faut fixer d'abord. Qui possède la maison, que se passe-t-il à la résiliation, qui paie le déplacement. Mettez-le par écrit tant que tout le monde est d'accord."
+        ]]
+      ],
+      "faq": [
+        ["Faut-il toujours une autorisation ?", "En règle générale oui, dès que la maison sert d'habitation. L'autorité examine la conformité au zonage ; la forme de construction compte moins que l'affectation du terrain."],
+        ["Un châssis rend-il le projet dispensé d'autorisation ?", "Non. Les roues concernent le transport, pas la procédure. En installation permanente avec habitation, la maison est examinée comme construction."],
+        ["Combien de temps dure la procédure ?", "Cela varie selon la commune et le canton. Si le projet nécessite une dérogation ou se situe hors zone à bâtir, comptez en mois. Planifiez la livraison en conséquence."]
+      ]
+    },
+    {
+      "slug": "couts-et-financement",
+      "name": "Coûts et financement",
+      "h1": "Ce que coûte une tiny house une fois tout compté.",
+      "lead": "Le prix départ usine est le chiffre que l'on compare. C'est aussi celui qui explique le moins.",
+      "sections": [
+        ["Quatre blocs composent le budget", [
+          "D'abord l'unité départ usine. Ensuite le transport, qui dépend de l'itinéraire, des dimensions et des conditions de déchargement. Puis le terrain : fondation, raccordements, grue et accès. Enfin le volet administratif — taxes, mandataire, éventuelle dérogation et assurance.",
+          "Qui ne compare que le premier bloc compare environ la moitié du projet. Les trois autres varient davantage d'un terrain à l'autre que l'unité ne varie d'un modèle à l'autre."
+        ]],
+        ["Le terrain pèse plus que le niveau d'équipement", [
+          "Un terrain raccordé en limite avec un accès stabilisé coûte une fraction d'un terrain où il faut creuser cent mètres et poser des plaques de roulage. Il en va de même pour la fondation : des pieux vissés en sol sablonneux se posent en une journée ; en sol meuble, ils demandent un calcul et parfois une autre solution.",
+          "Demandez donc d'abord une estimation des terrassements, des raccordements et du déchargement, puis choisissez le modèle. L'écart de prix entre MD 1 et MD 8 est plus faible que l'écart entre deux terrains distants de dix kilomètres."
+        ]],
+        ["Le financement est une autre conversation", [
+          "Un prêt hypothécaire suppose un bien immobilier sur terrain propre avec autorisation. S'il manque l'un des trois, le projet relève généralement du prêt personnel ou du financement vert, avec une durée plus courte et un taux plus élevé.",
+          "Associez la banque tôt. Une offre détaillée, une confirmation écrite de la commune et un plan sont exactement les pièces demandées — et MODUNERA peut les fournir avant la commande."
+        ]],
+        ["TVA et livraison depuis la Türkiye", [
+          "La livraison depuis la Türkiye vers l'Union européenne passe par l'union douanière. Avec un certificat A.TR, il n'y a pas de droits de douane pour les catégories concernées ; la TVA à l'importation, elle, est due. Pour la Suisse, qui n'est pas dans l'union douanière, le régime diffère et le dédouanement se fait à l'entrée.",
+          "Intégrez donc la TVA au budget total dès le départ. Demandez à l'avance l'ensemble des documents — facture, liste de colisage, A.TR, document de transport — pour que la déclaration ne bute pas sur une pièce manquante."
+        ]],
+        ["Ce qu'il faut provisionner après la réception", [
+          "Un bâtiment compact n'est pas sans entretien parce qu'il est petit. Traitement de façade, filtres de ventilation, contrôle des joints et visite annuelle de l'installation forment ensemble un montant prévisible. Provisionnez-le dès la première année.",
+          "En location, s'y ajoutent le ménage, le linge, la commission de plateforme et une réserve de renouvellement du mobilier. Ces postes déterminent le rendement davantage que le taux d'occupation retenu dans le premier calcul."
+        ]]
+      ],
+      "faq": [
+        ["Combien coûte une tiny house tout compris ?", "Outre l'unité, comptez le transport, la fondation, les raccordements, le déchargement et les taxes. Sur un terrain bien desservi, ces postes restent limités ; sur un terrain isolé, ils peuvent approcher le prix de l'unité."],
+        ["Puis-je obtenir un prêt hypothécaire ?", "Uniquement pour un bien immobilier sur terrain propre avec autorisation. Sinon, le prêt personnel ou le financement vert est plus courant, avec une durée plus courte."],
+        ["Y a-t-il des droits de douane depuis la Türkiye ?", "Avec un certificat A.TR valide, pas de droits pour les catégories concernées à l'entrée dans l'UE. La TVA à l'importation reste due. Pour la Suisse, le dédouanement s'effectue à l'entrée."]
+      ]
+    },
+    {
+      "slug": "technique-et-construction",
+      "name": "Technique et construction",
+      "h1": "Comment une tiny house est construite — et ce qui ne se modifie plus.",
+      "lead": "Presque tout l'intérieur peut changer après la réception. La structure, la composition de l'isolation et les tracés de gaines, non.",
+      "sections": [
+        ["L'ossature acier porte et voyage", [
+          "La structure porteuse doit faire deux choses à la fois : porter un bâtiment et supporter un trajet routier. Ce sont des sollicitations différentes. Une ossature dimensionnée uniquement en statique subit pendant le transport une torsion pour laquelle elle n'a pas été dessinée.",
+          "L'ossature est donc soudée, traitée et contrôlée en usine avant la pose du premier panneau. Ce qui est refermé ensuite ne s'inspecte plus sans démontage — raison pour laquelle cette phase est documentée."
+        ]],
+        ["La composition de l'isolation est une chaîne", [
+          "L'épaisseur seule ne dit pas grand-chose. C'est l'ordre qui compte : pare-vapeur côté chaud, isolation sans interruption, lame d'air ventilée là où elle a sa place, et un bardage capable de sécher. Un film mal posé rend sensible à l'humidité une composition par ailleurs correcte.",
+          "Les ponts thermiques se situent là où la structure traverse l'enveloppe : au châssis, aux lisses basses et autour des menuiseries. Ces points se résolvent sur plan, pas sur le chantier. Demandez les détails avant de signer."
+        ]],
+        ["Les vitrages décident du confort dans les deux sens", [
+          "Un grand vitrage apporte lumière et espace, et c'est exactement là que la chaleur entre en été et s'échappe en hiver. Triple vitrage, orientation de la façade et protection solaire extérieure forment la réponse ensemble ; l'un des trois seul ne suffit pas.",
+          "En altitude, la charge de neige et l'écart de température s'ajoutent. Les menuiseries, les fixations et l'étanchéité doivent être choisies pour ce climat, sinon c'est l'entretien qui augmente, pas la consommation."
+        ]],
+        ["La ventilation n'est pas une option", [
+          "Un bâtiment étanche et bien isolé occupé par deux personnes produit plusieurs litres d'humidité par jour. Sans ventilation double flux avec récupération, elle se dépose au point le plus froid de l'enveloppe. C'est la cause de sinistre la plus fréquente en logement compact, et la plus facile à éviter.",
+          "Intégrez les gaines au plan. Un caisson double flux ajouté après coup consomme un volume de rangement que vous ne trouverez nulle part ailleurs dans une petite maison."
+        ]],
+        ["Les tracés se figent à la production", [
+          "Eau, évacuation, électricité et données passent dans le plancher et les parois. Ce qui y est posé y reste. Une prise supplémentaire en cuisine ou une alimentation vers un robinet extérieur est une modification de plan avant production, et une démolition après.",
+          "Parcourez donc le plan une fois comme si vous y viviez : où se place le lave-linge, où se fixe l'écran, par où entre le câble de recharge. Ces dix minutes rapportent plus que n'importe quel choix de matériau."
+        ]]
+      ],
+      "faq": [
+        ["Puis-je modifier la distribution plus tard ?", "Le mobilier libre et les finitions, oui. La structure porteuse, la composition de l'isolation et les tracés de gaines, pratiquement pas : ils se figent avant production."],
+        ["Pourquoi 2,55 mètres de large ?", "C'est la largeur maximale du transport routier ordinaire en Europe. Au-delà, il faut une dérogation, parfois une escorte, et de l'attente. Les huit modèles restent sur cette base."],
+        ["La ventilation mécanique est-elle indispensable ?", "Oui. Dans un volume étanche et bien isolé, la ventilation double flux avec récupération est le seul moyen fiable d'évacuer l'humidité sans jeter la chaleur."]
+      ]
+    },
+    {
+      "slug": "energie-et-autonomie",
+      "name": "Énergie et autonomie",
+      "h1": "Vivre en autonomie : ce qui est techniquement possible et ce que l'autorité accepte.",
+      "lead": "Les panneaux et la batterie sont la partie facile. Qu'un logement sans raccordement soit accepté est une question juridique.",
+      "sections": [
+        ["Calculez d'abord l'hiver", [
+          "Un toit couvert de panneaux produit un excédent en juin et une fraction de cela en décembre. La taille de l'installation se détermine sur les semaines les plus sombres, pas sur la moyenne annuelle. Qui raisonne en totaux annuels se retrouve sans courant en janvier.",
+          "Établissez donc la consommation hivernale par jour, chauffage et eau chaude compris, et dimensionnez batterie et production sur cette base. Cela conduit presque toujours à une batterie plus grande que la première estimation, et à un appoint."
+        ]],
+        ["Le chauffage détermine tout le reste", [
+          "Une pompe à chaleur air-eau est efficace et demande de l'électricité précisément quand le soleil en fournit le moins. Un poêle à bois est indépendant mais exige un conduit conforme, du stockage et une amenée d'air. Les panneaux électriques sont simples et consomment le plus.",
+          "Le choix ne se sépare pas de l'isolation. Avec une enveloppe étanche et bien isolée, une petite pompe à chaleur suffit ; avec une composition plus légère, non. Décidez les deux ensemble, et avant production."
+        ]],
+        ["L'eau et l'assainissement sont le vrai seuil", [
+          "L'électricité, vous pouvez la produire ; les eaux usées doivent aller quelque part. Cela signifie le réseau ou une installation d'assainissement agréée, appréciée par le service compétent. Des toilettes sèches règlent les eaux noires, pas les eaux grises de la douche et de la cuisine.",
+          "La récupération d'eau de pluie fonctionne pour la chasse et le jardin. Pour l'eau potable, elle exige une filtration et une désinfection démontrables — donc une installation avec entretien, pas un achat unique."
+        ]],
+        ["L'hybride est généralement la sortie raisonnable", [
+          "L'autonomie complète est techniquement possible et rarement la voie la moins chère ni la plus simple. Un raccordement au réseau avec panneaux et batterie donne la même indépendance en été sans le risque d'une semaine sans soleil en février.",
+          "Regardez donc d'abord ce que coûte un raccordement. Si le réseau est à cinquante mètres, le calcul est vite fait. S'il est à un kilomètre, la réponse change — et l'autonomie devient alors la solution la moins chère, pas une posture."
+        ]],
+        ["Documentez ce que vous installez", [
+          "Les attestations de l'installation électrique, de la mise à la terre, du conduit de fumée et du traitement de l'eau potable sont ce que l'assureur et l'autorité demanderont plus tard. Rassemblez-les à la réception ; après, c'est de la reconstitution.",
+          "Il en va de même à la revente. Une installation documentée avec ses rapports de contrôle est démontrablement conforme ; une installation sans documents est un risque que l'acheteur déduira du prix."
+        ]]
+      ],
+      "faq": [
+        ["Une tiny house peut-elle être totalement autonome ?", "Techniquement oui. Administrativement, tout se joue sur les eaux usées : réseau ou installation agréée. L'électricité et l'eau se règlent plus facilement que l'évacuation."],
+        ["Quelle capacité de batterie prévoir ?", "Multipliez la consommation hivernale journalière par le nombre de jours que vous voulez couvrir. Le résultat dépasse presque toujours une estimation fondée sur des moyennes annuelles."],
+        ["Pompe à chaleur ou poêle à bois ?", "Pompe à chaleur avec une enveloppe bien isolée et un raccordement ; poêle en appoint ou en production limitée. Décidez avec l'isolation, avant production."]
+      ]
+    },
+    {
+      "slug": "amenagement-et-interieur",
+      "name": "Aménagement et intérieur",
+      "h1": "Faire de 28 mètres carrés un logement, pas un compromis.",
+      "lead": "Les petits logements échouent pour deux raisons : trop peu de rangement et aucun endroit où être seul. Les deux se règlent sur le plan.",
+      "sections": [
+        ["Le rangement est une mesure, pas une intention", [
+          "Deux personnes en résidence permanente ont besoin d'environ six à huit mètres cubes de rangement : vêtements par saison, outillage, entretien, provisions, équipement sportif. Additionnez-le avant de figer le plan, car après, cela ne s'ajoute plus.",
+          "Le rangement le plus utile se trouve sous le lit, dans les marches de l'escalier et dans une armoire toute hauteur. Le mobilier libre coûte de la surface au sol dont vous ne disposez pas."
+        ]],
+        ["Deux personnes ont besoin de deux endroits", [
+          "Un volume ouvert fonctionne jusqu'au moment où l'un téléphone et l'autre lit. Une porte, une différence de niveau ou une mezzanine fermée fait la différence entre bien vivre et s'éviter en permanence. MD 3 le résout avec une pièce fermable au rez-de-chaussée.",
+          "Pensez aussi au son. Une cloison qui ne sépare que visuellement ne sépare rien. Une composition masse-ressort-masse coûte quelques centimètres et apporte le calme pour lequel la pièce a été créée."
+        ]],
+        ["Le télétravail demande une place fixe", [
+          "Un ordinateur portable sur la table à manger tient une semaine. Ensuite on veut un plateau qui reste en place, une chaise correcte, une lumière latérale et un arrière-plan présentable à l'image. Cela représente environ 1,2 sur 0,6 mètre — cela se planifie, cela ne s'improvise pas.",
+          "Placez les raccordements correctement dès le départ : prises à hauteur de plateau, prise réseau et éclairage qui ne se reflète pas dans l'écran. Ce sont des points de plan, pas des choix de décoration."
+        ]],
+        ["La lumière de deux côtés crée l'espace", [
+          "Une fenêtre d'un seul côté rend un volume étroit plus long et plus sombre. La lumière naturelle de deux côtés, de préférence à des hauteurs différentes, l'élargit. Une fenêtre de toit au-dessus de la mezzanine fait plus pour la sensation d'espace qu'un vitrage plus grand dans la même façade.",
+          "Tenez compte des vis-à-vis. De grandes surfaces vitrées sur une petite parcelle appellent une plantation, une clôture ou une orientation choisie — sinon un rideau apparaît au bout de six mois et annule tout le projet."
+        ]],
+        ["La cuisine est le point d'articulation", [
+          "Dans un logement compact, la cuisine se trouve dans la pièce de vie. Le plan de travail, la hotte et le bruit des appareils déterminent donc la façon dont on y vit. Une hotte silencieuse et un lave-vaisselle de la classe acoustique la plus basse sont du confort, pas du luxe.",
+          "Comptez au moins 1,2 mètre de plan de travail continu à côté de la plaque. Moins signifie que quelque chose reste en permanence sorti — et c'est exactement là que commence la sensation d'exiguïté."
+        ]]
+      ],
+      "faq": [
+        ["Quel volume de rangement prévoir ?", "Pour deux occupants, environ six à huit mètres cubes. Additionnez-le avant de figer le plan ; l'ajouter après coûte de la surface au sol."],
+        ["Une mezzanine convient-elle toute l'année ?", "Oui, si la ventilation et la hauteur libre sont correctes. L'air chaud monte : demandez l'extraction en partie haute et la hauteur libre au niveau du lit."],
+        ["Quel modèle pour le télétravail ?", "MD 3 offre une pièce fermable au rez-de-chaussée. Pour privilégier la lumière et les vues, MD 1 avec sa façade panoramique."]
+      ]
+    },
+    {
+      "slug": "transport-et-import",
+      "name": "Transport et importation",
+      "h1": "De l'usine au terrain : itinéraire, douane et les cent derniers mètres.",
+      "lead": "Le trajet à travers l'Europe est la partie prévisible. Ce qui se passe mal se passe mal dans le dernier virage.",
+      "sections": [
+        ["La largeur détermine le trajet", [
+          "Jusqu'à 2,55 mètres, le transport est ordinaire. Au-delà, il devient exceptionnel : dérogation par pays, parfois escorte, itinéraires imposés et créneaux horaires. Cela coûte de l'argent et surtout du temps, et rend la planification dépendante de plusieurs administrations.",
+          "Les huit modèles MODUNERA restent donc sur 2,55 mètres de largeur de base. La différence porte sur la longueur, la distribution et le niveau d'équipement — pas sur une cote qui complique la livraison."
+        ]],
+        ["Les documents douaniers doivent être complets avant le départ", [
+          "Pour une livraison depuis la Türkiye, le certificat A.TR voyage avec la facture, la liste de colisage et le document de transport. S'il en manque un, l'envoi s'arrête à la frontière et les frais courent. Demandez une copie de l'ensemble avant le départ.",
+          "La TVA à l'importation est due à l'entrée dans l'Union. Les acheteurs professionnels la récupèrent en déclaration, les particuliers non. Pour la Suisse, le dédouanement s'effectue à l'entrée sur le territoire suisse selon un régime propre."
+        ]],
+        ["Le lieu de déchargement est le point critique", [
+          "Largeur d'accès, rayon de braquage, hauteur libre sous les branches et les câbles, portance du sol : ce sont ces éléments qui décident si la grue peut se poser. Sur un chemin de montagne ou une voie communale étroite, c'est souvent l'accès lui-même qui bloque.",
+          "Envoyez des photos et des cotes de l'accès, du dernier virage et de l'emplacement final avant la confirmation de commande. Un accès difficile se résout — mais seulement s'il est connu à temps."
+        ]],
+        ["Planifiez la journée de livraison avec de la marge", [
+          "Grue, chauffeur, éventuelle mesure de circulation et l'équipe de calage doivent être disponibles au même moment. Un retard décale toute la journée, et une grue qui attend coûte à l'heure.",
+          "Convenez d'un créneau plutôt que d'une heure, et gardez le lendemain libre. Cela revient moins cher qu'une deuxième intervention de grue."
+        ]],
+        ["Contrôlez à la réception, pas après", [
+          "Parcourez la maison avec la liste de colisage : cotes, exécution, installation, relevés de compteurs, clés et documentation. Ce qui est noté le jour même est un point ; ce qui apparaît une semaine plus tard est une discussion.",
+          "Photographiez l'état à l'arrivée, extérieur et dessous de châssis compris. C'est la preuve dont vous aurez besoin s'il apparaît un dommage de transport."
+        ]]
+      ],
+      "faq": [
+        ["Combien de temps prend le transport ?", "Comptez quelques semaines à partir de la mise à disposition, selon l'itinéraire, le dédouanement et la capacité de transport. Le créneau de livraison est fixé à la confirmation de commande."],
+        ["Qui organise la grue ?", "Cela se convient par projet. L'accès, la portance du sol et l'emplacement de la grue sont déterminants — envoyez photos et cotes à l'avance."],
+        ["Y a-t-il des droits de douane ?", "Avec un certificat A.TR valide, pas de droits pour les catégories concernées à l'entrée dans l'UE. La TVA à l'importation reste due ; la Suisse applique son propre régime."]
+      ]
+    },
+    {
+      "slug": "usage-et-modele-economique",
+      "name": "Usage et modèle économique",
+      "h1": "Location, glamping ou résidence : ce qui porte réellement le calcul.",
+      "lead": "Le taux d'occupation est l'hypothèse sur laquelle échouent la plupart des plans. Les charges fixes sont ce qui reste.",
+      "sections": [
+        ["Commencez par ce qui est permis, pas par ce que cela rapporte", [
+          "Location touristique, résidence permanente et usage commercial sont juridiquement trois choses différentes. Ce qui est autorisé sur votre terrain figure dans le plan d'aménagement, et les autorités contrôlent plus activement qu'il y a dix ans.",
+          "Une autorisation pour usage de loisir ne couvre pas l'habitation permanente, même si la maison reste toute l'année. Inverser les deux expose à une procédure qui met fin au modèle économique en une lettre."
+        ]],
+        ["Retenez un taux d'occupation réaliste", [
+          "Les emplacements de montagne et de bord de lac remplissent bien en saison et peu en dehors. Une moyenne annuelle de quarante à cinquante-cinq pour cent est réaliste pour une unité bien positionnée ; au-delà, l'hypothèse vient presque toujours d'un argumentaire de vente.",
+          "Calculez donc deux scénarios : celui que vous attendez, et le même diminué de dix points. Si le scénario bas ne porte pas les charges fixes, le projet dépend d'une bonne année."
+        ]],
+        ["Les charges variables dépassent les prévisions", [
+          "Ménage par rotation, linge, commission de plateforme, énergie, assurance, entretien et renouvellement du mobilier atteignent ensemble rapidement un tiers du chiffre d'affaires. Sur des séjours courts, la part est plus élevée car le nombre de rotations augmente.",
+          "Des séjours plus longs abaissent le coût par nuit et relèvent le net, même à un prix par nuit inférieur. C'est souvent le levier le plus simple."
+        ]],
+        ["La qualité fixe le prix, pas les mètres carrés", [
+          "Un bon lit, de l'eau chaude qui dure, une ventilation silencieuse, un internet rapide et un extérieur abrité produisent de meilleurs avis qu'un mètre carré de plus. Les avis déterminent le prix que vous pourrez demander la saison suivante.",
+          "La location hivernale exige une exécution hiver : isolation, chauffage qui monte vite et protection contre le gel. Sans cela, l'unité reste vide cinq mois par an."
+        ]],
+        ["Plusieurs unités changent le modèle", [
+          "À partir de deux ou trois unités, le coût par unité baisse pour les raccordements, le ménage et la gestion, tandis que la question de l'autorisation s'alourdit : un groupe est plus facilement qualifié d'exploitation touristique qu'une implantation isolée.",
+          "Clarifiez-le en amont. Un projet d'une unité étendu plus tard bute plus souvent sur le zonage qu'un projet déposé d'emblée pour trois."
+        ]]
+      ],
+      "faq": [
+        ["Puis-je louer ma tiny house ?", "Uniquement si le plan d'aménagement autorise l'usage de loisir ou commercial. Demandez une confirmation écrite avant d'investir."],
+        ["Quel taux d'occupation est réaliste ?", "Pour une unité bien positionnée, quarante à cinquante-cinq pour cent sur l'année. Recalculez aussi votre plan dix points plus bas."],
+        ["La location hivernale est-elle rentable ?", "Seulement avec une exécution hiver : isolation, montée en température rapide et protection contre le gel. Sans cela, l'unité reste vide une grande partie de l'année."]
+      ]
+    },
+    {
+      "slug": "exploitation-et-entretien",
+      "name": "Exploitation et entretien",
+      "h1": "Ce qu'une tiny house demande chaque année — et ce que vous pouvez laisser.",
+      "lead": "Un bâtiment compact pardonne moins la négligence qu'un grand. La liste de ce qui mérite vraiment attention est courte.",
+      "sections": [
+        ["La façade représente l'essentiel du travail", [
+          "Le bois travaille. Le bois thermotraité est plus stable et demande un traitement moins fréquent, mais grise sans entretien. C'est de l'esthétique, pas un désordre — tant que les détails évacuent l'eau et que la partie basse reste dégagée du terrain.",
+          "Parcourez la façade une fois par an : joints, raccords autour des menuiseries et première planche basse. C'est là que l'humidité commence, et là qu'elle se règle encore avec une cartouche."
+        ]],
+        ["La ventilation demande des filtres, pas de la surveillance", [
+          "Le caisson double flux comporte deux filtres à remplacer deux fois par an. Des filtres encrassés divisent le débit par deux : l'humidité reste à l'intérieur et l'appareil force. C'est le poste d'entretien le moins cher et le plus efficace.",
+          "Nettoyez aussi les bouches et vérifiez que l'évacuation des condensats est libre. Un écoulement bouché provoque en une semaine un dégât qui met des mois à sécher."
+        ]],
+        ["L'eau et le gel sont le risque de l'hiver", [
+          "Les canalisations en volume non chauffé, les robinets extérieurs et l'alimentation au droit du châssis sont les points où le gel commence. Une vanne de vidange et un cordon chauffant règlent la question ; en inoccupation prolongée, videz le réseau.",
+          "En location, c'est une procédure, pas une bonne intention. Écrivez qui vidange, quand, et qui contrôle que cela a été fait."
+        ]],
+        ["L'installation se vérifie une fois par an", [
+          "Test du différentiel, contrôle de la mise à la terre, remplacement ou test des détecteurs de fumée, ramonage du conduit en cas de poêle. C'est une demi-journée, et c'est exactement ce que l'assureur demandera après un sinistre.",
+          "Tenez un carnet avec date et intervenant. À la revente ou après un sinistre, c'est la différence entre démontrer et affirmer."
+        ]],
+        ["Ce que vous n'avez pas à faire", [
+          "Une enveloppe correctement exécutée n'exige aucun traitement intérieur annuel, aucun contrôle périodique de la structure et aucun entretien du châssis tant que le revêtement est intact. L'entretien excessif coûte sans allonger la durée de vie.",
+          "Concentrez le budget sur la façade, la ventilation, l'eau et l'installation. Ce sont les quatre points qui déterminent réellement la longévité d'un bâtiment compact."
+        ]]
+      ],
+      "faq": [
+        ["À quelle fréquence traiter la façade ?", "Le bois thermotraité n'exige pas de traitement annuel. Pour conserver la teinte d'origine, comptez tous les deux à trois ans ; si le grisaillement est accepté, contrôlez seulement les détails."],
+        ["Combien coûte l'entretien annuel ?", "Filtres, contrôle de façade et visite annuelle de l'installation forment un montant limité et prévisible. Provisionnez-le dès la première année."],
+        ["Que faire en inoccupation hivernale prolongée ?", "Vidangez le réseau ou maintenez une température de base basse, laissez la ventilation fonctionner et contrôlez l'évacuation des condensats."]
+      ]
+    },
+    {
+      "slug": "comparaison-et-alternatives",
+      "name": "Comparaison et alternatives",
+      "h1": "Tiny house, chalet, mobil-home ou construction modulaire : où est la vraie différence.",
+      "lead": "On les compare comme s'il s'agissait de variantes d'une même chose. Ce n'est pas le cas : ils diffèrent par le classement, la durée de vie et ce que l'on a le droit d'en faire.",
+      "sections": [
+        ["Le classement décide de ce qui est permis", [
+          "Un mobil-home est un véhicule habitable, un chalet un hébergement de loisir, une tiny house le plus souvent une construction, et un module d'habitation sans discussion. Ce classement détermine la procédure, l'assurabilité et la possibilité même d'une résidence permanente.",
+          "Comparer les prix sans intégrer le classement revient à comparer des produits aux droits différents. L'objet le moins cher est rarement celui dont on peut faire ce que l'on veut."
+        ]],
+        ["Durée de vie et valeur de revente divergent fortement", [
+          "Une ossature acier avec une enveloppe correctement exécutée dure des décennies et conserve sa valeur. Les constructions de loisir légères sont conçues pour un usage saisonnier et se déprécient plus vite. Cet écart réapparaît à la revente, au financement et chez l'assureur.",
+          "Interrogez donc la composition, pas l'apparence. Deux objets semblables de l'extérieur peuvent différer de vingt ans en durée de vie."
+        ]],
+        ["L'auto-construction est moins chère sur le papier", [
+          "Finir soi-même un volume brut économise de la main-d'œuvre et coûte du temps, de l'outillage et une courbe d'apprentissage précisément sur les points qui comptent le plus : pare-vapeur, étanchéité à l'air et installations. Les erreurs y sont coûteuses et visibles seulement après des années.",
+          "S'y ajoute que l'assureur et le prêteur demandent des attestations qui manquent souvent en auto-construction. Intégrez-le avant de comptabiliser l'écart de prix comme une économie."
+        ]],
+        ["Neuf ou occasion", [
+          "Une tiny house d'occasion peut être une bonne affaire, à condition de savoir juger l'enveloppe. Demandez la composition, des photos de la phase de construction et l'historique d'entretien. L'humidité dans une paroi fermée ne se voit pas de l'extérieur.",
+          "Emportez un humidimètre et contrôlez le dessous du châssis contre la corrosion. Ce sont les deux points d'où provient généralement un prix avantageux."
+        ]],
+        ["Où se situe MODUNERA", [
+          "Huit modèles sur une même base technique, 2,55 mètres pour un transport ordinaire, structure porteuse acier, aménagement réalisé en usine et documentation qui suit. C'est une position entre l'hébergement de loisir et la construction de logement, pensée pour un usage durable.",
+          "Ce n'est pas la réponse à toutes les questions. Pour un simple séjour saisonnier sur un site équipé, un chalet convient souvent mieux. Pour habiter durablement ou louer pendant des années, non."
+        ]]
+      ],
+      "faq": [
+        ["Quelle différence avec un chalet ?", "Le classement et la composition. Un chalet est un hébergement de loisir à usage saisonnier ; une tiny house à ossature acier avec enveloppe complète est conçue pour un usage durable."],
+        ["L'auto-construction est-elle moins chère ?", "À l'achat oui, au total souvent non. Pare-vapeur, étanchéité à l'air et installations sont les points où les erreurs coûtent cher, et les attestations manquent plus souvent."],
+        ["À quoi faire attention en occasion ?", "À l'enveloppe : demandez des photos de la phase de construction, mesurez l'humidité et contrôlez la corrosion du châssis. Cela explique en général l'écart de prix."]
+      ]
+    }
+  ]
+}
