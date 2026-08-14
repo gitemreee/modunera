@@ -41,13 +41,13 @@ German is the root, English is `/en/`, and the three remaining target-market
 languages live under their own directories with the slugs those markets actually
 use — not translations of the English ones:
 
-| Locale | Home | Countries | Services | Models | Questions | Guides | FAQ |
-|---|---|---|---|---|---|---|---|
-| German | `/` | `/laender/` | `/leistungen/` | `/modelle/` | `/fragen/` | `/ratgeber/` | `/faq/` |
-| English | `/en/` | `/en/countries/` | `/en/services/` | `/en/models/` | `/en/questions/` | `/en/blog/` | `/en/faq/` |
-| Dutch | `/nl/` | `/nl/landen/` | `/nl/diensten/` | `/nl/modellen/` | `/nl/vragen-per-land/` | `/nl/gidsen/` | `/nl/veelgestelde-vragen/` |
-| Danish | `/da/` | `/da/lande/` | `/da/ydelser/` | `/da/modeller/` | `/da/spoergsmaal-per-land/` | `/da/guides/` | `/da/ofte-stillede-spoergsmaal/` |
-| French | `/fr/` | `/fr/pays/` | `/fr/services/` | `/fr/modeles/` | `/fr/questions-par-pays/` | `/fr/guides/` | `/fr/questions-frequentes/` |
+| Locale | Home | Countries | Services | Models | Questions | Guides | Blog | FAQ |
+|---|---|---|---|---|---|---|---|---|
+| German | `/` | `/laender/` | `/leistungen/` | `/modelle/` | `/fragen/` | `/ratgeber/` | `/blog/` | `/faq/` |
+| English | `/en/` | `/en/countries/` | `/en/services/` | `/en/models/` | `/en/questions/` | `/en/guides/` | `/en/blog/` | `/en/faq/` |
+| Dutch | `/nl/` | `/nl/landen/` | `/nl/diensten/` | `/nl/modellen/` | `/nl/vragen-per-land/` | `/nl/gidsen/` | `/nl/blog/` | `/nl/veelgestelde-vragen/` |
+| Danish | `/da/` | `/da/lande/` | `/da/ydelser/` | `/da/modeller/` | `/da/spoergsmaal-per-land/` | `/da/guides/` | `/da/blog/` | `/da/ofte-stillede-spoergsmaal/` |
+| French | `/fr/` | `/fr/pays/` | `/fr/services/` | `/fr/modeles/` | `/fr/questions-par-pays/` | `/fr/guides/` | `/fr/blog/` | `/fr/questions-frequentes/` |
 
 Copy, slugs and country names live in `data/locales.json`; the per-country legal
 and climate paragraphs are written per language in `COUNTRY_COPY` inside
@@ -97,14 +97,14 @@ any `<title>` and any content-page `<meta name="description">` that lacks it,
 extending the existing `| MODUNERA` suffix rather than adding a second brand.
 Re-running finds nothing to do, which is what keeps the pipeline idempotent.
 
-Coverage after a full build, out of 14,977 pages:
+Coverage after a full build, out of 15,007 pages:
 
-| Field | Pages carrying the term | What is left out, and why |
+| Field | Pages missing the term | Why |
 |---|---|---|
-| Body copy | 14,976 | the Google verification file, which has no body |
-| `<title>` | 14,972 | the verification file and four local-only app shells |
-| `<meta description>` | 14,967 | legal pages and app shells — `TERM_CONTENT` excludes them on purpose |
-| `<h1>` | 14,945 | the 20 "other structures" pages (a bungalow is not a tiny house), three legal pages, the app shells |
+| Body copy | 1 | the Google verification file, which has no body |
+| `<title>` | 5 | the verification file and four local-only app shells |
+| `<meta description>` | 10 | legal pages and app shells — `TERM_CONTENT` excludes them on purpose |
+| `<h1>` | 32 | the 20 "other structures" pages (a bungalow is not a tiny house), three legal pages, the app shells |
 
 Do not push the last few: an imprint headline that says "tiny house" reads as
 keyword stuffing, and the pages concerned already carry the term in the title.
