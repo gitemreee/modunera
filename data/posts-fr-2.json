@@ -1,0 +1,549 @@
+{
+  "_comment": "French posts, second batch. Sixteen further subjects in the same order as posts-en-2.json so localePostPage() can pair them by index for hreflang. Written for Luxembourg, Suisse romande and francophone Belgium: altitude, charge de neige, autorisation communale ou cantonale.",
+  "posts": [
+    {
+      "slug": "tiny-house-fenetres-et-vitrage",
+      "category": "technique-et-construction",
+      "name": "Fenêtres",
+      "title": "Les fenêtres d'une tiny house : combien de verre, et de quel côté.",
+      "lead": "Le verre est ce qui rend un intérieur compact généreux, et ce qui perd le plus de chaleur. Les deux se décident par l'orientation avant de se décider par la spécification.",
+      "sections": [
+        ["L'orientation pèse plus que le vitrage lui-même", [
+          "Une grande ouverture au sud capte de la chaleur tout l'hiver et surchauffe en juillet ; la même ouverture au nord donne une lumière régulière et aucun apport. Quelle façade porte le verre se décide gratuitement sur le plan et devient impossible ensuite.",
+          "En pratique, la plupart des plans compacts veulent le vitrage principal vers la vue et la lumière du soir, avec une fenêtre haute plus petite en face pour l'éclairage traversant. Cette combinaison se lit comme de l'espace ; une seule grande baie se lit comme un couloir."
+        ]],
+        ["Le triple vitrage n'est pas automatique", [
+          "Le triple réduit les déperditions et pèse davantage — environ 30 kg par mètre carré contre 20 pour un double. Sur un bâtiment qui voyage, ce poids doit être porté par l'ossature et levé par la grue : c'est autant une décision structurelle que thermique.",
+          "Dans un climat doux, un bon double vitrage à couche peut être le meilleur arbitrage. En altitude ou dans un hiver long, le triple se rentabilise et supprime en outre la sensation de paroi froide près d'une grande baie."
+        ]],
+        ["La protection solaire est à l'extérieur du verre", [
+          "Une fois le rayonnement passé, la chaleur est à l'intérieur, et un store intérieur ne fait que la convertir en chaleur rayonnante. Une protection extérieure — débord de toiture, volet, écran — l'intercepte avant, et l'effet est plusieurs fois supérieur.",
+          "Un débord fixe dimensionné sur la hauteur du soleil d'été laisse encore entrer le soleil bas de décembre. C'est la régulation climatique la moins chère du projet et elle ne coûte qu'une cote sur le plan."
+        ]],
+        ["Les ouvrants sont une question de ventilation", [
+          "Le verre fixe est moins cher et plus étanche, et une maison sans ouvrant dépend entièrement de la ventilation mécanique. Prévoyez au minimum un ouvrant à chaque extrémité du plan, pour pouvoir balayer la maison un soir chaud.",
+          "Une fenêtre de toit au-dessus de la mezzanine fait plus pour le confort d'été que n'importe quelle fenêtre de façade : l'air chaud sort au point le plus haut, et c'est précisément là qu'il s'accumule."
+        ]],
+        ["Menuiseries, quincaillerie et altitude", [
+          "Le bois-aluminium donne une face intérieure chaleureuse et une face extérieure sans entretien, et c'est la réponse habituelle pour une maison qui voyage. Le bois seul demande la même attention qu'un bardage bois ; le PVC seul travaille plus que la baie qui le reçoit.",
+          "En altitude, interrogez précisément la finition de la quincaillerie. Paumelles et poignées se dégradent bien avant le dormant, et les remplacer sur un ensemble monté n'est pas l'affaire de cinq minutes."
+        ]]
+      ],
+      "faq": [
+        ["Quelle surface vitrée pour une tiny house ?", "De quoi faire une ouverture généreuse vers la vue et une plus petite en face pour l'éclairage traversant. Au-delà, chaque mètre carré coûte de la chaleur en hiver et en apporte en été."],
+        ["Le triple vitrage en vaut-il la peine ?", "En altitude ou dans un hiver long, oui. Dans un climat doux, un bon double vitrage peut être le meilleur arbitrage une fois le surpoids compté."],
+        ["Faut-il des ouvrants avec une VMC ?", "Oui, au moins un à chaque extrémité. La VMC gère l'humidité, pas le balayage que l'on veut un soir chaud."]
+      ]
+    },
+    {
+      "slug": "tiny-house-materiaux-isolants",
+      "category": "technique-et-construction",
+      "name": "Isolation",
+      "title": "Isolants comparés : laine minérale, fibre de bois et panneaux rigides.",
+      "lead": "L'épaisseur est le chiffre de la brochure. Ce qui décide du confort, c'est le comportement du matériau quand la paroi devient humide, et la température de la maison en août.",
+      "sections": [
+        ["La laine minérale est la référence, pour de bonnes raisons", [
+          "Elle est peu coûteuse, incombustible, remplit les cavités irrégulières sans défaut et laisse passer la vapeur, ce qui permet à une paroi de sécher. Sa faiblesse : elle n'apporte rien au confort d'été, car légère, elle ne stocke presque aucune chaleur.",
+          "Elle se tasse aussi si elle n'est pas correctement maintenue dans une paroi qui voyage. Demandez comment les panneaux sont retenus : une cavité tassée laisse une bande froide en haut de la paroi que personne ne voit — jusqu'à la caméra thermique."
+        ]],
+        ["La fibre de bois achète l'été", [
+          "La fibre de bois est trois à quatre fois plus dense que la laine minérale, si bien que la chaleur extérieure met beaucoup plus longtemps à la traverser. Dans un bâtiment compact et léger, ce déphasage fait la différence entre une mezzanine utilisable en août et une qui ne l'est pas.",
+          "Elle coûte plus cher, pèse plus et exige la même lame d'air ventilée derrière le bardage. Pour une maison habitée toute l'année plutôt que louée en demi-saison, c'est en général le meilleur investissement."
+        ]],
+        ["Les panneaux rigides rachètent de l'épaisseur", [
+          "PIR et phénolique offrent la même résistance sur environ deux tiers de l'épaisseur, ce qui compte quand chaque centimètre de paroi est un centimètre de plancher. Le revers : ils sont pare-vapeur, donc la composition doit être conçue autour de cela, pas adaptée après coup.",
+          "Ils exigent aussi un adhésivage soigné à chaque joint. Une paroi en panneaux mal jointoyée performe moins bien qu'une laine minérale correctement posée, quoi qu'en dise la fiche technique."
+        ]],
+        ["Le pare-vapeur fait partie de l'isolation", [
+          "L'isolant ne fonctionne que sec. Un pare-vapeur côté chaud, continu et correctement étanché à chaque traversée, l'y maintient. Une seule boîte électrique mal adhésivée annule un mètre de paroi parfaite.",
+          "Demandez des photographies de cette couche avant fermeture. C'est l'image la plus informative d'un dossier de construction et la seule chose que vous ne pourrez pas inspecter ensuite."
+        ]],
+        ["Plancher et toiture ne posent pas le même problème", [
+          "Le plancher repose au-dessus d'un vide ventilé et perd sa chaleur dans un air extérieur en mouvement : il veut le même traitement qu'une paroi. La toiture reçoit le soleil d'été de plein fouet, et c'est là que le déphasage se rentabilise — l'argument de la fibre de bois y est le plus fort.",
+          "Demandez la composition des trois séparément. Une spécification qui annonce un seul chiffre pour toute l'enveloppe est une spécification qui n'a pas été réfléchie."
+        ]]
+      ],
+      "faq": [
+        ["Quel isolant convient le mieux ?", "Fibre de bois en toiture pour le confort d'été, laine minérale ou fibre de bois en parois, et panneaux rigides seulement là où l'épaisseur est réellement critique."],
+        ["Quelle épaisseur d'isolant ?", "Demandez la valeur U obtenue par élément plutôt qu'une épaisseur. La même valeur demande des épaisseurs différentes selon le matériau."],
+        ["Pourquoi ma mezzanine surchauffe-t-elle ?", "Presque toujours une toiture légère sans masse. C'est le déphasage, pas la résistance, qui gouverne les températures d'août."]
+      ]
+    },
+    {
+      "slug": "tiny-house-toiture",
+      "category": "technique-et-construction",
+      "name": "Toiture",
+      "title": "La toiture : pente, couverture et les détails qui fuient.",
+      "lead": "Un bâtiment compact a une grande toiture au regard de son volume : elle porte donc une part plus importante des performances thermiques et d'étanchéité que sur une maison ordinaire.",
+      "sections": [
+        ["La pente est fixée par la neige et la hauteur de transport", [
+          "Une pente plus forte évacue neige et pluie et ajoute de la hauteur — précisément la cote qu'un transport routier ne peut pas concéder. La plupart des conceptions transportables se situent entre cinq et quinze degrés ; au-delà, cela se paie en dérogations.",
+          "Là où la charge de neige est réelle, c'est la structure qui est dimensionnée pour elle, pas la pente. Une toiture faiblement pentée avec une ossature correctement calculée est plus sûre qu'une toiture forte avec une ossature optimiste."
+        ]],
+        ["Le joint debout est la couverture durable", [
+          "Un joint debout n'a aucune fixation traversant le plan d'étanchéité, et c'est pourquoi il survit à toutes les autres solutions sur un bâtiment qui travaille en transport. Il résonne sous la pluie, ce qui est un problème distinct, réglé par la masse et une couche résiliente.",
+          "Les membranes sont moins chères et parfaitement utilisables, avec une durée de vie plus courte et une sensibilité accrue au détail de chaque relevé. Demandez ce que couvre la garantie, et pour combien de temps."
+        ]],
+        ["Les débords valent leur largeur", [
+          "Un débord éloigne la pluie du bardage, ombre le vitrage en été et protège la tête de chaque baie. C'est la mesure de longévité la moins chère qui soit, et elle est systématiquement rognée pour gagner de la largeur de transport.",
+          "Là où un débord dépasserait 2,55 mètres, il peut être livré séparément et posé sur place. Demandez cette option plutôt que d'accepter une rive arasée."
+        ]],
+        ["Les traversées sont le point de défaillance", [
+          "Conduit de fumée, sorties de ventilation, fixations photovoltaïques et antenne percent toutes le plan d'étanchéité. Chacune demande un détail industriel, pas un cordon de mastic, et chacune devrait figurer au plan avant production.",
+          "Intégrez dès maintenant les traversées futures. Passer un conduit dans une toiture finie signifie ouvrir la composition et espérer que le pare-vapeur sera réparé aussi bien qu'il a été posé."
+        ]],
+        ["Gouttières et destination de l'eau", [
+          "Une petite toiture produit un volume surprenant lors d'une averse, et il atterrit précisément là où la maison rencontre le sol. Sans gouttière, cette eau rejaillit sur la planche basse du bardage — là où la pourriture commence.",
+          "Éloignez la descente de la maison, vers un puits d'infiltration ou une cuve. Un tuyau qui rejette au pied du mur ne résout rien."
+        ]]
+      ],
+      "faq": [
+        ["Quelle pente pour une tiny house ?", "En général cinq à quinze degrés. Plus fort évacue mieux la neige mais ajoute de la hauteur de transport, la cote qui déclenche les dérogations."],
+        ["Métal ou membrane ?", "Le joint debout dure le plus longtemps sur un bâtiment qui travaille en transport. La membrane est moins chère, avec une durée de vie plus courte et des détails plus sensibles."],
+        ["Faut-il des gouttières ?", "Oui. Sans elles, l'eau de toiture rejaillit sur la planche basse du bardage, et c'est là que la pourriture commence."]
+      ]
+    },
+    {
+      "slug": "tiny-house-installation-electrique",
+      "category": "technique-et-construction",
+      "name": "Électricité",
+      "title": "L'installation électrique : puissance, tableau et ce qu'il faut prévoir.",
+      "lead": "L'essentiel du travail électrique est invisible et irréversible. Deux décisions pèsent plus que le reste : la puissance dont vous disposez, et le tracé des câbles.",
+      "sections": [
+        ["Dimensionnez la puissance avant les appareils", [
+          "Un branchement modeste ne fera pas fonctionner ensemble un chauffe-eau instantané, une plaque à induction et une pompe à chaleur. Connaître la puissance disponible change la liste des appareils, pas l'inverse.",
+          "Là où la puissance est limitée, un délesteur — un régulateur qui coupe le chauffe-eau pendant que la plaque fonctionne — coûte moins cher qu'une augmentation de branchement. Demandez-le à la spécification, pas après le premier déclenchement."
+        ]],
+        ["Le tableau doit pouvoir grandir", [
+          "Prévoyez des modules libres. Un onduleur photovoltaïque, une batterie, une borne de recharge ou une annexe en demandent chacun un, et un tableau saturé signifie un coffret supplémentaire à un endroit où il n'a rien à faire.",
+          "La protection différentielle sur tous les circuits terminaux est aujourd'hui la norme et mérite d'être exigée quel que soit le minimum local. Dans un bâtiment avec prise extérieure et ossature acier, ce n'est pas une formalité."
+        ]],
+        ["Prises : comptez-les, puis ajoutez-en quatre", [
+          "Les petites maisons manquent de prises parce que le linéaire de paroi est court. Comptez ce que vous branchez un soir ordinaire — box, portable, lampes, chargeurs, bouilloire, aspirateur — et placez-les là où ces objets vivent plutôt qu'à intervalle régulier.",
+          "Deux à hauteur de plan en cuisine, deux à hauteur de bureau, une de chaque côté du lit et une sur la terrasse constituent un plancher raisonnable. Chacune est une note sur le plan aujourd'hui et une rallonge demain."
+        ]],
+        ["Mise à la terre d'une ossature acier", [
+          "Un châssis acier est une structure conductrice qui doit être correctement liaisonnée, et le schéma diffère selon que la maison est raccordée au réseau, alimentée par groupe ou en site isolé. C'est un point à faire documenter, pas à supposer.",
+          "Conservez le rapport de contrôle. C'est le document qu'un assureur demande après un sinistre, et celui que cherche le conseil d'un acheteur."
+        ]],
+        ["Prévoyez aussi les courants faibles", [
+          "Câble réseau jusqu'au bureau, passage pour une antenne extérieure, câble d'enceintes si vous en voulez, et un fourreau du tableau vers la toiture pour un futur photovoltaïque. Tout cela est trivial avant fermeture des parois et disproportionné après.",
+          "Laissez un tire-fil supplémentaire dans chaque fourreau. Cela ne coûte rien et c'est ce qui rend une modification ultérieure possible sans rien ouvrir."
+        ]]
+      ],
+      "faq": [
+        ["Quelle puissance pour une tiny house ?", "Cela dépend des appareils. Chauffe-eau instantané, induction et pompe à chaleur ne cohabiteront pas sur un petit branchement sans délestage."],
+        ["Combien de prises prévoir ?", "Plus que le plan ne le suggère. Comptez ce que vous branchez un soir ordinaire, placez-les où ces objets vivent, puis ajoutez-en."],
+        ["L'ossature acier demande-t-elle une mise à la terre particulière ?", "Elle demande un liaisonnement correct, et le schéma diffère entre réseau, groupe et site isolé. Faites-le documenter et gardez le rapport."]
+      ]
+    },
+    {
+      "slug": "tiny-house-vmc-double-flux",
+      "category": "technique-et-construction",
+      "name": "Ventilation",
+      "title": "La VMC double flux, expliquée pour une petite maison.",
+      "lead": "Dans un bâtiment compact et étanche, ce n'est pas une option de confort — c'est le système qui empêche les parois de se mouiller. C'est aussi celui qui est le plus souvent mal spécifié.",
+      "sections": [
+        ["Pourquoi une petite maison en a plus besoin", [
+          "Deux personnes produisent plusieurs litres de vapeur d'eau par jour en respirant, cuisinant et se lavant. Dans 200 mètres cubes, cela se dilue ; dans 70, non. Plus le volume est petit, plus l'humidité monte vite et plus tôt elle atteint la surface la plus froide.",
+          "Ouvrir une fenêtre fonctionne et jette la chaleur avec l'humidité. La récupération en conserve 80 à 90 pour cent, et dans une maison à faible besoin de chauffage, c'est l'essentiel de la facture."
+        ]],
+        ["Le dimensionnement porte sur les débits, pas sur la taille du caisson", [
+          "Le caisson se choisit sur le volume et le nombre d'occupants, et dans une tiny house cela signifie le plus petit du marché, tournant lentement. Un caisson surdimensionné fonctionne à sa vitesse basse la plus bruyante et cycle.",
+          "Demandez le débit de conception pièce par pièce : soufflage au séjour et au couchage, extraction en cuisine et salle de bains. Une spécification sans chiffres par pièce n'a pas été conçue."
+        ]],
+        ["Les conduits décident si cela fonctionne", [
+          "Parcours courts, intérieur lisse, coudes larges et raccord étanche à chaque jonction. Une gaine souple annelée tirée serrée dans un angle divise le débit par deux, et c'est le défaut d'installation le plus fréquent, tous bâtiments confondus.",
+          "Tracez les conduits sur le plan. Un caisson casé dans l'espace restant hérite du pire tracé possible et d'un placard inutilisable."
+        ]],
+        ["Filtres et bruit font l'expérience quotidienne", [
+          "Deux filtres, deux fois par an : c'est tout l'entretien — et c'est la routine qui décide si le système fonctionne encore en cinquième année. Achetez les filtres par paires et posez un rappel dans l'agenda.",
+          "Implantez le caisson loin du couchage et sur suspensions souples. Il tourne en continu, donc tout ce qui est audible devient insupportable au lieu de devenir familier."
+        ]],
+        ["Bypass d'été et protection antigel", [
+          "Un bypass d'été empêche le caisson de récupérer une chaleur dont vous ne voulez pas par nuit chaude. La protection antigel empêche l'échangeur de givrer par grand froid. Les deux sont standard sur les bons caissons et absentes des bon marché.",
+          "En altitude, la stratégie antigel compte : une batterie de préchauffage consomme, un cycle de dégivrage interrompt le débit. Demandez laquelle est utilisée avant la commande."
+        ]]
+      ],
+      "faq": [
+        ["Ne puis-je pas simplement ouvrir une fenêtre ?", "Pour un balayage, si. Pour l'évacuation quotidienne de l'humidité dans une maison étanche, non — vous jetteriez la chaleur payée, plusieurs fois par jour, tout l'hiver."],
+        ["Quel entretien demande une VMC double flux ?", "Deux filtres deux fois par an, et garder l'évacuation des condensats libre. C'est toute la routine, et la sauter divise le débit par deux."],
+        ["Est-ce bruyant ?", "Pas si le caisson est correctement dimensionné et suspendu souplement, loin du couchage. Un caisson trop grand est la cause habituelle des plaintes."]
+      ]
+    },
+    {
+      "slug": "tiny-house-solutions-de-rangement",
+      "category": "amenagement-et-interieur",
+      "name": "Rangement",
+      "title": "Où se trouve réellement le rangement dans une tiny house.",
+      "lead": "Deux adultes ont besoin de six à huit mètres cubes. Voici d'où ils viennent, dans l'ordre de ce que chaque emplacement restitue.",
+      "sections": [
+        ["Sous le lit, en premier et de loin", [
+          "Une estrade de lit double contient environ 1,5 mètre cube — un cinquième de tout ce qu'il vous faut, au seul endroit qui ne coûte aucune surface au sol. Des tiroirs sur coulisses valent mieux qu'un sommier relevable, qui oblige à déplacer le matelas.",
+          "Compartimentez : un tiroir pour les vêtements hors saison, un pour la literie, un pour ce qui sert deux fois par an. Un volume non divisé devient un endroit où les choses disparaissent."
+        ]],
+        ["Toute hauteur vaut mieux que large", [
+          "Une armoire de 600 mm allant du sol au plafond contient plus qu'une de 1200 mm s'arrêtant à hauteur de tête, et prend la moitié de la paroi. Dans un plan compact, les 600 mm supérieurs de chaque paroi sont le volume le plus sous-utilisé du bâtiment.",
+          "Placez ce que vous prenez chaque jour entre genou et épaule, et tout le reste au-dessus et au-dessous. Un marchepied est un sacrifice moindre qu'une seconde armoire."
+        ]],
+        ["L'escalier est du mobilier", [
+          "Chaque marche d'un escalier de mezzanine peut être un tiroir, et huit marches donnent environ un demi-mètre cube à un endroit qui autrement ne contient rien. Cela se conçoit dès le départ ; un escalier construit ne se creuse pas après coup.",
+          "Le volume à côté de l'escalier, sous les marches basses, accueille les objets hauts et encombrants — l'aspirateur, la planche à repasser, le balai."
+        ]],
+        ["L'extérieur prend ce qui n'a rien à faire dedans", [
+          "Vélos, outils de jardin, bois de chauffage, matériel de sport et le store d'été n'ont rien à faire dans une enveloppe compacte. Un coffre étanche sur la terrasse ou contre la façade nord est le mètre cube le moins cher de tout le projet.",
+          "Prévoyez-le avec la maison plutôt que de l'acheter ensuite. Sa position influe sur l'aménagement de la terrasse et, sur une petite parcelle, sur la vue du voisin."
+        ]],
+        ["Les endroits que l'on oublie", [
+          "Au-dessus des portes, derrière la porte de la salle de bains, dans l'épaisseur de la cloison entre deux pièces, dans le plinthe sous les meubles de cuisine, et sous le plancher surélevé de la mezzanine. Aucun n'est grand ; ensemble ils font un mètre cube de plus.",
+          "Aucun ne s'ajoute ensuite sans ouvrir une surface finie. Demandez-les au stade du plan et retenez ceux qui correspondent à votre manière de vivre."
+        ]]
+      ],
+      "faq": [
+        ["Quel volume de rangement faut-il ?", "Six à huit mètres cubes pour deux adultes en résidence permanente. La moitié en plus avec un enfant."],
+        ["Quel est le meilleur gain ?", "Les tiroirs sous le lit — environ 1,5 mètre cube sans aucune surface au sol. Compartimentés, pas en un seul volume ouvert."],
+        ["Peut-on ajouter du rangement plus tard ?", "En meuble libre oui, au prix de surface au sol. En intégré — tiroirs d'escalier, épaisseur de cloison, vide sous mezzanine — non : il faut ouvrir une surface finie."]
+      ]
+    },
+    {
+      "slug": "tiny-house-vivre-a-deux",
+      "category": "usage-et-modele-economique",
+      "name": "À deux",
+      "title": "À deux dans une tiny house : d'où viennent réellement les frictions.",
+      "lead": "Pas des mètres carrés. Du fait qu'il n'y a nulle part où être hors de portée de voix, et que tout ce que l'un laisse traîner est dans le champ de vision de l'autre.",
+      "sections": [
+        ["Un endroit où être seul compte plus que la surface", [
+          "La raison la plus fréquente pour laquelle un couple quitte une maison compacte est qu'aucun des deux ne peut être hors du regard de l'autre. Une porte, une différence de niveau ou une mezzanine fermable règlent cela ; un rideau non. C'est une décision de plan, prise une fois.",
+          "Même là où une seconde pièce est impossible, une assise tournée dans l'autre sens, avec son propre éclairage, fait plus que deux mètres carrés d'espace ouvert supplémentaires."
+        ]],
+        ["La séparation acoustique est la moitié de la réponse", [
+          "Une personne au téléphone occupe toute la maison si la cloison n'a pas de masse. Remplir la lame et doubler le parement d'un côté coûte quelques centimètres et transforme une séparation visuelle en séparation réelle.",
+          "La porte de la salle de bains compte autant. Dans un plan compact elle ouvre sur le séjour, et un vantail creux fait de chaque usage de la pièce un événement partagé."
+        ]],
+        ["Deux de chaque, ou un accord", [
+          "Une tringle, un plan de travail, un bureau : les ressources partagées dans une petite maison demandent soit le doublement, soit un accord. Doubler coûte du volume ; l'accord ne coûte rien et doit être réellement passé plutôt que supposé.",
+          "La forme pratique en est des zones dédiées — ton étagère, mon tiroir, cette moitié de tringle. Cela paraît mesquin et c'est ce qui rend une maison compacte tenable sur des années."
+        ]],
+        ["Cuisiner et ranger se font dans le séjour", [
+          "En plan ouvert, celui qui cuisine est dans la pièce de celui qui se détend. Des appareils silencieux, une hotte sous 50 dB et assez de plan de travail pour éviter l'encombrement ne sont pas du luxe ici — ils empêchent l'activité de l'un de dominer la soirée.",
+          "Il en va de même du lave-linge. Lancez-le quand vous sortez, ou choisissez-en un assez silencieux pour tourner quand vous êtes là."
+        ]],
+        ["L'extérieur double la maison", [
+          "Une terrasse couverte est la seconde pièce qu'un plan compact ne peut pas contenir, et pour deux personnes c'est de là que vient la distance supplémentaire. Six mois d'extérieur utilisable changent l'expérience plus que n'importe quelle modification intérieure.",
+          "Donnez-lui deux places assises, pas une. Ainsi la même astuce — être au même endroit sans être l'un sur l'autre — fonctionne aussi dehors."
+        ]]
+      ],
+      "faq": [
+        ["Les couples tiennent-ils dans une tiny house ?", "Beaucoup, pendant des années. Ceux qui partent le font en général parce qu'il n'y a nulle part où être seul, pas à cause de la surface."],
+        ["Qu'est-ce qui compte le plus à deux ?", "Une seconde pièce fermable, et une cloison avec assez de masse pour la rendre réelle. MD 3 est construit autour de cela."],
+        ["Un plan ouvert fonctionne-t-il ?", "Pour une personne, très bien. Pour deux, seulement avec une séparation acoustique et visuelle réelle quelque part dans le plan."]
+      ]
+    },
+    {
+      "slug": "tiny-house-accessibilite",
+      "category": "amenagement-et-interieur",
+      "name": "Accessibilité",
+      "title": "Une tiny house qui fonctionne encore à soixante-dix ans.",
+      "lead": "La plupart des plans compacts supposent une échelle et une salle de bains où l'on se tourne de profil. Les deux vont très bien à quarante ans et aucun à soixante-dix — et les deux sont peu coûteux à changer sur le plan.",
+      "sections": [
+        ["Dormir de plain-pied est toute la décision", [
+          "Tout le reste du vieillissement dans une maison compacte se gère ; une mezzanine desservie par un escalier raide, non. Un couchage au rez-de-chaussée — MD 3 ou plus grand — fait de la maison une proposition à vingt ans plutôt qu'à dix.",
+          "Si la mezzanine est la seule option, demandez un vrai escalier avec main courante plutôt qu'une échelle, avec un giron assez profond pour descendre de face. Cette différence compte bien avant soixante-dix ans."
+        ]],
+        ["Portes et passages libres", [
+          "Un vantail de 800 mm et un cheminement libre de 900 mm à travers le plan ne coûtent presque rien en conception et font la différence entre une maison où un déambulateur passe et une où il ne passe pas.",
+          "Évitez les seuils. Une transition de plain-pied vers la terrasse aide quiconque a quelque chose à roulettes — une valise, une poussette, un fauteuil — et c'est le même détail qui agrandit la maison."
+        ]],
+        ["La salle de bains est la plus difficile à reprendre", [
+          "Une douche de plain-pied sans relevé, des renforts dans les cloisons pour de futures barres d'appui, et une porte qui ouvre vers l'extérieur : trois lignes de spécification. En ajouter une plus tard signifie mettre la pièce à nu jusqu'à l'ossature.",
+          "Les renforts surtout ne coûtent rien maintenant : un contreplaqué derrière la plaque, là où une barre pourrait venir un jour. Personne ne le regrette."
+        ]],
+        ["Portée, lumière et interrupteurs", [
+          "Prises à 450 mm plutôt qu'en plinthe, interrupteurs à 1000 mm, et cordons de tirage plutôt que boutons rotatifs quand c'est possible. Tout cela relève de la pratique standard d'accessibilité et rien n'a l'air institutionnel quand c'est intégré au projet.",
+          "Le niveau d'éclairement compte plus avec l'âge que la plupart ne l'imaginent. Un éclairage en couches — ambiant, fonctionnel, et un cheminement nocturne vers la salle de bains — mérite autant de soin que la lumière du jour."
+        ]],
+        ["Le trajet depuis la voiture", [
+          "Le cheminement, la marche à la porte et la pente du terrain décident si la maison est atteignable. Un intérieur parfait au sommet de trois marches et d'une pente en gravier n'est pas accessible.",
+          "Traitez cela quand la terrasse est dessinée. Une rampe ajoutée après coup est une rampe qui a l'air ajoutée après coup."
+        ]]
+      ],
+      "faq": [
+        ["Une tiny house convient-elle à un acheteur âgé ?", "Oui, avec couchage de plain-pied, douche sans ressaut et aucun seuil. Le plan à mezzanine seule est la seule configuration qui vieillit mal."],
+        ["Que faut-il prévoir dès maintenant ?", "Des renforts derrière les cloisons de la salle de bains, des portes de 800 mm, une transition de terrasse sans seuil et des prises à 450 mm. Les quatre gratuits en conception."],
+        ["Quel modèle convient le mieux ?", "MD 3 ou plus grand, pour la pièce de plain-pied. Les plans plus larges offrent aussi le cheminement libre de 900 mm qu'un plan à mezzanine seule n'a pas."]
+      ]
+    },
+    {
+      "slug": "tiny-house-avec-animaux",
+      "category": "amenagement-et-interieur",
+      "name": "Animaux",
+      "title": "Une tiny house avec un chien ou un chat : les détails pratiques.",
+      "lead": "Un animal dans une maison compacte est surtout une question de rangement et de revêtement de sol, plus une chose à laquelle personne ne pense avant que cela n'arrive : ce que fait la maison quand vous sortez.",
+      "sections": [
+        ["Le sol encaisse", [
+          "Les griffes marquent les finitions tendres et les pattes mouillées trouvent chaque joint non étanché. Un sol souple à joints soudés ou fermés encaisse les deux ; un résineux huilé non. C'est la décision de finition sur laquelle il vaut la peine de dépenser.",
+          "Gardez une zone résistante près de la porte, avec un caisson à paillasson ou un bac encastré. Dans un petit plan, l'entrée est aussi le séjour : la saleté n'a nulle part où rester si vous ne l'avez pas prévu."
+        ]],
+        ["Gamelles et couchage demandent une place dessinée", [
+          "Des gamelles au milieu d'un sol compact sont un obstacle. Une niche dans la plinthe de cuisine, ou une réservation peu profonde sous l'escalier, les sort du cheminement sans coûter de surface.",
+          "Idem pour le panier. Un couchage d'animal mal placé bloque le seul passage libre de la maison ; bien placé, il occupe un coin qui ne servait à rien."
+        ]],
+        ["Le rangement de l'animal est un volume réel", [
+          "Croquettes, laisses, serviettes, jouets, litière, une caisse de transport et le carnet de santé font une étagère et demie. Ce n'est pas énorme et c'est exactement le volume oublié quand on écrit le tableau des rangements.",
+          "Un bac à litière demande une place ventilée hors du séjour. Dans un plan compact la réponse est en pratique la salle de bains, ce qui veut dire qu'elle doit être dimensionnée pour."
+        ]],
+        ["Sortir est ce que personne ne prévoit", [
+          "Un bâtiment compact bien étanche avec la ventilation en marche est confortable en votre absence. Sans ventilation, un jour d'été, non — et contrairement à une grande maison, il chauffe en une heure, pas en un après-midi.",
+          "Prévoyez un bypass d'été sur la ventilation et une protection solaire extérieure sur le vitrage principal. Ces deux points ensemble rendent la maison sûre pour y laisser un animal."
+        ]],
+        ["Accès extérieur et terrasse", [
+          "Une chatière à travers une paroi isolée est un détail, pas un trou — il lui faut un fourreau isolé et étanché, sinon elle devient un pont thermique et un courant d'air. Demandez-la avant production.",
+          "Une portion de terrasse clôturée ou masquée fait plus pour un chien que n'importe quel aménagement intérieur, et c'est le même écran qui vous donne de l'intimité."
+        ]]
+      ],
+      "faq": [
+        ["Quel sol avec un chien ?", "Un sol souple à joints soudés ou fermés. Le résineux huilé se marque et laisse l'eau entrer dans les joints."],
+        ["Peut-on y laisser un animal en sécurité ?", "Avec la ventilation en marche et une protection solaire extérieure sur le vitrage principal, oui. Sans les deux, une maison compacte chauffe en une heure l'été."],
+        ["Où mettre le bac à litière ?", "En pratique la salle de bains — ce qui signifie qu'elle doit être dimensionnée en conséquence."]
+      ]
+    },
+    {
+      "slug": "tiny-house-en-hiver",
+      "category": "exploitation-et-entretien",
+      "name": "Hiver",
+      "title": "Une tiny house en hiver : quoi faire et quand.",
+      "lead": "Rien de l'hiver n'est difficile dans une maison compacte bien construite. C'est simplement une courte liste de choses à faire avant le froid plutôt que pendant.",
+      "sections": [
+        ["Octobre : l'eau", [
+          "Vérifiez que le cordon chauffant fonctionne, que la vanne de vidange tourne, et calorifugez tout ce qui traverse un volume non chauffé et ne l'est pas déjà. Une canalisation gelée est la panne hivernale la plus fréquente et la plus totalement évitable.",
+          "Si la maison doit rester vide, décidez maintenant si vous vidangez ou maintenez une température de base. Les deux marchent ; décider en janvier non."
+        ]],
+        ["Novembre : l'enveloppe", [
+          "Faites le tour et regardez quatre choses : les joints autour des menuiseries, la planche basse du bardage, la gouttière, et si quelque chose est appuyé contre le mur en retenant l'humidité. Vingt minutes, une fois par an.",
+          "Dégagez les sorties de ventilation des feuilles et vérifiez que l'évacuation des condensats coule. Une évacuation bouchée en décembre est une fuite d'eau dans une paroi en février."
+        ]],
+        ["Décembre à février : humidité et chaleur", [
+          "Laissez la ventilation tourner en continu plutôt que de la booster de temps en temps. Une extraction continue à bas débit est ce qui maintient l'humidité sous le point où la condensation se forme sur la surface la plus froide.",
+          "Résistez à l'envie de tout calfeutrer pour économiser. La récupération conserve déjà l'essentiel ; fermer la maison est la façon d'obtenir des moisissures derrière l'armoire."
+        ]],
+        ["La neige, si elle tient", [
+          "Une toiture faiblement pentée retient la neige au lieu de l'évacuer, ce qui va très bien si la structure a été calculée pour la charge locale et pose problème sinon. Demandez le chiffre à la spécification, pas quand il neige.",
+          "Dégagez la neige du pied de bardage et de la porte de terrasse. De la neige contre du bois, qui fond et regèle, est plus dure pour une façade que la pluie."
+        ]],
+        ["Mars : ce qu'on vérifie avant de relâcher", [
+          "Reprenez les quatre mêmes points, remplacez les filtres de ventilation, et inspectez la mezzanine pour tout signe de condensation pendant l'hiver. L'humidité là est le signal le plus précoce d'un problème de ventilation.",
+          "Notez ce que vous avez trouvé. Un carnet d'hiver d'une page transforme un problème inexpliqué en cinquième année en un diagnostic de cinq minutes."
+        ]]
+      ],
+      "faq": [
+        ["Peut-on y vivre tout l'hiver ?", "Oui, en exécution quatre saisons : isolation suffisante, ventilation continue, protection antigel et une source de chaleur dimensionnée sur la température de base du site."],
+        ["Quelle est la panne hivernale la plus fréquente ?", "Une canalisation gelée dans un volume non chauffé ou au robinet extérieur. Cordon chauffant et vanne de vidange l'évitent totalement."],
+        ["Faut-il baisser la ventilation pour économiser ?", "Non. La récupération conserve déjà l'essentiel, et réduire le débit est précisément la façon dont l'humidité atteint la surface froide et s'y condense."]
+      ]
+    },
+    {
+      "slug": "tiny-house-surchauffe-estivale",
+      "category": "energie-et-autonomie",
+      "name": "Été",
+      "title": "Empêcher une tiny house de surchauffer en été.",
+      "lead": "Un bâtiment petit, bien isolé et largement vitré chauffe vite et n'a presque aucune masse pour l'absorber. Trois mesures règlent cela et les trois se décident avant production.",
+      "sections": [
+        ["Ombrez le verre par l'extérieur", [
+          "Une fois le soleil passé, la chaleur est à l'intérieur. Un débord, un volet ou un écran extérieur l'interceptent ; un store intérieur la convertit en chaleur rayonnante et réchauffe la pièce quand même. L'écart d'efficacité est d'environ un facteur trois.",
+          "Un débord fixe dimensionné sur la hauteur du soleil d'été bloque le soleil haut de juillet et laisse passer celui, bas, de décembre. C'est une cote sur le plan, pas un produit."
+        ]],
+        ["Donnez de la masse à la toiture", [
+          "La toiture reçoit le plus de rayonnement, et une composition légère le transmet directement en milieu d'après-midi. Un isolant plus dense — fibre de bois plutôt que laine minérale — retarde ce transfert de plusieurs heures, assez pour repousser le pic après le coucher.",
+          "C'est pourquoi la mezzanine est toujours l'endroit le plus chaud d'une maison compacte, et pourquoi c'est l'élément à améliorer si le budget ne permet qu'une chose."
+        ]],
+        ["Balayez la nuit, fermez le jour", [
+          "L'habitude méditerranéenne fonctionne partout : ouvrir quand l'air extérieur est plus frais que l'intérieur, fermer et ombrer quand il ne l'est pas. Dans un petit volume l'air se renouvelle vite, donc deux heures de balayage en soirée réinitialisent réellement la maison.",
+          "Cela demande un ouvrant à chaque extrémité et une fenêtre de toit au-dessus de la mezzanine. Une maison entièrement en verre fixe ne peut pas le faire du tout."
+        ]],
+        ["Le rafraîchissement, si nécessaire", [
+          "Une pompe à chaleur air-air s'inverse en été, et dans une maison compacte la plus petite unité suffit largement. Elle consomme de l'électricité précisément quand le photovoltaïque produit le plus, ce qui en fait le partenaire naturel d'un champ en toiture.",
+          "Dimensionnez-la sur la maison ombrée et balayée, pas sur celle qui ne l'est pas. Rafraîchir un bâtiment mal ombré est la façon coûteuse de résoudre un problème de plan."
+        ]],
+        ["Où se trouvent les appareils", [
+          "Un réfrigérateur dans un angle ensoleillé, une box dans un placard fermé et un onduleur dans un vide non ventilé ajoutent tous de la chaleur et raccourcissent leur propre vie. Dans un petit volume, la somme se remarque.",
+          "Donnez à chacun une position ventilée. Cela ne coûte rien au stade du plan et c'est une des raisons pour lesquelles certaines maisons compactes semblent chaudes sans cause apparente."
+        ]]
+      ],
+      "faq": [
+        ["Pourquoi ma tiny house surchauffe-t-elle ?", "En général une toiture légère plus un vitrage non ombré. Les deux se règlent en conception, et les stores intérieurs ne remplacent pas une protection extérieure."],
+        ["Faut-il une climatisation ?", "Rarement, si le verre est ombré par l'extérieur et la toiture a de la masse. Là où il en faut, une pompe à chaleur réversible est la plus petite et s'accorde bien au photovoltaïque."],
+        ["Le balayage nocturne fonctionne-t-il vraiment ?", "Dans un petit volume oui — l'air se renouvelle assez vite pour que deux heures en soirée réinitialisent la maison. Il faut des ouvrants aux deux extrémités."]
+      ]
+    },
+    {
+      "slug": "tiny-house-assurance",
+      "category": "autorisation-et-droit",
+      "name": "Assurance",
+      "title": "Assurer une tiny house : ce que les questions demandent réellement.",
+      "lead": "Les assureurs classent avant de tarifer, et chaque question délicate porte sur la catégorie dans laquelle tombe le bâtiment. Y répondre clairement est l'essentiel du travail.",
+      "sections": [
+        ["Meuble ou immeuble est la première bifurcation", [
+          "Une maison sur fondation permanente, raccordée aux réseaux, s'assure comme un bâtiment. La même maison sur roues et non raccordée relève d'un contrat plus proche du loisir. Prime, garanties et gestion du sinistre diffèrent toutes les trois.",
+          "Dites laquelle des deux avant de demander un devis. Un contrat souscrit sous la mauvaise description est un contrat qui peut ne pas payer."
+        ]],
+        ["L'usage change tout", [
+          "Résidence permanente, usage de loisir, location courte durée et inoccupation de plusieurs mois sont quatre risques différents. L'inoccupation en particulier comporte des clauses — beaucoup de contrats réduisent la garantie après trente ou soixante jours.",
+          "Si vous louez, il vous faut un contrat couvrant des hôtes payants. Un contrat particulier les exclut généralement en totalité, et cette exclusion apparaît au sinistre plutôt qu'à la souscription."
+        ]],
+        ["Ce qu'ils demanderont sur la construction", [
+          "Matériau d'ossature et de bardage, présence d'un poêle à bois, mode d'ancrage, et existence d'un rapport de contrôle de l'installation électrique. Chaque réponse déplace le prix, et un rapport que vous avez déjà le déplace vers le bas.",
+          "Conservez le dossier de construction. Photographies de l'ossature et du pare-vapeur, attestation électrique, rapport de pose du conduit — c'est la différence entre un sinistre simple et une discussion."
+        ]],
+        ["Ancrage et vent", [
+          "Un bâtiment léger pose une question de soulèvement au vent qu'une maison maçonnée ne pose pas. Les assureurs demandent comment il est retenu, et sur une parcelle exposée ils le demandent précisément. Un détail d'ancrage étudié avec calcul y répond.",
+          "Cela vaut aussi pour vous. Le soulèvement est le mode de défaillance qui endommage un bâtiment compact le plus gravement et le plus soudainement."
+        ]],
+        ["Contenu, responsabilité et terrasse", [
+          "La garantie contenu se sous-estime facilement dans une petite maison — un aménagement intégré signifie qu'une grande part de ce que vous appelleriez ailleurs contenu fait ici partie du bâtiment. Demandez de quel côté de la ligne se trouve le mobilier fixe.",
+          "La responsabilité civile compte dès que d'autres utilisent la terrasse, et elle est généralement peu coûteuse. Elle est aussi généralement absente du premier devis, sauf si vous la demandez."
+        ]]
+      ],
+      "faq": [
+        ["Peut-on assurer une tiny house normalement ?", "Oui, une fois correctement classée. Sur fondation permanente avec raccordements comme bâtiment ; sur roues et non raccordée, c'est un autre produit."],
+        ["La location demande-t-elle un autre contrat ?", "Oui. Un contrat particulier exclut généralement les hôtes payants en totalité, et l'exclusion se révèle au sinistre."],
+        ["Quels documents demanderont-ils ?", "L'attestation électrique, le rapport du conduit s'il y a un poêle, le détail d'ancrage et idéalement des photographies du chantier. Les avoir fait baisser le prix."]
+      ]
+    },
+    {
+      "slug": "tiny-house-valeur-de-revente",
+      "category": "comparaison-et-alternatives",
+      "name": "Revente",
+      "title": "Ce que vaut une tiny house dans cinq ans, et ce qui tient cette valeur.",
+      "lead": "Les bâtiments compacts se déprécient très différemment selon trois choses : la structure, les documents, et la possibilité pour l'acheteur de la poser quelque part.",
+      "sections": [
+        ["La structure fixe le plancher", [
+          "Une ossature acier avec une enveloppe correctement exécutée est un bâtiment de cinquante ans et se valorise comme tel. Une unité de loisir légère est conçue pour un usage saisonnier et se valorise sur une courbe plus proche d'une caravane.",
+          "C'est de loin le facteur principal et il se décide à l'achat. Rien de ce que vous ferez ensuite ne déplace un bâtiment d'une catégorie à l'autre."
+        ]],
+        ["Les documents valent de l'argent réel", [
+          "Un chantier documenté — photographies d'ossature, composition d'isolation, attestation électrique, rapport de conduit, carnet d'entretien — permet à l'acheteur de vérifier ce qu'il achète. Sans cela il tarife un risque, et la décote dépasse ce que le dossier coûtait à tenir.",
+          "Ouvrez le dossier à la réception. Le reconstituer trois ans plus tard est impossible précisément pour les parties qui comptent."
+        ]],
+        ["La possibilité d'implantation est ce que l'acheteur achète vraiment", [
+          "Une maison qui tient dans le transport routier ordinaire, ne demande aucune dérogation pour être déplacée et dispose d'une interface de fondation documentée peut aller partout. Une de 3,2 mètres de large vaut moins parce que la déplacer est un projet.",
+          "Les 2,55 mètres ne sont pas qu'un confort de livraison. C'est ce qui garde ouvertes les options du second acheteur."
+        ]],
+        ["Ce qui vieillit mal", [
+          "Les intérieurs très typés, les couleurs inhabituelles, le sur-mesure non remplaçable, et tout ce qui date fortement. Dans une petite maison, chacun de ces éléments représente une grande part de ce que voit l'acheteur.",
+          "Gardez les éléments fixes neutres et mettez la personnalité dans ce qui se déplace. Ce n'est pas un compromis ; c'est ce qui fait que la maison fonctionne aussi pour l'occupant suivant."
+        ]],
+        ["Le marché de l'occasion compacte", [
+          "Il existe, il est étroit, et il fonctionne à la confiance. Photographies de la phase de construction, mesure d'humidité et examen du dessous de châssis sont ce que vérifie un acheteur informé — donc ce que prépare un vendeur informé.",
+          "Positionnez le prix face au neuf comparable augmenté des travaux de terrain déjà réalisés. Une maison déjà posée, raccordée et autorisée vaut plus que la même sur un camion."
+        ]]
+      ],
+      "faq": [
+        ["Une tiny house tient-elle sa valeur ?", "Une ossature acier avec une bonne enveloppe et un dossier, largement oui. Une unité saisonnière légère se déprécie beaucoup plus vite."],
+        ["Qu'est-ce qui pèse le plus à la revente ?", "La structure d'abord, puis la documentation, puis la possibilité de déplacer la maison en transport ordinaire."],
+        ["Faut-il garder les photos de chantier ?", "Oui — c'est la seule preuve de ce qui se trouve dans une paroi fermée, et un acheteur qui ne les a pas tarife un risque supérieur à ce que le dossier valait."]
+      ]
+    },
+    {
+      "slug": "tiny-house-preparation-du-terrain",
+      "category": "transport-et-import",
+      "name": "Terrassement",
+      "title": "Préparer le terrain : le planning de la décision à la livraison.",
+      "lead": "La maison se construit en semaines et le terrain met souvent plus longtemps à être prêt. Les mener dans le mauvais ordre est la cause la plus fréquente d'une maison qui attend sur un camion.",
+      "sections": [
+        ["Commencez toujours par les réseaux", [
+          "Les délais de raccordement vont de quelques semaines à un an selon la région et le gestionnaire. C'est le poste le plus long du planning et celui que l'on lance le plus souvent en dernier, après la commande de la maison.",
+          "Déposez la demande dès que la parcelle est sécurisée, avant même le choix du modèle. Tout le reste peut être comprimé ; cela non."
+        ]],
+        ["Reconnaissance de sol avant terrassement", [
+          "Un sondage coûte peu et détermine le type de fondation, qui détermine le coût et la durée du terrassement. S'en passer, c'est le découvrir pendant la fouille, quand la machine est déjà sur place et facturée à la journée.",
+          "Sur terrain en pente ou remblayé, demandez en même temps un avis d'ingénieur. Deux visites au départ évitent une reprise de conception à mi-parcours."
+        ]],
+        ["L'accès avant toute livraison", [
+          "L'itinéraire depuis la voie publique jusqu'à la position finale doit accepter un camion et une grue. Élargir un portail, tailler une branche, poser une piste provisoire ou obtenir un arrêté de circulation sont autant de postes à délai, en semaines.",
+          "Faites le parcours avec un mètre et un appareil photo. Photographiez l'entrée, le point le plus étroit, le dernier virage et l'emplacement de la grue, et envoyez le tout avec les cotes."
+        ]],
+        ["Séquencez le terrassement pour qu'il puisse durcir", [
+          "Le béton demande du temps. Une semelle coulée la semaine précédant la livraison est chargée avant d'avoir atteint sa résistance. Intégrez cette attente au planning plutôt que de la découvrir.",
+          "Les pieux vissés l'évitent entièrement, ce qui explique en partie qu'ils conviennent à un calendrier serré, même là où une semelle serait autrement préférable."
+        ]],
+        ["La semaine avant la livraison", [
+          "Confirmez la grue, contrôlez les niveaux à l'instrument, dégagez l'aire de stationnement, prévoyez des plaques si le sol est meuble, et assurez-vous qu'une personne habilitée à décider est sur place. Une livraison sans décideur est une livraison qui s'arrête.",
+          "Faites amener les réseaux là où la maison les rencontre, bouchonnés et repérés. Raccorder le jour même est une matinée ; creuser le jour même est une semaine."
+        ]]
+      ],
+      "faq": [
+        ["Combien de temps prend la préparation ?", "Le terrassement, quelques jours à quinze jours. Les raccordements, quelques semaines à un an — et ce sont eux qui fixent le planning."],
+        ["Par quoi commencer ?", "Par la demande de raccordement, avant le choix du modèle. Tout le reste peut être comprimé ; les délais des gestionnaires non."],
+        ["Qu'oublie-t-on le plus souvent ?", "L'accès. Élargir un portail ou obtenir un arrêté de circulation a un délai, et cela se découvre le jour de la livraison plus souvent que tout autre problème."]
+      ]
+    },
+    {
+      "slug": "tiny-house-eclairage",
+      "category": "amenagement-et-interieur",
+      "name": "Éclairage",
+      "title": "Éclairer une tiny house : trois couches, pas un plafonnier.",
+      "lead": "Un seul plafonnier puissant fait ressembler une petite pièce à une petite pièce. Un éclairage en couches fait lire le même volume comme plusieurs endroits.",
+      "sections": [
+        ["La lumière ambiante devrait être indirecte", [
+          "Une trame de spots dans un plafond compact aplatit tout et projette votre ombre sur ce que vous faites. Une lumière renvoyée par le plafond ou une paroi donne le même éclairement sans cette platitude ni l'éblouissement depuis un lit en mezzanine.",
+          "Une gorge lumineuse ou une ligne indirecte au-dessus du plan de cuisine est la réponse habituelle. Cela coûte un détail sur le plan et rien ensuite."
+        ]],
+        ["De la lumière fonctionnelle là où sont les tâches", [
+          "Éclairage sous meuble sur le plan de travail, une lampe orientable au bureau, une liseuse de chaque côté du lit. Chacune est petite, chacune sur son propre circuit, et ensemble elles permettent d'éclairer une partie de la maison sans l'éclairer entièrement.",
+          "Cette sélectivité est ce qui agrandit un intérieur compact après la tombée du jour : un coin éclairé et un autre tamisé se lisent comme deux espaces."
+        ]],
+        ["L'éclairage d'accent fait le reste", [
+          "Un seul luminaire soulignant une matière — le bardage d'un mur, une étagère, une plante — donne à l'œil un endroit où aller. Dans une petite pièce c'est disproportionnellement efficace et cela coûte un circuit.",
+          "Dehors, une lampe sur un arbre de terrasse ou la façade étend l'espace visuel au-delà du verre. La nuit, une baie non éclairée est un miroir noir ; un extérieur éclairé vous rend la vue."
+        ]],
+        ["Température de couleur et variation", [
+          "Blanc chaud, autour de 2700 K, partout où l'on se détend ; neutre, autour de 3500 K, au-dessus du plan de travail et du bureau. Les mélanger dans une même ligne de vue ressemble à une erreur : décidez la frontière sur le plan.",
+          "Faites varier tout ce qui peut l'être. Dans un petit volume, l'écart entre pleine puissance et un quart est l'écart entre une cuisine et un séjour."
+        ]],
+        ["Le câblage est une décision de production", [
+          "Chaque circuit, position d'interrupteur et emplacement de driver est figé à la fermeture des parois. Ajouter un va-et-vient à la mezzanine, ou une prise de lampadaire là où viendra le canapé, est une ligne sur le plan maintenant et une saignée dans une paroi finie ensuite.",
+          "Reportez le mobilier sur le plan avant d'implanter l'éclairage. Un éclairage conçu sur un plan vide atterrit aux mauvais endroits."
+        ]]
+      ],
+      "faq": [
+        ["Combien de points lumineux faut-il ?", "Moins de luminaires qu'une trame de spots, mais sur davantage de circuits séparés. La sélectivité compte plus que la quantité."],
+        ["Quelle température de couleur ?", "Autour de 2700 K là où l'on se détend et 3500 K au-dessus des plans de travail. Ne les mélangez pas dans une même ligne de vue."],
+        ["Peut-on changer l'éclairage plus tard ?", "Les luminaires oui. Circuits, positions d'interrupteurs et emplacements de drivers sont figés à la fermeture des parois."]
+      ]
+    },
+    {
+      "slug": "tiny-house-materiaux-interieurs",
+      "category": "amenagement-et-interieur",
+      "name": "Matériaux",
+      "title": "Couleur et matière dans un petit intérieur : ce qui le fait lire plus grand.",
+      "lead": "Le conseil courant est de tout peindre en blanc. C'est à moitié juste, et c'est la mauvaise moitié qui est appliquée.",
+      "sections": [
+        ["La continuité compte plus que la clarté", [
+          "Une petite pièce se lit plus grande quand l'œil n'est pas arrêté — un seul matériau de sol partout, un seul ton de mur, un seul plafond. Trois finitions de sol différentes dans vingt-huit mètres carrés subdivisent visuellement l'espace et rapetissent chaque partie.",
+          "C'est pourquoi un intérieur tout blanc fonctionne souvent : non parce que le blanc est clair, mais parce qu'il est continu. La même continuité dans un ton moyen chaud fonctionne aussi bien et paraît moins clinique."
+        ]],
+        ["Faites courir le sol à travers le seuil", [
+          "Le geste le plus efficace dans une maison compacte est le même niveau de sol et, si possible, un matériau proche à l'intérieur et sur la terrasse. L'œil lit les deux comme un seul espace, et la maison emprunte l'extérieur.",
+          "Cela supprime aussi le seuil, ce qui aide quiconque a quelque chose à roulettes."
+        ]],
+        ["Le bois demande de la retenue", [
+          "Du bois sur chaque surface dans un petit volume devient oppressant vers la troisième. Une paroi en bois contre des murs plus neutres se lit comme de la chaleur ; quatre parois en bois se lisent comme un sauna.",
+          "Gardez le plafond comme la surface la plus claire. Un plafond sombre dans une pièce de deux mètres cinquante se ressent physiquement, il ne se voit pas seulement."
+        ]],
+        ["La réflexion est un outil et un piège", [
+          "Un miroir face à une fenêtre double la lumière du jour et la vue, et agrandit réellement la pièce. Une façade de meuble brillante près de cette même fenêtre montre chaque trace de doigt et chaque reflet de la hotte.",
+          "Mat ou satiné sur les grandes surfaces, réflexion réservée à un seul endroit choisi."
+        ]],
+        ["La texture porte une petite pièce", [
+          "Avec peu de surface au sol, les parois sont proches de l'œil : la texture fait le travail que l'échelle fait dans une grande pièce. Un store tissé, un rideau de lin, un enduit brut ou un bois brossé donnent l'intérêt que le motif donnerait ailleurs.",
+          "Le motif, à l'inverse, vaut mieux sur ce que l'on peut changer. Dans une petite maison, un motif fixe affirmé est inévitable d'une manière qu'il ne l'est jamais dans une grande."
+        ]]
+      ],
+      "faq": [
+        ["Faut-il tout peindre en blanc ?", "Pas nécessairement. Ce qui fait lire un petit intérieur plus grand, c'est la continuité — un seul sol, un seul ton de mur — pas la clarté. Un ton moyen chaud fonctionne aussi bien."],
+        ["Combien de bois est excessif ?", "Autour de trois surfaces. Une paroi bois contre des murs plus neutres se lit comme de la chaleur ; du bois partout se lit comme un sauna."],
+        ["Les miroirs aident-ils ?", "Un seul, placé pour refléter une fenêtre ou une vue, aide réellement. Les façades réfléchissantes montrent surtout les traces de doigts."]
+      ]
+    }
+  ]
+}

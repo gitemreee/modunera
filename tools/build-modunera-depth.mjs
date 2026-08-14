@@ -22,6 +22,7 @@
  * the pipeline twice produces a byte-identical tree.
  */
 
+import { existsSync } from "node:fs";
 import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import { dirname, extname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -75,8 +76,22 @@ const LOCALE_BLOG = Object.fromEntries(await Promise.all(["nl", "da", "fr"].map(
    foundation, cladding, bathroom, heating — and they deliberately avoid
    repeating the category material, which is what keeps the similarity between
    the two formats low. English sits under en/blog/ beside its nine categories. */
-const LOCALE_POSTS = Object.fromEntries(await Promise.all(["en", "nl", "da", "fr"].map(async (code) =>
-  [code, JSON.parse(await readFile(join(ROOT, `data/posts-${code}.json`), "utf8")).posts])));
+/* Posts arrive in numbered batches so a batch can be written and reviewed on its
+   own. The four languages must stay in the same order across every batch:
+   localePostPage() pairs them by index to build the hreflang cluster. */
+const POST_BATCHES = ["", "-2"];
+const LOCALE_POSTS = Object.fromEntries(await Promise.all(["en", "nl", "da", "fr"].map(async (code) => {
+  const batches = await Promise.all(POST_BATCHES.map(async (suffix) => {
+    const file = join(ROOT, `data/posts-${code}${suffix}.json`);
+    return existsSync(file) ? JSON.parse(await readFile(file, "utf8")).posts : [];
+  }));
+  return [code, batches.flat()];
+})));
+for (const lang of ["nl", "da", "fr"]) {
+  if (LOCALE_POSTS[lang].length !== LOCALE_POSTS.en.length) {
+    throw new Error(`posts-${lang} has ${LOCALE_POSTS[lang].length} subjects, posts-en has ${LOCALE_POSTS.en.length}; the hreflang pairing is by index and needs them equal`);
+  }
+}
 
 // where a language keeps its blog, and how a category slug maps back to its page
 const BLOG_ROOT = { en: "en/blog", nl: "nl/blog", da: "da/blog", fr: "fr/blog" };

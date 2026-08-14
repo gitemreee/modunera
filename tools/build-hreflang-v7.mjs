@@ -24,6 +24,7 @@
    Usage: node tools/build-hreflang-v7.mjs [--check]
 */
 import { readFile, readdir, writeFile } from "node:fs/promises";
+import { existsSync } from "node:fs";
 import { dirname, extname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -115,6 +116,19 @@ for (const [, deSlug, enSlug] of v2.matchAll(/deSlug: "([a-z-]+)", enSlug: "([a-
     de: isCountry ? `blog/europa/tiny-house-${deSlug}-genehmigung/` : `blog/europa/${deSlug}/`,
     en: isCountry ? `en/guides/tiny-house-${enSlug}-permits/` : `en/guides/${enSlug}/`,
   });
+}
+
+/* Two generators route their own pages — the local news hubs and the production
+   FAQ, whose subject pages exist only in the languages that have enough answers
+   for one. Rather than keep a second copy of those rules here, each writes the
+   clusters it produced into the manifest and this reads them back. Without that
+   the strip pass below would remove the sets those generators just wrote. */
+const MANIFEST = join(ROOT, "data/hreflang-clusters-generated.json");
+if (existsSync(MANIFEST)) {
+  const manifest = JSON.parse(await readFile(MANIFEST, "utf8"));
+  for (const list of Object.values(manifest.generated ?? {})) {
+    for (const members of list) addCluster(members);
+  }
 }
 
 /* --- write them ------------------------------------------------------------ */

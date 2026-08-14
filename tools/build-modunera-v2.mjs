@@ -85,6 +85,21 @@ const MODEL_PATHS = { de: "modelle", en: "en/models", nl: "nl/modellen", da: "da
    quote a figure the comparison table has moved on from. */
 const MENU_PRICING = JSON.parse(await readFile(join(ROOT, "data/pricing.json"), "utf8"));
 
+/* The two sections build-news-v7.mjs and build-production-faq-v7.mjs generate.
+   Their hub paths and labels are read from the same data files those generators
+   route from, so a renamed hub cannot leave a dead menu entry behind. */
+const MENU_NEWS = JSON.parse(await readFile(join(ROOT, "data/news.json"), "utf8")).hubs;
+const MENU_PFAQ = JSON.parse(await readFile(join(ROOT, "data/production-faq.json"), "utf8")).hub;
+const MENU_SUBS = {
+  de: { faq: "60 Fragen vor dem Auftrag", news: "Projekte mit Quelle und Prüfdatum" },
+  en: { faq: "60 questions before the order", news: "Projects with source and check date" },
+  nl: { faq: "Vragen vóór de opdracht", news: "Projecten met bron en controledatum" },
+  da: { faq: "Spørgsmål før ordren", news: "Projekter med kilde og kontroldato" },
+  fr: { faq: "Questions avant la commande", news: "Projets avec source et date de vérification" },
+};
+const pfaqEntry = (lang) => [`${MENU_PFAQ[lang].path}/`, MENU_PFAQ[lang].label, MENU_SUBS[lang].faq];
+const newsEntry = (lang) => [`${MENU_NEWS[lang].path}/`, MENU_NEWS[lang].label, MENU_SUBS[lang].news];
+
 const MODEL_SUBS = {
   de: ["Panorama und Loft", "Zwei Lofts für Familien", "Loft plus Zusatzraum", "Loft, Zimmer und Veranda", "Kompakt mit Zusatzraum", "Chalet mit Steildach", "Einstiegsmodell", "Kompakt, gehobene Linie"],
   en: ["Panorama and loft", "Two lofts for families", "Loft plus extra room", "Loft, room and veranda", "Compact with extra room", "Chalet with pitched roof", "Entry model", "Compact, upgraded line"],
@@ -137,6 +152,7 @@ const MENU = {
         ["laender/schweiz/", "Schweiz", "Kanton & Bewilligung"],
         ["preisvergleich/", "Preisvergleich", "Budget je Zielland"],
         ["standorte/", "Standorte Deutschland", "7.000+ lokale Seiten"],
+        newsEntry("de"),
       ]},
       { label: "Vorteile", href: "vorteile/" },
       { label: "Weitere Bauten", menu: [
@@ -172,6 +188,7 @@ const MENU = {
         ["fragen/deutschland/", "Fragen Deutschland", "20 Antworten"],
         ["fragen/niederlande/", "Fragen Niederlande", "20 Antworten"],
         ["fragen/schweiz/", "Fragen Schweiz", "20 Antworten"],
+        pfaqEntry("de"),
       ]},
       { label: "Unternehmen", menu: [
         ["factory/", "Produktion", "Vom Stahl bis zur Übergabe"],
@@ -213,6 +230,7 @@ const MENU = {
         ["en/countries/luxembourg/", "Luxembourg", "Municipal authorisation"],
         ["en/countries/switzerland/", "Switzerland", "Cantonal permits"],
         ["en/price-comparison/", "Price comparison", "Budget by destination"],
+        newsEntry("en"),
       ]},
       { label: "Advantages", href: "en/advantages/" },
       { label: "Other structures", menu: [
@@ -246,6 +264,7 @@ const MENU = {
         ["en/questions/germany/", "Germany questions", "20 answers"],
         ["en/questions/netherlands/", "Netherlands questions", "20 answers"],
         ["en/questions/switzerland/", "Switzerland questions", "20 answers"],
+        pfaqEntry("en"),
       ]},
       { label: "Contact", href: "kontakt/" },
     ],
@@ -298,6 +317,7 @@ for (const [code, cfg] of Object.entries(LOCALE_DEFS)) {
       { label: cfg.nav.countries, menu: [
         [`${code}/${p.countries}/`, cfg.labels.countries, "MODUNERA"],
         ...Object.keys(cfg.countrySlugs).map((c) => [`${code}/${p.countries}/${cfg.countrySlugs[c]}/`, cfg.countryNames[c], "Tiny House"]),
+        newsEntry(code),
       ]},
       { label: cfg.nav.services, menu: [
         [`${code}/${p.services}/`, cfg.labels.services, "MODUNERA"],
@@ -319,6 +339,7 @@ for (const [code, cfg] of Object.entries(LOCALE_DEFS)) {
       { label: "FAQ", menu: [
         [`${code}/${p.faq}/`, cfg.labels.faq, "Tiny House"],
         [`${code}/${p.questions}/`, cfg.labels.questions ?? cfg.labels.faq, "Tiny House"],
+        pfaqEntry(code),
       ]},
       { label: cfg.nav.contact, href: "kontakt/" },
     ],

@@ -1,0 +1,95 @@
+{
+  "generated": {
+    "production-faq": [
+      {
+        "de": "produktion-faq/",
+        "en": "en/production-faq/",
+        "nl": "nl/productie-faq/",
+        "da": "da/produktion-faq/",
+        "fr": "fr/faq-production/"
+      },
+      {
+        "de": "produktion-faq/fertigung/",
+        "en": "en/production-faq/manufacturing/"
+      },
+      {
+        "de": "produktion-faq/tragwerk-und-huelle/",
+        "en": "en/production-faq/structure-and-envelope/"
+      },
+      {
+        "de": "produktion-faq/fenster-energie-jahreszeiten/",
+        "en": "en/production-faq/windows-energy-seasons/"
+      },
+      {
+        "de": "produktion-faq/strom-wasser-abwasser/",
+        "en": "en/production-faq/power-water-wastewater/"
+      },
+      {
+        "de": "produktion-faq/gewicht-fahrgestell-zulassung/",
+        "en": "en/production-faq/weight-chassis-approval/"
+      },
+      {
+        "de": "produktion-faq/lieferung-zoll-baustelle/",
+        "en": "en/production-faq/delivery-customs-site/"
+      },
+      {
+        "de": "produktion-faq/genehmigung-und-unterlagen/",
+        "en": "en/production-faq/permits-and-documents/"
+      },
+      {
+        "de": "produktion-faq/ausstattung-moebel-garantie/",
+        "en": "en/production-faq/fit-out-furniture-warranty/"
+      },
+      {
+        "de": "produktion-faq/preis-vertrag-zahlung/",
+        "en": "en/production-faq/price-contract-payment/"
+      }
+    ],
+    "news": [
+      {
+        "de": "news/",
+        "en": "en/news/",
+        "nl": "nl/nieuws/",
+        "da": "da/nyheder/",
+        "fr": "fr/actualites/"
+      },
+      {
+        "de": "news/lueptitz-lossatal-tiny-house-siedlung/",
+        "en": "en/news/lueptitz-lossatal-tiny-house-settlement/"
+      },
+      {
+        "de": "news/st-margrethen-baugesuch-tiny-house/",
+        "en": "en/news/st-margrethen-tiny-house-building-application/"
+      },
+      {
+        "nl": "nl/nieuws/lisse-acht-tiny-houses-gemeenteproject/",
+        "en": "en/news/lisse-eight-tiny-houses-municipal-project/"
+      },
+      {
+        "nl": "nl/nieuws/meppel-nieuwveense-landen-eerste-tiny-houses/",
+        "en": "en/news/meppel-nieuwveense-landen-first-tiny-houses/"
+      },
+      {
+        "nl": "nl/nieuws/vlaardingen-hoofdstedenbuurt-compacte-woningen/",
+        "en": "en/news/vlaardingen-hoofdstedenbuurt-compact-housing/"
+      },
+      {
+        "da": "da/nyheder/vinge-18-tiny-house-grunde/",
+        "en": "en/news/vinge-18-tiny-house-plots/"
+      },
+      {
+        "da": "da/nyheder/vejle-tommeliden-tiny-house-omraade/",
+        "en": "en/news/vejle-tommeliden-tiny-house-area/"
+      },
+      {
+        "da": "da/nyheder/koege-tiny-varigheden-boliglaboratorium/",
+        "en": "en/news/koege-tiny-varigheden-housing-laboratory/"
+      },
+      {
+        "fr": "fr/actualites/niederanven-tiny-house-impression-3d/",
+        "en": "en/news/niederanven-3d-printed-tiny-house/"
+      }
+    ]
+  },
+  "_comment": "Clusters contributed by generators that route their own pages. Written by build-news-v7.mjs and build-production-faq-v7.mjs, read by build-hreflang-v7.mjs."
+}

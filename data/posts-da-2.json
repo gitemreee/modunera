@@ -1,0 +1,549 @@
+{
+  "_comment": "Danish posts, second batch. Sixteen further subjects in the same order as posts-en-2.json so localePostPage() can pair them by index for hreflang. Written for the Danish market: kystvind og salt, lange fyringssæsoner, blød bund og kommunens rolle.",
+  "posts": [
+    {
+      "slug": "tiny-house-vinduer-og-glas",
+      "category": "teknik-og-konstruktion",
+      "name": "Vinduer",
+      "title": "Vinduer i et tiny house: hvor meget glas, og mod hvilken side.",
+      "lead": "Glas er dét, der gør et kompakt interiør rummeligt, og dét, der taber mest varme. Begge dele afgøres af orienteringen, før de afgøres af specifikationen.",
+      "sections": [
+        ["Orienteringen betyder mere end selve ruden", [
+          "En stor åbning mod syd henter varme hele vinteren og overopheder i juli; den samme åbning mod nord giver jævnt lys og intet tilskud. Hvilken facade der bærer glasset, er gratis at bestemme på tegningen og umuligt bagefter.",
+          "I praksis vil de fleste kompakte planer have hovedglasset mod udsigten og aftenlyset, med et mindre højtsiddende vindue overfor til tværlys. Den kombination læses som rum; ét stort vindue alene læses som en gang."
+        ]],
+        ["Trelagsglas er ikke automatisk", [
+          "Trelagsruder mindsker varmetabet og vejer mere — cirka 30 kg per kvadratmeter mod 20 for tolagsruder. I en bygning, der køres på vej, skal den vægt bæres af rammen og løftes af kranen, så det er lige så meget en konstruktiv som en termisk beslutning.",
+          "Ved kysten kan gode tolagsruder med belægning være den bedre handel. I en dansk vinter med lang fyringssæson betaler trelagsglas sig og fjerner desuden kuldenedfaldet, man mærker ved en stor rude."
+        ]],
+        ["Solafskærmning hører uden for glasset", [
+          "Når strålingen først er gennem ruden, er varmen inde, og en indvendig gardin omsætter den blot til strålevarme. Udvendig afskærmning — et udhæng, en skodde, et net — stopper den før, og virkningen er flere gange større.",
+          "Et fast udhæng dimensioneret efter sommerens solhøjde lukker stadig den lave vintersol ind. Det er projektets billigste klimaregulering, og det koster ikke andet end et mål på tegningen."
+        ]],
+        ["Oplukkelige rammer er et ventilationsspørgsmål", [
+          "Fast glas er billigere og tættere, og et hus uden oplukkeligt vindue hviler helt på mekanisk ventilation. Tag som minimum en oplukkelig ramme i hver ende af planen, så huset kan udluftes på en varm aften.",
+          "Et ovenlys over hemsen gør mere for sommerkomforten end noget facadevindue: den varme luft forlader huset i det højeste punkt, og det er netop dér, den samler sig."
+        ]],
+        ["Rammer, beslag og kysten", [
+          "Træ med aluminiumsbeklædning giver en varm indvendig flade og en vedligeholdelsesfri udvendig, og det er det sædvanlige svar for et hus, der rejser. Rene trærammer kræver samme opmærksomhed som træbeklædning; rene plastrammer arbejder mere end den åbning, de sidder i.",
+          "Spørg specifikt til beslagenes overflade ved kysten. Hængsler og greb korroderer længe før rammen gør, og udskiftning på et færdigmonteret element er ikke et femminuttersarbejde."
+        ]]
+      ],
+      "faq": [
+        ["Hvor meget glas skal et tiny house have?", "Nok til én rummelig åbning mod udsigten og en mindre overfor til tværlys. Derudover koster hver kvadratmeter varme om vinteren og henter den om sommeren."],
+        ["Er trelagsglas det værd?", "I en dansk eller alpin vinter ja. I et mildt kystklima kan gode tolagsruder være den bedre handel, når merevægten er talt med."],
+        ["Skal jeg have oplukkelige vinduer med mekanisk ventilation?", "Ja, mindst ét i hver ende. Mekanisk ventilation håndterer fugt, ikke den udluftning man vil have en varm aften."]
+      ]
+    },
+    {
+      "slug": "tiny-house-isoleringsmaterialer",
+      "category": "teknik-og-konstruktion",
+      "name": "Isolering",
+      "title": "Isolering sammenlignet: mineraluld, træfiber og hårde plader.",
+      "lead": "Tykkelsen er tallet i brochuren. Det, der afgør komforten, er hvordan materialet opfører sig, når væggen bliver fugtig, og hvor varmt huset bliver i august.",
+      "sections": [
+        ["Mineraluld er standarden med god grund", [
+          "Den er billig, ubrændbar, udfylder uregelmæssige hulrum uden sprækker og lader damp passere, så en væg kan tørre ud. Svagheden er, at den intet gør for sommerkomforten: den er let og lagrer derfor næsten ingen varme.",
+          "Den sætter sig også, hvis den ikke er ordentligt fastholdt i en væg, der køres på vej. Spørg, hvordan batts er sikret, for et sat hulrum efterlader en kold stribe øverst i væggen, som ingen ser — før varmekameraet gør."
+        ]],
+        ["Træfiber køber sommeren", [
+          "Træfiber er tre til fire gange tættere end mineraluld, hvilket betyder, at udvendig varme er langt længere om at trænge igennem. I en let, kompakt bygning er den faseforskydning forskellen på en hems, der er brugbar i august, og en der ikke er.",
+          "Den koster mere, vejer mere og kræver samme ventilerede hulrum bag beklædningen. For et hus, der bebos hele året frem for at blive udlejet i skuldersæsonen, er det som regel de bedre penge."
+        ]],
+        ["Hårde plader køber tykkelse tilbage", [
+          "PIR- og fenolplader giver samme modstand i cirka to tredjedele af dybden, hvilket betyder noget, når hver centimeter væg er en centimeter gulv. Haken er, at de er damptætte, så vægopbygningen skal projekteres omkring det, ikke tilpasses til det.",
+          "De kræver også omhyggelig tapening ved hver samling. En pladevæg med sjuskede samlinger yder dårligere end en korrekt udfyldt mineraluldsvæg, uanset hvad databladet siger."
+        ]],
+        ["Dampspærren er en del af isoleringen", [
+          "Isolering virker kun tør. En dampspærre på den varme side, ubrudt og korrekt tætnet ved hver gennemføring, holder den sådan. Én dårligt tapet eldåse ophæver en meter perfekt væg.",
+          "Bed om fotos af det lag, før væggen lukkes. Det er det mest oplysende billede i en byggesag og det eneste, du ikke kan efterse bagefter."
+        ]],
+        ["Gulv og tag er ikke samme problem", [
+          "Gulvkassetten ligger over et ventileret hulrum og taber varme til bevægelig udeluft, så den vil have samme behandling som en væg. Taget tager sommersolen direkte og er dér, faseforskydningen tjener sig ind — argumentet for træfiber er stærkest der.",
+          "Bed om opbygningen af alle tre hver for sig. En specifikation, der oplyser ét tal for hele klimaskærmen, er en specifikation, der ikke er tænkt igennem."
+        ]]
+      ],
+      "faq": [
+        ["Hvilken isolering passer bedst?", "Træfiber i taget for sommerkomforten, mineraluld eller træfiber i væggene, og hårde plader kun hvor dybden er reelt kritisk."],
+        ["Hvor tyk skal isoleringen være?", "Bed om den resulterende U-værdi per bygningsdel frem for en tykkelse. Samme værdi kræver forskellig dybde afhængigt af materialet."],
+        ["Hvorfor bliver min hems for varm?", "Næsten altid en let tagopbygning uden masse. Faseforskydning, ikke modstand, styrer temperaturen i august."]
+      ]
+    },
+    {
+      "slug": "tiny-house-tag",
+      "category": "teknik-og-konstruktion",
+      "name": "Tag",
+      "title": "Taget: hældning, belægning og de detaljer, der lækker.",
+      "lead": "En kompakt bygning har et stort tag i forhold til sit rumfang, så taget bærer mere af den termiske og vandtekniske ydeevne end på et almindeligt hus.",
+      "sections": [
+        ["Hældningen afgøres af sne og transporthøjde", [
+          "Et stejlere tag afleder sne og regn og tilføjer højde — netop det mål, en vejtransport ikke kan undvære. De fleste transportable konstruktioner ligger mellem fem og femten grader; de, der går højere, betaler for det i dispensationer.",
+          "Hvor snelast er reel, dimensioneres konstruktionen efter den, ikke hældningen. Et fladt tag med en korrekt beregnet ramme er sikrere end et stejlt tag med en optimistisk."
+        ]],
+        ["Fals er den holdbare belægning", [
+          "En falset metalsamling har ingen gennemgående fastgørelser i det vandtætte plan, og derfor overlever den enhver anden løsning på en bygning, der arbejder under transport. Den trommer til gengæld i regn, hvilket er et selvstændigt problem, der løses med masse og et elastisk lag.",
+          "Membrantage er billigere og udmærket brugbare, med kortere levetid og større følsomhed over for detaljen ved hver opkant. Spørg, hvad garantien dækker, og hvor længe."
+        ]],
+        ["Udhæng er deres bredde værd", [
+          "Et udhæng holder regn fra beklædningen, skygger for glasset om sommeren og beskytter overkanten af hvert vindue. Det er den billigste levetidsforanstaltning, der findes, og den skæres rutinemæssigt væk for at spare transportbredde.",
+          "Hvor et udhæng ville overskride 2,55 meter, kan det leveres separat og monteres på stedet. Bed om den mulighed frem for at acceptere en flad tagfod."
+        ]],
+        ["Gennemføringer er dér, tage svigter", [
+          "Skorsten, ventilationsafkast, solcellebeslag og antenne bryder alle det vandtætte plan. Hver enkelt kræver en fabriksdetalje, ikke en fugestreng, og hver enkelt bør stå på tegningen før produktion.",
+          "Tag fremtidige gennemføringer med nu. En skorsten gennem et færdigt tag betyder at åbne opbygningen og håbe, at dampspærren repareres lige så godt, som den blev udført."
+        ]],
+        ["Tagrender og hvor vandet løber hen", [
+          "Et lille tag giver en overraskende mængde vand i et skybrud, og det lander præcis dér, hvor huset møder terrænet. Uden tagrender sprøjter det tilbage på den nederste bræddegang — dér, hvor råd begynder.",
+          "Før nedløbet væk fra huset til en faskine eller en tønde. Et rør, der udleder ved vægfoden, løser ingenting."
+        ]]
+      ],
+      "faq": [
+        ["Hvilken taghældning kræver et tiny house?", "Som regel fem til femten grader. Stejlere afleder sne bedre, men tilføjer transporthøjde, og det er dét mål, der udløser dispensationer."],
+        ["Metal eller membran?", "Falset metal holder længst på en bygning, der arbejder under transport. Membran er billigere med kortere levetid og mere følsomme detaljer."],
+        ["Skal jeg have tagrender?", "Ja. Uden dem sprøjter tagvand tilbage på den nederste bræddegang, og dér begynder råd."]
+      ]
+    },
+    {
+      "slug": "tiny-house-elinstallation",
+      "category": "teknik-og-konstruktion",
+      "name": "El",
+      "title": "Elinstallationen: tilslutning, tavle og hvad man skal planlægge.",
+      "lead": "Det meste elarbejde er usynligt og uigenkaldeligt. To beslutninger vejer tungere end resten: hvor meget tilslutning du har, og hvor kablerne løber.",
+      "sections": [
+        ["Fastlæg tilslutningen før hvidevarerne", [
+          "En lille tilslutning driver ikke en gennemstrømningsvandvarmer, en induktionsplade og en varmepumpe samtidig. At vide, hvad der er til rådighed, ændrer hvidevarelisten — ikke omvendt.",
+          "Hvor effekten er begrænset, er laststyring — en regulator, der kobler vandvarmeren fra, mens pladen kører — billigere end at opgradere tilslutningen. Bed om det ved specifikationen, ikke efter den første udløste sikring."
+        ]],
+        ["Tavlen skal have plads at vokse i", [
+          "Vælg en tavle med ledige pladser. En solcelleinverter, et batteri, en ladestander eller et udhus kræver hver sin, og en fyldt tavle betyder en ekstra kapsling et sted, hvor den ikke hører hjemme.",
+          "HPFI på alle slutgrupper er standard i dag og værd at insistere på uanset lokalt minimum. I en bygning med udvendig stikkontakt og stålramme er det ikke en formalitet."
+        ]],
+        ["Stikkontakter: tæl dem, og læg fire til", [
+          "Små huse har for få stikkontakter, fordi vægstrækket er kort. Tæl, hvad du sætter i en almindelig aften — router, bærbar, lamper, opladere, elkedel, støvsuger — og placér dem, hvor de ting står, frem for med jævne mellemrum.",
+          "To i bordhøjde i køkkenet, to i skrivebordshøjde, én i hver side af sengen og én på terrassen er et rimeligt minimum. Hver enkelt er en note på tegningen nu og en forlængerledning senere."
+        ]],
+        ["Jording af en stålkonstruktion", [
+          "Et stålchassis er en ledende konstruktion, der skal potentialudlignes korrekt, og opsætningen er forskellig, alt efter om huset står på nettet, på generator eller på en ø-inverter. Det er et punkt at have dokumenteret, ikke antaget.",
+          "Gem eftersynsrapporten. Det er det dokument, et forsikringsselskab beder om efter en hændelse, og det, en køberrådgiver leder efter."
+        ]],
+        ["Planlæg også svagstrømmen", [
+          "Netværkskabel til skrivebordet, en føringsvej til en udvendig antenne, højttalerkabel hvis du vil have det, og et trækrør fra tavlen til taget til fremtidige solceller. Alt sammen trivielt før væggene lukkes og uforholdsmæssigt bagefter.",
+          "Træk en ekstra snor i hvert trækrør. Det koster intet og er dét, der gør en senere ændring mulig uden at åbne noget."
+        ]]
+      ],
+      "faq": [
+        ["Hvilken tilslutning kræver et tiny house?", "Det afhænger af hvidevarerne. Gennemstrømningsvandvarmer plus induktion plus varmepumpe kører ikke på en lille tilslutning uden laststyring."],
+        ["Hvor mange stikkontakter skal jeg bestille?", "Flere end planen antyder. Tæl, hvad du bruger en almindelig aften, placér dem hvor tingene står, og læg så nogle til."],
+        ["Kræver stålrammen særlig jording?", "Den kræver korrekt potentialudligning, og opsætningen er forskellig ved nettilslutning, generator og ø-inverter. Få det dokumenteret og gem rapporten."]
+      ]
+    },
+    {
+      "slug": "tiny-house-ventilation-genvinding",
+      "category": "teknik-og-konstruktion",
+      "name": "Ventilation",
+      "title": "Balanceret ventilation med varmegenvinding, forklaret for et lille hus.",
+      "lead": "I en tæt, kompakt bygning er dette ikke et komforttilvalg — det er systemet, der forhindrer væggene i at blive våde. Det er også det, der oftest specificeres forkert.",
+      "sections": [
+        ["Hvorfor et lille hus har mere brug for det", [
+          "To personer producerer flere liter vanddamp om dagen gennem vejrtrækning, madlavning og bad. I 200 kubikmeter fortyndes det; i 70 gør det ikke. Jo mindre volumen, jo hurtigere stiger fugten, og jo før når den den koldeste flade.",
+          "At åbne et vindue virker og smider varmen ud sammen med fugten. Varmegenvinding beholder 80 til 90 procent af den, og i et hus med lavt varmebehov er det størstedelen af varmeregningen."
+        ]],
+        ["Dimensionering handler om luftskifte, ikke om enhedsstørrelse", [
+          "Enheden vælges efter rumfang og antal beboere, og i et tiny house betyder det den mindste enhed på markedet, kørende langsomt. En for stor enhed kører på sit mest støjende laveste trin og pendler.",
+          "Bed om det projekterede luftmængde per rum: indblæsning i opholds- og soverum, udsugning fra køkken og bad. En specifikation uden tal per rum er ikke projekteret."
+        ]],
+        ["Kanalerne afgør, om det virker", [
+          "Korte føringer, glat indvendig flade, bløde bøjninger og en tæt samling i hvert led. Fleksibel ribbeslange trukket stramt om et hjørne halverer luftmængden, og det er den hyppigste installationsfejl i enhver bygning.",
+          "Tegn kanalerne ind. En enhed, der passes ind i den plads, der er tilbage, ender med den dårligst mulige kanalføring og et skab, du ikke kan bruge."
+        ]],
+        ["Filtre og støj er ejerskabsoplevelsen", [
+          "To filtre, to gange om året, er hele vedligeholdet — og det er den rutine, der afgør, om systemet stadig virker i år fem. Køb filtrene parvis og sæt en påmindelse i kalenderen.",
+          "Placér enheden væk fra sovepladsen og på elastiske ophæng. Den kører konstant, så alt hørbart bliver utåleligt frem for velkendt."
+        ]],
+        ["Sommerbypass og frostsikring", [
+          "En sommerbypass forhindrer enheden i at genvinde varme, du ikke vil have en varm nat. Frostsikring forhindrer veksleren i at ise til, når det er godt under nul udenfor. Begge dele er standard på gode enheder og fraværende på billige.",
+          "I en dansk vinter betyder frostsikringen noget: en forvarmeflade trækker strøm, en afrimningscyklus afbryder luftmængden. Spørg, hvad enheden bruger, før den bestilles."
+        ]]
+      ],
+      "faq": [
+        ["Kan jeg ikke bare åbne et vindue?", "Til udluftning jo. Til daglig fugtfjernelse i et tæt hus nej — så smider du den varme ud, du har betalt for, flere gange dagligt hele vinteren."],
+        ["Hvor meget vedligehold kræver genvinding?", "To filtre to gange om året plus at holde kondensafløbet frit. Det er hele rutinen, og at springe den over halverer luftmængden."],
+        ["Støjer det?", "Ikke hvis det er korrekt dimensioneret og elastisk ophængt væk fra sovepladsen. En for stor enhed er den sædvanlige årsag til klager."]
+      ]
+    },
+    {
+      "slug": "tiny-house-opbevaringsloesninger",
+      "category": "indretning-og-interioer",
+      "name": "Opbevaring",
+      "title": "Hvor opbevaringen i et tiny house faktisk er.",
+      "lead": "To voksne har brug for seks til otte kubikmeter. Her kommer den fra, i rækkefølge efter hvor meget hvert sted giver tilbage.",
+      "sections": [
+        ["Under sengen, først og med afstand", [
+          "Et almindeligt dobbeltpodie rummer cirka 1,5 kubikmeter — en femtedel af alt, hvad du har brug for, på det ene sted der ikke koster gulvareal. Skuffer på skinner slår en opklappelig bund, hvor madrassen skal flyttes hver gang.",
+          "Del det op: én skuffe til tøj uden for sæsonen, én til sengetøj, én til det du bruger to gange om året. Et udelt rum bliver et sted, ting forsvinder ned i."
+        ]],
+        ["Fuld højde slår bredde", [
+          "Et skab på 600 mm, der går fra gulv til loft, rummer mere end et på 1200 mm, der stopper i hovedhøjde, og det tager halvdelen af væggen. I en kompakt plan er de øverste 600 mm af enhver væg det mest uudnyttede rumfang i bygningen.",
+          "Placér det, du bruger dagligt, mellem knæ og skulder, og alt andet over og under. En skammel er et mindre offer end et ekstra skab."
+        ]],
+        ["Trappen er møbel", [
+          "Hvert trin i en hemstrappe kan være en skuffe, og otte trin giver cirka en halv kubikmeter et sted, der ellers ikke rummer noget. Det skal projekteres sådan fra begyndelsen; en bygget trappe kan ikke hules ud bagefter.",
+          "Rummet ved siden af trappen, under de nederste trin, tager de besværlige høje ting — støvsugeren, strygebrættet, kosten."
+        ]],
+        ["Udenfor tager det, der ikke hører til indenfor", [
+          "Cykler, haveredskaber, brænde, sportsudstyr og sommermarkisen har intet at gøre i en kompakt klimaskærm. Et vejrbestandigt skur på terrassen eller mod nordfacaden er projektets billigste kubikmeter.",
+          "Planlæg det sammen med huset frem for at købe det bagefter. Placeringen påvirker terrassens indretning og, på en lille grund, naboens udsyn."
+        ]],
+        ["De steder folk glemmer", [
+          "Over døråbningerne, rummet bag badeværelsesdøren, dybden i væggen mellem to rum, sokkelrummet under køkkenelementerne og hulrummet under et hævet hemsgulv. Ingen af dem er store; tilsammen er de endnu en kubikmeter.",
+          "Ingen af dem kan tilføjes senere uden at åbne en færdig flade. Bed om dem på tegningen og tag dem, der passer til, hvordan du bor."
+        ]]
+      ],
+      "faq": [
+        ["Hvor meget opbevaring kræver et tiny house?", "Seks til otte kubikmeter for to voksne i helårsbrug. Halvdelen mere med et barn."],
+        ["Hvad er den største gevinst?", "Skuffer under sengen — cirka 1,5 kubikmeter uden at koste gulvareal. Opdelt, ikke som ét åbent rum."],
+        ["Kan opbevaring tilføjes senere?", "Fritstående ja, på bekostning af gulvareal. Indbygget — trappeskuffer, vægdybde, hulrum under hemsen — nej: det kræver at åbne en færdig flade."]
+      ]
+    },
+    {
+      "slug": "tiny-house-at-bo-to",
+      "category": "brug-og-forretningsmodel",
+      "name": "To personer",
+      "title": "To i et tiny house: hvad der reelt skaber gnidninger.",
+      "lead": "Det er ikke kvadratmeterne. Det er, at der ikke er nogen steder at være uden for hørevidde, og at alt, den ene lader ligge, ligger i den andens synsfelt.",
+      "sections": [
+        ["Et sted at være alene betyder mere end plads", [
+          "Den hyppigste grund til at par forlader et kompakt hus er, at ingen af dem kan være ubemærket. En dør, et niveauspring eller en aflukkelig hems løser det; et gardin gør ikke. Det er en planbeslutning, taget én gang.",
+          "Selv hvor et andet rum er umuligt, gør en siddeplads vendt væk fra resten, med sit eget lys, mere end yderligere to kvadratmeter åbent gulv."
+        ]],
+        ["Lydadskillelse er halvdelen af svaret", [
+          "Én person i telefonen optager hele huset, medmindre væggen har masse. At udfylde hulrummet og beklæde dobbelt på den ene side koster få centimeter og gør en visuel opdeling til en reel.",
+          "Badeværelsesdøren betyder lige så meget. I en kompakt plan åbner den mod opholdsrummet, og en hul dør gør enhver brug af rummet til en fælles begivenhed."
+        ]],
+        ["To af alting, eller en aftale", [
+          "Én garderobestang, én bordplade, ét skrivebord: fælles ressourcer i et lille hus kræver enten dublering eller en aftale. Dublering koster rumfang; aftalen koster intet og skal faktisk indgås frem for forudsættes.",
+          "Den praktiske form er faste zoner — din hylde, min skuffe, denne halvdel af stangen. Det lyder småligt, og det er dét, der gør et kompakt hus holdbart over år."
+        ]],
+        ["Madlavning og oprydning sker i stuen", [
+          "I en åben plan står den, der laver mad, i samme rum som den, der slapper af. Stille hvidevarer, en emhætte under 50 dB og nok bordplade til at undgå rod er ikke luksus her — det er dét, der forhindrer den enes aktivitet i at dominere aftenen.",
+          "Det samme gælder vaskemaskinen. Kør den, når du er ude, eller vælg en, der er stille nok til at køre, mens du er hjemme."
+        ]],
+        ["Udearealet fordobler huset", [
+          "En overdækket terrasse er det andet rum, en kompakt plan ikke kan rumme, og for to personer er det dér, den ekstra afstand kommer fra. Seks måneders brugbart udeareal ændrer oplevelsen mere end nogen indvendig ændring.",
+          "Giv den to siddepladser, ikke én. Så virker det samme trick — at være samme sted uden at være oven i hinanden — også udenfor."
+        ]]
+      ],
+      "faq": [
+        ["Klarer par det i et tiny house?", "Mange gør, i årevis. De, der ikke gør, flytter som regel, fordi der ikke er nogen steder at være alene — ikke på grund af arealet."],
+        ["Hvad betyder mest for to personer?", "Et aflukkeligt andet rum og en væg med nok masse til at gøre det reelt. MD 3 er bygget omkring netop det."],
+        ["Fungerer en åben plan?", "For én person udmærket. For to kun med en reel akustisk og visuel adskillelse et sted i planen."]
+      ]
+    },
+    {
+      "slug": "tiny-house-tilgaengelighed",
+      "category": "indretning-og-interioer",
+      "name": "Tilgængelighed",
+      "title": "Et tiny house, der stadig fungerer, når man er halvfjerds.",
+      "lead": "De fleste kompakte planer forudsætter en stige og et badeværelse, man vender sig sidelæns i. Begge dele er fine som fyrreårig og ingen af dem som halvfjerdsårig — og begge er billige at ændre på tegningen.",
+      "sections": [
+        ["At sove i ét plan er hele beslutningen", [
+          "Alt andet ved at blive ældre i et kompakt hus kan håndteres; en hems ad en stejl trappe kan ikke. En soveplads i stueplan — MD 3 eller større — gør huset til et tyveårigt forslag frem for et tiårigt.",
+          "Er en hems eneste mulighed, så bestil en rigtig trappe med gelænder frem for en stige, med en grund dyb nok til at gå ned forlæns. Den forskel betyder noget længe før halvfjerds."
+        ]],
+        ["Døre og frie passager", [
+          "Et dørblad på 800 mm og en fri passage på 900 mm gennem planen koster næsten intet i projekteringen og er forskellen på et hus, en rollator kan komme igennem, og et den ikke kan.",
+          "Undgå dørtrin. En plan overgang til terrassen hjælper alle med noget på hjul — en kuffert, en barnevogn, en kørestol — og det er samme detalje, der får huset til at føles større."
+        ]],
+        ["Badeværelset er sværest at eftermontere i", [
+          "En niveaufri bruser uden opkant, indbygget træ i væggene til fremtidige gribestænger og en dør, der åbner udad, er tre linjer i specifikationen. At tilføje nogen af dem senere betyder at strippe rummet tilbage til rammen.",
+          "Især træet koster intet nu: en krydsfinerplade bag beklædningen, hvor en stang engang kan komme. Ingen fortryder det."
+        ]],
+        ["Rækkevidde, lys og afbrydere", [
+          "Stikkontakter i 450 mm frem for fodpanelhøjde, afbrydere i 1000 mm og snoretræk frem for drejeknapper hvor det kan lade sig gøre. Alt sammen standard tilgængelighedspraksis, og intet af det ser institutionelt ud, når det er med fra projekteringen.",
+          "Lysniveau betyder mere med alderen, end de fleste forventer. Lagdelt lys — almen, arbejde og en natrute til badeværelset — fortjener lige så meget planlægning som dagslyset."
+        ]],
+        ["Vejen fra bilen", [
+          "Stien, trinnet ved døren og grundens fald afgør, om huset er tilgængeligt. Et perfekt interiør oven for tre trin og en grusskråning er ikke tilgængeligt.",
+          "Håndtér det, når terrassen tegnes. En rampe tilføjet bagefter er en rampe, der ser tilføjet ud."
+        ]]
+      ],
+      "faq": [
+        ["Kan et tiny house fungere for en ældre køber?", "Ja, med soveplads i stueplan, niveaufri bruser og ingen dørtrin. Kun hems er den ene opsætning, der ældes dårligt."],
+        ["Hvad skal jeg bestille nu til senere?", "Træ bag badeværelsesvæggene til fremtidige gribestænger, 800 mm døre, en niveaufri terrasseovergang og stikkontakter i 450 mm. Alle fire gratis i projekteringen."],
+        ["Hvilken model passer bedst?", "MD 3 eller større, på grund af rummet i stueplan. De bredere planer giver også den frie passage på 900 mm, som en hems-plan ikke har."]
+      ]
+    },
+    {
+      "slug": "tiny-house-med-kaeledyr",
+      "category": "indretning-og-interioer",
+      "name": "Kæledyr",
+      "title": "Et tiny house med hund eller kat: de praktiske detaljer.",
+      "lead": "Et dyr i et kompakt hus er mest et spørgsmål om opbevaring og gulvbelægning, plus én ting folk aldrig tænker på, før det sker: hvad huset gør, når man er ude.",
+      "sections": [
+        ["Gulvet tager slaget", [
+          "Kløer mærker bløde overflader, og våde poter finder enhver utætnet samling. Et elastisk gulv med svejsede eller lukkede samlinger klarer begge dele; et olieret nåletræsgulv gør ikke. Det er den overfladebeslutning, det betaler sig at bruge penge på.",
+          "Hold en slidstærk zone ved døren med en måtterille eller en nedsænket bakke. I en lille plan er entréen også stuen, så snavset har ingen steder at blive, medmindre du planlægger for det."
+        ]],
+        ["Foder og soveplads kræver en projekteret plads", [
+          "Skåle midt på et kompakt gulv er en forhindring. En niche i køkkensoklen eller en lav udsparing under trappen tager dem ud af gangruten uden at koste gulvareal.",
+          "Det samme gælder kurven. En dyrekurv det forkerte sted spærrer den eneste frie rute gennem huset; det rigtige sted udfylder den et hjørne, der ikke lavede noget."
+        ]],
+        ["Opbevaring til dyret er reelt rumfang", [
+          "Foder, liner, håndklæder, legetøj, kattegrus, en transportkasse og dyrlægepapirerne bliver til halvanden hylde. Det er ikke meget, og det er præcis det rumfang, der glemmes, når opbevaringsskemaet skrives.",
+          "En kattebakke kræver en ventileret plads uden for opholdsrummet. I en kompakt plan er svaret som regel badeværelset, hvilket betyder, at badeværelset skal have plads til den."
+        ]],
+        ["At tage hjemmefra er dét, ingen planlægger", [
+          "En velisoleret, tæt bygning med ventilationen kørende er behagelig, mens du er ude. Uden ventilation, på en sommerdag, er den ikke — og i modsætning til et stort hus varmer den op på en time, ikke en eftermiddag.",
+          "Bestil sommerbypass på ventilationen og udvendig afskærmning på hovedglasset. De to sammen er dét, der gør huset forsvarligt at efterlade et dyr i."
+        ]],
+        ["Adgang ud og terrassen", [
+          "En kattelem gennem en isoleret væg er en detalje, ikke et hul — den kræver en tætnet, isoleret foring, ellers bliver den en kuldebro og et træk. Bed om den før produktion.",
+          "Et indhegnet eller afskærmet stykke terrasse gør mere for en hund end nogen indvendig indretning, og det er den samme afskærmning, der giver dig privatliv."
+        ]]
+      ],
+      "faq": [
+        ["Hvilket gulv fungerer med hund?", "Et elastisk gulv med svejsede eller lukkede samlinger. Olieret nåletræ mærkes og lader vand ind i samlingerne."],
+        ["Er et tiny house forsvarligt at efterlade et dyr i?", "Med ventilationen kørende og udvendig afskærmning på hovedglasset ja. Uden begge dele varmer et kompakt hus op på en time om sommeren."],
+        ["Hvor står kattebakken?", "I praksis på badeværelset — hvilket betyder, at badeværelset skal dimensioneres med den i tankerne."]
+      ]
+    },
+    {
+      "slug": "tiny-house-gennem-vinteren",
+      "category": "drift-og-vedligehold",
+      "name": "Vinter",
+      "title": "Et tiny house gennem vinteren: hvad man gør og hvornår.",
+      "lead": "Intet ved vinteren er svært i et velbygget kompakt hus. Det er blot en kort liste over ting, der skal ske før kulden frem for under den.",
+      "sections": [
+        ["Oktober: vandet", [
+          "Kontrollér at varmekablet virker, at aftapningsventilen kan drejes, og isolér alt i et uopvarmet hulrum, der ikke allerede er isoleret. Et frostsprængt rør er den hyppigste vintersvigt og den, der lettest undgås helt.",
+          "Skal huset stå tomt, så beslut nu, om du tømmer det eller holder en grundvarme. Begge dele virker; at beslutte det i januar gør ikke."
+        ]],
+        ["November: klimaskærmen", [
+          "Gå udenom og se på fire ting: fugerne omkring vinduerne, den nederste bræddegang, tagrenden, og om noget står op ad væggen og fanger fugt. Tyve minutter, én gang om året.",
+          "Rens ventilationsafkastene for blade og kontrollér, at kondensafløbet løber. Et stoppet kondensafløb i december er en vandskade i et hulrum i februar."
+        ]],
+        ["December til februar: fugt og varme", [
+          "Lad ventilationen køre konstant frem for at booste den en gang imellem. Kontinuerlig udsugning på lavt trin er dét, der holder fugten under det punkt, hvor kondens dannes på den koldeste flade.",
+          "Modstå trangen til at lukke huset helt for at spare varme. Genvindingen beholder allerede det meste; at tætne huset er, hvordan man får skimmel bag skabet."
+        ]],
+        ["Sne, hvis den bliver liggende", [
+          "Et fladt tag holder på sne frem for at aflede den, hvilket er fint, hvis konstruktionen er beregnet til den lokale last, og et problem hvis ikke. Bed om tallet ved specifikationen, ikke når det sner.",
+          "Ryd sne væk fra vægfoden og terrassedøren. Sne, der står op ad træ, smelter og fryser igen, er hårdere ved en facade end regn."
+        ]],
+        ["Marts: hvad man tjekker, før man slapper af", [
+          "Se på de samme fire punkter igen, skift ventilationsfiltrene, og se hemsen efter for tegn på kondens gennem vinteren. Fugt dér er den tidligste advarsel om et ventilationsproblem.",
+          "Notér, hvad du fandt. En vinterlog på én side gør et uforklarligt problem i år fem til en diagnose på fem minutter."
+        ]]
+      ],
+      "faq": [
+        ["Kan man bo i et tiny house hele vinteren?", "Ja, i en helårsudførelse: tilstrækkelig isolering, kontinuerlig ventilation, frostsikring og en varmekilde dimensioneret til stedets designtemperatur."],
+        ["Hvad svigter oftest om vinteren?", "Et frostsprængt rør i et uopvarmet hulrum eller ved den udvendige hane. Varmekabel og aftapningsventil forhindrer det helt."],
+        ["Skal jeg skrue ned for ventilationen for at spare varme?", "Nej. Genvindingen beholder allerede det meste, og lavere luftmængde er præcis, hvordan fugt når den koldeste flade og kondenserer der."]
+      ]
+    },
+    {
+      "slug": "tiny-house-overophedning-om-sommeren",
+      "category": "energi-og-selvforsyning",
+      "name": "Sommer",
+      "title": "Sådan undgår du, at et tiny house overopheder om sommeren.",
+      "lead": "En lille, velisoleret, stærkt forglasset bygning varmer hurtigt op og har næsten ingen masse til at optage det. Tre tiltag løser det, og alle tre besluttes før produktion.",
+      "sections": [
+        ["Skærm glasset udefra", [
+          "Når solen først er gennem ruden, er varmen inde. Et udvendigt udhæng, en skodde eller et net opfanger den; en indvendig gardin omsætter den til strålevarme og opvarmer rummet alligevel. Forskellen i virkning er cirka en faktor tre.",
+          "Et fast udhæng dimensioneret til sommerens solhøjde blokerer den høje julisol og lukker den lave decembersol ind. Det er et mål på tegningen, ikke et produkt."
+        ]],
+        ["Giv taget masse", [
+          "Taget tager mest stråling, og en let opbygning sender den direkte igennem hen på eftermiddagen. En tættere isolering — træfiber frem for mineraluld — forsinker den overførsel med timer, hvilket er nok til at flytte spidsen forbi sengetid.",
+          "Det er derfor, hemsen altid er det varmeste sted i et kompakt hus, og derfor den bygningsdel er værd at opgradere, hvis budgettet kun rækker til én."
+        ]],
+        ["Udluft om natten, luk om dagen", [
+          "Den middelhavsvane virker overalt: åbn op, når udeluften er koldere end indeluften, luk og skærm når den ikke er. I et lille volumen skiftes luften hurtigt, så to timers udluftning om aftenen nulstiller huset reelt.",
+          "Det kræver et oplukkeligt vindue i hver ende og et ovenlys over hemsen. Et hus med kun fast glas kan det slet ikke."
+        ]],
+        ["Køling, hvis der er brug for det", [
+          "En luft-til-luft-varmepumpe vender om sommeren, og i et kompakt hus er den mindste enhed rigeligt. Den koster strøm præcis når solcellerne producerer mest, hvilket gør den til den naturlige makker til et taganlæg.",
+          "Dimensionér den til det afskærmede, udluftede hus frem for det uafskærmede. At køle en dårligt afskærmet bygning er den dyre måde at løse et tegningsproblem på."
+        ]],
+        ["Hvor apparaterne står", [
+          "Et køleskab i et solbeskinnet hjørne, en router i et lukket skab og en inverter i et uventileret hulrum tilfører alle varme og forkorter deres eget liv. I et lille volumen er summen mærkbar.",
+          "Giv hver enkelt en ventileret placering. Det koster intet på plantegningen, og det er en af grundene til, at nogle kompakte huse føles varme uden nogen åbenlys årsag."
+        ]]
+      ],
+      "faq": [
+        ["Hvorfor overopheder mit tiny house?", "Som regel en let tagopbygning plus uafskærmet glas. Begge dele løses i projekteringen, og indvendige gardiner erstatter ikke udvendig afskærmning."],
+        ["Har jeg brug for aircondition?", "Sjældent, hvis glasset er skærmet udefra og taget har masse. Hvor der er brug for det, er en reversibel varmepumpe den mindste og passer godt til solceller."],
+        ["Virker natudluftning virkelig?", "I et lille volumen ja — luften skiftes hurtigt nok til at to timer om aftenen nulstiller huset. Det kræver oplukkelige vinduer i begge ender."]
+      ]
+    },
+    {
+      "slug": "tiny-house-forsikring",
+      "category": "tilladelse-og-lovgivning",
+      "name": "Forsikring",
+      "title": "At forsikre et tiny house: hvad spørgsmålene reelt handler om.",
+      "lead": "Selskaber klassificerer, før de prissætter, og hvert besværligt spørgsmål handler om, hvilken kategori bygningen falder i. At svare klart på dem er det meste af arbejdet.",
+      "sections": [
+        ["Løsøre eller fast ejendom er den første forgrening", [
+          "Et hus på et permanent fundament, tilsluttet forsyning, forsikres som bygning. Det samme hus på hjul og uden tilslutning ligger tættere på en fritidspolice. Præmie, dækning og skadebehandling er alle tre forskellige.",
+          "Sig hvilken af delene det er, før du beder om et tilbud. En police tegnet på den forkerte beskrivelse er en police, der måske ikke dækker."
+        ]],
+        ["Anvendelsen ændrer alt", [
+          "Helårsbeboelse, fritidsbrug, korttidsudlejning og måneders tomgang er fire forskellige risici. Især tomgang har klausuler — mange policer nedsætter dækningen efter tredive eller tres dage.",
+          "Udlejer du, skal du have en police, der dækker betalende gæster. En privat police udelukker dem som regel helt, og den undtagelse dukker op ved skaden frem for ved tegningen."
+        ]],
+        ["Hvad de vil spørge om konstruktionen", [
+          "Materiale i ramme og facade, om der er brændeovn, hvordan huset er forankret, og om elinstallationen har en eftersynsrapport. Hvert svar flytter prisen, og en rapport du allerede har, flytter den nedad.",
+          "Gem byggedokumentationen. Fotos af rammen og dampspærren, elrapporten, skorstensattesten — det er forskellen på en ligetil skadesag og en diskussion."
+        ]],
+        ["Forankring og vind", [
+          "En let bygning har et vindopdriftsspørgsmål, som et muret hus ikke har. Selskaberne spørger, hvordan den holdes nede, og på udsatte kystgrunde spørger de præcist. En projekteret forankringsdetalje med beregning besvarer det.",
+          "Det er også værd at have for din egen skyld. Opdrift er den svigtform, der skader en kompakt bygning hårdest og mest pludseligt."
+        ]],
+        ["Indbo, ansvar og terrassen", [
+          "Indbodækning i et lille hus undervurderes let — et indbygget interiør betyder, at meget af det, du andre steder ville kalde indbo, her er en del af bygningen. Spørg, hvilken side af den streg det faste inventar ligger på.",
+          "Ansvar betyder noget, så snart andre bruger terrassen, og det er som regel billigt. Det mangler også som regel i det første tilbud, medmindre du beder om det."
+        ]]
+      ],
+      "faq": [
+        ["Kan et tiny house forsikres normalt?", "Ja, når det er korrekt klassificeret. På permanent fundament med tilslutninger som bygning; på hjul og uden tilslutning er det et andet produkt."],
+        ["Kræver udlejning en anden police?", "Ja. En privat police udelukker som regel betalende gæster helt, og undtagelsen viser sig ved skaden frem for ved købet."],
+        ["Hvilke dokumenter vil de se?", "Elrapporten, skorstensattesten hvis der er ovn, forankringsdetaljen og helst fotos fra byggeriet. At have dem sænker prisen."]
+      ]
+    },
+    {
+      "slug": "tiny-house-gensalgsvaerdi",
+      "category": "sammenligning-og-alternativer",
+      "name": "Gensalg",
+      "title": "Hvad et tiny house er værd om fem år, og hvad der holder den værdi.",
+      "lead": "Kompakte bygninger afskrives meget forskelligt afhængigt af tre ting: konstruktionen, papirerne, og om køberen kan stille den et sted.",
+      "sections": [
+        ["Konstruktionen sætter bunden", [
+          "En stålramme med en korrekt udført klimaskærm er en bygning på halvtreds år og værdisættes sådan. En let fritidsenhed er tegnet til sæsonbrug og værdisættes på en afskrivningskurve tættere på en campingvogn.",
+          "Det er den klart største faktor, og den afgøres ved købet. Intet du gør bagefter flytter en bygning fra den ene kategori til den anden."
+        ]],
+        ["Papirer er reelle penge værd", [
+          "Et dokumenteret byggeri — rammefotos, isoleringsopbygning, elrapport, skorstensattest, vedligeholdslog — lader en køber verificere, hvad han køber. Uden det prissætter han en risiko, og den rabat er større end det kostede at føre mappen.",
+          "Start mappen ved aflevering. At rekonstruere den tre år senere er umuligt netop for de dele, der betyder noget."
+        ]],
+        ["Placerbarhed er dét, køberen reelt køber", [
+          "Et hus, der passer til almindelig vejtransport, ikke kræver dispensation for at flytte og har en dokumenteret fundamentsgrænseflade, kan komme overalt. Et på 3,2 meter i bredden er mindre værd, fordi det er et projekt at flytte.",
+          "De 2,55 meter er ikke bare bekvemmelighed ved levering. Det er dét, der holder den anden købers muligheder åbne."
+        ]],
+        ["Hvad der ældes dårligt", [
+          "Meget specifikke interiører, usædvanlige farver, specialbygget inventar der ikke kan erstattes, og alt der daterer hårdt. I et lille hus er hver af dem en stor andel af det, køberen ser.",
+          "Hold de faste elementer neutrale og læg personligheden i det, der kan flyttes. Det er ikke et kompromis; det er dét, der får huset til også at fungere for den næste beboer."
+        ]],
+        ["Markedet for brugte kompakte huse", [
+          "Det findes, det er tyndt, og det kører på tillid. Fotos fra byggefasen, en fugtmåling og et kig på chassisets underside er dét, en oplyst køber tjekker — og dermed dét, en oplyst sælger lægger frem.",
+          "Prissæt mod sammenligneligt nyt plus det terrænarbejde, der allerede er udført. Et hus, der allerede står, er tilsluttet og godkendt, er mere værd end det samme hus på en blokvogn."
+        ]]
+      ],
+      "faq": [
+        ["Holder et tiny house sin værdi?", "Et med stålramme, ordentlig klimaskærm og dokumentation i vid udstrækning ja. En let sæsonenhed afskrives meget hurtigere."],
+        ["Hvad påvirker gensalget mest?", "Konstruktionen først, så dokumentationen, så om huset kan flyttes på almindelig transport uden dispensation."],
+        ["Skal jeg gemme byggefotos?", "Ja — det er det eneste bevis på, hvad der er inde i en lukket væg, og en køber uden dem prissætter en risiko større end mappen var værd."]
+      ]
+    },
+    {
+      "slug": "tiny-house-byggemodning",
+      "category": "transport-og-import",
+      "name": "Byggemodning",
+      "title": "At gøre grunden klar: forløbet fra beslutning til levering.",
+      "lead": "Huset tager uger at bygge, og grunden er ofte længere om at blive klar. At køre dem i den forkerte rækkefølge er den hyppigste grund til, at et hus venter på en blokvogn.",
+      "sections": [
+        ["Start altid med forsyningerne", [
+          "Leveringstider går fra uger til et år afhængigt af område og selskab. Det er den længste enkeltpost i forløbet og den, der oftest sættes i gang sidst, efter huset er bestilt.",
+          "Ansøg, så snart grunden er sikret, før modellen vælges. Alt andet kan presses sammen; dette kan ikke."
+        ]],
+        ["Geoteknik før jordarbejde", [
+          "En boring koster lidt og afgør fundamentstypen, som afgør jordarbejdets pris og varighed. At springe den over betyder at finde ud af det under udgravningen, når maskinen allerede står der og koster per dag.",
+          "På skrånende eller opfyldt terræn: få en ingeniørvurdering samtidig. To besøg i starten forhindrer en omprojektering midtvejs."
+        ]],
+        ["Adgang før noget leveres", [
+          "Ruten fra offentlig vej til den endelige placering skal kunne tage en blokvogn og en kran. At udvide en låge, beskære en gren, lægge en midlertidig kørebane eller arrangere en vejafspærring er alle poster med leveringstid i uger.",
+          "Gå turen med målebånd og kamera. Fotografér indkørslen, det smalleste punkt, det sidste sving og kranens opstillingsplads, og send dem med mål."
+        ]],
+        ["Læg jordarbejdet, så det kan hærde", [
+          "Beton kræver tid. En stribefundering støbt ugen før levering belastes, før den har nået styrke. Byg ventetiden ind i forløbet frem for at opdage den.",
+          "Skruefundamenter undgår dette helt, hvilket er en del af grunden til, at de passer til en presset tidsplan, selv hvor en stribe ellers ville være at foretrække."
+        ]],
+        ["Ugen før levering", [
+          "Bekræft kranen, kontrollér koterne med instrument, ryd opstillingspladsen, arrangér køreplader hvis bunden er blød, og sørg for at nogen med beslutningskompetence er på stedet. En levering uden nogen, der kan beslutte, er en levering der går i stå.",
+          "Få forsyningerne ført frem dertil, hvor huset møder dem, afproppet og markeret. At tilslutte på dagen er en formiddag; at grave på dagen er en uge."
+        ]]
+      ],
+      "faq": [
+        ["Hvor lang tid tager byggemodningen?", "Jordarbejdet er dage til fjorten dage. Forsyningstilslutningerne er uger til et år, og det er dem, der sætter forløbet."],
+        ["Hvad skal jeg gøre først?", "Ansøge om forsyningstilslutningerne, før modellen vælges. Alt andet kan presses; leveringstider kan ikke."],
+        ["Hvad glemmes oftest?", "Adgangen. At udvide en låge eller arrangere en vejafspærring har leveringstid, og det opdages på leveringsdagen oftere end noget andet problem."]
+      ]
+    },
+    {
+      "slug": "tiny-house-belysning",
+      "category": "indretning-og-interioer",
+      "name": "Belysning",
+      "title": "At belyse et tiny house: tre lag, ikke én loftlampe.",
+      "lead": "Én kraftig loftlampe får et lille rum til at ligne et lille rum. Lagdelt lys får samme rumfang til at læses som flere steder.",
+      "sections": [
+        ["Almenlyset bør være indirekte", [
+          "Et gitter af spots i et kompakt loft gør alt fladt og kaster din egen skygge på dét, du laver. Lys, der kastes tilbage fra loft eller væg, giver samme belysning uden fladheden og uden blænding fra en hemsseng.",
+          "En lysvout eller en opadrettet linje over køkkenbordet er det sædvanlige svar. Det koster en detalje på tegningen og intet bagefter."
+        ]],
+        ["Arbejdslys, hvor arbejdet er", [
+          "Lys under overskabene på bordpladen, en retningsbestemt lampe ved skrivebordet, en læselampe i hver side af sengen. Hver er lille, hver har sin egen afbryder, og tilsammen lader de dig belyse én del af huset uden at belyse hele.",
+          "Den selektivitet er dét, der får et kompakt interiør til at føles større efter mørkets frembrud: et oplyst hjørne og et dæmpet læses som to rum."
+        ]],
+        ["Accentlys klarer resten", [
+          "Én armatur, der fremhæver en tekstur — beklædningen på en væg, en hylde, en plante — giver øjet et sted at gå hen. I et lille rum er det uforholdsmæssigt effektivt og koster én gruppe.",
+          "Udenfor udvider én lampe på et terrassetræ eller facaden det visuelle rum ud over glasset. Om natten er et uoplyst vindue et sort spejl; en oplyst udeside giver dig udsigten tilbage."
+        ]],
+        ["Farvetemperatur og dæmpning", [
+          "Varmhvidt, omkring 2700 K, alle steder hvor man slapper af; neutralt, omkring 3500 K, over bordplade og skrivebord. At blande dem inden for én synslinje ligner en fejl, så beslut grænsen på planen.",
+          "Dæmp alt hvad du kan. I et lille volumen er forskellen mellem fuld og en fjerdedel forskellen på et køkken og en stue."
+        ]],
+        ["At trække det er en produktionsbeslutning", [
+          "Hver gruppe, afbryderplacering og driverplads er fastlagt, når væggene lukkes. At tilføje en korrespondance ved hemsen eller en stikkontakt til en gulvlampe, hvor sofaen kommer, er en linje på tegningen nu og en rille i en færdig væg senere.",
+          "Tegn møblerne ind, før belysningen sættes ud. Belysning projekteret mod en tom plan lander de forkerte steder."
+        ]]
+      ],
+      "faq": [
+        ["Hvor mange lamper kræver et tiny house?", "Færre armaturer end et spotgitter, men på flere separate grupper. Selektivitet betyder mere end antal."],
+        ["Hvilken farvetemperatur?", "Omkring 2700 K hvor man slapper af og 3500 K over bordplader. Bland dem ikke inden for én synslinje."],
+        ["Kan belysningen ændres senere?", "Armaturer ja. Grupper, afbryderplaceringer og driverpladser er fastlagt, når væggene lukkes."]
+      ]
+    },
+    {
+      "slug": "tiny-house-indvendige-materialer",
+      "category": "indretning-og-interioer",
+      "name": "Materialer",
+      "title": "Farve og materiale i et lille interiør: hvad der får det til at læses større.",
+      "lead": "Det gængse råd er at male alt hvidt. Det er halvt rigtigt, og det er den forkerte halvdel, der bliver brugt.",
+      "sections": [
+        ["Sammenhæng betyder mere end lyshed", [
+          "Et lille rum læses større, når øjet ikke standses — ét gulvmateriale hele vejen, én vægtone, ét loft. Tre forskellige gulvbelægninger i otteogtyve kvadratmeter deler rummet visuelt op og gør hver del mindre.",
+          "Det er derfor et helt hvidt interiør ofte virker: ikke fordi hvidt er lyst, men fordi det er sammenhængende. Samme sammenhæng i en varm mellemtone virker lige så godt og føles mindre klinisk."
+        ]],
+        ["Før gulvet gennem dørtrinnet", [
+          "Det mest effektive greb i et kompakt hus er samme gulvniveau og, hvor det kan lade sig gøre, et lignende materiale inde og på terrassen. Øjet læser de to som ét rum, og huset låner det udvendige.",
+          "Det fjerner også dørtrinnet, hvilket hjælper alle med noget på hjul."
+        ]],
+        ["Træ kræver tilbageholdenhed", [
+          "Træ på hver flade i et lille volumen bliver trykkende omkring den tredje flade. Én træbeklædt væg mod mere neutrale vægge læses som varme; fire træbeklædte vægge læses som en sauna.",
+          "Hold loftet som den lyseste flade. Et mørkt loft i et rum på to en halv meter mærkes fysisk, ikke bare ses."
+        ]],
+        ["Refleksion er både værktøj og fælde", [
+          "Et spejl over for et vindue fordobler dagslyset og udsigten og forstørrer rummet reelt. En højglans skabsfront ved samme vindue viser hvert fingeraftryk og hver refleks af emhætten.",
+          "Mat eller silkemat på de store flader, refleksion forbeholdt ét bevidst sted."
+        ]],
+        ["Tekstur bærer et lille rum", [
+          "Med lidt gulvareal er fladerne tæt på øjet, så tekstur gør det arbejde, skala gør i et stort rum. En vævet gardin, et hørforhæng, en ru puds eller en børstet træstruktur giver den interesse, mønster ville give andre steder.",
+          "Mønster holdes til gengæld bedst til ting, du kan skifte. I et lille hus er et markant fast mønster uundgåeligt på en måde, det aldrig er i et stort."
+        ]]
+      ],
+      "faq": [
+        ["Skal alt være hvidt?", "Ikke nødvendigvis. Det, der får et lille interiør til at læses større, er sammenhæng — ét gulv, én vægtone — ikke lyshed. En varm mellemtone virker lige så godt."],
+        ["Hvor meget træ er for meget?", "Omkring tre flader. Én træbeklædt væg mod mere neutrale vægge læses som varme; træ overalt læses som en sauna."],
+        ["Hjælper spejle?", "Ét, placeret så det spejler et vindue eller en udsigt, hjælper reelt. Reflekterende skabsfronter viser mest fingeraftryk."]
+      ]
+    }
+  ]
+}

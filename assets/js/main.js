@@ -20,6 +20,9 @@
   qsa('.nav-dropdown>button').forEach(b=>b.onclick=()=>{const d=b.parentElement,was=d.classList.contains('open');shutPanels(d);d.classList.toggle('open',!was)});
   document.addEventListener('click',e=>{if(!e.target.closest('.nav-dropdown'))shutPanels()});
   qsa('.faq-question').forEach(b=>b.addEventListener('click',()=>b.closest('.faq-item').classList.toggle('open')));
+  // a link to one question should arrive on an open answer, not a closed row
+  const openHashed=()=>{const id=location.hash.slice(1);if(!id)return;const item=document.getElementById(id);if(item&&item.classList.contains('faq-item')){item.classList.add('open');item.scrollIntoView({block:'center'})}};
+  openHashed();window.addEventListener('hashchange',openHashed);
   qsa('[data-year]').forEach(x=>x.textContent=new Date().getFullYear());
 
   // home model selector

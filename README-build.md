@@ -11,6 +11,8 @@ node tools/rebrand-modunera.mjs           # brand normalisation, legacy asset re
 node tools/build-modunera-europe.mjs      # countries, regions, cities, services, Europe guides
 node tools/build-modunera-locales.mjs     # Dutch, Danish and French sections
 node tools/build-modunera-depth.mjs       # MD 1–MD 8 in five languages, country questions, blogs
+node tools/build-news-v7.mjs              # sourced local news, five market hubs
+node tools/build-production-faq-v7.mjs    # production, quality, delivery and buying FAQ
 node tools/build-modunera-v2.mjs          # navigation, comparison pages, guide hubs, cookie notice
 node tools/build-modunera-depth.mjs --extend   # appendix, product word, blocked-claim removal
 node tools/build-hreflang-v7.mjs          # reciprocal five-language clusters
@@ -35,7 +37,10 @@ indexed. Running the Europe build without the v2 layer afterwards leaves the sit
 with two different menus.
 
 The locale builder runs before the v2 layer so its pages pick up the shared
-navigation, the WhatsApp dock and the sitemap.
+navigation, the WhatsApp dock and the sitemap. The news and production-FAQ
+generators run there for the same reason: they emit an empty `<nav class="nav">`
+for v2 to fill, and v2 reads their hub paths and labels out of `data/news.json`
+and `data/production-faq.json` to build the menu entries that point at them.
 
 `build-modunera-depth.mjs` has two phases because v2 sits between them. Phase one
 writes new pages, which then need v2's navigation and sitemap entries. Phase two
@@ -85,7 +90,10 @@ built out.
 | Blog category material, per format | `data/blog-categories.json` |
 | English knowledge library (nine subjects) | `data/en-blog.json` |
 | Dutch, Danish and French blogs (nine subjects each) | `data/blog-nl.json`, `data/blog-da.json`, `data/blog-fr.json` |
-| Individual posts (twelve per language, en/nl/da/fr) | `data/posts-en.json`, `posts-nl.json`, `posts-da.json`, `posts-fr.json` |
+| Individual posts (28 per language, en/nl/da/fr) | `data/posts-<code>.json` and `posts-<code>-2.json`, listed in `POST_BATCHES` |
+| Production, quality, delivery and buying FAQ (60 questions) | `data/production-faq.json` |
+| Sourced local market news | `data/news.json` |
+| Claims that may not be published yet | `data/blocked-claims.json` |
 | The five-market appendix | `APPENDIX` in `tools/build-modunera-depth.mjs` |
 | Home-page model grid, five languages | `HOME_MODELS` in `tools/build-modunera-depth.mjs` |
 | Guide categories | `GUIDE_CATEGORIES` in `tools/build-modunera-v2.mjs` |
@@ -112,7 +120,7 @@ the count of remaining hits is zero, so a claim cannot come back through a new
 generator without failing the build. Delete a rule when the evidence in
 `REQUIRED-BUSINESS-INPUTS.md` arrives — do not edit pages.
 
-**The location gate.** 14,641 of 15,054 pages are programmatic location pages. They
+**The location gate.** 14,641 of 15,164 pages are programmatic location pages. They
 default to `noindex,follow` and stay out of the sitemap until an entry in
 `data/location-index-policy.json` scores at least 75 against the ten mandatory
 fields in the pack's quality gate. The allow-list is deliberately empty: these
@@ -127,7 +135,10 @@ description) and only moves a date when that hash moves.
 pages are generated from, writes the identical set to every member so reciprocity
 holds by construction, and adds no tag for a language that has no equivalent page.
 It also strips the sets earlier generators wrote, which pointed many German pages
-at a single English hub.
+at a single English hub. Generators that route their own pages — the news hubs and
+the production FAQ — contribute their clusters through
+`data/hreflang-clusters-generated.json` rather than having their routing rules
+copied here.
 
 **Statutory pages.** `/legal/impressum/`, `/legal/datenschutz/` and `/legal/cookies/`
 are `noindex,follow` while they are incomplete, and the validator fails if any of
@@ -172,28 +183,70 @@ and the two layers cannot drift. The nine categories are in the same order in al
 three files — `localeBlogCategoryPage()` pairs them by index for hreflang, so keep
 that order if you add a subject.
 
-Beside the nine categories, each of `en`, `nl`, `da` and `fr` carries twelve
-individual posts from `data/posts-<code>.json`: the specific things a buyer
-searches for by name — foundation, cladding, bathroom, kitchen, heating,
-acoustics — chosen so they do not repeat the category material. `localePostPage()`
-also pairs the four files by index for hreflang, so the twelve subjects must stay
-in the same order in all four. Each post declares a `category` slug and is listed
-on that category page and on the blog hub.
+Beside the nine categories, each of `en`, `nl`, `da` and `fr` carries twenty-eight
+individual posts: the specific things a buyer searches for by name — foundation,
+cladding, bathroom, kitchen, heating, acoustics — chosen so they do not repeat the
+category material. They arrive in batches, `POST_BATCHES = ["", "-2"]` in
+`build-modunera-depth.mjs`, so `data/posts-en.json` and `data/posts-en-2.json` are
+read as one list; add `-3` to the array to add another sixteen.
 
-Blog size per language after a full build:
+`localePostPage()` pairs the four languages by index for hreflang, so the subjects
+must stay in the same order in all four files, and the builder throws if the counts
+diverge rather than silently pairing the wrong two pages. Each post declares a
+`category` slug and is listed on that category page and on the blog hub.
+
+Blog size per language after a full build, counting `<main>` only:
 
 | Language | Hub | Categories | Posts | Words |
 |---|---|---|---|---|
 | German | `/blog/` | 9 under `/ratgeber/` | 110 + 13 Europe guides | the original library |
-| English | `/en/blog/` | 9 | 12 | 38,120 |
-| Dutch | `/nl/blog/` | 9 | 12 | 21,032 |
-| Danish | `/da/blog/` | 9 | 12 | 19,469 |
-| French | `/fr/blog/` | 9 | 12 | 23,319 |
+| English | `/en/blog/` | 9 | 28 | 52,654 |
+| Dutch | `/nl/blog/` | 9 | 28 | 25,834 |
+| Danish | `/da/blog/` | 9 | 28 | 23,757 |
+| French | `/fr/blog/` | 9 | 28 | 28,291 |
 
 German is still far ahead on count. Closing that gap means writing more subject
 material per language, not templating the existing posts — the 125-post German
 library was one page published 125 times before it was rewritten, and repeating
 that mistake in four more languages would undo the duplication work.
+
+## The production FAQ
+
+`data/production-faq.json` holds sixty questions in nine subjects. One routing
+rule in `tools/build-production-faq-v7.mjs` decides the whole shape, and it is the
+rule the blueprint asks for: a subject becomes its own page in a language when
+that language has at least three answers for it.
+
+German and English carry all sixty, so each gets nine subject pages and a hub that
+is a pure index — every question title is listed and links to `#q-<id>` on its
+subject page, no answer is repeated. Dutch, Danish and French carry the fourteen
+questions that come up in those markets, which is below the threshold everywhere,
+so their hub carries the answers and no thin subject page exists. Translate more
+of the sixty and the subject pages appear without touching the generator.
+
+`FAQPage` JSON-LD is built from the same array that renders the accordion, so a
+question that is not on the page cannot be in its schema. `main.js` opens the
+`.faq-item` named by `location.hash`, so a link to one question arrives on an open
+answer rather than a closed row.
+
+The answers quote no U-value, weight, warranty period or approval scope. Those are
+blocked in `data/blocked-claims.json` until the business supplies evidence, so each
+answer says where the figure will come from — see section 6 of
+`REQUIRED-BUSINESS-INPUTS.md` for which input unblocks which question.
+
+## Local market news
+
+`data/news.json` holds MODUNERA's own analysis of named public sources — no source
+text is reproduced and no source image is used. `tools/build-news-v7.mjs` enforces
+the template by page shape rather than trusting the writer: an item whose review
+date has passed says so on the page, and an item flagged as needing follow-up or
+carrying unverified numbers says that in the body. Items appear in the language of
+their own market and in English; no other language claims an equivalent.
+
+Both generators hand their clusters to `data/hreflang-clusters-generated.json`.
+`build-hreflang-v7.mjs` owns every alternate set on the site and strips the ones it
+did not write, so without that manifest it would remove the sets these two
+generators had just produced.
 
 ## post-row markup
 
@@ -314,8 +367,9 @@ canonicals, missing `lang`, invalid JSON-LD, a broken local link, a missing
 palette colour, a surviving legacy brand string, or a duplicated country/service
 link in the homepage navigation. It also asserts the required page set exists.
 
-Current numbers: 14,976 pages, 14,976 unique canonicals, 14,972 sitemap URLs,
-37,309 JSON-LD blocks, 1,449,324 local references checked with none broken.
+Current numbers: 15,164 pages, 15,164 unique canonicals, 514 sitemap URLs,
+37,801 JSON-LD blocks, 1,601,405 local references checked with none broken. The
+sitemap is far smaller than the page count on purpose — see *SEO governance (V7)*.
 
 Beyond the gate, a Chromium pass at 390/768/1440px checks every page for script
 errors, horizontal overflow, and that the contact rail renders as SVG icons.

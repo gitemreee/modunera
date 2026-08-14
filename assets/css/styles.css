@@ -1283,4 +1283,12 @@ h1,h2,h3,.section-header h2,.editorial-copy h2,.wide-copy h2,.article-content h2
    The label is short enough that allowing it to wrap changes nothing when it is
    used correctly, and stops it pushing the viewport when it is not. */
 .post-row>span{white-space:normal;overflow-wrap:anywhere}
+
+/* .faq-layout is a 270px control column plus the list of questions, and only
+   /faq/ renders both: it has the search box and the category filter. Every other
+   page that carries questions renders the list alone — the country question
+   sets, the model pages, the guide categories, the production FAQ — and a lone
+   child lands in the 270px column, so the questions were crushed to a third of
+   the width with 896px of empty page beside them at 1440. */
+.faq-layout>div:only-child{grid-column:1/-1}
 /* MODUNERA BRAND PALETTE END */

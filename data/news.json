@@ -1,0 +1,373 @@
+{
+  "_comment": "Sourced local news, from READY-TO-APPLY/news-source-registry.json in the V7 pack. Every item is MODUNERA's own analysis of a named public source — no source text is reproduced, no source image is used, and no fact appears here that is not in the cited material. Where the registry marks a figure as needing re-verification the text says so instead of stating it. 'meaning' is explicitly an inference. Each item is reviewed on the interval in the registry; when checked_at passes next_review_at the page says the check is due rather than pretending it is current.",
+  "reviewed_at": "2026-08-14",
+  "review_interval_days": 90,
+  "hubs": {
+    "de": { "path": "news", "label": "Marktnachrichten", "title": "Tiny House Nachrichten aus den fünf Zielmärkten | MODUNERA Tiny House", "h1": "Was sich in den Zielmärkten wirklich bewegt.", "lead": "Kommunale Projekte, Bauanträge und Planverfahren aus Deutschland, den Niederlanden, Dänemark, Luxemburg und der Schweiz — mit Quelle, Prüfdatum und einer klaren Grenze zwischen Tatsache und Einschätzung." },
+    "en": { "path": "en/news", "label": "Market news", "title": "Tiny house news from the five target markets | MODUNERA Tiny House", "h1": "What is actually moving in the target markets.", "lead": "Municipal projects, building applications and planning procedures from Germany, the Netherlands, Denmark, Luxembourg and Switzerland — with the source, the date it was checked, and a clear line between fact and reading." },
+    "nl": { "path": "nl/nieuws", "label": "Marktnieuws", "title": "Tiny house nieuws uit de doelmarkten | MODUNERA Tiny House", "h1": "Wat er in de doelmarkten werkelijk beweegt.", "lead": "Gemeentelijke projecten, vergunningaanvragen en planprocedures — met bron, controledatum en een duidelijke grens tussen feit en inschatting." },
+    "da": { "path": "da/nyheder", "label": "Markedsnyheder", "title": "Tiny house-nyheder fra målmarkederne | MODUNERA Tiny House", "h1": "Hvad der reelt rører sig på målmarkederne.", "lead": "Kommunale projekter, byggesager og planprocesser — med kilde, kontroldato og en klar grænse mellem faktum og vurdering." },
+    "fr": { "path": "fr/actualites", "label": "Actualités du marché", "title": "Actualités tiny house des marchés cibles | MODUNERA Tiny House", "h1": "Ce qui bouge réellement sur les marchés cibles.", "lead": "Projets communaux, demandes d'autorisation et procédures de planification — avec la source, la date de vérification et une ligne nette entre le fait et la lecture." }
+  },
+  "labels": {
+    "de": { "what": "Was ist passiert?", "meaning": "Was bedeutet das für Käufer?", "limit": "Keine Genehmigungsgarantie", "sources": "Quellen", "published": "Veröffentlicht", "checked": "Zuletzt geprüft", "nextReview": "Nächste Prüfung", "status": "Projektstatus", "publisher": "Herausgeber", "openSource": "Amtliche Quelle öffnen", "countryGuide": "Länderleitfaden öffnen", "cta": "Projekt per WhatsApp prüfen", "overdue": "Die nächste Prüfung dieses Beitrags ist fällig.", "inference": "Einschätzung von MODUNERA, keine Aussage der zitierten Stelle." },
+    "en": { "what": "What happened", "meaning": "What it means for a buyer", "limit": "Not a permit guarantee", "sources": "Sources", "published": "Published", "checked": "Last checked", "nextReview": "Next review", "status": "Project status", "publisher": "Publisher", "openSource": "Open the official source", "countryGuide": "Open the country guide", "cta": "Check your project on WhatsApp", "overdue": "The next review of this item is due.", "inference": "MODUNERA's reading, not a statement by the cited authority." },
+    "nl": { "what": "Wat is er gebeurd?", "meaning": "Wat betekent dit voor kopers?", "limit": "Geen vergunningsgarantie", "sources": "Bronnen", "published": "Gepubliceerd", "checked": "Laatst gecontroleerd", "nextReview": "Volgende controle", "status": "Projectstatus", "publisher": "Uitgever", "openSource": "Officiële bron openen", "countryGuide": "Landenpagina openen", "cta": "Project via WhatsApp laten toetsen", "overdue": "De volgende controle van dit bericht is verlopen.", "inference": "Inschatting van MODUNERA, geen uitspraak van de geciteerde instantie." },
+    "da": { "what": "Hvad er der sket?", "meaning": "Hvad betyder det for købere?", "limit": "Ingen garanti for tilladelse", "sources": "Kilder", "published": "Offentliggjort", "checked": "Sidst kontrolleret", "nextReview": "Næste kontrol", "status": "Projektstatus", "publisher": "Udgiver", "openSource": "Åbn den officielle kilde", "countryGuide": "Åbn landesiden", "cta": "Få dit projekt vurderet på WhatsApp", "overdue": "Næste kontrol af dette indlæg er forfalden.", "inference": "MODUNERAs vurdering, ikke en udtalelse fra den citerede myndighed." },
+    "fr": { "what": "Que s'est-il passé ?", "meaning": "Ce que cela signifie pour un acheteur", "limit": "Pas une garantie d'autorisation", "sources": "Sources", "published": "Publié", "checked": "Dernière vérification", "nextReview": "Prochaine vérification", "status": "Statut du projet", "publisher": "Éditeur", "openSource": "Ouvrir la source officielle", "countryGuide": "Ouvrir la page pays", "cta": "Faire vérifier votre projet sur WhatsApp", "overdue": "La prochaine vérification de cet article est échue.", "inference": "Lecture de MODUNERA, et non une déclaration de l'autorité citée." }
+  },
+  "statusLabels": {
+    "planning-participation": { "de": "Planverfahren, Beteiligung", "en": "Planning, public participation", "nl": "Planprocedure, inspraak", "da": "Planproces, høring", "fr": "Procédure de plan, participation" },
+    "municipal-project": { "de": "Kommunales Projekt", "en": "Municipal project", "nl": "Gemeentelijk project", "da": "Kommunalt projekt", "fr": "Projet communal" },
+    "agreement-and-planning": { "de": "Vereinbarung und Planung", "en": "Agreement and planning", "nl": "Overeenkomst en planvorming", "da": "Aftale og planlægning", "fr": "Accord et planification" },
+    "permit-or-planning": { "de": "Genehmigung oder Planung", "en": "Permit or planning stage", "nl": "Vergunning of planfase", "da": "Tilladelses- eller planfase", "fr": "Autorisation ou planification" },
+    "construction-and-move-in": { "de": "Bau und Bezug", "en": "Construction and occupation", "nl": "Bouw en bewoning", "da": "Byggeri og indflytning", "fr": "Construction et emménagement" },
+    "municipal-tiny-house-area": { "de": "Kommunales Tiny-House-Gebiet", "en": "Municipal tiny house area", "nl": "Gemeentelijk tiny house-gebied", "da": "Kommunalt tiny house-område", "fr": "Zone tiny house communale" },
+    "local-plan-process": { "de": "Bebauungsplanverfahren", "en": "Local plan procedure", "nl": "Bestemmingsplanprocedure", "da": "Lokalplanproces", "fr": "Procédure de plan local" },
+    "completed-municipal-demonstrator": { "de": "Fertiggestelltes kommunales Demonstrationsprojekt", "en": "Completed municipal demonstrator", "nl": "Afgerond gemeentelijk demonstratieproject", "da": "Færdigt kommunalt demonstrationsprojekt", "fr": "Démonstrateur communal achevé" },
+    "public-building-application": { "de": "Öffentliches Baugesuch", "en": "Public building application", "nl": "Openbare bouwaanvraag", "da": "Offentlig byggesag", "fr": "Demande d'autorisation publiée" }
+  },
+  "items": [
+    {
+      "id": "de-lossatal-lueptitz",
+      "country": "DE",
+      "place": "Lüptitz, Lossatal, Sachsen",
+      "nativeLang": "de",
+      "publisher": "Bürgerbeteiligungsportal Sachsen / Gemeinde Lossatal",
+      "sourceUrl": "https://buergerbeteiligung.sachsen.de/portal/lossatal/beteiligung/themen/1059453",
+      "sourceDate": null,
+      "sourceDateNote": true,
+      "checkedAt": "2026-08-14",
+      "nextReviewAt": "2026-11-12",
+      "status": "planning-participation",
+      "slug": { "de": "lueptitz-lossatal-tiny-house-siedlung", "en": "lueptitz-lossatal-tiny-house-settlement" },
+      "de": {
+        "title": "Lüptitz: Beteiligungsverfahren für eine Tiny-House-Siedlung mit bis zu 15 Einheiten",
+        "summary": "Die Gemeinde Lossatal hat über das sächsische Beteiligungsportal Unterlagen zu einer geplanten Tiny-House-Siedlung in Lüptitz veröffentlicht. Vorgesehen sind bis zu 15 Einheiten, die als dauerhafter Hauptwohnsitz genutzt werden sollen.",
+        "what": [
+          "Das Beteiligungsmaterial betrifft ein Planverfahren, nicht eine bereits erteilte Genehmigung. Es beschreibt eine Siedlung mit bis zu fünfzehn Einheiten und die Absicht, sie als dauerhaften Hauptwohnsitz zu nutzen — also nicht als Ferien- oder Wochenendnutzung.",
+          "Ein Beteiligungsverfahren ist der Abschnitt, in dem Öffentlichkeit und Träger öffentlicher Belange Stellung nehmen können. Was am Ende gilt, steht erst mit dem beschlossenen Plan fest; Zahl der Einheiten, Zuschnitt und Auflagen können sich im Verfahren noch ändern."
+        ],
+        "meaning": [
+          "Für Käufer ist der interessante Punkt nicht die Zahl fünfzehn, sondern der Weg: eine Kommune kann über die Bauleitplanung eine rechtssichere Grundlage für dauerhaftes Wohnen im Tiny House schaffen. Das ist etwas anderes, als ein mobiles Objekt auf ein beliebiges Grundstück zu stellen.",
+          "Übertragbar ist daraus nur die Methode, nicht das Ergebnis. Ein Plan gilt für seinen Geltungsbereich. Wer anderswo in Sachsen oder in einem anderen Bundesland dauerhaft wohnen will, braucht die Prüfung am eigenen Standort — und in der Regel eine Kommune, die den Weg mitgehen will."
+        ]
+      },
+      "en": {
+        "title": "Lüptitz: participation procedure for a tiny house settlement of up to 15 units",
+        "summary": "The municipality of Lossatal has published participation material through the Saxon public-participation portal for a planned tiny house settlement in Lüptitz. Up to fifteen units are envisaged, intended for use as a permanent primary residence.",
+        "what": [
+          "The material concerns a planning procedure, not a permit already granted. It describes a settlement of up to fifteen units and the intention that they serve as permanent primary residences rather than holiday or weekend use.",
+          "A participation stage is the point at which the public and statutory consultees can comment. What finally applies is fixed only by the adopted plan; the number of units, the layout and the conditions can all still change during the procedure."
+        ],
+        "meaning": [
+          "For a buyer the interesting part is not the figure fifteen but the route: a municipality can use land-use planning to create a lawful basis for permanent tiny house living. That is a different thing from placing a mobile unit on an ordinary plot.",
+          "What transfers is the method, not the outcome. A plan applies within its own boundary. Anyone wanting permanent residence elsewhere needs the assessment for their own site — and, usually, a municipality willing to take the same route."
+        ]
+      }
+    },
+    {
+      "id": "ch-st-margrethen-baugesuch",
+      "country": "CH",
+      "place": "St. Margrethen, St. Gallen",
+      "nativeLang": "de",
+      "publisher": "Politische Gemeinde St. Margrethen",
+      "sourceUrl": "https://www.stmargrethen.ch/politik-verwaltung/publikationen/aktuelles.html/331/news/2639",
+      "sourceDate": "2026-07-03",
+      "checkedAt": "2026-08-14",
+      "nextReviewAt": "2026-10-01",
+      "status": "public-building-application",
+      "slug": { "de": "st-margrethen-baugesuch-tiny-house", "en": "st-margrethen-tiny-house-building-application" },
+      "de": {
+        "title": "St. Margrethen: öffentliches Baugesuch für ein Tiny House und eine Luft-Wasser-Wärmepumpe",
+        "summary": "Die Gemeinde St. Margrethen hat im Juli 2026 ein Baugesuch für ein neues Tiny House samt Luft-Wasser-Wärmepumpe auf einer benannten Parzelle publiziert, mit der üblichen Einsprachefrist.",
+        "what": [
+          "Publiziert wurde ein ordentliches Baugesuch: benannte Parzelle, benanntes Vorhaben, öffentliche Auflage und Einsprachefrist im Juli 2026. Das Verfahren ist damit dasselbe wie bei jedem anderen Bauvorhaben in der Gemeinde.",
+          "Mitpubliziert ist die Luft-Wasser-Wärmepumpe. Auch die Haustechnik gehört in der Schweiz zum bewilligungspflichtigen Vorhaben, wenn sie aussen sichtbar ist oder Immissionen erzeugt."
+        ],
+        "meaning": [
+          "Dieser Beitrag ist deshalb aufschlussreich, weil er die häufigste Fehlannahme direkt widerlegt: Räder oder eine kleine Grundfläche ersetzen das kommunale Baubewilligungsverfahren nicht. Wer in der Schweiz ein Tiny House aufstellen will, geht denselben Weg wie bei einem Anbau.",
+          "Für die Planung heisst das: Terminplan und Budget müssen die Auflage- und Einsprachefrist enthalten, und die Lieferung wird erst terminiert, wenn die Bewilligung rechtskräftig ist. Kanton und Gemeinde entscheiden, nicht der Hersteller."
+        ]
+      },
+      "en": {
+        "title": "St. Margrethen: public building application for a tiny house and an air-to-water heat pump",
+        "summary": "In July 2026 the municipality of St. Margrethen published a building application for a new tiny house together with an air-to-water heat pump on a named parcel, with the customary objection period.",
+        "what": [
+          "What was published is an ordinary building application: a named parcel, a named project, public display and an objection period in July 2026. The procedure is the same as for any other building project in the municipality.",
+          "The air-to-water heat pump is part of the published application. In Switzerland the building services are part of the consented project too, where they are externally visible or produce emissions."
+        ],
+        "meaning": [
+          "This item is informative because it directly contradicts the most common misconception: wheels or a small footprint do not replace the municipal building-consent procedure. Placing a tiny house in Switzerland follows the same route as an extension.",
+          "For planning purposes that means the programme and the budget have to contain the display and objection periods, and delivery is only scheduled once the consent is final. The canton and the municipality decide, not the manufacturer."
+        ]
+      }
+    },
+    {
+      "id": "nl-lisse-tiny-houses",
+      "country": "NL",
+      "place": "Lisse, Zuid-Holland",
+      "nativeLang": "nl",
+      "publisher": "Gemeente Lisse",
+      "sourceUrl": "https://lisse.nl/project/tiny-houses-lisse/",
+      "sourceDate": null,
+      "sourceDateNote": true,
+      "checkedAt": "2026-08-14",
+      "nextReviewAt": "2026-11-12",
+      "status": "municipal-project",
+      "slug": { "nl": "lisse-acht-tiny-houses-gemeenteproject", "en": "lisse-eight-tiny-houses-municipal-project" },
+      "nl": {
+        "title": "Lisse: gemeentelijk project voor acht tiny houses met vastgelegde maatvoering",
+        "summary": "De projectpagina van de gemeente Lisse beschrijft acht tiny houses en projectspecifieke maten, waaronder een maximaal vloeroppervlak en een maximale hoogte. Het gaat om een gemeentelijk project met eigen voorwaarden.",
+        "what": [
+          "De gemeente beschrijft acht tiny houses en legt daarbij projectgebonden maten vast — onder meer een maximaal vloeroppervlak en een maximale bouwhoogte. Die maten gelden voor dit project, niet als algemene norm.",
+          "Dat een gemeente zulke maten opneemt, is gebruikelijk bij een project waarvoor apart planologisch ruimte is gemaakt. De voorwaarden staan in de projectstukken en niet in een landelijke regel."
+        ],
+        "meaning": [
+          "De les voor kopers is dat de maat van uw huis in een gemeentelijk project niet uw keuze is maar een projectvoorwaarde. Wie op zo'n plek wil wonen, kiest een model dat binnen die maten past — en dat is precies waarom de maatvoering vóór de bestelling bekend moet zijn.",
+          "Het omgekeerde geldt ook: deze maten zeggen niets over wat elders is toegestaan. Een project in Lisse creëert geen landelijke vrijstelling en ook geen precedent voor de buurgemeente."
+        ]
+      },
+      "en": {
+        "title": "Lisse: municipal project for eight tiny houses with fixed dimensions",
+        "summary": "The municipal project page for Lisse describes eight tiny houses along with project-specific dimensions, including a maximum floor area and a maximum height. It is a municipal project with its own conditions.",
+        "what": [
+          "The municipality describes eight tiny houses and sets project-specific dimensions with them — among others a maximum floor area and a maximum building height. Those dimensions apply to this project, not as a general standard.",
+          "A municipality setting such dimensions is normal for a project for which planning room has been made separately. The conditions sit in the project documents rather than in a national rule."
+        ],
+        "meaning": [
+          "The lesson for a buyer is that in a municipal project the size of your house is not your choice but a project condition. Anyone wanting to live on such a site picks a model that fits within those dimensions — which is exactly why they have to be known before ordering.",
+          "The reverse holds as well: these dimensions say nothing about what is permitted elsewhere. A project in Lisse creates no national exemption and no precedent for the neighbouring municipality."
+        ]
+      }
+    },
+    {
+      "id": "nl-meppel-nieuwveense-landen",
+      "country": "NL",
+      "place": "Meppel, Drenthe",
+      "nativeLang": "nl",
+      "publisher": "RTV Meppel",
+      "sourceUrl": "https://www.rtvmeppel.nl/meppel-krijgt-eerste-tiny-houses-in-nieuwveense-landen/",
+      "sourceDate": "2025-06",
+      "checkedAt": "2026-08-14",
+      "nextReviewAt": "2026-09-15",
+      "status": "agreement-and-planning",
+      "needsFollowUp": true,
+      "slug": { "nl": "meppel-nieuwveense-landen-eerste-tiny-houses", "en": "meppel-nieuwveense-landen-first-tiny-houses" },
+      "nl": {
+        "title": "Meppel: overeenkomst voor acht tiny houses in Nieuwveense Landen",
+        "summary": "Lokale berichtgeving uit juni 2025 beschrijft een overeenkomst voor acht tiny houses in Nieuwveense Landen, met een toen geplande bouwperiode in 2026. De actuele stand is bij de gemeente niet opnieuw bevestigd.",
+        "what": [
+          "De berichtgeving beschrijft een gesloten overeenkomst voor acht tiny houses en een op dat moment voorziene bouwstart in 2026. Dat is de stand van juni 2025 zoals een lokaal medium die weergaf.",
+          "Een tussentijdse officiële bevestiging van de huidige status hebben wij niet. Wij schrijven dit daarom expliciet als de stand van 2025 en niet als de stand van vandaag; de eerstvolgende controle staat gepland."
+        ],
+        "meaning": [
+          "Dit is een goed voorbeeld van waarom een projectbericht en een projectstatus twee verschillende dingen zijn. Tussen een overeenkomst en een geleverde woning liggen de planologische procedure, de vergunning en de uitvoering — elk met een eigen doorlooptijd.",
+          "Wie op zo'n project wacht, kan het beste zelf bij de gemeente naar de actuele planning vragen voordat er een huis wordt besteld. Een leverdatum die op een nieuwsbericht uit het voorgaande jaar rust, is geen planning."
+        ]
+      },
+      "en": {
+        "title": "Meppel: agreement for eight tiny houses in Nieuwveense Landen",
+        "summary": "Local reporting from June 2025 describes an agreement for eight tiny houses in Nieuwveense Landen, with construction then planned for 2026. The current position has not been re-confirmed with the municipality.",
+        "what": [
+          "The reporting describes a concluded agreement for eight tiny houses and a construction start then foreseen for 2026. That is the position as of June 2025 as reported by a local outlet.",
+          "We do not hold an intervening official confirmation of the current status. We therefore write this explicitly as the 2025 position rather than today's, and the next check is scheduled."
+        ],
+        "meaning": [
+          "This is a good illustration of why a project announcement and a project status are two different things. Between an agreement and a delivered home sit the planning procedure, the permit and the construction, each with its own lead time.",
+          "Anyone waiting on such a project is best served by asking the municipality directly for the current programme before ordering a house. A delivery date resting on a news item from the previous year is not a programme."
+        ]
+      }
+    },
+    {
+      "id": "nl-vlaardingen-hoofdstedenbuurt",
+      "country": "NL",
+      "place": "Vlaardingen, Zuid-Holland",
+      "nativeLang": "nl",
+      "publisher": "Waterweg Wonen",
+      "sourceUrl": "https://www.waterwegwonen.nl/projecten/hoofdstedenbuurt",
+      "sourceDate": null,
+      "sourceDateNote": true,
+      "checkedAt": "2026-08-14",
+      "nextReviewAt": "2026-10-01",
+      "status": "permit-or-planning",
+      "numbersUnverified": true,
+      "slug": { "nl": "vlaardingen-hoofdstedenbuurt-compacte-woningen", "en": "vlaardingen-hoofdstedenbuurt-compact-housing" },
+      "nl": {
+        "title": "Vlaardingen: woningcorporatie plant compacte woningbouw in de Hoofdstedenbuurt",
+        "summary": "De projectpagina van Waterweg Wonen beschrijft geplande compacte woningbouw in de Hoofdstedenbuurt. Exacte aantallen en data zijn op de pagina niet eenduidig gedateerd en worden vóór verdere publicatie opnieuw gecontroleerd.",
+        "what": [
+          "Een woningcorporatie beschrijft plannen voor compacte woningen in deze buurt. Wij nemen hier bewust geen aantallen of data over: de projectpagina draagt geen ondubbelzinnige datum en die cijfers zijn nog niet geverifieerd.",
+          "Wat wel vaststaat is de richting: een institutionele partij ontwikkelt compacte woonruimte in bestaand stedelijk gebied. Dat is een ander spoor dan een particulier die een unit op eigen grond plaatst."
+        ],
+        "meaning": [
+          "Corporatieprojecten laten zien dat er institutionele vraag is naar kleiner wonen. Ze zijn echter geen sjabloon voor een particuliere aanvraag: een corporatie werkt met eigen grondposities, een eigen programma en een eigen route langs de gemeente.",
+          "Voor een particuliere koper blijft de volgorde dezelfde: eerst schriftelijk uitsluitsel van de gemeente over uw perceel en uw gebruik, dan pas een model."
+        ]
+      },
+      "en": {
+        "title": "Vlaardingen: housing corporation plans compact housing in the Hoofdstedenbuurt",
+        "summary": "The Waterweg Wonen project page describes planned compact housing in the Hoofdstedenbuurt. Exact counts and dates are not unambiguously dated on the page and are being re-checked before further publication.",
+        "what": [
+          "A housing corporation describes plans for compact homes in this neighbourhood. We deliberately do not reproduce counts or dates here: the project page carries no unambiguous date and those figures are not yet verified.",
+          "What is clear is the direction: an institutional party is developing compact housing within an existing urban area. That is a different track from a private individual placing a unit on their own plot."
+        ],
+        "meaning": [
+          "Corporation projects show that institutional demand for smaller homes exists. They are not a template for a private application, though: a corporation works with its own land holdings, its own programme and its own route through the municipality.",
+          "For a private buyer the order stays the same: written confirmation from the municipality about your plot and your intended use first, and only then a model."
+        ]
+      }
+    },
+    {
+      "id": "dk-vinge-tiny-house-plots",
+      "country": "DK",
+      "place": "Vinge, Frederikssund Kommune",
+      "nativeLang": "da",
+      "publisher": "Frederikssund Kommune",
+      "sourceUrl": "https://www.frederikssund.dk/service/Nyheder/2025/oktober/alle-byggegrunde-solgt-i-populaert-omraade-af-vinge-1",
+      "secondaryUrl": "https://www.frederikssund.dk/Politik/Dagsordener-og-referater/Byraadets-moeder/2026-06-24_19-00/referat",
+      "sourceDate": "2025-10-03",
+      "checkedAt": "2026-08-14",
+      "nextReviewAt": "2026-11-12",
+      "status": "construction-and-move-in",
+      "slug": { "da": "vinge-18-tiny-house-grunde", "en": "vinge-18-tiny-house-plots" },
+      "da": {
+        "title": "Vinge: 18 tiny house-grunde udbudt, området under opførelse",
+        "summary": "Frederikssund Kommune oplyste i oktober 2025, at 18 tiny house-grunde var udbudt, og at området var under opførelse med forventet færdiggørelse og indflytning i løbet af 2026.",
+        "what": [
+          "Kommunen meldte, at grundene i det pågældende område af Vinge var afsat, og at byggeriet var i gang. Der er tale om kommunalt udbudte byggegrunde til tiny houses, ikke om enkeltstående dispensationer.",
+          "Kommunen har efterfølgende behandlet Vinge i sit byrådsarbejde. Vi henviser derfor både til nyheden fra oktober 2025 og til det senere referat, så læseren kan se udviklingen frem for kun startpunktet."
+        ],
+        "meaning": [
+          "Det interessante for en køber er kombinationen: byggemodnede grunde, en lokalplan der tillader anvendelsen, og en kommune der selv har sat rammen. Det fjerner de tre spørgsmål, der ellers tager længst tid — anvendelse, forsyning og adgang.",
+          "Det betyder ikke, at samme model gælder andre steder. En kommunalt tilrettelagt udstykning er en undtagelse i den forstand, at nogen har gjort planarbejdet på forhånd. På en almindelig grund skal det arbejde stadig gøres."
+        ]
+      },
+      "en": {
+        "title": "Vinge: 18 tiny house plots offered, the area under construction",
+        "summary": "In October 2025 Frederikssund Kommune reported that 18 tiny house plots had been offered and that the area was under construction, with completion and occupation expected during 2026.",
+        "what": [
+          "The municipality reported that the plots in this part of Vinge had been taken up and that construction was under way. These are municipally offered serviced plots for tiny houses, not individual dispensations.",
+          "The municipality has since dealt with Vinge in its council work. We therefore cite both the October 2025 news item and the later minutes, so the reader can see the development rather than only the starting point."
+        ],
+        "meaning": [
+          "What is interesting for a buyer is the combination: serviced plots, a local plan that permits the use, and a municipality that set the framework itself. That removes the three questions which otherwise take longest — use, services and access.",
+          "It does not mean the same model applies elsewhere. A municipally arranged subdivision is exceptional in the sense that someone did the planning work in advance. On an ordinary plot that work still has to be done."
+        ]
+      }
+    },
+    {
+      "id": "dk-vejle-tommeliden",
+      "country": "DK",
+      "place": "Vejle",
+      "nativeLang": "da",
+      "publisher": "Vejle Kommune",
+      "sourceUrl": "https://www.vejle.dk/da/demokrati-og-udvikling/udvikling-af-vores-kommune/tiny-houses/",
+      "sourceDate": "2025-05-16",
+      "checkedAt": "2026-08-14",
+      "nextReviewAt": "2026-11-12",
+      "status": "municipal-tiny-house-area",
+      "slug": { "da": "vejle-tommeliden-tiny-house-omraade", "en": "vejle-tommeliden-tiny-house-area" },
+      "da": {
+        "title": "Vejle: Tommeliden som kommunalt tiny house-område til helårsbeboelse",
+        "summary": "Vejle Kommune beskriver Tommeliden som et kommunalt tiny house-område til helårsbeboelse med plads til 28 eksperimenterende boliger.",
+        "what": [
+          "Kommunen beskriver et område udlagt til tiny houses med plads til 28 boliger, og anvendelsen er helårsbeboelse. Ordet eksperimenterende er kommunens egen ramme for projektet.",
+          "At anvendelsen er helårsbeboelse er det centrale i beskrivelsen. Det adskiller området fra sommerhus- og fritidsområder, hvor helårsbrug som udgangspunkt ikke er tilladt."
+        ],
+        "meaning": [
+          "Et område, der er planlagt til formålet, er materielt noget andet end at stille en flytbar enhed på en almindelig grund. Rammen — anvendelse, forsyning, antal — er afklaret, før den enkelte beboer kommer ind i billedet.",
+          "For en køber betyder det, at spørgsmålet flytter sig fra om det må til om enheden passer til områdets rammer. Det er et lettere spørgsmål, men det skal stadig besvares med områdets faktiske bestemmelser i hånden."
+        ]
+      },
+      "en": {
+        "title": "Vejle: Tommeliden as a municipal tiny house area for year-round living",
+        "summary": "Vejle Kommune describes Tommeliden as a municipal tiny house area for year-round living with space for 28 experimental homes.",
+        "what": [
+          "The municipality describes an area designated for tiny houses with space for 28 homes, and the use is year-round living. The word experimental is the municipality's own framing of the project.",
+          "That the use is year-round living is the central point of the description. It separates the area from summer-house and recreational areas, where year-round use is in principle not permitted."
+        ],
+        "meaning": [
+          "An area planned for the purpose is materially different from placing a movable unit on an ordinary plot. The framework — use, services, number — is settled before the individual resident enters the picture.",
+          "For a buyer that shifts the question from whether it is allowed to whether the unit fits the area's conditions. That is an easier question, but it still has to be answered against the area's actual provisions."
+        ]
+      }
+    },
+    {
+      "id": "dk-koege-tiny-varigheden",
+      "country": "DK",
+      "place": "Køge",
+      "nativeLang": "da",
+      "publisher": "Køge Kommune",
+      "sourceUrl": "https://www.koege.dk/om-koege-kommune/presse-og-kommunikation/nyheder-og-aktuelt/nyheder/lokalplan-for-koege-kommunes-nye-boliglaboratorium-er-paa-vej",
+      "sourceDate": null,
+      "sourceDateNote": true,
+      "checkedAt": "2026-08-14",
+      "nextReviewAt": "2026-11-12",
+      "status": "local-plan-process",
+      "slug": { "da": "koege-tiny-varigheden-boliglaboratorium", "en": "koege-tiny-varigheden-housing-laboratory" },
+      "da": {
+        "title": "Køge: lokalplan på vej for boliglaboratoriet Tiny Varigheden",
+        "summary": "Køge Kommune beskriver Tiny Varigheden som et boliglaboratorium planlagt omkring 16 små bæredygtige boliger og et klimavidenscenter. Projektet er i lokalplanproces.",
+        "what": [
+          "Kommunen beskriver et projekt med omkring 16 små bæredygtige boliger sammen med et klimavidenscenter, og oplyser at lokalplanen er undervejs. Det er altså planfasen, ikke en færdig ramme.",
+          "At boligerne indgår i et bredere bæredygtighedsprogram er en del af kommunens egen beskrivelse. Vi gengiver det som kommunens framing og ikke som en teknisk specifikation."
+        ],
+        "meaning": [
+          "Projektet illustrerer, hvordan tiny house-byggeri kan indlejres i en lokalplan og et bæredygtighedsprogram frem for at blive behandlet som en enkeltstående afvigelse. Det er ofte den vej, der fører til helårsanvendelse.",
+          "Indtil lokalplanen er vedtaget, er rammerne ikke endelige. Antal, placering og bestemmelser kan ændre sig i processen, og en køber bør ikke planlægge en leveringsdato efter et projekt, der endnu er i høring."
+        ]
+      },
+      "en": {
+        "title": "Køge: local plan under way for the Tiny Varigheden housing laboratory",
+        "summary": "Køge Kommune describes Tiny Varigheden as a housing laboratory planned around 16 small sustainable homes and a climate knowledge centre. The project is in the local-plan procedure.",
+        "what": [
+          "The municipality describes a project of around 16 small sustainable homes together with a climate knowledge centre, and states that the local plan is under way. This is therefore the planning stage, not a settled framework.",
+          "That the homes form part of a wider sustainability programme is part of the municipality's own description. We report it as the municipality's framing rather than as a technical specification."
+        ],
+        "meaning": [
+          "The project illustrates how tiny house development can be embedded in a local plan and a sustainability programme rather than handled as a one-off deviation. That is often the route that leads to year-round use.",
+          "Until the local plan is adopted the framework is not final. Numbers, siting and provisions can change during the process, and a buyer should not plan a delivery date around a project still in consultation."
+        ]
+      }
+    },
+    {
+      "id": "lu-niederanven-3d-print",
+      "country": "LU",
+      "place": "Niederanven",
+      "nativeLang": "fr",
+      "publisher": "SYVICOL",
+      "sourceUrl": "https://www.syvicol.lu/fr/bonnes-pratiques/fichepratiques/2025-05-28/une-tiny-house-novatrice-construite-grace-a-la-technologie-dimpression-3d",
+      "secondaryUrl": "https://www.niederanven.lu/fr/evenements/ficheevenement/2025-08-27/inauguration-du-tiny-house",
+      "sourceDate": "2025-05-28",
+      "checkedAt": "2026-08-14",
+      "nextReviewAt": "2026-11-12",
+      "status": "completed-municipal-demonstrator",
+      "slug": { "fr": "niederanven-tiny-house-impression-3d", "en": "niederanven-3d-printed-tiny-house" },
+      "fr": {
+        "title": "Niederanven : une tiny house communale réalisée par impression 3D",
+        "summary": "Le SYVICOL documente un démonstrateur communal de tiny house à Niederanven, produit à l'aide de la technologie d'impression 3D. La commune a par la suite annoncé son inauguration.",
+        "what": [
+          "Le SYVICOL présente le projet comme une bonne pratique communale : une tiny house réalisée par impression 3D, portée par la commune. La commune de Niederanven a ensuite publié l'événement d'inauguration.",
+          "Il s'agit d'un projet public de démonstration. Le procédé constructif est l'objet de la publication ; la fiche ne présente pas le projet comme un régime d'autorisation applicable à d'autres constructions."
+        ],
+        "meaning": [
+          "L'intérêt pour un acheteur est de séparer deux choses souvent confondues. Un démonstrateur public montre qu'une commune peut porter un projet innovant ; il ne démontre pas que les tiny houses privées seraient généralement dispensées d'autorisation au Luxembourg.",
+          "Pour un projet privé, la voie reste celle de l'autorisation préalable du bourgmestre et de la conformité au PAG et au PAP de la commune. Un précédent communal n'ouvre pas cette voie automatiquement."
+        ]
+      },
+      "en": {
+        "title": "Niederanven: a municipal tiny house built by 3D printing",
+        "summary": "SYVICOL documents a municipal tiny house demonstrator in Niederanven produced using 3D-printing technology. The municipality subsequently announced its inauguration.",
+        "what": [
+          "SYVICOL presents the project as municipal good practice: a tiny house produced by 3D printing, led by the municipality. Niederanven subsequently published the inauguration event.",
+          "This is a public demonstration project. The construction method is the subject of the publication; the record does not present the project as a permitting regime applicable to other buildings."
+        ],
+        "meaning": [
+          "The value for a buyer is in separating two things that are often conflated. A public demonstrator shows that a municipality can carry an innovative project; it does not show that private tiny houses are generally exempt from authorisation in Luxembourg.",
+          "For a private project the route remains prior authorisation from the bourgmestre and conformity with the commune's PAG and PAP. A municipal precedent does not open that route automatically."
+        ]
+      }
+    }
+  ]
+}

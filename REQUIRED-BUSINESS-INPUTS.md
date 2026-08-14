@@ -64,6 +64,25 @@ Until these exist, model pages describe layout and use, not certified performanc
 - [ ] Delivery quotations with route assumptions, carrier, ferry/Ro-Ro basis and exclusions
 - [ ] Actual service hours and measured response time, if a response promise is to be published
 
+## 6. The production FAQ answers its own sixty questions around these gaps
+
+`/produktion-faq/` and `/en/production-faq/` answer all sixty questions from
+`data/production-faq.json`, and forty of them are answered without the figure the
+reader actually wants, because the figure is in sections 2 to 5 above. The answers
+say where the number will come from rather than guessing one — which is honest, but
+it is also the reason those pages read thinner than they should.
+
+The questions each input closes, so the priority is visible:
+
+| Input | Questions it lets us answer properly |
+|---|---|
+| Weighbridge tickets per model | "How much does the finished house weigh?", "Which models stay under 3,500 kg?" |
+| Type approval / CoC scope | "What do CoC, type approval and homologation mean?", "Is only the trailer approved or the whole vehicle?" |
+| U-value calculations | "Which U-values do the components reach?", "Which insulation materials are used?" |
+| Warranty terms per country | "What is covered by warranty and for how long?", "Who carries out service in my country?" |
+| Approved price list | "What is included in the price?", "When does a figure become binding?" |
+| Site documentation | "Where are MODUNERA tiny houses manufactured?", "Can I visit the production?" |
+
 ## What happens when each arrives
 
 | Input | Unblocks |
@@ -73,3 +92,4 @@ Until these exist, model pages describe layout and use, not certified performanc
 | Model technical files | A product passport section per model, with `Product` + verified `Offer` schema |
 | Structural calculations | Snow and wind suitability statements per market |
 | Approved price list | `Offer` schema with `priceValidUntil` instead of the current request-a-quote flow |
+| Any of the above | The corresponding production-FAQ answers stop deferring to the data sheet and state the figure |

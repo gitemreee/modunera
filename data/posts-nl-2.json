@@ -1,0 +1,549 @@
+{
+  "_comment": "Dutch posts, second batch. Sixteen further subjects, matching the order of posts-en-2.json so localePostPage() can pair them by index for hreflang. Written for the Dutch market: Nederlandse netbeheerders, veen- en kleigrond, kustwind en de Omgevingswet.",
+  "posts": [
+    {
+      "slug": "tiny-house-ramen-en-beglazing",
+      "category": "techniek-en-constructie",
+      "name": "Ramen",
+      "title": "Ramen in een tiny house: hoeveel glas, en op welke kant.",
+      "lead": "Glas maakt een compact interieur ruim en verliest tegelijk de meeste warmte. Beide worden bepaald door de oriëntatie, nog vóór de specificatie.",
+      "sections": [
+        ["Oriëntatie telt zwaarder dan het glaspakket", [
+          "Een grote opening op het zuiden wint de hele winter warmte en oververhit in juli; dezelfde opening op het noorden geeft gelijkmatig licht en geen winst. Op welke gevel het glas komt, is op de tekening gratis te beslissen en achteraf onmogelijk.",
+          "In de praktijk wil een compacte plattegrond de hoofdbeglazing naar het uitzicht en het avondlicht, met een kleiner hoog raam tegenover voor licht van twee kanten. Die combinatie leest als ruimte; één groot raam alleen leest als een gang."
+        ]],
+        ["Triple is geen automatisme", [
+          "Triple glas beperkt het warmteverlies en weegt meer — ruwweg 30 kg per vierkante meter tegen 20 voor dubbel. In een gebouw dat over de weg gaat moet dat gewicht door het frame gedragen en door de kraan getild worden; het is dus net zo goed een constructieve als een thermische keuze.",
+          "Aan de Nederlandse kust, met een gematigd klimaat, kan goed dubbel glas met een coating de betere ruil zijn. In een Alpen- of Scandinavische winter betaalt triple zich terug en haalt het bovendien de koudeval weg die u naast een grote ruit voelt."
+        ]],
+        ["Zonwering hoort buiten het glas", [
+          "Zodra de straling door de ruit is, zit de warmte binnen; een binnenzonwering zet die alleen om in stralingswarmte. Buitenzonwering — een overstek, een luik, een scherm — onderschept haar ervoor en is een veelvoud effectiever.",
+          "Een vast overstek dat op de zomerzonstand is gemaat, laat de lage winterzon wel binnen. Dat is de goedkoopste klimaatregeling in het project en kost niets meer dan een maat op tekening."
+        ]],
+        ["Te openen delen zijn een ventilatievraag", [
+          "Vast glas is goedkoper en luchtdichter, en een huis zonder te openen raam leunt volledig op mechanische ventilatie. Neem minstens aan elk uiteinde van de plattegrond een draaiend deel op, zodat het huis op een warme avond gespoeld kan worden.",
+          "Een dakraam boven de loft doet meer voor het zomercomfort dan welk gevelraam ook: warme lucht vertrekt op het hoogste punt, en dat is precies waar zij zich verzamelt."
+        ]],
+        ["Kozijnen, beslag en de kust", [
+          "Aluminium-hout geeft een warme binnenzijde en een onderhoudsvrije buitenzijde, en is het gebruikelijke antwoord voor een huis dat reist. Volledig houten kozijnen vragen dezelfde aandacht als houten gevelbekleding; volledig kunststof kozijnen werken meer dan de opening waarin ze staan.",
+          "Vraag aan zee expliciet naar de afwerking van scharnieren en sluitwerk. Beslag corrodeert lang voordat het kozijn dat doet, en vervangen op een afgemonteerd element is geen klusje van vijf minuten."
+        ]]
+      ],
+      "faq": [
+        ["Hoeveel glas moet een tiny house hebben?", "Genoeg voor één royale opening naar het uitzicht en een kleinere ertegenover voor licht van twee kanten. Elke extra vierkante meter kost 's winters warmte en wint die 's zomers."],
+        ["Is triple glas de moeite waard?", "In een Scandinavische of Alpiene winter wel. Aan de Nederlandse kust kan goed dubbel glas de betere ruil zijn zodra het extra gewicht is meegeteld."],
+        ["Heb ik te openen ramen nodig bij mechanische ventilatie?", "Ja, minstens één aan elk uiteinde. Mechanische ventilatie regelt vocht, niet de spoeling die u op een warme avond wilt."]
+      ]
+    },
+    {
+      "slug": "tiny-house-isolatiematerialen",
+      "category": "techniek-en-constructie",
+      "name": "Isolatie",
+      "title": "Isolatie vergeleken: minerale wol, houtvezel en harde platen.",
+      "lead": "Dikte is het getal in de folder. Wat het comfort bepaalt is hoe het materiaal zich houdt als de wand vochtig wordt, en hoe warm het huis in augustus is.",
+      "sections": [
+        ["Minerale wol is met reden de standaard", [
+          "Ze is goedkoop, onbrandbaar, vult onregelmatige holtes zonder naden en laat damp door, zodat een wand kan drogen. Haar zwakte is dat ze niets doet voor het zomercomfort: ze is licht en slaat dus vrijwel geen warmte op.",
+          "Ze zakt bovendien als ze niet goed vastgezet is in een wand die over de weg gaat. Vraag hoe de dekens geborgd zijn, want een gezakte spouw laat een koude strook boven in de wand achter die niemand ziet — tot de warmtebeeldcamera."
+        ]],
+        ["Houtvezel koopt de zomer", [
+          "Houtvezel is drie tot vier keer dichter dan minerale wol, waardoor buitenwarmte er veel langer over doet om erdoorheen te komen. In een licht compact gebouw is die faseverschuiving het verschil tussen een loft die in augustus bruikbaar is en een die dat niet is.",
+          "Ze kost meer, weegt meer en vraagt dezelfde geventileerde spouw achter de gevel. Voor een huis waarin het hele jaar gewoond wordt in plaats van in de randseizoenen verhuurd, is het meestal het betere geld."
+        ]],
+        ["Harde platen kopen dikte terug", [
+          "PIR- en fenolplaten leveren dezelfde weerstand in ruwweg tweederde van de dikte, wat telt wanneer elke centimeter wand een centimeter vloer is. Het addertje is dat ze dampdicht zijn, dus de wandopbouw moet daaromheen ontworpen worden, niet erop aangepast.",
+          "Ze vragen ook zorgvuldig tapen op elke naad. Een plaatwand met slordige naden presteert slechter dan een goed gevulde wand van minerale wol, wat het gegevensblad ook zegt."
+        ]],
+        ["De dampremmende laag hoort bij de isolatie", [
+          "Isolatie werkt alleen droog. Een dampremmende laag aan de warme zijde, doorlopend en goed afgedicht bij elke doorvoer, houdt haar dat. Eén slecht getapete inbouwdoos doet een meter perfecte wand teniet.",
+          "Vraag om foto's van die laag voordat de wand dichtgaat. Het is de meest informatieve opname in een bouwdossier en het enige dat u achteraf niet kunt inspecteren."
+        ]],
+        ["Vloer en dak zijn niet hetzelfde probleem", [
+          "De vloercassette ligt boven een geventileerde ruimte en verliest warmte aan bewegende buitenlucht, dus zij wil dezelfde behandeling als een wand. Het dak vangt de zomerzon rechtstreeks en is waar faseverschuiving zich terugbetaalt — het argument voor houtvezel is daar het sterkst.",
+          "Vraag de opbouw van alle drie apart op. Een specificatie die één getal voor de hele schil noemt, is een specificatie waarover niet is nagedacht."
+        ]]
+      ],
+      "faq": [
+        ["Welke isolatie past het best?", "Houtvezel in het dak voor het zomercomfort, minerale wol of houtvezel in de wanden, en harde platen alleen waar dikte echt kritisch is."],
+        ["Hoe dik moet de isolatie zijn?", "Vraag naar de resulterende U-waarde per bouwdeel in plaats van naar een dikte. Dezelfde waarde vraagt per materiaal een andere opbouw."],
+        ["Waarom wordt mijn loft te warm?", "Bijna altijd een lichte dakopbouw zonder massa. Faseverschuiving, niet weerstand, bepaalt de temperatuur in augustus."]
+      ]
+    },
+    {
+      "slug": "tiny-house-dak",
+      "category": "techniek-en-constructie",
+      "name": "Dak",
+      "title": "Het dak: helling, bedekking en de details die lekken.",
+      "lead": "Een compact gebouw heeft een groot dak ten opzichte van zijn inhoud, dus het dak draagt meer van de thermische en waterprestatie dan bij een woonhuis.",
+      "sections": [
+        ["De helling wordt bepaald door sneeuw en transporthoogte", [
+          "Een steiler dak voert sneeuw en regen af en voegt hoogte toe — precies de maat die een wegtransport niet kan missen. De meeste transporteerbare ontwerpen liggen tussen vijf en vijftien graden; wie hoger gaat betaalt dat in ontheffingen.",
+          "Waar sneeuwlast echt speelt wordt de constructie erop berekend, niet de helling. Een flauw dak met een correct berekend frame is veiliger dan een steil dak met een optimistisch frame."
+        ]],
+        ["Fels is de duurzame bedekking", [
+          "Een gefelste metalen naad heeft geen bevestigingen door het waterdichte vlak, en dat is waarom hij elke andere optie overleeft op een gebouw dat onderweg werkt. Hij roffelt wel in de regen, wat een apart probleem is dat met massa en een verende laag wordt opgelost.",
+          "Dakbanen zijn goedkoper en prima bruikbaar, met een kortere levensduur en meer gevoeligheid voor het detail bij elke opstand. Vraag wat de garantie dekt en hoe lang."
+        ]],
+        ["Overstekken zijn hun breedte waard", [
+          "Een overstek houdt regen van de gevel, beschaduwt het glas in de zomer en beschermt de bovendorpel van elk raam. Het is de goedkoopste levensduurmaatregel die er is en wordt standaard weggesneden om transportbreedte te sparen.",
+          "Waar een overstek de 2,55 meter zou overschrijden, kan hij los meekomen en op locatie gemonteerd worden. Vraag naar die optie in plaats van een vlakke dakrand te accepteren."
+        ]],
+        ["Doorvoeren zijn waar daken falen", [
+          "Rookkanaal, ventilatiedoorvoeren, zonnepaneelbevestigingen en de antenne doorboren allemaal het waterdichte vlak. Elk daarvan vraagt een fabrieksdetail, geen kit, en elk hoort vóór productie op tekening te staan.",
+          "Neem toekomstige doorvoeren nu mee. Een rookkanaal door een afgewerkt dak betekent de opbouw openen en hopen dat de dampremmende laag net zo goed hersteld wordt als hij gemaakt was."
+        ]],
+        ["Goten en waar het water heen gaat", [
+          "Een klein dak levert bij een bui een verrassende hoeveelheid water, en dat komt precies neer waar het huis de grond raakt. Zonder goot spat dat terug op de onderste gevelplank — de plek waar rot begint.",
+          "Voer de regenpijp weg van het huis, naar een infiltratie of een ton. Een pijp die aan de voet van de wand loost lost niets op."
+        ]]
+      ],
+      "faq": [
+        ["Welke dakhelling heeft een tiny house nodig?", "Meestal vijf tot vijftien graden. Steiler voert sneeuw beter af maar voegt transporthoogte toe, en dat is de maat die ontheffingen oplevert."],
+        ["Metaal of dakbaan?", "Gefelst metaal gaat het langst mee op een gebouw dat onderweg werkt. Een dakbaan is goedkoper met kortere levensduur en gevoeliger details."],
+        ["Heb ik goten nodig?", "Ja. Zonder goot spat dakwater terug op de onderste gevelplank, en daar begint rot."]
+      ]
+    },
+    {
+      "slug": "tiny-house-elektrische-installatie",
+      "category": "techniek-en-constructie",
+      "name": "Elektra",
+      "title": "De elektrische installatie: aansluiting, groepenkast en wat u moet plannen.",
+      "lead": "Het meeste elektrawerk is onzichtbaar en onomkeerbaar. Twee beslissingen wegen zwaarder dan de rest: hoeveel aansluitvermogen u heeft, en waar de leidingen lopen.",
+      "sections": [
+        ["Bepaal het aansluitvermogen vóór de apparatuur", [
+          "Een kleine aansluiting draait geen doorstroomtoestel, inductiekookplaat en warmtepomp tegelijk. Weten wat er beschikbaar is verandert de apparatuurlijst, niet andersom.",
+          "Waar het vermogen beperkt is, is lastmanagement — een regelaar die de boiler uitschakelt terwijl de kookplaat aan staat — goedkoper dan verzwaren. Vraag erom bij de specificatie, niet na de eerste keer dat de hoofdzekering eruit vliegt."
+        ]],
+        ["De groepenkast heeft ruimte nodig", [
+          "Neem een kast met vrije groepen. Een omvormer, een accu, een laadpunt of een buitenberging vragen er elk één, en een volle kast betekent een tweede kastje op een plek waar het niet hoort.",
+          "Aardlekbeveiliging op alle eindgroepen is inmiddels standaard en het aandringen waard, ongeacht het lokale minimum. In een gebouw met een buitencontactdoos en een stalen frame is dat geen formaliteit."
+        ]],
+        ["Stopcontacten: tel ze, en doe er vier bij", [
+          "Kleine huizen hebben te weinig contactdozen omdat de wandlengte kort is. Tel wat u op een gewone avond in het stopcontact heeft — router, laptop, lampen, laders, waterkoker, stofzuiger — en plaats ze waar die dingen staan in plaats van op gelijke afstand.",
+          "Twee op werkbladhoogte in de keuken, twee op bureauhoogte, één aan elke kant van het bed en één op het terras is een redelijke ondergrens. Elk daarvan is nu een notitie op tekening en straks een verlengsnoer."
+        ]],
+        ["Aarding van een stalen constructie", [
+          "Een stalen chassis is een geleidende constructie die correct doorverbonden moet worden, en de opzet verschilt of het huis op het net, op een aggregaat of op een eiland-omvormer staat. Dit is een punt om vastgelegd te hebben, niet om aan te nemen.",
+          "Bewaar het keuringsrapport. Het is het document dat een verzekeraar na een incident opvraagt, en waar de aankoopkeuring van een koper naar zoekt."
+        ]],
+        ["Plan ook de zwakstroom", [
+          "Netwerkkabel naar het bureau, een route voor een buitenantenne, luidsprekerkabel als u die wilt, en een mantelbuis van de groepenkast naar het dak voor toekomstige zonnepanelen. Alles daarvan is triviaal vóór de wanden dichtgaan en onevenredig erna.",
+          "Trek in elke mantelbuis een extra trekdraad. Het kost niets en het is wat een latere wijziging mogelijk maakt zonder iets open te breken."
+        ]]
+      ],
+      "faq": [
+        ["Welk aansluitvermogen heeft een tiny house nodig?", "Dat hangt af van de apparatuur. Een doorstroomtoestel plus inductie plus een warmtepomp draait niet op een kleine aansluiting zonder lastmanagement."],
+        ["Hoeveel stopcontacten moet ik opnemen?", "Meer dan de plattegrond suggereert. Tel wat u op een gewone avond gebruikt, plaats ze waar die dingen staan en doe er dan nog een paar bij."],
+        ["Heeft het stalen frame bijzondere aarding nodig?", "Het vraagt correcte doorverbinding, en de opzet verschilt tussen netaansluiting, aggregaat en eiland-omvormer. Laat het vastleggen en bewaar het rapport."]
+      ]
+    },
+    {
+      "slug": "tiny-house-ventilatie-wtw",
+      "category": "techniek-en-constructie",
+      "name": "Ventilatie",
+      "title": "Gebalanceerde ventilatie met warmteterugwinning, uitgelegd voor een klein huis.",
+      "lead": "In een luchtdicht compact gebouw is dit geen comfortoptie — het is het systeem dat voorkomt dat de wanden nat worden. Het is ook het systeem dat het vaakst verkeerd wordt gespecificeerd.",
+      "sections": [
+        ["Waarom een klein huis het juist harder nodig heeft", [
+          "Twee mensen produceren per dag meerdere liters waterdamp door ademen, koken en douchen. In 200 kubieke meter wordt dat verdund; in 70 niet. Hoe kleiner het volume, hoe sneller de luchtvochtigheid stijgt en hoe eerder zij het koudste oppervlak bereikt.",
+          "Een raam openzetten werkt en gooit de warmte met het vocht naar buiten. Warmteterugwinning houdt daar 80 tot 90 procent van vast, en in een huis met een kleine warmtevraag is dat het grootste deel van de stookrekening."
+        ]],
+        ["Dimensioneren gaat over luchtwisseling, niet over unitgrootte", [
+          "De unit wordt gekozen op het volume en het aantal bewoners, en in een tiny house betekent dat de kleinste unit op de markt, traag draaiend. Een te grote unit draait op zijn luidruchtigste laagste stand en pendelt.",
+          "Vraag het ontwerpdebiet per ruimte: toevoer naar woonruimte en slaapplek, afvoer uit keuken en badkamer. Een specificatie zonder cijfers per ruimte is niet ontworpen."
+        ]],
+        ["De kanalen bepalen of het werkt", [
+          "Korte trajecten, gladde binnenzijde, ruime bochten en een dichte verbinding op elke naad. Flexibele ribbelslang strak om een hoek getrokken halveert het debiet, en dat is de meest voorkomende installatiefout in welk gebouw dan ook.",
+          "Teken de kanalen in. Een unit die in de overgebleven ruimte wordt gepast, krijgt het slechtst mogelijke kanaaltracé en een kast die u niet kunt gebruiken."
+        ]],
+        ["Filters en geluid zijn de gebruikservaring", [
+          "Twee filters, twee keer per jaar, is het hele onderhoud — en het is de routine die bepaalt of het systeem in jaar vijf nog werkt. Koop de filters per paar en zet een herinnering in de agenda.",
+          "Plaats de unit weg van de slaapplek en op verende ophanging. Hij draait continu, dus alles wat hoorbaar is wordt ondraaglijk in plaats van vertrouwd."
+        ]],
+        ["Zomerbypass en vorstbeveiliging", [
+          "Een zomerbypass voorkomt dat de unit warmte terugwint die u op een warme nacht niet wilt. Vorstbeveiliging voorkomt dat de wisselaar bevriest als het buiten ruim onder nul is. Beide zijn standaard op goede units en afwezig op goedkope.",
+          "Vraag welke strategie de unit gebruikt voordat hij besteld wordt: een voorverwarmer trekt stroom, een ontdooicyclus onderbreekt het debiet."
+        ]]
+      ],
+      "faq": [
+        ["Kan ik niet gewoon een raam openzetten?", "Voor spoelen wel. Voor dagelijkse vochtafvoer in een luchtdicht huis niet — dan gooit u de warmte weg waarvoor u betaald heeft, meermaals per dag, de hele winter."],
+        ["Hoeveel onderhoud vraagt WTW?", "Twee filters, twee keer per jaar, plus de condensafvoer vrijhouden. Dat is alles, en het overslaan halveert het debiet."],
+        ["Maakt het lawaai?", "Niet als hij correct gedimensioneerd is en verend is opgehangen, weg van de slaapplek. Een te grote unit is de gebruikelijke oorzaak van klachten."]
+      ]
+    },
+    {
+      "slug": "tiny-house-bergruimte-oplossingen",
+      "category": "indeling-en-interieur",
+      "name": "Bergruimte",
+      "title": "Waar de bergruimte in een tiny house werkelijk zit.",
+      "lead": "Twee volwassenen hebben zes tot acht kubieke meter nodig. Hier komt die vandaan, op volgorde van hoeveel elke plek teruggeeft.",
+      "sections": [
+        ["Onder het bed, met afstand het eerst", [
+          "Een standaard tweepersoonspodium houdt ongeveer 1,5 kubieke meter — een vijfde van alles wat u nodig heeft, op de enige plek die geen vloeroppervlak kost. Laden op geleiders zijn beter dan een opklapbodem, waarvoor het matras telkens moet wijken.",
+          "Verdeel het: één lade voor kleding buiten het seizoen, één voor beddengoed, één voor wat u twee keer per jaar gebruikt. Een onverdeeld volume wordt een plek waar dingen in verdwijnen."
+        ]],
+        ["Volle hoogte verslaat breed", [
+          "Een kast van 600 mm breed die van vloer tot plafond loopt, houdt meer dan een van 1200 mm die op hoofdhoogte stopt, en neemt de helft van de wand. In een compacte plattegrond is de bovenste 600 mm van elke wand het meest onderbenutte volume in het gebouw.",
+          "Zet wat u dagelijks pakt tussen knie en schouder, en al het andere erboven en eronder. Een opstapje is een kleiner offer dan een tweede kast."
+        ]],
+        ["De trap is meubel", [
+          "Elke trede van een lofttrap kan een lade zijn, en acht treden leveren ruwweg een halve kubieke meter op een plek die anders niets houdt. Dat moet vanaf het begin zo ontworpen zijn; een gebouwde trap laat zich achteraf niet uithollen.",
+          "Het volume naast de trap, onder de onderste treden, neemt de lastige lange dingen op — de stofzuiger, de strijkplank, de bezem."
+        ]],
+        ["Buiten neemt wat binnen niet hoort", [
+          "Fietsen, tuingereedschap, brandhout, sportspullen en de zomerse luifel hebben niets te zoeken in een compacte schil. Een weerbestendige berging op het terras of tegen de noordgevel is de goedkoopste kubieke meter van het hele project.",
+          "Plan hem mee met het huis in plaats van hem achteraf te kopen. Zijn plek beïnvloedt de terrasindeling en, op een klein perceel, het uitzicht van de buren."
+        ]],
+        ["De plekken die mensen vergeten", [
+          "Boven de deuropeningen, de ruimte achter de badkamerdeur, de dikte van de wand tussen twee ruimten, de plint onder de keukenkasten en de holte onder een verhoogde loftvloer. Geen ervan is groot; samen zijn ze nog een kubieke meter.",
+          "Geen ervan is achteraf toe te voegen zonder een afgewerkt oppervlak te openen. Vraag ernaar op de tekening en neem die welke bij u passen."
+        ]]
+      ],
+      "faq": [
+        ["Hoeveel bergruimte heeft een tiny house nodig?", "Zes tot acht kubieke meter voor twee volwassenen in permanente bewoning. De helft meer met een kind."],
+        ["Wat is de grootste winst?", "Laden onder het bed — ongeveer 1,5 kubieke meter voor geen enkel vloeroppervlak. Verdeeld, niet als één open ruimte."],
+        ["Kan bergruimte later worden toegevoegd?", "Losse kasten wel, ten koste van vloeroppervlak. Ingebouwd — traptreden, wanddikte, holte onder de loft — niet: dat vraagt een afgewerkt oppervlak openen."]
+      ]
+    },
+    {
+      "slug": "tiny-house-samenwonen-met-zijn-tweeen",
+      "category": "gebruik-en-verdienmodel",
+      "name": "Met zijn tweeën",
+      "title": "Met zijn tweeën in een tiny house: waar de wrijving werkelijk zit.",
+      "lead": "Niet in de vierkante meters. In het feit dat er nergens is waar u buiten gehoorsafstand bent, en dat alles wat de een laat liggen in het blikveld van de ander ligt.",
+      "sections": [
+        ["Ergens alleen kunnen zijn telt zwaarder dan ruimte", [
+          "De meest voorkomende reden dat stellen een compact huis verlaten is dat geen van beiden onbekeken kan zijn. Een deur, een niveauverschil of een afsluitbare loft lost dat op; een gordijn niet. Dit is een plattegrondbeslissing, één keer genomen.",
+          "Zelfs waar een tweede kamer onmogelijk is, doet een zitplek die van de rest af gericht staat, met eigen licht, meer dan nog twee vierkante meter open vloer."
+        ]],
+        ["Geluidsscheiding is de helft van het antwoord", [
+          "Eén persoon aan de telefoon bezet het hele huis tenzij de wand massa heeft. De spouw vullen en aan één zijde dubbel beplaten kost een paar centimeter en maakt van een visuele scheiding een echte.",
+          "De badkamerdeur telt net zo zwaar. In een compacte plattegrond komt hij uit op de woonruimte, en een holle deur maakt van elk gebruik van die ruimte een gedeelde gebeurtenis."
+        ]],
+        ["Twee van alles, of een afspraak", [
+          "Één kledingroede, één werkblad, één bureau: gedeelde voorzieningen in een klein huis vragen om verdubbeling of om een afspraak. Verdubbelen kost volume; de afspraak kost niets en moet werkelijk gemaakt worden in plaats van verondersteld.",
+          "De praktische vorm is een eigen zone — jouw plank, mijn lade, deze helft van de roede. Het klinkt kleinzielig en het is wat een compact huis over jaren houdbaar maakt."
+        ]],
+        ["Koken en opruimen gebeuren in de woonkamer", [
+          "In een open plattegrond staat wie kookt in dezelfde ruimte als wie ontspant. Stille apparatuur, een afzuigkap onder 50 dB en genoeg werkblad om rommel te vermijden zijn hier geen luxe — ze voorkomen dat de bezigheid van de een de avond bepaalt.",
+          "Hetzelfde geldt voor de wasmachine. Draai hem als u weg bent, of kies er een die stil genoeg is om te draaien als u er wel bent."
+        ]],
+        ["Buitenruimte verdubbelt het huis", [
+          "Een overdekt terras is de tweede kamer die een compacte plattegrond niet kan bevatten, en voor twee mensen is het waar de extra afstand vandaan komt. Zes maanden bruikbare buitenruimte verandert de ervaring meer dan welke ingreep binnen ook.",
+          "Geef het twee zitplekken, niet één. Dan werkt dezelfde truc — samen zijn zonder op elkaar te zitten — ook buiten."
+        ]]
+      ],
+      "faq": [
+        ["Redden stellen het in een tiny house?", "Velen wel, jarenlang. Wie het niet redt vertrekt meestal omdat er nergens is om alleen te zijn, niet vanwege het oppervlak."],
+        ["Wat is het belangrijkste voor twee personen?", "Een afsluitbare tweede ruimte, en een wand met genoeg massa om die echt te maken. MD 3 is daaromheen gebouwd."],
+        ["Werkt een open plattegrond?", "Voor één persoon uitstekend. Voor twee alleen met een echte akoestische en visuele scheiding ergens in de plattegrond."]
+      ]
+    },
+    {
+      "slug": "tiny-house-toegankelijkheid",
+      "category": "indeling-en-interieur",
+      "name": "Toegankelijkheid",
+      "title": "Een tiny house dat op je zeventigste nog werkt.",
+      "lead": "De meeste compacte plattegronden gaan uit van een ladder en een badkamer waarin u zijwaarts draait. Allebei prima op je veertigste, geen van beide op je zeventigste — en allebei goedkoop te veranderen op de tekening.",
+      "sections": [
+        ["Op één niveau slapen is de hele beslissing", [
+          "Al het andere aan ouder worden in een compact huis is te managen; een loft via een steile trap niet. Een slaapplek op de begane grond — MD 3 of groter — maakt van het huis een voorstel voor twintig jaar in plaats van tien.",
+          "Als een loft de enige optie is, kies dan een echte trap met leuning in plaats van een ladder, met een aantrede diep genoeg om vooruit af te dalen. Dat verschil telt lang voor je zeventigste."
+        ]],
+        ["Deuren en vrije doorgangen", [
+          "Een deurblad van 800 mm en een vrije route van 900 mm door de plattegrond kosten in de ontwerpfase vrijwel niets en zijn het verschil tussen een huis waar een rollator langs kan en een waar dat niet kan.",
+          "Vermijd drempels. Een vlakke overgang naar het terras helpt iedereen met iets op wielen — een koffer, een kinderwagen, een rolstoel — en het is hetzelfde detail dat het huis groter laat voelen."
+        ]],
+        ["De badkamer is het lastigst achteraf", [
+          "Een drempelloze douche zonder opstand, houten regels in de wand voor toekomstige beugels, en een deur die naar buiten draait zijn drie regels in de specificatie. Elk daarvan later toevoegen betekent de ruimte terug tot het frame strippen.",
+          "Vooral die regels kosten nu niets: een multiplexplaat achter de beplating waar ooit een beugel kan komen. Niemand heeft daar spijt van."
+        ]],
+        ["Bereik, licht en schakelaars", [
+          "Contactdozen op 450 mm in plaats van plinthoogte, schakelaars op 1000 mm, en trekschakelaars in plaats van draaiknoppen waar dat kan. Het is standaard toegankelijkheidspraktijk en niets ervan oogt klinisch als het in het ontwerp zit.",
+          "Lichtniveau telt met de jaren zwaarder dan mensen verwachten. Gelaagd licht — algemeen, werk en een nachtroute naar de badkamer — verdient net zoveel planning als het daglicht."
+        ]],
+        ["De route vanaf de auto", [
+          "Het pad, de stap bij de deur en het hoogteverschil van het perceel bepalen of het huis bereikbaar is. Een perfect interieur boven drie treden en een grindhelling is niet toegankelijk.",
+          "Regel het als het terras ontworpen wordt. Een helling die achteraf komt, ziet er ook uit alsof hij achteraf kwam."
+        ]]
+      ],
+      "faq": [
+        ["Kan een tiny house voor een oudere koper werken?", "Ja, met slapen op de begane grond, een drempelloze douche en geen drempels. Alleen een loft is de enige opzet die slecht veroudert."],
+        ["Wat moet ik nu al opnemen?", "Houten regels achter de badkamerwand voor toekomstige beugels, deuren van 800 mm, een drempelloze terrasovergang en contactdozen op 450 mm. Alle vier gratis in de ontwerpfase."],
+        ["Welk model past hier het best?", "MD 3 of groter, om de kamer op de begane grond. De bredere plattegronden geven ook de vrije route van 900 mm die een loft-plattegrond niet heeft."]
+      ]
+    },
+    {
+      "slug": "tiny-house-met-huisdieren",
+      "category": "indeling-en-interieur",
+      "name": "Huisdieren",
+      "title": "Een tiny house met een hond of een kat: de praktische details.",
+      "lead": "Een dier in een compact huis is vooral een vraag over bergruimte en vloerafwerking, plus één ding waar niemand aan denkt tot het gebeurt: wat het huis doet als u weg bent.",
+      "sections": [
+        ["De vloer krijgt het te verduren", [
+          "Nagels tekenen zachte afwerkingen en natte poten vinden elke ongesloten naad. Een veerkrachtige vloer met gelaste of gesloten naden kan allebei aan; een geoliede vurenhouten vloer niet. Dit is de afwerkingskeuze waaraan uitgeven loont.",
+          "Houd een slijtvaste zone bij de deur met een mattenput of een verzonken bak. In een kleine plattegrond is de entree ook de woonkamer, dus het vuil heeft nergens heen tenzij u daarvoor plant."
+        ]],
+        ["Eten en slapen vragen een ontworpen plek", [
+          "Bakken midden op een compacte vloer zijn een obstakel. Een nis in de keukenplint, of een ondiepe uitsparing onder de trap, haalt ze uit de looproute zonder vloeroppervlak te kosten.",
+          "Hetzelfde voor de mand. Een dierenmand op de verkeerde plek blokkeert de enige vrije route door het huis; op de goede plek vult hij een hoek die niets deed."
+        ]],
+        ["Bergruimte voor het dier is echt volume", [
+          "Voer, riemen, handdoeken, speelgoed, kattenbakvulling, een reismand en de dierenartspapieren zijn samen anderhalve plank. Het is niet veel en het is precies het volume dat wordt vergeten als het bergingsschema wordt gemaakt.",
+          "Een kattenbak vraagt een geventileerde plek buiten de woonruimte. In een compacte plattegrond is het antwoord meestal de badkamer, wat betekent dat de badkamer er ruimte voor moet hebben."
+        ]],
+        ["Weggaan is waar niemand op plant", [
+          "Een goed dichtgezet compact gebouw met draaiende ventilatie is comfortabel als u weg bent. Zonder ventilatie, op een zomerdag, niet — en anders dan een groot huis warmt het in een uur op, niet in een middag.",
+          "Neem een zomerbypass op de ventilatie en buitenzonwering op de hoofdbeglazing. Die twee samen maken het huis veilig om een dier in achter te laten."
+        ]],
+        ["Naar buiten en het terras", [
+          "Een kattenluik door een geïsoleerde wand is een detail, geen gat — het vraagt een gesloten, geïsoleerde doorvoer, anders wordt het een koudebrug en een tochtgat. Vraag erom vóór productie.",
+          "Een afgeschermd deel van het terras doet meer voor een hond dan welke indeling binnen ook, en het is dezelfde afscherming die u privacy geeft."
+        ]]
+      ],
+      "faq": [
+        ["Welke vloer werkt met een hond?", "Een veerkrachtige vloer met gelaste of gesloten naden. Geolied vurenhout tekent en laat water in de naden."],
+        ["Is een tiny house veilig om een dier in achter te laten?", "Met draaiende ventilatie en buitenzonwering op de hoofdbeglazing wel. Zonder beide warmt een compact huis op een zomerdag in een uur op."],
+        ["Waar komt de kattenbak?", "In de praktijk de badkamer — wat betekent dat de badkamer daar vooraf op gemaat moet zijn."]
+      ]
+    },
+    {
+      "slug": "tiny-house-in-de-winter",
+      "category": "onderhoud-en-beheer",
+      "name": "Winter",
+      "title": "Een tiny house door de winter: wat u doet en wanneer.",
+      "lead": "Niets aan de winter is moeilijk in een goed gebouwd compact huis. Het is een korte lijst dingen die vóór de kou moeten gebeuren in plaats van tijdens.",
+      "sections": [
+        ["Oktober: het water", [
+          "Controleer of de tracing werkt, of de aftapkraan draait, en isoleer alles in een onverwarmde ruimte dat dat nog niet is. Een bevroren leiding is de meest voorkomende winterstoring en de meest volledig vermijdbare.",
+          "Staat het huis leeg, beslis dan nu of u aftapt of een basistemperatuur aanhoudt. Beide werken; in januari beslissen niet."
+        ]],
+        ["November: de schil", [
+          "Loop de buitenzijde langs en kijk naar vier dingen: de kitnaden rond de kozijnen, de onderste gevelplank, de goot, en of er iets tegen de wand staat dat vocht vasthoudt. Twintig minuten, één keer per jaar.",
+          "Maak de ventilatiedoorvoeren vrij van blad en controleer of de condensafvoer loopt. Een verstopte condensafvoer in december is in februari een waterschade in een spouw."
+        ]],
+        ["December tot februari: vocht en warmte", [
+          "Laat de ventilatie continu draaien in plaats van af en toe te boosten. Continue afvoer op laag debiet is wat de luchtvochtigheid onder het punt houdt waarop condens op het koudste oppervlak ontstaat.",
+          "Weersta de neiging om alles dicht te zetten om warmte te sparen. Warmteterugwinning houdt het grootste deel al vast; het huis dichtplakken is hoe u schimmel achter de kast krijgt."
+        ]],
+        ["Sneeuw, als die blijft liggen", [
+          "Een flauw dak houdt sneeuw vast in plaats van hem af te voeren, wat prima is als de constructie op de lokale last berekend is en een probleem als dat niet zo is. Vraag dat getal bij de specificatie op, niet als het sneeuwt.",
+          "Ruim sneeuw weg bij de voet van de gevel en bij de terrasdeur. Sneeuw die tegen hout staat, smelt en weer bevriest, is zwaarder voor een gevel dan regen."
+        ]],
+        ["Maart: wat u controleert voordat u het loslaat", [
+          "Kijk opnieuw naar dezelfde vier punten, vervang de ventilatiefilters, en controleer de loft op elk teken dat er 's winters condens is geweest. Vocht daar is de vroegste waarschuwing voor een ventilatieprobleem.",
+          "Noteer wat u vond. Een winterlogboek van één pagina maakt van een onverklaarbaar probleem in jaar vijf een diagnose van vijf minuten."
+        ]]
+      ],
+      "faq": [
+        ["Kun je de hele winter in een tiny house wonen?", "Ja, in een vierseizoenenuitvoering: voldoende isolatie, continue ventilatie, vorstbeveiliging en een warmtebron gedimensioneerd op de lokale ontwerptemperatuur."],
+        ["Wat gaat er 's winters het vaakst mis?", "Een bevroren leiding in een onverwarmde ruimte of bij de buitenkraan. Tracing en een aftapkraan voorkomen dat volledig."],
+        ["Moet ik de ventilatie lager zetten om warmte te sparen?", "Nee. Warmteterugwinning houdt het meeste al vast, en minder debiet is precies hoe vocht het koudste oppervlak bereikt en daar neerslaat."]
+      ]
+    },
+    {
+      "slug": "tiny-house-oververhitting-zomer",
+      "category": "energie-en-autarkie",
+      "name": "Zomer",
+      "title": "Oververhitting van een tiny house in de zomer voorkomen.",
+      "lead": "Een klein, goed geïsoleerd, ruim beglaasd gebouw warmt snel op en heeft nauwelijks massa om dat op te vangen. Drie maatregelen lossen het op en alle drie worden vóór productie beslist.",
+      "sections": [
+        ["Beschaduw het glas van buitenaf", [
+          "Zodra de zon door de ruit is, zit de warmte binnen. Een overstek, luik of scherm buiten onderschept haar; een binnenzonwering zet haar om in stralingswarmte en verwarmt de ruimte alsnog. Het effect scheelt ruwweg een factor drie.",
+          "Een vast overstek op de zomerzonstand blokkeert de hoge julizon en laat de lage decemberzon door. Dat is een maat op tekening, geen product."
+        ]],
+        ["Geef het dak massa", [
+          "Het dak vangt de meeste straling en een lichte opbouw geeft die halverwege de middag rechtstreeks door. Een dichtere isolatie — houtvezel in plaats van minerale wol — vertraagt die overdracht met uren, genoeg om de piek voorbij bedtijd te schuiven.",
+          "Daarom is de loft altijd de warmste plek in een compact huis, en daarom is het het onderdeel dat het opwaarderen waard is als het budget maar één ding toelaat."
+        ]],
+        ["Spoel 's nachts, sluit overdag", [
+          "De mediterrane gewoonte werkt overal: open zetten wanneer de buitenlucht koeler is dan de binnenlucht, sluiten en beschaduwen wanneer dat niet zo is. In een klein volume wisselt de lucht snel, dus twee uur spoelen op de avond zet het huis werkelijk terug.",
+          "Dat vraagt een te openen raam aan elk uiteinde en een dakraam boven de loft. Een huis met alleen vast glas kan het helemaal niet."
+        ]],
+        ["Koelen, als het nodig is", [
+          "Een lucht-luchtwarmtepomp keert in de zomer om, en in een compact huis is de kleinste unit ruim voldoende. Hij kost stroom precies wanneer zon het meest levert, wat hem de natuurlijke partner van een dakinstallatie maakt.",
+          "Dimensioneer hem op het beschaduwde, gespoelde huis en niet op het onbeschaduwde. Een slecht beschaduwd gebouw koelen is de dure manier om een tekeningprobleem op te lossen."
+        ]],
+        ["Waar de apparatuur staat", [
+          "Een koelkast in een zonnige hoek, een router in een dichte kast en een omvormer in een ongeventileerde ruimte voegen alle drie warmte toe en verkorten hun eigen leven. In een klein volume is de som merkbaar.",
+          "Geef elk een geventileerde plek. Het kost niets op de tekening en het is een van de redenen waarom sommige compacte huizen warm aanvoelen zonder aanwijsbare oorzaak."
+        ]]
+      ],
+      "faq": [
+        ["Waarom wordt mijn tiny house te warm?", "Meestal een lichte dakopbouw plus onbeschaduwd glas. Beide worden in het ontwerp opgelost, en binnenzonwering is geen vervanging voor buitenzonwering."],
+        ["Heb ik airco nodig?", "Zelden, als het glas van buiten beschaduwd is en het dak massa heeft. Waar wel, is een omkeerbare warmtepomp de kleinste en past hij goed bij zonnepanelen."],
+        ["Werkt 's nachts spoelen echt?", "In een klein volume wel — de lucht wisselt snel genoeg dat twee uur op de avond het huis terugzet. Het vraagt te openen ramen aan beide uiteinden."]
+      ]
+    },
+    {
+      "slug": "tiny-house-verzekering",
+      "category": "vergunning-en-recht",
+      "name": "Verzekering",
+      "title": "Een tiny house verzekeren: wat de vragen werkelijk vragen.",
+      "lead": "Verzekeraars classificeren voordat ze prijzen, en elke lastige vraag gaat over in welke categorie het gebouw valt. Die vragen helder beantwoorden is het meeste werk.",
+      "sections": [
+        ["Roerend of onroerend is de eerste splitsing", [
+          "Een huis op een vaste fundering, aangesloten op nutsvoorzieningen, wordt als gebouw verzekerd. Hetzelfde huis op wielen en niet aangesloten ligt dichter bij een recreatiepolis. Premie, dekking en schadeafhandeling verschillen alle drie.",
+          "Zeg vooraf welke van de twee het is. Een polis die onder de verkeerde omschrijving is afgesloten, is een polis die mogelijk niet uitkeert."
+        ]],
+        ["Het gebruik verandert alles", [
+          "Permanente bewoning, recreatief gebruik, kortdurende verhuur en maandenlange leegstand zijn vier verschillende risico's. Vooral leegstand kent clausules — veel polissen beperken de dekking na dertig of zestig dagen.",
+          "Verhuurt u, dan heeft u een polis nodig die betalende gasten dekt. Een particuliere polis sluit die meestal volledig uit, en die uitsluiting komt pas bij de schade aan het licht."
+        ]],
+        ["Wat ze over de constructie zullen vragen", [
+          "Frame- en gevelmateriaal, of er een houtkachel is, hoe het huis verankerd is, en of de elektrische installatie een keuringsrapport heeft. Elk antwoord beweegt de prijs, en een rapport dat u al heeft, beweegt hem omlaag.",
+          "Bewaar de bouwdocumentatie. Foto's van het frame en de dampremmende laag, het elektrakeuringsrapport, het installatierapport van het rookkanaal — dat is het verschil tussen een vlotte schadeafhandeling en een discussie."
+        ]],
+        ["Verankering en wind", [
+          "Een licht gebouw heeft een windopwaartse vraag die een gemetseld huis niet heeft. Verzekeraars vragen hoe het vastgehouden wordt, en op open kustpercelen vragen ze dat precies. Een ontworpen verankeringsdetail met berekening beantwoordt dat.",
+          "Het is ook voor uzelf de moeite waard. Opwaartse wind is de faalwijze die een compact gebouw het zwaarst en het plotselingst beschadigt."
+        ]],
+        ["Inboedel, aansprakelijkheid en het terras", [
+          "Inboedeldekking in een klein huis wordt makkelijk onderschat — een ingebouwd interieur betekent dat veel van wat u elders inboedel zou noemen hier deel van het gebouw is. Vraag aan welke kant van die streep het vaste meubilair valt.",
+          "Aansprakelijkheid telt zodra anderen het terras gebruiken, en is meestal goedkoop. Hij ontbreekt ook meestal in de eerste offerte tenzij u erom vraagt."
+        ]]
+      ],
+      "faq": [
+        ["Kan ik een tiny house gewoon verzekeren?", "Ja, zodra het correct geclassificeerd is. Op een vaste fundering met aansluitingen als gebouw; op wielen en niet aangesloten is het een ander product."],
+        ["Heb ik voor verhuur een andere polis nodig?", "Ja. Een particuliere polis sluit betalende gasten meestal volledig uit, en dat blijkt bij de schade in plaats van bij het afsluiten."],
+        ["Welke documenten willen ze zien?", "Het elektrakeuringsrapport, het rookkanaalrapport als er een kachel is, het verankeringsdetail en het liefst foto's uit de bouw. Ze hebben verlaagt de prijs."]
+      ]
+    },
+    {
+      "slug": "tiny-house-restwaarde",
+      "category": "vergelijking-en-alternatieven",
+      "name": "Restwaarde",
+      "title": "Wat een tiny house over vijf jaar waard is, en wat die waarde vasthoudt.",
+      "lead": "Compacte gebouwen schrijven heel verschillend af, afhankelijk van drie dingen: de constructie, de papieren, en of de koper hem ergens kan neerzetten.",
+      "sections": [
+        ["De constructie zet de bodem", [
+          "Een stalen frame met een correct uitgevoerde schil is een gebouw van vijftig jaar en wordt zo gewaardeerd. Een lichte recreatie-eenheid is voor seizoensgebruik ontworpen en wordt gewaardeerd op een afschrijvingscurve die dichter bij een caravan ligt.",
+          "Dit is verreweg de grootste factor en hij wordt bij aankoop beslist. Niets wat u daarna doet verplaatst een gebouw van de ene categorie naar de andere."
+        ]],
+        ["Papieren zijn echt geld waard", [
+          "Een gedocumenteerde bouw — framefoto's, isolatieopbouw, keuringsrapport, rookkanaalrapport, onderhoudslogboek — laat een koper verifiëren wat hij koopt. Zonder dat prijst hij een risico in, en die korting is groter dan het bijhouden van het dossier kostte.",
+          "Begin het dossier bij oplevering. Het drie jaar later reconstrueren is onmogelijk voor precies de delen die ertoe doen."
+        ]],
+        ["Plaatsbaarheid is wat de koper werkelijk koopt", [
+          "Een huis dat binnen regulier wegtransport past, geen ontheffing nodig heeft om te verhuizen en een gedocumenteerde funderingsaansluiting heeft, kan overal heen. Eentje van 3,2 meter breed is minder waard omdat verplaatsen een project is.",
+          "De 2,55 meter is niet alleen leveringsgemak. Het is wat de opties van de tweede koper openhoudt."
+        ]],
+        ["Wat slecht veroudert", [
+          "Zeer specifieke interieurs, ongebruikelijke kleuren, maatwerk dat niet vervangbaar is, en alles wat hard dateert. In een klein huis is elk daarvan een groot deel van wat de koper ziet.",
+          "Houd de vaste elementen neutraal en steek de persoonlijkheid in wat verplaatsbaar is. Dat is geen compromis; het is wat het huis ook voor de volgende bewoner laat werken."
+        ]],
+        ["De markt voor gebruikte compacte huizen", [
+          "Die bestaat, is dun, en werkt op vertrouwen. Foto's uit de bouwfase, een vochtmeting en een blik op de onderzijde van het chassis zijn wat een geïnformeerde koper controleert — en dus wat een geïnformeerde verkoper klaarlegt.",
+          "Prijs tegen vergelijkbaar nieuw plus het al verrichte terreinwerk. Een huis dat al staat, aangesloten en vergund is, is meer waard dan hetzelfde huis op een dieplader."
+        ]]
+      ],
+      "faq": [
+        ["Houdt een tiny house zijn waarde?", "Een stalen exemplaar met een goede schil en documentatie grotendeels wel. Een lichte seizoensunit schrijft veel sneller af."],
+        ["Wat beïnvloedt de doorverkoop het meest?", "Eerst de constructie, dan de documentatie, dan of het huis op regulier transport verplaatsbaar is."],
+        ["Moet ik de bouwfoto's bewaren?", "Ja — het is het enige bewijs van wat er in een dichte wand zit, en een koper zonder dat prijst een risico in dat groter is dan het dossier waard was."]
+      ]
+    },
+    {
+      "slug": "tiny-house-terreinvoorbereiding",
+      "category": "transport-en-import",
+      "name": "Terreinwerk",
+      "title": "Het terrein voorbereiden: de planning van besluit tot levering.",
+      "lead": "Het huis kost weken om te bouwen en het terrein is er vaak later klaar voor. Ze in de verkeerde volgorde laten lopen is de meest voorkomende reden dat een huis op een dieplader staat te wachten.",
+      "sections": [
+        ["Begin altijd met de aansluitingen", [
+          "Doorlooptijden van netbeheerders lopen van weken tot een jaar, afhankelijk van regio en netbeheerder. Het is de langste post in de planning en die het vaakst als laatste wordt gestart, nadat het huis al besteld is.",
+          "Vraag ze aan zodra het perceel zeker is, vóór de modelkeuze. Al het andere is samen te drukken; dit niet."
+        ]],
+        ["Grondonderzoek vóór grondwerk", [
+          "Een sondering kost weinig en bepaalt het funderingstype, dat op zijn beurt de kosten en de duur van het grondwerk bepaalt. Het overslaan betekent erachter komen tijdens het graven, als de machine al op het werk staat en per dag rekent.",
+          "Vraag op hellend of opgehoogd terrein tegelijk een constructeur. Twee bezoeken aan het begin voorkomen een herontwerp halverwege."
+        ]],
+        ["Toegang vóór er iets geleverd wordt", [
+          "De route van de openbare weg naar de eindpositie moet een dieplader en een kraan aankunnen. Een poort verbreden, een tak snoeien, een tijdelijke rijbaan leggen of een wegafzetting regelen zijn allemaal posten met een doorlooptijd in weken.",
+          "Loop hem met een meetlint en een camera. Fotografeer de inrit, het smalste punt, de laatste bocht en de opstelplaats voor de kraan, en stuur ze met maten mee."
+        ]],
+        ["Plan het grondwerk zo dat het kan uitharden", [
+          "Beton heeft tijd nodig. Een strookfundering die de week vóór levering wordt gestort, wordt belast voordat hij op sterkte is. Bouw die wachttijd in de planning in in plaats van hem te ontdekken.",
+          "Schroefpalen vermijden dit volledig, wat een deel is van waarom ze bij een krappe planning passen, zelfs waar een strook anders de voorkeur zou hebben."
+        ]],
+        ["De week voor de levering", [
+          "Bevestig de kraan, controleer de hoogtes met een instrument, maak de opstelplaats vrij, regel rijplaten als de grond zacht is, en zorg dat er iemand met beslissingsbevoegdheid op het werk is. Een levering zonder iemand die kan beslissen, is een levering die stilvalt.",
+          "Laat de aansluitingen aflopen waar het huis ze ontmoet, afgedopt en gemarkeerd. Op de dag zelf aansluiten is een ochtend; op de dag zelf graven is een week."
+        ]]
+      ],
+      "faq": [
+        ["Hoe lang duurt de terreinvoorbereiding?", "Het grondwerk is dagen tot twee weken. De aansluitingen zijn weken tot een jaar, en die bepalen de planning."],
+        ["Waar begin ik mee?", "Met de aansluitingen aanvragen, vóór de modelkeuze. Al het andere is samen te drukken; doorlooptijden van netbeheerders niet."],
+        ["Wat wordt het vaakst vergeten?", "De toegang. Een poort verbreden of een wegafzetting regelen heeft een doorlooptijd, en het wordt vaker op de leverdag ontdekt dan welk ander probleem ook."]
+      ]
+    },
+    {
+      "slug": "tiny-house-verlichting",
+      "category": "indeling-en-interieur",
+      "name": "Verlichting",
+      "title": "Een tiny house verlichten: drie lagen, geen plafondlamp.",
+      "lead": "Eén felle plafondlamp laat een kleine ruimte eruitzien als een kleine ruimte. Gelaagd licht laat hetzelfde volume als meerdere plekken lezen.",
+      "sections": [
+        ["Algemeen licht hoort indirect", [
+          "Een raster van inbouwspots in een compact plafond maakt alles vlak en zet uw eigen schaduw op waar u mee bezig bent. Licht dat van het plafond of een wand terugkaatst geeft dezelfde hoeveelheid zonder die vlakheid en zonder verblinding vanuit een loftbed.",
+          "Een lichtvoeg of een opwaartse lijn boven het keukenblok is het gebruikelijke antwoord. Het kost een detail op tekening en daarna niets."
+        ]],
+        ["Werklicht waar het werk is", [
+          "Licht onder de bovenkasten op het werkblad, een gerichte lamp aan het bureau, een leeslamp aan elke kant van het bed. Elk is klein, elk apart geschakeld, en samen laten ze u één deel van het huis verlichten zonder alles te verlichten.",
+          "Die selectiviteit is wat een compact interieur na donker groter laat voelen: een verlichte hoek en een donkere lezen als twee ruimten."
+        ]],
+        ["Accentlicht doet de rest", [
+          "Eén armatuur die een textuur uitlicht — de beplanking op een wand, een plank, een plant — geeft het oog ergens om heen te gaan. In een kleine ruimte is dat onevenredig effectief en het kost één groep.",
+          "Buiten breidt één lamp op een terrasboom of de gevel de visuele ruimte uit tot voorbij het glas. 's Nachts is een onverlicht raam een zwarte spiegel; een verlichte buitenkant geeft u het uitzicht terug."
+        ]],
+        ["Kleurtemperatuur en dimmen", [
+          "Warmwit, rond 2700 K, overal waar u ontspant; neutraal, rond 3500 K, boven werkblad en bureau. Ze binnen één zichtlijn mengen ziet eruit als een vergissing, dus beslis de grens op de plattegrond.",
+          "Dim alles wat kan. In een klein volume is het verschil tussen vol en een kwart het verschil tussen een keuken en een woonkamer."
+        ]],
+        ["Het bedraden is een productiebeslissing", [
+          "Elke groep, schakelaarpositie en driverplek ligt vast als de wanden dichtgaan. Een hotelschakeling bij de loft toevoegen, of een contactdoos voor een vloerlamp waar de bank komt, is nu een lijn op tekening en straks een sleuf in een afgewerkte wand.",
+          "Teken het meubilair in vóór de verlichting wordt uitgezet. Verlichting ontworpen tegen een lege plattegrond landt op de verkeerde plekken."
+        ]]
+      ],
+      "faq": [
+        ["Hoeveel lampen heeft een tiny house nodig?", "Minder armaturen dan een spotraster, maar op meer aparte groepen. Selectiviteit telt zwaarder dan aantal."],
+        ["Welke kleurtemperatuur?", "Rond 2700 K waar u ontspant en 3500 K boven werkbladen. Meng ze niet binnen één zichtlijn."],
+        ["Kan ik de verlichting later veranderen?", "Armaturen wel. Groepen, schakelaarposities en driverplekken liggen vast zodra de wanden dichtgaan."]
+      ]
+    },
+    {
+      "slug": "tiny-house-interieurmaterialen",
+      "category": "indeling-en-interieur",
+      "name": "Materialen",
+      "title": "Kleur en materiaal in een klein interieur: wat het groter laat lezen.",
+      "lead": "Het gangbare advies is alles wit schilderen. Dat klopt half, en het is de verkeerde helft die wordt toegepast.",
+      "sections": [
+        ["Doorlopendheid telt zwaarder dan lichtheid", [
+          "Een kleine ruimte leest groter als het oog niet wordt gestopt — één vloermateriaal overal, één wandtoon, één plafond. Drie verschillende vloerafwerkingen in achtentwintig vierkante meter delen de ruimte visueel op en maken elk deel kleiner.",
+          "Daarom werkt een volledig wit interieur vaak wél: niet omdat wit licht is, maar omdat het doorloopt. Dezelfde doorlopendheid in een warme middentoon werkt even goed en voelt minder klinisch."
+        ]],
+        ["Laat de vloer door de drempel lopen", [
+          "De effectiefste ingreep in een compact huis is hetzelfde vloerniveau en, waar mogelijk, een vergelijkbaar materiaal binnen en op het terras. Het oog leest de twee als één ruimte en het huis leent de buitenkant.",
+          "Het haalt ook de drempel weg, wat iedereen met iets op wielen helpt."
+        ]],
+        ["Hout vraagt terughoudendheid", [
+          "Hout op elk vlak in een klein volume wordt rond het derde vlak benauwend. Eén houten wand tegen effener wanden leest als warmte; vier houten wanden lezen als een sauna.",
+          "Houd het plafond het lichtste vlak. Een donker plafond in een ruimte van tweeënhalve meter wordt lichamelijk gevoeld, niet alleen gezien."
+        ]],
+        ["Reflectie is gereedschap en valkuil", [
+          "Een spiegel tegenover een raam verdubbelt daglicht en uitzicht en vergroot de ruimte werkelijk. Een hoogglans kastfront bij datzelfde raam toont elke vingerafdruk en elke weerspiegeling van de afzuigkap.",
+          "Mat of zijdeglans op de grote vlakken, reflectie gereserveerd voor één bewuste plek."
+        ]],
+        ["Textuur draagt een kleine ruimte", [
+          "Met weinig vloeroppervlak zitten de vlakken dicht bij het oog, dus doet textuur het werk dat schaal in een grote ruimte doet. Een geweven jaloezie, een linnen gordijn, een ruwe stuc of een geborstelde houtnerf geven de interesse die patroon elders zou geven.",
+          "Patroon houdt u juist beter bij dingen die u kunt vervangen. In een klein huis is een groot vast patroon onontkoombaar op een manier die het in een groot huis nooit is."
+        ]]
+      ],
+      "faq": [
+        ["Moet alles wit?", "Niet per se. Wat een klein interieur groter laat lezen is doorlopendheid — één vloer, één wandtoon — niet lichtheid. Een warme middentoon werkt even goed."],
+        ["Hoeveel hout is te veel?", "Rond de drie vlakken. Eén houten wand tegen effener wanden leest als warmte; hout overal leest als een sauna."],
+        ["Helpen spiegels?", "Eén, geplaatst om een raam of uitzicht te weerkaatsen, helpt echt. Reflecterende kastfronten tonen vooral vingerafdrukken."]
+      ]
+    }
+  ]
+}
