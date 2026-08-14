@@ -402,12 +402,12 @@ p{margin:0 0 10px}
 /* Phone header: lockup, handwritten claim, language, hamburger — in that order */
 @media(max-width:560px){
   .nav-inner{gap:8px}
-  .brand{gap:8px}
-  .brand img{width:104px;max-height:28px}
-  .brand-claim{font-size:.9rem}
-  .lang-switch{padding:6px 7px;font-size:.6rem;letter-spacing:.05em}
+  /* Side by side the claim crowded the lockup; stacked it reads as one mark. */
+  .brand{flex-direction:column;align-items:flex-start;gap:0}
+  .brand img{width:118px;max-height:30px}
+  .brand-claim{font-size:.78rem;padding-top:0;padding-left:2px}
+  .lang-switch{padding:6px 8px;font-size:.6rem;letter-spacing:.05em}
 }
-@media(max-width:380px){.brand-claim{display:none}}
 @media(max-width:640px){
   :root{--sp-section:34px;--fs-body:.93rem}
   .brand img{width:128px}

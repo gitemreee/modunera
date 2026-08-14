@@ -9,6 +9,7 @@ deploy time — the generators below produce the committed HTML.
 ```bash
 node tools/rebrand-modunera.mjs        # brand normalisation, legacy asset removal
 node tools/build-modunera-europe.mjs   # countries, regions, cities, services, Europe guides
+node tools/build-modunera-locales.mjs  # Dutch, Danish and French sections
 node tools/build-modunera-v2.mjs       # navigation, comparison pages, guide hub, sitemaps
 node tools/validate-modunera.mjs       # gate: canonicals, JSON-LD, links, brand, colours
 ```
@@ -19,7 +20,31 @@ every `<nav class="nav">` on the site with the shared mega-menu and rebuilds the
 sitemaps so the pages it adds are indexed. Running the Europe build without the
 v2 layer afterwards leaves the site with two different menus.
 
-All four are idempotent — a second run changes nothing.
+The locale builder runs before the v2 layer so its pages pick up the shared
+navigation, the WhatsApp dock and the sitemap.
+
+All five are idempotent — a second run changes nothing.
+
+## Languages
+
+German is the root, English is `/en/`, and the three remaining target-market
+languages live under their own directories with the slugs those markets actually
+use — not translations of the English ones:
+
+| Locale | Home | Countries | Services | FAQ |
+|---|---|---|---|---|
+| Dutch | `/nl/` | `/nl/landen/` | `/nl/diensten/` | `/nl/veelgestelde-vragen/` |
+| Danish | `/da/` | `/da/lande/` | `/da/ydelser/` | `/da/ofte-stillede-spoergsmaal/` |
+| French | `/fr/` | `/fr/pays/` | `/fr/services/` | `/fr/questions-frequentes/` |
+
+Copy, slugs and country names live in `data/locales.json`; the per-country legal
+and climate paragraphs are written per language in `COUNTRY_COPY` inside
+`tools/build-modunera-locales.mjs`. Every locale page carries hreflang for all
+five languages plus x-default, and the header language picker lists them all.
+
+`/sv/` and `/tr/` are single legacy pages outside the target markets. Their
+`html lang` was wrong (both claimed German) and is now correct, but they are not
+built out.
 
 ## Where to edit what
 
@@ -104,8 +129,8 @@ canonicals, missing `lang`, invalid JSON-LD, a broken local link, a missing
 brand colour, a surviving legacy brand string, or a duplicated country/service
 link in the homepage navigation. It also asserts the required page set exists.
 
-Current numbers: 14,859 pages, 14,859 unique canonicals, 14,855 sitemap URLs,
-36,960 JSON-LD blocks, 1,060,908 local references checked with none broken.
+Current numbers: 14,896 pages, 14,896 unique canonicals, 14,892 sitemap URLs,
+37,017 JSON-LD blocks, 1,122,319 local references checked with none broken.
 
-Beyond the gate, a Chromium pass over 67 pages at 390/768/1440px checks every
+Beyond the gate, a Chromium pass over 79 pages at 390/768/1440px checks every
 page for script errors and horizontal overflow.
