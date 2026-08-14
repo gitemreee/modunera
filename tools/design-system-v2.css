@@ -317,34 +317,47 @@ p{margin:0 0 10px}
 .adv-card h3{margin:0 0 5px}
 .adv-card p{font-size:var(--fs-small);color:var(--muted);margin:0}
 
-/* WhatsApp widget — replaces the old two-icon floating rail. A launcher in the
-   brand green with the WhatsApp glyph, and a panel that names what we build so the
-   first message arrives with context. It opens itself once per visitor; the
-   dismissal is remembered, so it never nags on the next page. */
+/* WhatsApp widget — replaces the old two-icon floating rail.
+   The panel is deliberately the only element on the site that does not use the
+   MODUNERA design system: it borrows WhatsApp's own interface font stack and its
+   current palette, because a message window that looks like the app it opens is
+   recognised before it is read. The site palette is untouched; these values are
+   WhatsApp's, scoped to this component.
+     #008069  header green (WhatsApp Web, light theme)
+     #25D366  brand green (launcher and send button)
+     #D9FDD3  outgoing-message bubble, used for the service chips
+     #EFEAE2  chat background
+     #111B21 / #667781  primary and secondary text
+   It no longer opens on arrival. The panel appears once the visitor has scrolled
+   about one screen, and a dismissal is remembered so it never nags again. */
 .wa-dock{position:fixed;right:16px;bottom:16px;z-index:1400;display:flex;flex-direction:column;
-  align-items:flex-end;gap:10px;font-family:var(--display)}
-.wa-panel{width:min(316px,calc(100vw - 32px));background:#fff;border:1px solid var(--line);
-  border-radius:14px;box-shadow:0 18px 44px rgba(43,45,49,.22);overflow:hidden;
+  align-items:flex-end;gap:10px;
+  font-family:"Segoe UI","Helvetica Neue",Helvetica,"Lucida Grande",Arial,Ubuntu,Cantarell,"Fira Sans",sans-serif}
+.wa-panel{width:min(316px,calc(100vw - 32px));background:#EFEAE2;border:0;
+  border-radius:12px;box-shadow:0 18px 44px rgba(11,20,26,.26);overflow:hidden;
   transform-origin:100% 100%;opacity:0;visibility:hidden;transform:translateY(10px) scale(.97);
   transition:opacity .24s ease-out,transform .24s ease-out,visibility .24s}
 .wa-dock.open .wa-panel{opacity:1;visibility:visible;transform:none}
-.wa-head{display:flex;align-items:center;gap:10px;background:#075E54;color:#fff;padding:12px 14px}
+.wa-head{display:flex;align-items:center;gap:10px;background:#008069;color:#fff;padding:11px 14px}
 .wa-head svg{width:26px;height:26px;flex:none}
-.wa-head strong{display:block;font-size:.86rem;font-weight:800;line-height:1.2}
-.wa-head span{display:block;font-size:var(--fs-label);letter-spacing:.06em;color:rgba(255,255,255,.78);font-weight:650}
-.wa-close{margin-left:auto;background:none;border:0;color:#fff;font-size:1.15rem;line-height:1;
-  cursor:pointer;padding:2px 4px;opacity:.75}
+.wa-head strong{display:block;font-size:.94rem;font-weight:600;line-height:1.25;letter-spacing:0}
+.wa-head span{display:block;font-size:.78rem;letter-spacing:0;color:rgba(255,255,255,.8);
+  font-weight:400;text-transform:none}
+.wa-close{margin-left:auto;background:none;border:0;color:#fff;line-height:1;
+  cursor:pointer;padding:2px 4px;opacity:.8}
 .wa-close:hover{opacity:1}
 .wa-body{padding:13px 14px 14px}
-.wa-body>p{margin:0 0 9px;font-size:var(--fs-small);color:var(--muted);line-height:1.45}
-.wa-services{display:flex;flex-wrap:wrap;gap:5px;margin:0 0 12px;padding:0;list-style:none}
-.wa-services li{font-size:var(--fs-label);letter-spacing:.04em;font-weight:750;color:var(--charcoal);
-  background:var(--paper-2);border-radius:999px;padding:5px 9px}
-.wa-cta{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:40px;
-  border-radius:8px;background:#25D366;color:#0b2e26;font-size:.78rem;font-weight:800;
-  letter-spacing:.04em;text-transform:uppercase}
-.wa-cta:hover{background:#1eb958}
-.wa-cta svg{width:17px;height:17px}
+.wa-body>p{margin:0 0 10px;font-size:.85rem;color:#3B4A54;line-height:1.5;letter-spacing:0}
+/* the service chips read as outgoing WhatsApp bubbles */
+.wa-services{display:flex;flex-wrap:wrap;gap:5px;margin:0 0 13px;padding:0;list-style:none}
+.wa-services li{font-size:.79rem;letter-spacing:0;font-weight:400;color:#111B21;
+  background:#D9FDD3;border-radius:8px 8px 8px 2px;padding:6px 10px;
+  box-shadow:0 1px .5px rgba(11,20,26,.13)}
+.wa-cta{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:42px;
+  border-radius:24px;background:#25D366;color:#fff;font-size:.88rem;font-weight:500;
+  letter-spacing:0;text-transform:none}
+.wa-cta:hover{background:#1DAA61}
+.wa-cta svg{width:18px;height:18px}
 /* Two buttons, one weight: same diameter, same shadow, each a filled circle with
    a white mark. The WhatsApp green is the platform's own, so the button is
    recognisable before it is read; the handset sits in the brand charcoal. */
@@ -364,8 +377,8 @@ p{margin:0 0 10px}
 .wa-call:hover .wa-tip,.wa-call:focus-visible .wa-tip{opacity:1}
 .wa-close svg{width:16px;height:16px;display:block}
 @media(max-width:560px){
-  /* Compact on phones: it opens itself, so it has to sit lightly over the hero
-     rather than bury the primary call to action. */
+  /* Compact on phones: it opens itself once the visitor is past the hero, so it
+     still has to sit lightly rather than bury the primary call to action. */
   .wa-dock{right:12px;bottom:12px;gap:8px}
   .wa-rail{flex-direction:row;gap:9px}
   .wa-launch,.wa-call{width:48px;height:48px}
@@ -374,11 +387,13 @@ p{margin:0 0 10px}
   .wa-panel{width:min(292px,calc(100vw - 24px))}
   .wa-head{padding:9px 11px}
   .wa-head svg{width:22px;height:22px}
-  .wa-body{padding:10px 11px 11px}
-  .wa-body>p{margin-bottom:7px;font-size:.76rem}
-  .wa-services{gap:4px;margin-bottom:9px}
-  .wa-services li{padding:4px 7px;font-size:.62rem}
-  .wa-cta{min-height:36px;font-size:.72rem}
+  .wa-head strong{font-size:.88rem}
+  .wa-head span{font-size:.72rem}
+  .wa-body{padding:11px 11px 12px}
+  .wa-body>p{margin-bottom:8px;font-size:.79rem}
+  .wa-services{gap:4px;margin-bottom:10px}
+  .wa-services li{padding:5px 8px;font-size:.74rem}
+  .wa-cta{min-height:38px;font-size:.82rem}
 }
 @media(prefers-reduced-motion:reduce){.wa-panel{transition:none}}
 
@@ -532,3 +547,22 @@ p{margin:0 0 10px}
 .toc p{margin:0 0 9px}
 .toc a.btn{border-top:0;margin-top:4px;padding:11px 14px;line-height:1.2}
 .article-aside{top:78px}
+
+/* Captions that sit on a photograph. v2 grouped .editorial-caption and
+   .project-caption with the small uppercase micro-labels, which made their
+   headings terracotta, uppercase and letterspaced at 1.35–1.6rem — unreadable on
+   a dark image. Worse, <strong> and <small> are both inline, so on
+   .editorial-caption the heading and its caption ran together on one line and
+   wrapped into each other. Both are laid out as two lines in white here. */
+.editorial-caption,.project-caption{color:#fff;text-shadow:0 1px 12px rgba(5,24,17,.45)}
+.editorial-caption{max-width:min(330px,calc(100% - 52px))}
+.editorial-caption strong,.project-caption strong{display:block;color:#fff;
+  text-transform:none;letter-spacing:-.022em;line-height:1.16;margin-bottom:6px}
+.editorial-caption strong{font-size:clamp(1.15rem,2.6vw,1.6rem)}
+.project-caption strong{font-size:clamp(1.02rem,2.1vw,1.35rem)}
+.editorial-caption small,.project-caption small{display:block;line-height:1.45;
+  color:rgba(255,255,255,.86);letter-spacing:.05em}
+@media(max-width:640px){
+  .editorial-caption{left:20px;bottom:20px;max-width:calc(100% - 40px)}
+  .project-caption{left:18px;right:18px;bottom:18px}
+}
