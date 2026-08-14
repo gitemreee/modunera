@@ -803,3 +803,91 @@ h1,h2,h3,.section-header h2,.editorial-copy h2,.wide-copy h2,.article-content h2
   .brand-claim{font-size:.76rem}
   .nav-inner{gap:6px}
 }
+
+/* --- iOS renders an unstyled <button> in the system blue ------------------- */
+/* .faq-question is a button with no colour of its own, so on iOS Safari every
+   question on every FAQ block rendered in link blue. Chromium inherits the text
+   colour instead, which is why no desktop sweep ever showed it. */
+.faq-question{color:var(--roof)}
+.faq-question span{color:var(--muted)}
+.faq-item.open .faq-question,.faq-question:hover{color:var(--moss)}
+
+/* --- a bigger lockup, claim and flag ---------------------------------------
+   Scoped by width, widest first. An unscoped rule here would win over every
+   phone tier below it and push the bar hundreds of pixels past the viewport. */
+@media(min-width:641px){
+  .brand img{width:224px;max-height:58px}
+  .brand-claim{font-size:1.72rem}
+  .nav-inner{height:88px}
+  .nav-menu{top:66px}
+  .article-aside{top:104px}
+}
+.flag{width:26px;height:18px}
+.lang-switch{font-size:.78rem;padding:6px 9px}
+@media(max-width:640px){.flag{width:24px;height:17px}}
+@media(max-width:400px){.flag{width:21px;height:15px}}
+
+/* --- denser cards on a phone ----------------------------------------------- */
+/* Each card was taking half a screen: v1 sizes them for a desktop grid and the
+   phone inherited the padding, the heading scale and the minimum heights. */
+@media(max-width:640px){
+  .journey-card,.value-card,.adv-card,.quality-card,.benefit-card,.use-card,
+  .tool-card,.state-card,.compare-card{padding:15px 16px;min-height:0}
+  .journey-card h3,.value-card h3,.adv-card h3,.quality-card h3,.benefit-card h3,
+  .use-card h3,.tool-card h3,.state-card h3{font-size:1.04rem;line-height:1.2;margin:0 0 5px}
+  .journey-card p,.value-card p,.adv-card p,.quality-card p,.benefit-card p,
+  .use-card p,.tool-card p,.state-card p{font-size:.82rem;line-height:1.45;margin:0}
+  .value-card strong,.benefit-number{font-size:1.75rem;line-height:1}
+  .section-number{font-size:1.1rem}
+  .journey-grid,.value-grid,.adv-grid,.quality-grid,.benefit-grid,.use-grid,
+  .state-grid,.tool-grid{gap:10px}
+  .value-grid{grid-auto-rows:auto}
+  .journey-card .card-arrow,.tool-card .card-arrow{margin-top:8px}
+  .faq-question{padding:11px 0;font-size:.88rem}
+  .faq-answer p{font-size:.83rem;line-height:1.45}
+}
+
+/* Phone tiers restated last, widest first, so the narrowest always wins. Sizes
+   are as large as the bar can carry: lockup, claim, flag and hamburger share one
+   line and the claim is nowrap, so the budget is fixed by the viewport. */
+@media(max-width:640px){
+  .brand img{width:176px;max-height:44px}
+  .brand-claim{font-size:1.34rem}
+  .nav-inner{height:74px}
+  .nav-links{top:74px;max-height:calc(100vh - 74px)}
+}
+@media(max-width:560px){
+  .brand img{width:148px;max-height:38px}
+  .brand-claim{font-size:1.14rem}
+  .nav-inner{height:68px}
+  .nav-links{top:68px;max-height:calc(100vh - 68px)}
+  .lang-dropdown .nav-menu{top:50px}
+}
+@media(max-width:430px){
+  .brand img{width:128px;max-height:34px}
+  .brand-claim{font-size:1rem}
+  .nav-inner{height:64px}
+  .nav-links{top:64px;max-height:calc(100vh - 64px)}
+}
+@media(max-width:400px){
+  .brand img{width:112px;max-height:30px}
+  .brand-claim{font-size:.9rem}
+  .nav-inner{height:60px;gap:8px}
+  .nav-links{top:60px;max-height:calc(100vh - 60px)}
+}
+@media(max-width:340px){
+  .brand img{width:96px;max-height:26px}
+  .brand-claim{font-size:.78rem}
+  .nav-inner{gap:6px}
+}
+@media(max-width:640px){
+  /* the blog index is a column of cards; at v1's card height 21 of them still
+     made a 16,700px page */
+  .blog-card{min-height:0}
+  .blog-card img{aspect-ratio:16/9;height:auto;object-fit:cover}
+  .blog-card-body{padding:14px 16px 16px}
+  .blog-card h3{font-size:1.02rem;line-height:1.22;margin:4px 0 5px}
+  .blog-card p{font-size:.82rem;line-height:1.45;margin:0;
+    display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .blog-grid{gap:10px}
+}
