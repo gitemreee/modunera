@@ -75,6 +75,7 @@ built out.
 | Blog category material, per format | `data/blog-categories.json` |
 | English knowledge library (nine subjects) | `data/en-blog.json` |
 | Dutch, Danish and French blogs (nine subjects each) | `data/blog-nl.json`, `data/blog-da.json`, `data/blog-fr.json` |
+| Individual posts (twelve per language, en/nl/da/fr) | `data/posts-en.json`, `posts-nl.json`, `posts-da.json`, `posts-fr.json` |
 | The five-market appendix | `APPENDIX` in `tools/build-modunera-depth.mjs` |
 | Home-page model grid, five languages | `HOME_MODELS` in `tools/build-modunera-depth.mjs` |
 | Guide categories | `GUIDE_CATEGORIES` in `tools/build-modunera-v2.mjs` |
@@ -123,6 +124,37 @@ so a renamed or reordered category appears in the navigation on the next build
 and the two layers cannot drift. The nine categories are in the same order in all
 three files — `localeBlogCategoryPage()` pairs them by index for hreflang, so keep
 that order if you add a subject.
+
+Beside the nine categories, each of `en`, `nl`, `da` and `fr` carries twelve
+individual posts from `data/posts-<code>.json`: the specific things a buyer
+searches for by name — foundation, cladding, bathroom, kitchen, heating,
+acoustics — chosen so they do not repeat the category material. `localePostPage()`
+also pairs the four files by index for hreflang, so the twelve subjects must stay
+in the same order in all four. Each post declares a `category` slug and is listed
+on that category page and on the blog hub.
+
+Blog size per language after a full build:
+
+| Language | Hub | Categories | Posts | Words |
+|---|---|---|---|---|
+| German | `/blog/` | 9 under `/ratgeber/` | 110 + 13 Europe guides | the original library |
+| English | `/en/blog/` | 9 | 12 | 38,120 |
+| Dutch | `/nl/blog/` | 9 | 12 | 21,032 |
+| Danish | `/da/blog/` | 9 | 12 | 19,469 |
+| French | `/fr/blog/` | 9 | 12 | 23,319 |
+
+German is still far ahead on count. Closing that gap means writing more subject
+material per language, not templating the existing posts — the 125-post German
+library was one page published 125 times before it was rewritten, and repeating
+that mistake in four more languages would undo the duplication work.
+
+## post-row markup
+
+`.post-row` has two slots: `<strong>` for the title and `<span>` for a short
+label. The span is styled uppercase, letterspaced and — historically — `nowrap`,
+so a title placed there overflowed the row and then the viewport. That happened
+twice. The generators now put titles in `<strong>`, and `.post-row>span` is
+allowed to wrap so the mistake cannot push the page again.
 
 ## Navigation width
 

@@ -1,0 +1,414 @@
+{
+  "_comment": "Individual English blog posts. The nine category pages cover the broad subjects; these twelve are the specific decisions a buyer searches for by name — foundation type, cladding, bathroom, heating — and deliberately do not repeat the category material. Each post: five sections of two paragraphs, three questions. Rendered by localePostPage() in tools/build-modunera-depth.mjs.",
+  "posts": [
+    {
+      "slug": "tiny-house-foundation",
+      "category": "technology-and-construction",
+      "name": "Foundation",
+      "title": "Tiny house foundation: screw piles, strip or slab, and how to choose.",
+      "lead": "The foundation is decided by the ground, not by the house. Get a soil answer before you get a quote, because the three options differ by a factor of five in cost.",
+      "sections": [
+        ["Screw piles are the default, not the answer", [
+          "Helical piles are quick, reversible and need no concrete cure, which is why almost every tiny house supplier proposes them first. In firm sand or gravel they are a day's work for a two-person crew and they can be unwound if the house moves on. That reversibility is worth real money when the plot is leased.",
+          "They are not universal. In soft clay, peat or made ground the pile has to reach a bearing layer that may be four metres down, and at that depth the price stops being a fraction of a slab. Ask for a probe before you accept the quote, not after the rig arrives."
+        ]],
+        ["A strip footing suits a permanent site", [
+          "Where the house is staying and the ground is uneven, a concrete strip under the two long chassis rails spreads the load and gives a level datum that does not need shimming later. It also raises the timber clear of splash-back, which is the single most common cause of rot at the bottom board.",
+          "The cost is groundwork and a cure period, so it lengthens the programme by a fortnight. On a plot where the crane and the excavator are coming anyway, that overlap is cheaper than it looks on paper."
+        ]],
+        ["A slab is rarely justified", [
+          "A full slab is the most expensive option and buys you almost nothing a tiny house needs: it does not improve insulation, because the floor cassette is already insulated, and it removes the ventilated gap beneath the house that keeps the underside dry.",
+          "Where it does make sense is a permanent multi-unit site with services routed under the deck, or ground so poor that a raft is the only economical way to spread the load. Both are decisions for an engineer, not a brochure."
+        ]],
+        ["Levelling and access decide the day", [
+          "Whatever the foundation, the house arrives on a lorry and leaves it on a crane. The crane needs firm standing within reach of the final position, and on soft ground that means mats. A foundation that is perfect and unreachable costs a second crane visit.",
+          "Set the levels before delivery day and check them with an instrument, not a spirit level across a plank. A house that is 15mm out over eight metres will show at every door."
+        ]],
+        ["Frost, drainage and the gap underneath", [
+          "Every foundation type has to get below the local frost line or be designed to tolerate movement. That depth varies across the five markets and is the first number to ask the local authority for.",
+          "Keep the ground under the house draining away and keep the gap ventilated. A skirted, sealed underside traps moisture against the chassis and turns a fifty-year steel frame into a twenty-year one."
+        ]]
+      ],
+      "faq": [
+        ["Which foundation is cheapest?", "Screw piles in firm ground. In soft ground they need depth, and at that point a strip footing is often cheaper. Get a soil probe before comparing quotes."],
+        ["Can I move the house later?", "With screw piles, yes — they unwind. A strip or slab is permanent. If the plot is leased, that reversibility is worth paying for."],
+        ["Do I need an engineer?", "For screw piles on known good ground, usually not. For soft, made or sloping ground, yes: the calculation is what keeps the warranty intact."]
+      ]
+    },
+    {
+      "slug": "tiny-house-cladding-thermowood",
+      "category": "technology-and-construction",
+      "name": "Cladding",
+      "title": "Tiny house cladding: thermowood, larch or fibre cement compared.",
+      "lead": "The facade is the largest maintenance item on a compact building. What you choose sets how often you are on a ladder for the next twenty years.",
+      "sections": [
+        ["Thermally modified wood is the low-maintenance timber", [
+          "Heat treatment removes the sugars that fungi feed on and reduces movement, which is why thermowood stays flat and rot-resistant without preservative. Left alone it silvers to a soft grey. That is weathering, not decay, and it does not shorten the life of the board.",
+          "If you want to hold the original honey colour you are back to a UV oil every two to three years, and on a two-storey elevation that is a day's work each time. Decide which you want before you order, because the detailing is the same either way."
+        ]],
+        ["Larch and cedar behave differently", [
+          "Siberian larch is dense, cheap relative to cedar and durable untreated, but it moves more and it bleeds tannin onto anything pale beneath it. Western red cedar is dimensionally calmer and lighter to handle, and costs roughly twice as much.",
+          "Both silver. Both need the same ventilated cavity and the same clearance from the ground. Neither survives being fixed tight against a membrane with no air behind it."
+        ]],
+        ["Fibre cement and metal remove the ladder", [
+          "A fibre cement board or a standing-seam metal skin needs washing and nothing else. On a rental unit that nobody visits between guests, that is a genuine operating saving, and both handle coastal salt better than timber.",
+          "The trade is appearance and repair. A dented metal panel is replaced, not sanded, and fibre cement cut edges have to be sealed on site or they wick. Neither is difficult; both are unforgiving of a rushed installer."
+        ]],
+        ["The detail matters more than the material", [
+          "Every cladding fails at the same four places: the bottom edge, the window heads, the corner joints and wherever a pipe passes through. A ventilated cavity, a drip at the base and a properly formed head flashing are what decide whether the facade lasts.",
+          "Ask to see those four details on a drawing before production. A supplier who cannot produce them is a supplier who is improvising them on site."
+        ]],
+        ["Match the finish to the climate", [
+          "Coastal Denmark and the Dutch coast add salt and constant wind; the Swiss and Austrian altitudes add UV and snow load sitting against the base. Both shorten the interval between treatments on an oiled finish and both favour a material that tolerates neglect.",
+          "If the house will be let rather than lived in, weight that heavily. The maintenance you will actually do is the maintenance that fits into a changeover day."
+        ]]
+      ],
+      "faq": [
+        ["Does thermowood need treating?", "Not for durability. Only if you want to keep the original colour, in which case a UV oil every two to three years. Untreated, it silvers and lasts just as long."],
+        ["Which cladding is best near the sea?", "Fibre cement or coated metal for the lowest maintenance; thermowood if you want timber and accept silvering. Avoid finishes that need frequent recoating in salt air."],
+        ["Can I change the cladding later?", "Yes — it is the one part of the envelope that is genuinely replaceable. The cavity and the fixing battens behind it are not, so get those right first."]
+      ]
+    },
+    {
+      "slug": "tiny-house-bathroom",
+      "category": "layout-and-interior",
+      "name": "Bathroom",
+      "title": "The tiny house bathroom: what fits, what to skip, and what fails.",
+      "lead": "The bathroom is the smallest room and the one that causes the most damage when it is done badly. Two decisions carry most of the outcome: the shower tray and the extraction.",
+      "sections": [
+        ["A wet room is not automatically the answer", [
+          "Tanking the whole room sounds efficient and adds a waterproofing layer that has to survive road transport and a building that flexes. A one-piece moulded tray with an upstand does not care about either, and it is the detail that leaks least in practice.",
+          "If you do want a wet room, insist on seeing how the membrane turns up the walls and how the linear drain is fixed to the floor cassette. Those two details are the whole job."
+        ]],
+        ["Size the shower for the person, not the plan", [
+          "A 700 by 700 tray fits the drawing and not an adult. 800 by 800 is the point where a shower stops being a compromise, and 900 by 800 is noticeably better again. In a compact plan those extra centimetres come out of the corridor, which you use for four seconds a day.",
+          "Head height matters as much as footprint. Under a loft, check the clear height at the shower head before you accept the layout — a 1.9m ceiling over a tray is unusable for a tall person."
+        ]],
+        ["Extraction is what keeps the room alive", [
+          "A compact bathroom with no dedicated extract puts every shower's worth of vapour into the rest of the house. A balanced ventilation system with an extract valve in the bathroom handles it; a humidity-triggered fan is the minimum if there is no MVHR.",
+          "Run the fan on an overrun timer and leave a gap under the door for make-up air. A sealed bathroom with a strong fan and no inlet simply does not move air."
+        ]],
+        ["Toilets: flush, macerating or composting", [
+          "A standard flush toilet needs a gravity fall to the outlet, which the floor build-up may not allow. A macerator solves that and adds a pump that will eventually need service. A composting toilet removes the black water question entirely and adds a routine the user has to keep."
+        ,
+          "None of the three removes the grey water from the shower and basin. That is the discharge the authority actually asks about, so settle it before choosing the toilet."
+        ]],
+        ["Hot water is a capacity question", [
+          "An instantaneous electric heater is compact and draws a lot of current at the moment of use, which matters on a limited supply or off-grid. A small cylinder spreads the load and gives you a genuine second shower.",
+          "Whichever you pick, insulate the run and keep it short. In a small house the wait for hot water is the difference between a good shower and a resented one."
+        ]]
+      ],
+      "faq": [
+        ["What is the smallest usable shower?", "800 by 800 with full head height. Smaller fits the drawing but not comfortable use, and the space usually comes out of a corridor you barely stand in."],
+        ["Do I need an extractor if I have MVHR?", "The MVHR should have an extract valve in the bathroom, sized for it. If it does not, add a humidity-triggered fan with an overrun."],
+        ["Is a composting toilet enough for off-grid?", "It solves black water only. Shower and basin still produce grey water that needs an approved discharge, and that is what the authority assesses."]
+      ]
+    },
+    {
+      "slug": "tiny-house-kitchen",
+      "category": "layout-and-interior",
+      "name": "Kitchen",
+      "title": "The tiny house kitchen: worktop, extraction and the appliances worth the space.",
+      "lead": "In a compact house the kitchen sits in the living room. How quiet it is and how much worktop it has decide how the whole house feels.",
+      "sections": [
+        ["1.2 metres of continuous worktop is the threshold", [
+          "Below roughly 1.2 metres of uninterrupted surface beside the hob, something is permanently out on the counter, and that is where the feeling of cramped begins. It is a cheaper thing to buy at the drawing stage than any appliance.",
+          "Count the space you actually need: a chopping area, somewhere to land a hot pan, and a corner that stays clear. A drainer that folds and a hob cover both buy surface without buying length."
+        ]],
+        ["Induction over gas, in almost every case", [
+          "Induction is faster, cooler in a small volume and removes the combustion air and flue questions that gas brings with it. In a well-sealed compact house those questions are not trivial — a gas hob wants a permanent air supply and a carbon monoxide alarm.",
+          "The exception is off-grid with a small array, where a two-ring gas hob on bottled supply avoids a large instantaneous electrical load. That is a trade to make deliberately, not by default."
+        ]],
+        ["Extraction: recirculating is usually enough", [
+          "A ducted extract is more effective and punches a hole through an insulated, airtight envelope that has to be detailed and closed properly. A good recirculating hood with a real carbon filter handles domestic cooking in a compact house and keeps the envelope intact.",
+          "Pick one rated below 50 dB at normal speed. In an open plan the hood is running two metres from where somebody is watching television."
+        ]],
+        ["Choose appliances by noise, then by size", [
+          "A dishwasher at 42 dB and one at 48 dB are a different experience in a room you also sit in. The same is true of the fridge compressor — a cheap unit that cycles loudly is the appliance people replace first.",
+          "A 45cm dishwasher takes a full day's washing for two and gives back 15cm of worktop. A full-height fridge is usually a mistake; an under-counter unit with a separate freezer drawer suits how a small household actually shops."
+        ]],
+        ["Plumb and wire it once", [
+          "Waste, water and power for the kitchen run inside the floor and the wall and are fixed at production. An extra socket at worktop height, an outlet for a filtered tap, or a feed to an outdoor kitchen are drawing changes now and demolition later.",
+          "Walk the plan as if you are cooking in it: where does the bin go, where does the kettle live, which hand opens the fridge. Ten minutes there is worth more than any material upgrade."
+        ]]
+      ],
+      "faq": [
+        ["How much worktop do I need?", "At least 1.2 metres continuous beside the hob. Less and something lives permanently on the counter, which is where a small kitchen starts feeling small."],
+        ["Ducted or recirculating extraction?", "Recirculating with a real carbon filter, in most cases: it keeps the airtight envelope intact and handles domestic cooking. Choose one under 50 dB."],
+        ["Induction or gas?", "Induction, unless you are off-grid with limited generation. Gas adds combustion air, a flue and a CO alarm to a tightly sealed small volume."]
+      ]
+    },
+    {
+      "slug": "tiny-house-loft-or-ground-floor-bedroom",
+      "category": "layout-and-interior",
+      "name": "Sleeping",
+      "title": "Loft or ground floor: where to sleep in a tiny house.",
+      "lead": "The loft buys floor area and costs headroom, stairs and warm air. For some households that is the right trade and for some it is the reason they move out.",
+      "sections": [
+        ["The loft gives you the floor back", [
+          "Lifting the bed above the living area frees roughly six square metres in an eight-metre house — the difference between a sofa and a bench. On MD 1 and MD 2 that is what makes the living space feel generous rather than adequate.",
+          "It also concentrates the whole plan around one staircase. Check the going and the rise on the drawing: a ladder is fine at thirty and tiring at sixty, and it is not a thing you change afterwards."
+        ]],
+        ["Headroom at the pillow is the number that matters", [
+          "The clear height over the middle of the loft floor is not the useful measure. What matters is the height where you sit up in bed. Below about 1.1 metres there, most people knock their head every morning and stop using the loft as a bedroom.",
+          "Ask for that dimension specifically. It is rarely on a brochure and it is the single best predictor of whether a loft works."
+        ]],
+        ["Warm air rises, so plan the extract", [
+          "A loft under an insulated roof collects the warm, humid air from cooking and showering below. Without an extract near the ridge it is several degrees hotter than the room and it is where condensation appears first in winter.",
+          "A ventilation valve at high level and an openable rooflight solve both. Together they turn a loft from a summer problem into a year-round bedroom."
+        ]],
+        ["A ground-floor bedroom changes who the house suits", [
+          "MD 3 puts a closable room at ground level, and that is the model that suits people who work from home, households with a child, and anyone who does not want to climb a ladder at three in the morning. It costs living-room area, and that is a real cost.",
+          "It also ages better. A loft-only plan is a plan with a time limit for most owners, and that limit affects resale as much as comfort."
+        ]],
+        ["Storage under the bed is the free win", [
+          "Whichever level the bed is on, the volume beneath it is the cheapest storage in the house — roughly 1.5 cubic metres in a standard double. Drawers on runners beat a lift-up base, which needs the mattress moved every time.",
+          "Specify it before production. Retrofitting drawers into a built platform means cutting a structural deck that was not designed to be cut."
+        ]]
+      ],
+      "faq": [
+        ["What headroom does a loft need?", "At least 1.1 metres where you sit up in bed — not the height at the middle of the floor. Below that, most people stop using it as a bedroom."],
+        ["Is a loft comfortable in summer?", "Only with a high-level extract and an openable rooflight. Warm air collects there; without ventilation it runs several degrees above the room."],
+        ["Which model has a proper bedroom?", "MD 3 has a closable ground-floor room. It costs living-room area and suits home working, families and anyone who does not want a ladder at night."]
+      ]
+    },
+    {
+      "slug": "tiny-house-heating-compared",
+      "category": "energy-and-off-grid",
+      "name": "Heating",
+      "title": "Heating a tiny house: heat pump, wood stove or electric compared.",
+      "lead": "The right heating depends on the envelope you have already specified. Decide the two together, and decide both before production.",
+      "sections": [
+        ["A small heat pump suits a good envelope", [
+          "In a well-insulated, airtight compact house the heat demand is low enough that the smallest air-to-air units are oversized rather than marginal. That is a good position to be in: the unit modulates down and runs quietly instead of cycling.",
+          "It also gives cooling in summer, which in a house with a large glazed elevation is not a luxury. The cost is an outdoor unit that has to be sited where its noise does not fall on the terrace or the neighbour."
+        ]],
+        ["A wood stove is independence with obligations", [
+          "A stove works when nothing else does, and in a small volume a 4 kW unit is usually the smallest available and still too big. It needs a compliant flue, a hearth, a dedicated combustion air supply and somewhere dry to keep a season's wood.",
+          "It also needs a person. As a sole heat source for a rental unit it is a liability; as a supplement for an owner who enjoys it, it is the best thing in the house on a February evening."
+        ]],
+        ["Electric panels are simple and expensive to run", [
+          "Direct electric heating has no outdoor unit, no flue, no service interval and the highest running cost per kilowatt-hour delivered. In a house that is occupied three weekends a month, that arithmetic can still come out ahead of a heat pump.",
+          "Infrared panels heat surfaces rather than air, which suits intermittent use — the room feels warm faster. For continuous occupation the standing cost dominates and a heat pump wins clearly."
+        ]],
+        ["Underfloor or radiators or air", [
+          "Water-based underfloor in a compact floor cassette adds build-up height and thermal mass that a lightweight building responds to slowly. Air distribution is faster and matches how a small, well-sealed house actually behaves.",
+          "If you want the comfort of a warm floor, a small electric mat in the bathroom gives most of the perceived benefit for a fraction of the complication."
+        ]],
+        ["Size it on the coldest week, not the average", [
+          "Heating capacity is chosen against the design outdoor temperature for the site, which differs sharply across the five markets. A unit sized on a Dutch winter is short in a Swiss valley and oversized on a Mediterranean coast.",
+          "Give the supplier the destination before the specification is fixed. The insulation, the glazing and the heat source are one decision made three times."
+        ]]
+      ],
+      "faq": [
+        ["What size heat pump does a tiny house need?", "Usually the smallest unit available is already oversized for a well-insulated compact house. Size against the design temperature for the destination, not a rule of thumb."],
+        ["Can a wood stove be the only heating?", "For an owner-occupier who is present, yes. For a rental unit, no — it needs a person, dry fuel and a swept flue, and none of those survive an unattended February."],
+        ["Is underfloor heating worth it?", "Rarely water-based, in a lightweight compact floor. A small electric mat in the bathroom gives most of the perceived comfort without the build-up height."]
+      ]
+    },
+    {
+      "slug": "tiny-house-water-and-wastewater",
+      "category": "energy-and-off-grid",
+      "name": "Water",
+      "title": "Water and wastewater for a tiny house: the question that decides the plot.",
+      "lead": "Power you can generate. Water you can store. Wastewater has to go somewhere an authority accepts, and that is what determines whether the plot works.",
+      "sections": [
+        ["Grey water is the real constraint", [
+          "Shower, basin and kitchen produce the daily volume, and it is grey water that most owners underestimate. A composting toilet removes the black water question and leaves grey water entirely unresolved.",
+          "The options are a connection to the sewer, a package treatment plant, or a reed bed and soakaway where the ground and the authority both permit it. All three are assessed before the building consent, not after."
+        ]],
+        ["A mains connection is worth measuring first", [
+          "Utilities price by the metre and the trench is the expensive part. Fifty metres to the boundary is a different project from four hundred, and the answer changes which of the options above is even worth pricing.",
+          "Ask for a quotation as soon as the plot is identified. It is free, it takes a fortnight, and it is the number the rest of the budget hangs off."
+        ]],
+        ["Tanks: size on days, not litres", [
+          "Two people use roughly 100 to 200 litres a day with normal fixtures and considerably less with an aerated shower head and a low-flush toilet. Size the fresh tank on how many days you want between fills and the grey tank to match, or you are emptying one while the other is still half full.",
+          "Put both where they can be drained and inspected. A tank that freezes because it sits in an unheated void is a predictable failure and an avoidable one."
+        ]],
+        ["Rainwater is easy for some uses and hard for others", [
+          "Collected roof water is straightforward for toilet flushing, laundry and the garden. For drinking it needs filtration and disinfection that can be demonstrated, plus a service routine — it is an installation, not a purchase.",
+          "Roof area on a tiny house is small. Run the arithmetic for your rainfall before committing: 30 square metres of roof in a dry summer month is less water than people expect."
+        ]],
+        ["Freeze protection is a winter design item", [
+          "Pipes in unheated voids, the outside tap and the supply at the chassis are where a freeze starts. Trace heating and a drain-down valve solve it, and for a let unit the drain-down has to be a written procedure with a named person.",
+          "Design it in. Retrofitting trace heating to a closed floor cassette is not a job anybody enjoys."
+        ]]
+      ],
+      "faq": [
+        ["Can I use a composting toilet and skip drainage?", "No. It removes black water only. Shower and basin still produce grey water needing an approved discharge, and that is what the authority assesses."],
+        ["How big should the fresh water tank be?", "Size it on days between fills. Two people use roughly 100–200 litres a day; a 500-litre tank is two to three days, not a week."],
+        ["Is rainwater drinkable?", "Only with demonstrable filtration and disinfection, plus a maintenance routine. For flushing, laundry and the garden it needs none of that."]
+      ]
+    },
+    {
+      "slug": "tiny-house-acoustics",
+      "category": "technology-and-construction",
+      "name": "Acoustics",
+      "title": "Tiny house acoustics: rain on the roof, footsteps on the loft, and the neighbour.",
+      "lead": "Nobody asks about sound before they order and almost everybody mentions it afterwards. Three of the four problems are solved on the drawing.",
+      "sections": [
+        ["Rain on a metal roof is the classic complaint", [
+          "A standing-seam roof directly over an insulated deck drums. The fix is mass and decoupling: a heavier deck board, a resilient layer under the seam and a fully filled cavity. Done at production it costs little; done afterwards it means stripping the roof.",
+          "If the house is a holiday let, weight this heavily. A guest who cannot sleep through rain writes the review that sets next season's price."
+        ]],
+        ["Footsteps on the loft carry straight down", [
+          "A lightweight loft deck transmits impact sound into the living space beneath it — the one place where somebody else is sitting. A resilient layer under the finish floor and a filled void between the joists cuts most of it.",
+          "This is the cheapest acoustic upgrade in the house and the one most often left out because it is invisible on a specification."
+        ]],
+        ["An internal partition has to have mass", [
+          "A stud wall with a board each side and nothing between separates the view and nothing else. Filling the cavity and using two layers on one side takes a partition from useless to genuinely private, and costs a few centimetres of plan.",
+          "If the point of the room is that someone can take a call in it, say so before production. The wall gets built once."
+        ]],
+        ["Appliances are the background you live in", [
+          "In an open plan the extractor hood, the ventilation unit, the fridge and the dishwasher run in the same room as the sofa. Specify each by its rated noise, not by its brand: below 50 dB for the hood, below 45 dB for the dishwasher, and a ventilation unit whose spec sheet gives sound power, not just airflow.",
+          "Site the MVHR unit away from the sleeping area and on resilient mounts. It runs continuously, which is exactly why it must be inaudible."
+        ]],
+        ["Soft surfaces do the rest", [
+          "A compact interior with hard floors, glass and plaster is reverberant, and reverberation is what makes a small room feel busy. A rug, curtains and an upholstered seat drop the reverberation time enough to be obvious.",
+          "This is the one acoustic fix you can make after handover, and it is worth doing before concluding that the building is at fault."
+        ]]
+      ],
+      "faq": [
+        ["Is rain on the roof really that loud?", "On a bare standing-seam roof, yes. Mass and a resilient layer under the seam fix it at production; afterwards it means stripping the roof covering."],
+        ["Can I soundproof the loft later?", "Partly, with a rug and soft furnishing. The resilient layer under the finish floor has to go in during the build."],
+        ["What noise rating should appliances have?", "Under 50 dB for the extractor and under 45 dB for the dishwasher. In an open plan they run in the same room as the sofa."]
+      ]
+    },
+    {
+      "slug": "tiny-house-home-office",
+      "category": "use-and-business-model",
+      "name": "Home office",
+      "title": "Working from a tiny house: the desk, the light and the connection.",
+      "lead": "A laptop on the dining table works for a week. After that you want a surface that stays put, a chair that is honest, and a background you are willing to be seen against.",
+      "sections": [
+        ["A fixed desk needs 1.2 by 0.6 metres", [
+          "That is enough for a monitor, a keyboard and a notebook, and it is the point below which the desk becomes a laptop shelf. Plan it as a permanent piece of the layout rather than an item of furniture, and it takes almost nothing from the living space.",
+          "A wall-hung top with a cable tray underneath keeps the floor clear and lets a proper chair tuck away. That chair matters more than any other purchase in the house if you sit in it forty hours a week."
+        ]],
+        ["Light from the side, never from behind the screen", [
+          "A desk facing a window puts glare on the display; a desk backing onto one puts the window behind your head on every call and turns you into a silhouette. Side light solves both, and a rooflight above solves it better.",
+          "Add a task lamp with a warm output for winter afternoons. The overhead light that suits cooking is not the light that suits a screen."
+        ]],
+        ["Connectivity is a site question, not a house question", [
+          "Check the fixed-line and mobile coverage at the plot before you commit, not at the nearest village. A rural plot with one bar of 4G will not carry a working day of video calls, and no amount of specification inside the house changes that.",
+          "Where fibre is not available, a fixed external antenna and a router with an external SIM usually beats a phone hotspot by a wide margin. Route a conduit for the antenna cable at production."
+        ]],
+        ["A door is what makes it work for two people", [
+          "One open volume is fine until one person is on a call and the other is not. MD 3's closable ground-floor room is the model that suits a household where somebody works from home most days, and the partition needs mass, not just a leaf.",
+          "Where a door is impossible, a level change and a screen give some of the same benefit. It is a poorer answer, but it is a real one."
+        ]],
+        ["Sockets and network at desk height", [
+          "Power at worktop height, a network outlet beside it and enough sockets for a monitor, a laptop, a lamp and a charger. All of that is a drawing note before production and a trailing extension lead afterwards.",
+          "Add one socket you think you will not need. It is the one you use."
+        ]]
+      ],
+      "faq": [
+        ["How much space does a home office need?", "About 1.2 by 0.6 metres of fixed desk with room for a proper chair. Below that it becomes a laptop shelf rather than a workplace."],
+        ["Which model suits home working?", "MD 3, for its closable ground-floor room. Where the whole plan is open, one person on a call occupies the entire house."],
+        ["What about internet on a rural plot?", "Check coverage at the plot itself before committing. Where fibre is absent, an external antenna and a router with a SIM beats a phone hotspot — run the conduit at production."]
+      ]
+    },
+    {
+      "slug": "tiny-house-for-families",
+      "category": "layout-and-interior",
+      "name": "Families",
+      "title": "A tiny house with a child: what changes and what does not.",
+      "lead": "Two adults and a child is a different brief from two adults. Storage, sound and a second door carry most of the difference.",
+      "sections": [
+        ["A second closable space is not optional", [
+          "A child needs somewhere to sleep that is not the room the adults are sitting in at nine in the evening. That is a door, not a curtain, and it means MD 3 or larger. Everything else in the brief follows from that one requirement.",
+          "The room does not need to be large. Two by two and a half metres with a window and storage is a genuine bedroom for a child; the constraint is that it closes."
+        ]],
+        ["Storage roughly doubles", [
+          "Two adults need six to eight cubic metres. Add a child and the figure climbs by half again: clothes that change size annually, a pram or a bike, toys, school things and the seasonal equipment a family accumulates.",
+          "Plan an external store from the start. A weatherproof box on the terrace takes bikes and garden equipment out of a house that cannot spare the volume."
+        ]],
+        ["Sound between the two rooms", [
+          "The partition between the child's room and the living space is the wall that decides whether the evening works. A filled cavity, a solid door and a threshold seal make it a room; a hollow stud with a hollow door makes it a screen.",
+          "The same applies to the bathroom, which in a compact plan is usually next to the bedroom."
+        ]],
+        ["Safety details worth specifying", [
+          "Stair going and rise, a handrail a child can reach, restrictors on the upper windows and a guard at the loft edge. All are cheaper as a specification than as a retrofit, and the loft guard in particular cannot be added convincingly afterwards.",
+          "Thermostatic mixing on the hot water is a five-minute item at production and prevents the one scald that everybody remembers."
+        ]],
+        ["Outdoor space does the heavy lifting", [
+          "A family in a compact house lives outdoors more than a couple does, so the terrace, the shelter over it and the route from the door matter as much as any internal dimension. A covered deck extends the usable season by months.",
+          "Plan the outdoor space at the same time as the plan, not as landscaping afterwards. Where the door faces decides how the house is used."
+        ]]
+      ],
+      "faq": [
+        ["Can a family of three live in a tiny house?", "Yes, with a second closable room — MD 3 or larger. A curtained alcove is not a bedroom once a child is old enough to go to bed before the adults."],
+        ["How much extra storage does a child need?", "Roughly half again on top of the six to eight cubic metres two adults need, plus an external store for a pram, bikes and seasonal equipment."],
+        ["What safety items should I specify?", "Loft edge guard, window restrictors, a reachable handrail and thermostatic mixing on the hot water. All are cheap at production and awkward afterwards."]
+      ]
+    },
+    {
+      "slug": "tiny-house-terrace-and-outdoor-space",
+      "category": "layout-and-interior",
+      "name": "Terrace",
+      "title": "The terrace: the room that makes a tiny house feel large.",
+      "lead": "The cheapest square metres in the project are the ones outside the envelope. They are also the ones most often left until after the house arrives.",
+      "sections": [
+        ["Plan the terrace with the plan, not after it", [
+          "Where the main opening faces decides how the house is used for the next decade — morning light, evening light, the view, the wind and the neighbour's window are all fixed by that one choice. It is free to get right on the drawing.",
+          "Build the deck to the same level as the floor with no threshold step. A flush transition makes the interior read as continuous with the outside and is the single most effective way to make a compact house feel bigger."
+        ]],
+        ["Cover extends the season by months", [
+          "An uncovered deck in northern Europe is usable for a handful of weeks. A roof over even half of it, or a fixed pergola with a retractable fabric, turns it into space you use from April to October and shelter you use all year.",
+          "It also protects the largest glazed elevation from summer sun, which is the cheapest cooling in the project."
+        ]],
+        ["Privacy is what makes it used", [
+          "A terrace overlooked from a neighbouring plot stays empty. Planting, a slatted screen or simply rotating the house thirty degrees on the plot solves it, and all three are decisions made before the crane arrives.",
+          "For a rental unit this is not a preference but a review score. Guests rate outdoor privacy above almost every interior feature."
+        ]],
+        ["Storage and services outside", [
+          "A weatherproof store on the terrace takes bikes, garden tools and seasonal equipment out of a house with no spare volume. An outdoor tap, a socket and a light on the deck are drawing items that cost almost nothing now.",
+          "If the terrace will carry a hot tub or a heavy planter, say so before the deck is designed. The structure is sized for people, not for 1,500 litres of water."
+        ]],
+        ["Materials that survive being ignored", [
+          "Decking is the most weathered surface on the site. Thermally modified timber or a composite board both handle it; softwood needs annual attention and rarely gets it. On a rental unit, choose the one that survives neglect.",
+          "Keep the boards ventilated underneath and clear of leaf litter. A deck that cannot dry beneath is a deck that rots from below while looking fine on top."
+        ]]
+      ],
+      "faq": [
+        ["How big should the terrace be?", "At least as large as the living area if you want it to function as a room. A flush threshold matters more than the exact dimension."],
+        ["Is a roof over the terrace worth it?", "In northern Europe, yes — it turns a few weeks of use into six months, and it shades the largest glazed elevation in summer."],
+        ["What decking material lasts?", "Thermally modified timber or composite. Softwood needs annual attention that, on a let unit especially, it does not get."]
+      ]
+    },
+    {
+      "slug": "tiny-house-order-checklist",
+      "category": "comparison-and-alternatives",
+      "name": "Before you order",
+      "title": "Before you order a tiny house: the twelve things to settle first.",
+      "lead": "Almost every project that goes wrong goes wrong before production starts. This is the list, in the order the answers are needed.",
+      "sections": [
+        ["The plot, in writing", [
+          "What the local plan permits on that specific parcel, for the use you actually intend, for the duration you actually intend. Ask the authority in writing and keep the reply. A verbal yes at a counter is not a decision and does not bind anyone.",
+          "If the use you want is not permitted, that is the whole project — not a detail to work around later. Settle it before anything else is ordered."
+        ]],
+        ["The utilities quotation", [
+          "Distance to water, power and drainage, priced. Utilities charge by the metre and quote lead times that in busy regions run to a year. This number frequently exceeds every other site cost combined, and it is free to obtain.",
+          "Get it as soon as the plot is identified. It decides the foundation, the energy strategy and sometimes the plot itself."
+        ]],
+        ["Access for a lorry and a crane", [
+          "Entrance width, turning radius, height under branches and cables, and what the ground will carry. Photograph the approach, the last bend and the final position, with a tape in shot for scale, and send them before the order is confirmed.",
+          "A difficult access is solvable. A difficult access discovered on delivery day is a second crane visit and a wasted crew."
+        ]],
+        ["The specification that cannot change later", [
+          "Structure, insulation build-up, service routes, window positions and the loft. Everything on that list is fixed at production and expensive to alter afterwards; everything not on it — finishes, loose furniture, appliances — can wait.",
+          "Spend the decision effort there, and let the cushion colours wait until the house is standing."
+        ]],
+        ["The money, including the parts nobody quotes", [
+          "Unit, transport, customs and VAT, foundation, connections, crane, planning fees, insurance, and a contingency. Then the annual figure: maintenance, filters, the yearly inspection, and for a let unit, cleaning and replacement.",
+          "Model the letting case at ten points below your expected occupancy. If it does not carry the fixed costs there, the project depends on a good year."
+        ]]
+      ],
+      "faq": [
+        ["What is the single most common mistake?", "Ordering before the local authority has confirmed in writing what the plot permits for the intended use. Everything else is recoverable; that is not."],
+        ["When do I need the utilities quote?", "As soon as the plot is identified. It often exceeds every other site cost and it decides the foundation and energy strategy."],
+        ["What can I still change after production starts?", "Finishes, loose furniture and appliances. Not structure, insulation, service routes, window positions or the loft."]
+      ]
+    }
+  ]
+}

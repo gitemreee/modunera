@@ -1276,4 +1276,11 @@ h1,h2,h3,.section-header h2,.editorial-copy h2,.wide-copy h2,.article-content h2
   .hero-slides picture:nth-child(1){opacity:1}
   .hero-slides picture>img{opacity:1}
 }
+
+/* .post-row span is the short uppercase label beside the title, and it is set
+   nowrap. A long string put there overflows the row and then the page — it has
+   happened twice, on the English guide rows and again on the new article lists.
+   The label is short enough that allowing it to wrap changes nothing when it is
+   used correctly, and stops it pushing the viewport when it is not. */
+.post-row>span{white-space:normal;overflow-wrap:anywhere}
 /* MODUNERA BRAND PALETTE END */

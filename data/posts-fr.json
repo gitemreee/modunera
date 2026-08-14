@@ -1,0 +1,413 @@
+{
+  "_comment": "Individual French-language blog posts, serving Luxembourg, Suisse romande and francophone Belgium. The nine category pages cover the broad subjects; these twelve are the specific decisions a buyer searches for by name — fondation, bardage, salle de bains, chauffage.",
+  "posts": [
+    {
+      "slug": "tiny-house-fondation",
+      "category": "technique-et-construction",
+      "name": "Fondation",
+      "title": "Fondation d'une tiny house : pieux vissés, semelle ou dalle.",
+      "lead": "C'est le sol qui décide de la fondation, pas la maison. Faites faire une reconnaissance avant de comparer les devis : les trois options varient d'un facteur cinq.",
+      "sections": [
+        ["Les pieux vissés sont le standard, pas la réponse", [
+          "Les pieux hélicoïdaux sont rapides, réversibles et ne demandent aucun temps de prise. En sable ou en grave, c'est une journée pour deux personnes, et ils se dévissent si la maison change de terrain. Sur un terrain loué, cette réversibilité vaut de l'argent réel.",
+          "Ils ne conviennent pas partout. En argile molle, en tourbe ou en remblai, le pieu doit atteindre une couche porteuse qui peut se trouver à quatre mètres, et à cette profondeur le prix n'est plus une fraction d'une semelle. Demandez un sondage avant d'accepter le devis."
+        ]],
+        ["Une semelle filante convient à une implantation définitive", [
+          "Si la maison reste et que le terrain est irrégulier, une semelle béton sous les deux longerons répartit la charge et donne un niveau plan qu'il ne faudra pas rattraper plus tard. Elle éloigne aussi le bois des rejaillissements — première cause de pourriture sur la planche basse.",
+          "Le coût tient au terrassement et au délai de prise, ce qui allonge le planning de deux semaines. Sur un terrain où la pelle et la grue viennent de toute façon, ce chevauchement coûte moins cher qu'il n'y paraît."
+        ]],
+        ["Une dalle est rarement justifiée", [
+          "Une dalle pleine est l'option la plus chère et n'apporte presque rien à une tiny house : elle n'améliore pas l'isolation, puisque le plancher est déjà isolé, et elle supprime la lame d'air ventilée sous la maison qui garde le dessous sec.",
+          "Elle se justifie sur un site permanent à plusieurs unités avec les réseaux sous la terrasse, ou sur un sol si mauvais qu'un radier est le seul moyen économique de répartir la charge. Deux décisions d'ingénieur."
+        ]],
+        ["Le nivellement et l'accès font la journée", [
+          "Quelle que soit la fondation, la maison arrive sur un porte-engins et en descend à la grue. La grue doit se caler à portée, et sur sol meuble cela veut dire des plaques. Une fondation parfaite et inaccessible coûte une deuxième journée de grue.",
+          "Fixez les niveaux avant la livraison et contrôlez-les à l'instrument, pas au niveau à bulle sur une planche. Quinze millimètres sur huit mètres se voient à chaque porte."
+        ]],
+        ["Gel, drainage et la lame d'air en dessous", [
+          "Toute fondation doit descendre sous la profondeur hors gel locale ou être conçue pour accepter le mouvement. Cette profondeur varie fortement en altitude et c'est le premier chiffre à demander à la commune.",
+          "Gardez le sol sous la maison drainant et la lame d'air ventilée. Un dessous fermé retient l'humidité contre le châssis et transforme une ossature acier de cinquante ans en une de vingt."
+        ]]
+      ],
+      "faq": [
+        ["Quelle fondation coûte le moins cher ?", "Les pieux vissés en sol ferme. En sol meuble ils doivent descendre, et une semelle devient souvent moins chère. Faites un sondage avant de comparer."],
+        ["Pourrai-je déplacer la maison ?", "Avec des pieux vissés, oui — ils se dévissent. Semelle et dalle sont définitives. Sur terrain loué, la réversibilité vaut son prix."],
+        ["Faut-il un ingénieur ?", "Sur un sol ferme connu, rarement. En sol meuble, remblayé ou en pente, oui : le calcul est aussi ce qui maintient la garantie."]
+      ]
+    },
+    {
+      "slug": "tiny-house-bardage",
+      "category": "technique-et-construction",
+      "name": "Bardage",
+      "title": "Bardage : bois thermotraité, mélèze ou fibres-ciment.",
+      "lead": "La façade est le principal poste d'entretien d'un bâtiment compact. Votre choix décide de la fréquence à laquelle vous monterez à l'échelle pendant vingt ans.",
+      "sections": [
+        ["Le bois thermotraité est le bois sans entretien", [
+          "Le traitement thermique élimine les sucres dont se nourrissent les champignons et réduit les mouvements. Le thermotraité reste donc plan et résistant sans produit de préservation. Laissé nu, il grise doucement : c'est un vieillissement, pas une altération, et cela ne réduit pas sa durée de vie.",
+          "Pour conserver la teinte miel d'origine, vous revenez à une huile UV tous les deux à trois ans, et sur deux niveaux c'est une journée à chaque fois. Décidez avant la commande ; la mise en œuvre est la même dans les deux cas."
+        ]],
+        ["Mélèze et cèdre ne se comportent pas pareil", [
+          "Le mélèze de Sibérie est dense, relativement abordable et durable sans traitement, mais il travaille davantage et laisse couler des tanins sur tout ce qui est clair en dessous. Le red cedar est plus stable et plus léger à poser, pour environ le double du prix.",
+          "Les deux grisent. Les deux exigent la même lame d'air ventilée et le même dégagement par rapport au sol. Aucun ne survit à une pose serrée contre une membrane sans air derrière."
+        ]],
+        ["Fibres-ciment et métal suppriment l'échelle", [
+          "Un panneau fibres-ciment ou une enveloppe métallique à joint debout ne demandent qu'un lavage. Sur une unité louée que personne ne visite entre deux séjours, c'est une économie d'exploitation réelle, et les deux tiennent mieux l'air salin que le bois.",
+          "La contrepartie est l'aspect et la réparation. Un panneau métallique cabossé se remplace, il ne se ponce pas, et les chants coupés du fibres-ciment doivent être scellés sur place."
+        ]],
+        ["Le détail pèse plus lourd que le matériau", [
+          "Toute façade cède aux mêmes quatre endroits : la rive basse, la tête de baie, l'angle et le passage d'une canalisation. Une lame d'air ventilée, une goutte d'eau en pied et une bavette de tête correctement formée décident de la tenue.",
+          "Demandez ces quatre détails sur plan avant production. Un fournisseur qui ne peut pas les produire est un fournisseur qui les improvise sur le chantier."
+        ]],
+        ["Adaptez la finition au climat", [
+          "L'altitude ajoute l'UV et la neige qui stagne en pied de bardage ; la proximité d'un lac ajoute l'humidité permanente. Les deux raccourcissent l'intervalle entre applications sur une finition huilée et favorisent un matériau qui tolère l'oubli.",
+          "Si la maison est louée plutôt qu'habitée, pesez-le lourdement. L'entretien que vous ferez réellement est celui qui tient dans une journée de rotation."
+        ]]
+      ],
+      "faq": [
+        ["Le thermotraité doit-il être traité ?", "Pas pour la durabilité. Seulement si vous voulez garder la teinte d'origine, avec une huile UV tous les deux à trois ans."],
+        ["Quel bardage tient en altitude ?", "Fibres-ciment ou métal laqué pour l'entretien minimal ; thermotraité si vous voulez du bois et acceptez le grisaillement."],
+        ["Peut-on changer le bardage plus tard ?", "Oui — c'est la seule partie de l'enveloppe réellement remplaçable. La lame d'air et les tasseaux derrière ne le sont pas."]
+      ]
+    },
+    {
+      "slug": "tiny-house-salle-de-bains",
+      "category": "amenagement-et-interieur",
+      "name": "Salle de bains",
+      "title": "La salle de bains d'une tiny house : ce qui tient et ce qui lâche.",
+      "lead": "C'est la plus petite pièce et celle qui cause le plus de dégâts quand elle est mal faite. Deux décisions portent presque tout : le receveur et l'extraction.",
+      "sections": [
+        ["Une douche à l'italienne n'est pas automatiquement la réponse", [
+          "Étanchéifier toute la pièce paraît efficace et ajoute une membrane qui doit survivre au transport routier et à un bâtiment qui travaille. Un receveur moulé d'un seul tenant avec relevé se moque des deux, et c'est le détail qui fuit le moins en pratique.",
+          "Si vous voulez malgré tout une italienne, demandez à voir comment la membrane remonte sur les murs et comment le caniveau est fixé au plancher. Ces deux détails sont tout le travail."
+        ]],
+        ["Dimensionnez la douche pour la personne", [
+          "Un receveur de 70 sur 70 tient sur le plan et pas autour d'un adulte. 80 sur 80 est le point où la douche cesse d'être un compromis, et 90 sur 80 est nettement mieux encore. Ces centimètres se prennent sur le couloir, où vous passez quatre secondes par jour.",
+          "La hauteur compte autant que l'emprise. Sous une mezzanine, vérifiez la hauteur libre à la pomme de douche avant d'accepter le plan."
+        ]],
+        ["L'extraction est ce qui garde la pièce saine", [
+          "Une salle de bains compacte sans extraction dédiée envoie la vapeur de chaque douche dans le reste de la maison. Une ventilation double flux avec une bouche d'extraction dans la salle de bains y suffit ; un ventilateur hygroréglable est le minimum sans double flux.",
+          "Faites-le fonctionner en temporisation et laissez un jeu sous la porte pour l'air de compensation. Une pièce fermée avec un ventilateur puissant et aucune entrée ne déplace tout simplement pas d'air."
+        ]],
+        ["WC : chasse, broyeur ou compost", [
+          "Un WC classique demande une pente vers l'évacuation que la hauteur de plancher ne permet pas toujours. Un broyeur résout cela et ajoute une pompe qui finira par demander un service. Des toilettes sèches suppriment la question des eaux noires et ajoutent une routine que l'usager doit tenir.",
+          "Aucune des trois solutions ne règle les eaux grises de la douche et de la cuisine. C'est le rejet sur lequel l'autorité interroge, donc réglez-le d'abord."
+        ]],
+        ["L'eau chaude est une question de capacité", [
+          "Un chauffe-eau instantané est compact et appelle beaucoup de puissance au moment de l'usage, ce qui compte sur un branchement limité ou en autonomie. Un petit ballon étale la charge et donne une vraie deuxième douche.",
+          "Quel que soit le choix : isolez la canalisation et raccourcissez-la. Dans une petite maison, l'attente d'eau chaude fait la différence entre une bonne douche et une contrariété."
+        ]]
+      ],
+      "faq": [
+        ["Quelle est la plus petite douche utilisable ?", "80 sur 80 avec hauteur libre complète. Plus petit tient sur le plan mais pas à l'usage."],
+        ["Faut-il un extracteur avec une VMC double flux ?", "La VMC doit avoir une bouche d'extraction dans la salle de bains, dimensionnée pour. Sinon, un ventilateur hygroréglable avec temporisation."],
+        ["Des toilettes sèches suffisent-elles en autonomie ?", "Elles ne règlent que les eaux noires. Douche et lavabo produisent des eaux grises qui exigent un rejet agréé."]
+      ]
+    },
+    {
+      "slug": "tiny-house-cuisine",
+      "category": "amenagement-et-interieur",
+      "name": "Cuisine",
+      "title": "La cuisine d'une tiny house : plan de travail, hotte et appareils.",
+      "lead": "Dans une maison compacte, la cuisine est dans le séjour. Son silence et sa longueur de plan de travail décident de la façon dont toute la maison se vit.",
+      "sections": [
+        ["1,2 mètre de plan continu est le seuil", [
+          "En dessous d'environ 1,2 mètre de surface ininterrompue à côté des feux, quelque chose reste en permanence sorti, et c'est là que commence la sensation d'exiguïté. Sur le plan, c'est moins cher à corriger que n'importe quel appareil.",
+          "Comptez ce dont vous avez réellement besoin : une zone de découpe, un endroit pour poser une casserole chaude, et un coin qui reste vide. Un égouttoir escamotable et un couvre-plaque gagnent de la surface sans gagner de longueur."
+        ]],
+        ["L'induction plutôt que le gaz, presque toujours", [
+          "L'induction est plus rapide, plus froide dans un petit volume et supprime les questions d'air de combustion et de conduit que le gaz apporte. Dans une maison compacte étanche, ces questions ne sont pas anodines : une plaque gaz exige une amenée d'air permanente et un détecteur de monoxyde.",
+          "L'exception est l'autonomie avec une petite production, où deux feux gaz en bouteille évitent un appel de puissance électrique important. C'est un arbitrage délibéré, pas un défaut."
+        ]],
+        ["Hotte : le recyclage suffit généralement", [
+          "Une extraction vers l'extérieur est plus efficace et perce une enveloppe isolée et étanche qu'il faut détailler et refermer correctement. Une bonne hotte à recyclage avec un vrai filtre à charbon absorbe la cuisine domestique et laisse l'enveloppe intacte.",
+          "Choisissez-en une sous 50 dB en vitesse normale. Dans un plan ouvert, la hotte tourne à deux mètres de quelqu'un qui regarde la télévision."
+        ]],
+        ["Choisissez les appareils au bruit, puis à la taille", [
+          "Un lave-vaisselle à 42 dB et un à 48 dB sont deux expériences différentes dans une pièce où l'on s'assoit aussi. Il en va de même du compresseur du réfrigérateur — un appareil bon marché qui démarre bruyamment est celui qu'on remplace en premier.",
+          "Un lave-vaisselle de 45 cm absorbe une journée complète pour deux et rend 15 cm de plan. Un réfrigérateur toute hauteur est généralement une erreur ; un sous-plan avec tiroir congélateur séparé correspond à la façon dont un petit foyer fait ses courses."
+        ]],
+        ["Plomberie et électricité une seule fois", [
+          "Évacuation, eau et courant passent dans le plancher et la cloison et sont figés à la production. Une prise supplémentaire à hauteur de plan, une alimentation pour un robinet filtrant ou un départ vers une cuisine extérieure sont une modification de plan maintenant, une démolition ensuite.",
+          "Parcourez le plan comme si vous cuisiniez : où va la poubelle, où vit la bouilloire, quelle main ouvre le réfrigérateur."
+        ]]
+      ],
+      "faq": [
+        ["Quelle longueur de plan de travail ?", "Au moins 1,2 mètre continu à côté des feux. En dessous, quelque chose reste en permanence sorti."],
+        ["Extraction ou recyclage ?", "Recyclage avec un vrai filtre à charbon dans la plupart des cas : cela préserve l'étanchéité de l'enveloppe. Choisissez sous 50 dB."],
+        ["Induction ou gaz ?", "Induction, sauf en autonomie avec production limitée. Le gaz ajoute air de combustion, conduit et détecteur de CO."]
+      ]
+    },
+    {
+      "slug": "tiny-house-mezzanine-ou-plain-pied",
+      "category": "amenagement-et-interieur",
+      "name": "Couchage",
+      "title": "Mezzanine ou plain-pied : où dormir dans une tiny house.",
+      "lead": "La mezzanine rend de la surface et coûte de la hauteur, un escalier et de l'air chaud. Pour certains foyers c'est le bon arbitrage, pour d'autres la raison du déménagement.",
+      "sections": [
+        ["La mezzanine rend le sol", [
+          "Monter le lit au-dessus du séjour libère environ six mètres carrés dans une maison de huit mètres — la différence entre un canapé et une banquette. Sur MD 1 et MD 2, c'est ce qui rend le séjour généreux plutôt que suffisant.",
+          "Cela concentre aussi tout le plan autour d'un escalier. Vérifiez giron et hauteur de marche sur le plan : un escalier raide va bien à trente ans et fatigue à soixante, et cela ne se change pas après coup."
+        ]],
+        ["La hauteur à l'oreiller est le chiffre qui compte", [
+          "La hauteur libre au milieu du plancher de mezzanine n'est pas la mesure utile. Ce qui compte est la hauteur là où l'on s'assoit dans le lit. En dessous d'environ 1,10 mètre, la plupart des gens se cognent chaque matin et cessent d'utiliser la mezzanine comme chambre.",
+          "Demandez cette cote précisément. Elle figure rarement sur une brochure et prédit mieux que tout si une mezzanine fonctionne."
+        ]],
+        ["L'air chaud monte : prévoyez l'extraction", [
+          "Une mezzanine sous une toiture isolée collecte l'air chaud et humide de la cuisine et de la douche en dessous. Sans extraction en partie haute, il y fait plusieurs degrés de plus que dans la pièce, et c'est là que la condensation apparaît d'abord en hiver.",
+          "Une bouche en partie haute et une fenêtre de toit ouvrante règlent les deux. Ensemble, elles font d'une mezzanine une chambre utilisable toute l'année."
+        ]],
+        ["Une chambre en bas change à qui la maison convient", [
+          "MD 3 place une pièce fermable au rez-de-chaussée, et c'est le modèle qui convient à qui travaille chez soi, aux foyers avec un enfant, et à quiconque ne veut pas monter une échelle à trois heures du matin. Cela coûte de la surface de séjour, et c'est un coût réel.",
+          "Cela vieillit aussi mieux. Un plan à mezzanine seule a pour la plupart des propriétaires une date limite, qui pèse aussi à la revente."
+        ]],
+        ["Le rangement sous le lit est le gain gratuit", [
+          "Quel que soit le niveau, le volume sous le lit est le rangement le moins cher de la maison — environ 1,5 mètre cube sous un lit double. Des tiroirs sur coulisses valent mieux qu'un sommier relevable, qui oblige à déplacer le matelas.",
+          "Prévoyez-le avant production. Intégrer des tiroirs dans une estrade finie revient à découper un plancher qui n'a pas été dessiné pour."
+        ]]
+      ],
+      "faq": [
+        ["Quelle hauteur pour une mezzanine ?", "Au moins 1,10 mètre là où l'on s'assoit dans le lit — pas la hauteur au milieu du plancher."],
+        ["Une mezzanine est-elle confortable en été ?", "Seulement avec une extraction en partie haute et une fenêtre de toit ouvrante."],
+        ["Quel modèle a une vraie chambre ?", "MD 3, avec une pièce fermable au rez-de-chaussée. Cela coûte de la surface de séjour et convient au télétravail et aux familles."]
+      ]
+    },
+    {
+      "slug": "tiny-house-chauffage-compare",
+      "category": "energie-et-autonomie",
+      "name": "Chauffage",
+      "title": "Chauffage comparé : pompe à chaleur, poêle à bois ou électrique.",
+      "lead": "Le bon chauffage dépend de l'enveloppe déjà spécifiée. Décidez les deux ensemble, et les deux avant production.",
+      "sections": [
+        ["Une petite pompe à chaleur convient à une bonne enveloppe", [
+          "Dans une maison compacte bien isolée et étanche, le besoin est si faible que même les plus petites unités air-air sont surdimensionnées plutôt que justes. C'est une bonne position : l'appareil module vers le bas et tourne silencieusement au lieu de cycler.",
+          "Elle apporte aussi du rafraîchissement en été, ce qui dans une maison à grande façade vitrée n'est pas un luxe. Le prix est une unité extérieure à implanter là où son bruit ne tombe ni sur la terrasse ni chez le voisin."
+        ]],
+        ["Un poêle à bois est une indépendance avec obligations", [
+          "Un poêle fonctionne quand rien d'autre ne fonctionne, et dans un petit volume un appareil de 4 kW est souvent le plus petit disponible et encore trop puissant. Il exige un conduit conforme, une plaque de sol, une amenée d'air dédiée et un stockage sec pour une saison.",
+          "Il exige aussi une personne. Comme seule source de chaleur d'une unité louée, c'est un risque ; comme appoint pour un propriétaire qui l'apprécie, c'est le meilleur de la maison un soir de février."
+        ]],
+        ["Les panneaux électriques sont simples et chers à l'usage", [
+          "Le chauffage électrique direct n'a ni unité extérieure, ni conduit, ni entretien, et le coût d'exploitation le plus élevé au kilowattheure rendu. Dans une maison occupée trois week-ends par mois, ce calcul peut malgré tout battre une pompe à chaleur.",
+          "Les panneaux infrarouges chauffent les surfaces plutôt que l'air, ce qui convient à un usage intermittent. En occupation continue, la consommation domine et la pompe à chaleur l'emporte nettement."
+        ]],
+        ["Plancher chauffant, radiateurs ou air", [
+          "Un plancher chauffant hydraulique dans un plancher compact ajoute une épaisseur et une inertie auxquelles un bâtiment léger répond lentement. La diffusion par air est plus rapide et correspond au comportement réel d'une petite maison étanche.",
+          "Pour le confort d'un sol chaud, un petit tapis électrique dans la salle de bains donne l'essentiel de la sensation sans la complication."
+        ]],
+        ["Dimensionnez sur la semaine la plus froide", [
+          "La puissance se choisit contre la température de base du site, qui varie fortement entre les cinq marchés. Un appareil choisi pour un hiver luxembourgeois est court dans une vallée suisse.",
+          "Communiquez la destination avant de figer la spécification. Isolation, vitrage et source de chaleur sont une seule décision prise trois fois."
+        ]]
+      ],
+      "faq": [
+        ["Quelle puissance pour une tiny house ?", "En général, le plus petit appareil disponible est déjà surdimensionné pour une maison compacte bien isolée. Dimensionnez sur la température de base du site."],
+        ["Un poêle peut-il être l'unique chauffage ?", "Pour un occupant présent, oui. Pour une unité louée, non — il faut une personne, du bois sec et un conduit ramoné."],
+        ["Le plancher chauffant vaut-il la peine ?", "Rarement en hydraulique dans un plancher léger. Un petit tapis électrique dans la salle de bains donne l'essentiel."]
+      ]
+    },
+    {
+      "slug": "tiny-house-eau-et-assainissement",
+      "category": "energie-et-autonomie",
+      "name": "Eau",
+      "title": "Eau et assainissement : la question qui décide du terrain.",
+      "lead": "L'électricité se produit. L'eau se stocke. Les eaux usées doivent aller quelque part qu'une autorité accepte, et c'est cela qui décide si le terrain fonctionne.",
+      "sections": [
+        ["Les eaux grises sont la vraie contrainte", [
+          "Douche, lavabo et cuisine fournissent le volume quotidien, et ce sont les eaux grises que l'on sous-estime. Des toilettes sèches suppriment la question des eaux noires et laissent les eaux grises entièrement ouvertes.",
+          "Les options sont le raccordement au réseau, une micro-station agréée, ou un filtre planté avec infiltration là où le sol et l'autorité l'admettent. Les trois sont examinées avant l'autorisation, pas après."
+        ]],
+        ["Mesurez d'abord la distance au réseau", [
+          "Les gestionnaires facturent au mètre et la tranchée est la partie coûteuse. Cinquante mètres jusqu'à la limite est un autre projet que quatre cents, et la réponse change laquelle des options ci-dessus vaut même la peine d'être chiffrée.",
+          "Demandez un devis dès que le terrain est identifié. C'est gratuit, cela prend quinze jours, et c'est le chiffre auquel tient le reste du budget."
+        ]],
+        ["Cuves : dimensionnez en jours, pas en litres", [
+          "Deux personnes consomment environ 100 à 200 litres par jour avec des robinetteries ordinaires, et nettement moins avec une douchette économe et un WC à faible chasse. Dimensionnez la cuve d'eau claire sur le nombre de jours entre remplissages et la cuve d'eaux grises en conséquence.",
+          "Placez les deux de façon à pouvoir les vidanger et les inspecter. Une cuve qui gèle parce qu'elle se trouve dans un volume non chauffé est une panne prévisible."
+        ]],
+        ["L'eau de pluie est simple pour certains usages", [
+          "L'eau de toiture convient sans difficulté à la chasse, au lavage et au jardin. Pour l'eau potable, elle exige une filtration et une désinfection démontrables, plus un entretien — c'est une installation, pas un achat.",
+          "La surface de toiture d'une tiny house est faible. Faites le calcul pour votre pluviométrie : 30 mètres carrés de toit dans un mois d'été sec donnent moins que prévu."
+        ]],
+        ["La protection contre le gel se conçoit", [
+          "Les canalisations en volume non chauffé, le robinet extérieur et l'alimentation au droit du châssis sont les points de départ du gel. Un cordon chauffant et une vanne de vidange règlent la question, et en location la vidange doit être une procédure écrite avec un nom.",
+          "Prévoyez-le au plan. Ajouter un cordon chauffant dans un plancher fermé n'est un travail agréable pour personne."
+        ]]
+      ],
+      "faq": [
+        ["Puis-je éviter l'assainissement avec des toilettes sèches ?", "Non. Elles ne règlent que les eaux noires. Douche et lavabo produisent des eaux grises exigeant un rejet agréé."],
+        ["Quelle taille de cuve d'eau ?", "Dimensionnez en jours entre remplissages. Deux personnes consomment environ 100 à 200 litres par jour ; 500 litres font deux à trois jours."],
+        ["L'eau de pluie est-elle potable ?", "Seulement avec filtration et désinfection démontrables plus entretien. Pour la chasse, le lavage et le jardin, rien de tout cela n'est requis."]
+      ]
+    },
+    {
+      "slug": "tiny-house-acoustique",
+      "category": "technique-et-construction",
+      "name": "Acoustique",
+      "title": "Acoustique : la pluie sur le toit, les pas sur la mezzanine.",
+      "lead": "Personne n'interroge sur le son avant, et presque tout le monde en parle après. Trois des quatre problèmes se règlent sur le plan.",
+      "sections": [
+        ["La pluie sur un toit métallique est le classique", [
+          "Une couverture à joint debout posée directement sur un support isolé résonne. La solution est la masse et la désolidarisation : un support plus lourd, une couche résiliente sous le bac et une lame entièrement remplie. À la production cela coûte peu ; après, cela veut dire déposer la couverture.",
+          "Si la maison est louée, pesez-le lourdement. Un hôte qui ne dort pas sous la pluie écrit l'avis qui fixe le prix de la saison suivante."
+        ]],
+        ["Les pas sur la mezzanine descendent tout droit", [
+          "Un plancher de mezzanine léger transmet les bruits d'impact au séjour en dessous — exactement là où quelqu'un d'autre est assis. Une couche résiliente sous le revêtement et un vide rempli entre solives en retirent l'essentiel.",
+          "C'est l'amélioration acoustique la moins chère de la maison et celle qu'on omet le plus souvent, parce qu'elle est invisible sur un devis."
+        ]],
+        ["Une cloison intérieure doit avoir de la masse", [
+          "Une cloison à ossature avec un panneau de chaque côté et rien entre les deux sépare la vue et rien d'autre. Remplir la lame et doubler le parement d'un côté transforme une cloison inutile en séparation réelle, pour quelques centimètres de plan.",
+          "Si l'objet de la pièce est que quelqu'un puisse téléphoner dedans, dites-le avant production. La cloison se construit une fois."
+        ]],
+        ["Les appareils sont le fond sonore où vous vivez", [
+          "Dans un plan ouvert, la hotte, la centrale de ventilation, le réfrigérateur et le lave-vaisselle tournent dans la même pièce que le canapé. Choisissez chacun sur son niveau annoncé : sous 50 dB pour la hotte, sous 45 dB pour le lave-vaisselle.",
+          "Implantez la centrale double flux loin du couchage et sur suspensions souples. Elle fonctionne en continu, et c'est précisément pourquoi elle doit être inaudible."
+        ]],
+        ["Les surfaces souples font le reste", [
+          "Un intérieur compact avec sols durs, verre et enduit réverbère, et la réverbération est ce qui rend une petite pièce agitée. Un tapis, des rideaux et une assise rembourrée abaissent nettement le temps de réverbération.",
+          "C'est la seule correction acoustique possible après la réception, et elle mérite d'être essayée avant de conclure que le bâtiment est en cause."
+        ]]
+      ],
+      "faq": [
+        ["La pluie sur le toit est-elle si bruyante ?", "Sur un bac nu, oui. La masse et une couche résiliente sous le bac règlent le problème à la production."],
+        ["Peut-on isoler la mezzanine après coup ?", "En partie, avec tapis et textiles. La couche résiliente sous le revêtement doit être posée pendant la construction."],
+        ["Quel niveau sonore viser pour les appareils ?", "Sous 50 dB pour la hotte et sous 45 dB pour le lave-vaisselle. Dans un plan ouvert, ils tournent dans la pièce où l'on s'assoit."]
+      ]
+    },
+    {
+      "slug": "tiny-house-teletravail",
+      "category": "usage-et-modele-economique",
+      "name": "Télétravail",
+      "title": "Télétravailler depuis une tiny house : bureau, lumière et connexion.",
+      "lead": "Un portable sur la table à manger tient une semaine. Ensuite on veut un plateau qui reste, une chaise honnête et un arrière-plan présentable.",
+      "sections": [
+        ["Un bureau fixe demande 1,2 sur 0,6 mètre", [
+          "C'est assez pour un écran, un clavier et un carnet, et c'est le seuil sous lequel le bureau devient une étagère à portable. Prévoyez-le comme élément permanent de l'aménagement plutôt que comme meuble : il ne prend presque rien au séjour.",
+          "Un plateau suspendu avec un chemin de câbles dessous garde le sol libre et laisse une vraie chaise se glisser. Cette chaise compte plus que tout autre achat si vous y passez quarante heures par semaine."
+        ]],
+        ["La lumière de côté, jamais derrière l'écran", [
+          "Un bureau face à la fenêtre met des reflets sur l'écran ; un bureau dos à la fenêtre vous transforme en silhouette à chaque visioconférence. La lumière latérale règle les deux, et une fenêtre de toit au-dessus encore mieux.",
+          "Ajoutez une lampe de travail à lumière chaude pour les après-midi d'hiver. L'éclairage qui convient à la cuisine ne convient pas à un écran."
+        ]],
+        ["La connexion est une question de site, pas de maison", [
+          "Vérifiez la couverture fixe et mobile sur la parcelle elle-même, pas au village voisin. Une parcelle rurale avec une barre de 4G ne portera pas une journée de visioconférences, et aucune spécification intérieure n'y change rien.",
+          "Là où la fibre manque, une antenne extérieure fixe avec un routeur sur carte SIM bat largement un partage de connexion téléphonique. Prévoyez un fourreau pour ce câble à la production."
+        ]],
+        ["Une porte est ce qui rend cela viable à deux", [
+          "Un volume ouvert fonctionne jusqu'à ce que l'un téléphone et l'autre non. La pièce fermable du rez-de-chaussée de MD 3 est le modèle d'un foyer où quelqu'un travaille chez lui la plupart des jours, et la cloison a besoin de masse, pas seulement d'un vantail.",
+          "Là où une porte est impossible, une différence de niveau et un écran donnent une partie du bénéfice. Réponse moins bonne, mais réelle."
+        ]],
+        ["Prises et réseau à hauteur de plateau", [
+          "Courant à hauteur de plateau, une prise réseau à côté et assez de prises pour un écran, un portable, une lampe et un chargeur. C'est une note sur le plan maintenant et une rallonge au sol ensuite.",
+          "Ajoutez une prise dont vous pensez ne pas avoir besoin. C'est celle que vous utiliserez."
+        ]]
+      ],
+      "faq": [
+        ["Quel espace pour un bureau ?", "Environ 1,2 sur 0,6 mètre de plateau fixe avec la place d'une vraie chaise."],
+        ["Quel modèle pour le télétravail ?", "MD 3, pour sa pièce fermable au rez-de-chaussée. En plan entièrement ouvert, un appel occupe toute la maison."],
+        ["Et internet sur une parcelle rurale ?", "Vérifiez la couverture sur la parcelle. Sans fibre, une antenne extérieure et un routeur SIM battent un partage de connexion — prévoyez le fourreau."]
+      ]
+    },
+    {
+      "slug": "tiny-house-pour-familles",
+      "category": "amenagement-et-interieur",
+      "name": "Familles",
+      "title": "Une tiny house avec un enfant : ce qui change.",
+      "lead": "Deux adultes et un enfant est un autre programme que deux adultes. Le rangement, le son et une deuxième porte portent la différence.",
+      "sections": [
+        ["Un deuxième espace fermable n'est pas optionnel", [
+          "Un enfant a besoin d'un couchage qui ne soit pas la pièce où les adultes sont assis à vingt et une heures. C'est une porte, pas un rideau, et cela signifie MD 3 ou plus grand. Tout le reste du programme découle de cette exigence.",
+          "La pièce n'a pas besoin d'être grande. Deux mètres sur deux et demi avec une fenêtre et du rangement est une vraie chambre d'enfant ; la condition est qu'elle ferme."
+        ]],
+        ["Le besoin de rangement augmente de moitié", [
+          "Deux adultes ont besoin de six à huit mètres cubes. Avec un enfant, il faut ajouter la moitié : vêtements qui changent de taille chaque année, poussette ou vélo, jouets, affaires d'école et l'équipement saisonnier qu'une famille accumule.",
+          "Prévoyez un abri extérieur dès le départ. Un coffre étanche sur la terrasse sort les vélos et l'outillage d'une maison qui ne peut pas céder ce volume."
+        ]],
+        ["Le son entre les deux pièces", [
+          "La cloison entre la chambre de l'enfant et le séjour décide si la soirée fonctionne. Lame remplie, porte pleine et joint de seuil en font une pièce ; ossature creuse et porte creuse en font un paravent.",
+          "Il en va de même de la salle de bains, qui dans un plan compact jouxte généralement la chambre."
+        ]],
+        ["Détails de sécurité à spécifier", [
+          "Giron et hauteur de marche, une main courante à portée d'enfant, des limiteurs aux fenêtres à l'étage et un garde-corps en rive de mezzanine. Les quatre coûtent moins cher en spécification qu'en reprise, et le garde-corps ne s'ajoute pas de façon convaincante après.",
+          "Un mitigeur thermostatique sur l'eau chaude prend cinq minutes à la production et évite la brûlure dont tout le monde se souvient."
+        ]],
+        ["L'extérieur fait le gros du travail", [
+          "Une famille dans une maison compacte vit dehors plus qu'un couple : la terrasse, son abri et le trajet depuis la porte comptent autant que n'importe quelle cote intérieure. Une terrasse couverte allonge la saison utile de plusieurs mois.",
+          "Dessinez l'extérieur en même temps que le plan, pas comme un aménagement paysager ensuite."
+        ]]
+      ],
+      "faq": [
+        ["Une famille de trois peut-elle vivre en tiny house ?", "Oui, avec une deuxième pièce fermable — MD 3 ou plus grand. Une alcôve à rideau n'est pas une chambre dès que l'enfant se couche avant les adultes."],
+        ["Quel rangement supplémentaire pour un enfant ?", "Environ la moitié en plus des six à huit mètres cubes, plus un abri extérieur pour poussette, vélos et équipement saisonnier."],
+        ["Quels équipements de sécurité spécifier ?", "Garde-corps de mezzanine, limiteurs de fenêtres, main courante à portée et mitigeur thermostatique."]
+      ]
+    },
+    {
+      "slug": "tiny-house-terrasse-et-exterieur",
+      "category": "amenagement-et-interieur",
+      "name": "Terrasse",
+      "title": "La terrasse : la pièce qui agrandit une tiny house.",
+      "lead": "Les mètres carrés les moins chers du projet sont hors de l'enveloppe. Ce sont aussi ceux auxquels on pense le plus souvent après la livraison.",
+      "sections": [
+        ["Dessinez la terrasse avec le plan", [
+          "L'orientation de l'ouverture principale décide de l'usage de la maison pour la décennie qui vient : lumière du matin, du soir, vue, vent et fenêtre du voisin sont fixés par ce seul choix. Sur le plan, c'est gratuit à bien faire.",
+          "Posez la terrasse au niveau du plancher, sans seuil. Une transition de plain-pied prolonge l'intérieur vers l'extérieur et reste la façon la plus efficace d'agrandir une maison compacte."
+        ]],
+        ["La couverture allonge la saison de plusieurs mois", [
+          "Une terrasse découverte n'est utilisable que quelques semaines. Un toit sur la moitié, ou une pergola fixe avec toile, en fait un espace utilisé d'avril à octobre et un abri utile toute l'année.",
+          "Elle protège aussi la plus grande façade vitrée du soleil d'été, ce qui est le rafraîchissement le moins cher du projet."
+        ]],
+        ["L'intimité décide de son usage", [
+          "Une terrasse exposée aux regards reste vide. Plantation, écran à lames ou simplement pivoter la maison de trente degrés règlent la question, et les trois sont des décisions d'avant la grue.",
+          "Pour une unité louée ce n'est pas une préférence mais une note d'avis. Les hôtes valorisent l'intimité extérieure plus que presque toute caractéristique intérieure."
+        ]],
+        ["Rangement et réseaux dehors", [
+          "Un coffre étanche sur la terrasse sort vélos, outillage et équipement saisonnier d'une maison sans volume disponible. Un robinet extérieur, une prise et un point lumineux sur la terrasse sont des lignes de plan qui ne coûtent presque rien.",
+          "Si la terrasse doit porter un bain nordique ou une jardinière lourde, dites-le avant qu'elle soit dessinée. La structure est calculée pour des personnes, pas pour 1 500 litres d'eau."
+        ]],
+        ["Des matériaux qui survivent à l'oubli", [
+          "La terrasse est la surface la plus exposée du terrain. Le bois thermotraité et le composite l'encaissent ; le résineux demande une attention annuelle qu'il reçoit rarement. En location, choisissez ce qui survit à la négligence.",
+          "Gardez les lames ventilées par-dessous et libres de feuilles. Une terrasse qui ne sèche pas dessous pourrit par en bas en paraissant intacte."
+        ]]
+      ],
+      "faq": [
+        ["Quelle taille pour la terrasse ?", "Au moins celle du séjour si elle doit fonctionner comme une pièce. La transition sans seuil compte plus que la cote exacte."],
+        ["Une couverture vaut-elle la peine ?", "Oui — elle transforme quelques semaines en six mois d'usage et ombre la plus grande façade vitrée en été."],
+        ["Quel matériau de terrasse dure ?", "Bois thermotraité ou composite. Le résineux demande un entretien annuel qu'il ne reçoit pas, surtout en location."]
+      ]
+    },
+    {
+      "slug": "tiny-house-checklist-avant-commande",
+      "category": "comparaison-et-alternatives",
+      "name": "Avant de commander",
+      "title": "Avant de commander une tiny house : ce qu'il faut avoir réglé.",
+      "lead": "Presque tous les projets qui échouent échouent avant le début de la production. Voici la liste, dans l'ordre où les réponses sont nécessaires.",
+      "sections": [
+        ["Le terrain, par écrit", [
+          "Ce que le plan d'aménagement autorise sur cette parcelle précise, pour l'usage que vous visez réellement, pour la durée que vous visez réellement. Demandez-le par écrit et conservez la réponse. Un oui oral au guichet n'est pas une décision et n'engage personne.",
+          "Si l'usage souhaité n'est pas autorisé, c'est tout le projet — pas un détail à contourner ensuite. Réglez cela avant toute commande."
+        ]],
+        ["Le devis des réseaux", [
+          "Distance à l'eau, à l'électricité et à l'assainissement, chiffrée. Les gestionnaires facturent au mètre et annoncent des délais qui, en zone tendue, atteignent l'année. Ce montant dépasse fréquemment tous les autres coûts de site réunis, et l'obtenir est gratuit.",
+          "Faites-le dès que la parcelle est identifiée. Il décide de la fondation, de la stratégie énergétique et parfois de la parcelle elle-même."
+        ]],
+        ["L'accès pour le camion et la grue", [
+          "Largeur d'entrée, rayon de braquage, hauteur sous branches et câbles, et portance du sol. Photographiez l'approche, le dernier virage et l'emplacement final avec un mètre dans le champ, et envoyez-les avant la confirmation de commande.",
+          "Un accès difficile se résout. Un accès difficile découvert le jour de la livraison, c'est une deuxième grue et une équipe qui attend."
+        ]],
+        ["La spécification qui ne changera plus", [
+          "Structure, composition d'isolation, tracés de gaines, position des baies et mezzanine. Tout ce qui figure sur cette liste est figé à la production ; tout ce qui n'y figure pas — finitions, mobilier libre, appareils — peut attendre.",
+          "Concentrez l'effort de décision là, et laissez la couleur des coussins attendre que la maison soit posée."
+        ]],
+        ["L'argent, y compris ce que personne ne chiffre", [
+          "Unité, transport, douane et TVA, fondation, raccordements, grue, taxes, assurance et un aléa. Puis le montant annuel : entretien, filtres, visite annuelle, et en location le ménage et le renouvellement.",
+          "Modélisez le scénario locatif dix points sous votre taux d'occupation attendu. S'il ne porte pas les charges fixes là, le projet dépend d'une bonne année."
+        ]]
+      ],
+      "faq": [
+        ["Quelle est l'erreur la plus fréquente ?", "Commander avant que l'autorité ait confirmé par écrit ce que la parcelle autorise pour l'usage prévu. Tout le reste se rattrape ; pas cela."],
+        ["Quand faut-il le devis des réseaux ?", "Dès que la parcelle est identifiée. Il dépasse souvent tous les autres coûts de site et décide de la fondation."],
+        ["Que puis-je encore modifier après le lancement ?", "Finitions, mobilier libre et appareils. Ni la structure, ni l'isolation, ni les gaines, ni les baies, ni la mezzanine."]
+      ]
+    }
+  ]
+}

@@ -69,6 +69,23 @@ const LOCALES = JSON.parse(await readFile(join(ROOT, "data/locales.json"), "utf8
    Suisse romande, where the vocabulary is different again. */
 const LOCALE_BLOG = Object.fromEntries(await Promise.all(["nl", "da", "fr"].map(async (code) =>
   [code, JSON.parse(await readFile(join(ROOT, `data/blog-${code}.json`), "utf8"))])));
+
+/* Individual posts, one file per language. The category pages carry the broad
+   subjects; these are the specific ones a buyer searches for by name —
+   foundation, cladding, bathroom, heating — and they deliberately avoid
+   repeating the category material, which is what keeps the similarity between
+   the two formats low. English sits under en/blog/ beside its nine categories. */
+const LOCALE_POSTS = Object.fromEntries(await Promise.all(["en", "nl", "da", "fr"].map(async (code) =>
+  [code, JSON.parse(await readFile(join(ROOT, `data/posts-${code}.json`), "utf8")).posts])));
+
+// where a language keeps its blog, and how a category slug maps back to its page
+const BLOG_ROOT = { en: "en/blog", nl: "nl/blog", da: "da/blog", fr: "fr/blog" };
+const POST_LABELS = {
+  en: { readMore: "Read on", inThis: "In this article", related: "More on this subject", faq: "Questions", back: "All subjects", posts: "Articles" },
+  nl: { readMore: "Lees verder", inThis: "In dit artikel", related: "Meer over dit onderwerp", faq: "Vragen", back: "Alle onderwerpen", posts: "Artikelen" },
+  da: { readMore: "Læs videre", inThis: "I denne artikel", related: "Mere om emnet", faq: "Spørgsmål", back: "Alle emner", posts: "Artikler" },
+  fr: { readMore: "Lire la suite", inThis: "Dans cet article", related: "Sur le même sujet", faq: "Questions", back: "Tous les sujets", posts: "Articles" },
+};
 const PRICING = JSON.parse(await readFile(join(ROOT, "data/pricing.json"), "utf8"));
 
 /* Section paths per language. German and English are fixed by the existing tree;
@@ -904,12 +921,17 @@ function enBlogCategoryPage(cat) {
   const u = UI.en;
   const guides = Object.entries(GUIDE_CATEGORY)
     .filter(([, c]) => c === cat.slug)
-    .map(([slug]) => `<a class="post-row" href="${root}en/guides/${slug}/"><span>${esc(GUIDE_TITLES[slug])}</span><small>${esc(u.readMore)} →</small></a>`)
+    .map(([slug]) => `<a class="post-row" href="${root}en/guides/${slug}/"><strong>${esc(GUIDE_TITLES[slug])}</strong><span>${esc(u.readMore)}</span></a>`)
     .join("");
 
   const siblings = EN_BLOG.categories
     .filter((c) => c.slug !== cat.slug)
     .map((c) => `<a class="cat-chip" href="${root}en/blog/${c.slug}/">${esc(c.name)}</a>`)
+    .join("");
+
+  const catPosts = LOCALE_POSTS.en
+    .filter((o) => o.category === cat.slug)
+    .map((o) => `<a class="post-row" href="${root}en/blog/${o.slug}/"><strong>${esc(o.title)}</strong><span>Read on</span></a>`)
     .join("");
 
   const trail = [[u.breadHome, p.home], ["Blog", "en/blog/"], [cat.name, `en/blog/${cat.slug}/`]];
@@ -932,6 +954,8 @@ function enBlogCategoryPage(cat) {
     .join("")}</article></div></div></section>
 
 ${guides ? `<section class="section section-soft"><div class="container">${sectionHeader("Guides", "Detailed guides in this area.")}<div class="post-list">${guides}</div></div></section>` : ""}
+
+${catPosts ? `<section class="section"><div class="container">${sectionHeader("Articles", cat.name)}<div class="post-list">${catPosts}</div></div></section>` : ""}
 
 <section class="section"><div class="container">${sectionHeader("Questions", "Frequently asked, answered here.")}<div class="faq-layout"><div>${faqMarkup(cat.faq)}</div></div>${disclaimer(lang)}</div></section>
 
@@ -961,7 +985,7 @@ function enBlogHubPage() {
     .join("");
 
   const guideRows = Object.keys(GUIDE_TITLES)
-    .map((slug) => `<a class="post-row" href="${root}en/guides/${slug}/"><span>${esc(GUIDE_TITLES[slug])}</span><small>${esc(EN_BLOG.categories.find((c) => c.slug === GUIDE_CATEGORY[slug])?.name ?? "Guide")}</small></a>`)
+    .map((slug) => `<a class="post-row" href="${root}en/guides/${slug}/"><strong>${esc(GUIDE_TITLES[slug])}</strong><span>${esc(EN_BLOG.categories.find((c) => c.slug === GUIDE_CATEGORY[slug])?.name ?? "Guide")}</span></a>`)
     .join("");
 
   const trail = [[u.breadHome, p.home], ["Blog", "en/blog/"]];
@@ -974,7 +998,7 @@ function enBlogHubPage() {
     hasPart: EN_BLOG.categories.map((c) => ({ "@type": "Article", headline: c.h1, url: BASE + `en/blog/${c.slug}/` })),
   };
 
-  const body = `<main id="main"><header class="page-hero"><div class="container"><div class="breadcrumbs"><a href="${root}${p.home}">${esc(u.breadHome)}</a> · Blog</div><div class="eyebrow">Blog</div><h1>${esc(h.h1)}</h1><p>${esc(h.lead)}</p></div></header><section class="section"><div class="container"><div class="blog-grid">${cards}</div></div></section><section class="section section-soft"><div class="container">${sectionHeader("Guides", "Country and process guides.", "Thirteen detailed guides on permits, budget, customs, transport and letting across the five destination markets.")}<div class="post-list">${guideRows}</div><div style="margin-top:24px"><a class="btn btn-dark" href="${root}en/questions/">Country questions and answers →</a></div></div></section></main>`;
+  const body = `<main id="main"><header class="page-hero"><div class="container"><div class="breadcrumbs"><a href="${root}${p.home}">${esc(u.breadHome)}</a> · Blog</div><div class="eyebrow">Blog</div><h1>${esc(h.h1)}</h1><p>${esc(h.lead)}</p></div></header><section class="section"><div class="container"><div class="blog-grid">${cards}</div></div></section><section class="section section-soft"><div class="container">${sectionHeader("Articles", "The specific questions, answered one at a time.")}<div class="post-list">${LOCALE_POSTS.en.map((o) => `<a class="post-row" href="${root}en/blog/${o.slug}/"><strong>${esc(o.title)}</strong><span>${esc(o.name)}</span></a>`).join("")}</div></div></section><section class="section"><div class="container">${sectionHeader("Guides", "Country and process guides.", "Thirteen detailed guides on permits, budget, customs, transport and letting across the five destination markets.")}<div class="post-list">${guideRows}</div><div style="margin-top:24px"><a class="btn btn-dark" href="${root}en/questions/">Country questions and answers →</a></div></div></section></main>`;
 
   return head({
     lang,
@@ -1090,7 +1114,9 @@ function localeBlogHubPage(lang) {
 
 <section class="section"><div class="container"><div class="blog-grid">${cards}</div></div></section>
 
-<section class="section section-soft"><div class="container">${sectionHeader(QA.labels[lang].hub, QA.labels[lang].hubH1, esc(QA.labels[lang].hubLead))}<div class="post-list">${countryRows}</div><div style="margin-top:24px"><a class="btn btn-dark" href="${root}${p.questions}/">${esc(l.questions)} →</a></div></div></section>
+<section class="section section-soft"><div class="container">${sectionHeader(POST_LABELS[lang].posts, b.hub.h1)}<div class="post-list">${LOCALE_POSTS[lang].map((o) => `<a class="post-row" href="${root}${BLOG_ROOT[lang]}/${o.slug}/"><strong>${esc(o.title)}</strong><span>${esc(o.name)}</span></a>`).join("")}</div></div></section>
+
+<section class="section"><div class="container">${sectionHeader(QA.labels[lang].hub, QA.labels[lang].hubH1, esc(QA.labels[lang].hubLead))}<div class="post-list">${countryRows}</div><div style="margin-top:24px"><a class="btn btn-dark" href="${root}${p.questions}/">${esc(l.questions)} →</a></div></div></section>
 
 <section class="section"><div class="container"><div class="answer-box"><strong>MODUNERA</strong><p>${esc(b.hub.closing)}</p></div>${disclaimer(lang)}</div></section></main>`;
 
@@ -1137,6 +1163,11 @@ function localeBlogCategoryPage(lang, cat) {
     .map(([h2, paras], i) => `<section id="section-${i + 1}"><h2>${esc(h2)}</h2>${paras.map((t) => `<p>${esc(t)}</p>`).join("")}</section>`)
     .join("");
 
+  const catPosts = LOCALE_POSTS[lang]
+    .filter((o) => o.category === cat.slug)
+    .map((o) => `<a class="post-row" href="${root}${BLOG_ROOT[lang]}/${o.slug}/"><strong>${esc(o.title)}</strong><span>${esc(POST_LABELS[lang].readMore)}</span></a>`)
+    .join("");
+
   // the same subject in the other two locales, so the switch lands on the topic
   const alternates = { de: "ratgeber/index.html", en: "en/blog/index.html" };
   for (const code of ["nl", "da", "fr"]) alternates[code] = localeBlogUrl(code, LOCALE_BLOG[code].categories[index].slug);
@@ -1145,9 +1176,11 @@ function localeBlogCategoryPage(lang, cat) {
 
 <section class="section"><div class="container article-shell"><article class="article"><div class="answer-box"><strong>${esc(cat.name)}</strong><p>${esc(cat.lead)}</p></div>${article}</article><aside class="article-aside"><div class="toc"><strong>${esc(l.allPosts)}</strong>${toc}</div></aside></div></section>
 
-<section class="section section-soft"><div class="container">${sectionHeader(l.faq, cat.name, esc(cat.lead))}<div class="faq-layout"><div>${faqMarkup(cat.faq)}</div></div>${disclaimer(lang)}</div></section>
+${catPosts ? `<section class="section section-soft"><div class="container">${sectionHeader(POST_LABELS[lang].posts, cat.name)}<div class="post-list">${catPosts}</div></div></section>` : ""}
 
-<section class="section"><div class="container">${sectionHeader(b.hub.eyebrow, l.related)}<div class="cat-rail">${siblings}</div><div style="margin-top:24px"><a class="btn btn-dark" href="${root}${lang}/${b.path}/">${esc(l.hubLink)} →</a></div></div></section></main>`;
+<section class="section${catPosts ? "" : " section-soft"}"><div class="container">${sectionHeader(l.faq, cat.name, esc(cat.lead))}<div class="faq-layout"><div>${faqMarkup(cat.faq)}</div></div>${disclaimer(lang)}</div></section>
+
+<section class="section section-soft"><div class="container">${sectionHeader(b.hub.eyebrow, l.related)}<div class="cat-rail">${siblings}</div><div style="margin-top:24px"><a class="btn btn-dark" href="${root}${lang}/${b.path}/">${esc(l.hubLink)} →</a></div></div></section></main>`;
 
   return head({
     lang,
@@ -1173,6 +1206,64 @@ function localeBlogCategoryPage(lang, cat) {
   }) + body + footer(lang, rel);
 }
 
+/* An individual post. Same shell as a category page so the two read as one blog,
+   but the aside carries the article's own sections and the siblings are the other
+   posts in the same category rather than the nine category chips. */
+function localePostPage(lang, post) {
+  const rel = `${BLOG_ROOT[lang]}/${post.slug}/index.html`;
+  const root = rootFor(rel);
+  const p = PATHS[lang];
+  const u = UI[lang];
+  const l = POST_LABELS[lang];
+  const blogHome = `${BLOG_ROOT[lang]}/`;
+  const blogLabel = lang === "en" ? "Blog" : LOCALE_BLOG[lang].hub.eyebrow;
+
+  const siblings = LOCALE_POSTS[lang]
+    .filter((o) => o.slug !== post.slug)
+    .slice(0, 6)
+    .map((o) => `<a class="post-row" href="${root}${BLOG_ROOT[lang]}/${o.slug}/"><strong>${esc(o.title)}</strong><span>${esc(o.name)}</span></a>`)
+    .join("");
+
+  const toc = post.sections.map(([h2], i) => `<a href="#section-${i + 1}">${esc(h2)}</a>`).join("");
+  const article = post.sections
+    .map(([h2, paras], i) => `<section id="section-${i + 1}"><h2>${esc(h2)}</h2>${paras.map((t) => `<p>${esc(t)}</p>`).join("")}</section>`)
+    .join("");
+
+  const body = `<main id="main"><header class="page-hero"><div class="container"><div class="breadcrumbs"><a href="${root}${p.home}">${esc(u.breadHome)}</a> · <a href="${root}${blogHome}">${esc(blogLabel)}</a> · ${esc(post.name)}</div><div class="eyebrow">${esc(post.name)}</div><h1>${esc(post.title)}</h1><p>${esc(post.lead)}</p><div class="hero-actions"><a class="btn btn-primary" href="${root}${p.models}/">MD 1 – MD 8</a><a class="btn btn-outline" href="${root}${blogHome}${post.category}/">${esc(post.name)} →</a></div></div></header>
+
+<section class="section"><div class="container article-shell"><article class="article"><div class="answer-box"><strong>${esc(post.name)}</strong><p>${esc(post.lead)}</p></div>${article}</article><aside class="article-aside"><div class="toc"><strong>${esc(l.inThis)}</strong>${toc}</div></aside></div></section>
+
+<section class="section section-soft"><div class="container">${sectionHeader(l.faq, post.name, esc(post.lead))}<div class="faq-layout"><div>${faqMarkup(post.faq)}</div></div>${disclaimer(lang)}</div></section>
+
+<section class="section"><div class="container">${sectionHeader(blogLabel, l.related)}<div class="post-list">${siblings}</div><div style="margin-top:24px"><a class="btn btn-dark" href="${root}${blogHome}">${esc(l.back)} →</a></div></div></section></main>`;
+
+  return head({
+    lang,
+    rel,
+    title: `${post.title.replace(/[.:]$/, "")} | MODUNERA ${TERM}`,
+    description: snippet(post.title, post.lead),
+    alternates: Object.fromEntries(["en", "nl", "da", "fr"].map((code) => {
+      const i = LOCALE_POSTS[lang].findIndex((o) => o.slug === post.slug);
+      return [code, `${BLOG_ROOT[code]}/${LOCALE_POSTS[code][i].slug}/index.html`];
+    }).concat([["de", "blog/index.html"]])),
+    extraLd: [
+      breadcrumbLd([[u.breadHome, p.home], [blogLabel, blogHome], [post.name, `${BLOG_ROOT[lang]}/${post.slug}/`]]),
+      faqLd(post.faq),
+      {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: post.title,
+        description: post.lead,
+        inLanguage: HTML_LANG[lang],
+        dateModified: UPDATED,
+        author: { "@type": "Organization", name: "MODUNERA" },
+        publisher: { "@type": "Organization", name: "MODUNERA", logo: { "@type": "ImageObject", url: BASE + "assets/brand/modunera-master-logo-mountain-v1-600.png" } },
+        mainEntityOfPage: BASE + `${BLOG_ROOT[lang]}/${post.slug}/`,
+      },
+    ],
+  }) + body + footer(lang, rel);
+}
+
 async function buildKnowledgePages() {
   let count = 0;
   await put(enBlogUrl(null), enBlogHubPage());
@@ -1188,6 +1279,12 @@ async function buildKnowledgePages() {
     count += 1;
     for (const cat of LOCALE_BLOG[lang].categories) {
       await put(localeBlogUrl(lang, cat.slug), localeBlogCategoryPage(lang, cat));
+      count += 1;
+    }
+  }
+  for (const lang of ["en", "nl", "da", "fr"]) {
+    for (const post of LOCALE_POSTS[lang]) {
+      await put(`${BLOG_ROOT[lang]}/${post.slug}/index.html`, localePostPage(lang, post));
       count += 1;
     }
   }
@@ -1335,7 +1432,7 @@ function articleBody(found, root) {
     ].filter(Boolean);
     sections.push(
       `<section id="section-${n0 + 3}"><h2>Die beiden ausführlichen Beiträge</h2><div class="post-list">${links
-        .map(([slug, title]) => `<a class="post-row" href="${root}blog/${slug}/"><span>${esc(title)}</span><small>Weiterlesen →</small></a>`)
+        .map(([slug, title]) => `<a class="post-row" href="${root}blog/${slug}/"><strong>${esc(title)}</strong><span>Weiterlesen</span></a>`)
         .join("")}</div></section>`
     );
   } else if (format === "mistakes") {

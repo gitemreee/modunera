@@ -1,0 +1,413 @@
+{
+  "_comment": "Individual Dutch blog posts. The nine category pages cover the broad subjects; these twelve are the specific decisions a Dutch buyer searches for by name, with Dutch ground conditions and Dutch practice — veen en klei onder de kraan, het waterschap bij grijs water, netbeheerders die per meter rekenen.",
+  "posts": [
+    {
+      "slug": "tiny-house-fundering",
+      "category": "techniek-en-constructie",
+      "name": "Fundering",
+      "title": "Fundering voor een tiny house: schroefpalen, strook of plaat.",
+      "lead": "De grond bepaalt de fundering, niet het huis. Vraag eerst een sondering aan, want de drie opties schelen in Nederland een factor vijf.",
+      "sections": [
+        ["Schroefpalen zijn de standaard, niet het antwoord", [
+          "Schroefpalen zijn snel, omkeerbaar en hoeven niet uit te harden. Op zandgrond zijn ze een dag werk voor twee man, en ze draaien er weer uit als het huis verhuist. Op gehuurde grond is die omkeerbaarheid echt geld waard.",
+          "Ze zijn niet universeel. In veen, slappe klei of opgehoogd terrein moet de paal een draagkrachtige laag halen die vier meter diep kan liggen, en op die diepte is het geen fractie meer van een strookfundering. Vraag een sondering vóór u de offerte accepteert, niet nadat de machine er staat."
+        ]],
+        ["Een strookfundering past bij een vaste plek", [
+          "Blijft het huis staan en is het terrein oneven, dan spreidt een betonstrook onder de twee lange chassisliggers de belasting en geeft een vlak niveau dat later niet bijgesteld hoeft te worden. Het tilt het hout ook vrij van opspattend water — de meest voorkomende oorzaak van rot bij de onderste plank.",
+          "De prijs zit in grondwerk en uithardingstijd, dus het verlengt de planning met twee weken. Op een perceel waar de graafmachine en de kraan toch komen, is die overlap goedkoper dan hij op papier lijkt."
+        ]],
+        ["Een betonplaat is zelden nodig", [
+          "Een volledige plaat is de duurste optie en levert een tiny house nauwelijks iets op: hij verbetert de isolatie niet, want de vloercassette is al geïsoleerd, en hij haalt de geventileerde ruimte onder het huis weg die de onderzijde droog houdt.",
+          "Zinvol is hij bij een permanente locatie met meerdere units en leidingen onder het dek, of bij grond die zo slecht is dat alleen een plaat de belasting kan spreiden. Beide zijn beslissingen voor een constructeur."
+        ]],
+        ["Waterpas zetten en bereikbaarheid", [
+          "Welke fundering ook, het huis komt op een dieplader en gaat er met een kraan af. De kraan moet stevig staan binnen reikafstand, en op veen en klei betekent dat rijplaten. Een perfecte fundering die onbereikbaar is, kost een tweede kraandag.",
+          "Zet de hoogtes vóór de levering en controleer ze met een instrument, niet met een waterpas op een plank. Vijftien millimeter afwijking over acht meter zie je aan elke deur."
+        ]],
+        ["Vorst, afwatering en de ruimte eronder", [
+          "Elke fundering moet onder de vorstgrens komen of ontworpen zijn om beweging op te vangen. Die diepte verschilt per regio en is het eerste getal om bij de gemeente op te vragen.",
+          "Houd de grond onder het huis afwaterend en de ruimte geventileerd. Een dichtgezette onderzijde houdt vocht tegen het chassis en maakt van een stalen frame van vijftig jaar er een van twintig."
+        ]]
+      ],
+      "faq": [
+        ["Welke fundering is het goedkoopst?", "Schroefpalen op zandgrond. In veen en slappe klei moeten ze diep, en dan is een strookfundering vaak goedkoper. Vraag een sondering voordat u offertes vergelijkt."],
+        ["Kan ik het huis later verplaatsen?", "Met schroefpalen wel, die draaien eruit. Een strook of plaat is definitief. Op gehuurde grond is die omkeerbaarheid het betalen waard."],
+        ["Heb ik een constructeur nodig?", "Op bekende zandgrond meestal niet. In veen, klei, opgehoogd of hellend terrein wel: die berekening houdt ook de garantie in stand."]
+      ]
+    },
+    {
+      "slug": "tiny-house-gevelbekleding",
+      "category": "techniek-en-constructie",
+      "name": "Gevelbekleding",
+      "title": "Gevelbekleding: thermowood, lariks of vezelcement vergeleken.",
+      "lead": "De gevel is de grootste onderhoudspost van een compact gebouw. Uw keuze bepaalt hoe vaak u de komende twintig jaar op een ladder staat.",
+      "sections": [
+        ["Thermisch gemodificeerd hout is het onderhoudsarme hout", [
+          "Door de warmtebehandeling verdwijnen de suikers waar schimmels van leven en beweegt het hout minder. Thermowood blijft daardoor vlak en rotbestendig zonder verduurzaming. Onbehandeld vergrijst het tot zacht zilvergrijs — dat is verwering, geen schade, en het verkort de levensduur niet.",
+          "Wilt u de oorspronkelijke honingkleur houden, dan bent u terug bij een UV-olie om de twee tot drie jaar, en op een gevel van twee lagen is dat telkens een dag. Beslis dat vóór de bestelling; de detaillering is hoe dan ook gelijk."
+        ]],
+        ["Lariks en ceder gedragen zich anders", [
+          "Siberische lariks is dicht, relatief goedkoop en onbehandeld duurzaam, maar hij werkt meer en geeft looistof af op alles wat er licht onder zit. Western red cedar is rustiger in maatvoering en lichter te verwerken, en kost ongeveer het dubbele.",
+          "Beide vergrijzen. Beide vragen dezelfde geventileerde spouw en dezelfde vrije hoogte boven het maaiveld. Geen van beide overleeft strak tegen een folie zonder lucht erachter."
+        ]],
+        ["Vezelcement en metaal halen de ladder weg", [
+          "Een vezelcementplaat of een felsdak-gevel hoeft alleen gewassen te worden. Bij een verhuurunit die tussen gasten door niemand bezoekt, is dat een echte besparing, en beide houden zich beter in zilte kustlucht dan hout.",
+          "De ruil is uiterlijk en reparatie. Een gedeukt metaalpaneel wordt vervangen, niet geschuurd, en snijkanten van vezelcement moeten op de bouw worden afgedicht. Geen van beide is moeilijk; beide zijn onvergeeflijk bij een gehaaste montage."
+        ]],
+        ["Het detail telt zwaarder dan het materiaal", [
+          "Elke gevel faalt op dezelfde vier plekken: de onderrand, de bovendorpel van het kozijn, de hoekaansluiting en waar een leiding doorheen gaat. Een geventileerde spouw, een druiprand onderaan en een goed gevormde bovendorpel bepalen of de gevel het houdt.",
+          "Vraag die vier details op tekening vóór productie. Een leverancier die ze niet kan tonen, verzint ze op de bouwplaats."
+        ]],
+        ["Stem de afwerking af op het klimaat", [
+          "De Nederlandse kust levert zout en constante wind; het binnenland vooral vocht en weinig droogperioden. Beide verkorten het interval tussen behandelingen bij een geoliede afwerking en beide bevoordelen een materiaal dat verwaarlozing verdraagt.",
+          "Wordt het huis verhuurd in plaats van bewoond, weeg dat zwaar mee. Het onderhoud dat u werkelijk doet, is het onderhoud dat in een wisseldag past."
+        ]]
+      ],
+      "faq": [
+        ["Moet thermowood behandeld worden?", "Niet voor de duurzaamheid. Alleen als u de oorspronkelijke kleur wilt houden, dan een UV-olie om de twee tot drie jaar. Onbehandeld vergrijst het en gaat het even lang mee."],
+        ["Welke gevel houdt zich aan zee?", "Vezelcement of gecoat metaal voor het laagste onderhoud; thermowood als u hout wilt en vergrijzing accepteert. Vermijd afwerkingen die vaak overgeschilderd moeten worden."],
+        ["Kan ik de gevel later vervangen?", "Ja — het is het enige deel van de schil dat echt vervangbaar is. De spouw en de regels erachter niet, dus die moeten meteen goed."]
+      ]
+    },
+    {
+      "slug": "tiny-house-badkamer",
+      "category": "indeling-en-interieur",
+      "name": "Badkamer",
+      "title": "De badkamer in een tiny house: wat past, wat u overslaat, wat misgaat.",
+      "lead": "De badkamer is de kleinste ruimte en veroorzaakt de meeste schade als hij slecht is uitgevoerd. Twee keuzes dragen bijna het hele resultaat: de douchebak en de afzuiging.",
+      "sections": [
+        ["Een volledig betegelde natte cel is niet vanzelf het antwoord", [
+          "De hele ruimte waterdicht maken klinkt efficiënt en voegt een afdichtingslaag toe die transport over de weg en een bewegend gebouw moet overleven. Een gegoten douchebak met opstand heeft daar geen last van, en dat is in de praktijk het detail dat het minst lekt.",
+          "Wilt u toch een natte cel, vraag dan hoe de folie tegen de wanden omhoog wordt gezet en hoe de lijnafvoer aan de vloercassette is bevestigd. Die twee details zijn het hele werk."
+        ]],
+        ["Maat de douche op de persoon, niet op de tekening", [
+          "Een bak van 70 bij 70 past op papier en niet om een volwassene heen. 80 bij 80 is het punt waarop een douche geen compromis meer is, en 90 bij 80 merkbaar beter. Die centimeters komen uit de gang, waar u vier seconden per dag staat.",
+          "Stahoogte telt net zo zwaar. Onder een loft: controleer de vrije hoogte bij de douchekop voordat u de indeling accepteert."
+        ]],
+        ["Afzuiging houdt de ruimte gezond", [
+          "Een compacte badkamer zonder eigen afzuiging brengt elke douchebeurt aan waterdamp de rest van het huis in. Gebalanceerde ventilatie met een afzuigventiel in de badkamer regelt dat; een vochtgestuurde ventilator is het minimum als er geen WTW is.",
+          "Laat de ventilator nalopen en houd een spleet onder de deur voor toevoerlucht. Een dichte badkamer met een sterke ventilator en geen inlaat verplaatst simpelweg geen lucht."
+        ]],
+        ["Toilet: spoelen, vermalen of composteren", [
+          "Een gewoon spoeltoilet vraagt afschot naar de afvoer, wat de vloeropbouw niet altijd toelaat. Een vermaler lost dat op en voegt een pomp toe die ooit onderhoud vraagt. Een composttoilet haalt het zwarte water helemaal weg en voegt een routine toe die de gebruiker moet volhouden.",
+          "Geen van de drie lost het grijze water uit douche en keuken op. Dat is de lozing waar het waterschap naar vraagt, dus regel die eerst."
+        ]],
+        ["Warm water is een capaciteitsvraag", [
+          "Een doorstroomtoestel is compact en trekt op het moment van gebruik veel stroom, wat telt bij een beperkte aansluiting of off-grid. Een kleine boiler spreidt de belasting en geeft een echte tweede douche.",
+          "Wat u ook kiest: isoleer de leiding en houd hem kort. In een klein huis is de wachttijd op warm water het verschil tussen een fijne douche en een ergernis."
+        ]]
+      ],
+      "faq": [
+        ["Wat is de kleinste bruikbare douche?", "80 bij 80 met volle stahoogte. Kleiner past op de tekening maar niet in comfortabel gebruik, en de ruimte komt meestal uit een gang waar u nauwelijks staat."],
+        ["Heb ik een ventilator nodig met WTW?", "De WTW hoort een afzuigventiel in de badkamer te hebben, daarop gedimensioneerd. Zo niet, dan een vochtgestuurde ventilator met nalooptijd."],
+        ["Is een composttoilet genoeg voor off-grid?", "Dat lost alleen zwart water op. Douche en wastafel produceren grijs water dat een goedgekeurde lozing nodig heeft, en daar beoordeelt het waterschap op."]
+      ]
+    },
+    {
+      "slug": "tiny-house-keuken",
+      "category": "indeling-en-interieur",
+      "name": "Keuken",
+      "title": "De keuken in een tiny house: werkblad, afzuiging en apparatuur.",
+      "lead": "In een compact huis staat de keuken in de woonkamer. Hoe stil hij is en hoeveel werkblad hij heeft, bepalen hoe het hele huis voelt.",
+      "sections": [
+        ["1,2 meter aaneengesloten werkblad is de grens", [
+          "Onder ongeveer 1,2 meter onafgebroken oppervlak naast de kookplaat staat er permanent iets buiten, en daar begint het gevoel van krapte. Op de tekening is dat goedkoper op te lossen dan met welk apparaat ook.",
+          "Tel op wat u werkelijk nodig heeft: snijruimte, een plek om een hete pan neer te zetten, en een hoek die leeg blijft. Een opklapbaar afdruiprek en een kookplaatafdekking leveren oppervlak zonder lengte."
+        ]],
+        ["Inductie boven gas, in vrijwel elk geval", [
+          "Inductie is sneller, koeler in een klein volume en haalt de vragen over verbrandingslucht en afvoer weg die gas meebrengt. In een luchtdicht compact huis zijn die vragen niet triviaal: een gaskookplaat vraagt permanente luchttoevoer en een koolmonoxidemelder.",
+          "De uitzondering is off-grid met een klein zonnepaneelvermogen, waar een tweepits gasstel op fles een grote piekbelasting voorkomt. Dat is een bewuste ruil, geen standaard."
+        ]],
+        ["Afzuiging: recirculatie volstaat meestal", [
+          "Een afvoer naar buiten werkt beter en maakt een gat in een geïsoleerde, luchtdichte schil dat gedetailleerd en dichtgezet moet worden. Een goede recirculatiekap met een echt koolstoffilter kan huishoudelijk koken in een compact huis aan en laat de schil intact.",
+          "Kies er een onder 50 dB op normale stand. In een open plattegrond draait de kap op twee meter van iemand die televisie kijkt."
+        ]],
+        ["Kies apparatuur op geluid, dan op maat", [
+          "Een vaatwasser van 42 dB en een van 48 dB zijn een andere ervaring in een ruimte waar u ook zit. Hetzelfde geldt voor de koelkastcompressor — een goedkoop toestel dat luid aanslaat is het apparaat dat mensen als eerste vervangen.",
+          "Een vaatwasser van 45 cm doet een volle dag voor twee en geeft 15 cm werkblad terug. Een hoge koelkast is meestal een vergissing; een onderbouwmodel met een aparte vrieslade past bij hoe een klein huishouden boodschappen doet."
+        ]],
+        ["Leidingen en stroom één keer goed", [
+          "Afvoer, water en stroom voor de keuken liggen in de vloer en de wand en worden bij productie vastgelegd. Een extra stopcontact op werkbladhoogte, een aansluiting voor een gefilterde kraan of een leiding naar een buitenkeuken zijn nu een tekeningwijziging en later sloopwerk.",
+          "Loop de plattegrond door alsof u kookt: waar staat de afvalbak, waar de waterkoker, met welke hand opent de koelkast. Tien minuten daar zijn meer waard dan welke materiaalkeuze ook."
+        ]]
+      ],
+      "faq": [
+        ["Hoeveel werkblad heb ik nodig?", "Minstens 1,2 meter aaneengesloten naast de kookplaat. Minder betekent dat er permanent iets buiten staat — daar begint een kleine keuken klein te voelen."],
+        ["Afvoer naar buiten of recirculatie?", "Meestal recirculatie met een echt koolstoffilter: dat houdt de luchtdichte schil intact en kan huishoudelijk koken aan. Kies er een onder 50 dB."],
+        ["Inductie of gas?", "Inductie, tenzij u off-grid bent met beperkte opwekking. Gas voegt verbrandingslucht, een afvoer en een CO-melder toe aan een strak dichtgezet klein volume."]
+      ]
+    },
+    {
+      "slug": "tiny-house-slapen-loft-of-begane-grond",
+      "category": "indeling-en-interieur",
+      "name": "Slapen",
+      "title": "Loft of begane grond: waar u slaapt in een tiny house.",
+      "lead": "De loft levert vloeroppervlak op en kost stahoogte, een trap en warme lucht. Voor sommige huishoudens is dat de juiste ruil en voor andere de reden om te verhuizen.",
+      "sections": [
+        ["De loft geeft de vloer terug", [
+          "Het bed boven de woonruimte tillen levert in een huis van acht meter ruwweg zes vierkante meter op — het verschil tussen een bank en een bankje. Bij MD 1 en MD 2 is dat wat de woonruimte royaal maakt in plaats van net voldoende.",
+          "Het concentreert de hele plattegrond ook rond één trap. Controleer aantrede en optrede op de tekening: een steile trap is prima op je dertigste en vermoeiend op je zestigste, en dat verander je achteraf niet."
+        ]],
+        ["Stahoogte bij het kussen is het getal dat telt", [
+          "De vrije hoogte midden op de loftvloer is niet de bruikbare maat. Wat telt is de hoogte waar u rechtop in bed zit. Onder ongeveer 1,10 meter stoot de meeste mensen elke ochtend het hoofd en stopt de loft als slaapkamer te functioneren.",
+          "Vraag die maat expliciet op. Hij staat zelden in een brochure en voorspelt beter dan wat ook of een loft werkt."
+        ]],
+        ["Warme lucht stijgt, dus plan de afvoer", [
+          "Een loft onder een geïsoleerd dak verzamelt de warme, vochtige lucht van koken en douchen beneden. Zonder afvoer bij de nok is het er enkele graden warmer dan in de kamer, en daar slaat in de winter als eerste condens neer.",
+          "Een ventilatieventiel hoog in de ruimte en een te openen dakraam lossen beide op. Samen maken ze van een loft een slaapkamer voor het hele jaar."
+        ]],
+        ["Een slaapkamer beneden verandert voor wie het huis geschikt is", [
+          "MD 3 heeft een afsluitbare kamer op de begane grond, en dat is het model voor wie thuiswerkt, voor een huishouden met een kind, en voor iedereen die 's nachts geen ladder wil beklimmen. Het kost woonoppervlak, en dat is een echte kostenpost.",
+          "Het veroudert ook beter. Een plattegrond met alleen een loft heeft voor de meeste eigenaren een houdbaarheidsdatum, en die werkt door in de doorverkoop."
+        ]],
+        ["Berging onder het bed is de gratis winst", [
+          "Op welk niveau het bed ook ligt, het volume eronder is de goedkoopste bergruimte in huis — ruwweg 1,5 kubieke meter bij een tweepersoonsbed. Laden op geleiders zijn beter dan een opklapbodem, waarvoor het matras elke keer moet wijken.",
+          "Leg het vóór productie vast. Laden inbouwen in een bestaand podium betekent snijden in een dek dat daar niet op is ontworpen."
+        ]]
+      ],
+      "faq": [
+        ["Hoeveel stahoogte heeft een loft nodig?", "Minstens 1,10 meter waar u rechtop in bed zit — niet de hoogte midden op de vloer. Daaronder stoppen de meeste mensen hem als slaapkamer te gebruiken."],
+        ["Is een loft in de zomer comfortabel?", "Alleen met een afvoer hoog in de ruimte en een te openen dakraam. Warme lucht verzamelt zich daar; zonder ventilatie loopt het enkele graden op."],
+        ["Welk model heeft een echte slaapkamer?", "MD 3, met een afsluitbare kamer beneden. Het kost woonoppervlak en past bij thuiswerken, gezinnen en iedereen die 's nachts geen ladder wil."]
+      ]
+    },
+    {
+      "slug": "tiny-house-verwarming-vergeleken",
+      "category": "energie-en-autarkie",
+      "name": "Verwarming",
+      "title": "Verwarming vergeleken: warmtepomp, houtkachel of elektrisch.",
+      "lead": "De juiste verwarming hangt af van de schil die u al heeft gespecificeerd. Beslis ze samen, en allebei vóór productie.",
+      "sections": [
+        ["Een kleine warmtepomp past bij een goede schil", [
+          "In een goed geïsoleerd, luchtdicht compact huis is de warmtevraag zo laag dat de kleinste lucht-luchtunits eerder te groot dan te krap zijn. Dat is een prettige positie: het toestel moduleert omlaag en draait stil in plaats van te pendelen.",
+          "Het geeft in de zomer ook koeling, wat in een huis met een grote glasgevel geen luxe is. De prijs is een buitenunit die zo geplaatst moet worden dat het geluid niet op het terras of bij de buren valt."
+        ]],
+        ["Een houtkachel is onafhankelijkheid met verplichtingen", [
+          "Een kachel werkt als niets anders het doet, en in een klein volume is een toestel van 4 kW meestal het kleinste dat te koop is en nog steeds te groot. Hij vraagt een goedgekeurd rookkanaal, een vloerplaat, aparte verbrandingsluchttoevoer en droge opslag voor een seizoen hout.",
+          "Hij vraagt ook een mens. Als enige warmtebron voor een verhuurunit is dat een risico; als bijverwarming voor een eigenaar die het leuk vindt, is het het beste van het huis op een februari-avond."
+        ]],
+        ["Elektrische panelen zijn eenvoudig en duur in gebruik", [
+          "Directe elektrische verwarming heeft geen buitenunit, geen rookkanaal, geen onderhoudsinterval en de hoogste kosten per geleverde kilowattuur. In een huis dat drie weekenden per maand bewoond wordt, kan die rekensom alsnog gunstiger uitpakken dan een warmtepomp.",
+          "Infraroodpanelen verwarmen oppervlakken in plaats van lucht, wat past bij wisselend gebruik: de ruimte voelt sneller warm. Bij permanente bewoning domineert het verbruik en wint de warmtepomp duidelijk."
+        ]],
+        ["Vloerverwarming, radiatoren of lucht", [
+          "Watervoerende vloerverwarming in een compacte vloercassette voegt opbouwhoogte en massa toe waar een licht gebouw traag op reageert. Luchtverdeling is sneller en past bij hoe een klein, luchtdicht huis zich werkelijk gedraagt.",
+          "Wilt u het comfort van een warme vloer, dan geeft een kleine elektrische mat in de badkamer het grootste deel van dat gevoel voor een fractie van de complicatie."
+        ]],
+        ["Dimensioneer op de koudste week", [
+          "Het vermogen wordt gekozen tegen de ontwerpbuitentemperatuur van de locatie, en die verschilt sterk tussen de vijf markten. Een toestel dat op een Nederlandse winter is gekozen, is in een Zwitsers dal te klein.",
+          "Geef de bestemming door voordat de specificatie vastligt. Isolatie, beglazing en warmtebron zijn één beslissing die drie keer genomen wordt."
+        ]]
+      ],
+      "faq": [
+        ["Welk vermogen heeft een tiny house nodig?", "Meestal is het kleinste verkrijgbare toestel al te groot voor een goed geïsoleerd compact huis. Dimensioneer op de ontwerptemperatuur van de bestemming, niet op een vuistregel."],
+        ["Kan een houtkachel de enige verwarming zijn?", "Voor een bewoner die er is wel. Voor een verhuurunit niet — die vraagt een mens, droog hout en een geveegd kanaal, en die zijn er in februari niet."],
+        ["Is vloerverwarming zinvol?", "Watervoerend zelden, in een lichte compacte vloer. Een kleine elektrische mat in de badkamer geeft het meeste gevoel zonder de opbouwhoogte."]
+      ]
+    },
+    {
+      "slug": "tiny-house-water-en-afvalwater",
+      "category": "energie-en-autarkie",
+      "name": "Water",
+      "title": "Water en afvalwater: de vraag die het perceel bepaalt.",
+      "lead": "Stroom kunt u opwekken. Water kunt u opslaan. Afvalwater moet ergens heen waar een instantie het accepteert, en dat bepaalt of het perceel werkt.",
+      "sections": [
+        ["Grijs water is de echte beperking", [
+          "Douche, wastafel en keuken leveren het dagelijkse volume, en juist grijs water wordt onderschat. Een composttoilet haalt de vraag over zwart water weg en laat het grijze water volledig open.",
+          "De opties zijn aansluiting op de riolering, een IBA, of een helofytenfilter met infiltratie waar bodem en waterschap dat toelaten. Alle drie worden beoordeeld vóór de omgevingsvergunning, niet erna."
+        ]],
+        ["Meet eerst de afstand tot het net", [
+          "Netbeheerders rekenen per meter en de sleuf is het dure deel. Vijftig meter tot de erfgrens is een ander project dan vierhonderd, en dat antwoord bepaalt welke van bovenstaande opties überhaupt de moeite van het uitrekenen waard is.",
+          "Vraag een offerte aan zodra het perceel bekend is. Het kost niets, duurt twee weken, en het is het getal waar de rest van het budget aan hangt."
+        ]],
+        ["Tanks: dimensioneer op dagen, niet op liters", [
+          "Twee mensen gebruiken ruwweg 100 tot 200 liter per dag met gewone kranen en aanzienlijk minder met een spaardouchekop en een spaartoilet. Kies de schoonwatertank op het aantal dagen tussen vullingen en de vuilwatertank daarop afgestemd, anders leegt u de een terwijl de ander halfvol is.",
+          "Plaats beide zo dat ze af te tappen en te inspecteren zijn. Een tank die bevriest omdat hij in een onverwarmde ruimte hangt, is een voorspelbare storing."
+        ]],
+        ["Regenwater is voor sommige toepassingen simpel", [
+          "Opgevangen dakwater werkt zonder meer voor toiletspoeling, de was en de tuin. Voor drinkwater vraagt het filtratie en desinfectie die aantoonbaar is, plus onderhoud — een installatie, geen aanschaf.",
+          "Het dakoppervlak van een tiny house is klein. Reken het door voor uw neerslag: 30 vierkante meter dak in een droge zomermaand levert minder dan mensen verwachten."
+        ]],
+        ["Vorstbeveiliging is een ontwerpitem", [
+          "Leidingen in onverwarmde ruimten, de buitenkraan en de aanvoer bij het chassis zijn waar bevriezing begint. Tracing en een aftapkraan lossen het op, en bij verhuur moet dat aftappen een vastgelegde procedure zijn met een naam erbij.",
+          "Ontwerp het mee. Tracing achteraf in een gesloten vloercassette aanbrengen is geen aangenaam werk."
+        ]]
+      ],
+      "faq": [
+        ["Kan ik met een composttoilet de afvoer overslaan?", "Nee. Dat lost alleen zwart water op. Douche en wastafel leveren grijs water dat een goedgekeurde lozing nodig heeft — daar beoordeelt het waterschap op."],
+        ["Hoe groot moet de watertank zijn?", "Dimensioneer op dagen tussen vullingen. Twee mensen gebruiken ruwweg 100–200 liter per dag; 500 liter is twee tot drie dagen, geen week."],
+        ["Is regenwater drinkbaar?", "Alleen met aantoonbare filtratie en desinfectie plus onderhoud. Voor spoelen, de was en de tuin is dat allemaal niet nodig."]
+      ]
+    },
+    {
+      "slug": "tiny-house-akoestiek",
+      "category": "techniek-en-constructie",
+      "name": "Akoestiek",
+      "title": "Akoestiek: regen op het dak, voetstappen op de loft, en de buren.",
+      "lead": "Niemand vraagt vooraf naar geluid en bijna iedereen noemt het achteraf. Drie van de vier problemen worden op de tekening opgelost.",
+      "sections": [
+        ["Regen op een metalen dak is de klassieker", [
+          "Een felsdak direct op een geïsoleerd dek roffelt. De oplossing is massa en ontkoppeling: een zwaarder dekplaatmateriaal, een verende laag onder de fels en een volledig gevulde spouw. Bij productie kost dat weinig; achteraf betekent het het dak eraf.",
+          "Is het huis een vakantieverhuur, weeg dit dan zwaar. Een gast die niet door de regen heen slaapt, schrijft de recensie die de prijs van volgend seizoen bepaalt."
+        ]],
+        ["Voetstappen op de loft komen recht naar beneden", [
+          "Een licht loftdek geeft contactgeluid door aan de woonruimte eronder — precies de plek waar iemand anders zit. Een verende laag onder de afwerkvloer en een gevulde ruimte tussen de balken halen het meeste weg.",
+          "Dit is de goedkoopste akoestische verbetering in huis en degene die het vaakst wegvalt, omdat hij op een offerte onzichtbaar is."
+        ]],
+        ["Een binnenwand moet massa hebben", [
+          "Een houtskeletwand met een plaat aan weerszijden en niets ertussen scheidt het zicht en verder niets. De spouw vullen en aan één zijde dubbel beplaten maakt van een wand een echte scheiding, en kost een paar centimeter plattegrond.",
+          "Als het doel van de kamer is dat er iemand kan bellen, zeg dat dan vóór productie. De wand wordt één keer gebouwd."
+        ]],
+        ["Apparatuur is de achtergrond waarin u leeft", [
+          "In een open plattegrond draaien de afzuigkap, de ventilatie-unit, de koelkast en de vaatwasser in dezelfde ruimte als de bank. Kies elk op het opgegeven geluidsniveau: onder 50 dB voor de kap, onder 45 dB voor de vaatwasser, en een ventilatie-unit waarvan het blad geluidsvermogen vermeldt.",
+          "Plaats de WTW-unit weg van de slaapplek en op verende ophanging. Hij draait continu, en juist daarom moet hij onhoorbaar zijn."
+        ]],
+        ["Zachte oppervlakken doen de rest", [
+          "Een compact interieur met harde vloeren, glas en stucwerk galmt, en galm is wat een kleine ruimte druk maakt. Een vloerkleed, gordijnen en een gestoffeerde zit brengen de nagalmtijd merkbaar omlaag.",
+          "Dit is de enige akoestische ingreep die u ná oplevering kunt doen, en het is de moeite waard om te proberen voordat u concludeert dat het gebouw het probleem is."
+        ]]
+      ],
+      "faq": [
+        ["Is regen op het dak echt zo luid?", "Op een kaal felsdak wel. Massa en een verende laag onder de fels lossen het bij productie op; achteraf betekent het de dakbedekking eraf."],
+        ["Kan ik de loft later isoleren tegen geluid?", "Deels, met een kleed en stoffering. De verende laag onder de afwerkvloer moet tijdens de bouw mee."],
+        ["Welk geluidsniveau moet apparatuur hebben?", "Onder 50 dB voor de afzuigkap en onder 45 dB voor de vaatwasser. In een open plattegrond draaien ze in dezelfde ruimte als de bank."]
+      ]
+    },
+    {
+      "slug": "tiny-house-thuiswerken",
+      "category": "gebruik-en-verdienmodel",
+      "name": "Thuiswerken",
+      "title": "Thuiswerken vanuit een tiny house: bureau, licht en verbinding.",
+      "lead": "Een laptop op de eettafel werkt een week. Daarna wilt u een blad dat blijft staan, een stoel die deugt en een achtergrond die presentabel is in beeld.",
+      "sections": [
+        ["Een vast bureau vraagt 1,2 bij 0,6 meter", [
+          "Dat is genoeg voor een scherm, een toetsenbord en een blok, en het is de grens waaronder het bureau een laptopplank wordt. Plan het als vast onderdeel van de indeling in plaats van als meubel, dan kost het de woonruimte vrijwel niets.",
+          "Een aan de wand gehangen blad met een kabelgoot eronder houdt de vloer vrij en laat een goede stoel eronder schuiven. Die stoel telt zwaarder dan welke aankoop ook als u er veertig uur per week in zit."
+        ]],
+        ["Licht van opzij, nooit achter het scherm", [
+          "Een bureau tegenover een raam geeft weerspiegeling op het scherm; een bureau met het raam in de rug maakt van u een silhouet op elk gesprek. Zijlicht lost beide op, en een dakraam erboven nog beter.",
+          "Zet er een bureaulamp met warm licht bij voor winterse middagen. Het plafondlicht dat bij koken past, is niet het licht dat bij een scherm past."
+        ]],
+        ["Verbinding is een locatievraag, geen huisvraag", [
+          "Controleer vaste lijn en mobiele dekking op het perceel zelf, niet in het dichtstbijzijnde dorp. Een landelijk perceel met één streepje 4G draagt geen werkdag aan videogesprekken, en geen enkele specificatie in het huis verandert dat.",
+          "Waar glasvezel ontbreekt, wint een vaste buitenantenne met een router op simkaart ruim van een telefoon-hotspot. Leg bij productie een mantelbuis voor die antennekabel."
+        ]],
+        ["Een deur maakt het werkbaar voor twee", [
+          "Eén open volume gaat goed tot de een belt en de ander niet. De afsluitbare kamer beneden van MD 3 is het model voor een huishouden waar iemand de meeste dagen thuiswerkt, en die wand heeft massa nodig, niet alleen een deurblad.",
+          "Waar een deur onmogelijk is, geven een niveauverschil en een scherm een deel van hetzelfde voordeel. Een minder goed antwoord, maar een echt antwoord."
+        ]],
+        ["Stopcontacten en netwerk op bureauhoogte", [
+          "Stroom op bladhoogte, een netwerkaansluiting ernaast en genoeg contacten voor scherm, laptop, lamp en lader. Dat is nu een notitie op de tekening en straks een verlengsnoer over de vloer.",
+          "Voeg één contact toe waarvan u denkt dat u het niet nodig heeft. Dat is degene die u gebruikt."
+        ]]
+      ],
+      "faq": [
+        ["Hoeveel ruimte vraagt een werkplek?", "Ongeveer 1,2 bij 0,6 meter vast blad met ruimte voor een goede stoel. Daaronder wordt het een laptopplank in plaats van een werkplek."],
+        ["Welk model past bij thuiswerken?", "MD 3, om de afsluitbare kamer beneden. Bij een volledig open plattegrond bezet één telefoongesprek het hele huis."],
+        ["En internet op een landelijk perceel?", "Controleer de dekking op het perceel zelf. Waar glasvezel ontbreekt, wint een buitenantenne met router op simkaart van een hotspot — leg de mantelbuis bij productie."]
+      ]
+    },
+    {
+      "slug": "tiny-house-voor-gezinnen",
+      "category": "indeling-en-interieur",
+      "name": "Gezinnen",
+      "title": "Een tiny house met een kind: wat verandert er.",
+      "lead": "Twee volwassenen en een kind is een andere opgave dan twee volwassenen. Berging, geluid en een tweede deur dragen het verschil.",
+      "sections": [
+        ["Een tweede afsluitbare ruimte is geen optie", [
+          "Een kind heeft een slaapplek nodig die niet de kamer is waar de volwassenen om negen uur zitten. Dat is een deur, geen gordijn, en dat betekent MD 3 of groter. De rest van de opgave volgt uit die ene eis.",
+          "De kamer hoeft niet groot te zijn. Twee bij tweeënhalve meter met een raam en bergruimte is een echte kinderkamer; de voorwaarde is dat hij dichtgaat."
+        ]],
+        ["De bergingsbehoefte verdubbelt bijna", [
+          "Twee volwassenen hebben zes tot acht kubieke meter nodig. Met een kind komt daar de helft bij: kleding die elk jaar van maat verandert, een kinderwagen of fiets, speelgoed, schoolspullen en de seizoensuitrusting die een gezin verzamelt.",
+          "Plan van begin af aan een buitenberging. Een weerbestendige kist op het terras haalt fietsen en tuingereedschap uit een huis dat het volume niet kan missen."
+        ]],
+        ["Geluid tussen de twee ruimten", [
+          "De wand tussen de kinderkamer en de woonruimte bepaalt of de avond werkt. Een gevulde spouw, een massieve deur en een afdichting onderlangs maken er een kamer van; een holle wand met een holle deur maakt er een scherm van.",
+          "Hetzelfde geldt voor de badkamer, die in een compacte plattegrond meestal naast de slaapkamer ligt."
+        ]],
+        ["Veiligheidsdetails om te specificeren", [
+          "Aantrede en optrede van de trap, een leuning op kinderhoogte, raambeveiliging boven en een randbeveiliging bij de loft. Alle vier zijn goedkoper als specificatie dan als aanpassing, en de loftrand is achteraf niet overtuigend op te lossen.",
+          "Een thermostatische mengkraan is vijf minuten werk bij productie en voorkomt de ene brandwond die iedereen zich herinnert."
+        ]],
+        ["De buitenruimte doet het zware werk", [
+          "Een gezin in een compact huis leeft meer buiten dan een stel, dus terras, overkapping en de route vanaf de deur tellen net zo zwaar als welke binnenmaat ook. Een overdekt dek verlengt het bruikbare seizoen met maanden.",
+          "Ontwerp de buitenruimte tegelijk met de plattegrond, niet als tuinaanleg achteraf. Waar de deur op uitkomt, bepaalt hoe het huis wordt gebruikt."
+        ]]
+      ],
+      "faq": [
+        ["Kan een gezin van drie in een tiny house wonen?", "Ja, met een tweede afsluitbare ruimte — MD 3 of groter. Een alkoof met gordijn is geen kinderkamer zodra een kind eerder naar bed gaat dan de volwassenen."],
+        ["Hoeveel extra berging vraagt een kind?", "Ruwweg de helft bovenop de zes tot acht kubieke meter voor twee volwassenen, plus een buitenberging voor kinderwagen, fietsen en seizoensspullen."],
+        ["Welke veiligheidsitems moet ik specificeren?", "Randbeveiliging bij de loft, raambeveiliging, een bereikbare leuning en een thermostatische mengkraan. Alle vier goedkoop bij productie en lastig achteraf."]
+      ]
+    },
+    {
+      "slug": "tiny-house-terras-en-buitenruimte",
+      "category": "indeling-en-interieur",
+      "name": "Terras",
+      "title": "Het terras: de kamer die een tiny house groot maakt.",
+      "lead": "De goedkoopste vierkante meters van het project liggen buiten de schil. Het zijn ook de meters die het vaakst pas na de levering worden bedacht.",
+      "sections": [
+        ["Ontwerp het terras met de plattegrond mee", [
+          "Waar de hoofdopening op uitkomt, bepaalt hoe het huis het komende decennium wordt gebruikt: ochtendlicht, avondlicht, uitzicht, wind en het raam van de buren liggen met die ene keuze vast. Op de tekening is dat gratis goed te krijgen.",
+          "Leg het dek op vloerniveau zonder drempel. Een vlakke overgang laat het interieur doorlopen naar buiten en is de effectiefste manier om een compact huis groter te laten voelen."
+        ]],
+        ["Een overkapping verlengt het seizoen met maanden", [
+          "Een onoverdekt terras is in Nederland een handvol weken bruikbaar. Een dak over de helft ervan, of een vaste pergola met doek, maakt er ruimte van die u van april tot oktober gebruikt en beschutting die het hele jaar dienst doet.",
+          "Het beschermt bovendien de grootste glasgevel tegen zomerzon, wat de goedkoopste koeling in het project is."
+        ]],
+        ["Privacy bepaalt of het gebruikt wordt", [
+          "Een terras waar de buren op kijken blijft leeg. Beplanting, een lattenscherm of het huis dertig graden draaien op het perceel lossen het op, en alle drie zijn beslissingen van vóór de kraan.",
+          "Bij een verhuurunit is dit geen voorkeur maar een recensiecijfer. Gasten waarderen privacy buiten hoger dan bijna elk binnenkenmerk."
+        ]],
+        ["Berging en aansluitingen buiten", [
+          "Een weerbestendige berging op het terras haalt fietsen, tuingereedschap en seizoensspullen uit een huis zonder overtollig volume. Een buitenkraan, een stopcontact en een lamp op het dek zijn tekeningitems die nu vrijwel niets kosten.",
+          "Komt er een jacuzzi of een zware plantenbak op, zeg dat dan voordat het dek wordt ontworpen. De constructie is berekend op mensen, niet op 1.500 liter water."
+        ]],
+        ["Materialen die verwaarlozing overleven", [
+          "Het dek is het meest belaste oppervlak op het terrein. Thermisch gemodificeerd hout en composiet kunnen daar tegen; vurenhout vraagt jaarlijkse aandacht en krijgt die zelden. Bij een verhuurunit kiest u wat verwaarlozing overleeft.",
+          "Houd de planken van onderen geventileerd en vrij van bladafval. Een dek dat er onder niet kan drogen, rot van onderen weg terwijl het er van boven goed uitziet."
+        ]]
+      ],
+      "faq": [
+        ["Hoe groot moet het terras zijn?", "Minstens zo groot als de woonruimte als het als kamer moet functioneren. Een drempelloze overgang telt zwaarder dan de exacte maat."],
+        ["Is een overkapping de moeite waard?", "In Nederland zeker — het maakt van een paar weken zes maanden gebruik, en het beschaduwt de grootste glasgevel in de zomer."],
+        ["Welk terrasmateriaal houdt het?", "Thermisch gemodificeerd hout of composiet. Vurenhout vraagt jaarlijkse aandacht die het, zeker bij verhuur, niet krijgt."]
+      ]
+    },
+    {
+      "slug": "tiny-house-checklist-voor-de-bestelling",
+      "category": "vergelijking-en-alternatieven",
+      "name": "Vóór de bestelling",
+      "title": "Vóór u een tiny house bestelt: wat eerst geregeld moet zijn.",
+      "lead": "Bijna elk project dat misgaat, gaat mis vóór de productie begint. Dit is de lijst, in de volgorde waarin de antwoorden nodig zijn.",
+      "sections": [
+        ["Het perceel, schriftelijk", [
+          "Wat het omgevingsplan op dat specifieke perceel toestaat, voor het gebruik dat u werkelijk beoogt, voor de duur die u werkelijk beoogt. Vraag het schriftelijk aan de gemeente en bewaar het antwoord. Een mondeling ja aan de balie is geen besluit en bindt niemand.",
+          "Is het beoogde gebruik niet toegestaan, dan is dat het hele project — geen detail om later omheen te werken. Regel dit voordat er iets anders wordt besteld."
+        ]],
+        ["De offerte van de netbeheerder", [
+          "Afstand tot water, stroom en riolering, geprijsd. Netbeheerders rekenen per meter en hanteren doorlooptijden die in drukke regio's tot een jaar oplopen. Dit bedrag overtreft vaak alle andere terreinkosten samen, en het opvragen is gratis.",
+          "Doe het zodra het perceel bekend is. Het bepaalt de fundering, de energiestrategie en soms het perceel zelf."
+        ]],
+        ["Toegang voor dieplader en kraan", [
+          "Breedte van de inrit, draaicirkel, hoogte onder takken en kabels, en wat de ondergrond draagt. Fotografeer de aanrijroute, de laatste bocht en de eindpositie, met een meetlint in beeld, en stuur ze vóór de orderbevestiging.",
+          "Een lastige toegang is oplosbaar. Een lastige toegang die op de leverdag wordt ontdekt, is een tweede kraandag en een ploeg die staat te wachten."
+        ]],
+        ["De specificatie die later niet meer verandert", [
+          "Constructie, isolatieopbouw, leidingtracés, raamposities en de loft. Alles op die lijst ligt vast bij productie en is achteraf duur te wijzigen; alles wat er niet op staat — afwerking, los meubilair, apparatuur — kan wachten.",
+          "Steek de beslisenergie daarin, en laat de kleur van de kussens wachten tot het huis er staat."
+        ]],
+        ["Het geld, inclusief wat niemand offreert", [
+          "Unit, transport, douane en btw, fundering, aansluitingen, kraan, leges, verzekering en een post onvoorzien. Daarna het jaarbedrag: onderhoud, filters, de jaarlijkse controle, en bij verhuur schoonmaak en vervanging.",
+          "Reken het verhuurscenario ook tien punten onder uw verwachte bezetting door. Draagt het daar de vaste lasten niet, dan hangt het project aan een goed jaar."
+        ]]
+      ],
+      "faq": [
+        ["Wat is de meest gemaakte fout?", "Bestellen voordat de gemeente schriftelijk heeft bevestigd wat het perceel toestaat voor het beoogde gebruik. Al het andere is te herstellen; dat niet."],
+        ["Wanneer heb ik de netoffertes nodig?", "Zodra het perceel bekend is. Ze overtreffen vaak alle andere terreinkosten en bepalen fundering en energiestrategie."],
+        ["Wat kan ik na productiestart nog wijzigen?", "Afwerking, los meubilair en apparatuur. Niet de constructie, de isolatieopbouw, de leidingtracés, de raamposities of de loft."]
+      ]
+    }
+  ]
+}
