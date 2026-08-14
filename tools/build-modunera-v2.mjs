@@ -120,6 +120,14 @@ const MENU = {
         ["faq/europa/", "Europa-FAQ", "Genehmigung, Zoll, Lieferung"],
         ["downloads/", "Dokumente", "Pläne und technische Daten"],
       ]},
+      { label: "Unternehmen", menu: [
+        ["factory/", "Produktion", "Vom Stahl bis zur Übergabe"],
+        ["projects/", "Projekte", "Wohnen, Urlaub, Business"],
+        ["qualitaet/", "Material & Qualität", "Aufbau und Nachweise"],
+        ["nachhaltigkeit/", "Nachhaltigkeit", "Ressourcen und Betrieb"],
+        ["standorte/", "Standorte", "7.000+ lokale Seiten"],
+        ["tools/", "Planungstools", "Vergleich, Lieferung, Grundstück"],
+      ]},
       { label: "Kontakt", href: "kontakt/" },
     ],
   },
@@ -168,7 +176,7 @@ const MENU = {
    same slugs so the two layers cannot drift. */
 const LOCALE_DEFS = JSON.parse(await readFile(join(ROOT, "data/locales.json"), "utf8")).locales;
 const LANGUAGES = [
-  ["de", "Deutsch", ""],
+  ["de", "Deutsch", "index.html"],
   ["en", "English", "en/"],
   ...Object.entries(LOCALE_DEFS).map(([code, cfg]) => [code, cfg.label, code + "/"]),
 ];
@@ -198,7 +206,21 @@ for (const [code, cfg] of Object.entries(LOCALE_DEFS)) {
   };
 }
 
-function nav(root, lang) {
+/* Flags drawn inline: no request, no icon font, crisp at 20px. The picker's
+   trigger is the flag of the language being read, so it needs no translation. */
+const FLAGS = {
+  de: '<svg class="flag" viewBox="0 0 5 3" aria-hidden="true"><rect width="5" height="1" fill="#000"/><rect y="1" width="5" height="1" fill="#DD0000"/><rect y="2" width="5" height="1" fill="#FFCE00"/></svg>',
+  en: '<svg class="flag" viewBox="0 0 60 30" aria-hidden="true"><rect width="60" height="30" fill="#012169"/><path d="M0 0 60 30M60 0 0 30" stroke="#fff" stroke-width="6"/><path d="M30 0V30M0 15H60" stroke="#fff" stroke-width="10"/><path d="M30 0V30M0 15H60" stroke="#C8102E" stroke-width="6"/></svg>',
+  nl: '<svg class="flag" viewBox="0 0 9 6" aria-hidden="true"><rect width="9" height="2" fill="#AE1C28"/><rect y="2" width="9" height="2" fill="#fff"/><rect y="4" width="9" height="2" fill="#21468B"/></svg>',
+  da: '<svg class="flag" viewBox="0 0 37 28" aria-hidden="true"><rect width="37" height="28" fill="#C8102E"/><rect x="12" width="4" height="28" fill="#fff"/><rect y="12" width="37" height="4" fill="#fff"/></svg>',
+  fr: '<svg class="flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="1" height="2" fill="#002395"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ED2939"/></svg>',
+};
+
+/* `alternates` carries the per-language URL of the page being rendered, read from
+   the hreflang tags the page already declares. Where a language has an equivalent
+   page the picker goes straight to it; otherwise it falls back to that language's
+   home, so a switch never lands on a 404. */
+function nav(root, lang, alternates = {}) {
   const m = MENU[lang];
   const links = m.items
     .map((item) => {
@@ -209,12 +231,20 @@ function nav(root, lang) {
       return `<div class="nav-dropdown"><button type="button">${item.label}</button><div class="nav-menu">${entries}</div></div>`;
     })
     .join("");
-  return `<nav class="nav" aria-label="${m.label}"><div class="container nav-inner">${brandLockup(root, root + m.home, lang)}<div class="nav-links">${links}</div><div class="nav-actions"><div class="nav-dropdown lang-dropdown"><button type="button" class="lang-switch" aria-label="Sprache / Language">${lang.toUpperCase()}</button><div class="nav-menu">${LANGUAGES.map(([c, label, href]) => `<a href="${root}${href}" hreflang="${c}" lang="${c}"${c === lang ? ' aria-current="true"' : ""}><span>${label}</span></a>`).join("")}</div></div><a class="btn btn-primary" href="${waLink(m.ctaMsg)}" target="_blank" rel="noopener">${m.cta}</a><button class="mobile-toggle" aria-label="${m.toggle}">☰</button></div></div></nav>`;
+  const languages = LANGUAGES
+    .map(([code, label, href]) => {
+      const target = alternates[code] ?? root + href;
+      const current = code === lang ? ' aria-current="true"' : "";
+      return `<a href="${target}" hreflang="${code}" lang="${code}"${current}>${FLAGS[code]}<span>${label}</span></a>`;
+    })
+    .join("");
+  const picker = `<div class="nav-dropdown lang-dropdown"><button type="button" class="lang-switch" aria-label="Sprache / Language">${FLAGS[lang]}${lang.toUpperCase()}</button><div class="nav-menu">${languages}</div></div>`;
+  return `<nav class="nav" aria-label="${m.label}"><div class="container nav-inner">${brandLockup(root, root + m.home, lang)}<div class="nav-links">${links}</div><div class="nav-actions">${picker}<a class="btn btn-primary" href="${waLink(m.ctaMsg)}" target="_blank" rel="noopener">${m.cta}</a><button class="mobile-toggle" aria-label="${m.toggle}">☰</button></div></div></nav>`;
 }
 
-function chrome(root, lang) {
+function chrome(root, lang, alternates = {}) {
   const m = MENU[lang];
-  return `<a class="skip" href="#main">${m.skip}</a><div class="scroll-progress"></div>${nav(root, lang)}`;
+  return `<a class="skip" href="#main">${m.skip}</a><div class="scroll-progress"></div>${nav(root, lang, alternates)}`;
 }
 
 /* --- brand assets ---------------------------------------------------------
@@ -983,7 +1013,12 @@ async function rewriteNavigation() {
     const html = await readFile(file, "utf8");
     if (!html.includes('<nav class="nav"')) continue;
     const lang = detectLang(html);
-    const next = html.replace(/<nav class="nav"[\s\S]*?<\/nav>/, nav(rootFor(rel), lang));
+    // reuse the hreflang tags already on the page as the picker's targets
+    const alternates = {};
+    for (const m of html.matchAll(/<link rel="alternate" hreflang="([a-z-]+)" href="([^"]+)">/gi)) {
+      if (m[1] !== "x-default") alternates[m[1]] = m[2];
+    }
+    const next = html.replace(/<nav class="nav"[\s\S]*?<\/nav>/, nav(rootFor(rel), lang, alternates));
     if (next !== html) {
       await writeFile(file, next, "utf8");
       changed += 1;
