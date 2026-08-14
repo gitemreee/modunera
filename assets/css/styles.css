@@ -1248,4 +1248,32 @@ h1,h2,h3,.section-header h2,.editorial-copy h2,.wide-copy h2,.article-content h2
   .brand-claim{font-size:1.5rem}
   .nav-links{gap:10px;font-size:.74rem}
 }
+
+/* --- Hero slideshow, corrected for the <picture> wrappers -------------------
+   The stagger was written as `.hero-slides img:nth-child(n)`. Once each still
+   was wrapped in a <picture> to give phones a 3:4 crop, the <img> stopped being
+   the first child of anything — <source> comes before it — so none of the
+   delays matched. All five stills then ran on delay 0, fading in and out
+   together and leaving the hero blank for 32 of every 40 seconds; the
+   reduced-motion fallback, which shows the first still, matched nothing at all
+   and left it blank permanently. That is the "no slide" on every page but the
+   German one, which was still carrying the older bare-<img> markup.
+
+   The animation now belongs to the <picture>, and the <img> inside is pinned
+   opaque. `.hero-slides picture>img` is one step more specific than the v1
+   `.hero-slides img`, which is what stops the old rule zeroing it again. */
+.hero-slides picture{position:absolute;inset:0;display:block;opacity:0;
+  animation:hero-slide 40s linear infinite}
+.hero-slides picture>img{position:static;inset:auto;width:100%;height:100%;
+  object-fit:cover;opacity:1;animation:none;display:block}
+.hero-slides picture:nth-child(1){animation-delay:0s}
+.hero-slides picture:nth-child(2){animation-delay:8s}
+.hero-slides picture:nth-child(3){animation-delay:16s}
+.hero-slides picture:nth-child(4){animation-delay:24s}
+.hero-slides picture:nth-child(5){animation-delay:32s}
+@media(prefers-reduced-motion:reduce){
+  .hero-slides picture{animation:none;opacity:0}
+  .hero-slides picture:nth-child(1){opacity:1}
+  .hero-slides picture>img{opacity:1}
+}
 /* MODUNERA BRAND PALETTE END */

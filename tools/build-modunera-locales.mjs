@@ -164,7 +164,9 @@ function homePage(cfg, locales, pricing) {
       ],
     }) +
     chrome(root, cfg) +
-    `<main id="main"><section class="page-hero"><div class="container"><div class="eyebrow">${esc(cfg.home.kicker)}</div><h1>${esc(cfg.home.h1)}</h1><p>${esc(cfg.home.intro)}</p><div class="hero-actions"><a class="btn btn-primary" href="${waLink(cfg.wa)}" target="_blank" rel="noopener">WhatsApp</a><a class="btn btn-outline" href="${root}${cfg.code}/${p.countries}/">${esc(cfg.labels.countries)} →</a></div></div></section>` +
+    // the same photographic hero the German and English home pages use; the empty
+    // .hero-media wrapper is filled with the slideshow by build-modunera-v2.mjs
+    `<main id="main"><header class="hero"><div class="hero-media"></div><div class="hero-grain"></div><div class="container hero-content"><div class="hero-panel"><div class="hero-kicker">${esc(cfg.home.kicker)}</div><h1>${esc(cfg.home.h1)}</h1><p>${esc(cfg.home.intro)}</p><div class="hero-actions"><a class="btn btn-primary" href="${root}studio/">${esc(cfg.labels.models)}</a><a class="btn btn-outline" href="${waLink(cfg.wa)}" target="_blank" rel="noopener">WhatsApp</a></div><div class="hero-proof"><span>8 ${esc(cfg.nav.models)}</span><span>${esc(cfg.labels.countries)}: 5</span><span>2,55 m</span></div></div></div></header>` +
     `<section class="section"><div class="container"><div class="kpi-row"><div class="kpi"><b>8</b><span>${esc(cfg.nav.models)}</span></div><div class="kpi"><b>${eur(entry, cfg.htmlLang)}</b><span>${esc(cfg.labels.updated)} ${UPDATED}</span></div><div class="kpi"><b>5</b><span>${esc(cfg.labels.countries)}</span></div><div class="kpi"><b>${delivery?.eur ? eur(delivery.eur, cfg.htmlLang) : "—"}</b><span>${esc(cfg.countryNames[cfg.market])}</span></div></div>` +
     `<div class="section-header"><div><div class="eyebrow">MODUNERA</div><h2>${esc(cfg.sections.whyTitle)}</h2></div><p>${esc(cfg.sections.whyIntro)}</p></div>` +
     `<div class="adv-grid">${cfg.sections.usp.map(([t, d], i) => `<div class="adv-card"><span class="num">${String(i + 1).padStart(2, "0")}</span><h3>${esc(t)}</h3><p>${esc(d)}</p></div>`).join("")}</div>` +

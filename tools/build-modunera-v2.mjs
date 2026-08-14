@@ -1254,16 +1254,27 @@ function heroSlides(root) {
   return `<div class="hero-slides" aria-hidden="true">${imgs}</div>`;
 }
 
-/* Puts the slideshow inside the existing .hero-media wrapper on both home pages.
-   Idempotent: it only fills the wrapper when it is still empty. */
+/* Puts the slideshow inside the .hero-media wrapper on all five home pages.
+   It replaces an existing block rather than skipping it: the German page was
+   carrying the first version of this markup, from before the 3:4 phone crop was
+   added, and skipping meant it never picked the crop up. Rewriting produces
+   identical bytes on the second run, so the pipeline stays idempotent. */
 async function insertHeroSlides() {
   let added = 0;
-  for (const rel of ["index.html", "en/index.html"]) {
+  for (const rel of ["index.html", "en/index.html", "nl/index.html", "da/index.html", "fr/index.html"]) {
     const file = join(ROOT, rel);
     const html = await readFile(file, "utf8");
-    if (html.includes('class="hero-slides"')) continue;
-    if (!html.includes('<div class="hero-media"></div>')) throw new Error(`hero-media wrapper missing in ${rel}`);
-    const next = html.replace('<div class="hero-media"></div>', `<div class="hero-media">${heroSlides(rootFor(rel))}</div>`);
+    const wanted = `<div class="hero-media">${heroSlides(rootFor(rel))}</div>`;
+    const current = html.match(/<div class="hero-media">[\s\S]*?<\/div><div class="hero-grain">/);
+    let next;
+    if (current) {
+      next = html.replace(current[0], `${wanted}<div class="hero-grain">`);
+    } else if (html.includes('<div class="hero-media"></div>')) {
+      next = html.replace('<div class="hero-media"></div>', wanted);
+    } else {
+      throw new Error(`hero-media wrapper missing in ${rel}`);
+    }
+    if (next === html) continue;
     await writeFile(file, next, "utf8");
     added += 1;
   }
