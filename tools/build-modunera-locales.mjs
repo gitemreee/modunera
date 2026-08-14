@@ -182,7 +182,7 @@ function countriesIndex(cfg, locales) {
     head({ file, cfg, title: `${cfg.labels.countries} | MODUNERA`, description: cfg.home.description, image: "hero-forest.webp", pageKey: "countries", locales,
       schema: [{ "@context": "https://schema.org", "@type": "CollectionPage", name: cfg.labels.countries, url: canonicalFor(file) }] }) +
     chrome(root, cfg) +
-    `<main id="main"><section class="page-hero"><div class="container"><div class="eyebrow">MODUNERA</div><h1>${esc(cfg.labels.countries)}</h1><p>${esc(cfg.sections.whyIntro)}</p></div></section>` +
+    `<main id="main"><section class="page-hero"><div class="container"><div class="eyebrow">MODUNERA</div><h1>Tiny House ${esc(cfg.labels.countries)}</h1><p>${esc(cfg.sections.whyIntro)}</p></div></section>` +
     `<section class="section"><div class="container"><div class="state-grid">${CODES.map((code) => `<a class="state-card" href="${root}${cfg.code}/${cfg.paths.countries}/${cfg.countrySlugs[code]}/"><span>MODUNERA</span><h3>${esc(cfg.countryNames[code])}</h3><p>${esc(COUNTRY_COPY[cfg.code][code][1].slice(0, 90))}…</p></a>`).join("")}</div><p class="legal-note" style="margin-top:22px">${esc(cfg.sections.legalNote)}</p></div></section></main>` +
     footer(root, cfg)
   );
@@ -203,7 +203,7 @@ function countryPage(cfg, code, locales, pricing) {
       : cfg.faq[2][1]],
   ];
   return (
-    head({ file, cfg, title: `Tiny House ${name} | MODUNERA`, description: `${legal.slice(0, 150)}`, image: "mc6-exterior.webp", pageKey: "country", args: { country: code }, locales,
+    head({ file, cfg, title: `Tiny House ${name} | MODUNERA`, description: `Tiny House ${name}: ${legal.slice(0, 130)}`, image: "mc6-exterior.webp", pageKey: "country", args: { country: code }, locales,
       schema: [faqSchema(faqs), { "@context": "https://schema.org", "@type": "WebPage", name: `Tiny House ${name}`, url: canonicalFor(file), inLanguage: cfg.htmlLang }] }) +
     chrome(root, cfg) +
     `<main id="main"><section class="page-hero"><div class="container"><div class="breadcrumbs">MODUNERA · ${esc(cfg.labels.countries)} · ${esc(name)}</div><div class="eyebrow">${esc(name)}</div><h1>Tiny House ${esc(name)}</h1><p>${esc(climate)}</p></div></section>` +
@@ -216,14 +216,33 @@ function countryPage(cfg, code, locales, pricing) {
   );
 }
 
+/* The other-structures pages sell modules, steel, bungalows and furniture, so
+   their own words never mention the core product. German and English already
+   close the description by naming it; these three locales now do the same. */
+const SERVICE_NOTE = {
+  nl: "Tiny houses blijven ons kernproduct; aanvraag en eerste beoordeling direct via WhatsApp.",
+  da: "Tiny houses er fortsat vores kerneprodukt; forespørgsel og indledende vurdering direkte via WhatsApp.",
+  fr: "Les tiny houses restent notre produit principal ; demande et première évaluation directement via WhatsApp.",
+};
+const SERVICES_H1 = {
+  nl: "Meer dan het tiny house: overige bouw.",
+  da: "Mere end tiny house: andet byggeri.",
+  fr: "Au-delà de la tiny house : autres constructions.",
+};
+const SERVICES_INTRO = {
+  nl: "MODUNERA-capaciteiten naast tiny houses:",
+  da: "MODUNERA-kompetencer ved siden af tiny houses:",
+  fr: "Les savoir-faire MODUNERA à côté des tiny houses :",
+};
+
 function servicesIndex(cfg, locales) {
   const file = `${cfg.code}/${cfg.paths.services}/index.html`;
   const root = rootFor(file);
   return (
-    head({ file, cfg, title: `${cfg.labels.services} | MODUNERA`, description: cfg.sections.whyIntro, image: "mc3-exterior.webp", pageKey: "services", locales,
+    head({ file, cfg, title: `${cfg.labels.services} | MODUNERA`, description: `${SERVICES_INTRO[cfg.code]} ${cfg.sections.whyIntro}`, image: "mc3-exterior.webp", pageKey: "services", locales,
       schema: [{ "@context": "https://schema.org", "@type": "CollectionPage", name: cfg.labels.services, url: canonicalFor(file) }] }) +
     chrome(root, cfg) +
-    `<main id="main"><section class="page-hero"><div class="container"><div class="eyebrow">MODUNERA</div><h1>${esc(cfg.labels.services)}</h1><p>${esc(cfg.sections.whyIntro)}</p></div></section>` +
+    `<main id="main"><section class="page-hero"><div class="container"><div class="eyebrow">MODUNERA</div><h1>${esc(SERVICES_H1[cfg.code])}</h1><p>${esc(cfg.sections.whyIntro)}</p></div></section>` +
     `<section class="section"><div class="container"><div class="journey-grid">${SERVICE_KEYS.map((k, i) => `<a class="journey-card" href="${root}${cfg.code}/${cfg.paths.services}/${cfg.serviceSlugs[k]}/"><div><span class="num">0${i + 1}</span><h3>${esc(cfg.serviceNames[k])}</h3><p>${esc(SERVICE_COPY[cfg.code][k])}</p></div><span class="arrow">↗</span></a>`).join("")}</div></div></section></main>` +
     footer(root, cfg)
   );
@@ -235,7 +254,7 @@ function servicePage(cfg, key, locales) {
   const name = cfg.serviceNames[key];
   const copy = SERVICE_COPY[cfg.code][key];
   return (
-    head({ file, cfg, title: `${name} | MODUNERA`, description: copy, image: "mc5-exterior.webp", pageKey: "service", args: { service: key }, locales,
+    head({ file, cfg, title: `${name} | MODUNERA`, description: `${copy} ${SERVICE_NOTE[cfg.code]}`, image: "mc5-exterior.webp", pageKey: "service", args: { service: key }, locales,
       schema: [{ "@context": "https://schema.org", "@type": "Service", name, description: copy, provider: { "@type": "Organization", name: "MODUNERA" }, areaServed: CODES }] }) +
     chrome(root, cfg) +
     `<main id="main"><section class="page-hero"><div class="container"><div class="breadcrumbs">MODUNERA · ${esc(cfg.labels.services)}</div><div class="eyebrow">${esc(cfg.labels.services)}</div><h1>${esc(name)}</h1><p>${esc(copy)}</p><div class="hero-actions"><a class="btn btn-primary" href="${waLink(cfg.wa)}" target="_blank" rel="noopener">WhatsApp</a></div></div></section>` +
@@ -251,7 +270,7 @@ function faqPage(cfg, locales) {
   return (
     head({ file, cfg, title: `${cfg.labels.faq} | MODUNERA`, description: cfg.home.description, image: "interior-feature.webp", pageKey: "faq", locales, schema: [faqSchema(all)] }) +
     chrome(root, cfg) +
-    `<main id="main"><section class="page-hero"><div class="container"><div class="eyebrow">MODUNERA</div><h1>${esc(cfg.labels.faq)}</h1><p>${esc(cfg.sections.whyIntro)}</p></div></section>` +
+    `<main id="main"><section class="page-hero"><div class="container"><div class="eyebrow">MODUNERA</div><h1>Tiny House FAQ: ${esc(cfg.labels.faq)}</h1><p>${esc(cfg.sections.whyIntro)}</p></div></section>` +
     `<section class="section"><div class="container"><div class="faq-list">${faqMarkup(all)}</div><p class="legal-note" style="margin-top:22px">${esc(cfg.sections.legalNote)}</p></div></section></main>` +
     footer(root, cfg)
   );

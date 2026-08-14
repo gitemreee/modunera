@@ -9,8 +9,13 @@
   const progress=qs('.scroll-progress');
   const onScroll=()=>{if(progress){const d=document.documentElement;const max=d.scrollHeight-d.clientHeight;progress.style.width=(max?d.scrollTop/max*100:0)+'%'}const hm=qs('.hero-media');if(hm&&!matchMedia('(prefers-reduced-motion: reduce)').matches)hm.style.transform=`scale(1.04) translateY(${scrollY*.025}px)`};
   addEventListener('scroll',onScroll,{passive:true});onScroll();
-  const toggle=qs('.mobile-toggle'),links=qs('.nav-links');if(toggle&&links)toggle.onclick=()=>links.classList.toggle('open');
-  qsa('.nav-dropdown>button').forEach(b=>b.onclick=()=>b.parentElement.classList.toggle('open'));
+  // one panel at a time: opening a section closes whatever else was open, and so
+  // does closing the drawer or clicking anywhere outside the navigation
+  const toggle=qs('.mobile-toggle'),links=qs('.nav-links');
+  const shutPanels=(keep)=>qsa('.nav-dropdown.open').forEach(d=>{if(d!==keep)d.classList.remove('open')});
+  if(toggle&&links)toggle.onclick=()=>{if(!links.classList.toggle('open'))shutPanels()};
+  qsa('.nav-dropdown>button').forEach(b=>b.onclick=()=>{const d=b.parentElement,was=d.classList.contains('open');shutPanels(d);d.classList.toggle('open',!was)});
+  document.addEventListener('click',e=>{if(!e.target.closest('.nav-dropdown'))shutPanels()});
   qsa('.faq-question').forEach(b=>b.addEventListener('click',()=>b.closest('.faq-item').classList.toggle('open')));
   qsa('[data-year]').forEach(x=>x.textContent=new Date().getFullYear());
 

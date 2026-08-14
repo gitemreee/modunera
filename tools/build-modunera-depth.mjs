@@ -107,6 +107,21 @@ const COUNTRY_ORDER = ["DE", "NL", "DK", "LU", "CH"];
    <nav class="nav">…</nav> on the tree with the header for that page's language,
    so writing one here would only be overwritten. The hreflang set is written for
    real, because v2 reads it back to build the language picker's targets. */
+/* "Tiny House" is the search term in all five markets — German buyers type the
+   English words too — so it is the product word everywhere, capitalised as a
+   product category. MODEL_EYEBROW replaces the label that used to be repeated
+   directly above the same words in the h1. */
+const TERM = "Tiny House";
+const TERM_RE = /tiny[\s-]*house/i;
+const snippet = (h1, lead) => {
+  const text = TERM_RE.test(lead.slice(0, 158)) ? lead : `${h1} ${lead}`;
+  return text.length > 155 ? text.slice(0, 155).trimEnd() + "…" : text;
+};
+const MODEL_EYEBROW = {
+  de: "Tiny House Modell", en: "Tiny house model", nl: "Tiny house model",
+  da: "Tiny house-model", fr: "Modèle tiny house",
+};
+
 const UI = {
   de: {
     skip: "Zum Inhalt springen", home: "Startseite", breadHome: "Startseite",
@@ -286,7 +301,9 @@ function modelPage(lang, n) {
   const heroImage = `assets/images/gallery/${images[0]}.webp`;
 
   const title = `${model} – ${copy.label} | MODUNERA Tiny House`;
-  const description = copy.lead.length > 155 ? copy.lead.slice(0, 152).trimEnd() + "…" : copy.lead;
+  const leadHasTerm = /tiny[\s-]*house/i.test(copy.lead);
+  const rawDescription = leadHasTerm ? copy.lead : `${model} ${TERM} – ${copy.lead}`;
+  const description = rawDescription.length > 155 ? rawDescription.slice(0, 152).trimEnd() + "…" : rawDescription;
 
   const productLd = {
     "@context": "https://schema.org",
@@ -347,7 +364,7 @@ function modelPage(lang, n) {
   /* .model-hero, which the package's own model pages used, has no CSS at all — the
      image was simply laid out at its natural size and pushed the heading below the
      fold. .article-visual-hero is the styled equivalent the blog already uses. */
-  const body = `<main id="main"><header class="article-visual-hero"><img src="${root}${heroImage}" alt="MODUNERA ${model} ${esc(copy.label)}"><div class="article-visual-overlay"></div><div class="container"><div class="breadcrumbs"><a href="${root}${p.home}">${esc(u.breadHome)}</a> · <a href="${root}${p.models}/">${esc(trail[1][0])}</a> · ${model}</div><div class="model-label">${esc(copy.label)}</div><h1>${model} · ${esc(copy.label)}</h1><p>${esc(copy.lead)}</p><div class="hero-actions"><a class="btn btn-primary" href="${root}konfigurator/?model=mc${n}">${esc(u.configure)}</a><a class="btn btn-light" href="${waLink(waMsg)}" target="_blank" rel="noopener">WhatsApp</a></div></div></header>
+  const body = `<main id="main"><header class="article-visual-hero"><img src="${root}${heroImage}" alt="MODUNERA ${model} ${esc(copy.label)}"><div class="article-visual-overlay"></div><div class="container"><div class="breadcrumbs"><a href="${root}${p.home}">${esc(u.breadHome)}</a> · <a href="${root}${p.models}/">${esc(trail[1][0])}</a> · ${model}</div><div class="model-label">${esc(MODEL_EYEBROW[lang])}</div><h1>${model} ${TERM} · ${esc(copy.label)}</h1><p>${esc(copy.lead)}</p><div class="hero-actions"><a class="btn btn-primary" href="${root}konfigurator/?model=mc${n}">${esc(u.configure)}</a><a class="btn btn-light" href="${waLink(waMsg)}" target="_blank" rel="noopener">WhatsApp</a></div></div></header>
 
 <section class="section"><div class="container">${sectionHeader(d.glance.eyebrow, fill(d.glance.h2, vars), esc(copy.lead))}<div class="spec-grid">${specCards
     .map(([label, value]) => `<div class="spec"><span class="blog-meta">${esc(label)}</span><strong>${esc(value)}</strong></div>`)
@@ -405,11 +422,11 @@ function modelIndexPage(lang) {
   const u = UI[lang];
   const d = DEPTH[lang];
   const heading = {
-    de: ["Alle Modelle", "MD 1 bis MD 8.", "Acht Grundrisse auf derselben technischen Basis. Der Unterschied liegt in Länge, Aufteilung und Ausstattungstiefe – nicht in der Bauweise."],
-    en: ["All models", "MD 1 to MD 8.", "Eight plans on one technical basis. What differs is length, layout and specification depth — not the way they are built."],
-    nl: ["Alle modellen", "MD 1 tot en met MD 8.", "Acht plattegronden op dezelfde technische basis. Het verschil zit in lengte, indeling en afwerkingsdiepte — niet in de bouwwijze."],
-    da: ["Alle modeller", "MD 1 til MD 8.", "Otte planer på samme tekniske grundlag. Forskellen ligger i længde, disponering og udstyrsdybde — ikke i byggemåden."],
-    fr: ["Tous les modèles", "MD 1 à MD 8.", "Huit plans sur une même base technique. La différence tient à la longueur, à la distribution et à la profondeur d'équipement — pas au mode constructif."],
+    de: ["Alle Modelle", "Acht Tiny Houses: MD 1 bis MD 8.", "Acht Tiny-House-Grundrisse auf derselben technischen Basis. Der Unterschied liegt in Länge, Aufteilung und Ausstattungstiefe – nicht in der Bauweise."],
+    en: ["All models", "Eight tiny houses: MD 1 to MD 8.", "Eight tiny house plans on one technical basis. What differs is length, layout and specification depth — not the way they are built."],
+    nl: ["Alle modellen", "Acht tiny houses: MD 1 tot en met MD 8.", "Acht tiny house-plattegronden op dezelfde technische basis. Het verschil zit in lengte, indeling en afwerkingsdiepte — niet in de bouwwijze."],
+    da: ["Alle modeller", "Otte tiny houses: MD 1 til MD 8.", "Otte tiny house-planer på samme tekniske grundlag. Forskellen ligger i længde, disponering og udstyrsdybde — ikke i byggemåden."],
+    fr: ["Tous les modèles", "Huit tiny houses : MD 1 à MD 8.", "Huit plans de tiny house sur une même base technique. La différence tient à la longueur, à la distribution et à la profondeur d'équipement — pas au mode constructif."],
   }[lang];
 
   const cards = Array.from({ length: 8 }, (_, i) => {
@@ -918,7 +935,7 @@ ${guides ? `<section class="section section-soft"><div class="container">${secti
     lang,
     rel,
     title: `${cat.name} – tiny house guide | MODUNERA`,
-    description: cat.lead.slice(0, 158),
+    description: snippet(cat.h1, cat.lead),
     alternates: { en: rel, de: "ratgeber/index.html" },
     image: "assets/images/gallery/interior-feature.webp",
     extraLd: [articleLd, faqLd(cat.faq), breadcrumbLd(trail)],
@@ -957,7 +974,7 @@ function enBlogHubPage() {
     lang,
     rel,
     title: h.title,
-    description: h.lead.slice(0, 158),
+    description: snippet(h.h1, h.lead),
     alternates: { en: rel, de: "blog/index.html" },
     image: "assets/images/gallery/interior-feature.webp",
     extraLd: [collection, breadcrumbLd(trail)],
@@ -1036,7 +1053,7 @@ function localeGuidesPage(lang) {
     lang,
     rel,
     title: `${label} – MODUNERA`,
-    description: g.lead.slice(0, 158),
+    description: snippet(g.h1, g.lead),
     alternates: { [lang]: rel, de: "ratgeber/index.html", en: "en/blog/index.html" },
     image: "assets/images/gallery/interior-feature.webp",
     extraLd: [articleLd, breadcrumbLd(trail)],
@@ -1380,16 +1397,91 @@ async function buildHomeModels() {
    Both phases are idempotent. */
 const extendOnly = process.argv.includes("--extend");
 
+/* --- the product word, on every page ------------------------------------- */
+
+/* Buyers in all five markets search the English words — Germans type "Tiny House"
+   more often than any translation — so the term belongs in the tab title and the
+   search result of every page, not only on the pages that happen to mention it in
+   their headline. This runs last in the pipeline, after every generator, and only
+   touches a title that does not already carry the term. The Google verification
+   file and the local-only demo shells are left alone: they are not indexed pages.
+   Re-running finds nothing to do, which is what keeps the pipeline idempotent. */
+const TITLE_TERM_SKIP = /^(google[0-9a-f]+\.html|admin-demo\/|customer-portal\/|booking\/|saved-designs\/)/;
+
+/* The shared walk() skips downloads/ because it holds the PDF library, but the
+   one index page in there is a normal indexed page and needs the same treatment. */
+async function walkPages(directory, files = []) {
+  for (const entry of await readdir(directory, { withFileTypes: true })) {
+    if (entry.isDirectory() && [".git", ".github", "node_modules", "assets"].includes(entry.name)) continue;
+    const full = join(directory, entry.name);
+    if (entry.isDirectory()) await walkPages(full, files);
+    else if (extname(full) === ".html") files.push(full);
+  }
+  return files;
+}
+
+/* Pages whose subject is the product. A privacy policy or an imprint is left
+   alone: forcing the product word into those descriptions would be noise, and
+   their titles already carry it. */
+const TERM_CONTENT = /^(blog\/|ratgeber\/|en\/blog\/|en\/guides\/|fragen\/|faq\/|standorte\/|laender\/|leistungen\/|katalog\/|modelle\/|projects\/|factory\/|qualitaet\/|nachhaltigkeit\/|tiny-house-|(de|en|nl|da|fr)\/)/;
+const DESC_PREFIX = { de: "Tiny House", en: "Tiny house", nl: "Tiny house", da: "Tiny house", fr: "Tiny house" };
+
+async function normaliseTitles() {
+  const files = await walkPages(ROOT);
+  let changed = 0;
+  for (const full of files) {
+    const rel = relative(ROOT, full).replace(/\\/g, "/");
+    if (TITLE_TERM_SKIP.test(rel)) continue;
+    const html = await readFile(full, "utf8");
+    const match = html.match(/<title>([\s\S]*?)<\/title>/i);
+    if (!match) continue;
+    let updated = html;
+    // the meta description, on pages whose subject is the product
+    const desc = html.match(/<meta name="description" content="([^"]*)">/i);
+    if (desc && TERM_CONTENT.test(rel) && !TERM_RE.test(desc[1]) && desc[1].trim()) {
+      const lang = (html.match(/<html lang="([a-z]{2})/i) ?? [, "de"])[1].toLowerCase();
+      const led = `${DESC_PREFIX[lang] ?? DESC_PREFIX.de}: ${desc[1]}`;
+      const trimmed = led.length > 158 ? led.slice(0, 155).trimEnd() + "…" : led;
+      updated = updated.split(`content="${desc[1]}"`).join(`content="${trimmed}"`);
+    }
+    const title = match[1];
+    if (TERM_RE.test(title)) {
+      if (updated !== html) { await writeFile(full, updated, "utf8"); changed += 1; }
+      continue;
+    }
+    // the site already ends most titles in "| MODUNERA"; extend that suffix rather
+    // than bolting a second brand on, so the pattern stays the one MD 1 – MD 8 use
+    const next = /\|\s*MODUNERA\s*$/.test(title)
+      ? title.replace(/\|\s*MODUNERA\s*$/, `| MODUNERA ${TERM}`)
+      : /MODUNERA/.test(title)
+        ? `${title.trimEnd()} | ${TERM}`
+        : `${title.trimEnd()} | MODUNERA ${TERM}`;
+    if (next === title) {
+      if (updated !== html) { await writeFile(full, updated, "utf8"); changed += 1; }
+      continue;
+    }
+    // og:title mirrors the title wherever it is set, so move the two together
+    updated = updated
+      .replace(match[0], `<title>${next}</title>`)
+      .replace(`<meta property="og:title" content="${title}">`, `<meta property="og:title" content="${next}">`);
+    await writeFile(full, updated, "utf8");
+    changed += 1;
+  }
+  return changed;
+}
+
 if (extendOnly) {
   const rewritten = await rewriteArticles();
   const homes = await buildHomeModels();
   const countries = await extendCountryPages();
   const articles = await extendArticles();
+  const titles = await normaliseTitles();
   console.log(`depth layer (extend):
   ${rewritten.changed} blog posts rewritten from per-topic material (${rewritten.skipped} left alone)
   ${homes} home pages given the eight-model grid
   ${countries} country pages extended with their question set
-  ${articles} library pages extended with the five-market appendix`);
+  ${articles} library pages extended with the five-market appendix
+  ${titles} titles given the product word`);
 } else {
   const models = await buildModelPages();
   const questions = await buildQuestionPages();

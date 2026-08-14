@@ -146,24 +146,32 @@ const MENU = {
         ["leistungen/bungalows/", "Bungalows", "Ebenerdige Einheiten"],
         ["leistungen/moebel-nach-mass/", "Möbel nach Maß", "Küchen und Einbauten"],
       ]},
-      { label: "Ratgeber & Blog", cols: [
-        ["Ratgeber nach Thema", [
-          ["ratgeber/", "Ratgeber-Hub", "Alle Beiträge in 9 Kategorien"],
-          ["ratgeber/genehmigung-und-recht/", "Genehmigung & Recht", "Bauantrag, Stellplatz, Versicherung"],
-          ["ratgeber/kosten-und-finanzierung/", "Kosten & Finanzierung", "Preise, Kauf, Rendite"],
-          ["ratgeber/technik-und-konstruktion/", "Technik & Konstruktion", "Rahmen, Dämmung, Haustechnik"],
-          ["ratgeber/energie-und-autarkie/", "Energie & Autarkie", "Solar, Speicher, Heizung"],
-          ["ratgeber/transport-und-import/", "Transport & Import", "Route, Zoll, Entladung"],
-          ["ratgeber/nutzung-und-geschaeftsmodell/", "Nutzung & Geschäftsmodell", "Vermietung, Glamping, Rendite"],
-        ]],
-        ["Blog und Antworten", [
-          ["blog/", "Blog", "Alle Beiträge chronologisch"],
-          ["blog/europa/", "Europa-Guides", "Recht, Transport, Vergleich"],
-          ["fragen/", "Länderfragen", "Antworten je Zielmarkt"],
-          ["faq/", "FAQ", "160 Antworten"],
-          ["faq/europa/", "Europa-FAQ", "Genehmigung, Zoll, Lieferung"],
-          ["downloads/", "Dokumente", "Pläne und technische Daten"],
-        ]],
+      { label: "Ratgeber", menu: [
+        ["ratgeber/", "Ratgeber-Hub", "Alle Beiträge in 9 Kategorien"],
+        ["ratgeber/genehmigung-und-recht/", "Genehmigung & Recht", "Bauantrag, Stellplatz, Versicherung"],
+        ["ratgeber/kosten-und-finanzierung/", "Kosten & Finanzierung", "Preise, Kauf, Rendite"],
+        ["ratgeber/technik-und-konstruktion/", "Technik & Konstruktion", "Rahmen, Dämmung, Haustechnik"],
+        ["ratgeber/energie-und-autarkie/", "Energie & Autarkie", "Solar, Speicher, Heizung"],
+        ["ratgeber/grundriss-und-innenraum/", "Grundriss & Innenraum", "Zonen, Stauraum, Licht"],
+        ["ratgeber/transport-und-import/", "Transport & Import", "Route, Zoll, Entladung"],
+        ["ratgeber/nutzung-und-geschaeftsmodell/", "Nutzung & Geschäftsmodell", "Vermietung, Glamping, Rendite"],
+        ["ratgeber/vergleich-und-alternativen/", "Vergleich & Alternativen", "Tiny House gegen Alternativen"],
+      ]},
+      { label: "Blog", menu: [
+        ["blog/", "Alle Beiträge", "Tiny-House-Blog, neueste zuerst"],
+        ["blog/europa/", "Europa-Guides", "Recht, Transport, Vergleich"],
+        ["blog/tiny-house-genehmigung-deutschland/", "Genehmigung in Deutschland", "Bauantrag und Stellplatz"],
+        ["blog/tiny-house-preise-kosten/", "Preise & Kosten", "Was ein Projekt wirklich kostet"],
+        ["blog/tiny-house-auf-raedern/", "Tiny House auf Rädern", "Zulassung und Transport"],
+        ["blog/tiny-house-vier-jahreszeiten/", "Vier Jahreszeiten", "Dämmung, Heizung, Feuchte"],
+      ]},
+      { label: "FAQ", menu: [
+        ["faq/", "Alle Fragen", "160 Antworten zum Tiny House"],
+        ["faq/europa/", "Europa-FAQ", "Genehmigung, Zoll, Lieferung"],
+        ["fragen/", "Länderfragen", "Antworten je Zielmarkt"],
+        ["fragen/deutschland/", "Fragen Deutschland", "20 Antworten"],
+        ["fragen/niederlande/", "Fragen Niederlande", "20 Antworten"],
+        ["fragen/schweiz/", "Fragen Schweiz", "20 Antworten"],
       ]},
       { label: "Unternehmen", menu: [
         ["factory/", "Produktion", "Vom Stahl bis zur Übergabe"],
@@ -171,6 +179,7 @@ const MENU = {
         ["qualitaet/", "Material & Qualität", "Aufbau und Nachweise"],
         ["nachhaltigkeit/", "Nachhaltigkeit", "Ressourcen und Betrieb"],
         ["standorte/", "Standorte", "7.000+ lokale Seiten"],
+        ["downloads/", "Dokumente", "Pläne und technische Daten"],
         ["tools/", "Planungstools", "Vergleich, Lieferung, Grundstück"],
       ]},
       { label: "Kontakt", href: "kontakt/" },
@@ -213,23 +222,30 @@ const MENU = {
         ["en/services/bungalows/", "Bungalows", "Single-level units"],
         ["en/services/bespoke-furniture/", "Bespoke furniture", "Kitchens and built-ins"],
       ]},
-      { label: "Knowledge", cols: [
-        ["Guides", [
-          ["en/guides/", "Guide hub", "Permits, transport, comparison"],
-          ["en/guides/tiny-house-germany-permits/", "Germany permits", "Bauantrag and site rules"],
-          ["en/guides/tiny-house-netherlands-permits/", "Netherlands permits", "Omgevingswet and Omgevingsloket"],
-          ["en/guides/tiny-house-denmark-permits/", "Denmark permits", "Kommune and byggetilladelse"],
-          ["en/guides/total-budget-tiny-house-europe/", "Total budget", "What a project really costs"],
-          ["en/guides/customs-import-turkiye-europe/", "Customs and import", "A.TR, EUR.1, VAT"],
-        ]],
-        ["Blog and answers", [
-          ["en/blog/", "Blog", "Every article, newest first"],
-          ["en/blog/permits-and-law/", "Permits and law", "Planning, siting, insurance"],
-          ["en/blog/costs-and-financing/", "Costs and financing", "Prices, purchase, return"],
-          ["en/blog/technology-and-construction/", "Technology and construction", "Frame, insulation, systems"],
-          ["en/faq/", "FAQ", "Permits, customs, delivery"],
-          ["en/questions/", "Country questions", "Asked and answered per market"],
-        ]],
+      { label: "Guides", menu: [
+        ["en/guides/", "Guide hub", "Permits, transport, comparison"],
+        ["en/guides/tiny-house-germany-permits/", "Germany permits", "Bauantrag and site rules"],
+        ["en/guides/tiny-house-netherlands-permits/", "Netherlands permits", "Omgevingswet and Omgevingsloket"],
+        ["en/guides/tiny-house-denmark-permits/", "Denmark permits", "Kommune and byggetilladelse"],
+        ["en/guides/tiny-house-switzerland-permits/", "Switzerland permits", "Cantonal approval"],
+        ["en/guides/total-budget-tiny-house-europe/", "Total budget", "What a project really costs"],
+        ["en/guides/customs-import-turkiye-europe/", "Customs and import", "A.TR, EUR.1, VAT"],
+        ["en/guides/tiny-house-transport-turkiye-europe/", "Transport", "Route, permits, unloading"],
+      ]},
+      { label: "Blog", menu: [
+        ["en/blog/", "All articles", "The tiny house blog, newest first"],
+        ["en/blog/permits-and-law/", "Permits and law", "Planning, siting, insurance"],
+        ["en/blog/costs-and-financing/", "Costs and financing", "Prices, purchase, return"],
+        ["en/blog/technology-and-construction/", "Technology and construction", "Frame, insulation, systems"],
+        ["en/blog/energy-and-off-grid/", "Energy and off-grid", "Solar, storage, heating"],
+        ["en/blog/layout-and-interior/", "Layout and interior", "Zones, storage, light"],
+      ]},
+      { label: "FAQ", menu: [
+        ["en/faq/", "All questions", "Tiny house permits, customs, delivery"],
+        ["en/questions/", "Country questions", "Asked and answered per market"],
+        ["en/questions/germany/", "Germany questions", "20 answers"],
+        ["en/questions/netherlands/", "Netherlands questions", "20 answers"],
+        ["en/questions/switzerland/", "Switzerland questions", "20 answers"],
       ]},
       { label: "Contact", href: "kontakt/" },
     ],
@@ -274,10 +290,18 @@ for (const [code, cfg] of Object.entries(LOCALE_DEFS)) {
         [`${code}/${p.services}/`, cfg.labels.services, "MODUNERA"],
         ...Object.keys(cfg.serviceSlugs).map((k) => [`${code}/${p.services}/${cfg.serviceSlugs[k]}/`, cfg.serviceNames[k], "MODUNERA"]),
       ]},
+      // nl, da and fr carry guides and an FAQ but no blog of their own, so the
+      // split the German and English menus get is two items here, not three
       { label: cfg.nav.guides, menu: [
-        [`${code}/${p.guides}/`, cfg.labels.guides, "MODUNERA"],
-        [`${code}/${p.questions}/`, cfg.labels.questions ?? cfg.labels.faq, "MODUNERA"],
-        [`${code}/${p.faq}/`, cfg.labels.faq, "MODUNERA"],
+        [`${code}/${p.guides}/`, cfg.labels.guides, "Tiny House"],
+        [`${code}/${p.countries}/`, cfg.labels.countries, "Tiny House"],
+        [`${code}/${p.models}/`, cfg.labels.allModels ?? cfg.nav.models, "MD 1 – MD 8"],
+      ]},
+      // "FAQ" rather than the spelled-out label: the long forms — Veelgestelde
+      // vragen, Ofte stillede spørgsmål, Questions fréquentes — do not fit a bar
+      { label: "FAQ", menu: [
+        [`${code}/${p.faq}/`, cfg.labels.faq, "Tiny House"],
+        [`${code}/${p.questions}/`, cfg.labels.questions ?? cfg.labels.faq, "Tiny House"],
       ]},
       { label: cfg.nav.contact, href: "kontakt/" },
     ],
@@ -508,7 +532,7 @@ function modelComparisonPage(pricing, lang) {
       ],
     }) +
     chrome(root, lang) +
-    `<main id="main"><section class="page-hero"><div class="container"><div class="breadcrumbs">${de ? "MODUNERA · Modelle" : "MODUNERA · Models"}</div><div class="eyebrow">${de ? "Acht Ausgangsmodelle" : "Eight base models"}</div><h1>${de ? "MD 1 bis MD 8 im direkten Vergleich." : "MD 1 to MD 8 side by side."}</h1><p>${de ? "Alle Modelle teilen Stahlrahmen, Bauweise und Ausstattungslinien. Der Unterschied liegt im Grundriss und in der Nutzung, für die das Modell ausgelegt ist." : "Every model shares the steel frame, the construction method and the specification lines. What differs is the layout and the use the model is designed for."}</p></div></section>` +
+    `<main id="main"><section class="page-hero"><div class="container"><div class="breadcrumbs">${de ? "MODUNERA · Modelle" : "MODUNERA · Models"}</div><div class="eyebrow">${de ? "Acht Ausgangsmodelle" : "Eight base models"}</div><h1>${de ? "Acht Tiny Houses im direkten Vergleich." : "Eight tiny houses side by side."}</h1><p>${de ? "Alle Modelle teilen Stahlrahmen, Bauweise und Ausstattungslinien. Der Unterschied liegt im Grundriss und in der Nutzung, für die das Modell ausgelegt ist." : "Every model shares the steel frame, the construction method and the specification lines. What differs is the layout and the use the model is designed for."}</p></div></section>` +
     `<section class="section"><div class="container"><div class="kpi-row"><div class="kpi"><b>8</b><span>${de ? "Ausgangsmodelle" : "Base models"}</span></div><div class="kpi"><b>8–9,70 m</b><span>${de ? "Längenoptionen" : "Length options"}</span></div><div class="kpi"><b>2,55 m</b><span>${de ? "Mobile Breite" : "Mobile width"}</span></div><div class="kpi"><b>${eur(cheapest, lang)}</b><span>${de ? "Einstieg ab Werk" : "Entry, ex works"}</span></div></div>` +
     `<div class="compare"><table><thead><tr><th>${de ? "Modell" : "Model"}</th><th>${de ? "Länge" : "Length"}</th><th>${de ? "Grundriss" : "Layout"}</th><th>${de ? "Ausrichtung" : "Focus"}</th><th>${de ? "Typische Nutzung" : "Typical use"}</th><th>${de ? "Preisindikation" : "Price indication"}</th></tr></thead><tbody>${rows}</tbody></table></div>` +
     `<div class="answer-box"><strong>${de ? "Was der Preis nicht enthält" : "What the price excludes"}</strong><p>${de ? "Die Indikation gilt ab Werk in Basisausstattung. Transport, Kran, Fundament, Anschlüsse, Zoll, Einfuhrumsatzsteuer und lokale Leistungen kommen projektbezogen hinzu. Der Preisvergleich je Zielland zeigt die Logistikseite." : "The indication is ex works in base specification. Transport, crane, foundation, connections, customs, import VAT and local works are added per project. The country price comparison covers the logistics side."}</p></div>` +
@@ -791,7 +815,7 @@ function guideCategoryPage(category, posts) {
     head({
       file, lang: "de",
       title: `${category.title}: ${posts.length} Tiny-House-Beiträge | MODUNERA`,
-      description: category.intro,
+      description: `Tiny House ${category.title}: ${category.intro}`.slice(0, 158),
       image: "hero-forest.webp",
       alternateDe: `${BASE}ratgeber/${category.slug}/`, alternateEn: BASE + "en/guides/",
       schema: [
@@ -802,7 +826,7 @@ function guideCategoryPage(category, posts) {
       ],
     }) +
     chrome(root, "de") +
-    `<main id="main"><section class="page-hero"><div class="container"><div class="breadcrumbs">MODUNERA · Ratgeber · ${esc(category.title)}</div><div class="eyebrow">${posts.length} Beiträge</div><h1>${esc(category.title)}</h1><p>${esc(category.intro)}</p></div></section>` +
+    `<main id="main"><section class="page-hero"><div class="container"><div class="breadcrumbs">MODUNERA · Ratgeber · ${esc(category.title)}</div><div class="eyebrow">${posts.length} Beiträge</div><h1>Tiny House: ${esc(category.title)}</h1><p>${esc(category.intro)}</p></div></section>` +
     `<section class="section"><div class="container"><div class="cat-rail">${GUIDE_CATEGORIES.map((c) => `<a class="cat-chip" href="${root}ratgeber/${c.slug}/"${c.slug === category.slug ? ' aria-current="true"' : ""}>${c.title}</a>`).join("")}</div><div class="post-list">${postRows(root, posts)}</div><div class="hero-actions"><a class="btn btn-primary" href="${root}ratgeber/">Alle Kategorien →</a><a class="btn btn-outline" href="${waLink("Hallo MODUNERA, ich habe eine Frage zum Thema " + category.title + ". Zielland/Ort: __. Nutzung: __. Bitte kontaktieren Sie mich.")}" target="_blank" rel="noopener">Frage per WhatsApp</a></div>${disclaimer(true)}</div></section>` +
     `<section class="section section-soft"><div class="container"><h2>FAQ</h2><div class="faq-list">${faqMarkup(faqs)}</div></div></section></main>` +
     footer(root, "de")
@@ -869,7 +893,7 @@ const MARKET_GUIDES = [
     deSlug: "grundstueck-stellplatz-europa", enSlug: "plot-and-site-europe", image: "hero-forest.webp",
     sources: ["nl", "dk", "lu", "ch", "de"],
     de: {
-      title: "Grundstück & Stellplatz in den Zielmärkten: worauf die Zulässigkeit wirklich beruht",
+      title: "Grundstück & Stellplatz fürs Tiny House: worauf die Zulässigkeit wirklich beruht",
       desc: "Wie Niederlande, Dänemark, Luxemburg, Schweiz und Deutschland die Zulässigkeit eines Tiny House am konkreten Standort prüfen – und welche Unterlagen vorab helfen.",
       answer: "Nicht das Haus entscheidet über die Zulässigkeit, sondern der Standort: Flächennutzung, geplante Nutzungsart und Dauer. Diese Prüfung gehört vor die Modellwahl.",
       sections: [
@@ -887,7 +911,7 @@ const MARKET_GUIDES = [
       ],
     },
     en: {
-      title: "Plot and site across the target markets: what admissibility really rests on",
+      title: "Plot and site for a tiny house: what admissibility really rests on",
       desc: "How the Netherlands, Denmark, Luxembourg, Switzerland and Germany assess whether a tiny house is admissible on a specific site – and which documents help upfront.",
       answer: "The site decides admissibility, not the house: land use, intended use and duration. That check belongs before choosing a model.",
       sections: [
@@ -909,7 +933,7 @@ const MARKET_GUIDES = [
     deSlug: "ganzjaehrig-wohnen-klima-europa", enSlug: "year-round-living-climate-europe", image: "mc6-exterior.webp",
     sources: ["euDim"],
     de: {
-      title: "Ganzjährig wohnen: Klima, Dämmung und Feuchte je Zielmarkt",
+      title: "Ganzjährig im Tiny House wohnen: Klima, Dämmung und Feuchte je Zielmarkt",
       desc: "Küstenwind in den Niederlanden, salzhaltige Luft und lange Heizperioden in Dänemark, Höhenlage und Schneelast in der Schweiz – was ein Vier-Jahreszeiten-Aufbau leisten muss.",
       answer: "Ein Tiny House wird nicht durch Dämmstärke allein winterfest, sondern durch das Zusammenspiel von Hülle, Luftdichtheit, Lüftung, Wärmebrückenfreiheit und Heizsystem – abgestimmt auf das Klima am Standort.",
       sections: [
@@ -927,7 +951,7 @@ const MARKET_GUIDES = [
       ],
     },
     en: {
-      title: "Year-round living: climate, insulation and moisture by target market",
+      title: "Year-round tiny house living: climate, insulation and moisture by market",
       desc: "Coastal wind in the Netherlands, salt-laden air and long heating seasons in Denmark, altitude and snow load in Switzerland – what a four-season build has to deliver.",
       answer: "A tiny house does not become winter-proof through insulation thickness alone, but through envelope, airtightness, ventilation, thermal-bridge-free detailing and heating working together – tuned to the site climate.",
       sections: [
@@ -949,7 +973,7 @@ const MARKET_GUIDES = [
     deSlug: "vermietung-auslastung-europa", enSlug: "rental-and-occupancy-europe", image: "mc4-exterior.webp",
     sources: ["nl", "dk"],
     de: {
-      title: "Vermietung & Auslastung in den Zielmärkten: was die Rechnung trägt",
+      title: "Tiny House vermieten: Auslastung in den Zielmärkten und was die Rechnung trägt",
       desc: "Tiny House als Ferienvermietung in Niederlande, Dänemark, Luxemburg und der Schweiz – Nutzungsrecht, Saison, Ausstattung und die Posten, die eine Rendite realistisch machen.",
       answer: "Eine Vermietung steht und fällt mit der Zulässigkeit der Nutzung am Standort. Erst danach entscheiden Saison, Lage, Ausstattung und Betriebsaufwand über die Wirtschaftlichkeit.",
       sections: [
@@ -967,7 +991,7 @@ const MARKET_GUIDES = [
       ],
     },
     en: {
-      title: "Rental and occupancy across the target markets: what carries the calculation",
+      title: "Letting a tiny house: occupancy across the markets and what carries the calculation",
       desc: "A tiny house as a holiday rental in the Netherlands, Denmark, Luxembourg and Switzerland – permitted use, season, specification and the items that make a return realistic.",
       answer: "A rental stands or falls on whether the use is admissible on the site. Only then do season, location, specification and running costs decide the economics.",
       sections: [
@@ -1029,7 +1053,7 @@ const MARKET_GUIDES = [
     deSlug: "anschluesse-strom-wasser-abwasser-europa", enSlug: "connections-power-water-wastewater-europe", image: "mc7-interior.webp",
     sources: ["nl", "ch"],
     de: {
-      title: "Anschlüsse: Strom, Wasser und Abwasser am Zielort",
+      title: "Tiny House Anschlüsse: Strom, Wasser und Abwasser am Zielort",
       desc: "Netzanschluss, Teilautarkie oder Off-Grid – wie sich die Versorgung eines Tiny House in den Zielmärkten planen lässt und welche Kosten wo entstehen.",
       answer: "Die Versorgung ist selten Teil des Hauspreises und fast immer der variabelste Posten. Netzanschluss, Teilautarkie und Off-Grid sind drei Wege mit sehr unterschiedlichen Kostenprofilen.",
       sections: [
@@ -1047,7 +1071,7 @@ const MARKET_GUIDES = [
       ],
     },
     en: {
-      title: "Connections: electricity, water and wastewater on site",
+      title: "Tiny house connections: electricity, water and wastewater on site",
       desc: "Grid connection, partial autonomy or off-grid – how to plan the supply of a tiny house in the target markets and where the costs arise.",
       answer: "Supply is rarely part of the house price and almost always the most variable item. Grid connection, partial autonomy and off-grid are three routes with very different cost profiles.",
       sections: [

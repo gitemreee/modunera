@@ -877,8 +877,8 @@
   "labels": {
     "de": {
       "hub": "Länderfragen",
-      "hubH1": "Fragen und Antworten je Zielland.",
-      "hubLead": "Zwanzig Fragen pro Land – zu Genehmigung, Lieferung, Zoll, Anschlüssen, Winterbetrieb, Kosten und Vermietung. Die Antworten sind Projektorientierung und ersetzen keine Auskunft der zuständigen Behörde.",
+      "hubH1": "Tiny House: Fragen und Antworten je Zielland.",
+      "hubLead": "Zwanzig Tiny-House-Fragen pro Land – zu Genehmigung, Lieferung, Zoll, Anschlüssen, Winterbetrieb, Kosten und Vermietung. Die Antworten sind Projektorientierung und ersetzen keine Auskunft der zuständigen Behörde.",
       "pageTitle": "Tiny House in {country}: 20 Fragen und Antworten",
       "pageH1": "Tiny House in {country}: die 20 häufigsten Fragen.",
       "questions": "Fragen",
@@ -887,8 +887,8 @@
     },
     "en": {
       "hub": "Country questions",
-      "hubH1": "Questions and answers per destination.",
-      "hubLead": "Twenty questions per country — permits, delivery, customs, connections, winter use, cost and letting. The answers are project orientation and do not replace a ruling from the responsible authority.",
+      "hubH1": "Tiny house questions and answers per destination.",
+      "hubLead": "Twenty tiny house questions per country — permits, delivery, customs, connections, winter use, cost and letting. The answers are project orientation and do not replace a ruling from the responsible authority.",
       "pageTitle": "Tiny house in {country}: 20 questions answered",
       "pageH1": "Tiny house in {country}: the 20 most common questions.",
       "questions": "Questions",
@@ -897,8 +897,8 @@
     },
     "nl": {
       "hub": "Vragen per land",
-      "hubH1": "Vragen en antwoorden per bestemming.",
-      "hubLead": "Twintig vragen per land — vergunning, levering, douane, aansluitingen, winterbedrijf, kosten en verhuur. De antwoorden zijn projectindicatie en vervangen geen uitspraak van het bevoegd gezag.",
+      "hubH1": "Tiny house: vragen en antwoorden per bestemming.",
+      "hubLead": "Twintig tiny house-vragen per land — vergunning, levering, douane, aansluitingen, winterbedrijf, kosten en verhuur. De antwoorden zijn projectindicatie en vervangen geen uitspraak van het bevoegd gezag.",
       "pageTitle": "Tiny house in {country}: 20 vragen beantwoord",
       "pageH1": "Tiny house in {country}: de 20 meestgestelde vragen.",
       "questions": "Vragen",
@@ -907,8 +907,8 @@
     },
     "da": {
       "hub": "Spørgsmål per land",
-      "hubH1": "Spørgsmål og svar per destination.",
-      "hubLead": "Tyve spørgsmål per land — tilladelse, levering, told, tilslutninger, vinterbrug, omkostninger og udlejning. Svarene er projektvejledning og erstatter ikke en afgørelse fra den ansvarlige myndighed.",
+      "hubH1": "Tiny house: spørgsmål og svar per destination.",
+      "hubLead": "Tyve tiny house-spørgsmål per land — tilladelse, levering, told, tilslutninger, vinterbrug, omkostninger og udlejning. Svarene er projektvejledning og erstatter ikke en afgørelse fra den ansvarlige myndighed.",
       "pageTitle": "Tiny house i {country}: 20 spørgsmål besvaret",
       "pageH1": "Tiny house i {country}: de 20 hyppigste spørgsmål.",
       "questions": "Spørgsmål",
@@ -917,8 +917,8 @@
     },
     "fr": {
       "hub": "Questions par pays",
-      "hubH1": "Questions et réponses par destination.",
-      "hubLead": "Vingt questions par pays — autorisation, livraison, douane, raccordements, usage hivernal, coûts et location. Les réponses sont des orientations de projet et ne remplacent pas une décision de l'autorité compétente.",
+      "hubH1": "Tiny house : questions et réponses par destination.",
+      "hubLead": "Vingt questions tiny house par pays — autorisation, livraison, douane, raccordements, usage hivernal, coûts et location. Les réponses sont des orientations de projet et ne remplacent pas une décision de l'autorité compétente.",
       "pageTitle": "Tiny house {countryIn} : 20 questions et réponses",
       "pageH1": "Tiny house {countryIn} : les 20 questions les plus fréquentes.",
       "questions": "Questions",

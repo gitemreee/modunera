@@ -86,6 +86,44 @@ markers — that block is regenerated from `tools/design-system-v2.css` on every
 build. Edits outside the markers survive, but the generated block is appended
 last and therefore wins on equal specificity.
 
+## The product word
+
+"Tiny house" is the search term in all five markets — German buyers type the
+English words more often than any translation — so it is the product word
+everywhere rather than a per-language equivalent. `normaliseTitles()` in
+`tools/build-modunera-depth.mjs` runs last in the pipeline and gives the term to
+any `<title>` and any content-page `<meta name="description">` that lacks it,
+extending the existing `| MODUNERA` suffix rather than adding a second brand.
+Re-running finds nothing to do, which is what keeps the pipeline idempotent.
+
+Coverage after a full build, out of 14,977 pages:
+
+| Field | Pages carrying the term | What is left out, and why |
+|---|---|---|
+| Body copy | 14,976 | the Google verification file, which has no body |
+| `<title>` | 14,972 | the verification file and four local-only app shells |
+| `<meta description>` | 14,967 | legal pages and app shells — `TERM_CONTENT` excludes them on purpose |
+| `<h1>` | 14,945 | the 20 "other structures" pages (a bungalow is not a tiny house), three legal pages, the app shells |
+
+Do not push the last few: an imprint headline that says "tiny house" reads as
+keyword stuffing, and the pages concerned already carry the term in the title.
+
+## Navigation width
+
+The bar carries nine top-level items in German, and the enlarged lockup takes
+about 500px of them. Three rules keep it on one line, all at the end of
+`tools/design-system-v2.css`:
+
+- the nav gets its own container, `.nav>.container{--max:1460px}` — note `--max`,
+  not `max-width`: `.container` sizes itself with `width:min(var(--max),…)`, so a
+  `max-width` override is inert
+- the lockup steps down in two disjoint bands (`1340–1479`, `1480–1699`) and keeps
+  its full size above 1700px
+- below 1340px the drawer takes over, because the row genuinely stops fitting
+
+The bands are written `min-width … and max-width …` so they never overlap, which
+is what stops them fighting the phone tiers declared earlier in the sheet.
+
 ## Palette
 
 Five colours, plus one derived shade because CSS needs a pressed state and a

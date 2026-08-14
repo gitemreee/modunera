@@ -67,7 +67,7 @@
       "slug": "energy-and-off-grid",
       "name": "Energy and off-grid",
       "sub": "Solar, storage, heating",
-      "h1": "Solar, storage and heating: what works in a European winter and what does not.",
+      "h1": "Tiny house energy: solar, storage and heating through a European winter.",
       "lead": "Off-grid is a technical question with a legal answer. The panels and the battery are the easy part; whether the authority will accept a house that is not connected to water and sewer is the part that decides the project.",
       "sections": [
         ["Winter yield, not peak rating", "A photovoltaic array is sized by the month it performs worst, not by its nameplate. In December, a roof in Denmark or northern Germany produces a small fraction of its July output, while heating demand is at its maximum. That inversion is the whole design problem. Sizing from an annual average produces a system that works beautifully from April to September and leaves you on a generator in January."],
@@ -86,7 +86,7 @@
       "slug": "transport-and-import",
       "name": "Transport and import",
       "sub": "Route, customs, unloading",
-      "h1": "From the workshop to your plot: route, customs and the last hundred metres.",
+      "h1": "Getting a tiny house to your plot: route, customs and the last hundred metres.",
       "lead": "The long haul across Europe is the predictable part. What goes wrong, goes wrong in the final approach — a gate that is too narrow, a turning circle that is not there, a crane that cannot be set up where it needs to stand.",
       "sections": [
         ["Customs: the union, and the one exception", "Türkiye and the EU are linked by a customs union. For industrial goods accompanied by an A.TR movement certificate, duties generally do not apply on entry to Germany, the Netherlands, Denmark or Luxembourg — import VAT and handling charges do. Switzerland is the exception: it is not part of the customs union, so import means clearance, import tax and handling. Your customs agent confirms the items for your shipment before it moves."],
@@ -105,7 +105,7 @@
       "slug": "layout-and-interior",
       "name": "Layout and interior",
       "sub": "Plan, storage, daylight",
-      "h1": "Making 28 square metres feel like a home rather than a compromise.",
+      "h1": "Tiny house layout: making 28 square metres feel like a home, not a compromise.",
       "lead": "Small houses fail for two reasons: not enough storage, and nowhere to be alone. Both are layout problems, and both are settled on the plan before anything is built.",
       "sections": [
         ["Sightlines do more than square metres", "The reason MD 1 reads as the largest house in the range without being the longest is that nothing interrupts the view from one end to the other, and the glazing continues the room into the landscape. Where you cannot add area, you can add distance for the eye to travel. Conversely, a partition placed badly makes a compact plan feel like two cramped ones."],
