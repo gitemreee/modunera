@@ -324,7 +324,7 @@ function nav(root, lang, alternates = {}) {
       return `<a href="${target}" hreflang="${code}" lang="${code}"${current}>${FLAGS[code]}<span>${label}</span></a>`;
     })
     .join("");
-  const picker = `<div class="nav-dropdown lang-dropdown"><button type="button" class="lang-switch" aria-label="Sprache / Language">${FLAGS[lang]}${lang.toUpperCase()}</button><div class="nav-menu">${languages}</div></div>`;
+  const picker = `<div class="nav-dropdown lang-dropdown"><button type="button" class="lang-switch" aria-label="Sprache / Language">${FLAGS[lang]}<span class="lang-code">${lang.toUpperCase()}</span></button><div class="nav-menu">${languages}</div></div>`;
   return `<nav class="nav" aria-label="${m.label}"><div class="container nav-inner">${brandLockup(root, root + m.home, lang)}<div class="nav-links">${links}</div><div class="nav-actions">${picker}<a class="btn btn-primary" href="${waLink(m.ctaMsg)}" target="_blank" rel="noopener">${m.cta}</a><button class="mobile-toggle" aria-label="${m.toggle}">☰</button></div></div></nav>`;
 }
 
@@ -345,7 +345,10 @@ const LOGO_W = 600;
 const LOGO_H = 151;
 const MARK = "modunera-mark-v1.png";
 
-const CLAIM = "Design Your Nature";
+/* The claim is set in two colours: "Design Your" in the roof colour of the logo
+   mark, "Nature" in the palette's green. Splitting it in the markup rather than in
+   CSS keeps the two halves selectable and readable as one line. */
+const CLAIM = '<span class="claim-a">Design Your</span> <span class="claim-b">Nature</span>';
 
 function brandLockup(root, href, lang) {
   const src = `${root}${BRAND}${LOGO}`;
@@ -353,7 +356,7 @@ function brandLockup(root, href, lang) {
   // Never lazy: the lockup is above the fold on every page. width/height carry the
   // intrinsic ratio so the header reserves its box before the image arrives.
   // The claim rides inside the link so it stays glued to the lockup at every width.
-  return `<a class="brand" href="${href}" aria-label="${label}"><img src="${src}-600.png" srcset="${src}-300.png 300w, ${src}-600.png 600w, ${src}-900.png 900w" sizes="150px" width="${LOGO_W}" height="${LOGO_H}" alt="MODUNERA" decoding="async"><span class="brand-claim">${CLAIM}</span></a>`;
+  return `<a class="brand" href="${href}" aria-label="${label}"><img src="${src}-600.png" srcset="${src}-300.png 300w, ${src}-600.png 600w, ${src}-900.png 900w" sizes="(max-width:640px) 168px, 196px" width="${LOGO_W}" height="${LOGO_H}" alt="MODUNERA" decoding="async"><span class="brand-claim">${CLAIM}</span></a>`;
 }
 
 /* WhatsApp dock. Replaces the old two-icon rail on every page: a launcher in the
