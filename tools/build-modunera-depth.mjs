@@ -1058,6 +1058,228 @@ async function buildKnowledgePages() {
   return count;
 }
 
+
+
+/* --- the article library, rewritten from per-topic material ---------------- */
+
+/* The 125 German posts were generated from one seven-section skeleton with the
+   keyword substituted in: "Bei {keyword} sollte die Planung mit dem gewünschten
+   Ergebnis beginnen", 125 times. That is not thin content, it is one page
+   published 125 times, and a search engine reads it that way.
+   
+   data/blog-topics.json gives each of the 58 topics its own argument, its own
+   mistakes and its own questions. A topic appears in two formats — a guide and a
+   mistakes checklist — and the two use the material differently so they do not
+   duplicate each other either. The rewrite replaces the <article> body and the
+   table of contents beside it; the hero, the breadcrumbs and the sidebar links
+   the rest of the pipeline owns are left alone. */
+
+const BLOG_TOPICS = JSON.parse(await readFile(join(ROOT, "data/blog-topics.json"), "utf8")).topics;
+
+const CATEGORY_LABELS = {
+  "genehmigung-und-recht": "Genehmigung & Recht",
+  "kosten-und-finanzierung": "Kosten & Finanzierung",
+  "technik-und-konstruktion": "Technik & Konstruktion",
+  "energie-und-autarkie": "Energie & Autarkie",
+  "transport-und-import": "Transport & Import",
+  "grundriss-und-innenraum": "Grundriss & Innenraum",
+  "nutzung-und-geschaeftsmodell": "Nutzung & Geschäftsmodell",
+  "vergleich-und-alternativen": "Vergleich & Alternativen",
+  "betrieb-und-wartung": "Betrieb & Wartung",
+};
+
+/* Which models a category most often points at. Written per category rather than
+   per topic, because the answer genuinely is the same for every topic inside one:
+   a permit question does not have a favourite model, a family question does. */
+const CATEGORY_MODELS = {
+  "genehmigung-und-recht": [3, 1, 7],
+  "kosten-und-finanzierung": [7, 1, 5],
+  "technik-und-konstruktion": [6, 1, 8],
+  "energie-und-autarkie": [7, 5, 6],
+  "transport-und-import": [7, 1, 4],
+  "grundriss-und-innenraum": [3, 2, 1],
+  "nutzung-und-geschaeftsmodell": [4, 2, 8],
+  "vergleich-und-alternativen": [1, 6, 7],
+  "betrieb-und-wartung": [8, 6, 7],
+};
+
+/* Slug → topic key and format. tiny-house-<topic>-leitfaden is a guide,
+   -fehler-checkliste is the mistakes format, anything else is a standalone post
+   which is rendered as a guide. */
+function blogTopicOf(rel) {
+  const m = rel.match(/^blog\/([^/]+)\/index\.html$/);
+  if (!m || m[1] === "europa") return null;
+  let key = m[1].replace(/^tiny-house-/, "");
+  let format = "post";
+  if (key.endsWith("-leitfaden")) { key = key.slice(0, -"-leitfaden".length); format = "guide"; }
+  else if (key.endsWith("-fehler-checkliste")) { key = key.slice(0, -"-fehler-checkliste".length); format = "mistakes"; }
+  const topic = BLOG_TOPICS[key];
+  return topic ? { key, format, topic } : null;
+}
+
+const BLOG_CATEGORIES = JSON.parse(await readFile(join(ROOT, "data/blog-categories.json"), "utf8")).categories;
+
+/* topic key → { guide?, mistakes?, post? } of the slugs that exist on disk */
+const TOPIC_SLUGS = new Map();
+
+/* The two formats share only the opening sentence and the two closing sections.
+   Everything in between is different material: the guide argues the subject and
+   then goes deeper on the category; the checklist works through the mistakes and
+   then gives the order in which to check things. Written this way the two pages
+   for one topic are no longer versions of each other. */
+/* Two topics exist as a standalone post *and* as a guide. Rendering both from the
+   guide material produced two byte-identical pages, which is the one duplication
+   problem a search engine punishes outright. Where a topic has both, the
+   standalone becomes the overview: it introduces the subject, names the mistakes
+   in one line each and sends the reader to the two long pages. Where a topic has
+   only the standalone (eight of them), it is still rendered as the guide. */
+const bodyFormat = ({ key, format }) => {
+  if (format !== "post") return format;
+  const have = TOPIC_SLUGS.get(key) ?? {};
+  return have.guide ? "overview" : "guide";
+};
+
+function articleHeadings(found) {
+  const { topic } = found;
+  const cat = BLOG_CATEGORIES[topic.cat];
+  const kind = bodyFormat(found);
+  const body = kind === "mistakes"
+    ? [...topic.mistakes.map(([t], i) => `Fehler ${i + 1}: ${t}`), cat.order[0]]
+    : kind === "overview"
+      ? ["Worum es bei diesem Thema geht", "Die drei Fehler, die am meisten kosten", "Wo Sie weiterlesen"]
+      : [...topic.points.map(([h]) => h), cat.depth[0]];
+  return [...body, "Welche Modelle hier meistens infrage kommen", `${cat.countryLead}`];
+}
+
+function articleBody(found, root) {
+  const { key, topic } = found;
+  const format = bodyFormat(found);
+  const cat = BLOG_CATEGORIES[topic.cat];
+  const models = CATEGORY_MODELS[topic.cat];
+  const heads = articleHeadings(found);
+  const sections = [`<div class="answer-box"><strong>Kurz gesagt</strong><p>${esc(topic.what)}</p></div>`];
+  const have = TOPIC_SLUGS.get(key) ?? {};
+
+  const bodies = format === "mistakes"
+    ? [...topic.mistakes.map(([, text]) => text), cat.order[1]]
+    : format === "overview"
+      ? [
+          `${topic.points[0][0]}: ${topic.points[0][1]}`,
+          topic.mistakes.map(([t]) => t).join(". ") + ". Jeder dieser Punkte ist einzeln vermeidbar und zusammen der Grund, warum vergleichbare Projekte unterschiedlich enden.",
+          `Der ausführliche Leitfaden behandelt ${esc(topic.points.map(([h]) => h.toLowerCase()).join(", "))}. Die Fehler-Checkliste geht die drei häufigsten Fehlannahmen im Detail durch und nennt die Reihenfolge, in der geprüft wird.`,
+        ]
+      : [...topic.points.map(([, text]) => text), cat.depth[1]];
+
+  bodies.forEach((text, i) => {
+    sections.push(`<section id="section-${i + 1}"><h2>${esc(heads[i])}</h2><p>${esc(text)}</p></section>`);
+  });
+
+  const n0 = bodies.length;
+  const modelLine = models
+    .map((n) => `<a href="${root}modelle/md-${n}/">MD ${n}</a> (${esc(MODEL_COPY[String(n)].de.label)}, ab ${esc(eur(PRICING.models[`mc${n}`].base_eur, "de"))})`)
+    .join(", ");
+  sections.push(
+    `<section id="section-${n0 + 1}"><h2>${esc(heads[n0])}</h2><p>Bei Fragen aus dem Bereich ${esc(CATEGORY_LABELS[topic.cat])} führen die Projekte in der Praxis am häufigsten zu ${modelLine}. Die Basisbreite beträgt bei allen acht Modellen 2,55 Meter; der Unterschied liegt in Länge, Aufteilung und Ausstattungstiefe. Entschieden wird nach Nutzung, Personenzahl und Standort — nicht nach dem Datenblatt.</p></section>`
+  );
+
+  /* The market paragraph quotes the per-country fact that this category actually
+     turns on, so it reads differently under a permit topic than under a cost one. */
+  sections.push(
+    `<section id="section-${n0 + 2}"><h2>${esc(heads[n0 + 1])}</h2>${COUNTRY_ORDER
+      .map((c) => `<p><strong>${esc(COUNTRY_NAMES.de[c])}:</strong> ${esc(QA.facts.de[c][cat.countryField])}</p>`)
+      .join("")}<p><a class="source-link" href="${root}fragen/">Alle Fragen und Antworten je Zielland →</a></p></section>`
+  );
+
+  /* The FAQ block belongs to the guide; the checklist closes with the questions
+     as prose so the two pages do not carry the same three answers verbatim. */
+  if (format === "overview") {
+    const links = [
+      have.guide ? [have.guide, `${topic.title}: der vollständige Leitfaden`] : null,
+      have.mistakes ? [have.mistakes, `${topic.title}: die häufigsten Fehler`] : null,
+    ].filter(Boolean);
+    sections.push(
+      `<section id="section-${n0 + 3}"><h2>Die beiden ausführlichen Beiträge</h2><div class="post-list">${links
+        .map(([slug, title]) => `<a class="post-row" href="${root}blog/${slug}/"><span>${esc(title)}</span><small>Weiterlesen →</small></a>`)
+        .join("")}</div></section>`
+    );
+  } else if (format === "mistakes") {
+    sections.push(
+      `<section id="section-${n0 + 3}"><h2>Vor der Bestellung abhaken</h2><ul class="check-list">${topic.mistakes
+        .map(([title]) => `<li>${esc(title)} — geprüft und schriftlich festgehalten?</li>`)
+        .join("")}<li>Zuständige Stelle im Zielland angefragt und Antwort schriftlich erhalten?</li><li>Zufahrt und Entladepunkt mit Fotos und Maßen dokumentiert?</li><li>Budget inklusive Fundament, Anschlüssen, Entladung, Planung, Gebühren und Versicherung gerechnet?</li></ul></section>`
+    );
+  } else {
+    sections.push(
+      `<section id="section-${n0 + 3}"><h2>Häufige Fragen</h2>${faqMarkup(topic.faq)}</section>`
+    );
+  }
+
+  /* Related reading inside the same category. The library had no lateral links at
+     all, so a crawler reaching one post had nowhere to go but back to the hub. */
+  const siblings = Object.entries(BLOG_TOPICS)
+    .filter(([k, t]) => t.cat === topic.cat && k !== key && TOPIC_SLUGS.has(k))
+    .slice(0, 6);
+  if (siblings.length) {
+    sections.push(
+      `<section id="section-${n0 + 4}"><h2>Weiterlesen zu ${esc(CATEGORY_LABELS[topic.cat])}</h2><div class="post-list">${siblings
+        .map(([k, t]) => {
+          const have = TOPIC_SLUGS.get(k) ?? {};
+          const slug = have[format] ?? have.guide ?? have.mistakes ?? have.post;
+          return `<a class="post-row" href="${root}blog/${slug}/"><span>${esc(t.title)}</span><small>${esc(t.what.slice(0, 96))}…</small></a>`;
+        })
+        .join("")}</div><p><a class="source-link" href="${root}ratgeber/${topic.cat}/">Alle Beiträge zu ${esc(CATEGORY_LABELS[topic.cat])} →</a></p></section>`
+    );
+  }
+
+  sections.push(disclaimer("de"));
+  return `<article class="article">${sections.join("")}</article>`;
+}
+
+function tableOfContents(found) {
+  const kind = bodyFormat(found);
+  const all = [...articleHeadings(found), kind === "overview" ? "Die beiden ausführlichen Beiträge" : kind === "mistakes" ? "Vor der Bestellung abhaken" : "Häufige Fragen"];
+  return `<div class="toc"><strong>Inhalt</strong>${all
+    .map((h, i) => `<a href="#section-${i + 1}">${esc(h)}</a>`)
+    .join("")}</div>`;
+}
+
+async function rewriteArticles() {
+  const files = (await walk(join(ROOT, "blog"))).filter((f) => extname(f).toLowerCase() === ".html");
+  // ten of the topics exist only as a standalone post, with no -leitfaden or
+  // -fehler-checkliste variant, so the related links are built from what is on
+  // disk rather than from the naming convention
+  TOPIC_SLUGS.clear();
+  for (const file of files) {
+    const found = blogTopicOf(relative(ROOT, file).replaceAll("\\", "/"));
+    if (!found) continue;
+    const bucket = TOPIC_SLUGS.get(found.key) ?? {};
+    bucket[found.format] = relative(ROOT, dirname(file)).replaceAll("\\", "/").replace(/^blog\//, "");
+    TOPIC_SLUGS.set(found.key, bucket);
+  }
+  let changed = 0;
+  let skipped = 0;
+  for (const file of files) {
+    const rel = relative(ROOT, file).replaceAll("\\", "/");
+    const found = blogTopicOf(rel);
+    if (!found) { skipped += 1; continue; }
+    const html = await readFile(file, "utf8");
+    const root = rootFor(rel);
+    let next = html.replace(/<article class="article">[\s\S]*?<\/article>/, articleBody(found, root));
+    next = next.replace(/<div class="toc"><strong>Inhalt<\/strong>[\s\S]*?<\/div>/, tableOfContents(found));
+    // the FAQ now lives in the body, so the page should say so in its structured data
+    // only the guide format renders the answers, so only it declares FAQPage
+    const ld = bodyFormat(found) === "guide" ? jsonLd(faqLd(found.topic.faq)) : "";
+    next = next.includes("MODUNERA TOPIC FAQ")
+      ? next.replace(/<!-- MODUNERA TOPIC FAQ -->[\s\S]*?<!-- \/MODUNERA TOPIC FAQ -->/, `<!-- MODUNERA TOPIC FAQ -->${ld}<!-- /MODUNERA TOPIC FAQ -->`)
+      : next.replace("</head>", `<!-- MODUNERA TOPIC FAQ -->${ld}<!-- /MODUNERA TOPIC FAQ --></head>`);
+    if (next !== html) {
+      await writeFile(file, next, "utf8");
+      changed += 1;
+    }
+  }
+  return { changed, skipped };
+}
+
 /* --- run ------------------------------------------------------------------ */
 
 /* Two phases, because build-modunera-v2.mjs sits between them: it regenerates the
@@ -1071,9 +1293,11 @@ async function buildKnowledgePages() {
 const extendOnly = process.argv.includes("--extend");
 
 if (extendOnly) {
+  const rewritten = await rewriteArticles();
   const countries = await extendCountryPages();
   const articles = await extendArticles();
   console.log(`depth layer (extend):
+  ${rewritten.changed} blog posts rewritten from per-topic material (${rewritten.skipped} left alone)
   ${countries} country pages extended with their question set
   ${articles} library pages extended with the five-market appendix`);
 } else {

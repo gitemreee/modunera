@@ -778,4 +778,18 @@ p{margin:0 0 10px}
   .spec{padding:13px 14px}
   .gallery-grid{gap:10px}
 }
+
+/* .toc sits in the sidebar of all 125 articles and has no rule in styles.css
+   either, so its links ran together as one unbroken paragraph. The sticky offset
+   was set for v1's 88px header; the v2 bar is 62px. */
+.toc{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:15px 17px}
+.toc strong{display:block;font-size:var(--fs-label);letter-spacing:.12em;text-transform:uppercase;
+  color:var(--muted);font-weight:800;margin-bottom:7px}
+.toc a{display:block;padding:6px 0;font-size:var(--fs-small);line-height:1.35;font-weight:650;
+  border-top:1px solid var(--line)}
+.toc a:hover{color:var(--terracotta)}
+.toc strong+a{border-top:0}
+.toc p{margin:0 0 9px}
+.toc a.btn{border-top:0;margin-top:4px;padding:11px 14px;line-height:1.2}
+.article-aside{top:78px}
 /* MODUNERA BRAND PALETTE END */

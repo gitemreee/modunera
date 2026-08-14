@@ -1,0 +1,2743 @@
+{
+  "_comment": "Per-topic source material for the German article library. The 125 posts previously shared one seven-section skeleton with a keyword substituted in; these entries give each topic its own argument, its own mistakes and its own questions. A topic renders as a guide (-leitfaden) or as a mistakes checklist (-fehler-checkliste); the two formats use the same material differently so they do not duplicate each other.",
+  "updated": "2026-08-14",
+  "categories": {
+    "technik-und-konstruktion": 12,
+    "nutzung-und-geschaeftsmodell": 7,
+    "grundriss-und-innenraum": 10,
+    "genehmigung-und-recht": 6,
+    "transport-und-import": 3,
+    "vergleich-und-alternativen": 5,
+    "energie-und-autarkie": 6,
+    "betrieb-und-wartung": 4,
+    "kosten-und-finanzierung": 5
+  },
+  "topics": {
+    "abwasser": {
+      "cat": "technik-und-konstruktion",
+      "title": "Abwasser",
+      "what": "Abwasser ist der Punkt, an dem die meisten Tiny-House-Budgets kippen — nicht wegen der Technik im Haus, sondern wegen der Entfernung zum nächsten Kanalanschluss.",
+      "points": [
+        [
+          "Kanalanschluss oder Kleinkläranlage",
+          "Liegt ein öffentlicher Kanal in erreichbarer Nähe, ist der Anschluss meist die günstigste und genehmigungsrechtlich einfachste Lösung. Fehlt er, kommt eine Kleinkläranlage oder ein abflussloser Sammelbehälter infrage — beides genehmigungspflichtig, beides mit laufenden Kosten für Wartung, Entleerung und wiederkehrende Prüfungen."
+        ],
+        [
+          "Grau- und Schwarzwasser trennen lohnt selten",
+          "Getrennte Systeme klingen ökologisch überzeugend, verdoppeln aber Leitungen, Behälter und Wartungspunkte auf sehr kleiner Fläche. Sinnvoll wird die Trennung erst, wenn Grauwasser tatsächlich wiederverwendet oder versickert werden darf — und das entscheidet die untere Wasserbehörde, nicht der Hersteller."
+        ],
+        [
+          "Komposttoilette löst nicht das ganze Problem",
+          "Eine Trenntoilette nimmt das Schwarzwasser aus der Rechnung, aber Küche, Dusche und Waschmaschine produzieren weiter Grauwasser. Wer nur die Toilette autark plant und den Rest vergisst, steht am Ende trotzdem vor der Frage nach einer genehmigten Ableitung."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Die Entfernung zum Kanal nicht vor dem Grundstückskauf erfragen",
+          "Zwanzig Meter und zweihundert Meter sind derselbe Satz auf dem Papier und ein fünfstelliger Unterschied auf der Rechnung. Der Versorger sagt Ihnen das kostenlos, bevor Sie unterschreiben."
+        ],
+        [
+          "Laufende Kosten einer Kleinkläranlage übersehen",
+          "Wartungsvertrag, Entleerung und die wiederkehrende behördliche Prüfung sind jährliche Positionen. Über zehn Jahre summieren sie sich häufig auf mehr als der ursprüngliche Anschluss gekostet hätte."
+        ],
+        [
+          "Gefälle und Frosttiefe erst auf der Baustelle prüfen",
+          "Eine Abwasserleitung braucht Gefälle und muss frostfrei liegen. Auf ebenem oder felsigem Grund entscheidet das über Hebeanlage oder Aushubtiefe — und beides ändert das Budget nach der Bestellung."
+        ]
+      ],
+      "faq": [
+        [
+          "Braucht ein Tiny House einen Kanalanschluss?",
+          "Das entscheidet die Gemeinde. Bei genehmigter Wohnnutzung verlangen viele Kommunen den Anschluss an Wasser und Kanal; auf Freizeitstandorten sind Alternativen häufiger möglich."
+        ],
+        [
+          "Was kostet ein Abwasseranschluss?",
+          "Fast ausschließlich abhängig von der Entfernung zum bestehenden Netz und vom Untergrund. Der örtliche Versorger nennt Ihnen die Anschlusskosten für Ihre konkrete Adresse."
+        ],
+        [
+          "Ist eine Komposttoilette überall erlaubt?",
+          "Nein. Zulässigkeit und Entsorgungsweg regelt die untere Wasserbehörde beziehungsweise die Gemeinde. Klären Sie das schriftlich, bevor Sie darauf planen."
+        ]
+      ]
+    },
+    "airbnb": {
+      "cat": "nutzung-und-geschaeftsmodell",
+      "title": "Airbnb-Vermietung",
+      "what": "Ein Tiny House ist als Kurzzeitvermietung überdurchschnittlich gut geeignet — und fällt genau deshalb unter die Regeln, die europäische Städte seit einem Jahrzehnt verschärfen.",
+      "points": [
+        [
+          "Die Regulierung kommt vor der Rendite",
+          "In vielen deutschen Städten ist Kurzzeitvermietung anzeige- oder genehmigungspflichtig und durch Zweckentfremdungssatzungen begrenzt. Auf Campingplätzen und in Ferienparks gelten zusätzlich die Regeln des Betreibers. Prüfen Sie beides, bevor Sie das Objekt kaufen — nicht, wenn die ersten Buchungen ausbleiben."
+        ],
+        [
+          "Gäste zahlen für Besonderheit, nicht für Fläche",
+          "Ein Objekt, das gut fotografiert und an einem Ort steht, an dem man sein will, schlägt ein größeres, beliebigeres zum selben Preis. Das ist das wirtschaftliche Argument für MD 1 mit Aussicht, MD 4 mit Veranda und MD 6 im Bergkontext."
+        ],
+        [
+          "Die Kosten, die die Rendite entscheiden",
+          "Reinigung zwischen den Aufenthalten, Wäsche, Plattformgebühren, Verschleiß an Beschlägen und Oberflächen sowie Rücklagen für Ersatz. Energie ist selten der Treiber. Zwei Gäste für drei Nächte verursachen etwa dieselben Reinigungskosten wie zwei Gäste für eine Nacht — deshalb wirkt die Mindestaufenthaltsdauer stärker auf die Marge als der Nachtpreis."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Mit Auslastungszahlen aus dem Internet rechnen",
+          "Auslastung ist standort-, saison- und bewertungsabhängig. Eine Zahl aus einem Blogbeitrag über eine andere Region ist keine Kalkulationsgrundlage, sondern eine Hoffnung."
+        ],
+        [
+          "Betreiberhaftpflicht erst nach dem ersten Vorfall klären",
+          "Gebäudeversicherung deckt Vermietung nicht automatisch ab. Die Betreiberhaftpflicht gehört vor den ersten Gast, nicht nach dem ersten Schaden."
+        ],
+        [
+          "Reinigung als Nebensache behandeln",
+          "Reinigung ist bei Kurzzeitvermietung der größte laufende Posten und der häufigste Grund für schlechte Bewertungen. Wer sie nicht vertraglich und preislich fixiert hat, hat das Geschäftsmodell nicht durchgerechnet."
+        ]
+      ],
+      "faq": [
+        [
+          "Darf ich mein Tiny House über Airbnb vermieten?",
+          "Vorbehaltlich der örtlichen Regeln ja. Anzeigepflichten, Nächtebegrenzungen und Zweckentfremdungssatzungen unterscheiden sich je Kommune erheblich — fragen Sie Ihre nach."
+        ],
+        [
+          "Welches Modell eignet sich am besten für Vermietung?",
+          "Es gibt keine pauschale Antwort. MD 1 lebt von der Aussicht, MD 4 vom Außenbereich, MD 6 vom Chalet-Charakter, MD 2 von vier Schlafplätzen, MD 8 von der Ausstattungstiefe."
+        ],
+        [
+          "Welche Rendite ist realistisch?",
+          "Wer eine Zahl nennt, ohne Standort, Auslastung, Nachtpreis und Kostenbasis zu kennen, rät. Rechnen Sie mit eigenen Werten und inklusive Reinigung, Wäsche, Provision und Rücklage."
+        ]
+      ]
+    },
+    "airbnb-glamping": {
+      "cat": "nutzung-und-geschaeftsmodell",
+      "title": "Airbnb und Glamping",
+      "what": "Glamping ist kein Camping mit besserem Bett, sondern ein eigenes Produkt: fester Komfort an einem Ort, an dem sonst nur ein Zelt stünde.",
+      "points": [
+        [
+          "Der Standort ist das Produkt",
+          "Bei Glamping zahlt der Gast für die Lage und die Aussicht; das Gebäude macht sie ganzjährig nutzbar. Deshalb entscheidet die Grundstückswahl mehr über den Erfolg als die Ausstattungsliste — und deshalb ist die Genehmigungsfrage im Außenbereich das eigentliche Nadelöhr."
+        ],
+        [
+          "Betreibermodell oder Einzelobjekt",
+          "Ein einzelnes Objekt trägt seine Fixkosten schwerer als drei. Reinigungsrouten, Wäscheverträge und Wartungsbesuche amortisieren sich ab der zweiten Einheit spürbar. Wer langfristig plant, sollte die Erweiterbarkeit des Standorts von Anfang an prüfen."
+        ],
+        [
+          "Saison und Winterbetrieb",
+          "Ein Objekt, das nur von Mai bis September vermietbar ist, muss seine Jahreskosten in fünf Monaten verdienen. Winterfeste Auslegung verlängert die Saison und ist damit keine Komfortfrage, sondern eine betriebswirtschaftliche."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Außenbereich mit Bauland verwechseln",
+          "Ein schöner Platz am Waldrand ist selten Bauland. Im Außenbereich nach § 35 BauGB ist Wohn- und Beherbergungsnutzung nur in engen Ausnahmen zulässig."
+        ],
+        [
+          "Die Zufahrt für Gäste vergessen",
+          "Was der Tieflader einmal schafft, müssen Gäste ganzjährig schaffen — mit normalen Autos, bei Regen und im Dunkeln. Zufahrt und Parken gehören in die Standortprüfung."
+        ],
+        [
+          "Nur in der Hochsaison kalkulieren",
+          "Rendite entsteht über zwölf Monate. Wer mit Augustpreisen rechnet und im November keine Buchungen hat, hat kein Geschäftsmodell, sondern eine gute Woche."
+        ]
+      ],
+      "faq": [
+        [
+          "Brauche ich für Glamping eine Genehmigung?",
+          "In aller Regel ja, und häufig zusätzlich eine gewerberechtliche Einordnung. Zuständig ist die Gemeinde beziehungsweise die untere Bauaufsichtsbehörde."
+        ],
+        [
+          "Welches Modell passt zu Glamping?",
+          "MD 4 mit überdachter Veranda für milde Lagen, MD 6 für Berg- und Nordlagen mit Winterbetrieb, MD 1 dort, wo die Aussicht das Argument ist."
+        ],
+        [
+          "Lohnen mehrere Einheiten?",
+          "Wirtschaftlich ja, ab der zweiten Einheit deutlich. Genehmigungsrechtlich wird es ab einer bestimmten Anzahl aber ein anderes Verfahren — klären Sie das früh."
+        ]
+      ]
+    },
+    "akustik": {
+      "cat": "grundriss-und-innenraum",
+      "title": "Akustik",
+      "what": "Auf 28 Quadratmetern ohne Zwischenwände trifft jedes Geräusch jede Fläche. Akustik ist deshalb kein Luxusthema, sondern der Unterschied zwischen wohnlich und anstrengend.",
+      "points": [
+        [
+          "Harte Flächen sind das Problem",
+          "Glas, lackierte Fronten, Fliesen und ein offener Grundriss ergeben zusammen eine lange Nachhallzeit. Der Raum klingt hallig, Gespräche werden lauter geführt, Fernseher und Küche überlagern sich. Textilien, Teppich, offene Regale und Holzoberflächen wirken dagegen unmittelbar."
+        ],
+        [
+          "Trittschall aus dem Loft",
+          "Im Loft geht jeder Schritt direkt in den Wohnbereich darunter. Ein entkoppelter Bodenaufbau und ein Teppich im Schlafbereich lösen mehr als jede nachträgliche Maßnahme an der Decke."
+        ],
+        [
+          "Technikgeräusche mitplanen",
+          "Lüftungsanlage, Wärmepumpe, Kühlschrank und Wasserpumpe stehen in einem kompakten Volumen zwangsläufig nah am Wohnbereich. Aufstellort, Entkopplung und Nachtabsenkung werden vor der Produktion festgelegt, nicht danach."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Akustik erst nach dem Einzug bemerken",
+          "Nachträgliche Absorber sind sichtbar, teuer und selten so wirksam wie ein Bodenaufbau und Materialwahl, die von Anfang an stimmen."
+        ],
+        [
+          "Die Lüftungsanlage in Schlafnähe setzen",
+          "Ein Gerät, das nachts hörbar ist, wird abgeschaltet — und damit ist der Feuchteschutz weg, für den es eingebaut wurde."
+        ],
+        [
+          "Nur an Schallschutz nach außen denken",
+          "Dreifachverglasung hilft gegen die Straße, nicht gegen den Nachhall im Raum. Das sind zwei verschiedene Probleme mit zwei verschiedenen Lösungen."
+        ]
+      ],
+      "faq": [
+        [
+          "Ist ein Tiny House hellhörig?",
+          "Nach außen nicht besonders — der Aufbau ist dicht und gedämmt. Innen ja, weil ein offener Grundriss keine Trennung bietet. Das löst man mit Oberflächen und Grundriss, nicht mit Dämmung."
+        ],
+        [
+          "Was hilft am schnellsten gegen Nachhall?",
+          "Textilien: Teppich, Vorhänge, Polster. Sie sind die einzige Maßnahme, die auch nachträglich sofort wirkt."
+        ],
+        [
+          "Welches Modell ist akustisch am angenehmsten?",
+          "MD 3 und MD 5, weil ein abschließbarer Raum die einzige echte Schalltrennung im Haus ist."
+        ]
+      ]
+    },
+    "auf-raedern": {
+      "cat": "genehmigung-und-recht",
+      "title": "Tiny House auf Rädern",
+      "what": "Das hartnäckigste Missverständnis im europäischen Tiny-House-Markt: dass ein Fahrgestell aus einem Gebäude ein Fahrzeug macht. Das tut es nicht.",
+      "points": [
+        [
+          "Die Nutzung entscheidet, nicht das Fahrgestell",
+          "Steht die Einheit dauerhaft an einem Ort und dient dem Aufenthalt, behandelt das Baurecht sie in aller Regel als bauliche Anlage — mit Rädern, mit Zulassung, mit allem. Das gilt in allen fünf Zielmärkten und ist der Punkt, an dem die meisten Projekte ihre Annahme korrigieren müssen."
+        ],
+        [
+          "Wofür die Räder trotzdem gut sind",
+          "Für den Transport, für die Option eines späteren Standortwechsels und manchmal für das Verfahren. Ein Stahlfahrgestell, das als Teil des Gebäudes geplant ist, macht das Umsetzen technisch möglich — es macht es nicht automatisch zulässig."
+        ],
+        [
+          "Gewicht, Achslast, Maße",
+          "Bei MODUNERA werden Achs- und Bremskomponenten auf ein 3.500-kg-Konzept ausgelegt, die Basisbreite beträgt 2,55 Meter. Ob eine Einheit im Zielland als Fahrzeug oder als Gebäude eingestuft wird, entscheidet aber die dortige Behörde."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Das Fahrgestell als Genehmigungsumgehung planen",
+          "Behörden kennen dieses Argument. Wer darauf baut, riskiert eine Nutzungsuntersagung nach der Investition statt einer Absage davor."
+        ],
+        [
+          "Von jährlichem Standortwechsel ausgehen",
+          "Technisch möglich, praktisch teuer: Transport, Kran, Fundament und gegebenenfalls ein neues Verfahren am neuen Ort fallen jedes Mal erneut an."
+        ],
+        [
+          "Zulassung mit Baurecht verwechseln",
+          "Eine Straßenzulassung sagt etwas über die Fahrt aus, nichts über das Stehen. Es sind zwei getrennte Rechtsgebiete mit zwei getrennten Behörden."
+        ]
+      ],
+      "faq": [
+        [
+          "Ist ein Tiny House auf Rädern genehmigungsfrei?",
+          "In aller Regel nein. Maßgeblich ist, ob die Einheit dauerhaft steht und zum Aufenthalt genutzt wird."
+        ],
+        [
+          "Kann ich mein Tiny House selbst ziehen?",
+          "Das hängt von Gesamtgewicht, Führerscheinklasse und Zugfahrzeug ab. Für die Lieferung nach Europa erfolgt der Transport per Tieflader."
+        ],
+        [
+          "Darf ich damit über Nacht auf einem Parkplatz stehen?",
+          "Das ist eine straßenverkehrs- und ordnungsrechtliche Frage und kein Wohnkonzept. Für dauerhaftes Wohnen brauchen Sie einen zulässigen Standort."
+        ]
+      ]
+    },
+    "aus-der-tuerkei": {
+      "cat": "transport-und-import",
+      "title": "Tiny House aus der Türkei",
+      "what": "Türkiye und die EU sind über eine Zollunion verbunden. Das ist der Grund, warum ein Haus aus türkischer Produktion in Deutschland, den Niederlanden, Dänemark und Luxemburg ohne Zölle ankommt — und warum die Schweiz die Ausnahme ist.",
+      "points": [
+        [
+          "Zollunion und A.TR",
+          "Für Industriewaren mit A.TR-Warenverkehrsbescheinigung fallen bei der Einfuhr in die EU in der Regel keine Zölle an. Einfuhrumsatzsteuer und Abwicklungskosten bleiben bestehen. Die Schweiz gehört nicht zur Zollunion: dort kommen Verzollung, Einfuhrsteuer und Abwicklung hinzu."
+        ],
+        [
+          "Was der Preisunterschied wirklich ist",
+          "Niedrigere Fertigungskosten sind real, aber sie sind nicht der ganze Unterschied zwischen Angeboten. Vergleichen Sie Dämmaufbau, Verglasung, Heizsystem, Lüftung, Fahrgestell und Einbautiefe — sonst vergleichen Sie zwei verschiedene Produkte anhand einer Zahl."
+        ],
+        [
+          "Eigene Produktion, eigene Möbelfertigung",
+          "MODUNERA fertigt Stahlkonstruktion und Einbauten im eigenen Haus. Das ist der Grund, warum Maße dem tatsächlichen Grundriss folgen statt Katalogmodulen — und warum Änderungen vor der Produktion und nicht als Nachrüstung stattfinden."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Nur den Werkspreis vergleichen",
+          "Lieferung, Fundament, Anschlüsse, Entladung, Planung und Gebühren gehören dazu. Ein niedriger Einstiegspreis mit kurzer Leistungsliste ist am Ende selten der günstigere."
+        ],
+        [
+          "Die Zollabwicklung selbst improvisieren",
+          "A.TR, Papiere und Anmeldung sind Routine für eine Zollagentur und eine Fehlerquelle für alle anderen. Die Kosten dafür sind kalkulierbar, die Verzögerungen nicht."
+        ],
+        [
+          "Bei der Schweiz mit EU-Bedingungen rechnen",
+          "Die Schweiz ist außerhalb der Zollunion. Wer die Einfuhrpositionen nicht vorher bestätigen lässt, bekommt sie an der Grenze."
+        ]
+      ],
+      "faq": [
+        [
+          "Fallen Zölle bei der Einfuhr aus der Türkei an?",
+          "Für Industriewaren mit A.TR-Bescheinigung in die EU in der Regel nicht. Einfuhrumsatzsteuer und Abwicklung bleiben. Für die Schweiz gelten eigene Regeln."
+        ],
+        [
+          "Wie lange dauert der Transport?",
+          "Die reine Fahrzeit liegt im Bereich weniger Tage. Der Gesamtvorlauf wird von Produktionsplanung, Papieren und dem Entladefenster bestimmt."
+        ],
+        [
+          "Ist türkische Produktion qualitativ vergleichbar?",
+          "Vergleichen Sie die Spezifikation, nicht das Herkunftsland: Aufbau, Dämmung, Verglasung, Technik und Nachweise. Danach ist der Vergleich belastbar."
+        ]
+      ]
+    },
+    "bad": {
+      "cat": "grundriss-und-innenraum",
+      "title": "Badezimmer",
+      "what": "Das Bad ist der Raum, an dem sich im Tiny House entscheidet, ob das Haus alltagstauglich ist — und der Raum, in dem Feuchtigkeit am schnellsten zum Bauschaden wird.",
+      "points": [
+        [
+          "Die Installationswand bestimmt den Grundriss",
+          "Küche und Bad an derselben Installationswand verkürzen Leitungswege, reduzieren Durchdringungen der gedämmten Hülle und sparen gleichzeitig Fläche. MD 5 ist genau um diesen Gedanken herum gebaut. Wer Bad und Küche an gegenüberliegende Enden legt, zahlt das dreimal: in Material, in Wärmeverlust und in Quadratmetern."
+        ],
+        [
+          "Lüftung ist wichtiger als Größe",
+          "Eine Dusche in einem kompakten Volumen bringt in wenigen Minuten mehr Feuchtigkeit ein als eine ganze Wohnung an einem Tag. Ohne mechanische Lüftung mit Wärmerückgewinnung entscheidet das Nutzerverhalten über die Bauteilfeuchte — im Februar zuverlässig zu Ungunsten des Gebäudes."
+        ],
+        [
+          "Abdichtung an den Übergängen",
+          "Nicht die Fläche versagt, sondern der Anschluss: Türschwelle, Duschtasse, Wandanschluss, Durchführungen. Diese Punkte werden in der Produktionsspezifikation festgelegt und bei der Endkontrolle geprüft."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Auf den Lüfter verzichten, um Platz zu sparen",
+          "Der eingesparte Platz kostet später den Wandaufbau. Feuchte ist im Tiny House der teuerste Fehler mit der kürzesten Vorwarnzeit."
+        ],
+        [
+          "Eine Badewanne einplanen",
+          "Sie verbraucht Fläche, Gewicht und Warmwasser in einem Verhältnis, das auf 28 Quadratmetern fast immer die falsche Entscheidung ist."
+        ],
+        [
+          "Die Tür nach innen öffnen lassen",
+          "Auf kleiner Grundfläche blockiert eine nach innen schlagende Badtür regelmäßig genau die Fläche, auf der man stehen muss. Schiebetür oder Anschlagwechsel lösen das vor der Produktion."
+        ]
+      ],
+      "faq": [
+        [
+          "Passt eine normale Dusche in ein Tiny House?",
+          "Ja. Die Frage ist nicht die Dusche, sondern die Lüftung und die Abdichtung der Anschlüsse."
+        ],
+        [
+          "Trenntoilette oder Wasserspülung?",
+          "Beides ist planbar. Die Trenntoilette nimmt das Schwarzwasser aus der Rechnung, löst aber die Grauwasserfrage nicht."
+        ],
+        [
+          "Wie vermeide ich Schimmel im Bad?",
+          "Mechanische Lüftung mit Wärmerückgewinnung, saubere Anschlussdetails und eine Heizung, die den Raum nach dem Duschen wieder auf Temperatur bringt."
+        ]
+      ]
+    },
+    "baugenehmigung": {
+      "cat": "genehmigung-und-recht",
+      "title": "Baugenehmigung",
+      "what": "Ob ein Tiny House aufgestellt werden darf, entscheidet nicht das Haus, sondern das Grundstück: seine Ausweisung, seine Erschließung und die geplante Nutzung.",
+      "points": [
+        [
+          "Innenbereich, Außenbereich, Bebauungsplan",
+          "Liegt ein Bebauungsplan vor, ergeben sich Nutzungsart, Bauweise und überbaubare Fläche daraus. Ohne Bebauungsplan gilt § 34 BauGB im Innenbereich — Einfügen in die Eigenart der näheren Umgebung — oder § 35 BauGB im Außenbereich, wo Wohnnutzung nur in eng begrenzten Fällen privilegiert ist. Das ist der häufigste Grund, aus dem deutsche Projekte scheitern."
+        ],
+        [
+          "Landesrecht, nicht Bundesrecht",
+          "Die Bauordnungen sind Ländersache. Verfahrensfreiheit, Genehmigungsfreistellung und vereinfachtes Verfahren sind in Bayern anders geregelt als in Schleswig-Holstein. Eine Aussage aus einem Forum über ein anderes Bundesland ist keine Grundlage."
+        ],
+        [
+          "Was in die Anfrage gehört",
+          "Adresse und Flurstück, die geplante Nutzung in klaren Worten, Außenmaße, geplantes Fundament und die Frage nach Zulässigkeit und Verfahren. Und die Bitte um schriftliche Antwort — eine mündliche Auskunft am Schalter trägt kein Projekt, wenn achtzehn Monate später ein Nachbar widerspricht."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Das Grundstück vor der Auskunft kaufen",
+          "Die Auskunft kostet einen Brief und etwas Geduld. Das Grundstück kostet deutlich mehr und lässt sich schlechter zurückgeben."
+        ],
+        [
+          "Auf eine mündliche Zusage bauen",
+          "Personen wechseln, Erinnerungen auch. Schriftlich ist der einzige Zustand, in dem eine Auskunft im Streitfall etwas wert ist."
+        ],
+        [
+          "Genehmigungsfreiheit mit Zulässigkeit verwechseln",
+          "Verfahrensfrei heißt nicht erlaubt: Auch ein verfahrensfreies Vorhaben muss materiell zulässig sein. Diese Unterscheidung kostet regelmäßig ganze Projekte."
+        ]
+      ],
+      "faq": [
+        [
+          "Braucht ein Tiny House eine Baugenehmigung?",
+          "In aller Regel ja, sobald es dauerhaft steht und zum Aufenthalt genutzt wird. Verfahren und Zuständigkeit richten sich nach Landesrecht und Standort."
+        ],
+        [
+          "Kann MODUNERA die Genehmigung besorgen?",
+          "Nein. Wir liefern das Gebäude und die technischen Unterlagen für den Antrag. Die Entscheidung trifft ausschließlich die zuständige Behörde."
+        ],
+        [
+          "Wie lange dauert das Verfahren?",
+          "Das unterscheidet sich je Gemeinde und Verfahren erheblich. Beginnen Sie das Gespräch mit der Behörde vor der Bestellung, damit Produktion und Verfahren parallel laufen."
+        ]
+      ]
+    },
+    "brandschutz": {
+      "cat": "technik-und-konstruktion",
+      "title": "Brandschutz",
+      "what": "Brandschutz im Tiny House ist weniger eine Frage der Materialien als der Fluchtwege: Wer im Loft schläft, hat im Ernstfall genau einen Weg nach unten.",
+      "points": [
+        [
+          "Der zweite Rettungsweg",
+          "Ein Loft mit nur einer Treppe und ohne ausreichend großes Fenster ist der kritische Punkt jeder kompakten Planung. Fenstergröße, Brüstungshöhe und Öffnungsart im Schlafbereich gehören deshalb zur Sicherheitsplanung und nicht zur Gestaltung. Die konkreten Anforderungen setzt die Bauordnung des Bundeslandes."
+        ],
+        [
+          "Rauchmelder und Kohlenmonoxid",
+          "Rauchmelder sind in allen Bundesländern Pflicht. Wo mit Gas gekocht oder ein Ofen betrieben wird, kommt ein CO-Melder hinzu. In einem kleinen Volumen sind beide wirksamer als in einem großen — und ebenso schneller kritisch, wenn sie fehlen."
+        ],
+        [
+          "Stahlkonstruktion und Materialwahl",
+          "Die tragende Konstruktion ist Stahl, nicht Holzständerwerk. Für die Dämmung, die Fassade und die Innenoberflächen wird die Materialwahl projektbezogen festgelegt; die Elektroinstallation wird halogenfrei ausgeführt."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Das Loftfenster nach Optik statt nach Maß wählen",
+          "Ein Fenster, durch das im Ernstfall niemand kommt, ist im Sicherheitskonzept kein Fenster. Maß und Öffnungsart werden vor der Produktion festgelegt."
+        ],
+        [
+          "Gaskocher ohne CO-Melder betreiben",
+          "In einem dichten, kleinen Volumen ist das die gefährlichste Kombination im ganzen Haus — und die am einfachsten zu vermeidende."
+        ],
+        [
+          "Den Ofen ohne Abstandsprüfung planen",
+          "Ein Kaminofen braucht Abstände, einen geprüften Schornstein und die Abnahme durch den Schornsteinfeger. Auf kleiner Fläche ist das eine Grundrissfrage, keine Nachrüstung."
+        ]
+      ],
+      "faq": [
+        [
+          "Sind Rauchmelder Pflicht?",
+          "Ja, in allen Bundesländern. Die Details zu Anzahl und Anbringung regelt die jeweilige Landesbauordnung."
+        ],
+        [
+          "Ist ein Kaminofen im Tiny House möglich?",
+          "Technisch ja, mit geprüftem Schornstein, eingehaltenen Abständen und Abnahme durch den Schornsteinfeger. Der Platzbedarf muss im Grundriss stehen."
+        ],
+        [
+          "Wie sicher ist eine Stahlkonstruktion im Brandfall?",
+          "Der Aufbau wird projektbezogen spezifiziert. Entscheidend für die Personensicherheit sind aber Rettungswege und Melder, nicht das Tragwerksmaterial allein."
+        ]
+      ]
+    },
+    "chalet": {
+      "cat": "vergleich-und-alternativen",
+      "title": "Chalet-Stil",
+      "what": "Das Chalet ist nicht nur eine Optik, sondern eine Bauentscheidung: Steildach, größere Aufbauhöhe und ein Aufbau, der für Schneelast und lange Heizperioden ausgelegt wird.",
+      "points": [
+        [
+          "Warum das Steildach mehr ist als Stil",
+          "Ein geneigtes Dach führt Schnee ab, statt ihn zu sammeln, und schafft im Loft echte Stehhöhe am First statt einer reinen Liegefläche. In Berg- und Nordlagen ist das der Grund, warum MD 6 dort am häufigsten gewählt wird — nicht das Aussehen."
+        ],
+        [
+          "Die Proportion des Wohnraums ändert sich",
+          "Mehr Raumhöhe verändert, wie ein kompakter Grundriss wirkt. Derselbe Quadratmeterwert fühlt sich unter einem Steildach anders an als unter einem Flachdach — das ist der belastbarste Teil des Chalet-Arguments."
+        ],
+        [
+          "Wo es sich nicht lohnt",
+          "In milden, schneefreien Lagen zahlt man Dachgeometrie und Aufbauhöhe mit, ohne den Vorteil zu nutzen. Dort bringt dasselbe Budget in MD 1 oder MD 3 mehr nutzbare Fläche."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Chalet-Optik ohne Chalet-Auslegung bestellen",
+          "Steildach ohne die zugehörige Dämm- und Lastauslegung ist Dekoration. Die Schneelastzone am Standort gehört in die Spezifikation."
+        ],
+        [
+          "Die Aufbauhöhe beim Transport vergessen",
+          "Mehr Höhe heißt mehr Transporthöhe. Brücken, Bäume und Torbögen auf der letzten Zufahrt müssen vorher bekannt sein."
+        ],
+        [
+          "Den Chalet-Charakter über den Grundriss stellen",
+          "Ein schönes Dach ersetzt kein zweites Loft und keinen abschließbaren Raum. Erst die Nutzung, dann die Silhouette."
+        ]
+      ],
+      "faq": [
+        [
+          "Was unterscheidet MD 6 von den anderen Modellen?",
+          "Steildach mit Schneeabtrag, größere Raumhöhe, Stehhöhe im Loft am First und eine Auslegung auf lange Heizperioden."
+        ],
+        [
+          "Ist ein Chalet teurer?",
+          "MD 6 ist das Modell mit dem höchsten Einstiegspreis der Reihe. Der Aufpreis zahlt sich dort aus, wo Schnee und lange Winter tatsächlich vorkommen."
+        ],
+        [
+          "Eignet sich der Chalet-Stil für Vermietung?",
+          "In alpinen und nordischen Lagen sehr gut — der Charakter ist Teil des Buchungsgrundes."
+        ]
+      ]
+    },
+    "daemmung": {
+      "cat": "technik-und-konstruktion",
+      "title": "Dämmung",
+      "what": "Dämmung ist keine Zahl, sondern eine Standortentscheidung. Ein Aufbau für den Oberrhein und einer für Jütland sind nicht dasselbe Haus, auch bei identischem Grundriss.",
+      "points": [
+        [
+          "Heizperiode, Schneelast, Windzone",
+          "Diese drei Werte am konkreten Ort bestimmen die Auslegung. Deshalb fragen wir die Adresse vor der Produktion ab und nicht danach. Für Dauerwohnen liegt der Aufbau in der Regel eine Stufe über dem für reine Feriennutzung."
+        ],
+        [
+          "Dämmung wirkt nur mit Dichtheit und Lüftung",
+          "Eine starke Dämmschicht mit undichten Anschlüssen verliert ihren Vorteil an Konvektion; eine dichte Hülle ohne Lüftung sammelt Feuchte. Die drei Punkte werden zusammen entschieden — das ist der wichtigste Satz zum Thema."
+        ],
+        [
+          "Der Fensteranteil ist der größte Einzelverlust",
+          "In Dänemark und der Schweiz ist die verglaste Fläche häufig der größte einzelne Wärmeverlust des Hauses. Deshalb wird sie standortbezogen dimensioniert und nicht pauschal maximiert — auch bei einem Panoramamodell wie MD 1."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Nach Zentimetern statt nach Standort fragen",
+          "Eine Dämmstärke ohne Klimadaten ist eine Zahl ohne Aussage. Erst der Ort, dann der Aufbau."
+        ],
+        [
+          "Wärmebrücken an Durchdringungen ignorieren",
+          "Fensteranschlüsse, Leitungsdurchführungen und Auflagerpunkte entscheiden in der Praxis mehr über den Verbrauch als die letzten zwei Zentimeter Dämmstoff."
+        ],
+        [
+          "Sommerlichen Wärmeschutz vergessen",
+          "Dämmung hält auch Wärme drinnen. Verschattung, Fensterausrichtung und Nachtlüftung gehören zur selben Planung wie der Winterfall."
+        ]
+      ],
+      "faq": [
+        [
+          "Wie stark ist ein MODUNERA Tiny House gedämmt?",
+          "Der Aufbau wird auf die Heizperiode am Zielort ausgelegt und in der Produktionsspezifikation festgeschrieben — es gibt keinen pauschalen Wert für alle Standorte."
+        ],
+        [
+          "Reicht die Dämmung für Dauerwohnen?",
+          "Für Dauerwohnen wird in der Regel eine Stufe stärker ausgelegt als für Feriennutzung. Sagen Sie uns die Nutzung, bevor wir spezifizieren."
+        ],
+        [
+          "Was bringt mehr: mehr Dämmung oder bessere Fenster?",
+          "Das hängt vom Fensteranteil ab. Bei großzügiger Verglasung ist die Fensterqualität meist der wirksamere Hebel."
+        ]
+      ]
+    },
+    "energieverbrauch": {
+      "cat": "energie-und-autarkie",
+      "title": "Energieverbrauch",
+      "what": "Ein kleines Haus verbraucht nicht automatisch wenig. Es verbraucht wenig, wenn Hülle, Technik und Nutzung zusammenpassen — und viel, wenn eine der drei nicht mitspielt.",
+      "points": [
+        [
+          "Grundlast, Heizlast, Spitzenlast",
+          "Kühlschrank, Router, Standby und Lüftung laufen durch und bilden die Grundlast. Die Heizlast folgt der Heizperiode und der Hülle. Spitzen entstehen durch Herd, Wasserkocher, Boiler und Waschmaschine. Wer off-grid plant, dimensioniert nach der Spitze und rechnet mit der Grundlast."
+        ],
+        [
+          "Warmwasser wird unterschätzt",
+          "In einem gut gedämmten kompakten Haus ist Warmwasser häufig ein größerer Posten als das Heizen. Duschverhalten, Speichergröße und Erzeuger gehören deshalb in dieselbe Betrachtung wie die Heizung."
+        ],
+        [
+          "Nutzerverhalten schlägt Technik",
+          "Zwei identische Häuser mit derselben Ausstattung können sich im Jahresverbrauch deutlich unterscheiden. Das ist kein Argument gegen gute Technik — es ist das Argument dafür, den Verbrauch zu messen statt zu schätzen."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Mit Verbrauchswerten aus dem Katalog rechnen",
+          "Katalogwerte gelten für Normbedingungen. Ihr Standort, Ihre Belegung und Ihr Duschverhalten stehen dort nicht drin."
+        ],
+        [
+          "Einen Heizlüfter als Reserve einplanen",
+          "Elektrische Direktheizung ist die teuerste Kilowattstunde im Haus und sprengt bei Off-Grid-Betrieb jede Batterieauslegung."
+        ],
+        [
+          "Die Lüftungsanlage abschalten, um Strom zu sparen",
+          "Der eingesparte Strom ist minimal, der Feuchteschaden nicht. Das ist die schlechteste Sparmaßnahme im ganzen Haus."
+        ]
+      ],
+      "faq": [
+        [
+          "Wie viel Strom verbraucht ein Tiny House?",
+          "Das hängt von Hülle, Technik, Standort und Nutzung ab. Belastbar wird die Zahl erst mit Ihrem Verbrauchsprofil — nicht aus einer Tabelle."
+        ],
+        [
+          "Ist ein Tiny House günstiger im Unterhalt?",
+          "In der Regel ja, weil weniger Fläche beheizt wird. Der Vorteil verschwindet, wenn die Hülle knapp ausgelegt oder elektrisch direkt geheizt wird."
+        ],
+        [
+          "Welches Modell hat den niedrigsten Grundverbrauch?",
+          "MD 7 — ein klarer Grundriss ohne Zusatzräume, die konditioniert werden müssen. Deshalb ist es auch die häufigste Basis für Solarpakete."
+        ]
+      ]
+    },
+    "familie": {
+      "cat": "grundriss-und-innenraum",
+      "title": "Tiny House für Familien",
+      "what": "Mit Kindern scheitert ein Tiny House selten an der Fläche und fast immer daran, dass niemand irgendwo allein sein kann.",
+      "points": [
+        [
+          "Zwei getrennte Schlafbereiche statt einem großen",
+          "MD 2 ist das einzige Modell der Reihe mit zwei Lofts an den Stirnseiten, zwischen denen Bad und Wohnbereich liegen. Kinder und Erwachsene schlafen damit nicht übereinander, sondern mit dem gesamten Wohnraum zwischen sich — der einzige Weg, auf dieser Fläche echte Trennung herzustellen."
+        ],
+        [
+          "Stauraum ist bei Kindern die härteste Anforderung",
+          "Kleidung in mehreren Größen, Spielzeug, Schulsachen, Sportgeräte. Treppe als Stauraummöbel, Podeste und Einbauten aus der eigenen Möbelfertigung lösen das dort, wo Katalogmodule aufhören."
+        ],
+        [
+          "Der Grundriss muss mitwachsen",
+          "Ein Zweijähriger und ein Zwölfjähriger brauchen unterschiedliche Häuser. Wer mit Kindern plant, sollte den Zeitraum realistisch benennen — für ein Kleinkind reicht MD 3, für zwei Schulkinder wird MD 2 zur Untergrenze."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Nach heutiger Kindergröße planen",
+          "Ein Loft, in dem ein Sechsjähriger bequem sitzt, ist für einen Vierzehnjährigen ein Kriechraum. Planen Sie den Zeitraum, nicht den Moment."
+        ],
+        [
+          "Einen Arbeitsplatz für Erwachsene vergessen",
+          "Homeoffice und Hausaufgaben am selben Tisch funktionieren wochentags nicht. Ein abschließbarer Raum ist bei Familien kein Luxus."
+        ],
+        [
+          "Den Eingangsbereich zu klein planen",
+          "Vier Personen mit Jacken, Schuhen und Rucksäcken brauchen eine Ablagefläche. Ohne sie landet alles im Wohnbereich."
+        ]
+      ],
+      "faq": [
+        [
+          "Passt eine vierköpfige Familie in ein Tiny House?",
+          "MD 2 ist auf vier bis fünf Schlafplätze ausgelegt. Für Dauerwohnen empfehlen wir, an der unteren Zahl zu planen."
+        ],
+        [
+          "Ab welchem Alter wird es für Kinder eng?",
+          "Weniger das Alter als der Bedarf an eigenem Rückzugsraum. Ab dem Schulalter wird ein zweiter, abschließbarer Bereich zum entscheidenden Punkt."
+        ],
+        [
+          "Welches Modell für Familien?",
+          "MD 2 als erste Empfehlung, MD 3 mit einem Kleinkind, MD 4 wenn viel Zeit draußen verbracht wird."
+        ]
+      ]
+    },
+    "fenster": {
+      "cat": "technik-und-konstruktion",
+      "title": "Fenster",
+      "what": "Fenster sind im Tiny House gleichzeitig der stärkste gestalterische Hebel und der größte einzelne Wärmeverlust. Beides wird in derselben Entscheidung festgelegt.",
+      "points": [
+        [
+          "U-Wert und solarer Eintrag zusammen betrachten",
+          "Bei Panoramaflächen ist der Wärmeverlust im Winter nur die halbe Rechnung; der solare Eintrag im Sommer ist die andere. MODUNERA verwendet wärmeisolierte, thermisch getrennte PVC-Tischlerei mit doppelt gehärtetem Thermopane-Glas, projektbezogen dimensioniert."
+        ],
+        [
+          "Ausrichtung schlägt Größe",
+          "Dieselbe Fensterfläche nach Süden, Osten oder Norden ergibt drei verschiedene Häuser. Verschattung, Dachüberstand und Fensterausrichtung gehören in dieselbe Planung wie die Verglasung selbst."
+        ],
+        [
+          "Das Loftfenster ist auch Rettungsweg",
+          "Im Schlafbereich sind Maß, Brüstungshöhe und Öffnungsart nicht nur eine Komfortfrage. Die konkreten Anforderungen setzt die Landesbauordnung; die Umsetzung muss vor der Produktion feststehen."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Maximale Verglasung ohne Verschattung",
+          "Eine Südfront ohne Dachüberstand oder Außenverschattung macht das Haus im Juli unbenutzbar — und Innenrollos lösen das nur zur Hälfte."
+        ],
+        [
+          "Nur auf den Glaswert schauen",
+          "Der Anschluss zwischen Fenster und Wand ist die häufigere Schwachstelle als das Glas. Einbaudetail und Dichtebene entscheiden."
+        ],
+        [
+          "Fenster planen, die man nicht putzen kann",
+          "Auf Höhe und über der Veranda muss man auch drankommen. Das klingt trivial und wird regelmäßig vergessen."
+        ]
+      ],
+      "faq": [
+        [
+          "Welche Verglasung wird verbaut?",
+          "Doppelt gehärtete Thermopane-Isolierverglasung in thermisch getrennter PVC-Tischlerei, standortbezogen dimensioniert."
+        ],
+        [
+          "Sind große Fensterflächen im Winter ein Problem?",
+          "Nicht, wenn sie zur Standortauslegung passen. In Dänemark und der Schweiz wird der Fensteranteil bewusst begrenzt."
+        ],
+        [
+          "Welches Modell hat die größte Fensterfläche?",
+          "MD 1 mit durchgehender Panoramaverglasung und optionaler Glasdecke über dem Loft."
+        ]
+      ]
+    },
+    "ferienpark": {
+      "cat": "nutzung-und-geschaeftsmodell",
+      "title": "Ferienpark",
+      "what": "Im Ferienpark gelten zwei Regelwerke gleichzeitig: das öffentliche Baurecht und der Vertrag des Betreibers. Das zweite wird häufiger unterschätzt.",
+      "points": [
+        [
+          "Die Betreiberregeln sind Teil der Kalkulation",
+          "Standplatzmiete, Nebenkostenumlage, Vermittlungsprovision, Vorgaben zu Fassade, Farbe und Maßen sowie Laufzeit und Kündigungsfristen des Standplatzvertrags bestimmen die Wirtschaftlichkeit mit. Lesen Sie den Vertrag, bevor Sie das Objekt bestellen."
+        ],
+        [
+          "Saisonale Nutzungsbeschränkungen",
+          "In vielen Ferien- und Wochenendhausgebieten ist die ganzjährige Wohnnutzung ausgeschlossen. Für ein reines Vermietungsobjekt ist das unerheblich; für einen geplanten Zweitwohnsitz ist es entscheidend."
+        ],
+        [
+          "Standardisierte Zufahrt, standardisierte Entladung",
+          "Der Vorteil eines Parks: Zufahrt, Untergrund und Anschlüsse sind meist vorbereitet. Der Nachteil: Aufstellfenster, Kranstandort und Termine gibt der Betreiber vor. Das gehört früh in die Lieferplanung."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Den Standplatzvertrag nach der Bestellung lesen",
+          "Vorgaben zu Maßen, Fassade und Farbe können ein bereits konfiguriertes Objekt unzulässig machen. Der Vertrag gehört vor die Konfiguration."
+        ],
+        [
+          "Mit der Auslastung des Parks als eigener Auslastung rechnen",
+          "Die Zahl des Betreibers ist ein Durchschnitt über alle Objekte, Lagen und Preisklassen. Ihre Einheit ist keine davon."
+        ],
+        [
+          "Wiederverkauf nicht prüfen",
+          "Manche Verträge binden den Verkauf an den Betreiber oder an den Standplatz. Das beeinflusst den Wiederverkaufswert erheblich."
+        ]
+      ],
+      "faq": [
+        [
+          "Darf ich in einem Ferienpark dauerhaft wohnen?",
+          "In der Regel nicht. Ferien- und Wochenendhausgebiete schließen die ganzjährige Wohnnutzung meist aus — Details stehen im Bebauungsplan und in der Parkordnung."
+        ],
+        [
+          "Welches Modell wird in Ferienparks am häufigsten gewählt?",
+          "MD 4 wegen der überdachten Veranda und MD 2 dort, wo vier Gäste untergebracht werden sollen."
+        ],
+        [
+          "Wer kümmert sich um die Anschlüsse?",
+          "In etablierten Parks sind sie meist vorbereitet. Die Bedingungen und Kosten legt der Betreiber fest."
+        ]
+      ]
+    },
+    "feuchteschutz": {
+      "cat": "betrieb-und-wartung",
+      "title": "Feuchteschutz",
+      "what": "Feuchtigkeit, die in 140 Quadratmetern kaum auffällt, wird in 28 Quadratmetern innerhalb einer Heizperiode sichtbar. Das ist der wichtigste Betriebspunkt eines Tiny House.",
+      "points": [
+        [
+          "Woher die Feuchte kommt",
+          "Zwei Personen geben pro Tag mehrere Liter Wasser an die Raumluft ab, dazu Duschen, Kochen und Wäschetrocknen. In einem kleinen, dichten Volumen ist die relative Luftfeuchte deshalb schneller kritisch als in einer Wohnung — bei gleicher Menge, aber einem Bruchteil des Luftvolumens."
+        ],
+        [
+          "Lüftung mit Wärmerückgewinnung ist die wirksamste Maßnahme",
+          "Sie führt Feuchte kontinuierlich ab und hält dabei die Wärme im Haus. Ohne sie entscheidet das Nutzerverhalten über die Bauteilfeuchte — und im Februar will niemand zuverlässig dreimal täglich stoßlüften."
+        ],
+        [
+          "Wo Schäden zuerst auftreten",
+          "An Wärmebrücken und hinter Möbeln an Außenwänden: Fensterlaibungen, Ecken, Auflagerpunkte, die Rückwand des Schranks. Wer diese Stellen einmal jährlich kontrolliert, findet fast jedes Problem, solange es noch klein ist."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Möbel bündig an die Außenwand stellen",
+          "Hinter der Rückwand steht die Luft, die Oberfläche kühlt ab und Kondensat sammelt sich genau dort, wo es niemand sieht. Ein paar Zentimeter Abstand lösen das."
+        ],
+        [
+          "Wäsche im Haus trocknen",
+          "Eine Maschinenladung gibt mehrere Liter Wasser an die Raumluft ab. In einem kompakten Volumen ohne Lüftung ist das der schnellste Weg zum Schimmel."
+        ],
+        [
+          "Im Urlaub Heizung und Lüftung ganz abschalten",
+          "Ein ausgekühltes, unbelüftetes Haus sammelt Feuchte an den kältesten Flächen. Frostwächterbetrieb und laufende Grundlüftung kosten wenig und verhindern viel."
+        ]
+      ],
+      "faq": [
+        [
+          "Schimmeln Tiny Houses schneller?",
+          "Sie verzeihen Fehler schneller nicht. Bei richtiger Lüftung und sauberen Anschlussdetails ist das Risiko nicht höher als bei einem großen Haus."
+        ],
+        [
+          "Brauche ich zwingend eine Lüftungsanlage?",
+          "Für dauerhafte Bewohnung empfehlen wir sie als Standard. Ohne sie hängt der Feuchteschutz vollständig am Nutzerverhalten."
+        ],
+        [
+          "Wie erkenne ich ein Feuchteproblem früh?",
+          "Beschlagene Fensterecken am Morgen, muffiger Geruch, dunkle Ränder hinter Möbeln. Alle drei sind frühe, gut behandelbare Signale."
+        ]
+      ]
+    },
+    "finanzierung": {
+      "cat": "kosten-und-finanzierung",
+      "title": "Finanzierung",
+      "what": "Ob ein Tiny House finanzierbar ist, hängt weniger vom Preis ab als von seiner rechtlichen Einordnung — und die folgt aus der Genehmigungslage, nicht aus dem Produkt.",
+      "points": [
+        [
+          "Immobilie oder bewegliche Sache",
+          "Ist das Objekt fest mit einem Grundstück verbunden und genehmigt, kommt eine Immobilienfinanzierung mit Grundschuld in Betracht. Steht es als bewegliche Sache auf gemietetem Grund, bleibt meist nur ein Ratenkredit oder Leasing — zu anderen Zinsen und Laufzeiten. Diese Unterscheidung ist die erste Frage an Ihre Bank."
+        ],
+        [
+          "Das Grundstück ist Teil der Rechnung",
+          "Viele Finanzierungen scheitern nicht am Haus, sondern daran, dass Grundstück, Erschließung und Nebenkosten nicht im Antrag stehen. Rechnen Sie mit dem Gesamtprojekt, nicht mit dem Werkspreis."
+        ],
+        [
+          "Eigenkapital und Zahlungsplan",
+          "Produktion, Transport und Fertigstellung laufen in Etappen. Ein Finanzierungsplan, der zum Zahlungsplan passt, verhindert Zwischenfinanzierungen — das gehört vor die Bestellung, nicht zwischen die Raten."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Die Bank erst nach der Bestellung fragen",
+          "Die Einordnung als Immobilie oder bewegliche Sache entscheidet über Zins und Laufzeit. Diese Antwort brauchen Sie vorher."
+        ],
+        [
+          "Nebenkosten nicht mitfinanzieren",
+          "Fundament, Anschlüsse, Entladung, Planung und Gebühren summieren sich. Wer nur den Werkspreis finanziert, zahlt den Rest aus laufenden Mitteln."
+        ],
+        [
+          "Förderungen als sicher einplanen",
+          "Programme, Bedingungen und Budgets ändern sich. Eine Förderung ist ein möglicher Bonus, keine Kalkulationsgrundlage."
+        ]
+      ],
+      "faq": [
+        [
+          "Kann ich ein Tiny House finanzieren?",
+          "Das hängt von der rechtlichen Einordnung ab. Fragen Sie Ihre Bank in genau diesen Begriffen — die Antwort folgt aus der Klassifizierung, nicht aus dem Produkt."
+        ],
+        [
+          "Wie hoch sollte das Eigenkapital sein?",
+          "Das legt Ihre Bank fest. Planen Sie Nebenkosten und einen Puffer für standortabhängige Positionen ein."
+        ],
+        [
+          "Gibt es Förderungen für Tiny Houses?",
+          "Programme unterscheiden sich je Bundesland und Kommune und ändern sich regelmäßig. Prüfen Sie sie, aber kalkulieren Sie nicht damit."
+        ]
+      ]
+    },
+    "gaestehaus": {
+      "cat": "nutzung-und-geschaeftsmodell",
+      "title": "Gästehaus",
+      "what": "Ein Tiny House als Gästehaus im eigenen Garten ist eine der einfachsten Nutzungen — solange die Gemeinde eine zweite bauliche Anlage auf dem Grundstück zulässt.",
+      "points": [
+        [
+          "Zweite Anlage auf demselben Grundstück",
+          "Maßgeblich sind Bebauungsplan, überbaubare Grundstücksfläche, Grundflächenzahl und Abstandsflächen. Ein Gästehaus ist baurechtlich kein Gartenhaus, sobald es zum Aufenthalt dient. Die Frage an die Bauaufsicht lautet konkret: zweite Wohneinheit oder Nebenanlage?"
+        ],
+        [
+          "Anschlüsse sind meist der einfache Teil",
+          "Auf einem erschlossenen Grundstück sind Strom, Wasser und Abwasser in erreichbarer Nähe. Das ist der Grund, warum Gästehausprojekte budgetseitig planbarer sind als Projekte auf unerschlossenen Grundstücken."
+        ],
+        [
+          "Nutzung realistisch benennen",
+          "Gästehaus, Einliegerwohnung, Homeoffice oder spätere Vermietung sind vier verschiedene Nutzungsarten mit vier verschiedenen Anforderungen. Wer die spätere Nutzung schon kennt, sollte sie im Antrag benennen — nachträgliche Nutzungsänderungen sind aufwendiger."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Von der Gartenhaus-Regel ausgehen",
+          "Verfahrensfreie Größen für Geräteschuppen gelten nicht für Aufenthaltsräume. Sobald jemand darin schläft, ist es ein anderer Fall."
+        ],
+        [
+          "Abstandsflächen zum Nachbarn übersehen",
+          "Sie sind einer der häufigsten Ablehnungsgründe bei Zweitgebäuden — und lassen sich vorher am Lageplan prüfen."
+        ],
+        [
+          "Vermietung planen, aber Gästehaus beantragen",
+          "Wenn die Vermietung von Anfang an vorgesehen ist, gehört sie in den Antrag. Eine spätere Nutzungsänderung ist der aufwendigere Weg."
+        ]
+      ],
+      "faq": [
+        [
+          "Darf ich ein Tiny House in meinen Garten stellen?",
+          "Das entscheidet die Bauaufsicht anhand von Bebauungsplan, überbaubarer Fläche und Abstandsflächen. Fragen Sie mit Lageplan und Maßen an."
+        ],
+        [
+          "Welches Modell eignet sich als Gästehaus?",
+          "MD 7 oder MD 8 für zwei Personen, MD 3 wenn der Raum auch als Homeoffice dienen soll."
+        ],
+        [
+          "Brauche ich eigene Anschlüsse?",
+          "In der Regel lassen sich die vorhandenen Hausanschlüsse erweitern. Die Bedingungen setzt der örtliche Versorger."
+        ]
+      ]
+    },
+    "gastronomie": {
+      "cat": "nutzung-und-geschaeftsmodell",
+      "title": "Gastronomie",
+      "what": "Ein Tiny House als Café, Hofladen oder Ausschank ist technisch machbar — und hebt das Projekt sofort in ein anderes Regelwerk: Gewerbe, Hygiene und Barrierefreiheit.",
+      "points": [
+        [
+          "Drei Regelwerke gleichzeitig",
+          "Baurecht entscheidet über den Standort, Gewerbe- und Gaststättenrecht über den Betrieb, Lebensmittelhygienerecht über die Ausstattung. Handwaschbecken, getrennte Bereiche, Oberflächen und Kühlung folgen dem dritten, nicht dem eigenen Geschmack."
+        ],
+        [
+          "Barrierefreiheit und Sanitär",
+          "Öffentlich zugängliche Nutzungen bringen Anforderungen an Zugang und Sanitärräume mit, die auf 28 Quadratmetern selten im selben Gebäude lösbar sind. Häufig ist die Kombination aus Tiny House als Ausgabe und einem separaten Sanitärbereich der praktikable Weg."
+        ],
+        [
+          "Der Vorteil: Standortflexibilität",
+          "Genau deshalb funktioniert das Konzept an saisonalen Orten — Marktplatz, Hofgelände, Festivalfläche, Badesee. Die Einheit ist versetzbar, das Genehmigungsthema wandert allerdings mit."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Mit Wohnnutzungs-Annahmen planen",
+          "Gastronomie ist eine gewerbliche Nutzung. Alles von der Zulässigkeit bis zur Ausstattung folgt anderen Regeln als beim Wohnen."
+        ],
+        [
+          "Die Sanitärfrage aufschieben",
+          "Sie ist bei öffentlich zugänglichen Nutzungen fast immer der begrenzende Faktor — und lässt sich nachträglich am schlechtesten lösen."
+        ],
+        [
+          "Stromlast der Küchentechnik unterschätzen",
+          "Kühlung, Kaffeemaschine und Induktion zusammen sprengen jede Wohnhaus-Auslegung. Die Anschlussleistung gehört an den Anfang der Planung."
+        ]
+      ],
+      "faq": [
+        [
+          "Kann ein Tiny House als Café betrieben werden?",
+          "Technisch ja. Baurechtlich, gewerberechtlich und hygienerechtlich sind mehrere Genehmigungen nötig — klären Sie alle drei vor der Bestellung."
+        ],
+        [
+          "Welche Ausstattung braucht es?",
+          "Das gibt das Lebensmittelhygienerecht vor, nicht der Hersteller. Wir setzen die Anforderungen in der Produktionsspezifikation um, wenn sie feststehen."
+        ],
+        [
+          "Ist das Konzept mobil einsetzbar?",
+          "Die Einheit ist versetzbar. Die Genehmigungen sind es nicht — jeder neue Standort ist ein neuer Vorgang."
+        ]
+      ]
+    },
+    "genehmigung-deutschland": {
+      "cat": "genehmigung-und-recht",
+      "title": "Genehmigung in Deutschland",
+      "what": "Deutschland hat kein Tiny-House-Recht. Es hat sechzehn Landesbauordnungen, ein Baugesetzbuch und eine untere Bauaufsichtsbehörde, die im Einzelfall entscheidet.",
+      "points": [
+        [
+          "Die drei Fälle des Baugesetzbuchs",
+          "Im Geltungsbereich eines Bebauungsplans richtet sich alles nach dessen Festsetzungen. Im unbeplanten Innenbereich gilt § 34 BauGB: das Vorhaben muss sich in die Eigenart der näheren Umgebung einfügen. Im Außenbereich gilt § 35 BauGB, wo Wohnnutzung nur privilegiert oder als sonstiges Vorhaben ohne Beeinträchtigung öffentlicher Belange zulässig ist — praktisch die härteste Hürde."
+        ],
+        [
+          "Landesrecht bestimmt das Verfahren",
+          "Ob Baugenehmigung, Genehmigungsfreistellung oder vereinfachtes Verfahren greift, steht in der Landesbauordnung. Auch die Anforderungen an Rettungswege, Abstandsflächen und Aufenthaltsräume unterscheiden sich zwischen den Ländern."
+        ],
+        [
+          "Erschließung als eigenständige Bedingung",
+          "Ein Vorhaben ist nur zulässig, wenn die Erschließung gesichert ist: Zufahrt, Wasser, Abwasser, Strom. Ein Grundstück ohne gesicherte Erschließung ist auch mit passender Ausweisung kein Bauplatz."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Aussagen aus anderen Bundesländern übernehmen",
+          "Was in Brandenburg gilt, gilt in Baden-Württemberg nicht automatisch. Die Bauordnung ist Landesrecht."
+        ],
+        [
+          "Den Außenbereich unterschätzen",
+          "§ 35 BauGB ist der Punkt, an dem die meisten deutschen Tiny-House-Projekte enden. Prüfen Sie ihn zuerst, nicht zuletzt."
+        ],
+        [
+          "Erschließung als Formsache behandeln",
+          "Ohne gesicherte Erschließung ist ein Vorhaben unzulässig, egal wie gut alles andere passt."
+        ]
+      ],
+      "faq": [
+        [
+          "Welche Behörde ist zuständig?",
+          "Die untere Bauaufsichtsbehörde des Landkreises oder der kreisfreien Stadt."
+        ],
+        [
+          "Gibt es genehmigungsfreie Tiny Houses?",
+          "Verfahrensfreiheit ist möglich, bedeutet aber nicht Zulässigkeit: auch ein verfahrensfreies Vorhaben muss materiell zulässig sein."
+        ],
+        [
+          "Was kostet das Verfahren?",
+          "Gebühren und Planungsleistungen unterscheiden sich je Gemeinde deutlich. Fragen Sie bei der Bauaufsicht nach der Gebührensatzung."
+        ]
+      ]
+    },
+    "glamping": {
+      "cat": "nutzung-und-geschaeftsmodell",
+      "title": "Glamping",
+      "what": "Glamping verkauft den Ort und liefert den Komfort. Das Gebäude ist dabei das Mittel, mit dem eine Lage ganzjährig buchbar wird.",
+      "points": [
+        [
+          "Standort vor Ausstattung",
+          "Der Gast bucht die Aussicht, den See, den Waldrand. Die Ausstattung entscheidet über die Bewertung, der Ort über den Preis. Deshalb ist die Genehmigungsfrage im Außenbereich das eigentliche Nadelöhr jedes Glamping-Projekts und nicht die Möbelauswahl."
+        ],
+        [
+          "Ganzjahresbetrieb verändert die Rechnung",
+          "Ein Objekt, das nur fünf Monate vermietbar ist, muss seine Jahreskosten in fünf Monaten verdienen. Winterfeste Auslegung — Dämmung, Fensterdimensionierung, Lüftung, Heizsystem — ist deshalb eine betriebswirtschaftliche und keine Komfortentscheidung."
+        ],
+        [
+          "Der Außenraum ist Teil des Produkts",
+          "Überdachte Veranda, Feuerstelle, Sichtschutz zum Nachbarplatz: Das ist der Unterschied zwischen einem Haus auf einer Wiese und einem Glamping-Erlebnis. MD 4 hat die Veranda deshalb im Grundriss und nicht als Anbau."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Den Außenbereich als Bauland behandeln",
+          "Die schönsten Glamping-Lagen sind fast nie Bauland. § 35 BauGB entscheidet, nicht der Grundstückspreis."
+        ],
+        [
+          "Nur die Hochsaison kalkulieren",
+          "Augustpreise mit Novemberauslastung sind kein Geschäftsmodell. Rechnen Sie über zwölf Monate."
+        ],
+        [
+          "Sichtschutz vergessen",
+          "Zwei Einheiten mit Blick ineinander halbieren den Erlebniswert beider. Das ist eine Standortplanung, keine Nachrüstung."
+        ]
+      ],
+      "faq": [
+        [
+          "Brauche ich für Glamping eine Baugenehmigung?",
+          "In aller Regel ja, häufig zusätzlich eine gewerbliche Einordnung. Zuständig ist die untere Bauaufsichtsbehörde."
+        ],
+        [
+          "Welches Modell eignet sich für Glamping?",
+          "MD 4 in milden Lagen wegen der Veranda, MD 6 in Berg- und Nordlagen wegen des Winterbetriebs, MD 1 wo die Aussicht verkauft."
+        ],
+        [
+          "Lohnt sich Ganzjahresbetrieb?",
+          "Fast immer, wenn die Lage ihn hergibt. Er verteilt die Fixkosten auf zwölf statt fünf Monate."
+        ]
+      ]
+    },
+    "grundriss": {
+      "cat": "grundriss-und-innenraum",
+      "title": "Grundriss",
+      "what": "Kleine Häuser scheitern aus zwei Gründen: zu wenig Stauraum und kein Ort, an dem man allein sein kann. Beides sind Grundrissfragen und beide werden vor der Produktion entschieden.",
+      "points": [
+        [
+          "Sichtachsen ersetzen Quadratmeter",
+          "MD 1 wirkt als größtes Haus der Reihe, ohne das längste zu sein — weil nichts den Blick von einem Ende zum anderen unterbricht und die Verglasung den Raum in die Landschaft verlängert. Eine falsch gesetzte Trennwand macht aus einem kompakten Grundriss zwei enge."
+        ],
+        [
+          "Eine Tür ist mehr wert als eine Ecke",
+          "Sobald zwei Menschen gleichzeitig zu Hause sind und einer telefoniert, hört ein offener Grundriss auf zu funktionieren. Das ist das ganze Argument für MD 3 und MD 5. Der Raum muss nicht groß sein — er muss eine Tür haben."
+        ],
+        [
+          "Stauraum ist Möbel, kein Rest",
+          "Die Treppe ist die größte einzelne Stauraumchance im Haus und wird bei uns als Möbel gebaut. Weil Küche, Bad, Einbauten und Treppe aus eigener Fertigung kommen, folgen die Maße dem tatsächlichen Grundriss statt Katalogmodulen."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Nach Fläche statt nach Abläufen planen",
+          "Zeichnen Sie einen normalen Morgen: aufstehen, Bad, Kaffee, Jacke, Tür. Wo sich zwei Menschen dabei blockieren, stimmt der Grundriss nicht."
+        ],
+        [
+          "Den Eingangsbereich weglassen",
+          "Jacken, Schuhe, Einkäufe brauchen eine Fläche. Ohne sie landen sie im Wohnbereich und der wirkt sofort halb so groß."
+        ],
+        [
+          "Möbel erst nach dem Haus planen",
+          "Ein Sofa in Standardmaßen kann einen kompakten Grundriss unbrauchbar machen. Einbauten werden mit dem Grundriss zusammen entschieden."
+        ]
+      ],
+      "faq": [
+        [
+          "Welcher Grundriss hat die meiste nutzbare Wohnfläche?",
+          "MD 1 in der 9,70-Meter-Variante: keine Zwischenwände im Erdgeschoss und durchgehende Verglasung."
+        ],
+        [
+          "Kann der Grundriss angepasst werden?",
+          "Küche, Bad, Stauraum und Treppe kommen aus eigener Fertigung, die Maße folgen dem Grundriss. Tragende Positionen und die Installationswand stehen vor der Produktion fest."
+        ],
+        [
+          "Loft oder ebenerdiges Schlafen?",
+          "Ein Loft spart Grundfläche, kostet aber Stehhöhe und Erreichbarkeit. Für Senioren und für Dauerwohnen mit Rückenproblemen lohnt der Blick auf ebenerdige Alternativen."
+        ]
+      ]
+    },
+    "grundstueck": {
+      "cat": "genehmigung-und-recht",
+      "title": "Grundstück",
+      "what": "Das Grundstück entscheidet über Zulässigkeit, Budget und Wohnqualität — in dieser Reihenfolge. Kein technisches Detail am Haus kann eine falsche Parzelle retten.",
+      "points": [
+        [
+          "Ausweisung zuerst prüfen",
+          "Bebauungsplan, Innen- oder Außenbereich und die zulässige Nutzungsart entscheiden, ob Ihr Vorhaben überhaupt möglich ist. Diese Auskunft kostet einen Brief an die Bauaufsicht und gehört vor jede Kaufentscheidung."
+        ],
+        [
+          "Erschließung ist der zweitgrößte Kostenblock",
+          "Die Entfernung zu Strom, Trinkwasser und Kanal bestimmt einen der größten Nebenposten des ganzen Projekts. Zwanzig Meter und zweihundert Meter sind auf dem Exposé derselbe Satz und auf der Rechnung ein fünfstelliger Unterschied."
+        ],
+        [
+          "Zufahrt, Untergrund, Hanglage",
+          "Ein Tieflader braucht Breite, Wendekreis, Höhe und tragfähigen Untergrund; ein Kran braucht einen Stellplatz. Fotos und Maße der letzten hundert Meter gehören zur Grundstücksprüfung, nicht zur Lieferplanung."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Kaufen und dann fragen",
+          "Die Reihenfolge ist der häufigste und teuerste Fehler im ganzen Themenfeld. Erst die schriftliche Auskunft, dann der Notar."
+        ],
+        [
+          "Erschließungskosten schätzen statt erfragen",
+          "Der örtliche Versorger nennt Ihnen die Anschlusskosten für Ihre Adresse kostenlos. Eine Schätzung aus dem Internet tut das nicht."
+        ],
+        [
+          "Die Zufahrt nur im Sommer ansehen",
+          "Ein Feldweg im August und derselbe Weg im November sind zwei verschiedene Zufahrten. Auch für Gäste, wenn Sie vermieten wollen."
+        ]
+      ],
+      "faq": [
+        [
+          "Wie finde ich heraus, ob ein Grundstück geeignet ist?",
+          "Schriftliche Anfrage bei der unteren Bauaufsichtsbehörde mit Adresse, Flurstück, geplanter Nutzung und Maßen."
+        ],
+        [
+          "Kann ich ein Tiny House im Außenbereich aufstellen?",
+          "Nur in eng begrenzten Ausnahmen nach § 35 BauGB. Das ist der häufigste Ablehnungsgrund in Deutschland."
+        ],
+        [
+          "Was kostet die Erschließung?",
+          "Sie hängt fast ausschließlich von der Entfernung zum bestehenden Netz ab. Fragen Sie den Versorger vor dem Kauf."
+        ]
+      ]
+    },
+    "heizung": {
+      "cat": "energie-und-autarkie",
+      "title": "Heizung",
+      "what": "Die richtige Heizung folgt nicht der Quadratmeterzahl, sondern der Belegung: Ein dauerbewohntes Haus und ein Ferienobjekt im Frostwächterbetrieb brauchen unterschiedliche Systeme.",
+      "points": [
+        [
+          "Wärmepumpe braucht Stetigkeit",
+          "Eine Wärmepumpe arbeitet effizient, wenn sie gleichmäßig gegen eine gut gedämmte Hülle läuft. Sie ist eine schlechte Antwort auf ein Haus, das sechsmal im Jahr kalt ist und in zwei Stunden warm sein soll. Für Dauerwohnen ist sie in der Regel die erste Wahl."
+        ],
+        [
+          "Fußbodenheizung gleicht aus, reagiert aber langsam",
+          "Sie verteilt Temperatur gleichmäßig und macht harte Böden angenehm, braucht aber Vorlaufzeit. In Kombination mit einer Wärmepumpe und stetiger Nutzung ist sie stark; für schnelles Aufheizen ist sie es nicht."
+        ],
+        [
+          "Kaminofen ist Zusatz, nicht Grundlast",
+          "Er erzeugt Atmosphäre und im Notfall Wärme ohne Strom, verlangt aber Abstände, einen geprüften Schornstein, die Abnahme durch den Schornsteinfeger und Platz für Holz. Auf 28 Quadratmetern ist das eine Grundrissentscheidung."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Nach Quadratmetern dimensionieren",
+          "Die Heizlast folgt Hülle, Standort und Nutzung. Eine Faustformel aus dem Wohnungsbau passt hier nicht."
+        ],
+        [
+          "Elektrische Direktheizung als Reserve einplanen",
+          "Sie ist die teuerste Kilowattstunde im Haus und sprengt bei Off-Grid-Betrieb jede Batterieauslegung."
+        ],
+        [
+          "Warmwasser separat betrachten",
+          "In einem gut gedämmten kompakten Haus ist Warmwasser oft der größere Posten als das Heizen. Beides gehört in dieselbe Auslegung."
+        ]
+      ],
+      "faq": [
+        [
+          "Welche Heizung ist die richtige?",
+          "Für Dauerwohnen in der Regel eine Wärmepumpe, gegebenenfalls mit Fußbodenheizung. Für Ferienobjekte mit langen Leerständen kommen andere Lösungen in Betracht."
+        ],
+        [
+          "Reicht eine Infrarotheizung?",
+          "Sie heizt direkt elektrisch und ist damit im Betrieb teuer. Als alleinige Lösung für Dauerwohnen empfehlen wir sie nicht."
+        ],
+        [
+          "Kann ich einen Kaminofen einbauen?",
+          "Ja, mit geprüftem Schornstein, eingehaltenen Abständen und Abnahme. Der Platzbedarf muss im Grundriss stehen."
+        ]
+      ]
+    },
+    "homeoffice": {
+      "cat": "grundriss-und-innenraum",
+      "title": "Homeoffice",
+      "what": "Homeoffice im Tiny House scheitert nicht am Schreibtisch, sondern an der Tür. Ein Videocall in einem offenen Grundriss legt das ganze Haus still.",
+      "points": [
+        [
+          "Ein Raum, der schließt",
+          "Das ist der Kern von MD 3 und MD 5. Der Raum muss nicht groß sein — er muss eine Tür haben, damit ein Telefonat, ein schlafendes Kind oder ein Gast nicht das gesamte Haus blockiert. Alles andere am Arbeitsplatz ist Ausstattung."
+        ],
+        [
+          "Licht, Hintergrund, Akustik",
+          "Ein Arbeitsplatz vor der Fensterfront sieht im Call als Silhouette aus. Seitliches Tageslicht, ein ruhiger Hintergrund und Textilien gegen den Nachhall lösen drei Probleme, die sonst jeden Tag neu auftreten."
+        ],
+        [
+          "Technik und Ergonomie",
+          "Netzwerk, Steckdosen an der richtigen Stelle und eine Arbeitshöhe, an der man acht Stunden sitzen kann. Weil die Einbauten aus eigener Fertigung kommen, wird der Arbeitsplatz auf den Grundriss und die Person gemaßt statt auf ein Katalogmodul."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Den Esstisch als Arbeitsplatz einplanen",
+          "Er funktioniert für einen Tag und nicht für ein Jahr. Spätestens wenn zwei Personen zu Hause sind, ist er belegt."
+        ],
+        [
+          "Den Arbeitsplatz ins Loft legen",
+          "Stehhöhe, Belüftung und sommerliche Wärme machen das Loft zum schlechtesten Arbeitsort im Haus."
+        ],
+        [
+          "Nur an Strom denken, nicht an Netz",
+          "Mobilfunk am Waldrand ist keine Arbeitsgrundlage. Prüfen Sie Verfügbarkeit und Alternativen vor dem Grundstückskauf."
+        ]
+      ],
+      "faq": [
+        [
+          "Welches Modell eignet sich für Homeoffice?",
+          "MD 3 als erste Empfehlung, MD 5 als kompaktere Variante. Beide haben einen abschließbaren Raum im Erdgeschoss."
+        ],
+        [
+          "Ist ein Tiny House für zwei Arbeitsplätze geeignet?",
+          "Nur eingeschränkt. Zwei parallele Videocalls funktionieren auf dieser Fläche in der Regel nicht."
+        ],
+        [
+          "Wie löse ich die Internetanbindung?",
+          "Standortabhängig über Kabel, Mobilfunk oder Satellit. Prüfen Sie das vor dem Kauf des Grundstücks."
+        ]
+      ]
+    },
+    "import-tuerkei": {
+      "cat": "transport-und-import",
+      "title": "Import aus der Türkei",
+      "what": "Der Import ist Routine — vorausgesetzt, die Papiere stimmen und jemand macht sie beruflich. Der Unterschied zwischen EU-Zielen und der Schweiz ist dabei der wichtigste Punkt.",
+      "points": [
+        [
+          "A.TR und die Zollunion",
+          "Für Industriewaren mit A.TR-Warenverkehrsbescheinigung fallen bei der Einfuhr in die EU in der Regel keine Zölle an. Was bleibt, sind Einfuhrumsatzsteuer und Abwicklungskosten. Die konkrete Behandlung Ihrer Sendung bestätigt Ihre Zollagentur vor dem Transport."
+        ],
+        [
+          "Die Schweiz ist die Ausnahme",
+          "Sie gehört nicht zur EU-Zollunion. Bei der Einfuhr fallen Verzollung, Einfuhrsteuer und Abwicklung an. Wer mit EU-Bedingungen kalkuliert, bekommt die Differenz an der Grenze präsentiert."
+        ],
+        [
+          "Vorlauf entsteht nicht auf der Straße",
+          "Die reine Fahrzeit liegt im Bereich weniger Tage. Der Gesamtvorlauf wird von Produktionsplanung, Dokumentation und dem Entladefenster am Ziel bestimmt — planen Sie diese drei, nicht die Kilometer."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Die Zollabwicklung selbst übernehmen",
+          "Ein einziger fehlender Beleg hält eine Sendung fest. Die Agenturkosten sind kalkulierbar, die Standzeiten nicht."
+        ],
+        [
+          "Einfuhrumsatzsteuer als Zoll verstehen",
+          "Das sind zwei verschiedene Positionen. Zollfreiheit bedeutet nicht steuerfrei — die Einfuhrumsatzsteuer fällt trotzdem an."
+        ],
+        [
+          "Den Liefertermin vor der Genehmigung fixieren",
+          "Ein Haus, das ankommt, bevor der Standort geklärt ist, verursacht Standkosten. Genehmigung und Produktion sollten parallel laufen, die Lieferung danach."
+        ]
+      ],
+      "faq": [
+        [
+          "Fallen Zölle an?",
+          "Für Industriewaren mit A.TR-Bescheinigung in die EU in der Regel nicht. Einfuhrumsatzsteuer und Abwicklung bleiben. Für die Schweiz gelten eigene Regeln."
+        ],
+        [
+          "Wer erledigt die Zollformalitäten?",
+          "Eine Zollagentur im Zielland. Wir liefern die für die Anmeldung erforderlichen Unterlagen."
+        ],
+        [
+          "Wie lange dauert die Abwicklung?",
+          "Bei vollständigen Papieren ist sie Routine. Fehlende Unterlagen sind die häufigste Ursache für Verzögerungen."
+        ]
+      ]
+    },
+    "innenraum-planen": {
+      "cat": "grundriss-und-innenraum",
+      "title": "Innenraum planen",
+      "what": "Im Tiny House gibt es keine Restflächen. Jeder Zentimeter hat eine Aufgabe — und wer sie nicht vergibt, bekommt sie als Unordnung zurück.",
+      "points": [
+        [
+          "Vom Ablauf her denken, nicht vom Möbel",
+          "Zeichnen Sie einen normalen Morgen und einen normalen Abend durch. Wo sich zwei Menschen blockieren, wo etwas abgestellt wird, wo Licht fehlt — das sind die Punkte, die der Grundriss lösen muss, bevor über Farben gesprochen wird."
+        ],
+        [
+          "Vertikal denken",
+          "Wandhohe Einbauten, Podeste mit Stauraum, die Treppe als Möbel, Ablagen über Türen. Die Fläche ist begrenzt, das Volumen weniger. Aus eigener Möbelfertigung entstehen dabei Maße, die zum Grundriss passen statt zu einem Katalog."
+        ],
+        [
+          "Wenige Materialien, konsequent",
+          "Zwei bis drei Oberflächen im ganzen Haus wirken größer und ruhiger als sechs. Das ist der einfachste und billigste Gestaltungshebel in einem kompakten Volumen — und er hilft zusätzlich der Akustik, wenn Textilien dazukommen."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Standardmöbel einplanen",
+          "Ein Sofa in Katalogmaßen kann einen kompakten Grundriss unbrauchbar machen. Maße folgen dem Raum, nicht umgekehrt."
+        ],
+        [
+          "Zu viele Materialien mischen",
+          "Sechs Oberflächen auf 28 Quadratmetern wirken unruhig und kleiner. Weniger ist hier messbar mehr."
+        ],
+        [
+          "Beleuchtung erst am Ende planen",
+          "Steckdosen und Auslässe liegen in der Elektroplanung fest. Nachträgliche Änderungen sind sichtbar und teuer."
+        ]
+      ],
+      "faq": [
+        [
+          "Wie viel Stauraum braucht ein Tiny House?",
+          "Mehr, als man denkt, und immer als Einbau. Treppe, Podeste und wandhohe Schränke sind die drei wirksamsten Flächen."
+        ],
+        [
+          "Welche Farben lassen den Raum größer wirken?",
+          "Helle, wenig kontrastierende Oberflächen und durchgehende Materialien. Wichtiger als die Farbe ist die Anzahl der Materialwechsel."
+        ],
+        [
+          "Kann ich die Einbauten selbst gestalten?",
+          "Küche, Bad, Stauraum und Treppe kommen aus eigener Möbelfertigung und werden projektbezogen gemaßt."
+        ]
+      ]
+    },
+    "kaufen": {
+      "cat": "kosten-und-finanzierung",
+      "title": "Tiny House kaufen",
+      "what": "Ein Tiny House kauft man nicht wie ein Möbelstück und nicht wie ein Haus, sondern wie ein Projekt: Erst der Standort, dann das Modell, dann der Vertrag.",
+      "points": [
+        [
+          "Die Reihenfolge entscheidet",
+          "Standortprüfung, dann Nutzung und Personenzahl, dann Modell und Ausstattung, dann Budget inklusive Nebenposten, dann Vertrag. Wer mit dem Modell anfängt, verliebt sich in eine Konfiguration, die am eigenen Grundstück vielleicht gar nicht zulässig ist."
+        ],
+        [
+          "Angebote vergleichbar machen",
+          "Ein niedriger Einstiegspreis bedeutet meist eine kürzere Leistungsliste. Fragen Sie bei jedem Anbieter dieselben Punkte ab: Dämmaufbau, Verglasung, Heizsystem, Lüftung mit Wärmerückgewinnung, Fahrgestellauslegung, Einbauten, Lieferumfang. Danach ist der Vergleich belastbar."
+        ],
+        [
+          "Was im Vertrag stehen sollte",
+          "Spezifikation statt Prospekt, Zahlungsplan mit Meilensteinen, Liefer- und Entladebedingungen, Abnahmeverfahren, Gewährleistung und Ansprechpartner. Ein Vertrag, der die Ausstattung nicht benennt, verschiebt jeden Streit auf später."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Bestellen, bevor der Standort geklärt ist",
+          "Das ist die teuerste Reihenfolge. Die Auskunft der Behörde kostet nichts, die Fehlbestellung viel."
+        ],
+        [
+          "Nur den Werkspreis vergleichen",
+          "Lieferung, Fundament, Anschlüsse, Entladung, Planung, Gebühren und Versicherung gehören dazu."
+        ],
+        [
+          "Sich auf Renderings verlassen",
+          "Ein Bild ist keine Spezifikation. Lassen Sie sich die Ausstattung schriftlich geben."
+        ]
+      ],
+      "faq": [
+        [
+          "Was kostet ein MODUNERA Tiny House?",
+          "Die Preisindikation ab Werk beginnt bei 42.900 € für MD 7 und reicht bis 54.900 € für MD 6. Lieferung und Nebenkosten kommen hinzu."
+        ],
+        [
+          "Wie lange dauert es bis zur Lieferung?",
+          "Die Produktionszeit wird bei Auftragsbestätigung terminiert; der Transport kommt darauf. Der genaue Termin wird mit Route und Entladepunkt fixiert."
+        ],
+        [
+          "Kann ich das Haus vorher besichtigen?",
+          "Sprechen Sie uns über WhatsApp an — Besichtigungsmöglichkeiten und Referenzobjekte klären wir projektbezogen."
+        ]
+      ]
+    },
+    "kaufen-deutschland": {
+      "cat": "kosten-und-finanzierung",
+      "title": "Tiny House in Deutschland kaufen",
+      "what": "In Deutschland ist der Kauf der einfache Teil. Der schwierige ist das Grundstück — und die Reihenfolge zwischen beiden entscheidet über das ganze Projekt.",
+      "points": [
+        [
+          "Erst § 34 oder § 35 klären",
+          "Innenbereich oder Außenbereich ist die Frage, an der deutsche Tiny-House-Projekte am häufigsten scheitern. Klären Sie sie schriftlich mit der unteren Bauaufsichtsbehörde, bevor Sie ein Grundstück kaufen und lange bevor Sie ein Haus bestellen."
+        ],
+        [
+          "Lieferung und Nebenkosten realistisch ansetzen",
+          "Für Deutschland rechnen wir als Projektorientierung mit rund 6.800 € Lieferung ab Werk bis zum vereinbarten Punkt. Dazu kommen Fundament, Anschlüsse, Entladung, örtliche Planung, Gebühren und Versicherung."
+        ],
+        [
+          "Landesrecht beachten",
+          "Die Bauordnungen sind Ländersache. Rettungswege, Abstandsflächen, Anforderungen an Aufenthaltsräume und das anzuwendende Verfahren unterscheiden sich zwischen Bayern und Schleswig-Holstein deutlich."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Ein Grundstück im Außenbereich kaufen",
+          "Der Preis ist attraktiv, weil die Nutzung es nicht ist. § 35 BauGB ist die härteste Hürde im deutschen Verfahren."
+        ],
+        [
+          "Von einheitlichem Bundesrecht ausgehen",
+          "Es gibt kein bundeseinheitliches Tiny-House-Recht. Sechzehn Bauordnungen und eine Behörde je Kreis entscheiden."
+        ],
+        [
+          "Mit der Bestellung auf die Genehmigung warten",
+          "Beides parallel zu starten spart Monate — solange die Bestellung erst nach einer belastbaren Auskunft erfolgt."
+        ]
+      ],
+      "faq": [
+        [
+          "Was kostet die Lieferung nach Deutschland?",
+          "Als Projektorientierung rund 6.800 € ab Werk bis zum vereinbarten Punkt. Route, Zufahrt und Kranbedarf bestimmen den Endbetrag."
+        ],
+        [
+          "Welche Mehrwertsteuer gilt?",
+          "Der deutsche Satz von 19 Prozent auf die Einfuhr. Stand 2026-08-14; maßgeblich ist die Regelung zum Lieferzeitpunkt."
+        ],
+        [
+          "Welche Modelle werden in Deutschland am häufigsten gewählt?",
+          "MD 1 und MD 3, für Familien MD 2."
+        ]
+      ]
+    },
+    "kueche": {
+      "cat": "grundriss-und-innenraum",
+      "title": "Küche",
+      "what": "Die Küche im Tiny House ist kein verkleinertes Abbild einer großen Küche, sondern eine eigene Planungsaufgabe: kurze Wege, wenig Geräte, viel Arbeitsfläche.",
+      "points": [
+        [
+          "Küchenzeile statt Küchenblock",
+          "Eine gerade Zeile hält die Mittelachse des Hauses frei und lässt zwei Personen aneinander vorbei. Das ist der Grund, warum MD 2 und MD 7 so geplant sind. Eine Kochinsel kostet auf dieser Fläche mehr Verkehrsfläche, als sie an Arbeitsfläche bringt."
+        ],
+        [
+          "Geräte nach Nutzung, nicht nach Gewohnheit",
+          "Zwei Kochfelder statt vier, ein Kombigerät statt Backofen plus Mikrowelle, ein Kühlschrank in der Größe, die wirklich gebraucht wird. Jedes eingesparte Gerät wird zu Arbeitsfläche oder Stauraum — die beiden Dinge, die in kleinen Küchen tatsächlich fehlen."
+        ],
+        [
+          "Dunstabzug und Lüftung zusammendenken",
+          "Kochen ist nach dem Duschen die zweitgrößte Feuchtequelle im Haus. Abluft nach außen oder Umluft mit funktionierender Wohnraumlüftung — beides ist planbar, aber es muss entschieden sein, bevor die Wand geschlossen ist."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Eine Kochinsel einplanen",
+          "Sie verbraucht Verkehrsfläche in einem Volumen, das keine hat. Auf 28 Quadratmetern gewinnt fast immer die Zeile."
+        ],
+        [
+          "Zu wenig Arbeitsfläche einplanen",
+          "Geräte fressen Fläche. Wer alles einbaut, hat am Ende keinen Platz mehr, um ein Brett hinzulegen."
+        ],
+        [
+          "Den Dunstabzug nachrüsten wollen",
+          "Die Durchführung durch die gedämmte Hülle gehört in die Produktionsspezifikation, nicht in eine spätere Bohrung."
+        ]
+      ],
+      "faq": [
+        [
+          "Passt eine vollwertige Küche ins Tiny House?",
+          "Ja, als Zeile mit reduzierter Gerätezahl. Küche und Einbauten kommen aus eigener Möbelfertigung und werden auf den Grundriss gemaßt."
+        ],
+        [
+          "Induktion oder Gas?",
+          "Induktion ist im dichten kleinen Volumen die einfachere Wahl. Gas verlangt zusätzlich einen CO-Melder und mehr Lüftungsdisziplin."
+        ],
+        [
+          "Wie viel Stauraum hat eine Tiny-House-Küche?",
+          "Mehr, als die Fläche vermuten lässt, wenn wandhoch geplant wird. Vertikaler Stauraum ist hier der entscheidende Hebel."
+        ]
+      ]
+    },
+    "loft": {
+      "cat": "grundriss-und-innenraum",
+      "title": "Loft",
+      "what": "Das Loft ist der Grund, warum ein Tiny House auf kleiner Grundfläche zwei Ebenen hat — und der Ort, an dem Höhe, Zugang und Sommerwärme zusammen entschieden werden müssen.",
+      "points": [
+        [
+          "Stehhöhe gibt es nur unter dem Steildach",
+          "In den Flachdachmodellen ist das Loft ein Schlafbereich zum Liegen und Sitzen. Wer echte Stehhöhe am First will, kommt zu MD 6 — das ist neben der Schneelast der zweite Grund, warum das Chalet-Modell gewählt wird."
+        ],
+        [
+          "Der Zugang ist eine Alltagsfrage",
+          "Eine Leiter spart Fläche und kostet Komfort; eine Treppe kostet Fläche und liefert Stauraum zurück. Bei MODUNERA ist die Treppe als Stauraummöbel ausgeführt, womit sie ihre Grundfläche zurückverdient."
+        ],
+        [
+          "Sommerwärme steigt nach oben",
+          "Ohne Verschattung und Nachtlüftung wird das Loft im Juli der wärmste Ort im Haus. Ein zu öffnendes Fenster im Loft ist deshalb Komfort, Nachtauskühlung und im Ernstfall Rettungsweg in einem."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Das Loft ohne öffenbares Fenster planen",
+          "Ohne Nachtlüftung ist es im Sommer unbenutzbar — und als Schlafbereich ist die Fenstergröße zusätzlich eine Sicherheitsfrage."
+        ],
+        [
+          "Eine Leiter wählen, um Fläche zu sparen",
+          "Auf Dauer ist der tägliche Auf- und Abstieg der Punkt, an dem sich die Entscheidung rächt. Besonders mit Kindern oder im Alter."
+        ],
+        [
+          "Für zwei Personen zwei Lofts bestellen",
+          "Die zweite Empore ist selten nötig. MD 1 oder MD 5 bieten dann mehr Wohnfläche pro Euro."
+        ]
+      ],
+      "faq": [
+        [
+          "Kann man im Loft stehen?",
+          "In den Flachdachmodellen nicht. MD 6 mit Steildach bietet Stehhöhe am First."
+        ],
+        [
+          "Wie warm wird es im Loft im Sommer?",
+          "Ohne Verschattung und Nachtlüftung deutlich wärmer als unten. Beides gehört in die Planung."
+        ],
+        [
+          "Welches Modell hat zwei Lofts?",
+          "MD 2, mit den beiden Lofts an den Stirnseiten und Bad und Wohnbereich dazwischen."
+        ]
+      ]
+    },
+    "lueftung": {
+      "cat": "technik-und-konstruktion",
+      "title": "Lüftung",
+      "what": "In einem kompakten, dichten Volumen ist die Lüftung der wichtigste technische Punkt im ganzen Haus — wichtiger als die Heizung.",
+      "points": [
+        [
+          "Warum manuelles Lüften nicht reicht",
+          "Zwei Personen geben täglich mehrere Liter Wasser an die Raumluft ab. In 28 Quadratmetern ist die relative Luftfeuchte damit schneller kritisch als in einer Wohnung. Stoßlüften funktioniert theoretisch dreimal täglich — im Februar tut es niemand zuverlässig, und die Bauteile merken sich das."
+        ],
+        [
+          "Wärmerückgewinnung macht Lüften bezahlbar",
+          "Eine Lüftungsanlage mit Wärmerückgewinnung führt Feuchte kontinuierlich ab und hält den größten Teil der Wärme im Haus. Sie ist der Grund, warum ein dichtes Gebäude im Winter nicht zwischen feucht und kalt wählen muss."
+        ],
+        [
+          "Aufstellort und Geräusch",
+          "In einem kleinen Volumen steht die Anlage zwangsläufig nah am Wohnbereich. Aufstellort, Entkopplung und Nachtabsenkung gehören in die Planung — ein Gerät, das nachts stört, wird abgeschaltet und schützt dann nichts mehr."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Auf die Anlage verzichten und auf Disziplin setzen",
+          "Der Feuchteschutz hängt dann vollständig am Nutzerverhalten. Das ist der häufigste Weg zu einem vermeidbaren Bauschaden."
+        ],
+        [
+          "Filterwechsel vergessen",
+          "Eine Anlage mit zugesetzten Filtern liefert weniger Luft bei mehr Geräusch. Der Wechsel ist die einfachste Wartungsaufgabe im Haus."
+        ],
+        [
+          "Die Anlage im Urlaub ausschalten",
+          "Ein unbelüftetes, ausgekühltes Haus sammelt Feuchte an den kältesten Flächen. Grundlüftung kostet wenig und verhindert viel."
+        ]
+      ],
+      "faq": [
+        [
+          "Brauche ich eine Lüftungsanlage?",
+          "Für dauerhafte Bewohnung empfehlen wir sie als Standard, in Dänemark und in Höhenlagen ohne Einschränkung."
+        ],
+        [
+          "Wie laut ist eine Lüftungsanlage?",
+          "Bei richtigem Aufstellort und Entkopplung im Betrieb unauffällig. Der Aufstellort wird vor der Produktion festgelegt."
+        ],
+        [
+          "Was kostet der Betrieb?",
+          "Der Stromverbrauch ist gering; der Filterwechsel ist die wesentliche laufende Position. Beides ist deutlich günstiger als ein Feuchteschaden."
+        ]
+      ]
+    },
+    "modern": {
+      "cat": "vergleich-und-alternativen",
+      "title": "Modernes Design",
+      "what": "Modern heißt bei einem Tiny House nicht flaches Dach und dunkle Fassade, sondern dass Form und Konstruktion dieselbe Entscheidung sind.",
+      "points": [
+        [
+          "Die Silhouette folgt der Konstruktion",
+          "Die geknickte Dachform von MD 1, die durchlaufende Dachfläche über der Veranda bei MD 4, das Steildach bei MD 6 — jede dieser Formen hat einen konstruktiven Grund. Das ist der Unterschied zwischen Gestaltung und Dekoration."
+        ],
+        [
+          "Fassade als Alterungsentscheidung",
+          "Thermowood+ vergraut kontrolliert und sichtbar; beschichtete Verbundplatte und Stehfalz bleiben näher am Auslieferungszustand. Beides ist eine ästhetische und eine Wartungsentscheidung — treffen Sie sie zusammen."
+        ],
+        [
+          "Innen: wenige Materialien, konsequent geführt",
+          "Zwei bis drei Oberflächen im ganzen Haus wirken größer, ruhiger und teurer als sechs. In einem kompakten Volumen ist Zurückhaltung die wirksamste Gestaltungsstrategie."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Fassade nach Bild statt nach Klima wählen",
+          "Eine dunkle Fassade in Südlage heizt sich auf. Material, Farbe und Verschattung gehören in dieselbe Entscheidung."
+        ],
+        [
+          "Design vor Grundriss stellen",
+          "Eine schöne Silhouette ersetzt keinen abschließbaren Raum. Erst die Nutzung, dann die Form."
+        ],
+        [
+          "Materialien mischen, um Charakter zu erzeugen",
+          "Auf kleiner Fläche erzeugt das Unruhe statt Charakter. Weniger ist hier messbar mehr."
+        ]
+      ],
+      "faq": [
+        [
+          "Welches Modell ist am modernsten?",
+          "MD 1 und MD 8 werden am häufigsten so beschrieben — MD 1 wegen der Glasfront, MD 8 wegen der Materialtiefe."
+        ],
+        [
+          "Kann ich die Fassade frei wählen?",
+          "Thermowood+, Verbundplatte oder Stehfalz, projektbezogen. Die Wahl sollte Klima und Wartungsbereitschaft folgen."
+        ],
+        [
+          "Verändert sich Thermowood+ optisch?",
+          "Ja, es vergraut kontrolliert. Das ist gewollt und kein Mangel — wer das nicht möchte, wählt eine beschichtete Fassade."
+        ]
+      ]
+    },
+    "nachhaltigkeit": {
+      "cat": "technik-und-konstruktion",
+      "title": "Nachhaltigkeit",
+      "what": "Kleine Fläche ist ein guter Anfang und noch kein Nachweis. Nachhaltig wird ein Tiny House durch Lebensdauer, Betriebsverbrauch und die Frage, wie oft es ersetzt werden muss.",
+      "points": [
+        [
+          "Lebensdauer schlägt Materialherkunft",
+          "Ein Gebäude, das dreißig Jahre hält, ist ökologisch fast immer besser als eines aus vermeintlich besseren Materialien, das nach zwölf ersetzt wird. Feuerverzinkte Stahlkonstruktion, saubere Anschlussdetails und eine Fassade, die abtrocknet, sind deshalb die relevantesten Nachhaltigkeitsentscheidungen."
+        ],
+        [
+          "Betrieb dominiert die Bilanz",
+          "Über die Nutzungsdauer wiegt der Energieverbrauch schwerer als die Herstellung. Dämmung, Dichtheit, Lüftung mit Wärmerückgewinnung und eine passend dimensionierte Wärmepumpe wirken deshalb stärker als jede einzelne Materialentscheidung."
+        ],
+        [
+          "Fläche ist der stärkste Hebel überhaupt",
+          "28 statt 140 Quadratmeter bedeutet weniger Material, weniger Heizvolumen, weniger Instandhaltung und weniger versiegelte Fläche. Das ist der belastbarste Nachhaltigkeitsvorteil des Konzepts — und er entsteht ohne jede Zusatztechnik."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Nachhaltigkeit an Solarmodulen festmachen",
+          "Eine Photovoltaikanlage auf einem schlecht gedämmten Haus verschiebt das Problem, statt es zu lösen. Erst die Hülle, dann die Erzeugung."
+        ],
+        [
+          "Ökologische Dämmstoffe ohne Feuchtekonzept einsetzen",
+          "Jeder Dämmstoff versagt, wenn er nass wird. Das Feuchtekonzept ist wichtiger als die Materialklasse."
+        ],
+        [
+          "Mit unbelegbaren Aussagen werben",
+          "Wer keine Nachweise hat, sollte keine Zahlen nennen. Nachprüfbare Angaben sind das Einzige, was in diesem Feld trägt."
+        ]
+      ],
+      "faq": [
+        [
+          "Ist ein Tiny House automatisch nachhaltig?",
+          "Nein. Der Flächenvorteil ist real, aber Lebensdauer und Betriebsverbrauch entscheiden über die Bilanz."
+        ],
+        [
+          "Welche Materialien werden verwendet?",
+          "Feuerverzinkte Stahlkonstruktion, Stahlfahrgestell, thermisch getrennte PVC-Tischlerei, doppelt gehärtetes Thermopane-Glas. Fassade und Dämmung werden projektbezogen festgelegt."
+        ],
+        [
+          "Lässt sich ein Tiny House später recyceln?",
+          "Stahl ist gut trennbar und recyclingfähig. Die konkrete Bewertung hängt vom gesamten Aufbau ab."
+        ]
+      ]
+    },
+    "off-grid": {
+      "cat": "energie-und-autarkie",
+      "title": "Off-Grid",
+      "what": "Off-Grid ist eine technische Frage mit einer rechtlichen Antwort. Module und Batterie sind der einfache Teil; ob die Behörde ein Haus ohne Wasser- und Kanalanschluss akzeptiert, ist der entscheidende.",
+      "points": [
+        [
+          "Der rechtliche Rahmen ist meist die Grenze",
+          "In Dänemark sind Abwasser und Trinkwasser eng geregelt. In der Schweiz wird innerhalb der Bauzone der Anschluss erwartet. In den Niederlanden hängt es an der Funktion im omgevingsplan. In Deutschland verlangen viele Kommunen bei genehmigter Wohnnutzung den Anschluss. Autarkie senkt dann die Betriebskosten, ersetzt aber nicht die Erschließung."
+        ],
+        [
+          "Winterertrag, nicht Spitzenleistung",
+          "Eine Photovoltaikanlage wird nach dem schlechtesten Monat ausgelegt, nicht nach dem Typenschild. Im Dezember liefert ein Dach in Norddeutschland oder Dänemark einen Bruchteil des Juli-Ertrags, während der Heizbedarf am höchsten ist. Diese Umkehrung ist das ganze Auslegungsproblem."
+        ],
+        [
+          "Batterie überbrückt Stunden, keine Jahreszeiten",
+          "Ein Speicher trägt über die Nacht und einen bewölkten Tag. Er trägt nicht über einen mitteleuropäischen Winter. Eine realistische Off-Grid-Planung kombiniert gute Hülle, passende Wärmepumpe, Solar für die Übergangszeit und eine definierte Rückfallebene."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Nach Jahresdurchschnitt auslegen",
+          "Eine Anlage, die von April bis September glänzt und im Januar den Generator braucht, ist nach dem Jahresmittel korrekt dimensioniert und in der Praxis falsch."
+        ],
+        [
+          "Die Wasserfrage über der Stromfrage vergessen",
+          "Strom ist off-grid das lösbare Problem. Trinkwasser und Abwasser sind das rechtlich schwierige."
+        ],
+        [
+          "Elektrische Direktheizung im Off-Grid-Konzept",
+          "Sie sprengt jede Batterieauslegung. In einem autarken Haus ist sie die teuerste denkbare Wärmequelle."
+        ]
+      ],
+      "faq": [
+        [
+          "Kann ein MODUNERA Tiny House autark betrieben werden?",
+          "Technisch lässt sich ein Solar- und Speicherpaket vollständig planen. Rechtlich hängt es vom Standort ab — fragen Sie die Gemeinde vor der Auslegung."
+        ],
+        [
+          "Welches Modell eignet sich für Off-Grid?",
+          "MD 7, weil der Grundverbrauch am niedrigsten ist — ein klarer Grundriss ohne Zusatzräume."
+        ],
+        [
+          "Wie groß muss die Solaranlage sein?",
+          "Ausgelegt nach Winterertrag und Ihrem tatsächlichen Verbrauchsprofil, nicht nach Modulleistung."
+        ]
+      ]
+    },
+    "preise": {
+      "cat": "kosten-und-finanzierung",
+      "title": "Preise",
+      "what": "Der Werkspreis ist die Zahl, die verglichen wird, und die Zahl, die am wenigsten erklärt. Vergleichbar wird ein Angebot erst mit seiner Leistungsliste.",
+      "points": [
+        [
+          "Die vier Blöcke eines echten Budgets",
+          "Erstens die Einheit ab Werk: bei MODUNERA von 42.900 € für MD 7 bis 54.900 € für MD 6. Zweitens die Lieferung ins Zielland, von rund 6.800 € nach Deutschland bis 10.500 € auf dem Skandinavien-Tarif. Drittens der Standort: Fundament, Zufahrt, Entladung und die Entfernung zu Strom, Wasser und Kanal. Viertens Planung, Gebühren und Versicherung."
+        ],
+        [
+          "Warum Angebote nicht vergleichbar sind",
+          "Ein niedriger Kopfpreis bedeutet meist eine kürzere Liste. Fragen Sie jeden Anbieter dieselben Punkte: Dämmaufbau, Verglasung, Heizsystem, Lüftung mit Wärmerückgewinnung, Fahrgestellauslegung, Einbauten, Lieferumfang. Das Angebot, das auf der ersten Seite teuer aussieht, ist auf der letzten oft das günstigere."
+        ],
+        [
+          "Die Entfernung zum Netz ist die verborgene Variable",
+          "Zwei identische Häuser auf zwei Grundstücken zwanzig Kilometer auseinander können sich um einen fünfstelligen Betrag unterscheiden — und nichts davon steckt im Haus."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Nur den Werkspreis budgetieren",
+          "Lieferung, Fundament, Anschlüsse, Entladung, Planung, Gebühren und Versicherung sind keine Kleinposten."
+        ],
+        [
+          "Renderings mit Ausstattung verwechseln",
+          "Was auf dem Bild ist, muss nicht im Angebot stehen. Lassen Sie sich die Spezifikation schriftlich geben."
+        ],
+        [
+          "Nachträgliche Änderungen einplanen",
+          "Änderungen vor Produktionsbeginn sind günstig, danach teuer und nach Auslieferung am teuersten."
+        ]
+      ],
+      "faq": [
+        [
+          "Was kostet ein Tiny House bei MODUNERA?",
+          "Preisindikation ab Werk von 42.900 € (MD 7) bis 54.900 € (MD 6). Verbindlich ist ausschließlich ein geprüftes Angebot."
+        ],
+        [
+          "Was kostet die Lieferung?",
+          "Deutschland ab rund 6.800 €, Luxemburg rund 7.000 € im Durchschnitt, Niederlande rund 7.600 €, Schweiz rund 7.900 €, Dänemark rund 10.500 €."
+        ],
+        [
+          "Welche Kosten werden am häufigsten vergessen?",
+          "Der Kanalanschluss, der Kran für die Entladung und die örtlichen Planungsgebühren."
+        ]
+      ]
+    },
+    "preise-kosten": {
+      "cat": "kosten-und-finanzierung",
+      "title": "Preise und Kosten",
+      "what": "Zwischen dem Preis eines Tiny House und den Kosten eines Tiny-House-Projekts liegen regelmäßig mehrere zehntausend Euro — fast alle davon standortabhängig.",
+      "points": [
+        [
+          "Werkspreis, Lieferung, Standort, Papiere",
+          "Diese vier Blöcke ergeben zusammen das Projektbudget. Der erste steht im Angebot, der zweite lässt sich gut schätzen, der dritte ist grundstücksabhängig und der vierte gemeindeabhängig. Wer nur den ersten kalkuliert, korrigiert das Budget nach der Bestellung."
+        ],
+        [
+          "Laufende Kosten gehören in die Entscheidung",
+          "Energie, Wasser, Wartung, Versicherung und Rücklagen. Bei Vermietung zusätzlich Reinigung, Wäsche, Verwaltung und Plattformgebühren. Über zehn Jahre entscheiden diese Positionen mehr über die Gesamtkosten als der Unterschied zwischen zwei Modellen."
+        ],
+        [
+          "Wo sich Mehrpreis rechnet und wo nicht",
+          "Dämmung, Lüftung und Verglasung zahlen sich über den Betrieb zurück. Ausstattungstiefe zahlt sich bei Vermietung über Bewertungen zurück. Rein optische Aufpreise tun weder das eine noch das andere."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Nebenkosten pauschal schätzen",
+          "Der Versorger nennt Ihnen die Anschlusskosten für Ihre Adresse. Das ist genauer als jede Faustformel."
+        ],
+        [
+          "Rücklagen weglassen",
+          "Verschleiß gibt es auch in kleinen Häusern — bei Vermietung um ein Vielfaches schneller."
+        ],
+        [
+          "Am Feuchteschutz sparen",
+          "Die eingesparte Lüftungsanlage ist die teuerste Ersparnis im ganzen Projekt."
+        ]
+      ],
+      "faq": [
+        [
+          "Wie hoch sind die laufenden Kosten?",
+          "Sie hängen von Hülle, Technik, Standort und Nutzung ab. Bei Vermietung dominieren Reinigung und Wäsche, nicht Energie."
+        ],
+        [
+          "Wie viel Puffer sollte ich einplanen?",
+          "Genug für die standortabhängigen Positionen: Anschlüsse, Fundament und Entladung sind die drei mit der größten Spannweite."
+        ],
+        [
+          "Lohnt sich eine höhere Ausstattungslinie?",
+          "Bei Vermietung meist ja — sichtbare Qualität wirkt direkt auf Bewertungen. MD 8 ist genau dafür gedacht."
+        ]
+      ]
+    },
+    "reinigung": {
+      "cat": "betrieb-und-wartung",
+      "title": "Reinigung",
+      "what": "Bei Vermietung ist Reinigung der größte laufende Posten und der häufigste Grund für schlechte Bewertungen — nicht die Ausstattung.",
+      "points": [
+        [
+          "Der Aufwand skaliert nicht mit der Fläche",
+          "Zwei Gäste für drei Nächte verursachen ungefähr denselben Reinigungsaufwand wie zwei Gäste für eine Nacht. Deshalb wirkt die Mindestaufenthaltsdauer stärker auf die Marge als der Nachtpreis — eine der wenigen Stellschrauben, die sofort wirkt."
+        ],
+        [
+          "Oberflächen bestimmen die Reinigungszeit",
+          "Fugenlose Flächen, wenige Materialwechsel, robuste Beschläge und erreichbare Ecken sparen bei jedem Wechsel Minuten. Über ein Jahr mit fünfzig Wechseln ist das der Unterschied zwischen einem und zwei Reinigungsdurchgängen."
+        ],
+        [
+          "Wäsche ist der zweite Posten",
+          "Bettwäsche und Handtücher für vier Personen bei häufigem Wechsel rechtfertigen früh einen Vertrag mit einem Wäschedienst. Selbstwaschen bindet Zeit und blockiert bei einem Objekt ohne eigene Waschmaschine den Wechseltag."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Reinigung selbst machen wollen",
+          "Bei einem Objekt geht das, bei zweien wird es zum zweiten Job. Kalkulieren Sie von Anfang an mit einem Dienstleister."
+        ],
+        [
+          "Empfindliche Oberflächen wählen",
+          "Was zu Hause schön ist, ist im Vermietungsbetrieb nach einer Saison abgenutzt. Robustheit ist hier eine wirtschaftliche Eigenschaft."
+        ],
+        [
+          "Keinen Puffer zwischen Buchungen lassen",
+          "Ein zu enger Wechsel produziert genau die Beschwerden, die Bewertungen kosten."
+        ]
+      ],
+      "faq": [
+        [
+          "Wie lange dauert die Reinigung eines Tiny House?",
+          "Deutlich kürzer als eine Ferienwohnung, aber der Aufwand pro Wechsel bleibt weitgehend gleich, egal wie lang der Aufenthalt war."
+        ],
+        [
+          "Welche Oberflächen sind pflegeleicht?",
+          "Fugenarme, robuste Materialien mit wenigen Wechseln. Das ist ein Grund für die Ausstattungslinie von MD 8."
+        ],
+        [
+          "Wie oft muss die Fassade gereinigt werden?",
+          "Sie braucht vor allem Sichtkontrolle. Thermowood+ vergraut kontrolliert; wichtig sind saubere Anschlüsse und freie Entwässerung."
+        ]
+      ]
+    },
+    "rendite": {
+      "cat": "nutzung-und-geschaeftsmodell",
+      "title": "Rendite",
+      "what": "Die Einnahmenseite ist der einfache Teil einer Tiny-House-Rendite. Über das Ergebnis entscheiden Reinigung, Wäsche, Provision und Rücklagen.",
+      "points": [
+        [
+          "Rechnen Sie mit eigenen Zahlen",
+          "Auslastung, Nachtpreis und Saisonverlauf sind standortabhängig. Wer eine Rendite nennt, ohne Ihren Standort zu kennen, rät. Nehmen Sie die realen Preise vergleichbarer Objekte in Ihrer Region als Ausgangspunkt, nicht eine Zahl aus einem Blogbeitrag."
+        ],
+        [
+          "Die Kostenseite vollständig ansetzen",
+          "Reinigung je Wechsel, Wäsche, Plattformprovision, Standplatz- oder Grundstückskosten, Versicherung inklusive Betreiberhaftpflicht, Energie, Wartung und eine jährliche Rücklage für Ersatz. Ohne die letzte Position sieht jede Rendite drei Jahre lang gut aus."
+        ],
+        [
+          "Mehrere Einheiten verbessern die Rechnung",
+          "Ab der zweiten Einheit amortisieren sich Reinigungsrouten, Wäscheverträge und Wartungsbesuche. Deshalb ist die Erweiterbarkeit des Standorts ein wirtschaftliches Kriterium und nicht nur ein Wunsch."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Mit Hochsaisonpreisen aufs Jahr hochrechnen",
+          "Das ist der klassische Fehler jeder Ferienimmobilienkalkulation und im Tiny-House-Segment besonders verbreitet."
+        ],
+        [
+          "Keine Rücklage bilden",
+          "Beschläge, Oberflächen und Textilien verschleißen im Vermietungsbetrieb um ein Vielfaches schneller als privat."
+        ],
+        [
+          "Die Regulierung nach der Investition prüfen",
+          "Eine Nächtebegrenzung oder Anzeigepflicht kann das Geschäftsmodell nachträglich halbieren."
+        ]
+      ],
+      "faq": [
+        [
+          "Welche Rendite ist realistisch?",
+          "Ohne Standort, Auslastung, Nachtpreis und Kostenbasis lässt sich das nicht seriös beziffern. Rechnen Sie mit eigenen Werten."
+        ],
+        [
+          "Was sind die größten Kostenposten?",
+          "Reinigung, Wäsche und Plattformprovision — nicht Energie."
+        ],
+        [
+          "Lohnt sich eine höhere Ausstattungslinie?",
+          "Meist ja. Sichtbare Qualität wirkt auf Bewertungen und damit direkt auf die Auslastung."
+        ]
+      ]
+    },
+    "scandinavian": {
+      "cat": "vergleich-und-alternativen",
+      "title": "Skandinavisches Design",
+      "what": "Skandinavisches Design ist im Tiny House keine Farbpalette, sondern eine Antwort auf wenig Licht: helle Flächen, große Öffnungen, warme Materialien.",
+      "points": [
+        [
+          "Licht ist das eigentliche Thema",
+          "In nördlichen Breiten ist Tageslicht im Winter knapp. Helle Oberflächen, wenige Materialwechsel und großzügig platzierte Fenster holen aus derselben Lichtmenge mehr heraus. Das ist der funktionale Kern des Stils, nicht die Farbwahl."
+        ],
+        [
+          "Warme Materialien gegen kühle Helligkeit",
+          "Holzoberflächen, Textilien und gedeckte Töne verhindern, dass ein heller Raum kalt wirkt. Sie helfen zusätzlich der Akustik — in einem offenen Grundriss ist das ein doppelter Gewinn."
+        ],
+        [
+          "Der Stil passt zur Auslegung",
+          "Nordische Standorte verlangen ohnehin lange Heizperioden, Windschutz und Lüftung mit Wärmerückgewinnung. Ein Modell wie MD 6 verbindet diese technische Auslegung mit der Silhouette, die dort erwartet wird."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Nur weiß streichen und Stil erwarten",
+          "Ohne warme Materialien wirkt ein durchgehend weißer Innenraum in einem kleinen Volumen steril statt hell."
+        ],
+        [
+          "Fensterfläche ohne Auslegung maximieren",
+          "In Dänemark ist die verglaste Fläche oft der größte einzelne Wärmeverlust. Licht und Wärmeschutz gehören in dieselbe Entscheidung."
+        ],
+        [
+          "Textilien weglassen",
+          "Sie sind gleichzeitig Stilmittel, Akustikmaßnahme und Wärmeempfinden. In einem harten, hellen Raum fehlen sie sofort."
+        ]
+      ],
+      "faq": [
+        [
+          "Welches Modell passt zum skandinavischen Stil?",
+          "MD 6 wegen des Steildachs und der Winterauslegung, MD 1 wegen des Lichteintrags."
+        ],
+        [
+          "Sind helle Innenräume pflegeintensiver?",
+          "Etwas, ja — besonders im Vermietungsbetrieb. Robuste Oberflächen in hellen Tönen sind der Kompromiss."
+        ],
+        [
+          "Passt der Stil auch nach Deutschland?",
+          "Ja. Er löst ein Lichtproblem, das im deutschen Winter ebenfalls existiert."
+        ]
+      ]
+    },
+    "senioren": {
+      "cat": "grundriss-und-innenraum",
+      "title": "Tiny House für Senioren",
+      "what": "Für ältere Bewohner kippt die Rechnung an einem Punkt: Ein Loft, das mit sechzig noch charmant ist, wird mit fünfundsiebzig zum Ausschlusskriterium.",
+      "points": [
+        [
+          "Ebenerdig schlafen statt im Loft",
+          "Wenn Dauerwohnen im Alter das Ziel ist, gehört der Schlafplatz auf die Erdgeschossebene. MD 3, MD 4 und MD 5 haben einen Raum im Erdgeschoss, der genau das leisten kann — das ist der wichtigste Modellhinweis in diesem ganzen Themenfeld."
+        ],
+        [
+          "Schwellen, Breiten, Griffhöhen",
+          "Schwellenlose Übergänge, ausreichende Türbreiten, Haltemöglichkeiten im Bad und eine Arbeitshöhe in der Küche, die im Sitzen funktioniert. Weil die Einbauten aus eigener Fertigung kommen, lässt sich das auf die Person maßen statt auf einen Katalog."
+        ],
+        [
+          "Wartungsarm statt wartungsfrei",
+          "Fassade, Dach und Rinnen brauchen einmal im Jahr eine Kontrolle. Wer das nicht selbst machen will oder kann, sollte eine beschichtete Fassade und einen Wartungsvertrag von Anfang an einplanen."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Ein Loft als Hauptschlafplatz planen",
+          "Es ist die häufigste Fehlentscheidung in diesem Kontext — und die am schwersten nachträglich korrigierbare."
+        ],
+        [
+          "Das Bad ohne Haltemöglichkeiten planen",
+          "Nachrüsten geht, aber nur, wenn die Wand dahinter dafür ausgelegt ist. Das gehört in die Produktionsspezifikation."
+        ],
+        [
+          "Die Zufahrt im Winter nicht bedenken",
+          "Ein Feldweg ist im Notfall auch die Zufahrt für den Rettungsdienst."
+        ]
+      ],
+      "faq": [
+        [
+          "Welches Modell eignet sich für Senioren?",
+          "MD 4 oder MD 3 mit dem Raum im Erdgeschoss als Hauptschlafplatz. MD 5 als kompaktere Variante."
+        ],
+        [
+          "Ist ein Tiny House barrierefrei möglich?",
+          "Barrierearm ja, in Grenzen. Vollständige Barrierefreiheit nach Norm verlangt Flächen, die auf 2,55 Metern Breite schwer darstellbar sind."
+        ],
+        [
+          "Wie aufwendig ist die Instandhaltung?",
+          "Eine gründliche Kontrolle im Jahr an Dach, Rinnen und Fensteranschlüssen. Eine beschichtete Fassade reduziert den Rest."
+        ]
+      ]
+    },
+    "smart-home": {
+      "cat": "technik-und-konstruktion",
+      "title": "Smart Home",
+      "what": "Auf 28 Quadratmetern bringt Automatisierung weniger Komfortgewinn als in einem großen Haus — aber deutlich mehr Nutzen bei Heizung, Feuchte und Vermietung.",
+      "points": [
+        [
+          "Was sich wirklich lohnt",
+          "Temperatur- und Feuchtesensoren, Heizungssteuerung mit Abwesenheitsprofil und ein Wassermelder unter Spüle und Dusche. Diese drei verhindern Schäden und senken Verbrauch. Beleuchtungsszenen und Sprachsteuerung sind Komfort, kein Nutzen."
+        ],
+        [
+          "Bei Vermietung ist Zugang das Thema",
+          "Ein Zahlencode statt Schlüsselübergabe spart bei jedem Wechsel Zeit und Wege. Zusammen mit Temperaturüberwachung und Wassermeldern entsteht daraus eine Fernüberwachung, die einen Schaden meldet, bevor der nächste Gast ihn findet."
+        ],
+        [
+          "Lokal statt cloudabhängig",
+          "Ein Standort mit schwachem Netz und ein System, das ohne Cloud nicht heizt, sind eine schlechte Kombination. Achten Sie auf lokale Steuerbarkeit — besonders bei Ferien- und Vermietungsobjekten."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Automatisieren, bevor die Hülle stimmt",
+          "Eine smarte Steuerung auf einem schlecht gedämmten Haus verwaltet das Problem, statt es zu lösen."
+        ],
+        [
+          "Nur auf Cloud-Dienste setzen",
+          "Ein Ausfall der Internetverbindung darf nicht bedeuten, dass die Heizung nicht mehr regelt."
+        ],
+        [
+          "Wassermelder weglassen",
+          "Der günstigste Sensor im Haus verhindert den teuersten Schaden. Unter Spüle und Dusche gehört je einer hin."
+        ]
+      ],
+      "faq": [
+        [
+          "Welche Smart-Home-Funktionen sind sinnvoll?",
+          "Heizungssteuerung mit Abwesenheitsprofil, Temperatur- und Feuchtesensoren, Wassermelder. Bei Vermietung zusätzlich Zutrittscode."
+        ],
+        [
+          "Funktioniert das auch off-grid?",
+          "Ja, sofern die Komponenten lokal steuerbar sind und ihr Eigenverbrauch in der Batterieauslegung steht."
+        ],
+        [
+          "Kann ich das nachrüsten?",
+          "Sensorik und Steuerung weitgehend ja. Verkabelung und Leerrohre gehören dagegen in die Produktionsspezifikation."
+        ]
+      ]
+    },
+    "solar": {
+      "cat": "energie-und-autarkie",
+      "title": "Solar",
+      "what": "Eine Photovoltaikanlage auf einem Tiny House wird nach dem schlechtesten Monat ausgelegt, nicht nach dem Typenschild. Alles andere führt zu einem System, das im Sommer glänzt und im Januar versagt.",
+      "points": [
+        [
+          "Die Winterumkehr ist das Auslegungsproblem",
+          "Im Dezember liefert ein Dach in Norddeutschland oder Dänemark einen Bruchteil des Juli-Ertrags — genau dann, wenn der Heizbedarf am höchsten ist. Wer nach Jahresdurchschnitt dimensioniert, hat rechnerisch recht und praktisch ein Problem."
+        ],
+        [
+          "Dachfläche, Neigung, Verschattung",
+          "Ein Tiny House hat wenig Dachfläche. Neigung, Ausrichtung und Verschattung durch Bäume oder Nachbargebäude entscheiden deshalb überproportional. Bei MD 6 mit Steildach gelten andere Randbedingungen als bei den Flachdachmodellen."
+        ],
+        [
+          "Netzgekoppelt ist meist die bessere Rechnung",
+          "Solar auf einem angeschlossenen Haus senkt die Betriebskosten ohne Batterieaufwand und ohne Winterrisiko. Vollständige Autarkie ist eine deutlich teurere Entscheidung, die man bewusst treffen sollte."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Nach Modulleistung statt nach Verbrauch auslegen",
+          "Die interessante Zahl ist Ihr Verbrauchsprofil, nicht die Kilowatt-Peak-Angabe auf dem Datenblatt."
+        ],
+        [
+          "Verschattung unterschätzen",
+          "Ein einzelner Baum kann den Winterertrag einer kleinen Anlage halbieren. Prüfen Sie den Standort über den Tagesverlauf."
+        ],
+        [
+          "Speicher ohne Lastprofil dimensionieren",
+          "Ein Speicher, der die Grundlast trägt, aber die Spitzen nicht, ist im Alltag nutzlos."
+        ]
+      ],
+      "faq": [
+        [
+          "Lohnt sich Solar auf einem Tiny House?",
+          "Netzgekoppelt in der Regel ja. Für vollständige Autarkie ist die Rechnung deutlich anspruchsvoller."
+        ],
+        [
+          "Wie viele Module passen aufs Dach?",
+          "Das hängt von Modell, Dachform und Ausrichtung ab. MD 6 mit Steildach hat andere Randbedingungen als die Flachdachmodelle."
+        ],
+        [
+          "Brauche ich einen Batteriespeicher?",
+          "Für netzgekoppelten Betrieb nicht zwingend. Für Off-Grid ja — dann ausgelegt nach Spitzenlast und Winterertrag."
+        ]
+      ]
+    },
+    "sommerhitze": {
+      "cat": "technik-und-konstruktion",
+      "title": "Sommerhitze",
+      "what": "Dämmung hält Wärme auch drinnen. Im Tiny House ist sommerlicher Wärmeschutz deshalb kein Nebenthema, sondern die zweite Hälfte derselben Planung.",
+      "points": [
+        [
+          "Verschattung schlägt Lüftung",
+          "Sonne, die gar nicht erst durch das Glas kommt, muss nicht abgeführt werden. Außenliegende Verschattung, Dachüberstand und die Ausrichtung der großen Fensterflächen sind wirksamer als jede Maßnahme im Innenraum. Innenrollos lösen das Problem nur zur Hälfte."
+        ],
+        [
+          "Nachtauskühlung braucht öffenbare Fenster",
+          "Ein zu öffnendes Fenster im Loft und eine Querlüftungsmöglichkeit im Erdgeschoss kühlen das Haus nachts aus. Ohne sie bleibt die tagsüber eingetragene Wärme im Volumen — und das Loft wird im Juli der wärmste Ort im Haus."
+        ],
+        [
+          "Speichermasse ist begrenzt",
+          "Ein leichtes, transportables Gebäude hat wenig Speichermasse. Es erwärmt sich schneller als ein massives Haus und kühlt schneller ab. Das ist ein Nachteil am Tag und ein Vorteil in der Nacht — vorausgesetzt, man nutzt ihn."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Große Südverglasung ohne Verschattung",
+          "Die häufigste und folgenreichste Fehlentscheidung. Sie macht das Haus im Hochsommer unbenutzbar."
+        ],
+        [
+          "Auf eine Klimaanlage setzen statt auf Verschattung",
+          "Sie kostet Strom, Platz und Geräusch, um ein Problem zu behandeln, das sich baulich billiger verhindern lässt."
+        ],
+        [
+          "Das Loftfenster nicht öffenbar planen",
+          "Ohne Nachtauskühlung ist das Loft im Sommer der unbrauchbarste Raum des Hauses."
+        ]
+      ],
+      "faq": [
+        [
+          "Wird ein Tiny House im Sommer zu heiß?",
+          "Ohne Verschattung ja, besonders im Loft. Mit außenliegender Verschattung und Nachtlüftung bleibt es beherrschbar."
+        ],
+        [
+          "Hilft die Dämmung gegen Hitze?",
+          "Sie verzögert den Wärmeeintrag, hält aber auch Wärme fest. Entscheidend ist die Verschattung."
+        ],
+        [
+          "Brauche ich eine Klimaanlage?",
+          "In der Regel nicht, wenn Verschattung und Nachtlüftung stimmen. In sehr heißen Lagen kann eine Split-Anlage sinnvoll sein."
+        ]
+      ]
+    },
+    "stahlrahmen": {
+      "cat": "technik-und-konstruktion",
+      "title": "Stahlrahmen",
+      "what": "Der tragende Aufbau ist Stahl, nicht Holzständerwerk. Der Grund ist nicht Festigkeit im Allgemeinen, sondern dass dieses Gebäude auf einen Tieflader kommt und quer durch Europa fährt.",
+      "points": [
+        [
+          "Transportlasten sind andere Lasten",
+          "Ein Gebäude, das gefahren wird, erfährt Verwindung, Schwingung und Beschleunigungen, die ein stehendes Haus nie sieht. Die feuerverzinkte Stahl-Aufbaukonstruktion und das Stahlfahrgestell sind für genau diesen Fall ausgelegt — inklusive Achslast, Schwerpunkt und Verzurrpunkten."
+        ],
+        [
+          "Feuerverzinkung schützt das Unerreichbare",
+          "Nach dem Schließen des Aufbaus ist das Tragwerk nicht mehr zugänglich. Verzinkung ist deshalb keine Ausstattung, sondern die Voraussetzung dafür, dass eine dreißigjährige Nutzungsdauer überhaupt sinnvoll diskutiert werden kann."
+        ],
+        [
+          "Wärmebrücken werden mitgeplant",
+          "Stahl leitet Wärme besser als Holz. Deshalb gehören thermische Trennung an Auflagerpunkten und die Ausbildung der Anschlüsse zur Auslegung — sonst gibt der Aufbau an den Details zurück, was er an der Fläche gewinnt."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Stahl mit Holz nur über den Preis vergleichen",
+          "Die Frage ist nicht, was billiger ist, sondern was ein transportiertes Gebäude über dreißig Jahre trägt."
+        ],
+        [
+          "Wärmebrücken an Auflagern ignorieren",
+          "Sie entscheiden in der Praxis mehr über Verbrauch und Kondensat als die letzten Zentimeter Dämmstoff."
+        ],
+        [
+          "Nachträglich in die Konstruktion bohren",
+          "Durchdringungen des Tragwerks und der Dichtebene gehören in die Produktionsspezifikation, nicht auf die Baustelle."
+        ]
+      ],
+      "faq": [
+        [
+          "Warum Stahl statt Holz?",
+          "Weil das Gebäude transportiert wird. Stahl nimmt die Verwindungslasten besser auf, und die Verzinkung schützt dort, wo später niemand mehr hinkommt."
+        ],
+        [
+          "Rostet der Rahmen?",
+          "Er ist feuerverzinkt. Entscheidend sind darüber hinaus saubere Anschlüsse und freie Entwässerung."
+        ],
+        [
+          "Wie schwer ist die Konstruktion?",
+          "Achs- und Bremskomponenten werden auf ein 3.500-kg-Konzept ausgelegt. Das konkrete Gewicht hängt von Modell und Ausstattung ab."
+        ]
+      ]
+    },
+    "stauraum": {
+      "cat": "grundriss-und-innenraum",
+      "title": "Stauraum",
+      "what": "Zu wenig Stauraum ist der häufigste Grund, aus dem Menschen ein Tiny House wieder verlassen — und fast immer ein Planungsfehler, kein Flächenproblem.",
+      "points": [
+        [
+          "Die Treppe ist die größte Chance",
+          "Bei MODUNERA ist sie als Stauraummöbel ausgeführt, statt als Treppe mit ungenutztem Raum darunter. Damit verdient sie ihre Grundfläche zurück — auf 28 Quadratmetern ist das kein Detail."
+        ],
+        [
+          "Vertikal statt horizontal",
+          "Wandhohe Einbauten, Ablagen über Türen, Podeste mit Klappen. Die Grundfläche ist begrenzt, das Volumen weniger. Weil Küche, Bad, Schränke und Treppe aus eigener Möbelfertigung kommen, folgen die Maße dem tatsächlichen Grundriss."
+        ],
+        [
+          "Saisonales und tägliches trennen",
+          "Winterkleidung, Sportgeräte und Werkzeug gehören nicht in dieselbe Fläche wie das, was täglich gebraucht wird. Wer keinen externen Lagerort hat, sollte diese Menge ehrlich einschätzen, bevor das Modell gewählt wird."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Stauraum nach dem Einzug planen",
+          "Freistehende Schränke fressen genau die Fläche, die den Raum offen wirken ließ. Einbauten werden mit dem Grundriss zusammen entschieden."
+        ],
+        [
+          "Den Umzug unterschätzen",
+          "Der Umzug in ein Tiny House ist zur Hälfte eine Aussortierungsaufgabe. Wer das nicht vorher tut, tut es hinterher unter Druck."
+        ],
+        [
+          "Nur an Kleidung denken",
+          "Werkzeug, Vorräte, Reinigungsmittel, Bettwäsche und Saisonales brauchen ebenfalls definierte Plätze."
+        ]
+      ],
+      "faq": [
+        [
+          "Wie viel Stauraum hat ein Tiny House?",
+          "Mehr, als die Fläche vermuten lässt, wenn wandhoch und mit der Treppe geplant wird — und deutlich zu wenig, wenn nicht."
+        ],
+        [
+          "Welches Modell hat den meisten Stauraum?",
+          "MD 3 und MD 5 durch den zusätzlichen Raum, MD 2 durch die zweite Ebene. Entscheidend ist aber die Einbauplanung."
+        ],
+        [
+          "Kann ich die Einbauten selbst gestalten?",
+          "Sie kommen aus eigener Möbelfertigung und werden projektbezogen gemaßt — nicht aus Katalogmodulen."
+        ]
+      ]
+    },
+    "stellplatz": {
+      "cat": "genehmigung-und-recht",
+      "title": "Stellplatz",
+      "what": "Ein Stellplatz für ein Tiny House ist selten ein Parkplatz und fast immer ein Baurechtsthema — auch dann, wenn die Einheit Räder hat.",
+      "points": [
+        [
+          "Dauerhaftigkeit entscheidet",
+          "Sobald die Einheit an einem Ort bleibt und zum Aufenthalt dient, ist sie baurechtlich eine bauliche Anlage. Ob sie auf Rädern steht, ändert daran in allen fünf Zielmärkten nichts. Ein Stellplatz braucht deshalb dieselbe Prüfung wie ein Bauplatz."
+        ],
+        [
+          "Tiny-House-Siedlungen und Campingplätze",
+          "Sie lösen die Zulässigkeitsfrage, weil sie sie bereits geklärt haben — und bringen dafür Platzordnung, Standplatzvertrag und häufig Aufenthaltsbeschränkungen mit. Für Vermietungsobjekte ist das oft der schnellste Weg, für Dauerwohnen selten."
+        ],
+        [
+          "Miete, Laufzeit, Kündigung",
+          "Ein Standplatzvertrag mit kurzer Laufzeit unter einem Haus, dessen Umsetzung fünfstellig kostet, ist ein Risiko. Laufzeit, Verlängerung, Kündigungsfristen und Preisanpassung gehören geprüft, bevor das Haus bestellt wird."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Auf die Rad-Ausnahme setzen",
+          "Es gibt sie in aller Regel nicht. Behörden kennen das Argument, und eine Nutzungsuntersagung kommt nach der Investition."
+        ],
+        [
+          "Kurze Vertragslaufzeiten akzeptieren",
+          "Ein Umzug kostet Transport, Kran, Fundament und gegebenenfalls ein neues Verfahren. Der Vertrag sollte länger laufen als diese Rechnung erträgt."
+        ],
+        [
+          "Die Erschließung des Stellplatzes nicht prüfen",
+          "Auch auf einem Platz sind Anschlusspunkte, Leistung und Kosten unterschiedlich. Fragen Sie konkret nach."
+        ]
+      ],
+      "faq": [
+        [
+          "Wo darf ein Tiny House stehen?",
+          "Auf einem Grundstück, dessen Ausweisung die geplante Nutzung zulässt und dessen Erschließung gesichert ist. Das entscheidet die Gemeinde."
+        ],
+        [
+          "Sind Tiny-House-Siedlungen eine Lösung?",
+          "Häufig ja, weil die Zulässigkeit geklärt ist. Prüfen Sie Vertragslaufzeit, Kosten und Nutzungsbeschränkungen."
+        ],
+        [
+          "Darf ich dauerhaft auf einem Campingplatz wohnen?",
+          "In der Regel nicht. Camping- und Wochenendhausgebiete schließen ganzjähriges Wohnen meist aus."
+        ]
+      ]
+    },
+    "strom": {
+      "cat": "energie-und-autarkie",
+      "title": "Stromanschluss",
+      "what": "Der Stromanschluss ist technisch der einfachste der drei Versorgungspunkte und wirtschaftlich der, der am stärksten von der Entfernung abhängt.",
+      "points": [
+        [
+          "Bis zur Grenze der Versorger, danach der Fachbetrieb",
+          "Der Netzbetreiber führt bis zum Hausanschluss, ab dort arbeitet ein im Zielland zugelassener Elektrofachbetrieb. Die Installation im Haus ist bei MODUNERA halogenfrei ausgeführt und für 220 Volt ausgelegt; Anschluss, Absicherung und Prüfung erfolgen nach den lokalen Vorschriften."
+        ],
+        [
+          "Anschlussleistung nach Technik bemessen",
+          "Wärmepumpe, Durchlauferhitzer, Induktion und Ladepunkt zusammen ergeben eine Spitzenlast, die deutlich über dem liegt, was für ein kleines Haus intuitiv erscheint. Diese Zahl gehört an den Anfang der Planung, nicht ans Ende."
+        ],
+        [
+          "Entfernung ist der Kostenfaktor",
+          "Wie beim Abwasser bestimmt fast ausschließlich die Distanz zum bestehenden Netz die Anschlusskosten. Der örtliche Netzbetreiber nennt sie für Ihre konkrete Adresse — kostenlos und vor dem Grundstückskauf."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Anschlussleistung zu knapp beantragen",
+          "Eine nachträgliche Erhöhung ist aufwendiger und teurer als die richtige Zahl beim ersten Antrag."
+        ],
+        [
+          "Vorlaufzeiten des Netzbetreibers ignorieren",
+          "Anschlusstermine haben Wartezeiten. Sie gehören in die Lieferplanung, nicht in die Woche nach der Anlieferung."
+        ],
+        [
+          "Im Ausland mit deutschen Normen planen",
+          "Anschluss und Abnahme erfolgen nach lokalem Recht durch eine dort zugelassene Fachkraft."
+        ]
+      ],
+      "faq": [
+        [
+          "Wer schließt den Strom an?",
+          "Der örtliche Netzbetreiber bis zum Hausanschluss, danach ein im Zielland zugelassener Elektrofachbetrieb."
+        ],
+        [
+          "Welche Anschlussleistung brauche ich?",
+          "Das ergibt sich aus Ihrer Technik. Wärmepumpe, Durchlauferhitzer, Induktion und Ladepunkt bestimmen die Spitzenlast."
+        ],
+        [
+          "Was kostet der Anschluss?",
+          "Fast ausschließlich abhängig von der Entfernung zum Netz. Fragen Sie den Netzbetreiber für Ihre Adresse."
+        ]
+      ]
+    },
+    "thermowood": {
+      "cat": "betrieb-und-wartung",
+      "title": "Thermowood",
+      "what": "Thermowood+ vergraut. Das ist keine Alterserscheinung, sondern das gewünschte Verhalten des Materials — wer das nicht möchte, wählt eine andere Fassade.",
+      "points": [
+        [
+          "Thermisch modifiziertes Holz",
+          "Die Behandlung reduziert die Feuchteaufnahme und erhöht die Formstabilität. Das Ergebnis ist eine Holzfassade, die sich weniger bewegt und langsamer arbeitet als unbehandeltes Holz — bei einem Gebäude, das transportiert wird und starken Klimawechseln ausgesetzt ist, ein relevanter Vorteil."
+        ],
+        [
+          "Vergrauen ist der Normalzustand",
+          "Unbehandelt entwickelt die Fassade eine silbergraue Patina, ungleichmäßig je nach Bewitterung. Wer den Auslieferungston halten will, muss regelmäßig pflegen — das ist eine bewusste Entscheidung für laufenden Aufwand, nicht der Standard."
+        ],
+        [
+          "Wartung heißt hier vor allem Hinschauen",
+          "Sichtkontrolle einmal jährlich: Anschlüsse, Entwässerung, Übergänge um Fenster, Sockelbereich. Wo Wasser abtrocknen kann, hält die Fassade lange. Wo es steht, entstehen die Probleme — unabhängig vom Material."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Vergrauen als Mangel behandeln",
+          "Es ist das erwartete Verhalten. Wer eine gleichbleibende Optik will, wählt Verbundplatte oder Stehfalz."
+        ],
+        [
+          "Die Fassade mit ungeeigneten Mitteln reinigen",
+          "Hochdruck und aggressive Reiniger schaden mehr als das Wetter. Sanfte Reinigung reicht."
+        ],
+        [
+          "Den Sockelbereich zuwachsen lassen",
+          "Bewuchs und aufgeschüttete Erde am Sockel halten Feuchte fest. Das ist der häufigste Ausgangspunkt für Fassadenschäden."
+        ]
+      ],
+      "faq": [
+        [
+          "Muss Thermowood+ gestrichen werden?",
+          "Nein. Unbehandelt vergraut es kontrolliert. Streichen ist eine Option für gleichbleibende Optik, keine Notwendigkeit."
+        ],
+        [
+          "Wie lange hält die Fassade?",
+          "Bei sauberen Anschlüssen und freier Entwässerung sehr lange. Entscheidend ist, dass Wasser abtrocknen kann."
+        ],
+        [
+          "Welche Alternativen gibt es?",
+          "Beschichtete Verbundplatte und Stehfalz — beide pflegeärmer und optisch konstanter, dafür weniger lebendig."
+        ]
+      ]
+    },
+    "transport": {
+      "cat": "transport-und-import",
+      "title": "Transport",
+      "what": "Die Fernstrecke ist der planbare Teil. Was schiefgeht, geht auf den letzten hundert Metern schief — an einem Tor, einem Wendekreis oder einem Kranstandort, den es nicht gibt.",
+      "points": [
+        [
+          "Die Einheit fährt als Ganzes",
+          "Transportiert wird auf einem Tieflader, mit einer Basisbreite von 2,55 Metern, die europäische Straßen ohne Sondermaß zulässt. Höhe und Gesamtgewicht hängen von Modell und Ausstattung ab und werden für die Route bestätigt."
+        ],
+        [
+          "Was wir vor der Bestätigung brauchen",
+          "Fotos der Zufahrt, Breite der Einfahrt, Wendekreis, Untergrund, Steigung, Oberleitungen und Äste, und die mögliche Kranposition. Enge oder steile Zufahrten sind fast immer lösbar — aber nur, wenn sie früh genug bekannt sind."
+        ],
+        [
+          "Entladung ist ein eigener Vorgang",
+          "Kran oder Schwerlaststapler, abhängig von Zufahrt und Zielposition. Das Fundament muss vorbereitet und vermessen sein, bevor der Transport rollt. Ein Haus, das ankommt und nicht abgesetzt werden kann, verursacht Standkosten."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Die Zufahrt aus der Erinnerung beschreiben",
+          "Fotos mit Maßband sind der Unterschied zwischen einer Planung und einer Überraschung."
+        ],
+        [
+          "Das Fundament zu spät bestellen",
+          "Es muss fertig und vermessen sein, bevor der Tieflader losfährt — nicht am selben Tag."
+        ],
+        [
+          "Oberleitungen und Äste vergessen",
+          "Höhe ist die am häufigsten übersehene Dimension bei der letzten Zufahrt."
+        ]
+      ],
+      "faq": [
+        [
+          "Wie wird das Haus geliefert?",
+          "Als Ganzes auf einem Tieflader bis zum vereinbarten Punkt. Die Entladung erfolgt per Kran oder Schwerlaststapler."
+        ],
+        [
+          "Was, wenn meine Zufahrt eng ist?",
+          "Meist lösbar. Senden Sie Fotos und Maße, bevor der Auftrag bestätigt wird."
+        ],
+        [
+          "Wer bereitet das Fundament vor?",
+          "Ein lokaler Betrieb. Wir liefern die Lastannahmen und Auflagerpunkte."
+        ]
+      ]
+    },
+    "versicherung": {
+      "cat": "genehmigung-und-recht",
+      "title": "Versicherung",
+      "what": "Versicherbarkeit folgt der Genehmigungslage. Ein Objekt, das ohne die nötige Genehmigung steht, ist schwer zu versichern und schwer zu verkaufen.",
+      "points": [
+        [
+          "Drei Deckungen, drei Zeitpunkte",
+          "Transportversicherung für die Anlieferung, Gebäude- beziehungsweise Elementarschadenversicherung für den Betrieb, Betreiberhaftpflicht bei Vermietung. Jede greift in einer anderen Phase — und jede sollte vor dieser Phase abgeschlossen sein."
+        ],
+        [
+          "Die Einordnung bestimmt das Produkt",
+          "Ist die Einheit eine mit dem Grundstück verbundene bauliche Anlage oder eine bewegliche Sache? Danach richtet sich, ob eine Wohngebäudeversicherung oder ein anderes Produkt greift. Diese Frage stellt Ihnen der Versicherer — und sie beantwortet sich aus der Genehmigungslage."
+        ],
+        [
+          "Vermietung ist nicht mitversichert",
+          "Eine Gebäudeversicherung deckt gewerbliche Vermietung nicht automatisch ab. Wer vermietet, braucht die Betreiberhaftpflicht — vor dem ersten Gast, nicht nach dem ersten Schaden."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Versicherung nach der Lieferung klären",
+          "Der Transport ist die Phase mit dem höchsten Einzelrisiko. Die Deckung gehört davor."
+        ],
+        [
+          "Elementarschäden ausklammern",
+          "Starkregen, Sturm und Hagel treffen ein kompaktes Gebäude genauso. Prüfen Sie den Einschluss ausdrücklich."
+        ],
+        [
+          "Bei Vermietung mit privater Deckung arbeiten",
+          "Im Schadensfall ist das die teuerste Ersparnis des Projekts."
+        ]
+      ],
+      "faq": [
+        [
+          "Welche Versicherungen brauche ich?",
+          "Transport für die Lieferung, Gebäude- beziehungsweise Elementarschaden für den Betrieb, Betreiberhaftpflicht bei Vermietung."
+        ],
+        [
+          "Ist ein Tiny House als Wohngebäude versicherbar?",
+          "Das hängt von der rechtlichen Einordnung ab, die sich aus der Genehmigungslage ergibt."
+        ],
+        [
+          "Was kostet die Versicherung?",
+          "Abhängig von Einordnung, Standort, Nutzung und Deckungsumfang. Holen Sie Angebote vor der Lieferung ein."
+        ]
+      ]
+    },
+    "vier-jahreszeiten": {
+      "cat": "technik-und-konstruktion",
+      "title": "Vier-Jahreszeiten-Nutzung",
+      "what": "Ganzjährig nutzbar heißt nicht nur winterfest. Es heißt, dass dasselbe Haus im Januar warm und im Juli erträglich ist — und das sind zwei verschiedene Auslegungen.",
+      "points": [
+        [
+          "Winter und Sommer werden zusammen entschieden",
+          "Dämmstärke, Fensteranteil, Verschattung, Lüftung und Heizsystem bilden ein System. Wer nur den Winterfall optimiert, bekommt im Sommer ein Gewächshaus; wer nur verschattet, heizt im Januar gegen die fehlende solare Gewinnung an."
+        ],
+        [
+          "Die Heizperiode am Standort ist die Basiszahl",
+          "Deutschland reicht vom milden Oberrhein bis in alpine Schneelastzonen, Dänemark verlangt die längste Heizperiode der fünf Märkte, die Schweiz die differenzierteste Auslegung. Deshalb fragen wir vor der Produktion nach der Adresse."
+        ],
+        [
+          "MD 6 ist das Modell für den harten Fall",
+          "Steildach für Schneeabtrag, größere Aufbauhöhe, Auslegung auf lange Heizperioden. In milden Lagen zahlt man dafür mit, ohne den Vorteil zu nutzen — dort bringen MD 1 oder MD 3 mehr Fläche pro Euro."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Nur den Winter planen",
+          "Sommerlicher Wärmeschutz ist die zweite Hälfte derselben Entscheidung und wird regelmäßig vergessen."
+        ],
+        [
+          "Ein Sommerobjekt als Dauerwohnhaus nutzen",
+          "Ein Aufbau, der für Feriennutzung reicht, ist für Dauerwohnen an derselben Adresse zu knapp ausgelegt."
+        ],
+        [
+          "Frostschutz im Winterurlaub abschalten",
+          "Ein ausgekühltes, unbelüftetes Haus sammelt Feuchte. Frostwächterbetrieb und Grundlüftung kosten wenig."
+        ]
+      ],
+      "faq": [
+        [
+          "Ist ein MODUNERA Tiny House ganzjährig bewohnbar?",
+          "Ja, bei entsprechender Auslegung. Dämmung, Fensterdimensionierung, Lüftung und Heizsystem werden gemeinsam auf den Standort festgelegt."
+        ],
+        [
+          "Welches Modell für harte Winter?",
+          "MD 6 — Steildach, Schneeabtrag und Auslegung auf lange Heizperioden."
+        ],
+        [
+          "Was ist im Sommer zu beachten?",
+          "Außenliegende Verschattung und ein öffenbares Loftfenster für die Nachtauskühlung."
+        ]
+      ]
+    },
+    "vs-modulhaus": {
+      "cat": "vergleich-und-alternativen",
+      "title": "Tiny House oder Modulhaus",
+      "what": "Modulbau skaliert, das Tiny House ist bewusst singulär. Die Entscheidung fällt an der Fläche — und wir bauen beides, also sagen wir es auch, wenn Modulbau die bessere Antwort ist.",
+      "points": [
+        [
+          "Ab welcher Fläche Modulbau gewinnt",
+          "Module lassen sich kombinieren, und die Wirtschaftlichkeit verbessert sich mit der Größe. Oberhalb von etwa 60 Quadratmetern ist Modulbau in der Regel die bessere Antwort — pro Quadratmeter günstiger und in der Grundrissfreiheit überlegen."
+        ],
+        [
+          "Transport und Aufstellung unterscheiden sich",
+          "Ein Tiny House kommt als eine Einheit und steht am selben Tag. Ein Modulgebäude kommt in Teilen und wird auf der Baustelle gefügt — mehr Kranarbeit, mehr Schnittstellen, aber auch mehr Möglichkeiten."
+        ],
+        [
+          "Genehmigungsrechtlich derselbe Ausgangspunkt",
+          "Beide sind bauliche Anlagen. Der Unterschied liegt nicht im Verfahren, sondern in Fläche, Grundrissfreiheit und Erweiterbarkeit."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Ein Tiny House kaufen, wenn 90 Quadratmeter gebraucht werden",
+          "Zwei Tiny Houses nebeneinander sind selten die günstigere oder bessere Lösung als ein Modulgebäude."
+        ],
+        [
+          "Erweiterbarkeit voraussetzen",
+          "Ein Tiny House ist nicht dafür gedacht, später verdoppelt zu werden. Wer Wachstum plant, sollte modular denken."
+        ],
+        [
+          "Nur den Quadratmeterpreis vergleichen",
+          "Transport, Aufstellung, Fundament und Schnittstellen unterscheiden sich zwischen den Bauweisen erheblich."
+        ]
+      ],
+      "faq": [
+        [
+          "Was ist günstiger?",
+          "Pro Einheit meist das Tiny House, pro Quadratmeter meist der Modulbau. Ab etwa 60 Quadratmetern lohnt der Vergleich."
+        ],
+        [
+          "Kann ich ein Tiny House später erweitern?",
+          "Dafür ist es nicht ausgelegt. Wenn Erweiterung absehbar ist, sprechen Sie uns auf Modulbau an."
+        ],
+        [
+          "Baut MODUNERA auch Modulgebäude?",
+          "Ja — Modulbau, Stahlbau, Bungalows und Möbel nach Maß aus derselben Produktion."
+        ]
+      ]
+    },
+    "vs-wohnwagen": {
+      "cat": "vergleich-und-alternativen",
+      "title": "Tiny House oder Wohnwagen",
+      "what": "Ein Wohnwagen ist zum häufigen Ziehen und zeitweiligen Stehen gebaut. Ein Tiny House ist ein Gebäude, das transportiert werden kann. Der Unterschied zeigt sich im Winter und im zwanzigsten Jahr.",
+      "points": [
+        [
+          "Aufbau und Nutzungsdauer",
+          "Dämmaufbau, Wandstärke, Fenster und Haustechnik eines Wohnwagens sind für Saisonbetrieb ausgelegt. Eine feuerverzinkte Stahlkonstruktion mit standortbezogener Dämmung und Lüftung mit Wärmerückgewinnung ist für dauerhaftes Wohnen ausgelegt. Das ist keine Wertung, sondern eine Zweckbestimmung."
+        ],
+        [
+          "Mobilität ehrlich einschätzen",
+          "Wer wirklich alle paar Monate den Standort wechseln will, ist mit einem Wohnwagen besser bedient. Wer irgendwo wohnen will, ist es nicht — und die meisten Menschen, die ein Tiny House kaufen, wollen wohnen."
+        ],
+        [
+          "Rechtlich getrennt betrachten",
+          "Eine Straßenzulassung sagt etwas über die Fahrt und nichts über das dauerhafte Stehen. Sobald ein Fahrzeug dauerhaft an einem Ort steht und bewohnt wird, wird die Frage baurechtlich — auch beim Wohnwagen."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Ein Tiny House kaufen und Wohnwagenmobilität erwarten",
+          "Transport, Kran, Fundament und ein möglicherweise neues Verfahren fallen bei jedem Standortwechsel an."
+        ],
+        [
+          "Einen Wohnwagen als Dauerwohnsitz planen",
+          "Winterbetrieb, Feuchteschutz und Lebensdauer sind dafür nicht ausgelegt."
+        ],
+        [
+          "Die baurechtliche Frage über die Zulassung lösen wollen",
+          "Die Nutzung entscheidet, nicht das Nummernschild."
+        ]
+      ],
+      "faq": [
+        [
+          "Ist ein Tiny House mobiler als ein Wohnwagen?",
+          "Nein. Es ist transportierbar, nicht mobil. Ein Standortwechsel ist ein Projekt, keine Fahrt."
+        ],
+        [
+          "Kann ich im Winter in einem Wohnwagen wohnen?",
+          "Nur eingeschränkt und mit erheblichem Aufwand. Dafür ist er nicht ausgelegt."
+        ],
+        [
+          "Wann ist ein Wohnwagen die bessere Wahl?",
+          "Wenn Sie tatsächlich häufig den Standort wechseln wollen. Dann ist er das richtige Produkt."
+        ]
+      ]
+    },
+    "wartung": {
+      "cat": "betrieb-und-wartung",
+      "title": "Wartung",
+      "what": "Die Wartungsliste eines Tiny House ist kurz, und fast alles darauf ist von außen sichtbar. Das ist die gute Nachricht — vorausgesetzt, jemand schaut einmal im Jahr hin.",
+      "points": [
+        [
+          "Einmal jährlich, am besten im Herbst",
+          "Dach, Rinnen, Fallrohre, Übergänge um Fenster und Türen, Sockelbereich, Fassadenanschlüsse. Vor dem Winter, damit gefundene Probleme noch bei brauchbarem Wetter behoben werden können."
+        ],
+        [
+          "Technik nach Intervall",
+          "Filter der Lüftungsanlage, Wärmepumpe nach Herstellervorgabe, gegebenenfalls Kleinkläranlage nach behördlicher Vorgabe. Der Filterwechsel ist die einfachste und meistvergessene Aufgabe im Haus."
+        ],
+        [
+          "Bei Vermietung schneller",
+          "Beschläge, Oberflächen, Duscharmaturen und Textilien verschleißen bei häufigem Wechsel um ein Vielfaches schneller. Eine jährliche Rücklage für Ersatz gehört ab dem ersten Jahr in die Kalkulation, nicht ab dem vierten."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Die Rinnen nicht kontrollieren",
+          "Verstopfte Entwässerung ist der häufigste Ausgangspunkt für Fassaden- und Sockelschäden."
+        ],
+        [
+          "Filterwechsel aufschieben",
+          "Eine Anlage mit zugesetzten Filtern liefert weniger Luft bei mehr Geräusch — und wird dann abgeschaltet."
+        ],
+        [
+          "Nur reagieren statt kontrollieren",
+          "Fast jedes ernste Problem in einem kompakten Gebäude beginnt als kleines und sichtbares."
+        ]
+      ],
+      "faq": [
+        [
+          "Wie oft muss ein Tiny House gewartet werden?",
+          "Eine gründliche Sichtkontrolle im Jahr plus die Intervalle der Haustechnik."
+        ],
+        [
+          "Was kostet die Wartung?",
+          "Wenig, wenn sie regelmäßig stattfindet. Die Kosten entstehen dort, wo sie ausbleibt."
+        ],
+        [
+          "Kann ich das selbst machen?",
+          "Die Sichtkontrolle ja. Wärmepumpe und Kleinkläranlage folgen Hersteller- beziehungsweise Behördenvorgaben."
+        ]
+      ]
+    },
+    "wasser": {
+      "cat": "energie-und-autarkie",
+      "title": "Wasserversorgung",
+      "what": "Trinkwasser ist rechtlich das strenger regulierte der beiden Wasserthemen — und das, bei dem improvisierte Lösungen am schnellsten an Grenzen stoßen.",
+      "points": [
+        [
+          "Anschluss ist fast immer die einfachste Lösung",
+          "Der örtliche Versorger führt bis zur Grundstücksgrenze, ab dort arbeitet ein lokaler Fachbetrieb. Wie beim Strom bestimmt die Entfernung zum bestehenden Netz die Kosten fast vollständig."
+        ],
+        [
+          "Eigene Brunnen sind genehmigungspflichtig",
+          "Eine eigene Wasserentnahme braucht eine wasserrechtliche Erlaubnis und regelmäßige Untersuchungen der Trinkwasserqualität. Das ist machbar, aber kein Weg um Behörden herum."
+        ],
+        [
+          "Regenwasser ersetzt kein Trinkwasser",
+          "Für Toilettenspülung und Garten ist Regenwassernutzung eine sinnvolle Ergänzung. Als Trinkwasser ist sie es nicht — und die Trennung der Systeme muss dann eindeutig ausgeführt sein."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Frostschutz der Zuleitung vergessen",
+          "Eine Leitung, die nicht frostfrei liegt oder nicht begleitbeheizt ist, friert im ersten harten Winter. Das ist der häufigste Winterschaden."
+        ],
+        [
+          "Trink- und Brauchwasser nicht sauber trennen",
+          "Eine Querverbindung ist ein Gesundheits- und ein Rechtsproblem. Die Ausführung gehört in die Spezifikation."
+        ],
+        [
+          "Die Entfernung zum Netz schätzen",
+          "Der Versorger nennt sie Ihnen für Ihre Adresse — vor dem Grundstückskauf."
+        ]
+      ],
+      "faq": [
+        [
+          "Brauche ich einen Trinkwasseranschluss?",
+          "Bei genehmigter Wohnnutzung verlangen ihn viele Kommunen. Alternativen sind genehmigungspflichtig."
+        ],
+        [
+          "Ist ein eigener Brunnen möglich?",
+          "Mit wasserrechtlicher Erlaubnis und regelmäßigen Untersuchungen. Die untere Wasserbehörde entscheidet."
+        ],
+        [
+          "Kann ich Regenwasser nutzen?",
+          "Für Toilette und Garten ja, als Trinkwasser nicht. Die Systeme müssen eindeutig getrennt sein."
+        ]
+      ]
+    },
+    "winterfest": {
+      "cat": "technik-und-konstruktion",
+      "title": "Winterfestigkeit",
+      "what": "Winterfest ist kein Ausstattungsmerkmal, das man ankreuzt, sondern das Ergebnis von vier Entscheidungen, die vor der Produktion zusammen getroffen werden.",
+      "points": [
+        [
+          "Dämmung, Fenster, Lüftung, Heizung",
+          "Diese vier bilden ein System. Eine starke Dämmung mit zu großen Fensterflächen, ohne Lüftung oder mit falsch dimensionierter Heizung ergibt kein winterfestes Haus. Ausgelegt wird nach Heizperiode, Schneelastzone und Windzone am konkreten Ort."
+        ],
+        [
+          "Die Leitungen sind der praktische Schwachpunkt",
+          "Frostfreie Verlegung oder Begleitheizung der Zuleitung, Entleerungsmöglichkeit bei längerem Leerstand, Frostwächterbetrieb im Urlaub. Das sind die Punkte, an denen im Januar tatsächlich Schäden entstehen — nicht an der Wand."
+        ],
+        [
+          "Schneelast gehört in die Konstruktion",
+          "In alpinen Lagen und in Skandinavien ist die Dachlast eine eigene Rechnung. MD 6 mit Steildach führt Schnee ab, statt ihn zu sammeln — der Grund, warum es dort am häufigsten gewählt wird."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Ein Sommerobjekt im Winter bewohnen",
+          "Ein für Feriennutzung ausgelegter Aufbau ist für Dauerwohnen an derselben Adresse zu knapp."
+        ],
+        [
+          "Im Winterurlaub alles abschalten",
+          "Ein ausgekühltes, unbelüftetes Haus sammelt Feuchte und riskiert Frostschäden an den Leitungen."
+        ],
+        [
+          "Nur auf die Dämmstärke schauen",
+          "Ohne Dichtheit und Lüftung verliert der beste Aufbau seinen Vorteil."
+        ]
+      ],
+      "faq": [
+        [
+          "Ist ein MODUNERA Tiny House winterfest?",
+          "Bei entsprechender Auslegung ja. Dämmung, Fensterdimensionierung, Lüftung und Heizsystem werden auf den Zielort festgelegt."
+        ],
+        [
+          "Was passiert bei längerer Abwesenheit im Winter?",
+          "Frostwächterbetrieb und Grundlüftung laufen lassen, oder die Leitungen entleeren. Beides gehört vorher besprochen."
+        ],
+        [
+          "Welches Modell für Schneelagen?",
+          "MD 6 mit Steildach und Auslegung auf lange Heizperioden."
+        ]
+      ]
+    },
+    "winterfestes-tiny-house": {
+      "cat": "technik-und-konstruktion",
+      "title": "Winterfestes Tiny House",
+      "what": "Wer ganzjährig in einem Tiny House wohnen will, kauft kein anderes Haus, sondern dieselbe Konstruktion mit einer anderen Auslegung.",
+      "points": [
+        [
+          "Der Unterschied liegt in der Spezifikation",
+          "Grundriss und Konstruktion bleiben. Was sich ändert, sind Dämmstärke, Fensteranteil, Lüftungskonzept und Heizsystem — abgestimmt auf die Heizperiode, die Schneelastzone und die Windzone am konkreten Standort."
+        ],
+        [
+          "Dänemark und die Alpen sind die härtesten Fälle",
+          "Dänemark verlangt die längste Heizperiode der fünf Zielmärkte und dazu erheblichen Windschutz; die Schweiz die differenzierteste Auslegung zwischen Tessin und 1.500 Metern. Für beide ist MD 6 die häufigste Wahl."
+        ],
+        [
+          "Betrieb entscheidet mit",
+          "Ein winterfest gebautes Haus, in dem die Lüftung abgeschaltet und im Urlaub die Heizung ausgemacht wird, verhält sich nicht winterfest. Die Auslegung liefert die Voraussetzung, der Betrieb das Ergebnis."
+        ]
+      ],
+      "mistakes": [
+        [
+          "Winterfestigkeit als Option nachträglich bestellen",
+          "Dämmaufbau und Fensterdimensionierung sind Produktionsentscheidungen und keine Nachrüstung."
+        ],
+        [
+          "Die Zuleitung nicht frostsicher planen",
+          "Der häufigste konkrete Winterschaden entsteht an der Wasserleitung, nicht an der Hülle."
+        ],
+        [
+          "Nur auf Temperatur schauen",
+          "Wind und Feuchte machen im nordeuropäischen Winter oft mehr aus als die reine Außentemperatur."
+        ]
+      ],
+      "faq": [
+        [
+          "Kann ich ganzjährig in einem Tiny House wohnen?",
+          "Technisch ja, mit entsprechender Auslegung. Rechtlich hängt es vom Standort und der zulässigen Nutzung ab."
+        ],
+        [
+          "Was kostet die winterfeste Auslegung?",
+          "Sie ist Teil der Spezifikation und wird projektbezogen kalkuliert. Der Mehrpreis amortisiert sich über den Betrieb."
+        ],
+        [
+          "Welches Modell ist am besten geeignet?",
+          "MD 6 für Schnee- und Nordlagen. In milderen Lagen genügt eine entsprechend ausgelegte Variante der übrigen Modelle."
+        ]
+      ]
+    }
+  }
+}

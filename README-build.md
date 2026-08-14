@@ -70,6 +70,8 @@ built out.
 | Model editorial copy (MD 1–MD 8, five languages) | `data/model-copy.json` |
 | Model page long-form sections | `data/depth-copy.json` |
 | Country question sets (20 × 5 countries × 5 languages) | `data/country-qa.json` |
+| Blog topics (58 subjects, German) | `data/blog-topics.json` |
+| Blog category material, per format | `data/blog-categories.json` |
 | English knowledge library (nine subjects) | `data/en-blog.json` |
 | The five-market appendix | `APPENDIX` in `tools/build-modunera-depth.mjs` |
 | Guide categories | `GUIDE_CATEGORIES` in `tools/build-modunera-v2.mjs` |
@@ -147,7 +149,7 @@ brand colour, a surviving legacy brand string, or a duplicated country/service
 link in the homepage navigation. It also asserts the required page set exists.
 
 Current numbers: 14,976 pages, 14,976 unique canonicals, 14,972 sitemap URLs,
-37,251 JSON-LD blocks, 1,448,214 local references checked with none broken.
+37,309 JSON-LD blocks, 1,449,324 local references checked with none broken.
 
 Beyond the gate, a Chromium pass at 390/768/1440px checks every page for script
 errors, horizontal overflow, and that the contact rail renders as SVG icons.
@@ -163,9 +165,28 @@ reads to a search engine as one page repeated. Where that stands now:
 | Country page | 330–860 | 1,200–2,050 |
 | Country question page | did not exist | 1,000–1,420 |
 | English subject page | did not exist | 1,100–1,800 |
-| Blog post / guide | 605–740 | 1,000–1,600 |
+| Blog post / guide | 605–740 | 1,500–1,800 |
 
-The blog library is the remaining gap. Its 125 German posts still share one
-seven-section skeleton with a keyword substituted in; the appendix adds real
-per-market material to each of them, but reaching genuine per-topic depth means
-writing per-topic source material, not generating more of the same.
+## Duplication
+
+Length was never the real problem with the blog. The 125 posts were generated
+from one seven-section skeleton with a keyword substituted in, which a search
+engine reads as one page published 125 times.
+
+`data/blog-topics.json` gives each of the 58 subjects its own argument, its own
+mistakes and its own questions; `data/blog-categories.json` supplies the
+category-level material, split so the guide format and the mistakes-checklist
+format of the same subject do not reuse each other's text. Measured across all
+5,995 pairs of posts, by 6-gram Jaccard similarity of the `<article>` body:
+
+| | Before | Now |
+|---|---|---|
+| Mean overlap between any two posts | ~95% | 11.8% |
+| Guide vs checklist of the same subject | 100% | 27% |
+| Pairs above 85% | almost all | 0 |
+| Worst remaining pair | 100% | 67% (two checklists in one category) |
+
+Adding more shared boilerplate would raise the word counts and undo this, so it
+is deliberately not done. Going further means writing more per-subject material
+into `data/blog-topics.json` — two more points and two more mistakes per subject
+would add roughly 400 words each and push the remaining category overlap down.
