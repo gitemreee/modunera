@@ -826,4 +826,38 @@ p{margin:0 0 10px}
   .editorial-caption{left:20px;bottom:20px;max-width:calc(100% - 40px)}
   .project-caption{left:18px;right:18px;bottom:18px}
 }
+
+/* Model cards. v1 laid .model-content out as a flex row with space-between,
+   because its own markup put two children in it — a text block and a price block.
+   The card markup used by the home page and the model index stacks four children
+   (label, name, lead, specs), which in a row overflowed the card and printed the
+   lead across the photograph. They stack here, the lead is clamped to three lines,
+   and the whole card is one link. */
+.model-card{min-height:clamp(320px,26vw,380px)}
+/* v1's card-wide scrim faded out at 67% and left the label sitting on whatever the
+   photograph happened to be doing up there. Putting the gradient on the content
+   block instead ties it to the text it has to carry, so it works whatever the
+   image and whatever the card height. */
+.model-card:after{background:linear-gradient(0deg,rgba(11,20,16,.55),transparent 70%)}
+.model-card>a{position:absolute;inset:0;display:block;color:inherit}
+.model-card .model-content{display:block;padding:44px 17px 17px;
+  background:linear-gradient(0deg,rgba(11,20,16,.94) 0%,rgba(11,20,16,.9) 55%,rgba(11,20,16,0) 100%)}
+.model-card .model-label{margin:0 0 3px;color:var(--beige)}
+.model-card h3{font-size:1.42rem;line-height:1.1;margin:0 0 7px;color:#fff}
+.model-card .model-content p{font-size:var(--fs-small);line-height:1.4;margin:0 0 10px;
+  color:rgba(255,255,255,.84);max-width:none;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.model-card .model-specs{gap:5px}
+.model-card .model-specs span{font-size:var(--fs-label);font-weight:750;letter-spacing:.03em;
+  color:#fff;background:rgba(255,255,255,.16);border-radius:999px;padding:4px 9px;
+  backdrop-filter:blur(4px)}
+.model-card:hover h3{color:var(--beige)}
+@media(max-width:900px){
+  .model-card{min-height:300px}
+  .model-card .model-content p{-webkit-line-clamp:2}
+}
+@media(max-width:640px){
+  .model-card{min-height:290px}
+  .model-card h3{font-size:1.3rem}
+}
 /* MODUNERA BRAND PALETTE END */

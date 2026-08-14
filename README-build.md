@@ -74,6 +74,7 @@ built out.
 | Blog category material, per format | `data/blog-categories.json` |
 | English knowledge library (nine subjects) | `data/en-blog.json` |
 | The five-market appendix | `APPENDIX` in `tools/build-modunera-depth.mjs` |
+| Home-page model grid, five languages | `HOME_MODELS` in `tools/build-modunera-depth.mjs` |
 | Guide categories | `GUIDE_CATEGORIES` in `tools/build-modunera-v2.mjs` |
 | New market guides | `MARKET_GUIDES` in `tools/build-modunera-v2.mjs` |
 | Country copy, permits, regions | `COUNTRIES` in `tools/build-modunera-europe.mjs` |

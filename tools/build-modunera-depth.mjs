@@ -1280,6 +1280,94 @@ async function rewriteArticles() {
   return { changed, skipped };
 }
 
+
+
+/* --- models on the home page ----------------------------------------------- */
+
+/* Four of the five home pages had no models on them at all: the English one
+   showed a single stock image under the heading "Eight starting points", and the
+   Dutch, Danish and French ones went from the hero straight to countries. The
+   German one had all eight, but behind a tab widget that displays exactly one at
+   a time and needs JavaScript to do it.
+   
+   All five now carry the same eight-card grid — image, layout, sleeping places
+   and entry price, each card a link to that model's page in that language. */
+
+const HOME_MODELS = {
+  de: { anchor: "modelle", eyebrow: "MD 1 bis MD 8", h2: "Acht Charaktere. Ein Lebensentwurf.",
+    lead: "Wählen Sie nicht nur nach Größe, sondern nach Nutzung, Raumgefühl, Stil und Investitionsziel. Alle acht auf derselben technischen Basis von 2,55 Metern Breite — der Unterschied liegt in Länge, Aufteilung und Ausstattungstiefe.",
+    all: "Alle Modelle im Detail", compare: "Modelle vergleichen", sleeps: "Schlafplätze" },
+  en: { anchor: "models", eyebrow: "MD 1 to MD 8", h2: "Eight characters. One way of living.",
+    lead: "Choose by use, spatial feel, style and investment goal rather than by size alone. All eight share a 2.55 metre base width — what differs is length, layout and specification depth.",
+    all: "All models in detail", compare: "Compare the models", sleeps: "sleeps" },
+  nl: { anchor: "modellen", eyebrow: "MD 1 tot en met MD 8", h2: "Acht karakters. Eén manier van wonen.",
+    lead: "Kies op gebruik, ruimtegevoel, stijl en investeringsdoel in plaats van alleen op maat. Alle acht delen een basisbreedte van 2,55 meter — het verschil zit in lengte, indeling en afwerkingsdiepte.",
+    all: "Alle modellen in detail", compare: "Modellen vergelijken", sleeps: "slaapplaatsen" },
+  da: { anchor: "modeller", eyebrow: "MD 1 til MD 8", h2: "Otte karakterer. Én måde at bo på.",
+    lead: "Vælg efter anvendelse, rumfornemmelse, stil og investeringsmål frem for kun efter størrelse. Alle otte deler en basisbredde på 2,55 meter — forskellen ligger i længde, disponering og udstyrsdybde.",
+    all: "Alle modeller i detaljer", compare: "Sammenlign modellerne", sleeps: "sovepladser" },
+  fr: { anchor: "modeles", eyebrow: "MD 1 à MD 8", h2: "Huit caractères. Une façon d'habiter.",
+    lead: "Choisissez selon l'usage, la sensation d'espace, le style et l'objectif d'investissement plutôt que selon la seule taille. Les huit partagent une largeur de base de 2,55 mètres — la différence tient à la longueur, à la distribution et à la profondeur d'équipement.",
+    all: "Tous les modèles en détail", compare: "Comparer les modèles", sleeps: "couchages" },
+};
+
+function homeModelSection(lang, root) {
+  const h = HOME_MODELS[lang];
+  const p = PATHS[lang];
+  const cards = Array.from({ length: 8 }, (_, i) => {
+    const n = i + 1;
+    const c = MODEL_COPY[String(n)][lang];
+    const s = PRICING.models[`mc${n}`];
+    const img = MODEL_COPY[String(n)].images[0];
+    return `<article class="model-card"><a href="${root}${p.models}/md-${n}/"><img src="${root}assets/images/gallery/${img}.webp" alt="MODUNERA MD ${n} – ${esc(c.label)}" loading="lazy" width="900" height="600"><div class="model-content"><div class="model-label">${esc(c.label)}</div><h3>MD ${n}</h3><p>${esc(c.lead)}</p><div class="model-specs"><span>${esc(lengths(n, lang))}</span><span>${esc(MODEL_COPY[String(n)].sleeps)} ${esc(h.sleeps)}</span><span>${esc(MODEL_FROM[lang])} ${esc(eur(s.base_eur, lang))}</span></div></div></a></article>`;
+  }).join("");
+
+  const compareHref = lang === "de" ? "modellvergleich/" : lang === "en" ? "en/model-comparison/" : `${p.questions}/`;
+  const compareLabel = lang === "de" || lang === "en" ? h.compare : QA.labels[lang].hub;
+
+  return `<section class="section section-soft" id="${h.anchor}"><div class="container">${sectionHeader(h.eyebrow, h.h2, esc(h.lead))}<div class="model-grid">${cards}</div><div class="hero-actions" style="margin-top:30px"><a class="btn btn-dark" href="${root}${p.models}/">${esc(h.all)}</a><a class="btn btn-outline" href="${root}${compareHref}">${esc(compareLabel)}</a></div>${disclaimer(lang)}</div></section>`;
+}
+
+const HOME_OPEN = "<!-- MODUNERA HOME MODELS START -->";
+const HOME_CLOSE = "<!-- MODUNERA HOME MODELS END -->";
+
+/* German prices read "ab 44.900 €", English "from €44,900" — the word in front of
+   the figure differs per language and is shared with the navigation. */
+const MODEL_FROM = { de: "ab", en: "from", nl: "vanaf", da: "fra", fr: "dès" };
+
+async function buildHomeModels() {
+  let changed = 0;
+  for (const lang of LANGS) {
+    const rel = PATHS[lang].home === "index.html" ? "index.html" : `${PATHS[lang].home}index.html`;
+    let html;
+    try {
+      html = await readFile(join(ROOT, rel), "utf8");
+    } catch {
+      continue;
+    }
+    const block = HOME_OPEN + homeModelSection(lang, rootFor(rel)) + HOME_CLOSE;
+    let next;
+    if (html.includes(HOME_OPEN)) {
+      next = html.replace(new RegExp(`${HOME_OPEN}[\\s\\S]*?${HOME_CLOSE}`), block);
+    } else if (lang === "de") {
+      // the German home carries the tab widget: one model visible, JavaScript required
+      next = html.replace(/<section class="section section-soft" id="modelle">[\s\S]*?<\/section>\s*(?=<section)/, block);
+    } else if (lang === "en") {
+      // the English home carries a single stock image under the eight-models heading
+      next = html.replace(/<section class="section" id="models">[\s\S]*?<\/section>\s*(?=<section)/, block);
+    } else {
+      // nl, da and fr open with <section class="page-hero"> rather than a <header>,
+      // and go from there straight to the figures row; the grid slots in after the hero
+      next = html.replace(/(<section class="page-hero">[\s\S]*?<\/section>)/, `$1${block}`);
+    }
+    if (next !== html) {
+      await writeFile(join(ROOT, rel), next, "utf8");
+      changed += 1;
+    }
+  }
+  return changed;
+}
+
 /* --- run ------------------------------------------------------------------ */
 
 /* Two phases, because build-modunera-v2.mjs sits between them: it regenerates the
@@ -1294,10 +1382,12 @@ const extendOnly = process.argv.includes("--extend");
 
 if (extendOnly) {
   const rewritten = await rewriteArticles();
+  const homes = await buildHomeModels();
   const countries = await extendCountryPages();
   const articles = await extendArticles();
   console.log(`depth layer (extend):
   ${rewritten.changed} blog posts rewritten from per-topic material (${rewritten.skipped} left alone)
+  ${homes} home pages given the eight-model grid
   ${countries} country pages extended with their question set
   ${articles} library pages extended with the five-market appendix`);
 } else {

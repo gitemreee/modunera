@@ -15,17 +15,6 @@
   qsa('[data-year]').forEach(x=>x.textContent=new Date().getFullYear());
 
   // home model selector
-  const models={
-    mc1:{name:'MD 1',tag:'Panorama & Loft',img:'assets/images/gallery/mc1-exterior.webp',desc:'Großzügige Glasfront, heller Wohnraum und ein komfortables Loft für Paare oder anspruchsvolle Einzelprojekte.',spec:['8,00 / 9,70 m','1 Loft','Panorama'],price:'ab 44.900 €',url:'modelle/md-1/'},
-    mc2:{name:'MD 2',tag:'Family & Double Loft',img:'assets/images/gallery/mc2-exterior.webp',desc:'Zwei Loftbereiche schaffen getrennte Rückzugsräume für Familien, Gäste und flexible Nutzung.',spec:['9,00 m','2 Lofts','Familie'],price:'ab 52.900 €',url:'modelle/md-2/'},
-    mc3:{name:'MD 3',tag:'Separate Room',img:'assets/images/gallery/mc3-exterior.webp',desc:'Loft plus optionaler separater Raum für mehr Privatsphäre, Homeoffice oder Gäste.',spec:['8,00 / 9,70 m','1 Loft + Raum','Flexibel'],price:'ab 47.900 €',url:'modelle/md-3/'},
-    mc4:{name:'MD 4',tag:'Veranda & Comfort',img:'assets/images/gallery/mc4-exterior.webp',desc:'Wohnliches Konzept mit integrierter Veranda, separatem Zimmer und starker Ferienhaus-Eignung.',spec:['8,00 / 9,00 m','Veranda','Ferienhaus'],price:'ab 50.900 €',url:'modelle/md-4/'},
-    mc5:{name:'MD 5',tag:'Urban & Warm',img:'assets/images/gallery/mc5-exterior.webp',desc:'Dunkle Metalllinien und warme Holzflächen verbinden zeitgenössische Architektur mit Naturgefühl.',spec:['8,00 / 9,00 m','1 Loft','Modern'],price:'ab 46.900 €',url:'modelle/md-5/'},
-    mc6:{name:'MD 6',tag:'Chalet Architecture',img:'assets/images/gallery/mc6-exterior.webp',desc:'Chalet-Atmosphäre, hohe Decken und große Glasflächen für besondere Grundstücke und Premium-Retreats.',spec:['8,00 / 9,00 m','Chalet','High ceiling'],price:'ab 54.900 €',url:'modelle/md-6/'},
-    mc7:{name:'MD 7',tag:'Design Office',img:'assets/images/gallery/mc7-exterior.webp',desc:'Markante asymmetrische Linien für Homeoffice, Studio, Gästebereich oder kompaktes Wohnen.',spec:['8,00 m','1 Loft','Office'],price:'ab 42.900 €',url:'modelle/md-7/'},
-    mc8:{name:'MD 8',tag:'Modern Classic',img:'assets/images/gallery/mc8-exterior.webp',desc:'Geräumiger Wohnbereich und klassische Satteldach-Silhouette in moderner Interpretation.',spec:['8,00 m','1 Loft','Comfort'],price:'ab 45.900 €',url:'modelle/md-8/'}
-  };
-  qsa('[data-model]').forEach(b=>b.onclick=()=>{const m=models[b.dataset.model];if(!m)return;qsa('[data-model]').forEach(x=>x.classList.toggle('active',x===b));const img=qs('#modelStageImage');img.style.opacity=0;setTimeout(()=>{img.src=m.img;img.style.opacity=1},180);qs('#modelStageTag').textContent=m.tag;qs('#modelStageName').textContent=m.name;qs('#modelStageDesc').textContent=m.desc;qs('#modelStageSpecs').innerHTML=m.spec.map(s=>`<span>${s}</span>`).join('');qs('#modelStagePrice').textContent=m.price;qs('#modelStageDetail').href=m.url;qs('#modelStageBuild').href='studio/?model='+b.dataset.model});
 
   // lightbox
   const lb=qs('.lightbox');qsa('[data-lightbox]').forEach(b=>b.onclick=()=>{if(lb){qs('img',lb).src=b.dataset.lightbox;lb.classList.add('open')}});if(lb){qs('button',lb).onclick=()=>lb.classList.remove('open');lb.onclick=e=>{if(e.target===lb)lb.classList.remove('open')}};
