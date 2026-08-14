@@ -39,7 +39,8 @@ const rootFor = (file) => (dirname(file) === "." ? "" : "../".repeat(dirname(fil
 const waLink = (msg) => `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
 // German pages group with dots, English pages with commas: "7.000 €" reads as
 // seven euros to an English speaker, so the separator has to follow the page language.
-const eur = (n, lang = "de") => new Intl.NumberFormat(lang === "de" ? "de-DE" : "en-GB").format(n) + " €";
+const NUM_LOCALE = { de: "de-DE", en: "en-GB", nl: "nl-NL", da: "da-DK", fr: "fr-FR" };
+const eur = (n, lang = "de") => new Intl.NumberFormat(NUM_LOCALE[lang] ?? "en-GB").format(n) + " €";
 
 async function put(file, content) {
   const target = join(ROOT, file);
@@ -75,6 +76,36 @@ function head({ file, lang, title, description, image = "hero-forest.webp", alte
    Exactly one bare "laender/" and one bare "leistungen/" link is emitted, which
    is what tools/validate-modunera.mjs asserts for the homepage.            */
 
+/* Where each language keeps its model pages. The German section keeps the URL it
+   has always had; the other four mirror it under a slug from their own language,
+   the same way the country and service sections are named. */
+const MODEL_PATHS = { de: "modelle", en: "en/models", nl: "nl/modellen", da: "da/modeller", fr: "fr/modeles" };
+
+/* Prices for the menu come from data/pricing.json, so a menu entry can never
+   quote a figure the comparison table has moved on from. */
+const MENU_PRICING = JSON.parse(await readFile(join(ROOT, "data/pricing.json"), "utf8"));
+
+const MODEL_SUBS = {
+  de: ["Panorama und Loft", "Zwei Lofts für Familien", "Loft plus Zusatzraum", "Loft, Zimmer und Veranda", "Kompakt mit Zusatzraum", "Chalet mit Steildach", "Einstiegsmodell", "Kompakt, gehobene Linie"],
+  en: ["Panorama and loft", "Two lofts for families", "Loft plus extra room", "Loft, room and veranda", "Compact with extra room", "Chalet with pitched roof", "Entry model", "Compact, upgraded line"],
+  nl: ["Panorama en loft", "Twee lofts voor gezinnen", "Loft plus extra kamer", "Loft, kamer en veranda", "Compact met extra kamer", "Chalet met zadeldak", "Instapmodel", "Compact, hogere afwerking"],
+  da: ["Panorama og hems", "To hemse til familier", "Hems plus ekstra rum", "Hems, rum og veranda", "Kompakt med ekstra rum", "Chalet med sadeltag", "Indgangsmodel", "Kompakt, højere udstyr"],
+  fr: ["Panorama et mezzanine", "Deux mezzanines pour familles", "Mezzanine et pièce en plus", "Mezzanine, pièce et véranda", "Compact avec pièce en plus", "Chalet à toit à deux pentes", "Modèle d'entrée", "Compact, finition supérieure"],
+};
+
+const MODEL_FROM = { de: "ab", en: "from", nl: "vanaf", da: "fra", fr: "à partir de" };
+
+/* MD 1 to MD 8 as menu entries. This is the answer to "show me the models" —
+   every language gets the eight of them one click from the header, each with its
+   layout and its entry price rather than a bare code. */
+function modelMenuEntries(lang) {
+  return Array.from({ length: 8 }, (_, i) => {
+    const n = i + 1;
+    const price = MENU_PRICING.models[`mc${n}`].base_eur;
+    return [`${MODEL_PATHS[lang]}/md-${n}/`, `MD ${n}`, `${MODEL_SUBS[lang][i]} · ${MODEL_FROM[lang]} ${eur(price, lang)}`];
+  });
+}
+
 const MENU = {
   de: {
     skip: "Zum Inhalt springen",
@@ -85,12 +116,17 @@ const MENU = {
     cta: "WhatsApp",
     ctaMsg: "Hallo MODUNERA, ich wünsche eine schnelle Ersteinschätzung für mein Tiny-House-Projekt.",
     items: [
-      { label: "Tiny Houses", menu: [
-        ["katalog/", "Alle Modelle", "MD 1 bis MD 8"],
-        ["modellvergleich/", "Modellvergleich", "Maße, Grundriss, Preis"],
-        ["studio/", "Design Studio", "Live konfigurieren"],
-        ["konfigurator/", "Konfigurator", "Budget kalkulieren"],
-        ["tiny-house-preise/", "Preise", "Was kostet ein Tiny House"],
+      { label: "Tiny Houses", cols: [
+        ["Modelle ansehen", modelMenuEntries("de")],
+        ["Auswählen und planen", [
+          ["katalog/", "Alle Modelle", "MD 1 bis MD 8 im Überblick"],
+          ["modellvergleich/", "Modellvergleich", "Maße, Grundriss, Preis"],
+          ["studio/", "Design Studio", "Live konfigurieren"],
+          ["konfigurator/", "Konfigurator", "Budget kalkulieren"],
+          ["tiny-house-preise/", "Preise", "Was kostet ein Tiny House"],
+          ["preisvergleich/", "Preis je Zielland", "Lieferung einkalkuliert"],
+          ["vorteile/", "Vorteile", "Warum ein Tiny House"],
+        ]],
       ]},
       { label: "Länder", menu: [
         ["laender/", "Alle Zielmärkte", "Fünf Länder im Überblick"],
@@ -110,15 +146,24 @@ const MENU = {
         ["leistungen/bungalows/", "Bungalows", "Ebenerdige Einheiten"],
         ["leistungen/moebel-nach-mass/", "Möbel nach Maß", "Küchen und Einbauten"],
       ]},
-      { label: "Ratgeber", menu: [
-        ["ratgeber/", "Ratgeber-Hub", "110 Beiträge in 9 Kategorien"],
-        ["blog/", "Blog", "Alle Beiträge chronologisch"],
-        ["blog/europa/", "Europa-Guides", "Recht, Transport, Vergleich"],
-        ["ratgeber/genehmigung-und-recht/", "Genehmigung & Recht", "Bauantrag, Stellplatz, Versicherung"],
-        ["ratgeber/kosten-und-finanzierung/", "Kosten & Finanzierung", "Preise, Kauf, Rendite"],
-        ["faq/", "FAQ", "160 Antworten"],
-        ["faq/europa/", "Europa-FAQ", "Genehmigung, Zoll, Lieferung"],
-        ["downloads/", "Dokumente", "Pläne und technische Daten"],
+      { label: "Ratgeber & Blog", cols: [
+        ["Ratgeber nach Thema", [
+          ["ratgeber/", "Ratgeber-Hub", "Alle Beiträge in 9 Kategorien"],
+          ["ratgeber/genehmigung-und-recht/", "Genehmigung & Recht", "Bauantrag, Stellplatz, Versicherung"],
+          ["ratgeber/kosten-und-finanzierung/", "Kosten & Finanzierung", "Preise, Kauf, Rendite"],
+          ["ratgeber/technik-und-konstruktion/", "Technik & Konstruktion", "Rahmen, Dämmung, Haustechnik"],
+          ["ratgeber/energie-und-autarkie/", "Energie & Autarkie", "Solar, Speicher, Heizung"],
+          ["ratgeber/transport-und-import/", "Transport & Import", "Route, Zoll, Entladung"],
+          ["ratgeber/nutzung-und-geschaeftsmodell/", "Nutzung & Geschäftsmodell", "Vermietung, Glamping, Rendite"],
+        ]],
+        ["Blog und Antworten", [
+          ["blog/", "Blog", "Alle Beiträge chronologisch"],
+          ["blog/europa/", "Europa-Guides", "Recht, Transport, Vergleich"],
+          ["fragen/", "Länderfragen", "Antworten je Zielmarkt"],
+          ["faq/", "FAQ", "160 Antworten"],
+          ["faq/europa/", "Europa-FAQ", "Genehmigung, Zoll, Lieferung"],
+          ["downloads/", "Dokumente", "Pläne und technische Daten"],
+        ]],
       ]},
       { label: "Unternehmen", menu: [
         ["factory/", "Produktion", "Vom Stahl bis zur Übergabe"],
@@ -140,9 +185,16 @@ const MENU = {
     cta: "WhatsApp",
     ctaMsg: "Hello MODUNERA, I would like a quick project assessment for a tiny house.",
     items: [
-      { label: "Tiny houses", menu: [
-        ["en/model-comparison/", "Model comparison", "MD 1 to MD 8 side by side"],
-        ["studio/", "Design studio", "Configure live"],
+      { label: "Tiny houses", cols: [
+        ["See the models", modelMenuEntries("en")],
+        ["Choose and plan", [
+          ["en/models/", "All models", "MD 1 to MD 8 at a glance"],
+          ["en/model-comparison/", "Model comparison", "Sizes, layout, price"],
+          ["studio/", "Design studio", "Configure live"],
+          ["konfigurator/", "Budget calculator", "Indicative total"],
+          ["en/price-comparison/", "Price by destination", "Delivery included"],
+          ["en/advantages/", "Advantages", "Why a tiny house"],
+        ]],
       ]},
       { label: "Countries", menu: [
         ["en/countries/", "All target markets", "Five countries at a glance"],
@@ -161,9 +213,23 @@ const MENU = {
         ["en/services/bungalows/", "Bungalows", "Single-level units"],
         ["en/services/bespoke-furniture/", "Bespoke furniture", "Kitchens and built-ins"],
       ]},
-      { label: "Guides", menu: [
-        ["en/guides/", "Europe guides", "Permits, transport, comparison"],
-        ["en/faq/", "FAQ", "Permits, customs, delivery"],
+      { label: "Knowledge", cols: [
+        ["Guides", [
+          ["en/guides/", "Guide hub", "Permits, transport, comparison"],
+          ["en/guides/tiny-house-germany-permits/", "Germany permits", "Bauantrag and site rules"],
+          ["en/guides/tiny-house-netherlands-permits/", "Netherlands permits", "Omgevingswet and Omgevingsloket"],
+          ["en/guides/tiny-house-denmark-permits/", "Denmark permits", "Kommune and byggetilladelse"],
+          ["en/guides/total-budget-tiny-house-europe/", "Total budget", "What a project really costs"],
+          ["en/guides/customs-import-turkiye-europe/", "Customs and import", "A.TR, EUR.1, VAT"],
+        ]],
+        ["Blog and answers", [
+          ["en/blog/", "Blog", "Every article, newest first"],
+          ["en/blog/permits-and-law/", "Permits and law", "Planning, siting, insurance"],
+          ["en/blog/costs-and-financing/", "Costs and financing", "Prices, purchase, return"],
+          ["en/blog/technology-and-construction/", "Technology and construction", "Frame, insulation, systems"],
+          ["en/faq/", "FAQ", "Permits, customs, delivery"],
+          ["en/questions/", "Country questions", "Asked and answered per market"],
+        ]],
       ]},
       { label: "Contact", href: "kontakt/" },
     ],
@@ -192,6 +258,14 @@ for (const [code, cfg] of Object.entries(LOCALE_DEFS)) {
     cta: "WhatsApp",
     ctaMsg: cfg.wa,
     items: [
+      { label: cfg.nav.models, cols: [
+        [cfg.labels.models ?? cfg.nav.models, modelMenuEntries(code)],
+        [cfg.labels.plan ?? cfg.nav.models, [
+          [`${code}/${p.models}/`, cfg.labels.allModels ?? cfg.nav.models, "MD 1 – MD 8"],
+          ["studio/", "Design Studio", "MODUNERA"],
+          [`${code}/${p.questions}/`, cfg.labels.questions ?? cfg.labels.faq, "MODUNERA"],
+        ]],
+      ]},
       { label: cfg.nav.countries, menu: [
         [`${code}/${p.countries}/`, cfg.labels.countries, "MODUNERA"],
         ...Object.keys(cfg.countrySlugs).map((c) => [`${code}/${p.countries}/${cfg.countrySlugs[c]}/`, cfg.countryNames[c], "Tiny House"]),
@@ -200,7 +274,11 @@ for (const [code, cfg] of Object.entries(LOCALE_DEFS)) {
         [`${code}/${p.services}/`, cfg.labels.services, "MODUNERA"],
         ...Object.keys(cfg.serviceSlugs).map((k) => [`${code}/${p.services}/${cfg.serviceSlugs[k]}/`, cfg.serviceNames[k], "MODUNERA"]),
       ]},
-      { label: cfg.labels.faq, href: `${code}/${p.faq}/` },
+      { label: cfg.nav.guides, menu: [
+        [`${code}/${p.guides}/`, cfg.labels.guides, "MODUNERA"],
+        [`${code}/${p.questions}/`, cfg.labels.questions ?? cfg.labels.faq, "MODUNERA"],
+        [`${code}/${p.faq}/`, cfg.labels.faq, "MODUNERA"],
+      ]},
       { label: cfg.nav.contact, href: "kontakt/" },
     ],
   };
@@ -225,9 +303,17 @@ function nav(root, lang, alternates = {}) {
   const links = m.items
     .map((item) => {
       if (item.href) return `<a href="${root}${item.href}">${item.label}</a>`;
-      const entries = item.menu
-        .map(([href, title, sub]) => `<a href="${root}${href}"><span>${title}</span><small>${sub}</small></a>`)
-        .join("");
+      const entry = ([href, title, sub]) =>
+        `<a href="${root}${href}"><span>${title}</span><small>${sub}</small></a>`;
+      // a panel with columns carries the eight models beside the planning links;
+      // on a phone the columns stack, so nothing is hidden behind a hover
+      if (item.cols) {
+        const cols = item.cols
+          .map(([heading, entries]) => `<div class="nav-col"><h5>${heading}</h5>${entries.map(entry).join("")}</div>`)
+          .join("");
+        return `<div class="nav-dropdown"><button type="button">${item.label}</button><div class="nav-menu nav-menu-wide">${cols}</div></div>`;
+      }
+      const entries = item.menu.map(entry).join("");
       return `<div class="nav-dropdown"><button type="button">${item.label}</button><div class="nav-menu">${entries}</div></div>`;
     })
     .join("");
@@ -273,20 +359,39 @@ function brandLockup(root, href, lang) {
 /* WhatsApp dock. Replaces the old two-icon rail on every page: a launcher in the
    brand green, and a panel naming what we build so the first message arrives with
    context. It opens itself once per visitor and remembers the dismissal. */
-const WA_MARK = `<svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C8.9 3 3.1 8.8 3.1 15.94c0 2.28.6 4.5 1.74 6.46L3 29.5l7.28-1.9a12.9 12.9 0 0 0 5.76 1.37h.01c7.14 0 12.94-5.8 12.94-12.94C29 8.8 23.18 3 16.04 3Zm0 23.6h-.01c-1.83 0-3.62-.49-5.19-1.42l-.37-.22-3.85 1 1.03-3.75-.24-.39a10.6 10.6 0 0 1-1.63-5.68c0-5.93 4.83-10.76 10.77-10.76 2.88 0 5.58 1.12 7.61 3.16a10.7 10.7 0 0 1 3.15 7.61c0 5.94-4.83 10.75-10.77 10.75Zm5.9-8.05c-.32-.16-1.91-.94-2.21-1.05-.3-.11-.51-.16-.73.16-.21.32-.83 1.05-1.02 1.26-.19.22-.38.24-.7.08-.32-.16-1.36-.5-2.6-1.6-.96-.86-1.6-1.92-1.79-2.24-.19-.32-.02-.5.14-.66.14-.14.32-.38.48-.56.16-.19.21-.32.32-.54.11-.21.05-.4-.03-.56-.08-.16-.73-1.75-1-2.4-.26-.63-.53-.54-.73-.55l-.62-.01c-.21 0-.56.08-.86.4-.29.32-1.12 1.1-1.12 2.67 0 1.58 1.15 3.1 1.31 3.32.16.21 2.26 3.45 5.48 4.84.77.33 1.36.53 1.83.68.77.24 1.47.21 2.02.13.62-.09 1.91-.78 2.18-1.54.27-.76.27-1.4.19-1.54-.08-.13-.29-.21-.61-.37Z"/></svg>`;
+/* Contact marks, drawn inline. The WhatsApp glyph is the official outline so it
+   reads as WhatsApp at 26px; the handset replaces the ☎ text character, which
+   rendered as a different picture on every platform and as a colour emoji on
+   most phones. */
+const WA_MARK = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.89-.79-1.48-1.76-1.66-2.06-.17-.3-.02-.46.13-.6.14-.14.3-.35.44-.53.15-.17.2-.3.3-.5.1-.19.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.03 1.02-1.03 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.42-.08-.12-.28-.2-.57-.34M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.89 9.89-9.89 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.43 9.89-9.88 9.89m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.69 1.45c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42Z"/></svg>';
+const PHONE_MARK = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1.03 1.03 0 0 1 1.05-.25c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.53c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.26 2.2Z"/></svg>';
+const CLOSE_MARK = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></svg>';
 
-const WA_SERVICES = {
-  de: ["Tiny Houses", "Modulbau", "Stahlbau", "Bungalows", "Möbel nach Maß"],
-  en: ["Tiny houses", "Modular buildings", "Steel structures", "Bungalows", "Bespoke furniture"],
+/* The dock speaks the language of the page it sits on. Everything a visitor
+   reads before the first message — what we build, how quickly we answer — is
+   translated, so the Dutch and Danish sections no longer open a German panel. */
+const DOCK_COPY = {
+  de: { dialog: "WhatsApp Kontakt", reply: "Antwort meist am selben Tag", close: "Schließen", intro: "Wir fertigen in eigener Produktion und liefern nach Europa:", cta: "Projekt starten", phone: "Anrufen", open: "WhatsApp öffnen",
+    services: ["Tiny Houses", "Modulbau", "Stahlbau", "Bungalows", "Möbel nach Maß"],
+    message: "Hallo MODUNERA. Zielland/Ort: __. Nutzung: __. Personen: __. Budget: __. Bitte senden Sie mir eine Ersteinschätzung." },
+  en: { dialog: "WhatsApp contact", reply: "Usually replies the same day", close: "Close", intro: "We manufacture in our own production and deliver across Europe:", cta: "Start your project", phone: "Call us", open: "Open WhatsApp",
+    services: ["Tiny houses", "Modular buildings", "Steel structures", "Bungalows", "Bespoke furniture"],
+    message: "Hello MODUNERA. Destination/place: __. Intended use: __. People: __. Budget: __. Please send a first assessment." },
+  nl: { dialog: "WhatsApp-contact", reply: "Meestal dezelfde dag antwoord", close: "Sluiten", intro: "Wij produceren in eigen fabriek en leveren in heel Europa:", cta: "Start uw project", phone: "Bel ons", open: "WhatsApp openen",
+    services: ["Tiny houses", "Modulaire bouw", "Staalconstructies", "Bungalows", "Meubels op maat"],
+    message: "Hallo MODUNERA. Land/plaats: __. Gebruik: __. Personen: __. Budget: __. Graag een eerste inschatting." },
+  da: { dialog: "WhatsApp-kontakt", reply: "Svarer som regel samme dag", close: "Luk", intro: "Vi producerer på egen fabrik og leverer i hele Europa:", cta: "Start dit projekt", phone: "Ring til os", open: "Åbn WhatsApp",
+    services: ["Tiny houses", "Modulbyggeri", "Stålkonstruktioner", "Bungalower", "Specialfremstillede møbler"],
+    message: "Hej MODUNERA. Land/sted: __. Anvendelse: __. Personer: __. Budget: __. Send gerne en første vurdering." },
+  fr: { dialog: "Contact WhatsApp", reply: "Réponse le plus souvent le jour même", close: "Fermer", intro: "Nous fabriquons dans notre propre atelier et livrons partout en Europe :", cta: "Démarrer votre projet", phone: "Nous appeler", open: "Ouvrir WhatsApp",
+    services: ["Tiny houses", "Construction modulaire", "Structures acier", "Bungalows", "Mobilier sur mesure"],
+    message: "Bonjour MODUNERA. Pays/lieu : __. Usage : __. Personnes : __. Budget : __. Merci de m'envoyer une première estimation." },
 };
 
 function whatsappDock(lang) {
-  const de = lang === "de";
-  const message = de
-    ? "Hallo MODUNERA. Zielland/Ort: __. Nutzung: __. Personen: __. Budget: __. Bitte senden Sie mir eine Ersteinschätzung."
-    : "Hello MODUNERA. Destination/place: __. Intended use: __. People: __. Budget: __. Please send a first assessment.";
-  const services = WA_SERVICES[lang].map((s) => `<li>${esc(s)}</li>`).join("");
-  return `<div class="wa-dock" id="waDock"><div class="wa-panel" role="dialog" aria-label="${de ? "WhatsApp Kontakt" : "WhatsApp contact"}"><div class="wa-head">${WA_MARK}<div><strong>MODUNERA</strong><span>${de ? "Antwort meist am selben Tag" : "Usually replies the same day"}</span></div><button class="wa-close" type="button" aria-label="${de ? "Schließen" : "Close"}">✕</button></div><div class="wa-body"><p>${de ? "Wir fertigen in eigener Produktion und liefern nach Europa:" : "We manufacture in our own production and deliver across Europe:"}</p><ul class="wa-services">${services}</ul><a class="wa-cta" href="${waLink(message)}" target="_blank" rel="noopener">${WA_MARK}${de ? "Projekt starten" : "Start your project"}</a></div></div><div class="wa-rail"><a class="wa-call" href="tel:${PHONE_TEL}" aria-label="${de ? "Telefon" : "Phone"}">☎</a><button class="wa-launch" type="button" aria-label="${de ? "WhatsApp öffnen" : "Open WhatsApp"}" aria-expanded="false">${WA_MARK}</button></div></div><script>(function(){var d=document.getElementById("waDock");if(!d)return;var b=d.querySelector(".wa-launch"),c=d.querySelector(".wa-close"),K="modunera-wa-dismissed";function set(o){d.classList.toggle("open",o);b.setAttribute("aria-expanded",o?"true":"false")}b.addEventListener("click",function(){set(!d.classList.contains("open"))});c.addEventListener("click",function(){set(false);try{localStorage.setItem(K,"1")}catch(e){}});try{if(!localStorage.getItem(K))setTimeout(function(){set(true)},innerWidth<560?2600:1400)}catch(e){}})();</script>`;
+  const c = DOCK_COPY[lang] ?? DOCK_COPY.en;
+  const services = c.services.map((s) => `<li>${esc(s)}</li>`).join("");
+  return `<div class="wa-dock" id="waDock"><div class="wa-panel" role="dialog" aria-label="${esc(c.dialog)}"><div class="wa-head">${WA_MARK}<div><strong>MODUNERA</strong><span>${esc(c.reply)}</span></div><button class="wa-close" type="button" aria-label="${esc(c.close)}">${CLOSE_MARK}</button></div><div class="wa-body"><p>${esc(c.intro)}</p><ul class="wa-services">${services}</ul><a class="wa-cta" href="${waLink(c.message)}" target="_blank" rel="noopener">${WA_MARK}${esc(c.cta)}</a></div></div><div class="wa-rail"><a class="wa-call" href="tel:${PHONE_TEL}" aria-label="${esc(c.phone)}">${PHONE_MARK}<span class="wa-tip">${esc(c.phone)}</span></a><button class="wa-launch" type="button" aria-label="${esc(c.open)}" aria-expanded="false">${WA_MARK}</button></div></div><script>(function(){var d=document.getElementById("waDock");if(!d)return;var b=d.querySelector(".wa-launch"),c=d.querySelector(".wa-close"),K="modunera-wa-dismissed";function set(o){d.classList.toggle("open",o);b.setAttribute("aria-expanded",o?"true":"false")}b.addEventListener("click",function(){set(!d.classList.contains("open"))});c.addEventListener("click",function(){set(false);try{localStorage.setItem(K,"1")}catch(e){}});try{if(!localStorage.getItem(K))setTimeout(function(){set(true)},innerWidth<560?2600:1400)}catch(e){}})();</script>`;
 }
 
 function footer(root, lang) {
@@ -1038,7 +1143,7 @@ async function rewriteBrand() {
     const rel = relative(ROOT, file).replaceAll("\\", "/");
     const root = rootFor(rel);
     const original = await readFile(file, "utf8");
-    const lang = /<html\s+lang="en"/i.test(original) ? "en" : "de";
+    const lang = detectLang(original);
     let html = original;
 
     html = html.replace(/<a class="brand"([^>]*)>[\s\S]*?<\/a>/g, (match, attrs) => {
@@ -1068,13 +1173,19 @@ async function rewriteWhatsapp() {
   for (const file of files) {
     const rel = relative(ROOT, file).replaceAll("\\", "/");
     const original = await readFile(file, "utf8");
-    if (original.includes('id="waDock"')) continue;
-    const lang = /<html\s+lang="en"/i.test(original) ? "en" : "de";
-    // legacy pages carry the old rail; the locale pages carry nothing, so the dock
-    // is appended before </body> when there is no rail to replace
-    const html = original.includes('<div class="floating-actions">')
-      ? original.replace(/<div class="floating-actions">[\s\S]*?<\/div>/, whatsappDock(lang))
-      : original.replace("</body>", whatsappDock(lang) + "</body>");
+    // the page's own declaration, so the Dutch, Danish and French sections stop
+    // opening a German panel
+    const lang = detectLang(original);
+    const dock = whatsappDock(lang);
+    // A dock already on the page is replaced rather than skipped: that is what lets
+    // a change to the markup, the icons or the translations reach the whole tree.
+    // Legacy pages carry the old two-icon rail; pages with neither get the dock
+    // appended before </body>.
+    const html = original.includes('id="waDock"')
+      ? original.replace(/<div class="wa-dock"[\s\S]*?<\/script>/, dock)
+      : original.includes('<div class="floating-actions">')
+        ? original.replace(/<div class="floating-actions">[\s\S]*?<\/div>/, dock)
+        : original.replace("</body>", dock + "</body>");
     if (html !== original) {
       await writeFile(file, html, "utf8");
       changed += 1;

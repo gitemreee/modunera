@@ -1,0 +1,929 @@
+{
+  "_comment": "Country question sets. Twenty questions per destination country per language. The questions are shared so the five country pages stay comparable; the answers are assembled from per-country facts, so no two answers are the same sentence with a different country name in it. Nothing here promises a permit — every permit answer points at the local authority.",
+  "questions": {
+    "de": [
+      [
+        "Braucht ein Tiny House in {country} eine Genehmigung?",
+        "In der Regel ja. Sobald eine Einheit dauerhaft an einem Ort steht und zum Aufenthalt genutzt wird, gilt sie in {country} baurechtlich als bauliche Anlage. Zuständig ist {authority}. Ob ein Verfahren nötig ist und welches, entscheidet sich am konkreten Grundstück – nicht am Produkt."
+      ],
+      [
+        "Wer entscheidet über die Genehmigung?",
+        "{authority}. MODUNERA liefert das Gebäude und die technischen Unterlagen; die Entscheidung über Zulässigkeit, Verfahren und Auflagen trifft ausschließlich diese Stelle. Holen Sie die Auskunft schriftlich ein, bevor Sie bestellen."
+      ],
+      [
+        "Was muss der örtliche Plan zulassen?",
+        "Maßgeblich ist {plan}. Daraus ergeben sich zulässige Nutzungsart, Bauweise, überbaubare Fläche und Erschließung. Ein Grundstück, das für Ihr Vorhaben nicht die richtige Ausweisung hat, lässt sich mit keiner technischen Lösung retten."
+      ],
+      [
+        "Darf ich dauerhaft in einem Tiny House in {country} wohnen?",
+        "{permanent}"
+      ],
+      [
+        "Kann ich es in einem Ferien- oder Erholungsgebiet aufstellen?",
+        "{recreation}"
+      ],
+      [
+        "Zählt ein Tiny House auf Rädern als Fahrzeug oder als Gebäude?",
+        "{wheels}"
+      ],
+      [
+        "Was kostet die Lieferung nach {country}?",
+        "Als Projektorientierung rechnen wir mit rund {delivery} ab Werk bis zum vereinbarten Punkt in {country}. {deliveryNote} Der Endbetrag hängt von Route, Zufahrt, Kranbedarf und Termin ab; eine Frachtzusage entsteht erst mit dem geprüften Angebot."
+      ],
+      [
+        "Wie läuft der Transport und wie lange dauert er?",
+        "Die Einheit wird als Ganzes auf einem Tieflader transportiert. {route} Der genaue Termin wird zusammen mit dem Entladepunkt festgelegt, weil die letzte Zufahrt in der Praxis öfter das Problem ist als die Strecke."
+      ],
+      [
+        "Fallen Zoll oder Einfuhrabgaben an?",
+        "{customs}"
+      ],
+      [
+        "Welche Mehrwertsteuer gilt?",
+        "{vat} Stand {updated}. Die im Zeitpunkt der Lieferung geltende Regelung ist maßgeblich; die steuerliche Behandlung Ihres konkreten Falls klärt Ihre Steuerberatung."
+      ],
+      [
+        "Welches Fundament wird in {country} gebraucht?",
+        "Punkt-, Streifen- oder Schraubfundament, abhängig von Boden, Frosttiefe und dem, was die Genehmigung verlangt. {foundation} Die Ausführung erfolgt lokal; wir liefern die Lastannahmen und Auflagerpunkte."
+      ],
+      [
+        "Wie werden Strom, Wasser und Abwasser angeschlossen?",
+        "Bis zur Grundstücksgrenze durch die örtlichen Versorger, ab dort durch lokale Fachbetriebe. Die Kosten hängen fast ausschließlich von der Entfernung zum vorhandenen Netz ab. {utilities}"
+      ],
+      [
+        "Ist Off-Grid-Betrieb in {country} zulässig?",
+        "{offgrid}"
+      ],
+      [
+        "Ist das Haus winterfest für {country}?",
+        "{winter} Dämmstärke, Fensterdimensionierung, Lüftung und Heizsystem werden vor der Produktion gemeinsam festgelegt, nicht nachgerüstet."
+      ],
+      [
+        "Wie wird die Dämmung für {country} ausgelegt?",
+        "Nach Heizperiode, Schneelastzone und Windzone am konkreten Ort. {insulation} Ein Aufbau, der für ein Sommerobjekt genügt, ist für Dauerwohnen an derselben Adresse zu knapp."
+      ],
+      [
+        "Was kostet ein komplettes Projekt in {country}?",
+        "Basis ab Werk plus Lieferung ergibt die erste Zahl; dazu kommen Fundament, Anschlüsse, Entladung, örtliche Planung, Genehmigungsgebühren und Versicherung. Rechnen Sie diese Positionen von Anfang an mit, sonst verschiebt sich das Budget nach der Bestellung."
+      ],
+      [
+        "Welches Modell wird in {country} am häufigsten gewählt?",
+        "{models}"
+      ],
+      [
+        "Darf ich das Haus in {country} vermieten?",
+        "{rental}"
+      ],
+      [
+        "Welche Versicherungen brauche ich?",
+        "Transportversicherung für die Anlieferung, Gebäude- beziehungsweise Elementarschadenversicherung für den Betrieb und bei Vermietung eine Betreiberhaftpflicht. Klären Sie den Versicherungsschutz vor der Lieferung – danach ist die Verhandlungsposition schlechter."
+      ],
+      [
+        "Was muss ich vor der Bestellung geklärt haben?",
+        "Fünf Punkte: schriftliche Auskunft von {authority} zur Zulässigkeit, Zufahrt und Entladepunkt mit Fotos und Maßen, Erschließung und Entfernung zum Netz, Nutzungsart mit Personenzahl, und der Budgetrahmen inklusive der Nebenpositionen. Mit diesen fünf Angaben wird aus einer Anfrage ein planbares Projekt."
+      ]
+    ],
+    "en": [
+      [
+        "Does a tiny house in {country} need a permit?",
+        "As a rule, yes. Once a unit stands permanently in one place and is used for occupation, {country} treats it in planning law as a structure. {authority} is responsible. Whether a procedure applies, and which one, is decided at the specific plot — not by the product."
+      ],
+      [
+        "Who decides on the permit?",
+        "{authority}. MODUNERA supplies the building and the technical documentation; the decision on admissibility, procedure and conditions rests entirely with that body. Get the answer in writing before you order."
+      ],
+      [
+        "What does the local plan have to allow?",
+        "{plan} governs. It sets the permissible type of use, the way of building, the buildable area and the servicing. A plot with the wrong designation for your project cannot be rescued by any technical solution."
+      ],
+      [
+        "May I live permanently in a tiny house in {country}?",
+        "{permanent}"
+      ],
+      [
+        "Can I place it in a holiday or recreation area?",
+        "{recreation}"
+      ],
+      [
+        "Does a tiny house on wheels count as a vehicle or a building?",
+        "{wheels}"
+      ],
+      [
+        "What does delivery to {country} cost?",
+        "As project orientation we work with roughly {delivery} ex works to the agreed point in {country}. {deliveryNote} The final amount depends on route, access, crane requirement and date; a freight commitment only exists with the checked quotation."
+      ],
+      [
+        "How does transport run and how long does it take?",
+        "The unit travels whole on a low-loader. {route} The exact date is fixed together with the unloading point, because in practice the last hundred metres cause more trouble than the route."
+      ],
+      [
+        "Are there customs duties or import charges?",
+        "{customs}"
+      ],
+      [
+        "Which VAT applies?",
+        "{vat} As of {updated}. The rules in force at the time of delivery govern; the tax treatment of your specific case is for your tax adviser to confirm."
+      ],
+      [
+        "Which foundation is needed in {country}?",
+        "Pad, strip or screw foundation, depending on soil, frost depth and what the permit requires. {foundation} The work is carried out locally; we supply the load assumptions and bearing points."
+      ],
+      [
+        "How are power, water and wastewater connected?",
+        "Up to the plot boundary by the local utilities, from there by local trades. Cost is driven almost entirely by the distance to the existing network. {utilities}"
+      ],
+      [
+        "Is off-grid operation allowed in {country}?",
+        "{offgrid}"
+      ],
+      [
+        "Is the house suitable for winter in {country}?",
+        "{winter} Insulation thickness, glazed area, ventilation and heating system are decided together before production, not retrofitted."
+      ],
+      [
+        "How is the insulation specified for {country}?",
+        "By heating season, snow load zone and wind zone at the actual address. {insulation} A build-up that is enough for a summer unit is too thin for permanent living at the same address."
+      ],
+      [
+        "What does a complete project cost in {country}?",
+        "Ex-works base plus delivery gives the first number; foundation, connections, unloading, local planning, permit fees and insurance come on top. Count these from the start, or the budget moves after the order is placed."
+      ],
+      [
+        "Which model is chosen most often in {country}?",
+        "{models}"
+      ],
+      [
+        "May I rent the house out in {country}?",
+        "{rental}"
+      ],
+      [
+        "Which insurance do I need?",
+        "Transport cover for the delivery, building or natural-hazard cover for operation, and operator liability if you let it. Settle cover before delivery — afterwards your negotiating position is worse."
+      ],
+      [
+        "What has to be clear before I order?",
+        "Five things: a written answer from {authority} on admissibility; access and unloading point with photographs and dimensions; servicing and the distance to the network; the type of use with the number of people; and the budget range including the secondary items. With those five, an enquiry becomes a plannable project."
+      ]
+    ],
+    "nl": [
+      [
+        "Heeft een tiny house in {country} een vergunning nodig?",
+        "In de regel wel. Zodra een unit permanent op één plek staat en voor verblijf wordt gebruikt, geldt zij in {country} planologisch als bouwwerk. Bevoegd is {authority}. Of en welke procedure geldt, wordt op het concrete perceel beslist — niet door het product."
+      ],
+      [
+        "Wie beslist over de vergunning?",
+        "{authority}. MODUNERA levert het gebouw en de technische documentatie; het besluit over toelaatbaarheid, procedure en voorwaarden ligt volledig bij dat gezag. Vraag het antwoord schriftelijk op vóór u bestelt."
+      ],
+      [
+        "Wat moet het lokale plan toestaan?",
+        "Bepalend is {plan}. Daaruit volgen toegestaan gebruik, bouwwijze, bebouwbaar oppervlak en ontsluiting. Een perceel met de verkeerde bestemming valt met geen enkele technische oplossing te redden."
+      ],
+      [
+        "Mag ik permanent in een tiny house in {country} wonen?",
+        "{permanent}"
+      ],
+      [
+        "Mag ik het in een vakantie- of recreatiegebied plaatsen?",
+        "{recreation}"
+      ],
+      [
+        "Geldt een tiny house op wielen als voertuig of als bouwwerk?",
+        "{wheels}"
+      ],
+      [
+        "Wat kost levering naar {country}?",
+        "Als projectindicatie rekenen wij met circa {delivery} af fabriek tot het afgesproken punt in {country}. {deliveryNote} Het eindbedrag hangt af van route, toegang, kraanbehoefte en datum; een vrachttoezegging ontstaat pas met de gecontroleerde offerte."
+      ],
+      [
+        "Hoe verloopt het transport en hoe lang duurt het?",
+        "De unit reist in één geheel op een dieplader. {route} De exacte datum wordt samen met de losplaats vastgelegd, omdat in de praktijk de laatste honderd meter vaker het probleem is dan de route."
+      ],
+      [
+        "Zijn er douanerechten of invoerheffingen?",
+        "{customs}"
+      ],
+      [
+        "Welke btw geldt?",
+        "{vat} Stand {updated}. De regeling op het moment van levering is bepalend; de fiscale behandeling van uw concrete geval bevestigt uw belastingadviseur."
+      ],
+      [
+        "Welke fundering is in {country} nodig?",
+        "Poer-, strook- of schroeffundering, afhankelijk van bodem, vorstdiepte en wat de vergunning eist. {foundation} De uitvoering gebeurt lokaal; wij leveren de belastingaannames en oplegpunten."
+      ],
+      [
+        "Hoe worden elektra, water en afvalwater aangesloten?",
+        "Tot de perceelgrens door de lokale netbeheerders, daarna door lokale vakbedrijven. De kosten worden vrijwel volledig bepaald door de afstand tot het bestaande net. {utilities}"
+      ],
+      [
+        "Is off-grid gebruik in {country} toegestaan?",
+        "{offgrid}"
+      ],
+      [
+        "Is het huis winterbestendig voor {country}?",
+        "{winter} Isolatiedikte, glasoppervlak, ventilatie en verwarmingssysteem worden vóór productie samen vastgelegd, niet achteraf bijgebouwd."
+      ],
+      [
+        "Hoe wordt de isolatie voor {country} bepaald?",
+        "Naar stookseizoen, sneeuwlastzone en windzone op het feitelijke adres. {insulation} Een opbouw die voor een zomerverblijf volstaat, is voor permanent wonen op hetzelfde adres te krap."
+      ],
+      [
+        "Wat kost een compleet project in {country}?",
+        "Basis af fabriek plus levering geeft het eerste getal; fundering, aansluitingen, lossen, lokale planning, leges en verzekering komen erbij. Reken die posten vanaf het begin mee, anders schuift het budget ná de bestelling."
+      ],
+      [
+        "Welk model wordt in {country} het vaakst gekozen?",
+        "{models}"
+      ],
+      [
+        "Mag ik het huis in {country} verhuren?",
+        "{rental}"
+      ],
+      [
+        "Welke verzekeringen heb ik nodig?",
+        "Transportdekking voor de levering, opstal- of natuurschadedekking voor het gebruik, en exploitantenaansprakelijkheid bij verhuur. Regel de dekking vóór levering — daarna is uw onderhandelingspositie slechter."
+      ],
+      [
+        "Wat moet vóór het bestellen duidelijk zijn?",
+        "Vijf dingen: een schriftelijk antwoord van {authority} over toelaatbaarheid; toegang en losplaats met foto's en maten; ontsluiting en afstand tot het net; het gebruik met aantal personen; en het budget inclusief de nevenposten. Met die vijf wordt een aanvraag een planbaar project."
+      ]
+    ],
+    "da": [
+      [
+        "Kræver et tiny house i {country} tilladelse?",
+        "Som hovedregel ja. Så snart en enhed står permanent ét sted og bruges til ophold, betragtes den i {country} planretligt som en bygning. Ansvarlig er {authority}. Om og hvilken procedure der gælder, afgøres på den konkrete grund — ikke af produktet."
+      ],
+      [
+        "Hvem afgør tilladelsen?",
+        "{authority}. MODUNERA leverer bygningen og den tekniske dokumentation; afgørelsen om tilladelighed, procedure og vilkår ligger alene hos den myndighed. Få svaret på skrift, før du bestiller."
+      ],
+      [
+        "Hvad skal den lokale plan tillade?",
+        "Afgørende er {plan}. Den fastlægger tilladt anvendelse, byggemåde, bebyggelig flade og byggemodning. En grund med forkert udlægning kan ingen teknisk løsning redde."
+      ],
+      [
+        "Må jeg bo permanent i et tiny house i {country}?",
+        "{permanent}"
+      ],
+      [
+        "Må jeg placere det i et ferie- eller rekreativt område?",
+        "{recreation}"
+      ],
+      [
+        "Tæller et tiny house på hjul som køretøj eller som bygning?",
+        "{wheels}"
+      ],
+      [
+        "Hvad koster levering til {country}?",
+        "Som projektorientering regner vi med cirka {delivery} ab fabrik til det aftalte punkt i {country}. {deliveryNote} Slutbeløbet afhænger af rute, adgang, kranbehov og dato; et fragttilsagn opstår først med det kontrollerede tilbud."
+      ],
+      [
+        "Hvordan forløber transporten, og hvor lang tid tager den?",
+        "Enheden transporteres i ét stykke på blokvogn. {route} Den præcise dato fastlægges sammen med aflæsningspunktet, for i praksis er de sidste hundrede meter oftere problemet end selve ruten."
+      ],
+      [
+        "Er der told eller importafgifter?",
+        "{customs}"
+      ],
+      [
+        "Hvilken moms gælder?",
+        "{vat} Pr. {updated}. Reglerne på leveringstidspunktet er afgørende; den skattemæssige behandling af din konkrete sag bekræfter din revisor."
+      ],
+      [
+        "Hvilket fundament kræves i {country}?",
+        "Punkt-, stribe- eller skruefundament afhængigt af jordbund, frostdybde og myndighedskrav. {foundation} Udførelsen sker lokalt; vi leverer lastforudsætninger og understøtningspunkter."
+      ],
+      [
+        "Hvordan tilsluttes el, vand og spildevand?",
+        "Frem til skel af de lokale forsyninger, derfra af lokale håndværkere. Omkostningen bestemmes næsten udelukkende af afstanden til det eksisterende net. {utilities}"
+      ],
+      [
+        "Er off-grid-drift tilladt i {country}?",
+        "{offgrid}"
+      ],
+      [
+        "Er huset egnet til vinteren i {country}?",
+        "{winter} Isoleringstykkelse, glasareal, ventilation og varmesystem besluttes samlet før produktion, ikke bagefter."
+      ],
+      [
+        "Hvordan specificeres isoleringen til {country}?",
+        "Efter fyringssæson, snelastzone og vindzone på den faktiske adresse. {insulation} En opbygning, der rækker til en sommerenhed, er for tynd til helårsbeboelse på samme adresse."
+      ],
+      [
+        "Hvad koster et komplet projekt i {country}?",
+        "Basis ab fabrik plus levering giver det første tal; fundament, tilslutninger, aflæsning, lokal projektering, gebyrer og forsikring kommer oveni. Regn dem med fra start, ellers flytter budgettet sig efter bestillingen."
+      ],
+      [
+        "Hvilken model vælges oftest i {country}?",
+        "{models}"
+      ],
+      [
+        "Må jeg udleje huset i {country}?",
+        "{rental}"
+      ],
+      [
+        "Hvilke forsikringer skal jeg have?",
+        "Transportdækning til leveringen, bygnings- eller naturskadedækning til driften og driftsansvar ved udlejning. Få dækningen på plads før levering — bagefter er forhandlingspositionen dårligere."
+      ],
+      [
+        "Hvad skal være afklaret før bestilling?",
+        "Fem ting: et skriftligt svar fra {authority} om tilladelighed; adgang og aflæsningspunkt med fotos og mål; byggemodning og afstand til nettet; anvendelsen med antal personer; og budgetrammen inklusive biposterne. Med de fem bliver en forespørgsel til et planlægbart projekt."
+      ]
+    ],
+    "fr": [
+      [
+        "Une tiny house nécessite-t-elle une autorisation {countryIn} ?",
+        "En règle générale oui. Dès qu'une unité reste durablement au même endroit et sert à l'occupation, le droit de l'urbanisme {countryIn} la traite comme une construction. L'autorité compétente est {authority}. L'existence et la nature de la procédure se décident sur la parcelle — pas sur le produit."
+      ],
+      [
+        "Qui décide de l'autorisation ?",
+        "{authority}. MODUNERA fournit le bâtiment et la documentation technique ; la décision sur l'admissibilité, la procédure et les prescriptions appartient entièrement à cette autorité. Obtenez la réponse par écrit avant de commander."
+      ],
+      [
+        "Que doit permettre le plan local ?",
+        "{plan} fait foi. Il fixe l'usage admis, le mode constructif, l'emprise constructible et la viabilisation. Une parcelle mal affectée pour votre projet ne se rattrape par aucune solution technique."
+      ],
+      [
+        "Puis-je habiter en permanence dans une tiny house {countryIn} ?",
+        "{permanent}"
+      ],
+      [
+        "Puis-je l'implanter dans une zone de vacances ou de loisirs ?",
+        "{recreation}"
+      ],
+      [
+        "Une tiny house sur roues compte-t-elle comme véhicule ou comme construction ?",
+        "{wheels}"
+      ],
+      [
+        "Combien coûte la livraison {countryTo} ?",
+        "En ordre de grandeur de projet, nous comptons environ {delivery} départ usine jusqu'au point convenu {countryIn}. {deliveryNote} Le montant final dépend de l'itinéraire, de l'accès, du besoin de grue et de la date ; un engagement de transport n'existe qu'avec l'offre vérifiée."
+      ],
+      [
+        "Comment se déroule le transport et combien de temps prend-il ?",
+        "L'unité voyage d'un seul tenant sur porte-engins. {route} La date exacte est arrêtée avec le point de déchargement, car en pratique les cent derniers mètres posent plus de problèmes que l'itinéraire."
+      ],
+      [
+        "Y a-t-il des droits de douane ou des taxes à l'importation ?",
+        "{customs}"
+      ],
+      [
+        "Quelle TVA s'applique ?",
+        "{vat} Au {updated}. Les règles en vigueur à la livraison font foi ; le traitement fiscal de votre cas précis relève de votre conseil fiscal."
+      ],
+      [
+        "Quelle fondation faut-il {countryIn} ?",
+        "Plots, semelles filantes ou pieux vissés selon le sol, la profondeur de gel et les exigences de l'autorisation. {foundation} Les travaux sont réalisés localement ; nous fournissons les hypothèses de charge et les points d'appui."
+      ],
+      [
+        "Comment se font les raccordements électricité, eau et eaux usées ?",
+        "Jusqu'à la limite de parcelle par les concessionnaires locaux, ensuite par des entreprises locales. Le coût dépend presque uniquement de la distance au réseau existant. {utilities}"
+      ],
+      [
+        "L'exploitation hors réseau est-elle autorisée {countryIn} ?",
+        "{offgrid}"
+      ],
+      [
+        "La maison convient-elle à l'hiver {countryIn} ?",
+        "{winter} Épaisseur d'isolant, surface vitrée, ventilation et système de chauffage se décident ensemble avant la production, pas après."
+      ],
+      [
+        "Comment l'isolation est-elle calée pour {country} ?",
+        "Selon la saison de chauffe, la zone de charge de neige et la zone de vent à l'adresse réelle. {insulation} Une composition suffisante pour une unité d'été est trop juste pour une résidence permanente à la même adresse."
+      ],
+      [
+        "Combien coûte un projet complet {countryIn} ?",
+        "Base départ usine plus livraison donne le premier chiffre ; fondation, raccordements, déchargement, études locales, taxes et assurance s'y ajoutent. Comptez-les dès le départ, sinon le budget bouge après la commande."
+      ],
+      [
+        "Quel modèle est le plus choisi {countryIn} ?",
+        "{models}"
+      ],
+      [
+        "Puis-je louer la maison {countryIn} ?",
+        "{rental}"
+      ],
+      [
+        "De quelles assurances ai-je besoin ?",
+        "Une couverture transport pour la livraison, une assurance bâtiment ou catastrophes naturelles pour l'exploitation, et une responsabilité d'exploitant en cas de location. Réglez la couverture avant la livraison — après, la position de négociation est moins bonne."
+      ],
+      [
+        "Que faut-il avoir clarifié avant de commander ?",
+        "Cinq points : une réponse écrite de {authority} sur l'admissibilité ; l'accès et le point de déchargement avec photos et cotes ; la viabilisation et la distance au réseau ; l'usage avec le nombre de personnes ; et l'enveloppe budgétaire, postes annexes compris. Avec ces cinq éléments, une demande devient un projet planifiable."
+      ]
+    ]
+  },
+  "facts": {
+    "de": {
+      "DE": {
+        "authority": "die untere Bauaufsichtsbehörde des Kreises oder der kreisfreien Stadt",
+        "plan": "der Bebauungsplan, ersatzweise die Beurteilung nach § 34 oder § 35 BauGB",
+        "permanent": "Dauerwohnen ist möglich, wenn das Grundstück im Innenbereich liegt oder ein Bebauungsplan Wohnnutzung zulässt und das Vorhaben genehmigt wird. Im Außenbereich nach § 35 BauGB ist Wohnen nur in eng begrenzten Fällen privilegiert – das ist der häufigste Grund, aus dem deutsche Projekte scheitern.",
+        "recreation": "Auf Campingplätzen und in Wochenendhausgebieten gelten eigene Regeln und häufig Aufenthaltsbeschränkungen, die eine ganzjährige Wohnnutzung ausschließen. Prüfen Sie die Satzung des Platzes und die Festsetzungen des Bebauungsplans zusammen.",
+        "wheels": "Die Einstufung folgt der tatsächlichen Nutzung, nicht dem Fahrgestell. Steht die Einheit dauerhaft und dient dem Aufenthalt, behandelt das Baurecht sie in aller Regel als bauliche Anlage – auch mit Rädern und Zulassung.",
+        "deliveryNote": "Der Wert entspricht dem Deutschland-Tarif des Konfigurators.",
+        "route": "Die Route führt über den Landweg durch Südosteuropa; die reine Fahrzeit liegt im Bereich weniger Tage, die Planung von Ladung, Papieren und Entladefenster bestimmt den Gesamtvorlauf.",
+        "customs": "Türkiye und die EU sind über die Zollunion verbunden. Für Industriewaren mit A.TR-Warenverkehrsbescheinigung fallen in der Regel keine Zölle an; Einfuhrumsatzsteuer und Abwicklungskosten bleiben. Die konkrete Behandlung bestätigt Ihre Zollagentur.",
+        "vat": "Es gilt der deutsche Umsatzsteuersatz von 19 Prozent auf die Einfuhr.",
+        "foundation": "In Deutschland ist die Frosttiefe regional unterschiedlich; im Norden und in Mittelgebirgslagen wird tiefer gegründet als am Oberrhein.",
+        "utilities": "In vielen Kommunen ist der Abwasseranschluss der teuerste Einzelposten, wenn kein Kanal in der Nähe liegt.",
+        "offgrid": "Technisch machbar, rechtlich standortabhängig: viele Gemeinden verlangen bei genehmigter Wohnnutzung den Anschluss an Wasser und Kanal. Solar und Speicher ersetzen die Erschließung deshalb selten vollständig.",
+        "winter": "Ja – Deutschland reicht vom milden Oberrhein bis in alpine Schneelastzonen, und genau danach wird ausgelegt.",
+        "insulation": "Für Dauerwohnen in Bayern oder im Harz liegt die Auslegung spürbar über der für ein Ferienobjekt am Bodensee.",
+        "models": "MD 1 und MD 3 werden in Deutschland am häufigsten geplant: MD 1 für Paare und Ferienhäuser mit Aussicht, MD 3, sobald ein abschließbares Zimmer für Homeoffice oder Kind gebraucht wird. Für Familien folgt MD 2.",
+        "rental": "Kurzzeitvermietung ist in vielen Städten genehmigungs- oder anzeigepflichtig und teilweise durch Zweckentfremdungssatzungen begrenzt. Auf Campingplätzen und in Ferienparks gelten die Regeln des Betreibers zusätzlich."
+      },
+      "NL": {
+        "authority": "die Gemeinde über das Omgevingsloket",
+        "plan": "das omgevingsplan der Gemeinde nach der Omgevingswet",
+        "permanent": "Dauerwohnen setzt eine Wohnfunktion im omgevingsplan voraus. Viele attraktive Standorte sind als Erholungs- oder Freizeitgebiet ausgewiesen, wo permanentes Wohnen nicht erlaubt ist – auch wenn es faktisch geschieht.",
+        "recreation": "Für recreatiewoningen gelten eigene Nutzungsgrenzen; die ganzjährige Wohnnutzung ist regelmäßig ausgeschlossen und wird von einzelnen Gemeinden aktiv kontrolliert.",
+        "wheels": "Auch in den Niederlanden entscheidet die Dauerhaftigkeit der Aufstellung. Eine Einheit, die auf einem Grundstück verbleibt, wird als bouwwerk behandelt und braucht die entsprechende Zulässigkeit im omgevingsplan.",
+        "deliveryNote": "Der Wert entspricht dem Niederlande-Tarif des Konfigurators.",
+        "route": "Die Route führt über den Landweg; die Zufahrt in Poldergebieten und historischen Ortskernen ist häufiger die Engstelle als die Autobahn.",
+        "customs": "Türkiye und die EU sind über die Zollunion verbunden. Mit A.TR-Bescheinigung fallen für Industriewaren in der Regel keine Zölle an; Einfuhrumsatzsteuer und Abwicklung bleiben bestehen.",
+        "vat": "Es gilt der niederländische Satz von 21 Prozent auf die Einfuhr.",
+        "foundation": "In weiten Teilen der Niederlande ist der Baugrund weich; Tragfähigkeit und Setzung sind hier wichtiger als die Frosttiefe.",
+        "utilities": "Anschlüsse laufen über die regionalen Netzbetreiber; Vorlaufzeiten sollten früh eingeplant werden.",
+        "offgrid": "Rechtlich abhängig vom omgevingsplan und der Nutzungsfunktion. Bei Wohnfunktion wird in der Regel ein regulärer Anschluss erwartet; auf Freizeitstandorten sind autarke Lösungen häufiger möglich.",
+        "winter": "Ja – der niederländische Winter ist mild, aber feucht und windig, und genau darauf zielt die Auslegung.",
+        "insulation": "Wichtiger als Dämmstärke sind hier Winddichtheit, Feuchteschutz und Lüftung; in Küstennähe kommt die Salzbelastung der Fassade dazu.",
+        "models": "MD 5 und MD 7 werden in den Niederlanden am häufigsten geplant, weil viele Grundstücke klein und die Zufahrten eng sind. Für Ferienparks folgt MD 4 mit der Veranda.",
+        "rental": "Kurzzeitvermietung ist gemeindlich geregelt; mehrere Gemeinden arbeiten mit Registrierungspflicht und Nächtebegrenzung. In Ferienparks gelten zusätzlich die Regeln des Betreibers."
+      },
+      "DK": {
+        "authority": "die kommune",
+        "plan": "der lokalplan zusammen mit dem Zonenstatus (byzone, sommerhusområde oder landzone)",
+        "permanent": "Dauerwohnen setzt einen Standort in byzone oder eine entsprechende Ausweisung voraus. In sommerhusområder ist die ganzjährige Wohnnutzung grundsätzlich beschränkt; Ausnahmen sind an persönliche Voraussetzungen geknüpft.",
+        "recreation": "In sommerhusområder ist die saisonale Nutzung der Normalfall. Die genauen Zeiträume und Ausnahmen regelt die Gesetzgebung zusammen mit dem lokalplan – fragen Sie die kommune direkt.",
+        "wheels": "Auch hier zählt die dauerhafte Aufstellung. Eine Einheit, die stehen bleibt und bewohnt wird, fällt unter das Bygningsreglement und braucht eine byggetilladelse.",
+        "deliveryNote": "Der Wert entspricht dem Skandinavien-Tarif des Konfigurators und liegt deshalb über den mitteleuropäischen Zielen.",
+        "route": "Die Route führt über den Landweg durch Mitteleuropa und ist die längste der fünf Zielmärkte; Vorlauf und Termintreue sind entsprechend früher zu planen.",
+        "customs": "Türkiye und die EU sind über die Zollunion verbunden. Mit A.TR-Bescheinigung fallen für Industriewaren in der Regel keine Zölle an; die dänische Einfuhrumsatzsteuer bleibt.",
+        "vat": "Es gilt der dänische Satz von 25 Prozent – der höchste der fünf Zielmärkte.",
+        "foundation": "Frosttiefe und Windlast sind in Dänemark maßgeblich; küstennahe Standorte verlangen zusätzlich Aufmerksamkeit bei der Verankerung.",
+        "utilities": "Die Anschlussbedingungen setzt die kommune; Abwasserlösungen außerhalb der Kanalisation sind genehmigungspflichtig.",
+        "offgrid": "Nur eingeschränkt: Abwasserentsorgung und Trinkwasser sind in Dänemark eng geregelt. Solar und Speicher lassen sich planen, ersetzen die Anschlussfrage aber nicht.",
+        "winter": "Ja, und Dänemark ist der Markt, für den wir am konsequentesten auslegen: längste Heizperiode der fünf, dazu erheblicher Windschutz.",
+        "insulation": "Fensterflächen werden bewusst dimensioniert, und Lüftung mit Wärmerückgewinnung ist hier eher Regel als Option.",
+        "models": "MD 6 wird in Dänemark am häufigsten gewählt – Steildach, Schneeabtrag und Auslegung auf lange Heizperioden. Für Sommerhausgrundstücke folgt MD 4.",
+        "rental": "Die Vermietung von Sommerhäusern ist gesetzlich geregelt und läuft häufig über Vermittlungsbüros; steuerliche Freibeträge sind an die Art der Vermittlung gekoppelt."
+      },
+      "LU": {
+        "authority": "die commune",
+        "plan": "der plan d'aménagement général (PAG) und der zugehörige plan d'aménagement particulier (PAP)",
+        "permanent": "Dauerwohnen ist möglich, wenn die Zone im PAG Wohnnutzung zulässt und die autorisation de construire erteilt wird. Wegen der kleinen Gemeindegrößen unterscheidet sich die Praxis von Ort zu Ort spürbar.",
+        "recreation": "Camping- und Freizeitstandorte unterliegen eigenen Auflagen und in der Regel Aufenthaltsbeschränkungen. Klären Sie Betreiberregeln und kommunale Vorgaben gemeinsam.",
+        "wheels": "Maßgeblich ist die dauerhafte Aufstellung, nicht das Fahrgestell. Eine verbleibende Einheit wird als Bauvorhaben behandelt und braucht die autorisation de construire.",
+        "deliveryNote": "Der Wert ist ein Durchschnitt; die Route wird projektbezogen bestätigt.",
+        "route": "Die Route führt über den Landweg. Wegen der bewegten Topografie ist die letzte Zufahrt zum Grundstück häufiger die Engstelle als die Fernstrecke.",
+        "customs": "Türkiye und die EU sind über die Zollunion verbunden. Mit A.TR-Bescheinigung fallen für Industriewaren in der Regel keine Zölle an; die luxemburgische Einfuhrumsatzsteuer bleibt.",
+        "vat": "Es gilt der luxemburgische Satz von 17 Prozent – der niedrigste der fünf Zielmärkte.",
+        "foundation": "Hanglagen sind in Luxemburg häufig; Aufstellfläche, Zufahrt und Kranstellplatz gehören zusammen geplant.",
+        "utilities": "Die Anschlussbedingungen setzt die commune; Entfernungen sind meist kurz, die Verfahren aber formalisiert.",
+        "offgrid": "Standortabhängig. Bei genehmigter Wohnnutzung wird in der Regel ein regulärer Anschluss erwartet; die commune entscheidet im Einzelfall.",
+        "winter": "Ja – das Klima ist gemäßigt, die Auslegung folgt eher der Lage am Hang und der Windexposition als extremen Temperaturen.",
+        "insulation": "Die Auslegung entspricht im Wesentlichen der für Westdeutschland; entscheidend ist die konkrete Höhenlage.",
+        "models": "MD 3 und MD 5 werden in Luxemburg am häufigsten geplant, weil viele Vorhaben ein zusätzliches Zimmer für Homeoffice brauchen und die Grundstücke begrenzt sind.",
+        "rental": "Kurzzeitvermietung ist kommunal geregelt und in einzelnen Gemeinden anmeldepflichtig. Klären Sie das vor der Investitionsentscheidung, nicht danach."
+      },
+      "CH": {
+        "authority": "die Gemeinde zusammen mit dem Kanton",
+        "plan": "die kommunale Nutzungsplanung und die Zonenordnung",
+        "permanent": "Dauerwohnen ist innerhalb der Bauzone möglich, wenn die Zone Wohnen zulässt und die Baubewilligung erteilt wird. Außerhalb der Bauzone ist Wohnen nur in eng begrenzten Ausnahmen zulässig – das ist der häufigste Grund, aus dem Schweizer Projekte scheitern.",
+        "recreation": "Camping- und Ferienzonen haben eigene Vorschriften, häufig mit Aufenthaltsbeschränkungen. In Tourismusgemeinden kommen Zweitwohnungsregelungen hinzu.",
+        "wheels": "Auch in der Schweiz entscheidet die dauerhafte Aufstellung. Bleibt die Einheit stehen und wird bewohnt, ist sie bewilligungspflichtig – die Räder ändern daran nichts.",
+        "deliveryNote": "Der Wert enthält die Abwicklung an der EU-Außengrenze.",
+        "route": "Die Route führt über den Landweg mit Grenzabfertigung bei der Einfuhr in die Schweiz; die Bergzufahrt zum Aufstellort ist bei alpinen Standorten früh zu prüfen.",
+        "customs": "Die Schweiz ist nicht Teil der EU-Zollunion. Bei der Einfuhr fallen Verzollung, Einfuhrsteuer und Abwicklungskosten an; die Positionen bestätigt Ihre Zollagentur vor der Lieferung.",
+        "vat": "Es gilt die schweizerische Mehrwertsteuer zum Normalsatz von 8,1 Prozent auf die Einfuhr.",
+        "foundation": "Frosttiefe und Schneelast steigen mit der Höhenlage deutlich; die Gründung wird nach Gemeinde ausgelegt, nicht nach Land.",
+        "utilities": "Anschlussbedingungen und Gebühren setzt die Gemeinde; in Streulagen können die Entfernungen den größten Kostenblock bilden.",
+        "offgrid": "Innerhalb der Bauzone wird in der Regel der Anschluss erwartet. Autarke Lösungen sind eher in Sonderfällen und mit kantonaler Zustimmung denkbar.",
+        "winter": "Ja, und die Schweiz verlangt die differenzierteste Auslegung: vom Tessin bis über 1.500 Meter unterscheiden sich Schneelast und Heizperiode erheblich.",
+        "insulation": "Für alpine Standorte wird deutlich stärker gedämmt und die Dachlast höher angesetzt als im Mittelland.",
+        "models": "MD 6 ist in der Schweiz die häufigste Wahl – Steildach für Schneeabtrag und Auslegung auf lange Heizperioden. Im Mittelland folgt MD 1.",
+        "rental": "Kurzzeitvermietung ist kantonal und kommunal geregelt; in Tourismusgemeinden kommen Zweitwohnungs- und Kurtaxenregelungen dazu."
+      }
+    },
+    "en": {
+      "DE": {
+        "authority": "the lower building authority of the district or independent city",
+        "plan": "the Bebauungsplan, or an assessment under §34 or §35 BauGB where there is none",
+        "permanent": "Permanent living is possible where the plot lies within a built-up area or a Bebauungsplan permits residential use and the project is approved. In the outer area under §35 BauGB, living is privileged only in narrowly defined cases — the most common reason German projects fail.",
+        "recreation": "Campsites and weekend-house areas have their own rules and often limits on length of stay that rule out year-round residence. Read the site's own statutes and the Bebauungsplan together.",
+        "wheels": "Classification follows actual use, not the chassis. If the unit stands permanently and is used for occupation, planning law generally treats it as a structure — wheels and registration included.",
+        "deliveryNote": "The figure matches the configurator's Germany tariff.",
+        "route": "The route runs overland through south-eastern Europe; driving time is a matter of days, while loading, paperwork and the unloading window set the real lead time.",
+        "customs": "Türkiye and the EU are linked by the customs union. For industrial goods with an A.TR movement certificate, duties generally do not apply; import VAT and handling charges remain. Your customs agent confirms the treatment of your shipment.",
+        "vat": "German VAT at 19 per cent applies on import.",
+        "foundation": "Frost depth varies regionally in Germany; the north and the central uplands need deeper founding than the Upper Rhine.",
+        "utilities": "In many municipalities the wastewater connection is the single most expensive item when there is no sewer nearby.",
+        "offgrid": "Technically feasible, legally site-dependent: many municipalities require a connection to water and sewer where residential use is approved. Solar and storage therefore rarely replace servicing entirely.",
+        "winter": "Yes — Germany runs from the mild Upper Rhine into alpine snow load zones, and specification follows exactly that.",
+        "insulation": "For permanent living in Bavaria or the Harz the build-up is noticeably heavier than for a summer unit on Lake Constance.",
+        "models": "MD 1 and MD 3 are planned most often in Germany: MD 1 for couples and holiday houses with a view, MD 3 as soon as a room that closes is needed for a home office or a child. Families then move to MD 2.",
+        "rental": "Short-term letting requires permission or notification in many cities and is limited in places by misuse-of-housing bylaws. On campsites and in holiday parks the operator's rules apply on top."
+      },
+      "NL": {
+        "authority": "the municipality, through the Omgevingsloket",
+        "plan": "the municipal omgevingsplan under the Environment and Planning Act",
+        "permanent": "Permanent living requires a residential function in the omgevingsplan. Many attractive sites are designated for recreation, where permanent residence is not allowed — even where it happens in practice.",
+        "recreation": "Recreatiewoningen carry their own limits on use; year-round residence is regularly excluded and actively enforced by some municipalities.",
+        "wheels": "In the Netherlands too, permanence decides. A unit that stays on a plot is treated as a bouwwerk and needs the corresponding admissibility in the omgevingsplan.",
+        "deliveryNote": "The figure matches the configurator's Netherlands tariff.",
+        "route": "The route runs overland; access in polder areas and historic village centres is more often the bottleneck than the motorway.",
+        "customs": "Türkiye and the EU are linked by the customs union. With an A.TR certificate, industrial goods generally attract no duty; import VAT and handling remain.",
+        "vat": "Dutch VAT at 21 per cent applies on import.",
+        "foundation": "Across much of the Netherlands the subsoil is soft; bearing capacity and settlement matter more here than frost depth.",
+        "utilities": "Connections run through the regional network operators, and their lead times deserve to be planned in early.",
+        "offgrid": "Legally dependent on the omgevingsplan and the assigned function. Where a residential function applies a regular connection is generally expected; on recreational sites autonomous solutions are more often possible.",
+        "winter": "Yes — the Dutch winter is mild but damp and windy, and that is exactly what the specification targets.",
+        "insulation": "Airtightness, moisture control and ventilation matter more here than insulation thickness; near the coast, salt load on the façade is added.",
+        "models": "MD 5 and MD 7 are planned most often in the Netherlands, because plots are frequently small and access is tight. For holiday parks, MD 4 with its veranda follows.",
+        "rental": "Short-term letting is regulated municipally; several municipalities operate registration duties and night caps. In holiday parks the operator's rules apply as well."
+      },
+      "DK": {
+        "authority": "the kommune",
+        "plan": "the lokalplan together with the zone status (byzone, sommerhusområde or landzone)",
+        "permanent": "Permanent living requires a site in byzone or an equivalent designation. In sommerhusområder year-round residence is restricted in principle, and exceptions are tied to personal conditions.",
+        "recreation": "In sommerhusområder seasonal use is the norm. The exact periods and exceptions follow from legislation together with the lokalplan — ask the kommune directly.",
+        "wheels": "Permanence decides here too. A unit that stays and is lived in falls under the Bygningsreglement and needs a byggetilladelse.",
+        "deliveryNote": "The figure matches the configurator's Scandinavia tariff, which is why it sits above the central European destinations.",
+        "route": "The route runs overland through central Europe and is the longest of the five markets; lead time and date discipline have to be planned earlier accordingly.",
+        "customs": "Türkiye and the EU are linked by the customs union. With an A.TR certificate, industrial goods generally attract no duty; Danish import VAT remains.",
+        "vat": "Danish VAT at 25 per cent applies — the highest of the five destinations.",
+        "foundation": "Frost depth and wind load govern in Denmark; coastal sites also need attention paid to anchoring.",
+        "utilities": "The kommune sets the connection conditions, and wastewater solutions outside the sewer network require approval.",
+        "offgrid": "Only to a limited extent: wastewater and drinking water are tightly regulated in Denmark. Solar and storage can be planned but do not replace the connection question.",
+        "winter": "Yes, and Denmark is the market we specify for most rigorously: the longest heating season of the five, plus serious wind protection.",
+        "insulation": "Glazed areas are dimensioned deliberately, and heat-recovery ventilation is the rule here rather than an option.",
+        "models": "MD 6 is chosen most often in Denmark — pitched roof, snow shedding and a build-up specified for long heating seasons. For summer-house plots, MD 4 follows.",
+        "rental": "Letting summer houses is regulated by statute and often runs through agencies; tax allowances depend on how the letting is arranged."
+      },
+      "LU": {
+        "authority": "the commune",
+        "plan": "the plan d'aménagement général (PAG) and the associated plan d'aménagement particulier (PAP)",
+        "permanent": "Permanent living is possible where the PAG zone permits residential use and the autorisation de construire is granted. Because municipalities are small, practice differs noticeably from place to place.",
+        "recreation": "Campsites and leisure locations carry their own conditions and usually limits on length of stay. Clarify operator rules and municipal requirements together.",
+        "wheels": "What counts is permanent placement, not the chassis. A unit that stays is treated as a building project and needs the autorisation de construire.",
+        "deliveryNote": "The figure is an average; the route is confirmed per project.",
+        "route": "The route runs overland. Because the topography is lively, the final approach to the plot is more often the bottleneck than the long haul.",
+        "customs": "Türkiye and the EU are linked by the customs union. With an A.TR certificate, industrial goods generally attract no duty; Luxembourg import VAT remains.",
+        "vat": "Luxembourg VAT at 17 per cent applies — the lowest of the five destinations.",
+        "foundation": "Sloping sites are common in Luxembourg; standing area, access and crane position have to be planned together.",
+        "utilities": "The commune sets the connection conditions; distances are usually short but the procedures are formalised.",
+        "offgrid": "Site-dependent. Where residential use is approved a regular connection is generally expected; the commune decides case by case.",
+        "winter": "Yes — the climate is temperate, and specification follows the slope and wind exposure more than extreme temperatures.",
+        "insulation": "The build-up broadly matches western Germany; the decisive factor is the actual altitude of the site.",
+        "models": "MD 3 and MD 5 are planned most often in Luxembourg, because many projects need an extra room for a home office and plots are limited.",
+        "rental": "Short-term letting is regulated municipally and notifiable in some communes. Settle that before the investment decision, not after."
+      },
+      "CH": {
+        "authority": "the municipality together with the canton",
+        "plan": "the municipal land-use plan and the zoning ordinance",
+        "permanent": "Permanent living is possible inside the building zone where the zone permits residential use and the Baubewilligung is granted. Outside the building zone, living is admissible only in narrowly defined exceptions — the most common reason Swiss projects fail.",
+        "recreation": "Camping and holiday zones have their own rules, often with limits on length of stay. In tourist municipalities, second-home regulations apply on top.",
+        "wheels": "Permanent placement decides in Switzerland too. If the unit stays and is lived in, it requires approval — the wheels change nothing.",
+        "deliveryNote": "The figure includes handling at the EU external border.",
+        "route": "The route runs overland with border clearance on entry into Switzerland; for alpine sites the mountain approach to the plot has to be checked early.",
+        "customs": "Switzerland is not part of the EU customs union. Import means clearance, import tax and handling charges; your customs agent confirms the items before delivery.",
+        "vat": "Swiss VAT at the standard rate of 8.1 per cent applies on import.",
+        "foundation": "Frost depth and snow load rise markedly with altitude; founding is specified by municipality, not by country.",
+        "utilities": "The municipality sets connection conditions and fees; in scattered settlements the distances can be the single largest cost block.",
+        "offgrid": "Inside the building zone a connection is generally expected. Autonomous solutions are conceivable in special cases and with cantonal agreement.",
+        "winter": "Yes, and Switzerland demands the most differentiated specification: snow load and heating season differ substantially between Ticino and 1,500 metres.",
+        "insulation": "Alpine sites are insulated considerably more heavily and the roof load assumption is set higher than on the Mittelland.",
+        "models": "MD 6 is the most common choice in Switzerland — a pitched roof for snow shedding and a build-up for long heating seasons. On the Mittelland, MD 1 follows.",
+        "rental": "Short-term letting is regulated at cantonal and municipal level; in tourist municipalities second-home and visitor-tax rules apply as well."
+      }
+    },
+    "nl": {
+      "DE": {
+        "authority": "de untere Bauaufsichtsbehörde van de Kreis of de kreisfreie Stadt",
+        "plan": "de Bebauungsplan, of bij ontbreken daarvan een toets aan §34 of §35 BauGB",
+        "permanent": "Permanent wonen kan als het perceel binnen bebouwd gebied ligt of een Bebauungsplan wonen toestaat en het plan wordt vergund. In het buitengebied (§35 BauGB) is wonen slechts in nauw omschreven gevallen toegestaan — de meest voorkomende reden dat Duitse projecten stranden.",
+        "recreation": "Campings en weekendhuisgebieden hebben eigen regels en vaak verblijfsbeperkingen die permanent wonen uitsluiten. Lees de terreinregels en de Bebauungsplan samen.",
+        "wheels": "De kwalificatie volgt het feitelijke gebruik, niet het chassis. Blijft de unit staan en wordt zij bewoond, dan geldt zij planologisch doorgaans als bouwwerk — wielen en kenteken inbegrepen.",
+        "deliveryNote": "Het bedrag komt overeen met het Duitsland-tarief van de configurator.",
+        "route": "De route loopt over land door Zuidoost-Europa; de rijtijd is enkele dagen, terwijl laden, papieren en het losvenster de werkelijke doorlooptijd bepalen.",
+        "customs": "Türkiye en de EU zijn verbonden door de douane-unie. Voor industriegoederen met een A.TR-certificaat gelden doorgaans geen rechten; invoer-btw en afhandelingskosten blijven.",
+        "vat": "Het Duitse btw-tarief van 19 procent geldt bij invoer.",
+        "foundation": "De vorstdiepte verschilt regionaal; in het noorden en de middelgebergten wordt dieper gefundeerd dan aan de Bovenrijn.",
+        "utilities": "In veel gemeenten is de rioolaansluiting de duurste post als er geen riool in de buurt ligt.",
+        "offgrid": "Technisch haalbaar, juridisch locatieafhankelijk: veel gemeenten eisen bij vergunde bewoning aansluiting op water en riool.",
+        "winter": "Ja — Duitsland loopt van de milde Bovenrijn tot alpine sneeuwlastzones, en daar wordt op ontworpen.",
+        "insulation": "Voor permanent wonen in Beieren of de Harz ligt de opbouw merkbaar zwaarder dan voor een zomerverblijf aan de Bodensee.",
+        "models": "MD 1 en MD 3 worden in Duitsland het vaakst gepland; voor gezinnen volgt MD 2.",
+        "rental": "Kortverhuur is in veel steden vergunning- of meldplichtig en soms begrensd door onttrekkingsregels."
+      },
+      "NL": {
+        "authority": "de gemeente, via het Omgevingsloket",
+        "plan": "het omgevingsplan van de gemeente onder de Omgevingswet",
+        "permanent": "Permanent wonen vereist een woonfunctie in het omgevingsplan. Veel aantrekkelijke locaties zijn als recreatie aangewezen, waar permanente bewoning niet is toegestaan — ook al gebeurt het in de praktijk.",
+        "recreation": "Voor recreatiewoningen gelden eigen gebruiksgrenzen; jaarrondbewoning is regelmatig uitgesloten en wordt door sommige gemeenten actief gehandhaafd.",
+        "wheels": "Ook hier beslist de duurzaamheid van de plaatsing. Een unit die op een perceel blijft, geldt als bouwwerk en heeft de bijbehorende toelaatbaarheid in het omgevingsplan nodig.",
+        "deliveryNote": "Het bedrag komt overeen met het Nederland-tarief van de configurator.",
+        "route": "De route loopt over land; de toegang in polders en historische dorpskernen is vaker het knelpunt dan de snelweg.",
+        "customs": "Türkiye en de EU zijn verbonden door de douane-unie. Met een A.TR-certificaat gelden voor industriegoederen doorgaans geen rechten; invoer-btw en afhandeling blijven.",
+        "vat": "Het Nederlandse tarief van 21 procent geldt bij invoer.",
+        "foundation": "In grote delen van Nederland is de ondergrond slap; draagkracht en zetting wegen hier zwaarder dan vorstdiepte.",
+        "utilities": "Aansluitingen lopen via de regionale netbeheerders; hun doorlooptijden verdienen vroege planning.",
+        "offgrid": "Juridisch afhankelijk van het omgevingsplan en de toegekende functie. Bij een woonfunctie wordt doorgaans een reguliere aansluiting verwacht.",
+        "winter": "Ja — de Nederlandse winter is mild maar vochtig en winderig, en daar richt de uitvoering zich op.",
+        "insulation": "Luchtdichtheid, vochtbeheersing en ventilatie tellen hier zwaarder dan isolatiedikte; aan de kust komt zoutbelasting erbij.",
+        "models": "MD 5 en MD 7 worden in Nederland het vaakst gepland, omdat kavels vaak klein en opritten krap zijn. Voor vakantieparken volgt MD 4.",
+        "rental": "Kortverhuur is gemeentelijk geregeld; meerdere gemeenten werken met registratieplicht en een nachtenmaximum."
+      },
+      "DK": {
+        "authority": "de kommune",
+        "plan": "de lokalplan samen met de zonestatus (byzone, sommerhusområde of landzone)",
+        "permanent": "Permanent wonen vereist een locatie in byzone of een gelijkwaardige aanwijzing. In sommerhusområder is jaarrondbewoning in beginsel beperkt.",
+        "recreation": "In sommerhusområder is seizoensgebruik de norm. De precieze perioden en uitzonderingen volgen uit de wet samen met de lokalplan — vraag het de kommune rechtstreeks.",
+        "wheels": "Ook hier telt de duurzame plaatsing. Een unit die blijft staan en wordt bewoond valt onder het Bygningsreglement en heeft een byggetilladelse nodig.",
+        "deliveryNote": "Het bedrag komt overeen met het Scandinavië-tarief van de configurator en ligt daarom boven de Midden-Europese bestemmingen.",
+        "route": "De route loopt over land door Midden-Europa en is de langste van de vijf markten; doorlooptijd en datumdiscipline vragen vroegere planning.",
+        "customs": "Türkiye en de EU zijn verbonden door de douane-unie. Met een A.TR-certificaat gelden voor industriegoederen doorgaans geen rechten; de Deense invoer-btw blijft.",
+        "vat": "Het Deense tarief van 25 procent geldt — het hoogste van de vijf bestemmingen.",
+        "foundation": "Vorstdiepte en windbelasting zijn in Denemarken bepalend; kustlocaties vragen extra aandacht voor verankering.",
+        "utilities": "De kommune stelt de aansluitvoorwaarden; afvalwateroplossingen buiten het riool zijn vergunningplichtig.",
+        "offgrid": "Slechts beperkt: afvalwater en drinkwater zijn in Denemarken strak geregeld.",
+        "winter": "Ja, en Denemarken is de markt waarvoor wij het consequentst ontwerpen: het langste stookseizoen van de vijf plus serieuze windbescherming.",
+        "insulation": "Glasoppervlakken worden bewust gedimensioneerd en ventilatie met warmteterugwinning is hier regel.",
+        "models": "MD 6 wordt in Denemarken het vaakst gekozen; voor zomerhuiskavels volgt MD 4.",
+        "rental": "Verhuur van zomerhuizen is wettelijk geregeld en loopt vaak via bemiddelingsbureaus."
+      },
+      "LU": {
+        "authority": "de commune",
+        "plan": "het plan d'aménagement général (PAG) met het bijbehorende plan d'aménagement particulier (PAP)",
+        "permanent": "Permanent wonen kan als de PAG-zone wonen toestaat en de autorisation de construire wordt verleend. Door de kleine gemeenten verschilt de praktijk merkbaar per plaats.",
+        "recreation": "Campings en recreatielocaties kennen eigen voorwaarden en meestal verblijfsbeperkingen.",
+        "wheels": "Bepalend is de duurzame plaatsing, niet het chassis. Een blijvende unit geldt als bouwproject en heeft de autorisation de construire nodig.",
+        "deliveryNote": "Het bedrag is een gemiddelde; de route wordt per project bevestigd.",
+        "route": "De route loopt over land. Door het reliëf is de laatste toegang tot het perceel vaker het knelpunt dan het lange traject.",
+        "customs": "Türkiye en de EU zijn verbonden door de douane-unie. Met een A.TR-certificaat gelden voor industriegoederen doorgaans geen rechten; de Luxemburgse invoer-btw blijft.",
+        "vat": "Het Luxemburgse tarief van 17 procent geldt — het laagste van de vijf bestemmingen.",
+        "foundation": "Hellende percelen zijn in Luxemburg gebruikelijk; opstelplaats, toegang en kraanopstelling horen samen gepland.",
+        "utilities": "De commune stelt de aansluitvoorwaarden; afstanden zijn meestal kort, de procedures geformaliseerd.",
+        "offgrid": "Locatieafhankelijk. Bij vergunde bewoning wordt doorgaans een reguliere aansluiting verwacht.",
+        "winter": "Ja — het klimaat is gematigd; de uitvoering volgt eerder helling en windexpositie dan extreme temperaturen.",
+        "insulation": "De opbouw komt in grote lijnen overeen met West-Duitsland; doorslaggevend is de feitelijke hoogteligging.",
+        "models": "MD 3 en MD 5 worden in Luxemburg het vaakst gepland, omdat veel projecten een extra kamer nodig hebben.",
+        "rental": "Kortverhuur is gemeentelijk geregeld en in sommige communes meldplichtig."
+      },
+      "CH": {
+        "authority": "de gemeente samen met het kanton",
+        "plan": "de gemeentelijke bestemmingsplanning en de zoneverordening",
+        "permanent": "Permanent wonen kan binnen de bouwzone als de zone wonen toestaat en de Baubewilligung wordt verleend. Buiten de bouwzone is wonen slechts in nauw omschreven uitzonderingen toegestaan.",
+        "recreation": "Camping- en vakantiezones hebben eigen voorschriften, vaak met verblijfsbeperkingen. In toeristische gemeenten komen tweedewoningregels erbij.",
+        "wheels": "Ook in Zwitserland beslist de duurzame plaatsing. Blijft de unit staan en wordt zij bewoond, dan is zij vergunningplichtig.",
+        "deliveryNote": "Het bedrag omvat de afhandeling aan de EU-buitengrens.",
+        "route": "De route loopt over land met douaneafhandeling bij invoer in Zwitserland; bij alpiene locaties moet de bergtoegang vroeg worden getoetst.",
+        "customs": "Zwitserland maakt geen deel uit van de EU-douane-unie. Bij invoer gelden inklaring, invoerbelasting en afhandelingskosten.",
+        "vat": "De Zwitserse btw geldt tegen het normale tarief van 8,1 procent bij invoer.",
+        "foundation": "Vorstdiepte en sneeuwlast nemen sterk toe met de hoogte; de fundering wordt per gemeente bepaald, niet per land.",
+        "utilities": "Aansluitvoorwaarden en leges stelt de gemeente; in verspreide bebouwing kunnen de afstanden de grootste kostenpost vormen.",
+        "offgrid": "Binnen de bouwzone wordt doorgaans aansluiting verwacht; autarke oplossingen vragen kantonnale instemming.",
+        "winter": "Ja, en Zwitserland vraagt de meest gedifferentieerde uitvoering: van Ticino tot boven 1.500 meter.",
+        "insulation": "Voor alpiene locaties wordt duidelijk zwaarder geïsoleerd en de daklast hoger aangehouden dan in het Mittelland.",
+        "models": "MD 6 is in Zwitserland de vaakst gekozen optie; in het Mittelland volgt MD 1.",
+        "rental": "Kortverhuur is kantonnaal en gemeentelijk geregeld; in toeristische gemeenten komen tweedewoning- en toeristenbelastingregels erbij."
+      }
+    },
+    "da": {
+      "DE": {
+        "authority": "den lokale bygningsmyndighed i Kreis eller kreisfreie Stadt",
+        "plan": "Bebauungsplan, eller en vurdering efter §34 eller §35 BauGB, hvor en sådan plan mangler",
+        "permanent": "Helårsbeboelse er mulig, hvor grunden ligger i bebygget område, eller hvor en Bebauungsplan tillader bolig, og projektet godkendes. I det åbne land efter §35 BauGB er beboelse kun tilladt i snævre tilfælde — den hyppigste grund til, at tyske projekter falder.",
+        "recreation": "Campingpladser og weekendhusområder har egne regler og ofte opholdsbegrænsninger, der udelukker helårsbeboelse.",
+        "wheels": "Klassifikationen følger den faktiske anvendelse, ikke chassiset. Står enheden permanent og bruges til ophold, behandles den planretligt som en bygning.",
+        "deliveryNote": "Beløbet svarer til konfiguratorens Tyskland-takst.",
+        "route": "Ruten går over land gennem Sydøsteuropa; køretiden er nogle dage, mens læsning, papirer og aflæsningsvinduet bestemmer den reelle leveringstid.",
+        "customs": "Türkiye og EU er forbundet af toldunionen. For industrivarer med A.TR-certifikat gælder normalt ingen told; importmoms og håndtering består.",
+        "vat": "Den tyske momssats på 19 procent gælder ved import.",
+        "foundation": "Frostdybden varierer regionalt; i nord og i mellembjergene funderes dybere end ved Øvre Rhin.",
+        "utilities": "I mange kommuner er kloaktilslutningen den dyreste enkeltpost, hvis der ikke er kloak i nærheden.",
+        "offgrid": "Teknisk muligt, juridisk stedafhængigt: mange kommuner kræver tilslutning til vand og kloak ved godkendt beboelse.",
+        "winter": "Ja — Tyskland går fra den milde Øvre Rhin til alpine snelastzoner, og det er præcis det, specifikationen følger.",
+        "insulation": "Til helårsbeboelse i Bayern eller Harzen er opbygningen mærkbart kraftigere end til en sommerenhed ved Bodensøen.",
+        "models": "MD 1 og MD 3 planlægges oftest i Tyskland; til familier følger MD 2.",
+        "rental": "Korttidsudlejning kræver i mange byer tilladelse eller anmeldelse og er visse steder begrænset af regler om boligmisbrug."
+      },
+      "NL": {
+        "authority": "kommunen via Omgevingsloket",
+        "plan": "kommunens omgevingsplan efter Omgevingswet",
+        "permanent": "Helårsbeboelse kræver en boligfunktion i omgevingsplan. Mange attraktive steder er udlagt til rekreation, hvor fast bopæl ikke er tilladt.",
+        "recreation": "Recreatiewoningen har egne anvendelsesgrænser; helårsbeboelse er som regel udelukket og håndhæves aktivt af nogle kommuner.",
+        "wheels": "Også her afgør varigheden af placeringen. En enhed, der bliver på grunden, behandles som bouwwerk.",
+        "deliveryNote": "Beløbet svarer til konfiguratorens Holland-takst.",
+        "route": "Ruten går over land; adgangen i polderområder og historiske bykerner er oftere flaskehalsen end motorvejen.",
+        "customs": "Türkiye og EU er forbundet af toldunionen. Med A.TR-certifikat gælder normalt ingen told for industrivarer; importmoms og håndtering består.",
+        "vat": "Den hollandske sats på 21 procent gælder ved import.",
+        "foundation": "I store dele af Holland er undergrunden blød; bæreevne og sætning vejer tungere end frostdybde.",
+        "utilities": "Tilslutninger går gennem de regionale netselskaber, og deres leveringstider bør planlægges tidligt.",
+        "offgrid": "Juridisk afhængigt af omgevingsplan og den tildelte funktion. Ved boligfunktion forventes normalt en almindelig tilslutning.",
+        "winter": "Ja — den hollandske vinter er mild, men fugtig og blæsende, og det er netop det, specifikationen sigter mod.",
+        "insulation": "Lufttæthed, fugtstyring og ventilation vejer her tungere end isoleringstykkelse; ved kysten kommer saltbelastning til.",
+        "models": "MD 5 og MD 7 planlægges oftest i Holland på grund af små grunde og snæver adgang. Til feriecentre følger MD 4.",
+        "rental": "Korttidsudlejning reguleres kommunalt; flere kommuner arbejder med registreringspligt og loft over antal nætter."
+      },
+      "DK": {
+        "authority": "kommunen",
+        "plan": "lokalplanen sammen med zonestatus (byzone, sommerhusområde eller landzone)",
+        "permanent": "Helårsbeboelse kræver en placering i byzone eller en tilsvarende udlægning. I sommerhusområder er helårsbeboelse som udgangspunkt begrænset, og undtagelser er knyttet til personlige betingelser.",
+        "recreation": "I sommerhusområder er sæsonbrug normen. De præcise perioder og undtagelser følger af lovgivningen sammen med lokalplanen — spørg kommunen direkte.",
+        "wheels": "Varigheden afgør også her. En enhed, der bliver stående og bebos, er omfattet af Bygningsreglementet og kræver byggetilladelse.",
+        "deliveryNote": "Beløbet svarer til konfiguratorens Skandinavien-takst og ligger derfor over de centraleuropæiske destinationer.",
+        "route": "Ruten går over land gennem Centraleuropa og er den længste af de fem markeder; leveringstid og datodisciplin skal planlægges tidligere.",
+        "customs": "Türkiye og EU er forbundet af toldunionen. Med A.TR-certifikat gælder normalt ingen told for industrivarer; den danske importmoms består.",
+        "vat": "Den danske sats på 25 procent gælder — den højeste af de fem destinationer.",
+        "foundation": "Frostdybde og vindlast er afgørende i Danmark; kystnære grunde kræver ekstra opmærksomhed på forankring.",
+        "utilities": "Kommunen fastsætter tilslutningsvilkårene; spildevandsløsninger uden for kloakken kræver tilladelse.",
+        "offgrid": "Kun i begrænset omfang: spildevand og drikkevand er tæt reguleret i Danmark.",
+        "winter": "Ja, og Danmark er det marked, vi specificerer mest konsekvent til: den længste fyringssæson af de fem plus reel vindbeskyttelse.",
+        "insulation": "Glasarealer dimensioneres bevidst, og ventilation med varmegenvinding er her reglen.",
+        "models": "MD 6 vælges oftest i Danmark — sadeltag, sneafledning og opbygning til lange fyringssæsoner. Til sommerhusgrunde følger MD 4.",
+        "rental": "Udlejning af sommerhuse er lovreguleret og går ofte gennem udlejningsbureauer; fradrag afhænger af udlejningsformen."
+      },
+      "LU": {
+        "authority": "kommunen",
+        "plan": "plan d'aménagement général (PAG) og den tilhørende plan d'aménagement particulier (PAP)",
+        "permanent": "Helårsbeboelse er mulig, hvor PAG-zonen tillader bolig, og autorisation de construire gives. Med små kommuner varierer praksis mærkbart fra sted til sted.",
+        "recreation": "Campingpladser og fritidsområder har egne vilkår og som regel opholdsbegrænsninger.",
+        "wheels": "Det afgørende er den permanente placering, ikke chassiset. En blivende enhed behandles som byggeprojekt.",
+        "deliveryNote": "Beløbet er et gennemsnit; ruten bekræftes per projekt.",
+        "route": "Ruten går over land. På grund af det kuperede terræn er den sidste tilkørsel oftere flaskehalsen end den lange strækning.",
+        "customs": "Türkiye og EU er forbundet af toldunionen. Med A.TR-certifikat gælder normalt ingen told; den luxembourgske importmoms består.",
+        "vat": "Den luxembourgske sats på 17 procent gælder — den laveste af de fem destinationer.",
+        "foundation": "Skrånende grunde er almindelige i Luxembourg; opstillingsflade, adgang og kranplads planlægges samlet.",
+        "utilities": "Kommunen fastsætter tilslutningsvilkårene; afstandene er som regel korte, procedurerne formaliserede.",
+        "offgrid": "Stedafhængigt. Ved godkendt beboelse forventes normalt en almindelig tilslutning.",
+        "winter": "Ja — klimaet er mildt, og specifikationen følger snarere hældning og vindudsathed end ekstreme temperaturer.",
+        "insulation": "Opbygningen svarer i store træk til Vesttyskland; det afgørende er grundens faktiske højde.",
+        "models": "MD 3 og MD 5 planlægges oftest i Luxembourg, fordi mange projekter kræver et ekstra rum.",
+        "rental": "Korttidsudlejning reguleres kommunalt og er anmeldelsespligtig i enkelte kommuner."
+      },
+      "CH": {
+        "authority": "kommunen sammen med kantonen",
+        "plan": "den kommunale planlægning og zoneordningen",
+        "permanent": "Helårsbeboelse er mulig inden for byggezonen, hvor zonen tillader bolig, og Baubewilligung gives. Uden for byggezonen er beboelse kun tilladt i snævert afgrænsede undtagelser.",
+        "recreation": "Camping- og feriezoner har egne forskrifter, ofte med opholdsbegrænsninger. I turistkommuner kommer regler om sekundærboliger til.",
+        "wheels": "Også i Schweiz afgør den permanente placering. Bliver enheden stående og bebos, kræver den tilladelse.",
+        "deliveryNote": "Beløbet omfatter håndtering ved EU's ydre grænse.",
+        "route": "Ruten går over land med toldbehandling ved indførsel i Schweiz; ved alpine grunde skal bjergtilkørslen vurderes tidligt.",
+        "customs": "Schweiz er ikke en del af EU's toldunion. Ved import kommer fortoldning, importafgift og håndteringsomkostninger.",
+        "vat": "Den schweiziske moms gælder med normalsatsen 8,1 procent ved import.",
+        "foundation": "Frostdybde og snelast stiger markant med højden; funderingen specificeres per kommune, ikke per land.",
+        "utilities": "Kommunen fastsætter tilslutningsvilkår og gebyrer; i spredt bebyggelse kan afstandene være den største omkostningspost.",
+        "offgrid": "Inden for byggezonen forventes normalt tilslutning; selvforsynende løsninger kræver kantonal accept.",
+        "winter": "Ja, og Schweiz kræver den mest differentierede specifikation: fra Ticino til over 1.500 meter.",
+        "insulation": "Til alpine grunde isoleres betydeligt kraftigere, og taglasten sættes højere end på Mittelland.",
+        "models": "MD 6 er det hyppigste valg i Schweiz; på Mittelland følger MD 1.",
+        "rental": "Korttidsudlejning reguleres kantonalt og kommunalt; i turistkommuner kommer regler om sekundærboliger og turistskat til."
+      }
+    },
+    "fr": {
+      "DE": {
+        "authority": "le service d'urbanisme de l'arrondissement ou de la ville-arrondissement",
+        "plan": "le Bebauungsplan, ou à défaut une appréciation au titre des §34 ou §35 BauGB",
+        "permanent": "La résidence permanente est possible si la parcelle se trouve en zone bâtie ou si un Bebauungsplan autorise l'habitat et que le projet est autorisé. En zone extérieure (§35 BauGB), l'habitat n'est admis que dans des cas étroits — première cause d'échec des projets allemands.",
+        "recreation": "Campings et zones de maisons de week-end ont leurs propres règles et souvent des limites de séjour qui excluent la résidence à l'année.",
+        "wheels": "La qualification suit l'usage réel, pas le châssis. Si l'unité reste en place et sert à l'occupation, le droit de l'urbanisme la traite en général comme une construction.",
+        "deliveryNote": "Le montant correspond au tarif Allemagne du configurateur.",
+        "route": "L'itinéraire passe par la route à travers l'Europe du Sud-Est ; le temps de conduite se compte en jours, tandis que chargement, documents et fenêtre de déchargement fixent le délai réel.",
+        "customs": "La Türkiye et l'UE sont liées par l'union douanière. Pour les biens industriels avec certificat A.TR, il n'y a en principe pas de droits ; TVA à l'importation et frais de traitement subsistent.",
+        "vat": "Le taux allemand de 19 pour cent s'applique à l'importation.",
+        "foundation": "La profondeur de gel varie selon les régions ; on fonde plus profond au nord et en moyenne montagne que sur le Rhin supérieur.",
+        "utilities": "Dans beaucoup de communes, le raccordement aux eaux usées est le poste le plus cher en l'absence de collecteur proche.",
+        "offgrid": "Techniquement faisable, juridiquement lié au site : beaucoup de communes exigent le raccordement à l'eau et à l'assainissement dès lors que l'habitat est autorisé.",
+        "winter": "Oui — l'Allemagne va du Rhin supérieur tempéré aux zones alpines de charge de neige, et la spécification suit exactement cela.",
+        "insulation": "Pour une résidence permanente en Bavière ou dans le Harz, la composition est nettement plus forte que pour une unité d'été au lac de Constance.",
+        "models": "MD 1 et MD 3 sont les plus étudiés en Allemagne ; pour les familles vient MD 2.",
+        "rental": "La location de courte durée est soumise à autorisation ou déclaration dans beaucoup de villes et parfois limitée par des règlements sur le détournement de logements."
+      },
+      "NL": {
+        "authority": "la commune, via l'Omgevingsloket",
+        "plan": "l'omgevingsplan communal au titre de l'Omgevingswet",
+        "permanent": "La résidence permanente suppose une fonction d'habitat dans l'omgevingsplan. Beaucoup de sites attractifs sont classés en loisirs, où la résidence permanente n'est pas admise.",
+        "recreation": "Les recreatiewoningen ont leurs propres limites d'usage ; l'habitation à l'année est régulièrement exclue et contrôlée par certaines communes.",
+        "wheels": "Aux Pays-Bas aussi, c'est la permanence qui tranche. Une unité qui reste sur la parcelle est traitée comme bouwwerk.",
+        "deliveryNote": "Le montant correspond au tarif Pays-Bas du configurateur.",
+        "route": "L'itinéraire passe par la route ; l'accès dans les polders et les centres anciens est plus souvent le goulet que l'autoroute.",
+        "customs": "La Türkiye et l'UE sont liées par l'union douanière. Avec un certificat A.TR, les biens industriels ne supportent en principe pas de droits ; TVA à l'importation et traitement subsistent.",
+        "vat": "Le taux néerlandais de 21 pour cent s'applique à l'importation.",
+        "foundation": "Sur une grande partie des Pays-Bas le sol est meuble ; portance et tassement pèsent davantage que la profondeur de gel.",
+        "utilities": "Les raccordements passent par les gestionnaires de réseau régionaux, dont les délais méritent d'être anticipés.",
+        "offgrid": "Dépend juridiquement de l'omgevingsplan et de la fonction attribuée. En fonction d'habitat, un raccordement régulier est en général attendu.",
+        "winter": "Oui — l'hiver néerlandais est doux mais humide et venteux, et c'est précisément la cible de la spécification.",
+        "insulation": "L'étanchéité à l'air, la gestion de l'humidité et la ventilation comptent ici plus que l'épaisseur d'isolant ; près de la côte s'ajoute la charge saline.",
+        "models": "MD 5 et MD 7 sont les plus étudiés aux Pays-Bas, parcelles petites et accès étroits obligent. Pour les parcs de vacances vient MD 4.",
+        "rental": "La location de courte durée est réglée au niveau communal ; plusieurs communes imposent enregistrement et plafond de nuitées."
+      },
+      "DK": {
+        "authority": "la kommune",
+        "plan": "le lokalplan avec le statut de zone (byzone, sommerhusområde ou landzone)",
+        "permanent": "La résidence permanente suppose un site en byzone ou une affectation équivalente. Dans les sommerhusområder, l'habitation à l'année est en principe restreinte.",
+        "recreation": "Dans les sommerhusområder, l'usage saisonnier est la norme. Les périodes et exceptions découlent de la loi et du lokalplan — interrogez la kommune directement.",
+        "wheels": "La permanence tranche également ici. Une unité qui reste et qui est habitée relève du Bygningsreglement et exige une byggetilladelse.",
+        "deliveryNote": "Le montant correspond au tarif Scandinavie du configurateur et se situe donc au-dessus des destinations d'Europe centrale.",
+        "route": "L'itinéraire passe par la route à travers l'Europe centrale et constitue le plus long des cinq marchés ; délai et tenue des dates se planifient plus tôt.",
+        "customs": "La Türkiye et l'UE sont liées par l'union douanière. Avec un certificat A.TR, pas de droits en principe pour les biens industriels ; la TVA danoise à l'importation subsiste.",
+        "vat": "Le taux danois de 25 pour cent s'applique — le plus élevé des cinq destinations.",
+        "foundation": "Profondeur de gel et charge de vent gouvernent au Danemark ; les sites côtiers demandent une attention particulière à l'ancrage.",
+        "utilities": "La kommune fixe les conditions de raccordement ; les solutions d'assainissement hors réseau sont soumises à autorisation.",
+        "offgrid": "De façon limitée seulement : assainissement et eau potable sont étroitement réglementés au Danemark.",
+        "winter": "Oui, et le Danemark est le marché pour lequel nous spécifions le plus rigoureusement : la plus longue saison de chauffe des cinq, plus une vraie protection au vent.",
+        "insulation": "Les surfaces vitrées sont dimensionnées à dessein et la ventilation double flux est ici la règle.",
+        "models": "MD 6 est le plus choisi au Danemark ; pour les terrains de maisons d'été vient MD 4.",
+        "rental": "La location de maisons d'été est encadrée par la loi et passe souvent par des agences ; les abattements fiscaux dépendent du mode de location."
+      },
+      "LU": {
+        "authority": "la commune",
+        "plan": "le plan d'aménagement général (PAG) et le plan d'aménagement particulier (PAP) correspondant",
+        "permanent": "La résidence permanente est possible si la zone du PAG autorise l'habitat et si l'autorisation de construire est délivrée. Les communes étant petites, la pratique varie sensiblement d'un lieu à l'autre.",
+        "recreation": "Campings et sites de loisirs ont leurs propres conditions et, en général, des limites de séjour.",
+        "wheels": "Ce qui compte est l'implantation durable, non le châssis. Une unité qui reste est traitée comme un projet de construction.",
+        "deliveryNote": "Le montant est une moyenne ; l'itinéraire est confirmé au projet.",
+        "route": "L'itinéraire passe par la route. Le relief fait que l'accès final à la parcelle est plus souvent le goulet que le long trajet.",
+        "customs": "La Türkiye et l'UE sont liées par l'union douanière. Avec un certificat A.TR, pas de droits en principe ; la TVA luxembourgeoise à l'importation subsiste.",
+        "vat": "Le taux luxembourgeois de 17 pour cent s'applique — le plus bas des cinq destinations.",
+        "foundation": "Les terrains en pente sont fréquents au Luxembourg ; aire de pose, accès et position de grue se planifient ensemble.",
+        "utilities": "La commune fixe les conditions de raccordement ; les distances sont courtes mais les procédures formalisées.",
+        "offgrid": "Dépend du site. Lorsque l'habitat est autorisé, un raccordement régulier est en général attendu.",
+        "winter": "Oui — le climat est tempéré et la spécification suit davantage la pente et l'exposition au vent que les températures extrêmes.",
+        "insulation": "La composition correspond pour l'essentiel à celle de l'Allemagne de l'Ouest ; l'altitude réelle du site est déterminante.",
+        "models": "MD 3 et MD 5 sont les plus étudiés au Luxembourg, beaucoup de projets réclamant une pièce supplémentaire.",
+        "rental": "La location de courte durée est réglée au niveau communal et déclarable dans certaines communes."
+      },
+      "CH": {
+        "authority": "la commune avec le canton",
+        "plan": "le plan d'affectation communal et le règlement de zones",
+        "permanent": "La résidence permanente est possible en zone à bâtir si la zone autorise l'habitat et si la Baubewilligung est délivrée. Hors zone à bâtir, l'habitat n'est admis que dans des exceptions étroitement définies.",
+        "recreation": "Les zones de camping et de vacances ont leurs propres prescriptions, souvent avec des limites de séjour. En commune touristique s'ajoutent les règles sur les résidences secondaires.",
+        "wheels": "En Suisse aussi, l'implantation durable tranche. Si l'unité reste et est habitée, elle est soumise à autorisation.",
+        "deliveryNote": "Le montant comprend le traitement à la frontière extérieure de l'UE.",
+        "route": "L'itinéraire passe par la route avec dédouanement à l'entrée en Suisse ; pour les sites alpins, l'accès de montagne doit être vérifié tôt.",
+        "customs": "La Suisse ne fait pas partie de l'union douanière de l'UE. L'importation implique dédouanement, taxe à l'importation et frais de traitement.",
+        "vat": "La TVA suisse s'applique au taux normal de 8,1 pour cent à l'importation.",
+        "foundation": "Profondeur de gel et charge de neige augmentent nettement avec l'altitude ; la fondation se spécifie par commune, pas par pays.",
+        "utilities": "La commune fixe conditions et taxes de raccordement ; en habitat dispersé, les distances peuvent constituer le premier poste.",
+        "offgrid": "En zone à bâtir, un raccordement est en général attendu ; les solutions autonomes supposent l'accord cantonal.",
+        "winter": "Oui, et la Suisse exige la spécification la plus différenciée : du Tessin à plus de 1 500 mètres.",
+        "insulation": "Pour les sites alpins, l'isolation est nettement renforcée et la charge de toiture prise plus haute que sur le Plateau.",
+        "models": "MD 6 est le choix le plus fréquent en Suisse ; sur le Plateau vient MD 1.",
+        "rental": "La location de courte durée est réglée aux niveaux cantonal et communal ; en commune touristique s'ajoutent résidences secondaires et taxe de séjour."
+      }
+    }
+  },
+  "labels": {
+    "de": {
+      "hub": "Länderfragen",
+      "hubH1": "Fragen und Antworten je Zielland.",
+      "hubLead": "Zwanzig Fragen pro Land – zu Genehmigung, Lieferung, Zoll, Anschlüssen, Winterbetrieb, Kosten und Vermietung. Die Antworten sind Projektorientierung und ersetzen keine Auskunft der zuständigen Behörde.",
+      "pageTitle": "Tiny House in {country}: 20 Fragen und Antworten",
+      "pageH1": "Tiny House in {country}: die 20 häufigsten Fragen.",
+      "questions": "Fragen",
+      "openCountry": "Länderseite öffnen",
+      "allCountries": "Alle Zielländer"
+    },
+    "en": {
+      "hub": "Country questions",
+      "hubH1": "Questions and answers per destination.",
+      "hubLead": "Twenty questions per country — permits, delivery, customs, connections, winter use, cost and letting. The answers are project orientation and do not replace a ruling from the responsible authority.",
+      "pageTitle": "Tiny house in {country}: 20 questions answered",
+      "pageH1": "Tiny house in {country}: the 20 most common questions.",
+      "questions": "Questions",
+      "openCountry": "Open the country page",
+      "allCountries": "All destinations"
+    },
+    "nl": {
+      "hub": "Vragen per land",
+      "hubH1": "Vragen en antwoorden per bestemming.",
+      "hubLead": "Twintig vragen per land — vergunning, levering, douane, aansluitingen, winterbedrijf, kosten en verhuur. De antwoorden zijn projectindicatie en vervangen geen uitspraak van het bevoegd gezag.",
+      "pageTitle": "Tiny house in {country}: 20 vragen beantwoord",
+      "pageH1": "Tiny house in {country}: de 20 meestgestelde vragen.",
+      "questions": "Vragen",
+      "openCountry": "Landpagina openen",
+      "allCountries": "Alle bestemmingen"
+    },
+    "da": {
+      "hub": "Spørgsmål per land",
+      "hubH1": "Spørgsmål og svar per destination.",
+      "hubLead": "Tyve spørgsmål per land — tilladelse, levering, told, tilslutninger, vinterbrug, omkostninger og udlejning. Svarene er projektvejledning og erstatter ikke en afgørelse fra den ansvarlige myndighed.",
+      "pageTitle": "Tiny house i {country}: 20 spørgsmål besvaret",
+      "pageH1": "Tiny house i {country}: de 20 hyppigste spørgsmål.",
+      "questions": "Spørgsmål",
+      "openCountry": "Åbn landesiden",
+      "allCountries": "Alle destinationer"
+    },
+    "fr": {
+      "hub": "Questions par pays",
+      "hubH1": "Questions et réponses par destination.",
+      "hubLead": "Vingt questions par pays — autorisation, livraison, douane, raccordements, usage hivernal, coûts et location. Les réponses sont des orientations de projet et ne remplacent pas une décision de l'autorité compétente.",
+      "pageTitle": "Tiny house {countryIn} : 20 questions et réponses",
+      "pageH1": "Tiny house {countryIn} : les 20 questions les plus fréquentes.",
+      "questions": "Questions",
+      "openCountry": "Ouvrir la page pays",
+      "allCountries": "Toutes les destinations"
+    }
+  }
+}

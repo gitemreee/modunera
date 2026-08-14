@@ -47,13 +47,13 @@
 .tools-shell{display:grid;grid-template-columns:260px 1fr;gap:24px}.tool-nav{position:sticky;top:110px;align-self:start;background:#fff;border:1px solid var(--line);border-radius:24px;padding:12px}.tool-nav button{width:100%;border:0;background:transparent;padding:13px 14px;text-align:left;border-radius:12px;cursor:pointer}.tool-nav button.active{background:var(--forest-900);color:#fff}.tool-pane{display:none}.tool-pane.active{display:block}.tool-form{background:#fff;border:1px solid var(--line);border-radius:28px;padding:30px}.tool-result{margin-top:20px;border-radius:24px;background:var(--forest-950);color:#fff;padding:28px}.tool-result .big{font-family:var(--serif);font-size:3rem;color:var(--sand)}.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}.result-grid>div{padding:16px;border:1px solid rgba(255,255,255,.14);border-radius:16px}.result-grid span,.result-grid strong{display:block}.result-grid span{font-size:.7rem;color:#b7c6bd}.compare-select{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.compare-card{border:1px solid var(--line);border-radius:20px;padding:16px;background:#fff}.compare-card img{height:170px;width:100%;object-fit:cover;border-radius:13px}.compare-card select{width:100%;margin-top:12px;padding:10px;border:1px solid var(--line);border-radius:10px}
 
 /* footer and widgets */
-.cta-band{padding:72px 0;background:linear-gradient(135deg,#a96e50,#c68b66);color:#fff}.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}.cta-inner h2{font-family:var(--serif);font-size:clamp(2rem,4vw,4rem);font-weight:400;line-height:1;margin:0;max-width:800px}.footer{background:#0d2420;color:#dce7e1;padding:86px 0 28px}.footer-grid{display:grid;grid-template-columns:1.45fr repeat(4,1fr);gap:42px}.footer h4{color:#fff;font-size:.8rem;text-transform:uppercase;letter-spacing:.12em}.footer a{display:block;margin:9px 0;color:#c7d5cd;font-size:.84rem}.footer p{max-width:370px;color:#aabbb1;font-size:.83rem}.footer-bottom{display:flex;justify-content:space-between;gap:20px;padding-top:28px;margin-top:36px;border-top:1px solid rgba(255,255,255,.1);font-size:.72rem;color:#96aaa0}.floating-actions{position:fixed;right:18px;bottom:18px;z-index:1700;display:flex;flex-direction:column;gap:9px}.floating-actions a,.ai-launcher{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--forest-800);color:#fff;box-shadow:var(--shadow);font-weight:900;border:1px solid rgba(255,255,255,.15)}.ai-launcher{background:var(--sand);color:var(--forest-950);cursor:pointer;border:0}.ai-panel{position:fixed;z-index:2200;right:18px;bottom:86px;width:min(390px,calc(100vw - 24px));height:570px;background:#fff;border:1px solid var(--line);border-radius:28px;box-shadow:var(--shadow);display:none;overflow:hidden}.ai-panel.open{display:flex;flex-direction:column}.ai-head{padding:18px 20px;background:var(--forest-950);color:#fff;display:flex;justify-content:space-between;align-items:center}.ai-head strong{font-family:var(--serif);font-size:1.25rem}.ai-head button{background:transparent;border:0;color:#fff;font-size:1.25rem}.ai-messages{flex:1;padding:17px;overflow:auto;background:var(--paper)}.ai-msg{max-width:84%;padding:11px 13px;border-radius:15px;margin-bottom:10px;font-size:.81rem}.ai-msg.bot{background:#fff;border:1px solid var(--line)}.ai-msg.user{background:var(--forest-900);color:#fff;margin-left:auto}.ai-chips{display:flex;gap:6px;flex-wrap:wrap;padding:0 17px 10px;background:var(--paper)}.ai-chips button{border:1px solid var(--line);border-radius:999px;background:#fff;padding:7px 10px;font-size:.68rem}.ai-input{display:flex;gap:8px;padding:12px;border-top:1px solid var(--line)}.ai-input input{flex:1;border:1px solid var(--line);border-radius:999px;padding:11px 14px}.ai-input button{width:42px;height:42px;border-radius:50%;border:0;background:var(--forest-900);color:#fff}.cookie{position:fixed;left:18px;bottom:18px;max-width:430px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);z-index:2500;padding:21px;border-radius:22px;display:none}.cookie.show{display:block}.cookie-actions{display:flex;gap:8px;margin-top:12px}.legal-note{font-size:.72rem;color:var(--muted)}.toast{position:fixed;z-index:4000;left:50%;bottom:26px;transform:translate(-50%,30px);opacity:0;background:var(--forest-950);color:#fff;padding:12px 17px;border-radius:999px;transition:.25s;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:3000;display:none;place-items:center;padding:30px}.lightbox.open{display:grid}.lightbox img{max-width:94vw;max-height:88vh}.lightbox button{position:absolute;right:22px;top:18px;border:0;background:#fff;width:44px;height:44px;border-radius:50%}
+.cta-band{padding:72px 0;background:linear-gradient(135deg,#a96e50,#c68b66);color:#fff}.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}.cta-inner h2{font-family:var(--serif);font-size:clamp(2rem,4vw,4rem);font-weight:400;line-height:1;margin:0;max-width:800px}.footer{background:#0d2420;color:#dce7e1;padding:86px 0 28px}.footer-grid{display:grid;grid-template-columns:1.45fr repeat(4,1fr);gap:42px}.footer h4{color:#fff;font-size:.8rem;text-transform:uppercase;letter-spacing:.12em}.footer a{display:block;margin:9px 0;color:#c7d5cd;font-size:.84rem}.footer p{max-width:370px;color:#aabbb1;font-size:.83rem}.footer-bottom{display:flex;justify-content:space-between;gap:20px;padding-top:28px;margin-top:36px;border-top:1px solid rgba(255,255,255,.1);font-size:.72rem;color:#96aaa0}.floating-actions{position:fixed;right:18px;bottom:18px;z-index:1700;display:flex;flex-direction:column;gap:9px}.floating-actions a{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--forest-800);color:#fff;box-shadow:var(--shadow);font-weight:900;border:1px solid rgba(255,255,255,.15)}.cookie{position:fixed;left:18px;bottom:18px;max-width:430px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);z-index:2500;padding:21px;border-radius:22px;display:none}.cookie.show{display:block}.cookie-actions{display:flex;gap:8px;margin-top:12px}.legal-note{font-size:.72rem;color:var(--muted)}.toast{position:fixed;z-index:4000;left:50%;bottom:26px;transform:translate(-50%,30px);opacity:0;background:var(--forest-950);color:#fff;padding:12px 17px;border-radius:999px;transition:.25s;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:3000;display:none;place-items:center;padding:30px}.lightbox.open{display:grid}.lightbox img{max-width:94vw;max-height:88vh}.lightbox button{position:absolute;right:22px;top:18px;border:0;background:#fff;width:44px;height:44px;border-radius:50%}
 
 @media(max-width:1120px){.nav-links{gap:16px}.nav-actions .lang-switch{display:none}.journey-grid{grid-template-columns:repeat(3,1fr)}.quality-grid{grid-template-columns:repeat(2,1fr)}.hero-sidecard{display:none}.footer-grid{grid-template-columns:1.3fr repeat(2,1fr)}.footer-grid>div:nth-child(n+4){margin-top:20px}}
 @media(max-width:920px){.nav-links{display:none;position:absolute;top:82px;left:0;right:0;background:var(--paper);padding:22px 26px;flex-direction:column;align-items:flex-start;border-bottom:1px solid var(--line);max-height:calc(100vh - 82px);overflow:auto}.nav-links.open{display:flex}.nav-links>a,.nav-dropdown>button{padding:8px 0}.nav-menu{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;border:0;background:transparent;display:none}.nav-dropdown.open .nav-menu{display:block}.mobile-toggle{display:block}.nav-actions>.btn{display:none}.hero{height:auto;min-height:800px}.hero-content{padding:120px 0 140px}.trust-grid{grid-template-columns:repeat(2,1fr)}.trust-item:nth-child(2n){border-right:0}.section-header,.editorial-split,.model-stage,.factory-band,.faq-preview,.studio-shell,.tools-shell,.article-shell,.model-highlight{grid-template-columns:1fr}.editorial-copy{padding:54px}.model-tabs{display:grid;grid-template-columns:repeat(4,1fr)}.model-tab{display:block;text-align:center}.model-tab span{display:none}.model-display{min-height:650px}.journey-grid{grid-template-columns:repeat(2,1fr)}.value-grid{grid-template-columns:1fr 1fr}.value-card.feature{grid-column:1/-1;grid-row:auto;min-height:520px}.project-grid{grid-template-columns:1fr 1fr;grid-template-rows:420px 260px}.project-card:first-child{grid-column:1/-1;grid-row:auto}.tool-preview{grid-template-columns:1fr}.studio-preview,.tool-nav,.article-aside,.faq-controls{position:static}.footer-grid{grid-template-columns:1fr 1fr}.data-strip,.process-grid,.state-grid{grid-template-columns:repeat(2,1fr)}.places-list,.state-place-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:640px){.container{width:min(var(--max),calc(100% - 28px))}.topbar span:first-child{display:none}.topbar .container{justify-content:center}.nav-inner{height:76px}.brand img{width:132px;max-height:64px}.hero{min-height:760px}.hero-content{padding:98px 0 104px}.hero h1{font-size:3.45rem}.hero-actions .btn{width:100%}.hero-proof{display:none}.hero-scroll{display:none}.trust-grid{grid-template-columns:1fr 1fr}.trust-item{padding:16px 12px}.section{padding:78px 0}.section-header{gap:18px}.section-header h2{font-size:2.85rem}.editorial-visual{min-height:430px}.editorial-copy{padding:34px 24px}.stat-line{grid-template-columns:1fr}.model-tabs{grid-template-columns:repeat(4,1fr)}.model-tab{padding:11px 6px}.model-display{min-height:570px}.model-display-content{padding:24px;grid-template-columns:1fr}.model-display h3{font-size:4rem}.model-price{text-align:left}.model-actions{flex-direction:column}.journey-grid,.quality-grid,.value-grid,.project-grid,.blog-grid,.benefit-grid,.use-grid,.footer-grid,.result-grid,.compare-select,.data-strip,.process-grid,.state-grid,.places-list,.state-place-grid,.option-grid,.radio-cards,.form-grid{grid-template-columns:1fr}.journey-card{min-height:230px}.value-card.feature{grid-column:auto;min-height:420px}.project-grid{grid-template-rows:auto}.project-card,.project-card:first-child{min-height:310px;grid-column:auto}.factory-copy{padding:38px 24px}.factory-band img{min-height:400px}.location-search{grid-template-columns:1fr}.location-results{left:14px;right:14px;top:145px}.model-grid{grid-template-columns:1fr}.model-card{min-height:430px}.wide-feature{grid-template-columns:1fr}.wide-feature .visual{min-height:380px}.wide-copy{padding:42px 24px}.feature-list{grid-template-columns:1fr}.footer-bottom,.cta-inner{flex-direction:column;align-items:flex-start}.page-hero{padding:84px 0 54px}.studio-preview{min-height:650px}.studio-preview-media{height:380px}.config-panel{padding:20px}.tools-shell{display:block}.tool-nav{display:flex;overflow:auto;margin-bottom:16px}.tool-nav button{white-space:nowrap}.faq-layout{grid-template-columns:1fr}.ai-panel{right:12px;bottom:78px}.floating-actions{right:12px;bottom:12px}.cookie{left:12px;right:12px;bottom:12px}.cookie-actions{flex-direction:column}}
+@media(max-width:640px){.container{width:min(var(--max),calc(100% - 28px))}.topbar span:first-child{display:none}.topbar .container{justify-content:center}.nav-inner{height:76px}.brand img{width:132px;max-height:64px}.hero{min-height:760px}.hero-content{padding:98px 0 104px}.hero h1{font-size:3.45rem}.hero-actions .btn{width:100%}.hero-proof{display:none}.hero-scroll{display:none}.trust-grid{grid-template-columns:1fr 1fr}.trust-item{padding:16px 12px}.section{padding:78px 0}.section-header{gap:18px}.section-header h2{font-size:2.85rem}.editorial-visual{min-height:430px}.editorial-copy{padding:34px 24px}.stat-line{grid-template-columns:1fr}.model-tabs{grid-template-columns:repeat(4,1fr)}.model-tab{padding:11px 6px}.model-display{min-height:570px}.model-display-content{padding:24px;grid-template-columns:1fr}.model-display h3{font-size:4rem}.model-price{text-align:left}.model-actions{flex-direction:column}.journey-grid,.quality-grid,.value-grid,.project-grid,.blog-grid,.benefit-grid,.use-grid,.footer-grid,.result-grid,.compare-select,.data-strip,.process-grid,.state-grid,.places-list,.state-place-grid,.option-grid,.radio-cards,.form-grid{grid-template-columns:1fr}.journey-card{min-height:230px}.value-card.feature{grid-column:auto;min-height:420px}.project-grid{grid-template-rows:auto}.project-card,.project-card:first-child{min-height:310px;grid-column:auto}.factory-copy{padding:38px 24px}.factory-band img{min-height:400px}.location-search{grid-template-columns:1fr}.location-results{left:14px;right:14px;top:145px}.model-grid{grid-template-columns:1fr}.model-card{min-height:430px}.wide-feature{grid-template-columns:1fr}.wide-feature .visual{min-height:380px}.wide-copy{padding:42px 24px}.feature-list{grid-template-columns:1fr}.footer-bottom,.cta-inner{flex-direction:column;align-items:flex-start}.page-hero{padding:84px 0 54px}.studio-preview{min-height:650px}.studio-preview-media{height:380px}.config-panel{padding:20px}.tools-shell{display:block}.tool-nav{display:flex;overflow:auto;margin-bottom:16px}.tool-nav button{white-space:nowrap}.faq-layout{grid-template-columns:1fr}.floating-actions{right:12px;bottom:12px}.cookie{left:12px;right:12px;bottom:12px}.cookie-actions{flex-direction:column}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}.hero-media{transform:none!important}}
-@media print{.topbar,.nav,.floating-actions,.ai-panel,.cookie,.save-bar,.studio-controls,.footer,.cta-band{display:none!important}body{background:#fff}.studio-shell{display:block}.studio-preview{position:static;min-height:auto}.config-panel{box-shadow:none;border:0}.section{padding:20px 0}}
+@media print{.topbar,.nav,.floating-actions,.cookie,.save-bar,.studio-controls,.footer,.cta-band{display:none!important}body{background:#fff}.studio-shell{display:block}.studio-preview{position:static;min-height:auto}.config-panel{box-shadow:none;border:0}.section{padding:20px 0}}
 
 /* ======================================================================
    MODUNERA V6 — Scandinavian premium system
@@ -212,7 +212,7 @@ body{font-family:var(--display);background:var(--paper);color:var(--ink);font-we
 
 /* Floating contact buttons */
 .floating-actions{right:20px;bottom:20px}
-.floating-actions a,.ai-launcher{width:50px;height:50px;background:#fff;color:var(--forest-950);border:1px solid rgba(23,32,29,.10);box-shadow:0 14px 34px rgba(30,43,39,.15)}
+.floating-actions a{width:50px;height:50px;background:#fff;color:var(--forest-950);border:1px solid rgba(23,32,29,.10);box-shadow:0 14px 34px rgba(30,43,39,.15)}
 .floating-actions a:first-child{background:var(--brand);color:#fff;border-color:var(--brand)}
 
 /* Mobile */
@@ -384,6 +384,19 @@ p{margin:0 0 10px}
 .nav-menu a>span{display:block}
 .nav-menu small{display:block;font-size:var(--fs-label);letter-spacing:.06em;color:var(--muted);font-weight:650;margin-top:1px;text-transform:none}
 .nav-dropdown>button:after{content:"›";display:inline-block;margin-left:5px;font-size:1em;transform:rotate(90deg);opacity:.5}
+/* Two-column panel. The Tiny Houses entry has to show MD 1 to MD 8 — eight links
+   plus the planning tools is a tall single column, so the models get a column of
+   their own and the panel is anchored to the viewport rather than the trigger,
+   which keeps the right-hand entries from opening off-screen. */
+/* The width is set rather than derived: an absolutely positioned grid takes its
+   width from content, and with flexible tracks that collapses to min-content and
+   the two columns overlap. */
+.nav-menu-wide{display:grid;grid-template-columns:repeat(2,1fr);gap:2px 12px;
+  width:min(536px,calc(100vw - 32px));min-width:0;left:50%;transform:translateX(-50%);padding:12px}
+.nav-col{min-width:0}
+.nav-col h5{margin:0 0 4px;padding:0 11px;font-size:var(--fs-label);letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);font-weight:800}
+.nav-col+.nav-col{border-left:1px solid var(--line);padding-left:10px}
 /* Language picker. The trigger is the flag of the language you are reading, so it
    is recognisable without translation; tapping it opens the list. v1 hid the
    switch below 1120px, which left phones with no route to another language. */
@@ -592,20 +605,32 @@ p{margin:0 0 10px}
   letter-spacing:.04em;text-transform:uppercase}
 .wa-cta:hover{background:#1eb958}
 .wa-cta svg{width:17px;height:17px}
-.wa-rail{display:flex;flex-direction:column;gap:9px;align-items:flex-end}
-.wa-launch{width:54px;height:54px;border:0;border-radius:50%;background:#25D366;cursor:pointer;
-  display:grid;place-items:center;box-shadow:0 8px 22px rgba(37,211,102,.42);transition:transform .18s}
-.wa-launch:hover{transform:scale(1.05)}
-.wa-launch svg{width:30px;height:30px}
-.wa-call{width:44px;height:44px;border-radius:50%;background:#fff;border:1px solid var(--line-strong);
-  display:grid;place-items:center;color:var(--charcoal);font-size:1rem}
-.wa-call:hover{border-color:var(--terracotta);color:var(--terracotta)}
+/* Two buttons, one weight: same diameter, same shadow, each a filled circle with
+   a white mark. The WhatsApp green is the platform's own, so the button is
+   recognisable before it is read; the handset sits in the brand charcoal. */
+.wa-rail{display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+.wa-launch,.wa-call{width:54px;height:54px;border:0;border-radius:50%;cursor:pointer;
+  display:grid;place-items:center;color:#fff;transition:transform .18s ease-out,box-shadow .18s ease-out}
+.wa-launch svg,.wa-call svg{width:27px;height:27px}
+.wa-launch{background:#25D366;box-shadow:0 8px 22px rgba(37,211,102,.42)}
+.wa-launch:hover{transform:scale(1.06);box-shadow:0 12px 28px rgba(37,211,102,.5)}
+.wa-call{position:relative;background:var(--charcoal);box-shadow:0 8px 20px rgba(43,45,49,.3)}
+.wa-call:hover{transform:scale(1.06);background:var(--terracotta);box-shadow:0 12px 26px rgba(141,50,31,.42)}
+/* The handset needs a label on a pointer device; on touch the aria-label carries it. */
+.wa-tip{position:absolute;right:calc(100% + 10px);top:50%;transform:translateY(-50%);
+  white-space:nowrap;background:var(--charcoal);color:#fff;border-radius:6px;padding:5px 9px;
+  font-size:var(--fs-label);font-weight:750;letter-spacing:.05em;opacity:0;pointer-events:none;
+  transition:opacity .16s ease-out}
+.wa-call:hover .wa-tip,.wa-call:focus-visible .wa-tip{opacity:1}
+.wa-close svg{width:16px;height:16px;display:block}
 @media(max-width:560px){
   /* Compact on phones: it opens itself, so it has to sit lightly over the hero
      rather than bury the primary call to action. */
   .wa-dock{right:12px;bottom:12px;gap:8px}
-  .wa-launch{width:48px;height:48px}.wa-launch svg{width:26px;height:26px}
-  .wa-call{width:40px;height:40px}
+  .wa-rail{flex-direction:row;gap:9px}
+  .wa-launch,.wa-call{width:48px;height:48px}
+  .wa-launch svg,.wa-call svg{width:24px;height:24px}
+  .wa-tip{display:none}
   .wa-panel{width:min(292px,calc(100vw - 24px))}
   .wa-head{padding:9px 11px}
   .wa-head svg{width:22px;height:22px}
@@ -670,6 +695,11 @@ p{margin:0 0 10px}
   .nav-menu{padding:0 0 8px 12px;min-width:0;border-left:2px solid var(--line)}
   .nav-menu a{padding:7px 0}
   .nav-menu small{font-size:.66rem;letter-spacing:.03em}
+  /* in the drawer there is no room for two columns; the models simply stack under
+     their heading, which is also what a thumb wants */
+  .nav-menu-wide{display:block;left:auto;transform:none;padding:0 0 8px 12px;width:auto}
+  .nav-col+.nav-col{border-left:0;padding-left:0;margin-top:10px}
+  .nav-col h5{padding:0;margin-bottom:2px}
   /* The main dropdowns go static inside the drawer, but the language picker lives
      in the header bar — static there put it 43px above the viewport. */
   .nav-actions{position:relative}
@@ -718,5 +748,34 @@ p{margin:0 0 10px}
   .hero-actions .btn{flex:1 1 0;min-width:0;padding:0 10px;font-size:.66rem;text-align:center}
   .cta-band{padding:26px 0}
   .post-row{flex-direction:column;gap:3px}
+}
+
+/* --- classes the package's markup uses but never styled --------------------- */
+
+/* .spec-grid and .spec appear on every model page in the original kit and have no
+   rule anywhere in styles.css, so the label ran straight into the value on one
+   line ("LENGTH8.00 m or 9.70 m"). .gallery-grid had the same problem: three
+   catalogue images stacked at their natural size. */
+.spec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(212px,100%),1fr));gap:12px}
+.spec{display:flex;flex-direction:column;gap:5px;min-width:0;padding:16px 18px;
+  border:1px solid var(--line);border-radius:var(--r);background:#fff}
+.spec strong{font-size:1.02rem;font-weight:820;letter-spacing:-.012em;line-height:1.25}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:14px}
+.gallery-grid button{padding:0;border:0;background:none;cursor:zoom-in;border-radius:var(--r);
+  overflow:hidden;line-height:0}
+.gallery-grid img{width:100%;height:100%;aspect-ratio:3/2;object-fit:cover;display:block;
+  transition:transform .4s ease-out}
+.gallery-grid button:hover img{transform:scale(1.03)}
+
+/* A hero sits on a photograph, where the muted greys that read well on paper
+   disappear entirely. */
+.article-visual-hero .breadcrumbs,.article-visual-hero .breadcrumbs a{color:rgba(255,255,255,.78)}
+.article-visual-hero .model-label{color:var(--beige);font-size:var(--fs-label);
+  letter-spacing:.12em;text-transform:uppercase;font-weight:800}
+.article-visual-hero p{color:rgba(255,255,255,.9);max-width:62ch}
+@media(max-width:900px){
+  .spec-grid{grid-template-columns:repeat(auto-fit,minmax(min(160px,100%),1fr));gap:9px}
+  .spec{padding:13px 14px}
+  .gallery-grid{gap:10px}
 }
 /* MODUNERA BRAND PALETTE END */

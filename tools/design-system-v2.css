@@ -124,6 +124,19 @@ p{margin:0 0 10px}
 .nav-menu a>span{display:block}
 .nav-menu small{display:block;font-size:var(--fs-label);letter-spacing:.06em;color:var(--muted);font-weight:650;margin-top:1px;text-transform:none}
 .nav-dropdown>button:after{content:"›";display:inline-block;margin-left:5px;font-size:1em;transform:rotate(90deg);opacity:.5}
+/* Two-column panel. The Tiny Houses entry has to show MD 1 to MD 8 — eight links
+   plus the planning tools is a tall single column, so the models get a column of
+   their own and the panel is anchored to the viewport rather than the trigger,
+   which keeps the right-hand entries from opening off-screen. */
+/* The width is set rather than derived: an absolutely positioned grid takes its
+   width from content, and with flexible tracks that collapses to min-content and
+   the two columns overlap. */
+.nav-menu-wide{display:grid;grid-template-columns:repeat(2,1fr);gap:2px 12px;
+  width:min(536px,calc(100vw - 32px));min-width:0;left:50%;transform:translateX(-50%);padding:12px}
+.nav-col{min-width:0}
+.nav-col h5{margin:0 0 4px;padding:0 11px;font-size:var(--fs-label);letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);font-weight:800}
+.nav-col+.nav-col{border-left:1px solid var(--line);padding-left:10px}
 /* Language picker. The trigger is the flag of the language you are reading, so it
    is recognisable without translation; tapping it opens the list. v1 hid the
    switch below 1120px, which left phones with no route to another language. */
@@ -332,20 +345,32 @@ p{margin:0 0 10px}
   letter-spacing:.04em;text-transform:uppercase}
 .wa-cta:hover{background:#1eb958}
 .wa-cta svg{width:17px;height:17px}
-.wa-rail{display:flex;flex-direction:column;gap:9px;align-items:flex-end}
-.wa-launch{width:54px;height:54px;border:0;border-radius:50%;background:#25D366;cursor:pointer;
-  display:grid;place-items:center;box-shadow:0 8px 22px rgba(37,211,102,.42);transition:transform .18s}
-.wa-launch:hover{transform:scale(1.05)}
-.wa-launch svg{width:30px;height:30px}
-.wa-call{width:44px;height:44px;border-radius:50%;background:#fff;border:1px solid var(--line-strong);
-  display:grid;place-items:center;color:var(--charcoal);font-size:1rem}
-.wa-call:hover{border-color:var(--terracotta);color:var(--terracotta)}
+/* Two buttons, one weight: same diameter, same shadow, each a filled circle with
+   a white mark. The WhatsApp green is the platform's own, so the button is
+   recognisable before it is read; the handset sits in the brand charcoal. */
+.wa-rail{display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+.wa-launch,.wa-call{width:54px;height:54px;border:0;border-radius:50%;cursor:pointer;
+  display:grid;place-items:center;color:#fff;transition:transform .18s ease-out,box-shadow .18s ease-out}
+.wa-launch svg,.wa-call svg{width:27px;height:27px}
+.wa-launch{background:#25D366;box-shadow:0 8px 22px rgba(37,211,102,.42)}
+.wa-launch:hover{transform:scale(1.06);box-shadow:0 12px 28px rgba(37,211,102,.5)}
+.wa-call{position:relative;background:var(--charcoal);box-shadow:0 8px 20px rgba(43,45,49,.3)}
+.wa-call:hover{transform:scale(1.06);background:var(--terracotta);box-shadow:0 12px 26px rgba(141,50,31,.42)}
+/* The handset needs a label on a pointer device; on touch the aria-label carries it. */
+.wa-tip{position:absolute;right:calc(100% + 10px);top:50%;transform:translateY(-50%);
+  white-space:nowrap;background:var(--charcoal);color:#fff;border-radius:6px;padding:5px 9px;
+  font-size:var(--fs-label);font-weight:750;letter-spacing:.05em;opacity:0;pointer-events:none;
+  transition:opacity .16s ease-out}
+.wa-call:hover .wa-tip,.wa-call:focus-visible .wa-tip{opacity:1}
+.wa-close svg{width:16px;height:16px;display:block}
 @media(max-width:560px){
   /* Compact on phones: it opens itself, so it has to sit lightly over the hero
      rather than bury the primary call to action. */
   .wa-dock{right:12px;bottom:12px;gap:8px}
-  .wa-launch{width:48px;height:48px}.wa-launch svg{width:26px;height:26px}
-  .wa-call{width:40px;height:40px}
+  .wa-rail{flex-direction:row;gap:9px}
+  .wa-launch,.wa-call{width:48px;height:48px}
+  .wa-launch svg,.wa-call svg{width:24px;height:24px}
+  .wa-tip{display:none}
   .wa-panel{width:min(292px,calc(100vw - 24px))}
   .wa-head{padding:9px 11px}
   .wa-head svg{width:22px;height:22px}
@@ -410,6 +435,11 @@ p{margin:0 0 10px}
   .nav-menu{padding:0 0 8px 12px;min-width:0;border-left:2px solid var(--line)}
   .nav-menu a{padding:7px 0}
   .nav-menu small{font-size:.66rem;letter-spacing:.03em}
+  /* in the drawer there is no room for two columns; the models simply stack under
+     their heading, which is also what a thumb wants */
+  .nav-menu-wide{display:block;left:auto;transform:none;padding:0 0 8px 12px;width:auto}
+  .nav-col+.nav-col{border-left:0;padding-left:0;margin-top:10px}
+  .nav-col h5{padding:0;margin-bottom:2px}
   /* The main dropdowns go static inside the drawer, but the language picker lives
      in the header bar — static there put it 43px above the viewport. */
   .nav-actions{position:relative}
@@ -458,4 +488,33 @@ p{margin:0 0 10px}
   .hero-actions .btn{flex:1 1 0;min-width:0;padding:0 10px;font-size:.66rem;text-align:center}
   .cta-band{padding:26px 0}
   .post-row{flex-direction:column;gap:3px}
+}
+
+/* --- classes the package's markup uses but never styled --------------------- */
+
+/* .spec-grid and .spec appear on every model page in the original kit and have no
+   rule anywhere in styles.css, so the label ran straight into the value on one
+   line ("LENGTH8.00 m or 9.70 m"). .gallery-grid had the same problem: three
+   catalogue images stacked at their natural size. */
+.spec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(212px,100%),1fr));gap:12px}
+.spec{display:flex;flex-direction:column;gap:5px;min-width:0;padding:16px 18px;
+  border:1px solid var(--line);border-radius:var(--r);background:#fff}
+.spec strong{font-size:1.02rem;font-weight:820;letter-spacing:-.012em;line-height:1.25}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:14px}
+.gallery-grid button{padding:0;border:0;background:none;cursor:zoom-in;border-radius:var(--r);
+  overflow:hidden;line-height:0}
+.gallery-grid img{width:100%;height:100%;aspect-ratio:3/2;object-fit:cover;display:block;
+  transition:transform .4s ease-out}
+.gallery-grid button:hover img{transform:scale(1.03)}
+
+/* A hero sits on a photograph, where the muted greys that read well on paper
+   disappear entirely. */
+.article-visual-hero .breadcrumbs,.article-visual-hero .breadcrumbs a{color:rgba(255,255,255,.78)}
+.article-visual-hero .model-label{color:var(--beige);font-size:var(--fs-label);
+  letter-spacing:.12em;text-transform:uppercase;font-weight:800}
+.article-visual-hero p{color:rgba(255,255,255,.9);max-width:62ch}
+@media(max-width:900px){
+  .spec-grid{grid-template-columns:repeat(auto-fit,minmax(min(160px,100%),1fr));gap:9px}
+  .spec{padding:13px 14px}
+  .gallery-grid{gap:10px}
 }

@@ -1,0 +1,358 @@
+{
+  "_comment": "Per-model editorial copy for MD 1 to MD 8 in the five site languages. Numbers live in data/pricing.json; this file carries only the words. Written per model, not per template, so the eight pages argue for eight different houses.",
+  "updated": "2026-08-14",
+  "models": {
+    "1": {
+      "images": ["mc1-exterior", "mc1-living", "mc1-loft"],
+      "sleeps": "2–3",
+      "de": {
+        "label": "Panorama und Loft",
+        "lead": "Das lichtstärkste Modell der Reihe: eine durchgehende Glasfront zieht den Außenraum in den Wohnbereich, das Loft liegt unter einer optionalen Glasdecke.",
+        "layout": "Der Grundriss verzichtet auf Zwischenwände im Erdgeschoss. Küche, Essplatz und Sitzbereich teilen sich eine Fläche, die durch die Fensterfront doppelt so groß wirkt, wie sie ist. Die Treppe zum Loft ist als Stauraummöbel ausgeführt. In der 9,70-Meter-Variante entsteht zusätzlich Platz für einen Arbeitsplatz am Fenster oder ein zweites Sofa.",
+        "best": ["Paare, die dauerhaft wohnen", "Ferienhaus in Aussichtslage", "Premium-Vermietung mit Sichtbezug"],
+        "highlights": ["Durchgehende Panoramaverglasung", "Optionale Glasdecke über dem Loft", "Treppe mit integriertem Stauraum", "Offener Wohnbereich ohne Zwischenwand", "Zwei Längen: 8,00 m und 9,70 m"],
+        "notFor": "Wer zwei getrennte Schlafbereiche oder ein abschließbares Zimmer braucht, ist mit MD 2 oder MD 3 besser bedient."
+      },
+      "en": {
+        "label": "Panorama and loft",
+        "lead": "The brightest model in the range: a full-height glass front pulls the outside into the living area, and the loft sits under an optional glass ceiling.",
+        "layout": "The ground floor has no partition walls. Kitchen, dining and seating share one surface that reads twice its size because of the glazing. The stair to the loft is built as a storage unit. The 9.70 metre version adds room for a desk at the window or a second sofa.",
+        "best": ["Couples living full time", "A holiday house with a view", "Premium rental where the view sells"],
+        "highlights": ["Full-height panorama glazing", "Optional glass ceiling over the loft", "Stair built as storage", "Open living area, no partition", "Two lengths: 8.00 m and 9.70 m"],
+        "notFor": "If you need two separate sleeping areas or a room that closes, MD 2 or MD 3 is the better starting point."
+      },
+      "nl": {
+        "label": "Panorama en loft",
+        "lead": "Het lichtste model van de reeks: een doorlopende glasgevel trekt de buitenruimte naar binnen en de loft ligt onder een optioneel glazen plafond.",
+        "layout": "De begane grond heeft geen tussenwanden. Keuken, eethoek en zithoek delen één vlak dat door de beglazing twee keer zo groot oogt. De trap naar de loft is uitgevoerd als bergmeubel. De variant van 9,70 meter biedt extra ruimte voor een werkplek aan het raam.",
+        "best": ["Stellen die permanent wonen", "Vakantiehuis met uitzicht", "Premium verhuur met zicht"],
+        "highlights": ["Doorlopende panoramabeglazing", "Optioneel glazen plafond boven de loft", "Trap met ingebouwde berging", "Open woonruimte zonder tussenwand", "Twee lengtes: 8,00 m en 9,70 m"],
+        "notFor": "Wie twee gescheiden slaapplekken of een afsluitbare kamer nodig heeft, kiest beter MD 2 of MD 3."
+      },
+      "da": {
+        "label": "Panorama og hems",
+        "lead": "Seriens lyseste model: en gennemgående glasfacade trækker uderummet ind i stuen, og hemsen ligger under et valgfrit glasloft.",
+        "layout": "Stueplanet har ingen skillevægge. Køkken, spiseplads og siddeområde deler én flade, der virker dobbelt så stor på grund af glaspartiet. Trappen til hemsen er bygget som opbevaringsmøbel. Varianten på 9,70 meter giver plads til en arbejdsplads ved vinduet.",
+        "best": ["Par med helårsbrug", "Feriehus med udsigt", "Premium-udlejning med udsigt"],
+        "highlights": ["Gennemgående panoramaglas", "Valgfrit glasloft over hemsen", "Trappe med indbygget opbevaring", "Åbent opholdsrum uden skillevæg", "To længder: 8,00 m og 9,70 m"],
+        "notFor": "Har du brug for to adskilte soveområder eller et rum, der kan lukkes, er MD 2 eller MD 3 et bedre udgangspunkt."
+      },
+      "fr": {
+        "label": "Panorama et mezzanine",
+        "lead": "Le modèle le plus lumineux de la gamme : une façade vitrée toute hauteur fait entrer l'extérieur dans le séjour et la mezzanine se place sous un plafond vitré en option.",
+        "layout": "Le rez-de-chaussée est sans cloison. Cuisine, repas et salon partagent une seule surface qui paraît deux fois plus grande grâce au vitrage. L'escalier de la mezzanine sert de meuble de rangement. La version de 9,70 mètres libère la place d'un bureau devant la fenêtre.",
+        "best": ["Couples en résidence permanente", "Maison de vacances avec vue", "Location haut de gamme avec vue"],
+        "highlights": ["Vitrage panoramique toute hauteur", "Plafond vitré au-dessus de la mezzanine en option", "Escalier-rangement intégré", "Séjour ouvert sans cloison", "Deux longueurs : 8,00 m et 9,70 m"],
+        "notFor": "Si vous avez besoin de deux couchages séparés ou d'une pièce fermée, MD 2 ou MD 3 est un meilleur point de départ."
+      }
+    },
+    "2": {
+      "images": ["mc2-exterior", "mc2-living", "mc2-kitchen"],
+      "sleeps": "4–5",
+      "de": {
+        "label": "Zwei Lofts für Familien",
+        "lead": "Das einzige Modell der Reihe mit zwei getrennten Lofts – gedacht für Familien, für Gäste und für Vermieter, die zwei Parteien gleichzeitig unterbringen wollen.",
+        "layout": "Die beiden Lofts liegen an den Stirnseiten, dazwischen liegen Bad und der offene Wohnbereich. Dadurch schlafen Kinder und Erwachsene nicht übereinander, sondern mit dem gesamten Wohnraum zwischen sich. Die Küche ist als Zeile ausgeführt, damit die Verkehrsfläche in der Mitte frei bleibt.",
+        "best": ["Familien mit ein bis zwei Kindern", "Vermietung an vier Personen", "Haupthaus plus Gästebereich"],
+        "highlights": ["Zwei Lofts an den Stirnseiten", "Bad zentral zwischen den Schlafbereichen", "Küchenzeile mit freier Mittelachse", "Vier bis fünf Schlafplätze", "9,00 m Länge"],
+        "notFor": "Für zwei Personen ist die zweite Empore selten nötig; MD 1 oder MD 5 bieten dann mehr Wohnfläche pro Euro."
+      },
+      "en": {
+        "label": "Two lofts for families",
+        "lead": "The only model in the range with two separate lofts — built for families, for guests, and for hosts who want to sleep two parties at once.",
+        "layout": "The two lofts sit at opposite ends, with the bathroom and the open living area between them. Children and adults are not stacked on top of each other but separated by the whole living space. The kitchen is a single run so the centre of the plan stays clear.",
+        "best": ["Families with one or two children", "Rental for four guests", "Main house plus guest area"],
+        "highlights": ["Two lofts at opposite ends", "Bathroom central between sleeping areas", "Galley kitchen keeps the centre clear", "Four to five sleeping places", "9.00 m length"],
+        "notFor": "For two people the second loft is rarely needed; MD 1 or MD 5 give more living area per euro."
+      },
+      "nl": {
+        "label": "Twee lofts voor gezinnen",
+        "lead": "Het enige model in de reeks met twee gescheiden lofts — bedoeld voor gezinnen, voor gasten en voor verhuurders die twee partijen tegelijk willen huisvesten.",
+        "layout": "De twee lofts liggen aan de kopse kanten, met de badkamer en de open woonruimte ertussen. Kinderen en volwassenen slapen niet boven elkaar maar met de hele woonruimte ertussen. De keuken is een rechte opstelling, zodat de middenas vrij blijft.",
+        "best": ["Gezinnen met één of twee kinderen", "Verhuur aan vier personen", "Hoofdhuis plus gastendeel"],
+        "highlights": ["Twee lofts aan de kopse kanten", "Badkamer centraal tussen de slaapplekken", "Rechte keuken houdt de middenas vrij", "Vier tot vijf slaapplaatsen", "9,00 m lengte"],
+        "notFor": "Voor twee personen is de tweede loft zelden nodig; MD 1 of MD 5 geven dan meer woonoppervlak per euro."
+      },
+      "da": {
+        "label": "To hemse til familier",
+        "lead": "Seriens eneste model med to adskilte hemse — til familier, til gæster og til udlejere, der vil have plads til to selskaber på én gang.",
+        "layout": "De to hemse ligger i hver sin ende med badet og det åbne opholdsrum imellem. Børn og voksne sover ikke oven på hinanden, men med hele opholdsrummet imellem sig. Køkkenet er en enkelt række, så midterzonen holdes fri.",
+        "best": ["Familier med et eller to børn", "Udlejning til fire personer", "Hovedhus plus gæsteafsnit"],
+        "highlights": ["To hemse i hver sin ende", "Bad centralt mellem soveområderne", "Køkkenrække holder midten fri", "Fire til fem sovepladser", "9,00 m længde"],
+        "notFor": "Til to personer er hems nummer to sjældent nødvendig; MD 1 eller MD 5 giver mere opholdsareal per euro."
+      },
+      "fr": {
+        "label": "Deux mezzanines pour familles",
+        "lead": "Le seul modèle de la gamme à deux mezzanines séparées — pensé pour les familles, les invités et les loueurs qui veulent coucher deux groupes à la fois.",
+        "layout": "Les deux mezzanines occupent les deux extrémités, la salle d'eau et le séjour ouvert se placent entre elles. Enfants et adultes ne dorment pas superposés mais séparés par tout l'espace de vie. La cuisine est linéaire pour libérer l'axe central.",
+        "best": ["Familles avec un ou deux enfants", "Location pour quatre personnes", "Maison principale et espace invités"],
+        "highlights": ["Deux mezzanines aux extrémités", "Salle d'eau centrale entre les couchages", "Cuisine linéaire, axe central libre", "Quatre à cinq couchages", "Longueur 9,00 m"],
+        "notFor": "Pour deux personnes la seconde mezzanine sert rarement ; MD 1 ou MD 5 offrent alors plus de surface habitable par euro."
+      }
+    },
+    "3": {
+      "images": ["mc3-exterior", "mc3-living", "mc3-loft"],
+      "sleeps": "2–4",
+      "de": {
+        "label": "Loft plus Zusatzraum",
+        "lead": "Der flexibelste Grundriss der Reihe: ein Loft für die Nacht und ein abschließbarer Raum im Erdgeschoss, der Büro, Kinderzimmer oder Gästezimmer sein kann.",
+        "layout": "Der Zusatzraum liegt an der Stirnseite und ist über eine Tür vom Wohnbereich getrennt. Das ist der entscheidende Unterschied zum offenen Grundriss: Ein Videocall, ein schlafendes Kind oder ein Gast blockiert nicht mehr das ganze Haus. In der 9,70-Meter-Variante bleibt der Wohnbereich trotz Zimmer großzügig.",
+        "best": ["Homeoffice mit Videocalls", "Paare mit gelegentlichen Gästen", "Familien mit einem Kleinkind"],
+        "highlights": ["Abschließbarer Raum im Erdgeschoss", "Loft als Hauptschlafbereich", "Tür trennt Arbeit und Wohnen", "Zwei Längen: 8,00 m und 9,70 m", "Bis zu vier Schlafplätze"],
+        "notFor": "Wer den Zusatzraum nie schließen wird, gewinnt mit MD 1 mehr offene Wohnfläche zum niedrigeren Preis."
+      },
+      "en": {
+        "label": "Loft plus extra room",
+        "lead": "The most flexible plan in the range: a loft for the night and a room on the ground floor that closes, so it can be an office, a child's room or a guest room.",
+        "layout": "The extra room sits at one end and is separated from the living area by a door. That is the decisive difference from an open plan: a video call, a sleeping child or a guest no longer occupies the whole house. In the 9.70 metre version the living area stays generous despite the room.",
+        "best": ["Home office with video calls", "Couples with occasional guests", "Families with one small child"],
+        "highlights": ["Ground-floor room that closes", "Loft as the main sleeping area", "A door between work and living", "Two lengths: 8.00 m and 9.70 m", "Up to four sleeping places"],
+        "notFor": "If the extra room will never actually be closed, MD 1 gives more open living area for less money."
+      },
+      "nl": {
+        "label": "Loft plus extra kamer",
+        "lead": "De flexibelste plattegrond van de reeks: een loft voor de nacht en een afsluitbare kamer op de begane grond die kantoor, kinderkamer of logeerkamer kan zijn.",
+        "layout": "De extra kamer ligt aan de kopse kant en wordt met een deur van de woonruimte gescheiden. Dat is het beslissende verschil met een open plattegrond: een videogesprek, een slapend kind of een logé bezet niet meer het hele huis. In de variant van 9,70 meter blijft de woonruimte ruim.",
+        "best": ["Thuiswerken met videogesprekken", "Stellen met af en toe logés", "Gezinnen met één jong kind"],
+        "highlights": ["Afsluitbare kamer op de begane grond", "Loft als hoofdslaapplek", "Deur tussen werken en wonen", "Twee lengtes: 8,00 m en 9,70 m", "Tot vier slaapplaatsen"],
+        "notFor": "Wie de extra kamer nooit zal sluiten, krijgt met MD 1 meer open woonoppervlak voor minder geld."
+      },
+      "da": {
+        "label": "Hems plus ekstra rum",
+        "lead": "Seriens mest fleksible plan: en hems til natten og et rum i stueplan, der kan lukkes — kontor, børneværelse eller gæsteværelse.",
+        "layout": "Det ekstra rum ligger i den ene ende og adskilles fra opholdsrummet med en dør. Det er den afgørende forskel fra en åben plan: et videomøde, et sovende barn eller en gæst optager ikke længere hele huset. I varianten på 9,70 meter forbliver opholdsrummet rummeligt.",
+        "best": ["Hjemmearbejde med videomøder", "Par med lejlighedsvise gæster", "Familier med ét lille barn"],
+        "highlights": ["Rum i stueplan, der kan lukkes", "Hems som primært soveområde", "Dør mellem arbejde og ophold", "To længder: 8,00 m og 9,70 m", "Op til fire sovepladser"],
+        "notFor": "Skal det ekstra rum alligevel aldrig lukkes, giver MD 1 mere åbent opholdsareal for færre penge."
+      },
+      "fr": {
+        "label": "Mezzanine et pièce en plus",
+        "lead": "Le plan le plus souple de la gamme : une mezzanine pour la nuit et une pièce fermable au rez-de-chaussée, qui devient bureau, chambre d'enfant ou chambre d'amis.",
+        "layout": "La pièce supplémentaire occupe une extrémité et se ferme par une porte. C'est la différence décisive avec un plan ouvert : une visioconférence, un enfant qui dort ou un invité n'occupent plus toute la maison. En version 9,70 mètres, le séjour reste généreux malgré la pièce.",
+        "best": ["Télétravail avec visioconférences", "Couples recevant ponctuellement", "Familles avec un jeune enfant"],
+        "highlights": ["Pièce fermable au rez-de-chaussée", "Mezzanine comme couchage principal", "Une porte entre travail et vie", "Deux longueurs : 8,00 m et 9,70 m", "Jusqu'à quatre couchages"],
+        "notFor": "Si la pièce ne sera jamais réellement fermée, MD 1 offre plus de séjour ouvert pour moins cher."
+      }
+    },
+    "4": {
+      "images": ["mc4-exterior", "mc4-living", "mc4-bedroom"],
+      "sleeps": "3–4",
+      "de": {
+        "label": "Loft, Zimmer und Veranda",
+        "lead": "Das einzige Modell, bei dem der überdachte Außenbereich Teil des Grundrisses ist und nicht nachträglich angebaut wird.",
+        "layout": "Die Veranda liegt unter dem durchlaufenden Dach und ist damit auch bei Regen nutzbar. Sie verlängert den Wohnbereich im Sommer um mehrere Quadratmeter, ohne dass beheizte Fläche entsteht. Dazu kommen ein Loft und ein Zimmer im Erdgeschoss – Schlafen, Arbeiten und Draußensitzen sind getrennt.",
+        "best": ["Glamping und Ferienparks", "Sommerhaus am Wasser", "Wer draußen lebt, nicht nur wohnt"],
+        "highlights": ["Überdachte Veranda im Grundriss", "Durchlaufendes Dach über dem Außenbereich", "Loft plus Zimmer im Erdgeschoss", "Zwei Längen: 8,00 m und 9,00 m", "Sommerfläche ohne Heizkosten"],
+        "notFor": "In sehr windexponierten oder schneereichen Lagen ist die Veranda seltener nutzbar; dort spielt MD 6 seine Stärken aus."
+      },
+      "en": {
+        "label": "Loft, room and veranda",
+        "lead": "The only model where the covered outdoor area is part of the plan rather than something added on afterwards.",
+        "layout": "The veranda sits under the continuous roof, so it stays usable in rain. In summer it extends the living area by several square metres without adding heated floor space. A loft and a ground-floor room complete the plan: sleeping, working and sitting outside are separated.",
+        "best": ["Glamping and holiday parks", "A summer house by the water", "People who live outdoors, not just indoors"],
+        "highlights": ["Covered veranda inside the plan", "Continuous roof over the outdoor area", "Loft plus ground-floor room", "Two lengths: 8.00 m and 9.00 m", "Summer space with no heating cost"],
+        "notFor": "On very exposed or snow-heavy sites the veranda is usable less often; MD 6 is the stronger choice there."
+      },
+      "nl": {
+        "label": "Loft, kamer en veranda",
+        "lead": "Het enige model waarbij de overdekte buitenruimte deel is van de plattegrond en niet later wordt aangebouwd.",
+        "layout": "De veranda ligt onder het doorlopende dak en blijft daardoor ook bij regen bruikbaar. In de zomer verlengt zij de woonruimte met enkele vierkante meters zonder verwarmd oppervlak toe te voegen. Daarbij komen een loft en een kamer op de begane grond: slapen, werken en buiten zitten zijn gescheiden.",
+        "best": ["Glamping en vakantieparken", "Zomerhuis aan het water", "Wie buiten leeft, niet alleen binnen"],
+        "highlights": ["Overdekte veranda in de plattegrond", "Doorlopend dak boven de buitenruimte", "Loft plus kamer op de begane grond", "Twee lengtes: 8,00 m en 9,00 m", "Zomerruimte zonder stookkosten"],
+        "notFor": "Op zeer winderige of sneeuwrijke locaties is de veranda minder vaak bruikbaar; daar is MD 6 de sterkere keuze."
+      },
+      "da": {
+        "label": "Hems, rum og veranda",
+        "lead": "Den eneste model, hvor det overdækkede uderum er en del af planen og ikke bygges til bagefter.",
+        "layout": "Verandaen ligger under det gennemgående tag og kan derfor bruges i regnvejr. Om sommeren forlænger den opholdsarealet med flere kvadratmeter uden at tilføje opvarmet areal. Dertil kommer en hems og et rum i stueplan: at sove, arbejde og sidde ude er adskilt.",
+        "best": ["Glamping og feriecentre", "Sommerhus ved vandet", "Dem, der lever udendørs"],
+        "highlights": ["Overdækket veranda i planen", "Gennemgående tag over uderummet", "Hems plus rum i stueplan", "To længder: 8,00 m og 9,00 m", "Sommerareal uden varmeudgift"],
+        "notFor": "På meget vindudsatte eller snetunge grunde kan verandaen bruges sjældnere; der står MD 6 stærkere."
+      },
+      "fr": {
+        "label": "Mezzanine, pièce et véranda",
+        "lead": "Le seul modèle où l'espace extérieur couvert fait partie du plan au lieu d'être ajouté après coup.",
+        "layout": "La véranda se place sous la toiture continue et reste donc utilisable sous la pluie. En été elle prolonge le séjour de plusieurs mètres carrés sans ajouter de surface chauffée. S'y ajoutent une mezzanine et une pièce au rez-de-chaussée : dormir, travailler et s'asseoir dehors sont séparés.",
+        "best": ["Glamping et parcs de vacances", "Maison d'été au bord de l'eau", "Ceux qui vivent dehors"],
+        "highlights": ["Véranda couverte intégrée au plan", "Toiture continue sur l'espace extérieur", "Mezzanine et pièce au rez-de-chaussée", "Deux longueurs : 8,00 m et 9,00 m", "Surface d'été sans coût de chauffage"],
+        "notFor": "Sur un terrain très exposé au vent ou fortement enneigé, la véranda sert moins ; MD 6 est alors plus pertinent."
+      }
+    },
+    "5": {
+      "images": ["mc5-exterior", "mc5-interior", "mc5-loft"],
+      "sleeps": "2–4",
+      "de": {
+        "label": "Kompakt mit Zusatzraum",
+        "lead": "Die kompakte Antwort auf MD 3: derselbe Gedanke mit Loft und Zusatzraum, aber auf kleinerer Grundfläche und zu einem niedrigeren Einstiegspreis.",
+        "layout": "Der Zusatzraum ist hier bewusst knapper geschnitten und funktioniert als Arbeitsplatz, Ankleide oder Kinderzimmer. Der Wohnbereich bleibt trotzdem offen, weil Küche und Bad an dieselbe Installationswand gelegt sind. Das spart Leitungswege, Kosten und Fläche gleichzeitig.",
+        "best": ["Erstes Tiny House mit Arbeitsplatz", "Städtisch geprägte Nutzung", "Kleine Grundstücke und enge Zufahrten"],
+        "highlights": ["Zusatzraum auf kompakter Grundfläche", "Küche und Bad an einer Installationswand", "Kurze Leitungswege", "Zwei Längen: 8,00 m und 9,00 m", "Niedrigerer Einstieg als MD 3"],
+        "notFor": "Wer den Zusatzraum als vollwertiges Schlafzimmer nutzen will, sollte MD 3 in der 9,70-Meter-Variante prüfen."
+      },
+      "en": {
+        "label": "Compact with extra room",
+        "lead": "The compact answer to MD 3: the same idea of loft plus extra room, on a smaller footprint and at a lower entry price.",
+        "layout": "The extra room is deliberately tighter here and works as a desk, a dressing area or a child's room. The living area still reads open because kitchen and bathroom share one service wall. That shortens the pipe runs and saves cost and floor area at the same time.",
+        "best": ["A first tiny house with a workspace", "Urban and peri-urban use", "Small plots and tight access"],
+        "highlights": ["Extra room on a compact footprint", "Kitchen and bathroom on one service wall", "Short pipe and cable runs", "Two lengths: 8.00 m and 9.00 m", "Lower entry price than MD 3"],
+        "notFor": "If the extra room has to work as a full bedroom, look at MD 3 in its 9.70 metre version."
+      },
+      "nl": {
+        "label": "Compact met extra kamer",
+        "lead": "Het compacte antwoord op MD 3: hetzelfde idee van loft plus extra kamer, op een kleiner grondvlak en tegen een lagere instapprijs.",
+        "layout": "De extra kamer is hier bewust krapper en werkt als werkplek, kleedruimte of kinderkamer. De woonruimte blijft toch open omdat keuken en badkamer aan dezelfde installatiewand liggen. Dat verkort leidingen en bespaart tegelijk kosten en oppervlak.",
+        "best": ["Eerste tiny house met werkplek", "Stedelijk gebruik", "Kleine kavels en krappe opritten"],
+        "highlights": ["Extra kamer op compact grondvlak", "Keuken en badkamer aan één installatiewand", "Korte leidinglengtes", "Twee lengtes: 8,00 m en 9,00 m", "Lagere instap dan MD 3"],
+        "notFor": "Moet de extra kamer als volwaardige slaapkamer dienen, bekijk dan MD 3 in de uitvoering van 9,70 meter."
+      },
+      "da": {
+        "label": "Kompakt med ekstra rum",
+        "lead": "Det kompakte svar på MD 3: samme idé med hems og ekstra rum, men på et mindre fodaftryk og til en lavere indgangspris.",
+        "layout": "Det ekstra rum er bevidst strammere her og fungerer som arbejdsplads, garderobe eller børneværelse. Opholdsrummet virker alligevel åbent, fordi køkken og bad deler én installationsvæg. Det forkorter rørføringen og sparer både omkostning og areal.",
+        "best": ["Første tiny house med arbejdsplads", "Bymæssig anvendelse", "Små grunde og snæver adgang"],
+        "highlights": ["Ekstra rum på kompakt fodaftryk", "Køkken og bad på én installationsvæg", "Korte rør- og kabelføringer", "To længder: 8,00 m og 9,00 m", "Lavere indgangspris end MD 3"],
+        "notFor": "Skal det ekstra rum fungere som fuldt soveværelse, så se på MD 3 i udgaven på 9,70 meter."
+      },
+      "fr": {
+        "label": "Compact avec pièce en plus",
+        "lead": "La réponse compacte à MD 3 : la même idée de mezzanine et de pièce supplémentaire, sur une emprise plus petite et à un prix d'entrée plus bas.",
+        "layout": "La pièce supplémentaire est volontairement plus juste et sert de bureau, de dressing ou de chambre d'enfant. Le séjour reste ouvert car cuisine et salle d'eau partagent un même mur technique. Les réseaux sont plus courts, ce qui économise à la fois du coût et de la surface.",
+        "best": ["Première tiny house avec bureau", "Usage urbain et périurbain", "Petits terrains et accès étroits"],
+        "highlights": ["Pièce en plus sur emprise compacte", "Cuisine et salle d'eau sur un mur technique", "Réseaux courts", "Deux longueurs : 8,00 m et 9,00 m", "Entrée de gamme plus basse que MD 3"],
+        "notFor": "Si la pièce doit servir de vraie chambre, examinez MD 3 en version 9,70 mètres."
+      }
+    },
+    "6": {
+      "images": ["mc6-exterior", "mc6-living", "mc6-bedroom"],
+      "sleeps": "2–4",
+      "de": {
+        "label": "Chalet mit Steildach",
+        "lead": "Das Vier-Jahreszeiten-Modell: Steildach, größere Aufbauhöhe und ein Aufbau, der für Schneelast und lange Heizperioden ausgelegt geplant wird.",
+        "layout": "Das Steildach schafft im Loft echte Stehhöhe im First statt einer reinen Liegefläche. Gleichzeitig läuft Schnee ab, statt sich zu sammeln. Der Wohnbereich bekommt durch die größere Raumhöhe eine andere Proportion als bei den Flachdachmodellen – das ist der Grund, warum MD 6 in Berg- und Nordlagen am häufigsten gewählt wird.",
+        "best": ["Alpine und skandinavische Lagen", "Ganzjahresnutzung mit Winterbetrieb", "Vermietung mit Chalet-Charakter"],
+        "highlights": ["Steildach für Schneeabtrag", "Stehhöhe im Loft am First", "Größere Raumhöhe im Wohnbereich", "Zwei Längen: 8,00 m und 9,00 m", "Auslegung für lange Heizperioden"],
+        "notFor": "In milden Lagen ohne Schnee zahlt man für Dachgeometrie und Aufbauhöhe mit, ohne den Vorteil zu nutzen."
+      },
+      "en": {
+        "label": "Chalet with pitched roof",
+        "lead": "The four-season model: a pitched roof, more build height, and a build-up planned for snow load and long heating seasons.",
+        "layout": "The pitched roof gives real standing height at the ridge instead of a loft you can only lie down in. Snow runs off rather than accumulating. The extra room height also changes the proportion of the living area compared with the flat-roof models — which is why MD 6 is the one most often chosen for alpine and northern sites.",
+        "best": ["Alpine and Scandinavian sites", "Year-round use including winter", "Rental with chalet character"],
+        "highlights": ["Pitched roof sheds snow", "Standing height at the loft ridge", "Greater room height in the living area", "Two lengths: 8.00 m and 9.00 m", "Specified for long heating seasons"],
+        "notFor": "On a mild, snow-free site you pay for the roof geometry and build height without using the advantage."
+      },
+      "nl": {
+        "label": "Chalet met zadeldak",
+        "lead": "Het vierseizoenenmodel: zadeldak, meer bouwhoogte en een opbouw die op sneeuwbelasting en lange stookseizoenen wordt ontworpen.",
+        "layout": "Het zadeldak geeft in de loft echte stahoogte bij de nok in plaats van alleen een ligvlak. Sneeuw glijdt af in plaats van zich op te hopen. De grotere hoogte geeft de woonruimte ook een andere verhouding dan bij de platte daken — daarom wordt MD 6 het vaakst gekozen voor berg- en noordelijke locaties.",
+        "best": ["Alpiene en Scandinavische locaties", "Jaarrond gebruik inclusief winter", "Verhuur met chaletkarakter"],
+        "highlights": ["Zadeldak voert sneeuw af", "Stahoogte bij de nok van de loft", "Grotere hoogte in de woonruimte", "Twee lengtes: 8,00 m en 9,00 m", "Ontworpen voor lange stookseizoenen"],
+        "notFor": "Op een milde, sneeuwvrije locatie betaalt u voor dakvorm en bouwhoogte zonder het voordeel te gebruiken."
+      },
+      "da": {
+        "label": "Chalet med sadeltag",
+        "lead": "Firesæsonsmodellen: sadeltag, større bygningshøjde og en opbygning, der planlægges til snelast og lange fyringssæsoner.",
+        "layout": "Sadeltaget giver reel ståhøjde ved kippen i hemsen i stedet for kun en liggeflade. Sne glider af i stedet for at samle sig. Den større rumhøjde giver også opholdsrummet en anden proportion end fladtagsmodellerne — derfor vælges MD 6 oftest til fjeld- og nordlige grunde.",
+        "best": ["Alpine og skandinaviske grunde", "Helårsbrug inklusive vinter", "Udlejning med chaletkarakter"],
+        "highlights": ["Sadeltag afleder sne", "Ståhøjde ved hemsens kip", "Større rumhøjde i opholdsrummet", "To længder: 8,00 m og 9,00 m", "Specificeret til lange fyringssæsoner"],
+        "notFor": "På en mild, snefri grund betaler man for taggeometri og højde uden at bruge fordelen."
+      },
+      "fr": {
+        "label": "Chalet à toit à deux pentes",
+        "lead": "Le modèle quatre saisons : toiture à deux pentes, hauteur accrue et une composition étudiée pour la charge de neige et les longues saisons de chauffe.",
+        "layout": "La toiture inclinée donne une vraie hauteur sous faîtage en mezzanine au lieu d'un simple espace couché. La neige glisse au lieu de s'accumuler. La hauteur supplémentaire change aussi la proportion du séjour par rapport aux modèles à toit plat — c'est pourquoi MD 6 est le plus choisi en montagne et dans le nord.",
+        "best": ["Sites alpins et scandinaves", "Usage à l'année, hiver compris", "Location au caractère chalet"],
+        "highlights": ["Toit à deux pentes évacuant la neige", "Hauteur debout sous le faîtage", "Hauteur sous plafond accrue", "Deux longueurs : 8,00 m et 9,00 m", "Conçu pour de longues saisons de chauffe"],
+        "notFor": "Sur un site doux et sans neige, on paie la géométrie de toiture et la hauteur sans en tirer parti."
+      }
+    },
+    "7": {
+      "images": ["mc7-exterior", "mc7-interior", "mc7-solar"],
+      "sleeps": "2",
+      "de": {
+        "label": "Einstiegsmodell",
+        "lead": "Der günstigste Einstieg in die Reihe – ein klarer Grundriss auf 8,00 Metern, der bewusst nichts enthält, was ein Zweipersonenhaushalt nicht braucht.",
+        "layout": "Ein Loft, ein offener Wohnbereich, eine Küchenzeile, ein Bad. Keine zweite Empore, kein Zusatzraum, keine Veranda. Genau deshalb ist die Fläche pro investiertem Euro hier am größten. MD 7 ist außerdem das Modell, das am häufigsten mit Solarpaket und Batteriespeicher geplant wird, weil der Grundverbrauch niedrig bleibt.",
+        "best": ["Zwei Personen mit klarem Budget", "Off-Grid- und Solarprojekte", "Erstes Objekt eines Vermieters"],
+        "highlights": ["Niedrigster Einstiegspreis der Reihe", "Klarer Grundriss ohne Zusatzräume", "Häufigste Basis für Solarpakete", "Niedriger Grundverbrauch", "8,00 m Länge"],
+        "notFor": "Für vier Personen, Homeoffice mit Tür oder Winterbetrieb in Höhenlagen ist MD 2, MD 3 oder MD 6 die richtigere Wahl."
+      },
+      "en": {
+        "label": "Entry model",
+        "lead": "The lowest entry point in the range — a straightforward 8.00 metre plan that deliberately leaves out everything a two-person household does not need.",
+        "layout": "One loft, one open living area, a galley kitchen, a bathroom. No second loft, no extra room, no veranda. That is exactly why the floor area per euro invested is highest here. MD 7 is also the model most often specified with a solar package and battery storage, because its baseline consumption stays low.",
+        "best": ["Two people with a clear budget", "Off-grid and solar projects", "A landlord's first unit"],
+        "highlights": ["Lowest entry price in the range", "Clear plan with no extra rooms", "Most common basis for solar packages", "Low baseline consumption", "8.00 m length"],
+        "notFor": "For four people, a home office behind a door, or winter use at altitude, MD 2, MD 3 or MD 6 is the better choice."
+      },
+      "nl": {
+        "label": "Instapmodel",
+        "lead": "De laagste instap van de reeks — een heldere plattegrond van 8,00 meter die bewust weglaat wat een tweepersoonshuishouden niet nodig heeft.",
+        "layout": "Eén loft, één open woonruimte, een keukenblok, een badkamer. Geen tweede loft, geen extra kamer, geen veranda. Juist daarom is het oppervlak per geïnvesteerde euro hier het grootst. MD 7 is ook het model dat het vaakst met zonnepakket en accu wordt gepland, omdat het basisverbruik laag blijft.",
+        "best": ["Twee personen met een duidelijk budget", "Off-grid- en zonneprojecten", "Eerste object van een verhuurder"],
+        "highlights": ["Laagste instapprijs van de reeks", "Heldere plattegrond zonder extra kamers", "Meest gekozen basis voor zonnepakketten", "Laag basisverbruik", "8,00 m lengte"],
+        "notFor": "Voor vier personen, thuiswerken achter een deur of winterbedrijf op hoogte is MD 2, MD 3 of MD 6 de juistere keuze."
+      },
+      "da": {
+        "label": "Indgangsmodel",
+        "lead": "Seriens laveste indgang — en klar plan på 8,00 meter, der bevidst udelader alt, en husstand på to ikke har brug for.",
+        "layout": "Én hems, ét åbent opholdsrum, en køkkenrække, et bad. Ingen ekstra hems, intet ekstra rum, ingen veranda. Netop derfor er arealet per investeret euro størst her. MD 7 er også den model, der oftest planlægges med solpakke og batteri, fordi grundforbruget forbliver lavt.",
+        "best": ["To personer med klart budget", "Off-grid- og solprojekter", "En udlejers første enhed"],
+        "highlights": ["Seriens laveste indgangspris", "Klar plan uden ekstra rum", "Hyppigste grundlag for solpakker", "Lavt grundforbrug", "8,00 m længde"],
+        "notFor": "Til fire personer, hjemmekontor bag en dør eller vinterbrug i højden er MD 2, MD 3 eller MD 6 det rigtigere valg."
+      },
+      "fr": {
+        "label": "Modèle d'entrée",
+        "lead": "L'entrée la plus accessible de la gamme — un plan clair de 8,00 mètres qui omet volontairement tout ce dont un foyer de deux personnes n'a pas besoin.",
+        "layout": "Une mezzanine, un séjour ouvert, une cuisine linéaire, une salle d'eau. Pas de seconde mezzanine, pas de pièce en plus, pas de véranda. C'est précisément pour cela que la surface par euro investi est ici la plus élevée. MD 7 est aussi le modèle le plus souvent équipé d'un pack solaire et d'une batterie, car sa consommation de base reste faible.",
+        "best": ["Deux personnes au budget défini", "Projets hors réseau et solaires", "Première unité d'un loueur"],
+        "highlights": ["Prix d'entrée le plus bas de la gamme", "Plan clair sans pièces annexes", "Base la plus fréquente des packs solaires", "Consommation de base faible", "Longueur 8,00 m"],
+        "notFor": "Pour quatre personnes, un bureau derrière une porte ou un usage hivernal en altitude, MD 2, MD 3 ou MD 6 conviennent mieux."
+      }
+    },
+    "8": {
+      "images": ["mc8-exterior", "mc8-interior", "mc8-angle"],
+      "sleeps": "2",
+      "de": {
+        "label": "Kompakt, gehobene Linie",
+        "lead": "Dieselbe kompakte Grundfläche wie MD 7, aber mit der gehobenen Ausstattungslinie als Ausgangspunkt statt als Aufpreisliste.",
+        "layout": "Der Unterschied liegt nicht im Grundriss, sondern in der Materialtiefe: Fassadenaufbau, Oberflächen, Einbauten und Beschläge starten eine Stufe höher. Für Vermieter ist das relevant, weil sichtbare Qualität direkt auf die Bewertung durchschlägt; für Dauerwohner, weil weniger nachgerüstet wird.",
+        "best": ["Vermietung mit hohem Anspruch", "Zweitwohnsitz mit Wertigkeit", "Wer einmal ausstattet statt zweimal"],
+        "highlights": ["Gehobene Ausstattungslinie ab Werk", "Kompakte Grundfläche wie MD 7", "Materialtiefe statt Aufpreisliste", "Weniger Nachrüstung im Betrieb", "8,00 m Länge"],
+        "notFor": "Wer das Budget maximal auf Fläche legen will, fährt mit MD 7 oder MD 1 besser."
+      },
+      "en": {
+        "label": "Compact, upgraded line",
+        "lead": "The same compact footprint as MD 7, but with the upgraded specification line as the starting point rather than as a list of extras.",
+        "layout": "The difference is not in the plan but in the material depth: façade build-up, surfaces, built-ins and hardware all start one step higher. That matters to hosts, because visible quality shows up directly in ratings, and to full-time residents, because less gets retrofitted later.",
+        "best": ["Rental with high expectations", "A second home that has to feel finished", "Specifying once instead of twice"],
+        "highlights": ["Upgraded specification line as standard", "Compact footprint, as MD 7", "Material depth instead of an extras list", "Less retrofitting in operation", "8.00 m length"],
+        "notFor": "If the budget should buy floor area above all, MD 7 or MD 1 is the better route."
+      },
+      "nl": {
+        "label": "Compact, hogere afwerking",
+        "lead": "Hetzelfde compacte grondvlak als MD 7, maar met de hogere afwerkingslijn als vertrekpunt in plaats van als meerprijslijst.",
+        "layout": "Het verschil zit niet in de plattegrond maar in de materiaaldiepte: gevelopbouw, afwerkingen, inbouw en beslag beginnen een trede hoger. Voor verhuurders telt dat omdat zichtbare kwaliteit direct in beoordelingen doorwerkt; voor permanente bewoners omdat er minder wordt bijgebouwd.",
+        "best": ["Verhuur met hoge verwachtingen", "Tweede woning die af moet voelen", "Eenmaal uitrusten in plaats van tweemaal"],
+        "highlights": ["Hogere afwerkingslijn standaard", "Compact grondvlak zoals MD 7", "Materiaaldiepte in plaats van meerprijzen", "Minder bijbouwen in bedrijf", "8,00 m lengte"],
+        "notFor": "Moet het budget vooral oppervlak kopen, dan is MD 7 of MD 1 de betere route."
+      },
+      "da": {
+        "label": "Kompakt, højere udstyr",
+        "lead": "Samme kompakte fodaftryk som MD 7, men med den højere udstyrslinje som udgangspunkt frem for som tilvalgsliste.",
+        "layout": "Forskellen ligger ikke i planen, men i materialedybden: facadeopbygning, overflader, indbygning og beslag starter et trin højere. Det betyder noget for udlejere, fordi synlig kvalitet slår direkte igennem i bedømmelser, og for helårsbeboere, fordi der eftermonteres mindre.",
+        "best": ["Udlejning med høje forventninger", "Sekundærbolig, der skal føles færdig", "At specificere én gang i stedet for to"],
+        "highlights": ["Højere udstyrslinje som standard", "Kompakt fodaftryk som MD 7", "Materialedybde frem for tilvalgsliste", "Mindre eftermontering i drift", "8,00 m længde"],
+        "notFor": "Skal budgettet frem for alt købe areal, er MD 7 eller MD 1 den bedre vej."
+      },
+      "fr": {
+        "label": "Compact, finition supérieure",
+        "lead": "La même emprise compacte que MD 7, mais avec la ligne de finition supérieure comme point de départ plutôt que comme liste d'options.",
+        "layout": "La différence n'est pas dans le plan mais dans la profondeur des matériaux : composition de façade, revêtements, agencements et quincaillerie démarrent un cran plus haut. Cela compte pour les loueurs, car la qualité visible se lit dans les avis, et pour les résidents permanents, car on rajoute moins ensuite.",
+        "best": ["Location aux attentes élevées", "Résidence secondaire qui doit paraître finie", "Équiper une fois plutôt que deux"],
+        "highlights": ["Ligne de finition supérieure de série", "Emprise compacte, comme MD 7", "Profondeur de matériaux plutôt qu'options", "Moins de reprises en exploitation", "Longueur 8,00 m"],
+        "notFor": "Si le budget doit avant tout acheter de la surface, MD 7 ou MD 1 est la meilleure voie."
+      }
+    }
+  }
+}

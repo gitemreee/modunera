@@ -1,0 +1,525 @@
+{
+  "_comment": "Shared long-form sections for the model pages, one set per language. Model-specific values are substituted at build time: {model} = MD 3, {price} = formatted base price, {sleeps}, {lengths}. Official source URLs are the same ones the country pages already cite, so no new external link can rot independently.",
+  "sources": {
+    "DE": "https://verwaltung.bund.de/leistungsverzeichnis/de/leistung/99012070006001",
+    "NL": "https://www.government.nl/themes/building-and-housing/environment-and-planning-act/the-environment-and-planning-portal",
+    "DK": "https://lifeindenmark.borger.dk/housing-and-moving/construction/building-permit",
+    "LU": "https://guichet.public.lu/en/citoyens/logement/construction-renovation-transformation/certificats-energiepass/certificat-autorisation-construire.html",
+    "CH": "https://www.ch.ch/en/housing/homeownership/planning-application-and-building-permit/"
+  },
+  "de": {
+    "glance": { "eyebrow": "Auf einen Blick", "h2": "{model} in Zahlen." },
+    "specLabels": { "length": "Länge", "width": "Breite", "layout": "Grundriss", "sleeps": "Schlafplätze", "price": "Preisindikation ab Werk", "delivery": "Lieferung ab" },
+    "layout": { "eyebrow": "Raumkonzept", "h2": "Wie {model} geschnitten ist.", "bestFor": "Besonders geeignet für", "notFor": "Wann ein anderes Modell besser passt" },
+    "gallery": { "eyebrow": "Katalogbilder", "h2": "{model} außen und innen.", "lead": "Visualisierungen aus der MODUNERA-Produktdokumentation, für die Webdarstellung optimiert." },
+    "tech": {
+      "eyebrow": "Technische Basis",
+      "h2": "Woraus {model} gebaut wird.",
+      "lead": "Die konkrete Ausführung wird in der Auftrags- und Produktionsspezifikation festgeschrieben. Die folgenden Punkte bilden die Basis, auf der projektbezogen ergänzt wird.",
+      "cards": [
+        ["Feuerverzinkte Stahl-Aufbaukonstruktion", "Der tragende Aufbau ist Stahl, nicht Holzständerwerk. Feuerverzinkung schützt die Konstruktion dort, wo sie später nicht mehr zugänglich ist – bei einem Gebäude, das transportiert wird, ist das kein Detail, sondern die Voraussetzung für Langlebigkeit."],
+        ["Stahlfahrgestell", "Das Fahrgestell wird als Teil des Gebäudes geplant, nicht als Zubehör. Achslast, Schwerpunkt und Verzurrpunkte bestimmen mit, wie das Haus die Straße nach Mitteleuropa übersteht."],
+        ["3.500-kg-Konzept mit CYR & Knott", "Die Achs- und Bremskomponenten werden auf ein 3.500-kg-Konzept ausgelegt. Ob eine Einheit im Zielland als Fahrzeug oder als Gebäude eingestuft wird, entscheidet die dortige Behörde – die technische Auslegung ist die Voraussetzung, nicht die Zusage."],
+        ["Wärmeisolierte PVC-Tischlerei", "Fenster und Türen sind thermisch getrennt ausgeführt. In Dänemark und der Schweiz ist der Fensteranteil oft der größte einzelne Wärmeverlust – deshalb wird er standortbezogen dimensioniert, nicht pauschal."],
+        ["Doppelt gehärtetes Thermopane-Glas", "Zweifach gehärtete Isolierverglasung. Bei Panoramaflächen ist neben dem U-Wert auch der solare Eintrag im Sommer relevant; beides wird zusammen betrachtet."],
+        ["Halogenfreie 220-Volt-Installation", "Die Elektroinstallation wird halogenfrei ausgeführt. Anschluss, Absicherung und Prüfung im Zielland erfolgen durch eine dort zugelassene Fachkraft nach den lokalen Vorschriften."]
+      ]
+    },
+    "options": {
+      "eyebrow": "Ausstattung",
+      "h2": "Was projektbezogen entschieden wird.",
+      "lead": "Diese Punkte werden nicht vorab festgelegt, sondern zum Projekt: Klima am Standort, Nutzungsprofil und Budget bestimmen die sinnvolle Antwort.",
+      "items": [
+        ["Fassade", "Thermowood+, Verbundplatte oder Stehfalz. Die Wahl folgt Klima und Wartungsbereitschaft, nicht nur der Optik – Stehfalz ist in schneereichen Lagen pflegeärmer, Thermowood+ verändert sich sichtbar und gewollt."],
+        ["Dämmung", "Der Aufbau wird auf die Heizperiode am Zielort ausgelegt. Ein Haus für Südwestdeutschland und eines für Jütland sind nicht dasselbe Haus, auch wenn der Grundriss identisch ist."],
+        ["Heizung", "Wärmepumpe, Fußbodenheizung oder Kombination. Entscheidend ist die tatsächliche Belegung: Ein dauerbewohntes Haus und ein Ferienobjekt mit Frostwächterbetrieb brauchen unterschiedliche Systeme."],
+        ["Lüftung", "Kontrollierte Wohnraumlüftung mit Wärmerückgewinnung ist bei kompakten Volumen der wirksamste Feuchteschutz. Ohne sie entscheidet das Nutzerverhalten über die Bauteilfeuchte."],
+        ["Solar und Speicher", "Photovoltaik mit Batteriespeicher lässt sich vorbereiten oder komplett planen. Ausschlaggebend sind Verbrauchsprofil, Dachfläche und Winterertrag am Standort – nicht die Modulleistung allein."],
+        ["Einbauten", "Küche, Bad, Stauraum und Treppe kommen aus der eigenen Möbelfertigung. Deshalb sind Maße nicht auf Katalogmodule beschränkt, sondern auf den tatsächlichen Grundriss abgestimmt."]
+      ]
+    },
+    "climate": {
+      "eyebrow": "Klima",
+      "h2": "{model} in den fünf Zielmärkten.",
+      "lead": "Derselbe Grundriss verhält sich in Zürich anders als in Aalborg. Diese Punkte werden vor der Produktion festgelegt, nicht nachgerüstet.",
+      "countries": {
+        "DE": "Deutschland spannt vom milden Oberrhein bis zu den Alpen und der Ostseeküste. Maßgeblich sind Heizperiode, Schneelastzone und Windzone am konkreten Ort. Für Dauerwohnen wird der Aufbau in der Regel eine Stufe stärker gedämmt als für reine Feriennutzung.",
+        "NL": "Die Niederlande sind mild, aber feucht und windexponiert. Der Schwerpunkt liegt weniger auf Dämmstärke als auf Winddichtheit, Feuchteschutz und Lüftung. In Küstennähe kommt die Salzbelastung der Fassade dazu.",
+        "DK": "Dänemark verlangt die längste Heizperiode der fünf Märkte und dazu erheblichen Windschutz. Fensterflächen werden bewusst dimensioniert; Lüftung mit Wärmerückgewinnung ist hier eher Regel als Option.",
+        "LU": "Luxemburg ist klimatisch gemäßigt, aber topografisch bewegt. Für die Zufahrt und den Entladepunkt ist die Hanglage häufig relevanter als die Wetterdaten.",
+        "CH": "Die Schweiz reicht vom Tessin bis über 1.500 Meter. Schneelast, Frosttiefe und die Länge der Heizperiode unterscheiden sich innerhalb weniger Fahrstunden erheblich – die Auslegung erfolgt deshalb nach Gemeinde, nicht nach Land."
+      }
+    },
+    "costs": {
+      "eyebrow": "Gesamtkosten",
+      "h2": "Was {model} im Projekt wirklich kostet.",
+      "lead": "Der Werkspreis ist der Anfang der Rechnung, nicht das Ende. Diese Positionen gehören in jedes belastbare Budget.",
+      "tableHead": ["Zielland", "Basis ab Werk", "Lieferung", "Indikation gesamt"],
+      "items": [
+        ["Untergrund und Fundament", "Punktfundament, Streifenfundament oder Schraubfundament – abhängig von Boden, Frosttiefe und Genehmigungslage."],
+        ["Anschlüsse", "Strom, Trinkwasser und Abwasser bis zum Haus. Die Kosten hängen fast ausschließlich von der Entfernung zum vorhandenen Netz ab."],
+        ["Entladung", "Kran oder Schwerlaststapler, je nach Zufahrt und Aufstellort. Wird vorab anhand von Fotos und Maßen geklärt."],
+        ["Planung und Genehmigung", "Örtliche Planungsleistungen, Anträge und Gebühren. Höhe und Umfang unterscheiden sich je Gemeinde deutlich."],
+        ["Versicherung", "Transport-, Gebäude- und gegebenenfalls Betreiberhaftpflicht. Wird sinnvollerweise vor der Lieferung geklärt, nicht danach."],
+        ["Betrieb", "Energie, Wasser, Wartung, Reinigung und Rücklagen. Bei Vermietung kommen Verwaltung, Wäsche und Plattformgebühren dazu."]
+      ],
+      "note": "Die Lieferwerte sind projektbezogene Orientierungen und keine Frachtangebote. Route, Zufahrt, Kranbedarf und Termin bestimmen den Endbetrag."
+    },
+    "permits": {
+      "eyebrow": "Genehmigung",
+      "h2": "Was vor Ort geprüft werden muss.",
+      "lead": "MODUNERA liefert ein Gebäude, keine Genehmigung. Ob {model} an einem konkreten Ort aufgestellt und genutzt werden darf, entscheidet ausschließlich die dort zuständige Behörde. Die folgenden Hinweise ersetzen diese Prüfung nicht – sie sagen, wonach zu fragen ist.",
+      "warning": "Es gibt keine pauschale Genehmigungsfähigkeit für Tiny Houses. Bebauungsplan, Flächennutzung, Erschließung und die geplante Nutzungsart entscheiden im Einzelfall. Fragen Sie vor dem Kauf bei der Gemeinde nach – schriftlich.",
+      "countries": {
+        "DE": "Zuständig ist die untere Bauaufsichtsbehörde des Kreises oder der kreisfreien Stadt. Zu klären sind Bebauungsplan beziehungsweise § 34/§ 35 BauGB, die zulässige Nutzungsart, Erschließung und ob eine Baugenehmigung oder ein Genehmigungsfreistellungsverfahren greift. Die Bauordnungen sind Landesrecht und unterscheiden sich.",
+        "NL": "Anfragen laufen über das Omgevingsloket. Zu klären sind das omgevingsplan der Gemeinde, ob eine omgevingsvergunning nötig ist und ob der Standort als Wohn-, Freizeit- oder Erholungsgebiet ausgewiesen ist. Für recreatiewoningen gelten eigene Nutzungsgrenzen.",
+        "DK": "Zuständig ist die kommune. Zu klären sind lokalplan, Zonenstatus und ob eine byggetilladelse nach dem Bygningsreglement erforderlich ist. In sommerhusområder ist die ganzjährige Wohnnutzung in der Regel beschränkt.",
+        "LU": "Zuständig ist die commune. Zu klären sind PAG und PAP, die Zulässigkeit im jeweiligen Gebiet und die autorisation de construire. Wegen der kleinen Gemeindegrößen unterscheidet sich die Praxis von Ort zu Ort spürbar.",
+        "CH": "Zuständig sind Gemeinde und Kanton. Zu klären sind Bauzone, Nutzungsplanung und die Baubewilligung. Außerhalb der Bauzone ist eine Bewilligung nur in eng begrenzten Ausnahmen möglich – das ist der häufigste Grund, aus dem Schweizer Projekte scheitern."
+      }
+    },
+    "compare": {
+      "eyebrow": "Vergleich",
+      "h2": "{model} gegenüber den anderen sieben.",
+      "lead": "Alle acht Modelle auf derselben Basisbreite von 2,55 Metern. Der Unterschied liegt in Länge, Aufteilung und Ausstattungstiefe.",
+      "head": ["Modell", "Grundriss", "Länge", "Ab Werk"],
+      "cta": "Vollständigen Modellvergleich öffnen"
+    },
+    "operation": {
+      "eyebrow": "Betrieb",
+      "h2": "Nach der Übergabe.",
+      "paras": [
+        "Ein kompaktes Gebäude verzeiht Vernachlässigung schlechter als ein großes. Feuchte, die in 140 Quadratmetern kaum auffällt, ist in 28 Quadratmetern innerhalb einer Heizperiode sichtbar. Deshalb ist die Lüftung – ob kontrolliert oder manuell diszipliniert – der wichtigste Betriebspunkt, nicht die Heizung.",
+        "Die Fassade bestimmt den Wartungsrhythmus. Thermowood+ vergraut kontrolliert und braucht in erster Linie Sichtkontrolle; beschichtete Verbundplatten und Stehfalz sind pflegeärmer, verlangen aber saubere Anschlüsse und freie Entwässerung. Dach, Rinnen und die Übergänge um Fenster gehören einmal jährlich kontrolliert.",
+        "Bei Vermietung verschiebt sich die Rechnung: Reinigung zwischen den Aufenthalten, Wäsche, Verschleiß an Beschlägen und Oberflächen sowie Rücklagen für Ersatz sind die realen Kostentreiber, nicht der Energieverbrauch. Wer das vorab einkalkuliert, kommt bei der Rendite nicht ins Rutschen."
+      ]
+    },
+    "faq": {
+      "eyebrow": "Fragen",
+      "h2": "Häufige Fragen zu {model}.",
+      "items": [
+        ["Was kostet {model}?", "Die Preisindikation ab Werk beginnt bei {price}. Dazu kommen Lieferung ins Zielland, Untergrund, Anschlüsse, Entladung, örtliche Planung und Genehmigung. Verbindlich ist ausschließlich ein geprüftes Angebot nach technischer Klärung."],
+        ["Wie viele Personen finden in {model} Platz?", "{model} ist auf {sleeps} Schlafplätze ausgelegt. Für Dauerwohnen empfehlen wir, an der unteren Zahl zu planen; die obere Zahl ist für Gäste und kurze Aufenthalte realistisch."],
+        ["Welche Längen gibt es?", "{model} wird in {lengths} geplant. Die Basisbreite beträgt bei allen Modellen 2,55 Meter, was den Transport auf europäischen Straßen ohne Sondermaß möglich macht."],
+        ["Ist {model} winterfest?", "Der Aufbau wird auf die Heizperiode am Zielort ausgelegt: Dämmstärke, Fensterdimensionierung, Lüftung und Heizsystem werden zusammen entschieden. Ein Haus für ganzjähriges Wohnen in Dänemark wird anders spezifiziert als ein Sommerobjekt am Bodensee."],
+        ["Brauche ich eine Baugenehmigung?", "Das entscheidet die Behörde am Aufstellort, nicht der Hersteller. Bebauungsplan, Nutzungsart und Erschließung bestimmen das Verfahren. Klären Sie das schriftlich mit der Gemeinde, bevor Sie bestellen – wir liefern die technischen Unterlagen dafür."],
+        ["Wie lange dauert Produktion und Lieferung?", "Die Produktionszeit wird bei Auftragsbestätigung terminiert und hängt von Modell, Ausstattungstiefe und Auslastung ab. Der Transport nach Mitteleuropa kommt darauf; der genaue Termin wird mit Route und Entladepunkt gemeinsam fixiert."],
+        ["Wie wird {model} geliefert und entladen?", "Die Anlieferung erfolgt per Tieflader bis zum vereinbarten Punkt. Entladung per Kran oder Schwerlaststapler wird anhand von Zufahrtsfotos, Maßen und Untergrund vorab geklärt. Enge oder steile Zufahrten sind lösbar, müssen aber früh bekannt sein."],
+        ["Kann ich {model} später umsetzen?", "Technisch ist die Einheit dafür ausgelegt. Ob ein Standortwechsel zulässig ist und ob am neuen Ort erneut ein Verfahren nötig wird, entscheidet wieder die dortige Behörde. Planen Sie einen Umzug also nicht als selbstverständlich ein."]
+      ]
+    },
+    "next": { "eyebrow": "Nächster Schritt", "h2": "Ersteinschätzung für {model}.", "lead": "Senden Sie Zielland, Ort, Nutzung, Personenzahl und Budgetrahmen – Sie bekommen eine strukturierte Rückmeldung statt einer Preisliste.", "button": "Anfrage über WhatsApp", "second": "Preis selbst konfigurieren" }
+  },
+  "en": {
+    "glance": { "eyebrow": "At a glance", "h2": "{model} in numbers." },
+    "specLabels": { "length": "Length", "width": "Width", "layout": "Layout", "sleeps": "Sleeps", "price": "Ex-works indication", "delivery": "Delivery from" },
+    "layout": { "eyebrow": "The plan", "h2": "How {model} is laid out.", "bestFor": "Particularly suited to", "notFor": "When another model fits better" },
+    "gallery": { "eyebrow": "Catalogue images", "h2": "{model} outside and inside.", "lead": "Visualisations from the MODUNERA product documentation, optimised for the web." },
+    "tech": {
+      "eyebrow": "Technical basis",
+      "h2": "What {model} is built from.",
+      "lead": "The exact execution is fixed in the order and production specification. The points below are the basis that a project then builds on.",
+      "cards": [
+        ["Hot-dip galvanised steel superstructure", "The load-bearing structure is steel, not a timber stud frame. Galvanising protects the structure where it will never be accessible again — in a building that gets transported, that is not a detail but the condition for a long service life."],
+        ["Steel chassis", "The chassis is designed as part of the building, not bolted on as an accessory. Axle load, centre of gravity and lashing points all shape how the house survives the road into central Europe."],
+        ["3,500 kg concept with CYR & Knott", "Axle and brake components are specified around a 3,500 kg concept. Whether a unit is classified as a vehicle or as a building in the destination country is decided by the authority there — the engineering is the precondition, not the promise."],
+        ["Thermally insulated PVC joinery", "Windows and doors are thermally broken. In Denmark and Switzerland the glazed area is often the single largest heat loss, so it is dimensioned for the site rather than by default."],
+        ["Double-tempered Thermopane glazing", "Twice-tempered insulating glass. On panorama surfaces the summer solar gain matters as much as the U-value, so the two are considered together."],
+        ["Halogen-free 220 V installation", "The electrical installation is halogen-free. Connection, protection and testing in the destination country are carried out by a locally licensed professional under local rules."]
+      ]
+    },
+    "options": {
+      "eyebrow": "Specification",
+      "h2": "What gets decided per project.",
+      "lead": "These are not fixed in advance. Site climate, how the house will actually be used and the budget determine the sensible answer.",
+      "items": [
+        ["Façade", "Thermowood+, composite panel or standing seam. The choice follows climate and appetite for maintenance, not only appearance — standing seam asks less of you in snow country, Thermowood+ changes visibly and deliberately."],
+        ["Insulation", "The build-up is specified for the heating season at the destination. A house for the Upper Rhine and a house for Jutland are not the same house, even with an identical plan."],
+        ["Heating", "Heat pump, underfloor heating or a combination. What decides it is real occupancy: a permanently lived-in house and a holiday unit on frost protection need different systems."],
+        ["Ventilation", "Mechanical ventilation with heat recovery is the most effective moisture control in a compact volume. Without it, user behaviour decides the moisture content of the structure."],
+        ["Solar and storage", "Photovoltaics with battery storage can be prepared for or planned in full. Consumption profile, roof area and winter yield at the site decide it — not module rating alone."],
+        ["Built-in furniture", "Kitchen, bathroom, storage and stair come from our own joinery. Dimensions are therefore not limited to catalogue modules but matched to the actual plan."]
+      ]
+    },
+    "climate": {
+      "eyebrow": "Climate",
+      "h2": "{model} across the five markets.",
+      "lead": "The same plan behaves differently in Zurich than in Aalborg. These points are fixed before production, not retrofitted afterwards.",
+      "countries": {
+        "DE": "Germany runs from the mild Upper Rhine to the Alps and the Baltic coast. Heating season, snow load zone and wind zone at the actual address govern. For permanent living the build-up is usually one step heavier than for holiday use.",
+        "NL": "The Netherlands is mild but damp and wind-exposed. The emphasis is less on insulation thickness than on airtightness, moisture control and ventilation. Near the coast, salt load on the façade is added to that.",
+        "DK": "Denmark asks for the longest heating season of the five markets plus serious wind protection. Glazed areas are dimensioned deliberately, and heat-recovery ventilation is the rule here rather than an option.",
+        "LU": "Luxembourg is temperate but topographically lively. For access and the unloading point, the slope of the site is often more decisive than the weather data.",
+        "CH": "Switzerland spans Ticino to above 1,500 metres. Snow load, frost depth and the length of the heating season differ substantially within a few hours' drive, so specification follows the municipality, not the country."
+      }
+    },
+    "costs": {
+      "eyebrow": "Total cost",
+      "h2": "What {model} really costs as a project.",
+      "lead": "The ex-works price is where the calculation starts, not where it ends. These items belong in any budget that has to hold.",
+      "tableHead": ["Destination", "Ex-works base", "Delivery", "Indicative total"],
+      "items": [
+        ["Ground and foundation", "Pad, strip or screw foundation, depending on soil, frost depth and what the permit requires."],
+        ["Connections", "Power, drinking water and wastewater up to the house. Cost is driven almost entirely by the distance to the existing network."],
+        ["Unloading", "Crane or heavy-duty forklift, depending on access and the final position. Clarified in advance from photographs and dimensions."],
+        ["Planning and permits", "Local planning work, applications and fees. Scope and cost differ markedly between municipalities."],
+        ["Insurance", "Transport, building and, where relevant, operator liability. Best settled before delivery rather than after."],
+        ["Running costs", "Energy, water, maintenance, cleaning and reserves. Renting adds management, laundry and platform fees."]
+      ],
+      "note": "Delivery figures are project orientation, not freight quotations. Route, access, crane requirement and date determine the final amount."
+    },
+    "permits": {
+      "eyebrow": "Permits",
+      "h2": "What has to be checked locally.",
+      "lead": "MODUNERA delivers a building, not a permit. Whether {model} may be placed and used at a specific address is decided solely by the authority responsible there. The notes below do not replace that check — they tell you what to ask.",
+      "warning": "There is no blanket permissibility for tiny houses. The local plan, land-use designation, servicing and the intended type of use decide each case. Ask the municipality before you buy — in writing.",
+      "countries": {
+        "DE": "The lower building authority of the district or independent city is responsible. Clarify the Bebauungsplan or §34/§35 BauGB, the permissible use, servicing, and whether a Baugenehmigung or an exemption procedure applies. Building codes are state law and differ.",
+        "NL": "Applications run through the Omgevingsloket. Clarify the municipal omgevingsplan, whether an omgevingsvergunning is required, and whether the site is designated residential, leisure or recreational. Recreatiewoningen carry their own limits on use.",
+        "DK": "The kommune is responsible. Clarify the lokalplan, the zone status, and whether a byggetilladelse under the Bygningsreglement is required. In sommerhusområder, year-round residential use is generally restricted.",
+        "LU": "The commune is responsible. Clarify the PAG and PAP, admissibility in the relevant zone, and the autorisation de construire. Because municipalities are small, practice differs noticeably from place to place.",
+        "CH": "Municipality and canton are both involved. Clarify the building zone, the land-use plan and the Baubewilligung. Outside the building zone, approval is possible only in narrowly defined exceptions — the most common reason Swiss projects fail."
+      }
+    },
+    "compare": {
+      "eyebrow": "Comparison",
+      "h2": "{model} against the other seven.",
+      "lead": "All eight models share a 2.55 metre base width. What differs is length, layout and specification depth.",
+      "head": ["Model", "Layout", "Length", "Ex works"],
+      "cta": "Open the full model comparison"
+    },
+    "operation": {
+      "eyebrow": "In use",
+      "h2": "After handover.",
+      "paras": [
+        "A compact building forgives neglect less readily than a large one. Moisture that would go unnoticed in 140 square metres becomes visible in 28 within a single heating season. Ventilation — whether mechanical or manually disciplined — is therefore the most important operational point, not heating.",
+        "The façade sets the maintenance rhythm. Thermowood+ greys in a controlled way and mostly needs looking at; coated composite panels and standing seam ask less but require clean junctions and free drainage. Roof, gutters and the transitions around windows deserve one proper inspection a year.",
+        "Renting changes the arithmetic. Cleaning between stays, laundry, wear on hardware and surfaces, and reserves for replacement are the real cost drivers — not energy. Budgeting for them up front is what keeps the return where you projected it."
+      ]
+    },
+    "faq": {
+      "eyebrow": "Questions",
+      "h2": "Common questions about {model}.",
+      "items": [
+        ["What does {model} cost?", "The ex-works indication starts at {price}. Delivery to the destination, ground works, connections, unloading, local planning and permits come on top. Only a checked quotation after technical clarification is binding."],
+        ["How many people fit in {model}?", "{model} is laid out for {sleeps} sleeping places. For permanent living we suggest planning at the lower figure; the upper figure is realistic for guests and short stays."],
+        ["Which lengths are available?", "{model} is planned in {lengths}. All models share a 2.55 metre base width, which keeps transport on European roads within normal dimensions."],
+        ["Is {model} suitable for winter?", "The build-up is specified for the heating season at the destination: insulation thickness, glazed area, ventilation and heating system are decided together. A house for year-round living in Denmark is specified differently from a summer unit on Lake Constance."],
+        ["Do I need a building permit?", "That is decided by the authority at the site, not by the manufacturer. Local plan, type of use and servicing determine the procedure. Settle it in writing with the municipality before ordering — we supply the technical documentation for it."],
+        ["How long do production and delivery take?", "Production time is scheduled at order confirmation and depends on the model, specification depth and workshop load. Transport to central Europe is added to that; the exact date is fixed together with the route and unloading point."],
+        ["How is {model} delivered and unloaded?", "Delivery is by low-loader to the agreed point. Unloading by crane or heavy-duty forklift is clarified in advance from access photographs, dimensions and ground conditions. Narrow or steep access is solvable, but has to be known early."],
+        ["Can {model} be moved later?", "Technically the unit is designed for it. Whether relocation is permitted, and whether a new procedure is required at the new site, is again for the authority there to decide. So do not treat a future move as a given."]
+      ]
+    },
+    "next": { "eyebrow": "Next step", "h2": "A first assessment for {model}.", "lead": "Send destination, place, intended use, number of people and budget range — you get a structured reply rather than a price list.", "button": "Enquire via WhatsApp", "second": "Configure the price yourself" }
+  },
+  "nl": {
+    "glance": { "eyebrow": "In het kort", "h2": "{model} in cijfers." },
+    "specLabels": { "length": "Lengte", "width": "Breedte", "layout": "Plattegrond", "sleeps": "Slaapplaatsen", "price": "Indicatie af fabriek", "delivery": "Levering vanaf" },
+    "layout": { "eyebrow": "De plattegrond", "h2": "Hoe {model} is ingedeeld.", "bestFor": "Bijzonder geschikt voor", "notFor": "Wanneer een ander model beter past" },
+    "gallery": { "eyebrow": "Catalogusbeelden", "h2": "{model} van buiten en van binnen.", "lead": "Visualisaties uit de MODUNERA-productdocumentatie, geoptimaliseerd voor het web." },
+    "tech": {
+      "eyebrow": "Technische basis",
+      "h2": "Waaruit {model} is gebouwd.",
+      "lead": "De precieze uitvoering wordt vastgelegd in de order- en productiespecificatie. Onderstaande punten vormen de basis waarop per project wordt aangevuld.",
+      "cards": [
+        ["Thermisch verzinkte stalen opbouw", "De draagconstructie is staal, geen houtskeletbouw. Verzinking beschermt de constructie juist daar waar zij later niet meer bereikbaar is — bij een gebouw dat vervoerd wordt is dat geen detail maar de voorwaarde voor levensduur."],
+        ["Stalen chassis", "Het chassis wordt ontworpen als onderdeel van het gebouw, niet als accessoire. Aslast, zwaartepunt en sjorpunten bepalen mede hoe het huis de rit naar Midden-Europa doorstaat."],
+        ["3.500 kg-concept met CYR & Knott", "As- en remcomponenten worden op een 3.500 kg-concept afgestemd. Of een unit in het land van bestemming als voertuig of als gebouw geldt, bepaalt de bevoegde instantie daar — de techniek is de voorwaarde, niet de toezegging."],
+        ["Thermisch onderbroken pvc-kozijnen", "Ramen en deuren zijn thermisch onderbroken uitgevoerd. In Denemarken en Zwitserland is het glasoppervlak vaak het grootste enkelvoudige warmteverlies; daarom wordt het per locatie gedimensioneerd."],
+        ["Dubbel gehard Thermopane-glas", "Tweemaal gehard isolatieglas. Bij panoramavlakken telt naast de U-waarde ook de zonwinst in de zomer; beide worden samen beoordeeld."],
+        ["Halogeenvrije 220 volt-installatie", "De elektrische installatie is halogeenvrij. Aansluiting, beveiliging en keuring in het land van bestemming gebeuren door een daar erkende vakman volgens de lokale voorschriften."]
+      ]
+    },
+    "options": {
+      "eyebrow": "Uitvoering",
+      "h2": "Wat per project wordt beslist.",
+      "lead": "Deze punten liggen niet vooraf vast. Klimaat op de locatie, werkelijk gebruik en budget bepalen het verstandige antwoord.",
+      "items": [
+        ["Gevel", "Thermowood+, composietplaat of felsdak. De keuze volgt klimaat en onderhoudsbereidheid, niet alleen het uiterlijk — felswerk vraagt minder in sneeuwrijke streken, Thermowood+ verandert zichtbaar en bewust."],
+        ["Isolatie", "De opbouw wordt afgestemd op het stookseizoen op de bestemming. Een huis voor Zeeland en een huis voor Jutland zijn niet hetzelfde huis, ook al is de plattegrond gelijk."],
+        ["Verwarming", "Warmtepomp, vloerverwarming of een combinatie. Doorslaggevend is de werkelijke bewoning: permanent bewoond of vakantieverblijf met vorstbeveiliging vragen andere systemen."],
+        ["Ventilatie", "Mechanische ventilatie met warmteterugwinning is bij een compact volume de effectiefste vochtbeheersing. Zonder ventilatie bepaalt gedrag het vochtgehalte van de constructie."],
+        ["Zon en opslag", "Pv met accu kan worden voorbereid of volledig gepland. Verbruiksprofiel, dakoppervlak en winteropbrengst op locatie bepalen dat — niet het paneelvermogen alleen."],
+        ["Inbouwmeubels", "Keuken, badkamer, berging en trap komen uit de eigen meubelmakerij. Maten zijn daardoor niet beperkt tot catalogusmodules maar afgestemd op de werkelijke plattegrond."]
+      ]
+    },
+    "climate": {
+      "eyebrow": "Klimaat",
+      "h2": "{model} in de vijf markten.",
+      "lead": "Dezelfde plattegrond gedraagt zich in Zürich anders dan in Aalborg. Deze punten worden vóór productie vastgelegd, niet achteraf bijgebouwd.",
+      "countries": {
+        "DE": "Duitsland loopt van de milde Bovenrijn tot de Alpen en de Oostzeekust. Bepalend zijn stookseizoen, sneeuwlastzone en windzone op het feitelijke adres. Voor permanent wonen wordt de opbouw meestal een trede zwaarder dan voor vakantiegebruik.",
+        "NL": "Nederland is mild maar vochtig en windbelast. De nadruk ligt minder op isolatiedikte dan op luchtdichtheid, vochtbeheersing en ventilatie. Aan de kust komt daar zoutbelasting van de gevel bij.",
+        "DK": "Denemarken vraagt het langste stookseizoen van de vijf markten plus serieuze windbescherming. Glasoppervlakken worden bewust gedimensioneerd; ventilatie met warmteterugwinning is hier regel en geen optie.",
+        "LU": "Luxemburg is klimatologisch gematigd maar reliëfrijk. Voor aanvoer en losplaats is de helling van het terrein vaak bepalender dan de weergegevens.",
+        "CH": "Zwitserland reikt van Ticino tot boven 1.500 meter. Sneeuwlast, vorstdiepte en de lengte van het stookseizoen verschillen binnen enkele uren rijden aanzienlijk; de uitvoering volgt daarom de gemeente, niet het land."
+      }
+    },
+    "costs": {
+      "eyebrow": "Totale kosten",
+      "h2": "Wat {model} als project werkelijk kost.",
+      "lead": "De prijs af fabriek is het begin van de som, niet het eind. Deze posten horen in elk budget dat stand moet houden.",
+      "tableHead": ["Bestemming", "Basis af fabriek", "Levering", "Indicatie totaal"],
+      "items": [
+        ["Ondergrond en fundering", "Poer-, strook- of schroeffundering, afhankelijk van bodem, vorstdiepte en vergunningseisen."],
+        ["Aansluitingen", "Elektra, drinkwater en afvalwater tot aan het huis. De kosten worden vrijwel volledig bepaald door de afstand tot het bestaande net."],
+        ["Lossen", "Kraan of zware heftruck, afhankelijk van toegang en eindpositie. Vooraf geregeld aan de hand van foto's en maten."],
+        ["Planning en vergunning", "Lokale planwerkzaamheden, aanvragen en leges. Omvang en kosten verschillen duidelijk per gemeente."],
+        ["Verzekering", "Transport, opstal en waar van toepassing exploitantenaansprakelijkheid. Beter vóór levering geregeld dan erna."],
+        ["Exploitatie", "Energie, water, onderhoud, schoonmaak en reserveringen. Bij verhuur komen beheer, linnengoed en platformkosten erbij."]
+      ],
+      "note": "Leveringsbedragen zijn projectindicaties, geen vrachtoffertes. Route, toegang, kraanbehoefte en datum bepalen het eindbedrag."
+    },
+    "permits": {
+      "eyebrow": "Vergunning",
+      "h2": "Wat lokaal moet worden getoetst.",
+      "lead": "MODUNERA levert een gebouw, geen vergunning. Of {model} op een concreet adres mag worden geplaatst en gebruikt, beslist uitsluitend het daar bevoegde gezag. Onderstaande punten vervangen die toets niet — ze zeggen waarnaar u moet vragen.",
+      "warning": "Er bestaat geen algemene vergunbaarheid voor tiny houses. Het omgevingsplan, de bestemming, de ontsluiting en het beoogde gebruik beslissen per geval. Vraag het de gemeente vóór aankoop — schriftelijk.",
+      "countries": {
+        "DE": "Bevoegd is de untere Bauaufsichtsbehörde van de Kreis of de kreisfreie Stadt. Te toetsen: Bebauungsplan of §34/§35 BauGB, toegestaan gebruik, ontsluiting en of een Baugenehmigung dan wel een vrijstellingsprocedure geldt. Bouwverordeningen zijn deelstaatrecht en verschillen.",
+        "NL": "Aanvragen lopen via het Omgevingsloket. Te toetsen: het omgevingsplan van de gemeente, of een omgevingsvergunning nodig is en of de locatie als wonen, verblijfsrecreatie of recreatie is aangewezen. Voor recreatiewoningen gelden eigen gebruiksgrenzen.",
+        "DK": "Bevoegd is de kommune. Te toetsen: lokalplan, zonestatus en of een byggetilladelse volgens het Bygningsreglement nodig is. In sommerhusområder is permanente bewoning doorgaans beperkt.",
+        "LU": "Bevoegd is de commune. Te toetsen: PAG en PAP, toelaatbaarheid in de betreffende zone en de autorisation de construire. Door de kleine gemeenten verschilt de praktijk merkbaar per plaats.",
+        "CH": "Gemeente en kanton zijn beide betrokken. Te toetsen: bouwzone, bestemmingsplan en de Baubewilligung. Buiten de bouwzone is toestemming slechts in eng omschreven uitzonderingen mogelijk — de meest voorkomende reden dat Zwitserse projecten stranden."
+      }
+    },
+    "compare": {
+      "eyebrow": "Vergelijking",
+      "h2": "{model} tegenover de andere zeven.",
+      "lead": "Alle acht modellen delen een basisbreedte van 2,55 meter. Het verschil zit in lengte, indeling en afwerkingsdiepte.",
+      "head": ["Model", "Plattegrond", "Lengte", "Af fabriek"],
+      "cta": "Volledige modelvergelijking openen"
+    },
+    "operation": {
+      "eyebrow": "In gebruik",
+      "h2": "Na oplevering.",
+      "paras": [
+        "Een compact gebouw vergeeft verwaarlozing minder dan een groot. Vocht dat in 140 vierkante meter nauwelijks opvalt, is in 28 vierkante meter binnen één stookseizoen zichtbaar. Ventilatie — mechanisch of handmatig gedisciplineerd — is daarom het belangrijkste bedrijfspunt, niet verwarming.",
+        "De gevel bepaalt het onderhoudsritme. Thermowood+ vergrijst gecontroleerd en vraagt vooral visuele controle; gecoate composietplaat en felswerk vragen minder maar eisen schone aansluitingen en vrije afwatering. Dak, goten en de aansluitingen rond ramen verdienen jaarlijks één goede inspectie.",
+        "Bij verhuur verschuift de rekensom. Schoonmaak tussen verblijven, linnengoed, slijtage aan beslag en oppervlakken en reserveringen voor vervanging zijn de echte kostendrijvers — niet energie. Wie dat vooraf inrekent, houdt het rendement waar het begroot was."
+      ]
+    },
+    "faq": {
+      "eyebrow": "Vragen",
+      "h2": "Veelgestelde vragen over {model}.",
+      "items": [
+        ["Wat kost {model}?", "De indicatie af fabriek begint bij {price}. Daar komen levering, ondergrond, aansluitingen, lossen, lokale planning en vergunning bij. Alleen een gecontroleerde offerte na technische afstemming is bindend."],
+        ["Hoeveel personen passen in {model}?", "{model} is uitgelegd op {sleeps} slaapplaatsen. Voor permanent wonen adviseren wij op het lagere getal te plannen; het hogere getal is realistisch voor gasten en korte verblijven."],
+        ["Welke lengtes zijn er?", "{model} wordt gepland in {lengths}. Alle modellen delen een basisbreedte van 2,55 meter, waardoor transport op Europese wegen binnen normale maten blijft."],
+        ["Is {model} geschikt voor de winter?", "De opbouw wordt afgestemd op het stookseizoen op de bestemming: isolatiedikte, glasoppervlak, ventilatie en verwarmingssysteem worden samen beslist. Een huis voor jaarrond wonen in Denemarken wordt anders gespecificeerd dan een zomerverblijf."],
+        ["Heb ik een vergunning nodig?", "Dat beslist het bevoegd gezag op de locatie, niet de fabrikant. Omgevingsplan, gebruik en ontsluiting bepalen de procedure. Regel dat schriftelijk met de gemeente vóór u bestelt — wij leveren de technische documentatie ervoor."],
+        ["Hoe lang duren productie en levering?", "De productietijd wordt bij orderbevestiging ingepland en hangt af van model, afwerkingsdiepte en bezetting. Het transport naar Midden-Europa komt daarbovenop; de exacte datum wordt samen met route en losplaats vastgelegd."],
+        ["Hoe wordt {model} geleverd en gelost?", "Levering gebeurt per dieplader tot het afgesproken punt. Lossen met kraan of zware heftruck wordt vooraf bepaald op basis van toegangsfoto's, maten en ondergrond. Een smalle of steile oprit is oplosbaar, maar moet vroeg bekend zijn."],
+        ["Kan {model} later worden verplaatst?", "Technisch is de unit daarop ontworpen. Of verplaatsing is toegestaan en of op de nieuwe plek opnieuw een procedure nodig is, beslist opnieuw het bevoegd gezag daar. Reken een verhuizing dus niet als vanzelfsprekend in."]
+      ]
+    },
+    "next": { "eyebrow": "Volgende stap", "h2": "Eerste inschatting voor {model}.", "lead": "Stuur bestemming, plaats, gebruik, aantal personen en budget — u krijgt een gestructureerd antwoord in plaats van een prijslijst.", "button": "Aanvragen via WhatsApp", "second": "Zelf de prijs configureren" }
+  },
+  "da": {
+    "glance": { "eyebrow": "Kort fortalt", "h2": "{model} i tal." },
+    "specLabels": { "length": "Længde", "width": "Bredde", "layout": "Plan", "sleeps": "Sovepladser", "price": "Indikation ab fabrik", "delivery": "Levering fra" },
+    "layout": { "eyebrow": "Planen", "h2": "Sådan er {model} disponeret.", "bestFor": "Særligt egnet til", "notFor": "Når en anden model passer bedre" },
+    "gallery": { "eyebrow": "Katalogbilleder", "h2": "{model} ude og inde.", "lead": "Visualiseringer fra MODUNERAs produktdokumentation, optimeret til web." },
+    "tech": {
+      "eyebrow": "Teknisk grundlag",
+      "h2": "Hvad {model} er bygget af.",
+      "lead": "Den præcise udførelse fastlægges i ordre- og produktionsspecifikationen. Punkterne herunder er grundlaget, som projektet bygger videre på.",
+      "cards": [
+        ["Varmforzinket stålopbygning", "Den bærende konstruktion er stål, ikke træskelet. Galvanisering beskytter konstruktionen netop dér, hvor den aldrig bliver tilgængelig igen — i en bygning, der transporteres, er det ikke en detalje, men forudsætningen for levetid."],
+        ["Stålchassis", "Chassiset projekteres som en del af bygningen, ikke som tilbehør. Akseltryk, tyngdepunkt og surringspunkter er med til at afgøre, hvordan huset klarer turen til Centraleuropa."],
+        ["3.500 kg-koncept med CYR & Knott", "Aksel- og bremsekomponenter specificeres omkring et 3.500 kg-koncept. Om en enhed i modtagerlandet regnes som køretøj eller bygning, afgøres af myndigheden dér — teknikken er forudsætningen, ikke løftet."],
+        ["Termisk brudt pvc-snedkeri", "Vinduer og døre er termisk brudte. I Danmark og Schweiz er glasarealet ofte det største enkeltstående varmetab, og det dimensioneres derfor efter grunden frem for som standard."],
+        ["Dobbelthærdet Thermopane-glas", "Todobbelt hærdet isoleringsglas. Ved panoramaflader tæller sommerens solindfald lige så meget som U-værdien; begge vurderes samlet."],
+        ["Halogenfri 220 V-installation", "Elinstallationen er halogenfri. Tilslutning, sikring og eftersyn i modtagerlandet udføres af en dér autoriseret fagperson efter de lokale regler."]
+      ]
+    },
+    "options": {
+      "eyebrow": "Udstyr",
+      "h2": "Hvad der besluttes per projekt.",
+      "lead": "Disse punkter ligger ikke fast på forhånd. Klimaet på grunden, den faktiske anvendelse og budgettet afgør det fornuftige svar.",
+      "items": [
+        ["Facade", "Thermowood+, kompositplade eller listedækning. Valget følger klima og vedligeholdelseslyst, ikke kun udseendet — listedækning kræver mindre i snerige egne, Thermowood+ ændrer sig synligt og bevidst."],
+        ["Isolering", "Opbygningen specificeres til fyringssæsonen på bestemmelsesstedet. Et hus til Sønderjylland og et til Øvre Rhinen er ikke samme hus, selv med samme plan."],
+        ["Varme", "Varmepumpe, gulvvarme eller en kombination. Det afgørende er den faktiske belægning: helårsbeboelse og feriebolig med frostsikring kræver forskellige systemer."],
+        ["Ventilation", "Mekanisk ventilation med varmegenvinding er den mest effektive fugtstyring i et kompakt volumen. Uden den afgør brugeradfærd konstruktionens fugtindhold."],
+        ["Sol og batteri", "Solceller med batteri kan forberedes eller planlægges fuldt ud. Forbrugsprofil, tagareal og vinterudbytte på stedet afgør det — ikke modulydelsen alene."],
+        ["Indbygget inventar", "Køkken, bad, opbevaring og trappe kommer fra vores eget snedkeri. Målene er derfor ikke bundet til katalogmoduler, men tilpasset den faktiske plan."]
+      ]
+    },
+    "climate": {
+      "eyebrow": "Klima",
+      "h2": "{model} i de fem markeder.",
+      "lead": "Samme plan opfører sig anderledes i Zürich end i Aalborg. Disse punkter fastlægges før produktion, ikke bagefter.",
+      "countries": {
+        "DE": "Tyskland strækker sig fra den milde Øvre Rhin til Alperne og Østersøkysten. Afgørende er fyringssæson, snelastzone og vindzone på den faktiske adresse. Til helårsbeboelse gøres opbygningen normalt et trin kraftigere end til ferieanvendelse.",
+        "NL": "Holland er mildt, men fugtigt og vindudsat. Vægten ligger mindre på isoleringstykkelse end på lufttæthed, fugtstyring og ventilation. Nær kysten kommer saltbelastning af facaden til.",
+        "DK": "Danmark kræver den længste fyringssæson af de fem markeder plus reel vindbeskyttelse. Glasarealer dimensioneres bevidst, og ventilation med varmegenvinding er her reglen frem for et tilvalg.",
+        "LU": "Luxembourg er klimatisk mildt, men kuperet. For tilkørsel og aflæsningspunkt er terrænets hældning ofte mere afgørende end vejrdata.",
+        "CH": "Schweiz går fra Ticino til over 1.500 meter. Snelast, frostdybde og fyringssæsonens længde varierer betydeligt inden for få timers kørsel; specifikationen følger derfor kommunen, ikke landet."
+      }
+    },
+    "costs": {
+      "eyebrow": "Samlede omkostninger",
+      "h2": "Hvad {model} reelt koster som projekt.",
+      "lead": "Prisen ab fabrik er begyndelsen på regnestykket, ikke slutningen. Disse poster hører med i ethvert budget, der skal holde.",
+      "tableHead": ["Bestemmelsesland", "Basis ab fabrik", "Levering", "Indikation i alt"],
+      "items": [
+        ["Underlag og fundament", "Punkt-, stribe- eller skruefundament afhængigt af jordbund, frostdybde og myndighedskrav."],
+        ["Tilslutninger", "El, drikkevand og spildevand frem til huset. Omkostningen bestemmes næsten udelukkende af afstanden til det eksisterende net."],
+        ["Aflæsning", "Kran eller tung truck afhængigt af adgang og endelig placering. Afklares på forhånd ud fra fotos og mål."],
+        ["Projektering og tilladelse", "Lokal projektering, ansøgninger og gebyrer. Omfang og pris varierer tydeligt fra kommune til kommune."],
+        ["Forsikring", "Transport, bygning og eventuelt driftsansvar. Bør ordnes før levering frem for efter."],
+        ["Drift", "Energi, vand, vedligehold, rengøring og henlæggelser. Ved udlejning kommer administration, vask og platformgebyrer til."]
+      ],
+      "note": "Leveringstallene er projektorientering, ikke fragttilbud. Rute, adgang, kranbehov og dato afgør slutbeløbet."
+    },
+    "permits": {
+      "eyebrow": "Tilladelse",
+      "h2": "Hvad der skal afklares lokalt.",
+      "lead": "MODUNERA leverer en bygning, ikke en tilladelse. Om {model} må placeres og bruges på en konkret adresse, afgøres alene af den ansvarlige myndighed dér. Punkterne herunder erstatter ikke den afklaring — de siger, hvad du skal spørge om.",
+      "warning": "Der findes ingen generel tilladelighed for tiny houses. Lokalplan, zonestatus, byggemodning og den påtænkte anvendelse afgør den enkelte sag. Spørg kommunen før køb — skriftligt.",
+      "countries": {
+        "DE": "Ansvarlig er den lokale bygningsmyndighed i Kreis eller kreisfreie Stadt. Afklar Bebauungsplan eller §34/§35 BauGB, tilladt anvendelse, byggemodning og om der kræves Baugenehmigung eller en fritagelsesprocedure. Byggereglementerne er delstatslige og forskellige.",
+        "NL": "Ansøgninger går gennem Omgevingsloket. Afklar kommunens omgevingsplan, om der kræves omgevingsvergunning, og om stedet er udlagt til bolig, ferie eller rekreation. For recreatiewoningen gælder egne anvendelsesgrænser.",
+        "DK": "Ansvarlig er kommunen. Afklar lokalplan, zonestatus og om der kræves byggetilladelse efter Bygningsreglementet. I sommerhusområder er helårsbeboelse som hovedregel begrænset.",
+        "LU": "Ansvarlig er kommunen. Afklar PAG og PAP, tilladeligheden i den pågældende zone og autorisation de construire. Med små kommuner varierer praksis mærkbart fra sted til sted.",
+        "CH": "Både kommune og kanton er involveret. Afklar byggezone, planlægning og Baubewilligung. Uden for byggezonen er tilladelse kun mulig i snævert afgrænsede undtagelser — den hyppigste grund til, at schweiziske projekter falder."
+      }
+    },
+    "compare": {
+      "eyebrow": "Sammenligning",
+      "h2": "{model} over for de syv andre.",
+      "lead": "Alle otte modeller deler en basisbredde på 2,55 meter. Forskellen ligger i længde, disponering og udstyrsdybde.",
+      "head": ["Model", "Plan", "Længde", "Ab fabrik"],
+      "cta": "Åbn den fulde modelsammenligning"
+    },
+    "operation": {
+      "eyebrow": "I drift",
+      "h2": "Efter aflevering.",
+      "paras": [
+        "En kompakt bygning tilgiver forsømmelse dårligere end en stor. Fugt, der næppe ses i 140 kvadratmeter, bliver synlig i 28 inden for én fyringssæson. Ventilation — mekanisk eller manuelt disciplineret — er derfor det vigtigste driftspunkt, ikke varmen.",
+        "Facaden sætter vedligeholdelsesrytmen. Thermowood+ gråner kontrolleret og kræver først og fremmest eftersyn; belagte kompositplader og listedækning kræver mindre, men forudsætter rene samlinger og fri afvanding. Tag, tagrender og overgange omkring vinduer fortjener ét ordentligt eftersyn om året.",
+        "Ved udlejning ændrer regnestykket sig. Rengøring mellem ophold, vask, slid på beslag og overflader samt henlæggelser til udskiftning er de reelle omkostningsdrivere — ikke energien. Budgetterer man dem fra start, holder afkastet, hvor det var beregnet."
+      ]
+    },
+    "faq": {
+      "eyebrow": "Spørgsmål",
+      "h2": "Hyppige spørgsmål om {model}.",
+      "items": [
+        ["Hvad koster {model}?", "Indikationen ab fabrik begynder ved {price}. Dertil kommer levering, underlag, tilslutninger, aflæsning, lokal projektering og tilladelse. Kun et kontrolleret tilbud efter teknisk afklaring er bindende."],
+        ["Hvor mange kan der være i {model}?", "{model} er disponeret til {sleeps} sovepladser. Til helårsbrug anbefaler vi at planlægge efter det laveste tal; det højeste er realistisk til gæster og korte ophold."],
+        ["Hvilke længder findes?", "{model} planlægges i {lengths}. Alle modeller deler en basisbredde på 2,55 meter, hvilket holder transporten på europæiske veje inden for normale mål."],
+        ["Er {model} egnet til vinter?", "Opbygningen specificeres til fyringssæsonen på stedet: isoleringstykkelse, glasareal, ventilation og varmesystem besluttes samlet. Et hus til helårsbrug i Danmark specificeres anderledes end en sommerenhed ved Bodensøen."],
+        ["Skal jeg have byggetilladelse?", "Det afgøres af myndigheden på stedet, ikke af producenten. Lokalplan, anvendelse og byggemodning bestemmer proceduren. Få det på skrift hos kommunen, før du bestiller — vi leverer den tekniske dokumentation til det."],
+        ["Hvor lang tid tager produktion og levering?", "Produktionstiden fastlægges ved ordrebekræftelse og afhænger af model, udstyrsdybde og belægning. Transporten til Centraleuropa kommer oveni; den præcise dato fastlægges sammen med rute og aflæsningspunkt."],
+        ["Hvordan leveres og aflæsses {model}?", "Levering sker med blokvogn til det aftalte punkt. Aflæsning med kran eller tung truck afklares på forhånd ud fra adgangsfotos, mål og underlag. Smal eller stejl adgang kan løses, men skal kendes tidligt."],
+        ["Kan {model} flyttes senere?", "Teknisk er enheden bygget til det. Om flytning er tilladt, og om der kræves en ny procedure på det nye sted, afgøres igen af myndigheden dér. Regn derfor ikke en flytning som givet."]
+      ]
+    },
+    "next": { "eyebrow": "Næste skridt", "h2": "Første vurdering af {model}.", "lead": "Send land, sted, anvendelse, antal personer og budgetramme — du får et struktureret svar frem for en prisliste.", "button": "Forespørg via WhatsApp", "second": "Konfigurer prisen selv" }
+  },
+  "fr": {
+    "glance": { "eyebrow": "En bref", "h2": "{model} en chiffres." },
+    "specLabels": { "length": "Longueur", "width": "Largeur", "layout": "Plan", "sleeps": "Couchages", "price": "Indication départ usine", "delivery": "Livraison à partir de" },
+    "layout": { "eyebrow": "Le plan", "h2": "Comment {model} est organisé.", "bestFor": "Particulièrement adapté à", "notFor": "Quand un autre modèle convient mieux" },
+    "gallery": { "eyebrow": "Images du catalogue", "h2": "{model} dehors et dedans.", "lead": "Visualisations issues de la documentation produit MODUNERA, optimisées pour le web." },
+    "tech": {
+      "eyebrow": "Base technique",
+      "h2": "Ce dont {model} est fait.",
+      "lead": "L'exécution exacte est arrêtée dans la spécification de commande et de production. Les points ci-dessous constituent la base sur laquelle le projet vient s'ajouter.",
+      "cards": [
+        ["Ossature acier galvanisée à chaud", "La structure porteuse est en acier, non en ossature bois. La galvanisation protège la structure là précisément où elle ne sera plus jamais accessible — pour un bâtiment transporté, ce n'est pas un détail mais la condition de sa durée de vie."],
+        ["Châssis acier", "Le châssis est conçu comme une partie du bâtiment, non comme un accessoire. Charge à l'essieu, centre de gravité et points d'arrimage déterminent la façon dont la maison supporte la route vers l'Europe centrale."],
+        ["Concept 3 500 kg avec CYR & Knott", "Les composants d'essieu et de freinage sont dimensionnés autour d'un concept de 3 500 kg. Le classement de l'unité comme véhicule ou comme bâtiment relève de l'autorité du pays de destination — la technique est la condition, non la promesse."],
+        ["Menuiseries PVC à rupture de pont thermique", "Fenêtres et portes sont à rupture de pont thermique. Au Danemark et en Suisse, la surface vitrée est souvent la première source de déperdition ; elle est donc dimensionnée pour le site et non par défaut."],
+        ["Vitrage Thermopane double trempe", "Vitrage isolant deux fois trempé. Sur les surfaces panoramiques, l'apport solaire d'été compte autant que la valeur U ; les deux sont examinés ensemble."],
+        ["Installation 220 V sans halogène", "L'installation électrique est sans halogène. Raccordement, protection et contrôle dans le pays de destination sont réalisés par un professionnel agréé sur place, selon les règles locales."]
+      ]
+    },
+    "options": {
+      "eyebrow": "Équipement",
+      "h2": "Ce qui se décide au projet.",
+      "lead": "Ces points ne sont pas figés à l'avance. Le climat du site, l'usage réel et le budget déterminent la réponse pertinente.",
+      "items": [
+        ["Façade", "Thermowood+, panneau composite ou joint debout. Le choix suit le climat et l'appétit d'entretien, pas seulement l'aspect — le joint debout demande moins en pays de neige, le Thermowood+ évolue visiblement et volontairement."],
+        ["Isolation", "La composition est calée sur la saison de chauffe à destination. Une maison pour le Rhin supérieur et une maison pour le Jutland ne sont pas la même maison, même à plan identique."],
+        ["Chauffage", "Pompe à chaleur, plancher chauffant ou combinaison. Ce qui tranche, c'est l'occupation réelle : une maison habitée en permanence et une unité de vacances en hors-gel n'appellent pas le même système."],
+        ["Ventilation", "La ventilation mécanique à récupération de chaleur est le contrôle d'humidité le plus efficace dans un volume compact. Sans elle, c'est le comportement des occupants qui fixe l'humidité de l'ouvrage."],
+        ["Solaire et stockage", "Le photovoltaïque avec batterie peut être préparé ou entièrement étudié. Profil de consommation, surface de toiture et rendement hivernal du site décident — pas la puissance des modules seule."],
+        ["Agencements", "Cuisine, salle d'eau, rangements et escalier sortent de notre propre atelier. Les dimensions ne sont donc pas limitées à des modules de catalogue mais ajustées au plan réel."]
+      ]
+    },
+    "climate": {
+      "eyebrow": "Climat",
+      "h2": "{model} sur les cinq marchés.",
+      "lead": "Le même plan ne se comporte pas de la même façon à Zurich et à Aalborg. Ces points sont arrêtés avant la production, pas rattrapés ensuite.",
+      "countries": {
+        "DE": "L'Allemagne va du Rhin supérieur tempéré aux Alpes et à la côte baltique. Saison de chauffe, zone de charge de neige et zone de vent à l'adresse réelle font foi. Pour une résidence permanente, la composition est en général un cran plus forte que pour un usage de vacances.",
+        "NL": "Les Pays-Bas sont doux mais humides et exposés au vent. L'accent porte moins sur l'épaisseur d'isolant que sur l'étanchéité à l'air, la gestion de l'humidité et la ventilation. Près de la côte s'ajoute la charge saline sur la façade.",
+        "DK": "Le Danemark impose la plus longue saison de chauffe des cinq marchés, ainsi qu'une réelle protection au vent. Les surfaces vitrées sont dimensionnées à dessein et la ventilation double flux y est la règle plutôt qu'une option.",
+        "LU": "Le Luxembourg est tempéré mais vallonné. Pour l'accès et le point de déchargement, la pente du terrain est souvent plus déterminante que les données météo.",
+        "CH": "La Suisse va du Tessin à plus de 1 500 mètres. Charge de neige, profondeur de gel et durée de la saison de chauffe changent nettement en quelques heures de route ; la spécification suit donc la commune, pas le pays."
+      }
+    },
+    "costs": {
+      "eyebrow": "Coût total",
+      "h2": "Ce que {model} coûte réellement en projet.",
+      "lead": "Le prix départ usine est le début du calcul, pas la fin. Ces postes doivent figurer dans tout budget qui doit tenir.",
+      "tableHead": ["Destination", "Base départ usine", "Livraison", "Total indicatif"],
+      "items": [
+        ["Sol et fondation", "Plots, semelles filantes ou pieux vissés selon le sol, la profondeur de gel et les exigences du permis."],
+        ["Raccordements", "Électricité, eau potable et eaux usées jusqu'à la maison. Le coût dépend presque uniquement de la distance au réseau existant."],
+        ["Déchargement", "Grue ou chariot élévateur lourd selon l'accès et la position finale. Réglé en amont à partir de photos et de cotes."],
+        ["Études et autorisation", "Études locales, dépôts de dossiers et taxes. L'étendue et le coût varient nettement d'une commune à l'autre."],
+        ["Assurance", "Transport, bâtiment et, le cas échéant, responsabilité d'exploitation. À régler avant la livraison plutôt qu'après."],
+        ["Exploitation", "Énergie, eau, entretien, ménage et provisions. En location s'ajoutent gestion, blanchisserie et commissions de plateforme."]
+      ],
+      "note": "Les montants de livraison sont des ordres de grandeur de projet, pas des offres de transport. Itinéraire, accès, besoin de grue et date fixent le montant final."
+    },
+    "permits": {
+      "eyebrow": "Autorisation",
+      "h2": "Ce qui doit être vérifié sur place.",
+      "lead": "MODUNERA livre un bâtiment, pas une autorisation. La possibilité d'implanter et d'utiliser {model} à une adresse précise relève exclusivement de l'autorité compétente sur place. Les points ci-dessous ne remplacent pas cette vérification — ils indiquent quoi demander.",
+      "warning": "Il n'existe aucune autorisation générale pour les tiny houses. Plan local, affectation du sol, viabilisation et usage projeté tranchent au cas par cas. Interrogez la commune avant l'achat — par écrit.",
+      "countries": {
+        "DE": "L'autorité compétente est le service d'urbanisme de l'arrondissement ou de la ville-arrondissement. À vérifier : Bebauungsplan ou §34/§35 BauGB, usage admis, viabilisation et si une Baugenehmigung ou une procédure de dispense s'applique. Les codes de la construction relèvent des Länder et diffèrent.",
+        "NL": "Les demandes passent par l'Omgevingsloket. À vérifier : l'omgevingsplan communal, la nécessité d'une omgevingsvergunning et l'affectation du site en habitat, séjour ou loisirs. Les recreatiewoningen ont leurs propres limites d'usage.",
+        "DK": "La kommune est compétente. À vérifier : lokalplan, statut de zone et nécessité d'une byggetilladelse au titre du Bygningsreglement. Dans les sommerhusområder, l'habitation à l'année est en principe restreinte.",
+        "LU": "La commune est compétente. À vérifier : PAG et PAP, admissibilité dans la zone concernée et autorisation de construire. Les communes étant petites, la pratique varie sensiblement d'un lieu à l'autre.",
+        "CH": "Commune et canton interviennent tous deux. À vérifier : zone à bâtir, plan d'affectation et Baubewilligung. Hors zone à bâtir, l'autorisation n'est possible que dans des exceptions étroitement définies — la première cause d'échec des projets suisses."
+      }
+    },
+    "compare": {
+      "eyebrow": "Comparaison",
+      "h2": "{model} face aux sept autres.",
+      "lead": "Les huit modèles partagent une largeur de base de 2,55 mètres. La différence tient à la longueur, à la distribution et à la profondeur d'équipement.",
+      "head": ["Modèle", "Plan", "Longueur", "Départ usine"],
+      "cta": "Ouvrir le comparatif complet"
+    },
+    "operation": {
+      "eyebrow": "En usage",
+      "h2": "Après la réception.",
+      "paras": [
+        "Un bâtiment compact pardonne moins la négligence qu'un grand. Une humidité qui passerait inaperçue sur 140 mètres carrés devient visible sur 28 en une seule saison de chauffe. La ventilation — mécanique ou disciplinée à la main — est donc le premier point d'exploitation, avant le chauffage.",
+        "La façade fixe le rythme d'entretien. Le Thermowood+ grise de façon contrôlée et demande surtout d'être regardé ; le panneau composite laqué et le joint debout demandent moins, mais exigent des raccords propres et un écoulement libre. Toiture, gouttières et jonctions autour des fenêtres méritent une inspection sérieuse par an.",
+        "En location, le calcul change. Ménage entre les séjours, blanchisserie, usure de la quincaillerie et des surfaces, provisions pour remplacement : voilà les vrais postes, pas l'énergie. Les budgéter dès le départ, c'est ce qui maintient le rendement au niveau prévu."
+      ]
+    },
+    "faq": {
+      "eyebrow": "Questions",
+      "h2": "Questions fréquentes sur {model}.",
+      "items": [
+        ["Combien coûte {model} ?", "L'indication départ usine commence à {price}. S'y ajoutent la livraison, le sol, les raccordements, le déchargement, les études locales et l'autorisation. Seule une offre vérifiée après clarification technique engage."],
+        ["Combien de personnes tiennent dans {model} ?", "{model} est conçu pour {sleeps} couchages. Pour une résidence permanente, nous conseillons de retenir le chiffre bas ; le chiffre haut est réaliste pour des invités et des séjours courts."],
+        ["Quelles longueurs sont disponibles ?", "{model} est étudié en {lengths}. Tous les modèles partagent une largeur de base de 2,55 mètres, ce qui maintient le transport sur les routes européennes dans des dimensions normales."],
+        ["{model} convient-il à l'hiver ?", "La composition est calée sur la saison de chauffe à destination : épaisseur d'isolant, surface vitrée, ventilation et système de chauffage se décident ensemble. Une maison habitée à l'année au Danemark n'est pas spécifiée comme une unité d'été au bord du lac de Constance."],
+        ["Ai-je besoin d'un permis de construire ?", "C'est l'autorité du lieu qui tranche, pas le fabricant. Plan local, usage et viabilisation déterminent la procédure. Réglez-le par écrit avec la commune avant de commander — nous fournissons la documentation technique nécessaire."],
+        ["Combien de temps prennent la production et la livraison ?", "Le délai de production est fixé à la confirmation de commande et dépend du modèle, de la profondeur d'équipement et de la charge d'atelier. Le transport vers l'Europe centrale s'y ajoute ; la date exacte est arrêtée avec l'itinéraire et le point de déchargement."],
+        ["Comment {model} est-il livré et déchargé ?", "La livraison se fait par porte-engins jusqu'au point convenu. Le déchargement à la grue ou au chariot lourd est réglé en amont à partir de photos d'accès, de cotes et de l'état du sol. Un accès étroit ou pentu se résout, mais doit être connu tôt."],
+        ["{model} peut-il être déplacé plus tard ?", "Techniquement, l'unité est conçue pour cela. Le caractère autorisé du déplacement et la nécessité d'une nouvelle procédure au nouvel emplacement relèvent à nouveau de l'autorité locale. Ne considérez donc pas un déménagement comme acquis."]
+      ]
+    },
+    "next": { "eyebrow": "Étape suivante", "h2": "Première estimation pour {model}.", "lead": "Envoyez pays, lieu, usage, nombre de personnes et enveloppe budgétaire — vous recevez une réponse structurée plutôt qu'un tarif.", "button": "Demander via WhatsApp", "second": "Configurer le prix vous-même" }
+  }
+}

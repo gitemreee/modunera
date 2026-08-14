@@ -7,23 +7,33 @@ deploy time — the generators below produce the committed HTML.
 ## Run order
 
 ```bash
-node tools/rebrand-modunera.mjs        # brand normalisation, legacy asset removal
-node tools/build-modunera-europe.mjs   # countries, regions, cities, services, Europe guides
-node tools/build-modunera-locales.mjs  # Dutch, Danish and French sections
-node tools/build-modunera-v2.mjs       # navigation, comparison pages, guide hub, sitemaps
-node tools/validate-modunera.mjs       # gate: canonicals, JSON-LD, links, brand, colours
+node tools/rebrand-modunera.mjs           # brand normalisation, legacy asset removal
+node tools/build-modunera-europe.mjs      # countries, regions, cities, services, Europe guides
+node tools/build-modunera-locales.mjs     # Dutch, Danish and French sections
+node tools/build-modunera-depth.mjs       # MD 1–MD 8 in five languages, country questions, EN blog
+node tools/build-modunera-v2.mjs          # navigation, comparison pages, guide hubs, sitemaps
+node tools/build-modunera-depth.mjs --extend   # append the question sets and the market appendix
+node tools/validate-modunera.mjs          # gate: canonicals, JSON-LD, links, brand, colours
 ```
 
-The order matters. `build-modunera-europe.mjs` writes its own six-link
-navigation into the pages it generates; `build-modunera-v2.mjs` then replaces
-every `<nav class="nav">` on the site with the shared mega-menu and rebuilds the
-sitemaps so the pages it adds are indexed. Running the Europe build without the
-v2 layer afterwards leaves the site with two different menus.
+The order matters, and the depth layer runs twice on purpose.
+
+`build-modunera-europe.mjs` writes its own six-link navigation into the pages it
+generates; `build-modunera-v2.mjs` then replaces every `<nav class="nav">` on the
+site with the shared mega-menu and rebuilds the sitemaps so the pages it adds are
+indexed. Running the Europe build without the v2 layer afterwards leaves the site
+with two different menus.
 
 The locale builder runs before the v2 layer so its pages pick up the shared
 navigation, the WhatsApp dock and the sitemap.
 
-All five are idempotent — a second run changes nothing.
+`build-modunera-depth.mjs` has two phases because v2 sits between them. Phase one
+writes new pages, which then need v2's navigation and sitemap entries. Phase two
+(`--extend`) appends the country question sets and the five-market appendix to the
+existing library — including the guide hubs and category pages that v2 itself
+regenerates, which is exactly why it cannot run before v2.
+
+All of them are idempotent — a second full run changes nothing.
 
 ## Languages
 
@@ -31,11 +41,13 @@ German is the root, English is `/en/`, and the three remaining target-market
 languages live under their own directories with the slugs those markets actually
 use — not translations of the English ones:
 
-| Locale | Home | Countries | Services | FAQ |
-|---|---|---|---|---|
-| Dutch | `/nl/` | `/nl/landen/` | `/nl/diensten/` | `/nl/veelgestelde-vragen/` |
-| Danish | `/da/` | `/da/lande/` | `/da/ydelser/` | `/da/ofte-stillede-spoergsmaal/` |
-| French | `/fr/` | `/fr/pays/` | `/fr/services/` | `/fr/questions-frequentes/` |
+| Locale | Home | Countries | Services | Models | Questions | Guides | FAQ |
+|---|---|---|---|---|---|---|---|
+| German | `/` | `/laender/` | `/leistungen/` | `/modelle/` | `/fragen/` | `/ratgeber/` | `/faq/` |
+| English | `/en/` | `/en/countries/` | `/en/services/` | `/en/models/` | `/en/questions/` | `/en/blog/` | `/en/faq/` |
+| Dutch | `/nl/` | `/nl/landen/` | `/nl/diensten/` | `/nl/modellen/` | `/nl/vragen-per-land/` | `/nl/gidsen/` | `/nl/veelgestelde-vragen/` |
+| Danish | `/da/` | `/da/lande/` | `/da/ydelser/` | `/da/modeller/` | `/da/spoergsmaal-per-land/` | `/da/guides/` | `/da/ofte-stillede-spoergsmaal/` |
+| French | `/fr/` | `/fr/pays/` | `/fr/services/` | `/fr/modeles/` | `/fr/questions-par-pays/` | `/fr/guides/` | `/fr/questions-frequentes/` |
 
 Copy, slugs and country names live in `data/locales.json`; the per-country legal
 and climate paragraphs are written per language in `COUNTRY_COPY` inside
@@ -55,6 +67,11 @@ built out.
 | Brand claim ("Design Your Nature") | `CLAIM` in `tools/build-modunera-v2.mjs` |
 | WhatsApp dock copy and services | `whatsappDock()` / `WA_SERVICES` in `tools/build-modunera-v2.mjs` |
 | Model specs and prices | `data/pricing.json` |
+| Model editorial copy (MD 1–MD 8, five languages) | `data/model-copy.json` |
+| Model page long-form sections | `data/depth-copy.json` |
+| Country question sets (20 × 5 countries × 5 languages) | `data/country-qa.json` |
+| English knowledge library (nine subjects) | `data/en-blog.json` |
+| The five-market appendix | `APPENDIX` in `tools/build-modunera-depth.mjs` |
 | Guide categories | `GUIDE_CATEGORIES` in `tools/build-modunera-v2.mjs` |
 | New market guides | `MARKET_GUIDES` in `tools/build-modunera-v2.mjs` |
 | Country copy, permits, regions | `COUNTRIES` in `tools/build-modunera-europe.mjs` |
@@ -129,8 +146,26 @@ canonicals, missing `lang`, invalid JSON-LD, a broken local link, a missing
 brand colour, a surviving legacy brand string, or a duplicated country/service
 link in the homepage navigation. It also asserts the required page set exists.
 
-Current numbers: 14,896 pages, 14,896 unique canonicals, 14,892 sitemap URLs,
-37,017 JSON-LD blocks, 1,122,319 local references checked with none broken.
+Current numbers: 14,976 pages, 14,976 unique canonicals, 14,972 sitemap URLs,
+37,251 JSON-LD blocks, 1,448,214 local references checked with none broken.
 
-Beyond the gate, a Chromium pass over 79 pages at 390/768/1440px checks every
-page for script errors and horizontal overflow.
+Beyond the gate, a Chromium pass at 390/768/1440px checks every page for script
+errors, horizontal overflow, and that the contact rail renders as SVG icons.
+
+## Page depth
+
+The original kit produced pages of 300–900 words built from one template, which
+reads to a search engine as one page repeated. Where that stands now:
+
+| Page type | Before | Now |
+|---|---|---|
+| Model page (MD 1–MD 8) | 472, German only | 2,100–2,400, five languages |
+| Country page | 330–860 | 1,200–2,050 |
+| Country question page | did not exist | 1,000–1,420 |
+| English subject page | did not exist | 1,100–1,800 |
+| Blog post / guide | 605–740 | 1,000–1,600 |
+
+The blog library is the remaining gap. Its 125 German posts still share one
+seven-section skeleton with a keyword substituted in; the appendix adds real
+per-market material to each of them, but reaching genuine per-topic depth means
+writing per-topic source material, not generating more of the same.
