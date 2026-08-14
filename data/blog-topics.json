@@ -1,5 +1,5 @@
 {
-  "_comment": "Per-topic source material for the German article library. The 125 posts previously shared one seven-section skeleton with a keyword substituted in; these entries give each topic its own argument, its own mistakes and its own questions. A topic renders as a guide (-leitfaden) or as a mistakes checklist (-fehler-checkliste); the two formats use the same material differently so they do not duplicate each other.",
+  "_comment": "Per-topic source material for the German article library. Five points, five mistakes and three questions per subject. The 125 posts previously shared one seven-section skeleton with a keyword substituted in; these entries give each subject its own argument, its own mistakes and its own questions. A subject renders as a guide (-leitfaden), as a mistakes checklist (-fehler-checkliste) or, where both exist, as an overview; the formats use the material differently so they do not duplicate each other.",
   "updated": "2026-08-14",
   "categories": {
     "technik-und-konstruktion": 12,
@@ -29,6 +29,14 @@
         [
           "Komposttoilette löst nicht das ganze Problem",
           "Eine Trenntoilette nimmt das Schwarzwasser aus der Rechnung, aber Küche, Dusche und Waschmaschine produzieren weiter Grauwasser. Wer nur die Toilette autark plant und den Rest vergisst, steht am Ende trotzdem vor der Frage nach einer genehmigten Ableitung."
+        ],
+        [
+          "Sammelbehälter rechnet sich nur bei geringem Anfall",
+          "Ein abflussloser Sammelbehälter ist die einfachste genehmigungsfähige Lösung ohne Kanal — bis die erste Rechnung für die Entleerung kommt. Bei zwei dauerhaft wohnenden Personen ist ein Behälter üblicher Größe im Wochenrhythmus voll. Für ein Ferienobjekt mit zwanzig Übernachtungen im Jahr ist er dagegen die günstigste Variante überhaupt. Rechnen Sie mit Ihrer tatsächlichen Belegung, nicht mit dem Behältervolumen."
+        ],
+        [
+          "Wer die Betreiberpflichten übernimmt",
+          "Eine Kleinkläranlage macht Sie zum Anlagenbetreiber. Dazu gehören ein Wartungsvertrag mit einem Fachbetrieb, ein Betriebstagebuch, die wiederkehrende Prüfung durch die untere Wasserbehörde und die fachgerechte Entsorgung des Schlamms. Nichts davon ist schwierig, aber alles davon ist dauerhaft — und es hängt an Ihnen, nicht am Hersteller."
         ]
       ],
       "mistakes": [
@@ -43,6 +51,14 @@
         [
           "Gefälle und Frosttiefe erst auf der Baustelle prüfen",
           "Eine Abwasserleitung braucht Gefälle und muss frostfrei liegen. Auf ebenem oder felsigem Grund entscheidet das über Hebeanlage oder Aushubtiefe — und beides ändert das Budget nach der Bestellung."
+        ],
+        [
+          "Regenwasser und Abwasser über dieselbe Leitung führen",
+          "Auf vielen Grundstücken ist die Trennung vorgeschrieben, und wo sie es nicht ist, überlastet Regenwasser die Kläranlage bei jedem Starkregen. Die Trennung kostet beim Bau wenig und lässt sich später kaum korrigieren."
+        ],
+        [
+          "Die Anlage nach der Fläche statt nach der Belegung dimensionieren",
+          "Eine Kleinkläranlage wird nach Einwohnerwerten ausgelegt, nicht nach Quadratmetern. Ein Ferienobjekt mit wechselnder Vollbelegung braucht eine andere Auslegung als ein Zweipersonenhaushalt mit gleichmäßigem Anfall."
         ]
       ],
       "faq": [
@@ -76,6 +92,14 @@
         [
           "Die Kosten, die die Rendite entscheiden",
           "Reinigung zwischen den Aufenthalten, Wäsche, Plattformgebühren, Verschleiß an Beschlägen und Oberflächen sowie Rücklagen für Ersatz. Energie ist selten der Treiber. Zwei Gäste für drei Nächte verursachen etwa dieselben Reinigungskosten wie zwei Gäste für eine Nacht — deshalb wirkt die Mindestaufenthaltsdauer stärker auf die Marge als der Nachtpreis."
+        ],
+        [
+          "Bewertungen entstehen an drei Stellen",
+          "Sauberkeit, Ankunft und die Wahrheit der Fotos. Alles andere — Ausstattung, Aussicht, Frühstückskorb — wirkt erst danach. Ein Objekt, das ankommt wie auf den Bildern, sauber ist und dessen Schlüsselübergabe funktioniert, sammelt Bewertungen, die die Auslastung des zweiten Jahres tragen. Die drei Punkte sind auch die einzigen, die vollständig in Ihrer Hand liegen."
+        ],
+        [
+          "Mindestaufenthalt ist der stärkste Hebel auf die Marge",
+          "Der Reinigungsaufwand ist bei einer Nacht und bei drei Nächten praktisch derselbe. Wer von einer auf zwei Nächte Mindestaufenthalt geht, halbiert die Zahl der Wechsel bei ähnlicher Belegung — das wirkt stärker auf das Ergebnis als eine Preiserhöhung, und es kostet keine Buchungen, wenn die Region ohnehin für Kurzurlaube gebucht wird."
         ]
       ],
       "mistakes": [
@@ -90,6 +114,14 @@
         [
           "Reinigung als Nebensache behandeln",
           "Reinigung ist bei Kurzzeitvermietung der größte laufende Posten und der häufigste Grund für schlechte Bewertungen. Wer sie nicht vertraglich und preislich fixiert hat, hat das Geschäftsmodell nicht durchgerechnet."
+        ],
+        [
+          "Die Fotos schönen",
+          "Ein Weitwinkel, der 28 Quadratmeter wie 50 aussehen lässt, produziert enttäuschte Gäste und genau die Bewertungen, die man ein Jahr lang nicht mehr los wird. Bei einem Tiny House verkauft die Ehrlichkeit besser als der Trick."
+        ],
+        [
+          "Ohne Puffer zwischen Buchungen arbeiten",
+          "Ein zu enger Wechsel zwingt zur Eile bei der Reinigung und lässt keinen Raum für den Schaden, den der letzte Gast nicht gemeldet hat. Ein halber Tag Puffer kostet weniger als eine schlechte Bewertung."
         ]
       ],
       "faq": [
@@ -123,6 +155,14 @@
         [
           "Saison und Winterbetrieb",
           "Ein Objekt, das nur von Mai bis September vermietbar ist, muss seine Jahreskosten in fünf Monaten verdienen. Winterfeste Auslegung verlängert die Saison und ist damit keine Komfortfrage, sondern eine betriebswirtschaftliche."
+        ],
+        [
+          "Was den Preis pro Nacht tatsächlich hebt",
+          "Nicht die Ausstattung, sondern die Exklusivität des Blicks. Ein Objekt ohne Sichtkontakt zum Nachbarn, mit eigenem Außenbereich und einer Aussicht, die auf dem ersten Foto funktioniert, erzielt spürbar mehr als dieselbe Einheit in einer Reihe. Standortplanung ist deshalb Preisplanung."
+        ],
+        [
+          "Betreiben oder betreiben lassen",
+          "Eigenbetrieb bedeutet Reinigung, Kommunikation, Wartung und Buchhaltung — realistisch mehrere Stunden pro Wechsel. Eine Vermittlung nimmt Provision und den größten Teil davon ab. Rechnen Sie beide Varianten mit Ihrem eigenen Stundenwert durch, bevor Sie sich für eine entscheiden; die Antwort hängt von der Entfernung zum Objekt ab."
         ]
       ],
       "mistakes": [
@@ -137,6 +177,14 @@
         [
           "Nur in der Hochsaison kalkulieren",
           "Rendite entsteht über zwölf Monate. Wer mit Augustpreisen rechnet und im November keine Buchungen hat, hat kein Geschäftsmodell, sondern eine gute Woche."
+        ],
+        [
+          "Die Einheiten zu dicht setzen",
+          "Zwei Objekte mit Blick ineinander halbieren den Erlebniswert beider und damit den Nachtpreis. Der Abstand zwischen den Einheiten ist eine Ertragsentscheidung, keine Platzfrage."
+        ],
+        [
+          "Ohne Wetterplan kalkulieren",
+          "Glamping lebt vom Außenraum. Ein Standort ohne überdachte Fläche verliert bei Regenwochen sofort Buchungen — das ist der wirtschaftliche Grund für die Veranda von MD 4."
         ]
       ],
       "faq": [
@@ -170,6 +218,14 @@
         [
           "Technikgeräusche mitplanen",
           "Lüftungsanlage, Wärmepumpe, Kühlschrank und Wasserpumpe stehen in einem kompakten Volumen zwangsläufig nah am Wohnbereich. Aufstellort, Entkopplung und Nachtabsenkung werden vor der Produktion festgelegt, nicht danach."
+        ],
+        [
+          "Was gegen Nachhall wirklich hilft",
+          "Wirksam sind poröse und weiche Flächen: Teppich, Vorhänge in ganzer Raumhöhe, Polstermöbel, offene Regale mit Büchern. Unwirksam sind harte Dekorplatten und dünne Wandbehänge. Die Faustregel für einen kompakten Raum: mindestens eine große weiche Fläche pro Wandrichtung, sonst bleibt die Nachhallzeit hörbar."
+        ],
+        [
+          "Zwei Menschen, ein Volumen",
+          "Der eigentliche Akustikkonflikt im Tiny House ist nicht Lautstärke, sondern Gleichzeitigkeit: Küche und Gespräch, Fernseher und Telefonat, Kind und Homeoffice. Das löst kein Absorber, sondern eine Tür — der Grund, warum MD 3 und MD 5 in diesem Zusammenhang so oft empfohlen werden."
         ]
       ],
       "mistakes": [
@@ -184,6 +240,14 @@
         [
           "Nur an Schallschutz nach außen denken",
           "Dreifachverglasung hilft gegen die Straße, nicht gegen den Nachhall im Raum. Das sind zwei verschiedene Probleme mit zwei verschiedenen Lösungen."
+        ],
+        [
+          "Vorhänge nur bis zur Fensterbank planen",
+          "Eine Vorhangfläche über die ganze Raumhöhe wirkt akustisch um ein Vielfaches stärker als ein kurzer Behang — bei fast identischen Kosten."
+        ],
+        [
+          "Die Waschmaschine neben den Schlafbereich setzen",
+          "In einem offenen Grundriss ist die Schleuderdrehzahl im ganzen Haus hörbar. Aufstellort und Entkopplung gehören in die Grundrissplanung, nicht in den Umzug."
         ]
       ],
       "faq": [
@@ -217,6 +281,14 @@
         [
           "Gewicht, Achslast, Maße",
           "Bei MODUNERA werden Achs- und Bremskomponenten auf ein 3.500-kg-Konzept ausgelegt, die Basisbreite beträgt 2,55 Meter. Ob eine Einheit im Zielland als Fahrzeug oder als Gebäude eingestuft wird, entscheidet aber die dortige Behörde."
+        ],
+        [
+          "Was ein Standortwechsel tatsächlich kostet",
+          "Transportgenehmigung und Zugfahrzeug, Kran am alten und am neuen Ort, Rückbau und Neuherstellung von Fundament und Anschlüssen, gegebenenfalls ein neues Verfahren bei der dortigen Behörde. Wer damit alle paar Jahre rechnet, sollte die Summe einmal ausschreiben — sie liegt regelmäßig im Bereich einer gehobenen Ausstattungslinie."
+        ],
+        [
+          "Wofür das Fahrgestell konstruktiv wirklich zählt",
+          "Es nimmt die Verwindung des Straßentransports auf, bestimmt Schwerpunkt und Verzurrpunkte und trägt das Gebäude bis zur Auflagerung auf dem Fundament. Diese Auslegung ist der Grund, warum ein transportiertes Gebäude anders gebaut wird als ein stehendes — nicht die Aussicht auf spätere Mobilität."
         ]
       ],
       "mistakes": [
@@ -231,6 +303,14 @@
         [
           "Zulassung mit Baurecht verwechseln",
           "Eine Straßenzulassung sagt etwas über die Fahrt aus, nichts über das Stehen. Es sind zwei getrennte Rechtsgebiete mit zwei getrennten Behörden."
+        ],
+        [
+          "Die Räder als Argument gegenüber der Behörde einsetzen",
+          "Es ist das erste Argument, das jede Bauaufsicht kennt und routiniert zurückweist. Es kostet Glaubwürdigkeit in einem Verfahren, in dem Glaubwürdigkeit hilft."
+        ],
+        [
+          "Das Fahrgestell nach dem Transport vergessen",
+          "Auch eine Einheit, die dauerhaft steht, hat ein Fahrgestell, das trocken liegen und belüftet sein muss. Aufgeschüttete Erde und stehendes Wasser am Sockel sind hier der häufigste Ausgangspunkt für Korrosion."
         ]
       ],
       "faq": [
@@ -264,6 +344,14 @@
         [
           "Eigene Produktion, eigene Möbelfertigung",
           "MODUNERA fertigt Stahlkonstruktion und Einbauten im eigenen Haus. Das ist der Grund, warum Maße dem tatsächlichen Grundriss folgen statt Katalogmodulen — und warum Änderungen vor der Produktion und nicht als Nachrüstung stattfinden."
+        ],
+        [
+          "Was Sie beim Hersteller nachfragen sollten",
+          "Wer die Stahlkonstruktion fertigt und wo, ob die Einbauten aus eigener Produktion oder zugekauft sind, welche Prüfungen vor dem Versand stattfinden und in welcher Form sie dokumentiert werden. Diese vier Fragen trennen einen Produzenten von einem Händler zuverlässiger als jede Preisliste."
+        ],
+        [
+          "Sprache, Zeitzone und Ansprechpartner",
+          "Ein Projekt über zwei Länder lebt von einem benannten Ansprechpartner und einem Kanal, auf dem Entscheidungen schriftlich festgehalten werden. Bei MODUNERA läuft das über WhatsApp und E-Mail; wichtig ist weniger das Medium als dass jede Spezifikationsänderung dort steht und nicht in einem Telefonat verschwindet."
         ]
       ],
       "mistakes": [
@@ -278,6 +366,14 @@
         [
           "Bei der Schweiz mit EU-Bedingungen rechnen",
           "Die Schweiz ist außerhalb der Zollunion. Wer die Einfuhrpositionen nicht vorher bestätigen lässt, bekommt sie an der Grenze."
+        ],
+        [
+          "Nach Fotos statt nach Spezifikation kaufen",
+          "Renderings und Referenzbilder zeigen eine mögliche Ausführung, nicht Ihre. Verbindlich ist die schriftliche Spezifikation, und nur sie."
+        ],
+        [
+          "Den Wechselkurs als Kalkulationsgrundlage nehmen",
+          "Preise werden in Euro vereinbart. Wer auf Kursbewegungen spekuliert, verhandelt über etwas, das im Vertrag ohnehin nicht steht."
         ]
       ],
       "faq": [
@@ -311,6 +407,14 @@
         [
           "Abdichtung an den Übergängen",
           "Nicht die Fläche versagt, sondern der Anschluss: Türschwelle, Duschtasse, Wandanschluss, Durchführungen. Diese Punkte werden in der Produktionsspezifikation festgelegt und bei der Endkontrolle geprüft."
+        ],
+        [
+          "Warmwasser: Speicher oder Durchlauf",
+          "Ein Durchlauferhitzer braucht eine hohe Anschlussleistung und ist bei Off-Grid-Betrieb kaum darstellbar. Ein Speicher braucht Platz und Standby-Energie, arbeitet dafür mit kleiner Leistung und lässt sich gut mit einer Wärmepumpe oder Solarthermie kombinieren. Die Entscheidung hängt am Anschluss, nicht am Komfort."
+        ],
+        [
+          "Wie viel Bad tatsächlich gebraucht wird",
+          "Für zwei Personen genügt in der Praxis eine Dusche mit 80 mal 80 Zentimetern, ein Waschtisch mit Unterschrank und eine Toilette. Jeder zusätzliche Zentimeter Bad fehlt im Wohnbereich. Wer vermietet, sollte dagegen nicht am Waschtisch sparen — dort wird Enge am schnellsten als Mangel wahrgenommen."
         ]
       ],
       "mistakes": [
@@ -325,6 +429,14 @@
         [
           "Die Tür nach innen öffnen lassen",
           "Auf kleiner Grundfläche blockiert eine nach innen schlagende Badtür regelmäßig genau die Fläche, auf der man stehen muss. Schiebetür oder Anschlagwechsel lösen das vor der Produktion."
+        ],
+        [
+          "Die Duschtasse bodengleich planen, ohne die Abdichtung mitzudenken",
+          "Bodengleich ist schön und im Tiny House gut machbar, aber nur mit einem Abdichtungsdetail, das im Werk ausgeführt und geprüft wird. Auf der Baustelle nachgerüstet ist es die häufigste Undichtigkeit im ganzen Haus."
+        ],
+        [
+          "Den Spiegelschrank als Stauraum einplanen",
+          "Er trägt Zahnbürsten, nicht Handtücher. Der eigentliche Badstauraum muss unter dem Waschtisch und in einer wandhohen Nische entstehen, sonst landet er im Wohnbereich."
         ]
       ],
       "faq": [
@@ -358,6 +470,14 @@
         [
           "Was in die Anfrage gehört",
           "Adresse und Flurstück, die geplante Nutzung in klaren Worten, Außenmaße, geplantes Fundament und die Frage nach Zulässigkeit und Verfahren. Und die Bitte um schriftliche Antwort — eine mündliche Auskunft am Schalter trägt kein Projekt, wenn achtzehn Monate später ein Nachbar widerspricht."
+        ],
+        [
+          "Was in den Antrag gehört",
+          "Lageplan mit Flurstück, Grundriss und Ansichten mit Maßen, Angaben zur Konstruktion und zum Aufbau, die geplante Nutzung, Angaben zur Erschließung und zum Fundament sowie Nachweise, die die Bauordnung des Landes verlangt. Die technischen Unterlagen dazu liefern wir; Lageplan und örtliche Planung erstellt ein Entwurfsverfasser vor Ort."
+        ],
+        [
+          "Vorbescheid statt Vollantrag",
+          "Wenn die Zulässigkeit unklar ist, klärt ein Bauvorbescheid die entscheidende Frage — darf hier so gebaut werden — bevor eine vollständige Planung bezahlt wird. Er kostet Gebühren und Zeit, aber deutlich weniger als ein abgelehnter Vollantrag, und seine Bindungswirkung gilt in der Regel mehrere Jahre."
         ]
       ],
       "mistakes": [
@@ -372,6 +492,14 @@
         [
           "Genehmigungsfreiheit mit Zulässigkeit verwechseln",
           "Verfahrensfrei heißt nicht erlaubt: Auch ein verfahrensfreies Vorhaben muss materiell zulässig sein. Diese Unterscheidung kostet regelmäßig ganze Projekte."
+        ],
+        [
+          "Den Entwurfsverfasser weglassen",
+          "In den meisten Bundesländern muss der Antrag von einer bauvorlageberechtigten Person eingereicht werden. Wer das erst nach der Bestellung erfährt, verliert Wochen."
+        ],
+        [
+          "Die Nutzung im Antrag kleiner beschreiben als geplant",
+          "Ein als Gartenhaus beantragtes Gebäude, in dem gewohnt wird, ist eine Nutzungsänderung ohne Genehmigung. Das fällt spätestens beim Verkauf oder im Schadensfall auf."
         ]
       ],
       "faq": [
@@ -405,6 +533,14 @@
         [
           "Stahlkonstruktion und Materialwahl",
           "Die tragende Konstruktion ist Stahl, nicht Holzständerwerk. Für die Dämmung, die Fassade und die Innenoberflächen wird die Materialwahl projektbezogen festgelegt; die Elektroinstallation wird halogenfrei ausgeführt."
+        ],
+        [
+          "Wo Rauchmelder tatsächlich hingehören",
+          "In den Schlafbereich, also ins Loft, und in den Flur beziehungsweise den Weg dorthin. Ein Melder in der Küche löst beim Anbraten aus und wird nach der dritten Nacht abgeklemmt — das ist der eigentliche Grund, aus dem Melder im Ernstfall nicht funktionieren. Der Küchenbereich braucht stattdessen einen Melder mit ausreichendem Abstand oder einen Hitzemelder."
+        ],
+        [
+          "Löschmittel und Fluchtplan",
+          "Ein Feuerlöscher am Ausgang und eine Löschdecke in der Küche kosten wenig und sind auf kleiner Fläche wirksam. Wichtiger ist, dass jeder im Haus weiß, wie das Loftfenster im Dunkeln zu öffnen ist — bei Vermietung gehört das in die Hausinformation."
         ]
       ],
       "mistakes": [
@@ -419,6 +555,14 @@
         [
           "Den Ofen ohne Abstandsprüfung planen",
           "Ein Kaminofen braucht Abstände, einen geprüften Schornstein und die Abnahme durch den Schornsteinfeger. Auf kleiner Fläche ist das eine Grundrissfrage, keine Nachrüstung."
+        ],
+        [
+          "Den Fluchtweg mit Möbeln zustellen",
+          "Auf 28 Quadratmetern ist jede Fläche knapp, und der Weg zur Tür wird als Erstes zugestellt. Der Grundriss muss diesen Weg als Fläche vorsehen, sonst verschwindet er."
+        ],
+        [
+          "Textilien direkt am Ofen platzieren",
+          "Vorhänge, Teppiche und Polster in Ofennähe sind bei kompakten Grundrissen die häufigste Abstandsverletzung. Die Abstände stehen in der Zulassung des Ofens und gehören in die Möblierungsplanung."
         ]
       ],
       "faq": [
@@ -452,6 +596,14 @@
         [
           "Wo es sich nicht lohnt",
           "In milden, schneefreien Lagen zahlt man Dachgeometrie und Aufbauhöhe mit, ohne den Vorteil zu nutzen. Dort bringt dasselbe Budget in MD 1 oder MD 3 mehr nutzbare Fläche."
+        ],
+        [
+          "Was das Steildach im Innenraum verändert",
+          "Die Firsthöhe schafft im Loft eine Zone zum Stehen und Anziehen statt einer reinen Liegefläche. Gleichzeitig verändert die Deckenneigung die Akustik: schräge Flächen streuen Schall besser als parallele. Beides zusammen ist der Grund, warum MD 6 innen größer wirkt, als die Grundfläche vermuten lässt."
+        ],
+        [
+          "Dachüberstand als Bauteil, nicht als Zierde",
+          "Ein ausreichender Überstand hält Schlagregen von Fassade und Fensteranschlüssen fern und beschattet im Sommer die oberen Fensterreihen. In schneereichen Lagen bestimmt er außerdem, wo die Dachlawine landet — das ist eine Planungsfrage für Eingang, Terrasse und Zuwegung."
         ]
       ],
       "mistakes": [
@@ -466,6 +618,14 @@
         [
           "Den Chalet-Charakter über den Grundriss stellen",
           "Ein schönes Dach ersetzt kein zweites Loft und keinen abschließbaren Raum. Erst die Nutzung, dann die Silhouette."
+        ],
+        [
+          "Den Schneeabgang nicht einplanen",
+          "Ein Steildach führt Schnee ab, und zwar dorthin, wo es ihn hinschickt. Eingang, Fenster und Verkehrsflächen darunter brauchen entweder Abstand oder ein Schneefanggitter."
+        ],
+        [
+          "Die Firsthöhe gegen die Transporthöhe abwägen zu vergessen",
+          "Mehr Aufbauhöhe heißt mehr Transporthöhe. Brücken, Torbögen, Oberleitungen und Äste auf der letzten Zufahrt gehören vor die Bestellung geprüft."
         ]
       ],
       "faq": [
@@ -499,6 +659,14 @@
         [
           "Der Fensteranteil ist der größte Einzelverlust",
           "In Dänemark und der Schweiz ist die verglaste Fläche häufig der größte einzelne Wärmeverlust des Hauses. Deshalb wird sie standortbezogen dimensioniert und nicht pauschal maximiert — auch bei einem Panoramamodell wie MD 1."
+        ],
+        [
+          "Warum die Luftdichtheitsebene wichtiger ist als das letzte Zentimeter",
+          "Konvektion durch eine undichte Fuge transportiert um Größenordnungen mehr Wärme und Feuchte als Wärmeleitung durch die Fläche. Deshalb entscheidet die Ausführung der Dichtebene an Fenstern, Durchführungen und Anschlüssen über den realen Verbrauch — und deshalb ist sie ein Werksdetail und keine Baustellenaufgabe."
+        ],
+        [
+          "Dachaufbau ist der kritischste Bereich",
+          "Nach oben ist die Temperaturdifferenz am größten, der Platz am knappsten und die Feuchtelast durch aufsteigende warme Luft am höchsten. Ein Dachaufbau, der Feuchte nicht abtrocknen lässt, produziert Schäden, die man erst sieht, wenn sie im Innenraum ankommen. Die Aufbaufolge wird deshalb vor der Produktion festgelegt."
         ]
       ],
       "mistakes": [
@@ -513,6 +681,14 @@
         [
           "Sommerlichen Wärmeschutz vergessen",
           "Dämmung hält auch Wärme drinnen. Verschattung, Fensterausrichtung und Nachtlüftung gehören zur selben Planung wie der Winterfall."
+        ],
+        [
+          "Dämmwerte verschiedener Anbieter direkt vergleichen",
+          "Ohne Angabe des Aufbaus, der Dichtebene und der Anschlussdetails ist ein U-Wert eine Zahl ohne Kontext. Fragen Sie nach dem Aufbau, nicht nach dem Wert."
+        ],
+        [
+          "Innen nachträglich dämmen",
+          "Eine nachträgliche Innendämmung verschiebt den Taupunkt nach innen und erzeugt genau dort Kondensat, wo sie den Aufbau schützen soll. Im Tiny House gehört die Dämmung ins Werk."
         ]
       ],
       "faq": [
@@ -546,6 +722,14 @@
         [
           "Nutzerverhalten schlägt Technik",
           "Zwei identische Häuser mit derselben Ausstattung können sich im Jahresverbrauch deutlich unterscheiden. Das ist kein Argument gegen gute Technik — es ist das Argument dafür, den Verbrauch zu messen statt zu schätzen."
+        ],
+        [
+          "Messen statt schätzen",
+          "Ein einfacher Zwischenzähler an Warmwasser, Heizung und Haushaltsstrom liefert nach einem Jahr belastbare Zahlen für genau Ihr Haus, Ihren Standort und Ihr Verhalten. Alles davor ist Modellierung. Wer vermietet, hat damit außerdem die Grundlage, um Nebenkosten realistisch zu kalkulieren statt zu raten."
+        ],
+        [
+          "Die Spitzenlast begrenzt das System, nicht der Jahresverbrauch",
+          "Wasserkocher, Herd, Boiler und Waschmaschine gleichzeitig ergeben eine Leistung, die weit über der mittleren Last liegt. Bei Netzanschluss bestimmt sie die Anschlussleistung, bei Off-Grid die Wechselrichtergröße. Wer nur mit Kilowattstunden rechnet, dimensioniert das falsche Bauteil."
         ]
       ],
       "mistakes": [
@@ -560,6 +744,14 @@
         [
           "Die Lüftungsanlage abschalten, um Strom zu sparen",
           "Der eingesparte Strom ist minimal, der Feuchteschaden nicht. Das ist die schlechteste Sparmaßnahme im ganzen Haus."
+        ],
+        [
+          "Standby-Verbraucher ignorieren",
+          "Router, Verstärker, Ladegeräte und ein zweiter Kühlschrank summieren sich in einem kleinen Haushalt zu einem spürbaren Anteil der Grundlast — und laufen genau dann, wenn im Winter am wenigsten Ertrag da ist."
+        ],
+        [
+          "Warmwasser aus der Rechnung lassen",
+          "In einem gut gedämmten kompakten Haus liegt der Warmwasserbedarf häufig über dem Heizbedarf. Wer nur die Heizung betrachtet, plant am größten Posten vorbei."
         ]
       ],
       "faq": [
@@ -593,6 +785,14 @@
         [
           "Der Grundriss muss mitwachsen",
           "Ein Zweijähriger und ein Zwölfjähriger brauchen unterschiedliche Häuser. Wer mit Kindern plant, sollte den Zeitraum realistisch benennen — für ein Kleinkind reicht MD 3, für zwei Schulkinder wird MD 2 zur Untergrenze."
+        ],
+        [
+          "Der Essplatz ist der eigentliche Mittelpunkt",
+          "Bei Familien ist der Tisch gleichzeitig Esstisch, Hausaufgabenplatz, Bastelfläche und gelegentlich Arbeitsplatz. Er braucht deshalb mehr Fläche und mehr Licht als ein Zweipersonenhaushalt einplanen würde — und er sollte nicht der Durchgang zwischen Küche und Tür sein."
+        ],
+        [
+          "Draußen ist Teil der Wohnfläche",
+          "Mit Kindern verschiebt sich der Alltag im Sommer nach draußen, und das entlastet den Innenraum spürbar. Eine überdachte Fläche verlängert diese Entlastung um Wochen, weil sie auch bei Regen nutzbar bleibt — das ist der familienbezogene Grund für MD 4, unabhängig von der Optik."
         ]
       ],
       "mistakes": [
@@ -607,6 +807,14 @@
         [
           "Den Eingangsbereich zu klein planen",
           "Vier Personen mit Jacken, Schuhen und Rucksäcken brauchen eine Ablagefläche. Ohne sie landet alles im Wohnbereich."
+        ],
+        [
+          "Kinderloft und Elternloft nebeneinander legen",
+          "Zwei Emporen an derselben Stirnseite sind akustisch ein Raum. Der Sinn von MD 2 liegt darin, dass der Wohnbereich zwischen ihnen liegt."
+        ],
+        [
+          "Ohne Ablagefläche im Eingang planen",
+          "Vier Personen mit Jacken, Schuhen, Rucksäcken und Sportsachen brauchen eine definierte Fläche. Ohne sie wandert alles davon in den Wohnbereich, und der wirkt sofort halb so groß."
         ]
       ],
       "faq": [
@@ -640,6 +848,14 @@
         [
           "Das Loftfenster ist auch Rettungsweg",
           "Im Schlafbereich sind Maß, Brüstungshöhe und Öffnungsart nicht nur eine Komfortfrage. Die konkreten Anforderungen setzt die Landesbauordnung; die Umsetzung muss vor der Produktion feststehen."
+        ],
+        [
+          "Öffnungsart entscheidet über die Nutzung",
+          "Dreh-Kipp erlaubt sichere Nachtlüftung, Schiebeelemente sparen den Flügelschwenk im Innenraum, Festverglasung ist am dichtesten und am günstigsten. In einem kompakten Grundriss ist der Schwenkbereich eines Flügels eine Fläche, die man nicht möblieren kann — das gehört in den Grundriss, nicht in die Fensterliste."
+        ],
+        [
+          "Verschattung gehört nach außen",
+          "Innenliegende Rollos halten die Wärme ab, nachdem sie durch das Glas ist. Außenliegende Verschattung, ein Dachüberstand oder eine Markise über der Veranda wirken um ein Vielfaches stärker. Bei großen Südflächen ist das keine Komfortentscheidung, sondern die Voraussetzung für Nutzbarkeit im Juli."
         ]
       ],
       "mistakes": [
@@ -654,6 +870,14 @@
         [
           "Fenster planen, die man nicht putzen kann",
           "Auf Höhe und über der Veranda muss man auch drankommen. Das klingt trivial und wird regelmäßig vergessen."
+        ],
+        [
+          "Fenstergriffe im Loft außer Reichweite planen",
+          "Ein Fenster, das man nur im Knien und mit Verrenkung öffnet, wird nicht geöffnet. Damit fällt gleichzeitig die Nachtauskühlung und der Rettungsweg aus."
+        ],
+        [
+          "Die Fensterbank als Ablage einplanen",
+          "Volle Fensterbänke blockieren die Lüftung und halten Feuchte an der kältesten Stelle des Raums. Genau dort entsteht Kondensat zuerst."
         ]
       ],
       "faq": [
@@ -687,6 +911,14 @@
         [
           "Standardisierte Zufahrt, standardisierte Entladung",
           "Der Vorteil eines Parks: Zufahrt, Untergrund und Anschlüsse sind meist vorbereitet. Der Nachteil: Aufstellfenster, Kranstandort und Termine gibt der Betreiber vor. Das gehört früh in die Lieferplanung."
+        ],
+        [
+          "Was die Platzordnung typischerweise regelt",
+          "Maße und Höhe der Einheit, zulässige Fassadenmaterialien und Farben, Terrassen- und Zaungrößen, Bepflanzung, Stellplätze, Ruhezeiten und die Frage, ob und über wen vermietet werden darf. Lesen Sie diese Punkte, bevor Sie konfigurieren — sie können ein fertig geplantes Objekt unzulässig machen."
+        ],
+        [
+          "Nebenkosten und Indexierung",
+          "Standplatzmiete ist selten die einzige Position: Nebenkostenumlage, Instandhaltungsbeitrag, Vermittlungsprovision und Indexklauseln kommen dazu. Über zehn Jahre summiert sich das zu einem Betrag, der die Kaufentscheidung mitbestimmen sollte. Lassen Sie sich die Entwicklung der letzten fünf Jahre zeigen."
         ]
       ],
       "mistakes": [
@@ -701,6 +933,14 @@
         [
           "Wiederverkauf nicht prüfen",
           "Manche Verträge binden den Verkauf an den Betreiber oder an den Standplatz. Das beeinflusst den Wiederverkaufswert erheblich."
+        ],
+        [
+          "Auf eine mündliche Zusage zur Vermietung bauen",
+          "Ob und über wen vermietet werden darf, steht im Vertrag. Eine Zusage am Telefon trägt kein Geschäftsmodell."
+        ],
+        [
+          "Den Wiederverkauf nicht prüfen",
+          "Manche Verträge binden den Verkauf an den Betreiber oder an den Standplatz und beeinflussen damit den erzielbaren Preis erheblich. Diese Klausel gehört vor die Unterschrift."
         ]
       ],
       "faq": [
@@ -734,6 +974,14 @@
         [
           "Wo Schäden zuerst auftreten",
           "An Wärmebrücken und hinter Möbeln an Außenwänden: Fensterlaibungen, Ecken, Auflagerpunkte, die Rückwand des Schranks. Wer diese Stellen einmal jährlich kontrolliert, findet fast jedes Problem, solange es noch klein ist."
+        ],
+        [
+          "Die Zielwerte, an denen man sich orientiert",
+          "Eine relative Luftfeuchte zwischen etwa 40 und 60 Prozent ist der Bereich, in dem weder Schimmel noch trockene Raumluft zum Problem werden. Ein Hygrometer für wenige Euro macht diesen Wert sichtbar und ist im Tiny House das nützlichste Messgerät überhaupt — er zeigt ein Problem, bevor die Wand es zeigt."
+        ],
+        [
+          "Winter und Sommer sind zwei verschiedene Fälle",
+          "Im Winter entsteht Kondensat an kalten Innenoberflächen, weil warme Raumluft viel Feuchte trägt. Im Sommer kann feuchte Außenluft an kühlen Flächen kondensieren — deshalb ist Dauerlüften an schwülen Tagen mit kühlem Keller- oder Bodenanschluss kontraproduktiv. Eine Lüftungsanlage regelt beides ohne Nachdenken."
         ]
       ],
       "mistakes": [
@@ -748,6 +996,14 @@
         [
           "Im Urlaub Heizung und Lüftung ganz abschalten",
           "Ein ausgekühltes, unbelüftetes Haus sammelt Feuchte an den kältesten Flächen. Frostwächterbetrieb und laufende Grundlüftung kosten wenig und verhindern viel."
+        ],
+        [
+          "Auf Luftentfeuchter statt Lüftung setzen",
+          "Ein Entfeuchter behandelt das Symptom, verbraucht Strom und ändert nichts an der Ursache. Er ist eine Notlösung nach einem Wasserschaden, kein Betriebskonzept."
+        ],
+        [
+          "Feuchte nur im Wohnbereich messen",
+          "Die kritischen Stellen liegen hinter Möbeln an Außenwänden, in Fensterlaibungen und im Loft. Dort ist es kälter und die Luft steht — dort beginnt jeder Schaden."
         ]
       ],
       "faq": [
@@ -781,6 +1037,14 @@
         [
           "Eigenkapital und Zahlungsplan",
           "Produktion, Transport und Fertigstellung laufen in Etappen. Ein Finanzierungsplan, der zum Zahlungsplan passt, verhindert Zwischenfinanzierungen — das gehört vor die Bestellung, nicht zwischen die Raten."
+        ],
+        [
+          "Was die Bank an Unterlagen sehen will",
+          "Kaufvertrag oder verbindliches Angebot mit Spezifikation, Nachweis über das Grundstück beziehungsweise den Standplatzvertrag, die Genehmigungslage, eine Aufstellung der Nebenkosten und den Zahlungsplan. Wer diese fünf Punkte vorbereitet in das Gespräch geht, bekommt eine Antwort statt einer Rückfrage."
+        ],
+        [
+          "Zahlungsplan und Zwischenfinanzierung",
+          "Produktion, Transport und Fertigstellung laufen in Etappen, und die Bank zahlt in der Regel gegen Nachweis. Wenn Zahlungsplan und Auszahlungsplan nicht zusammenpassen, entsteht eine Lücke, die zwischenfinanziert werden muss. Das lässt sich vorher abstimmen und kostet dann nichts."
         ]
       ],
       "mistakes": [
@@ -795,6 +1059,14 @@
         [
           "Förderungen als sicher einplanen",
           "Programme, Bedingungen und Budgets ändern sich. Eine Förderung ist ein möglicher Bonus, keine Kalkulationsgrundlage."
+        ],
+        [
+          "Das Grundstück und das Haus getrennt finanzieren wollen",
+          "Zwei Verträge mit zwei Sicherheiten und zwei Laufzeiten sind teurer und unflexibler als eine Gesamtbetrachtung. Sprechen Sie über das Projekt, nicht über die Einheit."
+        ],
+        [
+          "Die Restschuld am Ende der Zinsbindung ausblenden",
+          "Bei kurzen Laufzeiten und Ratenkrediten steht am Ende häufig eine Summe, die neu verhandelt werden muss. Rechnen Sie das Szenario einmal mit einem höheren Zins durch."
         ]
       ],
       "faq": [
@@ -828,6 +1100,14 @@
         [
           "Nutzung realistisch benennen",
           "Gästehaus, Einliegerwohnung, Homeoffice oder spätere Vermietung sind vier verschiedene Nutzungsarten mit vier verschiedenen Anforderungen. Wer die spätere Nutzung schon kennt, sollte sie im Antrag benennen — nachträgliche Nutzungsänderungen sind aufwendiger."
+        ],
+        [
+          "Abstandsflächen sind der häufigste Ablehnungsgrund",
+          "Jede bauliche Anlage hält Abstand zur Nachbargrenze, und die Tiefe ergibt sich aus der Wandhöhe und dem Landesrecht. Bei einem Zweitgebäude auf einem bereits bebauten Grundstück ist dieser Punkt fast immer der engste. Er lässt sich mit einem Lageplan und dem Maßstab in zehn Minuten selbst überschlagen."
+        ],
+        [
+          "Anschluss an das Bestandsgebäude oder eigenständig",
+          "Eine Erweiterung der vorhandenen Hausanschlüsse ist meist der günstigste Weg, macht das Gästehaus aber technisch abhängig vom Hauptgebäude. Eigene Zähler lohnen sich, sobald vermietet wird oder die Nutzung getrennt abgerechnet werden soll — das ist eine Entscheidung vor der Verlegung, nicht danach."
         ]
       ],
       "mistakes": [
@@ -842,6 +1122,14 @@
         [
           "Vermietung planen, aber Gästehaus beantragen",
           "Wenn die Vermietung von Anfang an vorgesehen ist, gehört sie in den Antrag. Eine spätere Nutzungsänderung ist der aufwendigere Weg."
+        ],
+        [
+          "Die Grundflächenzahl übersehen",
+          "Der Bebauungsplan begrenzt, wie viel des Grundstücks überbaut werden darf. Ein bereits ausgeschöpftes Maß lässt kein zweites Gebäude zu, egal wie klein es ist."
+        ],
+        [
+          "Den Baum auf dem Grundstück nicht prüfen",
+          "Baumschutzsatzungen und Wurzelbereiche schränken die Stellfläche häufiger ein, als man erwartet — und ein Kran braucht dazu noch freien Schwenkraum."
         ]
       ],
       "faq": [
@@ -875,6 +1163,14 @@
         [
           "Der Vorteil: Standortflexibilität",
           "Genau deshalb funktioniert das Konzept an saisonalen Orten — Marktplatz, Hofgelände, Festivalfläche, Badesee. Die Einheit ist versetzbar, das Genehmigungsthema wandert allerdings mit."
+        ],
+        [
+          "Personalräume und Lagerung",
+          "Lebensmittelhygienerecht verlangt getrennte Bereiche für Zubereitung, Lagerung und Reinigung sowie ein separates Handwaschbecken. Auf 28 Quadratmetern konkurriert das direkt mit der Verkaufsfläche. Häufig ist die Kombination aus Tiny House als Ausgabe und einem angrenzenden Lager- oder Sanitärmodul die einzige Konstellation, die alle Anforderungen erfüllt."
+        ],
+        [
+          "Öffnungszeiten, Saison und Standortbindung",
+          "Ein gastronomisches Konzept an einem saisonalen Standort verdient in wenigen Monaten die Jahreskosten. Die Genehmigungen sind dagegen standortgebunden und wandern nicht mit. Wer mehrere Standorte plant, plant mehrere Verfahren — das gehört in die erste Kalkulation."
         ]
       ],
       "mistakes": [
@@ -889,6 +1185,14 @@
         [
           "Stromlast der Küchentechnik unterschätzen",
           "Kühlung, Kaffeemaschine und Induktion zusammen sprengen jede Wohnhaus-Auslegung. Die Anschlussleistung gehört an den Anfang der Planung."
+        ],
+        [
+          "Die Fettabscheider- und Abwasserfrage aufschieben",
+          "Gastronomisches Abwasser unterliegt eigenen Anforderungen. Diese Klärung gehört an den Anfang, weil sie über den Standort mitentscheidet."
+        ],
+        [
+          "Die Anschlussleistung nach Wohnhausmaßstab planen",
+          "Kühlung, Kaffeemaschine und Induktion zusammen liegen weit über dem, was für ein kleines Wohnhaus beantragt wird. Eine nachträgliche Erhöhung dauert Wochen."
         ]
       ],
       "faq": [
@@ -922,6 +1226,14 @@
         [
           "Erschließung als eigenständige Bedingung",
           "Ein Vorhaben ist nur zulässig, wenn die Erschließung gesichert ist: Zufahrt, Wasser, Abwasser, Strom. Ein Grundstück ohne gesicherte Erschließung ist auch mit passender Ausweisung kein Bauplatz."
+        ],
+        [
+          "Der Unterschied zwischen den Verfahren",
+          "Die Baugenehmigung ist das vollständige Verfahren mit behördlicher Prüfung. Die Genehmigungsfreistellung gilt in einigen Ländern innerhalb eines Bebauungsplans, wenn das Vorhaben dessen Festsetzungen einhält — die Behörde prüft dann nicht, verzichtet aber auch auf nichts. Das vereinfachte Verfahren prüft einen reduzierten Umfang. Welches greift, steht in der Landesbauordnung."
+        ],
+        [
+          "Nachbarbeteiligung und Widerspruch",
+          "Nachbarn haben in vielen Verfahren ein Beteiligungsrecht, und ein Widerspruch kann ein genehmigtes Vorhaben monatelang aufhalten. Ein frühes Gespräch mit den direkten Nachbarn kostet nichts und löst mehr Konflikte als jede juristische Vorbereitung danach."
         ]
       ],
       "mistakes": [
@@ -936,6 +1248,14 @@
         [
           "Erschließung als Formsache behandeln",
           "Ohne gesicherte Erschließung ist ein Vorhaben unzulässig, egal wie gut alles andere passt."
+        ],
+        [
+          "Mit dem Bau vor der Bestandskraft beginnen",
+          "Eine erteilte Genehmigung ist erst nach Ablauf der Widerspruchsfrist bestandskräftig. Wer vorher liefert, trägt das Risiko allein."
+        ],
+        [
+          "Den Bebauungsplan nur im Internet lesen",
+          "Ausschnitte in Portalen sind oft unvollständig; die textlichen Festsetzungen und Ausnahmen stehen im vollständigen Plan bei der Gemeinde. Genau dort steht das, was das Projekt entscheidet."
         ]
       ],
       "faq": [
@@ -969,6 +1289,14 @@
         [
           "Der Außenraum ist Teil des Produkts",
           "Überdachte Veranda, Feuerstelle, Sichtschutz zum Nachbarplatz: Das ist der Unterschied zwischen einem Haus auf einer Wiese und einem Glamping-Erlebnis. MD 4 hat die Veranda deshalb im Grundriss und nicht als Anbau."
+        ],
+        [
+          "Was Gäste an einem Glamping-Objekt bewerten",
+          "Aussicht, Privatsphäre, Bett und Dusche — in dieser Reihenfolge. Ausstattung jenseits davon wirkt auf die Bewertung überraschend wenig ein. Ein Objekt mit einem sehr guten Bett und einer Dusche mit ausreichend Druck schlägt eines mit Designküche und Sichtkontakt zum Nachbarn regelmäßig."
+        ],
+        [
+          "Infrastruktur, die man leicht vergisst",
+          "Beleuchtete Wege bei Dunkelheit, Parkfläche in erreichbarer Nähe, Müllentsorgung, Netzabdeckung und im Zweifel ein Weg für den Rettungsdienst. Nichts davon steht auf einem Foto, alles davon entscheidet, ob die Anreise als angenehm erinnert wird."
         ]
       ],
       "mistakes": [
@@ -983,6 +1311,14 @@
         [
           "Sichtschutz vergessen",
           "Zwei Einheiten mit Blick ineinander halbieren den Erlebniswert beider. Das ist eine Standortplanung, keine Nachrüstung."
+        ],
+        [
+          "Die Anreise nur bei Tageslicht testen",
+          "Gäste kommen nach der Arbeit an, im Dunkeln, mit Gepäck und ohne Ortskenntnis. Ein Weg, der mittags charmant ist, ist um 22 Uhr im November eine schlechte Bewertung."
+        ],
+        [
+          "Ohne Winterkonzept in die zweite Saison gehen",
+          "Wer im Oktober schließt, verliert vier Monate Fixkosten. Winterfeste Auslegung ist die Investition, die aus einer Saison einen Betrieb macht."
         ]
       ],
       "faq": [
@@ -1016,6 +1352,14 @@
         [
           "Stauraum ist Möbel, kein Rest",
           "Die Treppe ist die größte einzelne Stauraumchance im Haus und wird bei uns als Möbel gebaut. Weil Küche, Bad, Einbauten und Treppe aus eigener Fertigung kommen, folgen die Maße dem tatsächlichen Grundriss statt Katalogmodulen."
+        ],
+        [
+          "Verkehrsfläche ist die teuerste Fläche",
+          "Jeder Quadratmeter, auf dem man nur läuft, fehlt zum Sitzen, Kochen oder Verstauen. Kompakte Grundrisse gewinnen dort, wo Bewegungswege kurz sind und mehrfach genutzt werden — die Fläche vor der Küchenzeile ist gleichzeitig der Weg zum Bad und zur Treppe. Zwei Menschen müssen aneinander vorbeikommen, mehr braucht es nicht."
+        ],
+        [
+          "Wo das Licht herkommt, entscheidet die Möblierung",
+          "Ein Raum mit Fenstern an beiden Stirnseiten möbliert sich völlig anders als einer mit einer großen Front. Bevor Möbelmaße besprochen werden, gehört festgelegt, wo gesessen, gearbeitet und gegessen wird — und zwar nach dem Licht zur Tageszeit, zu der man dort tatsächlich ist."
         ]
       ],
       "mistakes": [
@@ -1030,6 +1374,14 @@
         [
           "Möbel erst nach dem Haus planen",
           "Ein Sofa in Standardmaßen kann einen kompakten Grundriss unbrauchbar machen. Einbauten werden mit dem Grundriss zusammen entschieden."
+        ],
+        [
+          "Türen einplanen, die aneinanderstoßen",
+          "Auf kleiner Fläche kollidieren Bad-, Zimmer- und Eingangstür überraschend leicht. Schwenkrichtungen gehören maßstäblich geprüft, nicht geschätzt."
+        ],
+        [
+          "Den Grundriss ohne Möbel beurteilen",
+          "Ein leerer Grundriss wirkt immer großzügig. Zeichnen Sie Sofa, Tisch, Schrank und Bett maßstäblich ein, bevor Sie entscheiden."
         ]
       ],
       "faq": [
@@ -1063,6 +1415,14 @@
         [
           "Zufahrt, Untergrund, Hanglage",
           "Ein Tieflader braucht Breite, Wendekreis, Höhe und tragfähigen Untergrund; ein Kran braucht einen Stellplatz. Fotos und Maße der letzten hundert Meter gehören zur Grundstücksprüfung, nicht zur Lieferplanung."
+        ],
+        [
+          "Was im Grundbuch und im Baulastenverzeichnis steht",
+          "Wegerechte, Leitungsrechte, Abstandsflächenübernahmen und Baulasten können die nutzbare Fläche erheblich einschränken, ohne im Exposé zu stehen. Beides ist einsehbar und gehört zur Prüfung, bevor der Notartermin steht — ein Leitungsrecht quer über die geplante Stellfläche verschiebt das ganze Projekt."
+        ],
+        [
+          "Ausrichtung und Topografie",
+          "Nord- oder Südhang, Verschattung durch Bäume und Nachbargebäude, Wind aus der Hauptrichtung: Diese drei bestimmen Wohnqualität, Heizbedarf und Solarertrag über die gesamte Nutzungsdauer. Ein Besuch zu unterschiedlichen Tages- und Jahreszeiten sagt darüber mehr als jede Karte."
         ]
       ],
       "mistakes": [
@@ -1077,6 +1437,14 @@
         [
           "Die Zufahrt nur im Sommer ansehen",
           "Ein Feldweg im August und derselbe Weg im November sind zwei verschiedene Zufahrten. Auch für Gäste, wenn Sie vermieten wollen."
+        ],
+        [
+          "Altlasten und Baugrund nicht prüfen",
+          "Auffüllungen, schlechter Baugrund oder Altlasten ändern das Fundament und damit das Budget. Ein Bodengutachten ist im Verhältnis zum Kaufpreis günstig."
+        ],
+        [
+          "Auf die Erschließung des Nachbargrundstücks vertrauen",
+          "Ein Anschluss, der auf dem Nachbargrundstück liegt, ist nur mit gesichertem Recht nutzbar. Ohne Eintragung ist er ein Risiko."
         ]
       ],
       "faq": [
@@ -1110,6 +1478,14 @@
         [
           "Kaminofen ist Zusatz, nicht Grundlast",
           "Er erzeugt Atmosphäre und im Notfall Wärme ohne Strom, verlangt aber Abstände, einen geprüften Schornstein, die Abnahme durch den Schornsteinfeger und Platz für Holz. Auf 28 Quadratmetern ist das eine Grundrissentscheidung."
+        ],
+        [
+          "Vorlauftemperatur bestimmt die Effizienz",
+          "Eine Wärmepumpe arbeitet umso effizienter, je niedriger die Vorlauftemperatur ist. Fußbodenheizung erlaubt niedrige Vorläufe, Heizkörper verlangen höhere. Wer beides kombinieren will, muss die Auslegung auf die höhere Temperatur legen — und verliert damit einen Teil des Effizienzvorteils. Diese Entscheidung fällt vor der Produktion."
+        ],
+        [
+          "Frostwächter und Abwesenheitsbetrieb",
+          "Für Ferienobjekte ist nicht die Heizleistung entscheidend, sondern die Frage, wie das Haus die Wochen ohne Nutzer übersteht. Ein Frostwächterprogramm mit definierter Mindesttemperatur und laufender Grundlüftung verbraucht wenig und verhindert genau die Schäden, die im Frühjahr entdeckt werden."
         ]
       ],
       "mistakes": [
@@ -1124,6 +1500,14 @@
         [
           "Warmwasser separat betrachten",
           "In einem gut gedämmten kompakten Haus ist Warmwasser oft der größere Posten als das Heizen. Beides gehört in dieselbe Auslegung."
+        ],
+        [
+          "Die Wärmepumpe direkt neben dem Schlafbereich aufstellen",
+          "Das Außengerät hat einen Schallpegel, der nachts in einem kompakten Haus auffällt — und der Nachbar hört ihn auch. Aufstellort und Abstand gehören in die Planung."
+        ],
+        [
+          "Heizung und Warmwasser getrennt auslegen",
+          "Beide greifen auf dieselbe Erzeugung zu. Wer sie getrennt dimensioniert, bekommt entweder ein überdimensioniertes System oder kaltes Wasser am Sonntagmorgen."
         ]
       ],
       "faq": [
@@ -1157,6 +1541,14 @@
         [
           "Technik und Ergonomie",
           "Netzwerk, Steckdosen an der richtigen Stelle und eine Arbeitshöhe, an der man acht Stunden sitzen kann. Weil die Einbauten aus eigener Fertigung kommen, wird der Arbeitsplatz auf den Grundriss und die Person gemaßt statt auf ein Katalogmodul."
+        ],
+        [
+          "Was steuerlich für ein Arbeitszimmer verlangt wird",
+          "Ein steuerlich anerkanntes Arbeitszimmer ist in der Regel ein abgeschlossener, nahezu ausschließlich beruflich genutzter Raum. Ein Schreibtisch im Wohnbereich erfüllt das nicht. Ob und in welcher Höhe Kosten ansetzbar sind, klärt Ihre Steuerberatung — die bauliche Voraussetzung dafür ist aber eine Grundrissentscheidung, die vor der Produktion fällt."
+        ],
+        [
+          "Zwei Bildschirme, ein Kabelweg",
+          "Ein ernsthafter Arbeitsplatz braucht Steckdosen und Netzwerk an genau einer Stelle, ausreichend Tiefe für Monitore und eine Fläche, die nicht abends abgeräumt werden muss. Weil die Einbauten aus eigener Fertigung kommen, lässt sich der Tisch auf Tiefe und Höhe maßen — der Unterschied zwischen einem Arbeitsplatz und einer Ablage."
         ]
       ],
       "mistakes": [
@@ -1171,6 +1563,14 @@
         [
           "Nur an Strom denken, nicht an Netz",
           "Mobilfunk am Waldrand ist keine Arbeitsgrundlage. Prüfen Sie Verfügbarkeit und Alternativen vor dem Grundstückskauf."
+        ],
+        [
+          "Den Arbeitsplatz gegen das Fenster stellen",
+          "Im Videocall erscheint man als Silhouette, und den ganzen Tag gegen Gegenlicht zu arbeiten ermüdet. Seitliches Tageslicht ist die richtige Antwort."
+        ],
+        [
+          "Die Internetanbindung erst nach dem Grundstückskauf prüfen",
+          "Mobilfunkabdeckung am Waldrand ist keine Arbeitsgrundlage, und Glasfaser kommt nicht auf Zuruf. Diese Prüfung gehört vor den Notartermin."
         ]
       ],
       "faq": [
@@ -1204,6 +1604,14 @@
         [
           "Vorlauf entsteht nicht auf der Straße",
           "Die reine Fahrzeit liegt im Bereich weniger Tage. Der Gesamtvorlauf wird von Produktionsplanung, Dokumentation und dem Entladefenster am Ziel bestimmt — planen Sie diese drei, nicht die Kilometer."
+        ],
+        [
+          "Welche Unterlagen die Sendung begleiten",
+          "Handelsrechnung, Packliste, A.TR-Warenverkehrsbescheinigung, Transportdokument und die technische Dokumentation des Gebäudes. Fehlt eines davon, steht die Sendung — nicht wegen einer Prüfung, sondern weil die Anmeldung nicht abgeschlossen werden kann. Wir stellen die Unterlagen bereit, die Anmeldung übernimmt Ihre Zollagentur."
+        ],
+        [
+          "Incoterms bestimmen, wer was trägt",
+          "Ob Transport, Versicherung, Ausfuhr- und Einfuhrabwicklung beim Verkäufer oder beim Käufer liegen, regelt die vereinbarte Lieferklausel. Sie steht im Vertrag und entscheidet im Streitfall über Kosten und Verantwortung. Lesen Sie diese eine Zeile besonders genau — sie erklärt Preisunterschiede zwischen Angeboten häufiger als die Ausstattung."
         ]
       ],
       "mistakes": [
@@ -1218,6 +1626,14 @@
         [
           "Den Liefertermin vor der Genehmigung fixieren",
           "Ein Haus, das ankommt, bevor der Standort geklärt ist, verursacht Standkosten. Genehmigung und Produktion sollten parallel laufen, die Lieferung danach."
+        ],
+        [
+          "Die Einfuhrumsatzsteuer nicht liquiditätsseitig einplanen",
+          "Sie ist bei Vorsteuerabzugsberechtigung zwar durchlaufend, muss aber zunächst gezahlt werden. Das ist ein spürbarer Betrag zu einem ungünstigen Zeitpunkt."
+        ],
+        [
+          "Ohne Ansprechpartner für die Zollagentur arbeiten",
+          "Rückfragen bei der Anmeldung kommen kurzfristig und brauchen schnelle Antworten. Wer in dieser Phase nicht erreichbar ist, verlängert die Standzeit."
         ]
       ],
       "faq": [
@@ -1251,6 +1667,14 @@
         [
           "Wenige Materialien, konsequent",
           "Zwei bis drei Oberflächen im ganzen Haus wirken größer und ruhiger als sechs. Das ist der einfachste und billigste Gestaltungshebel in einem kompakten Volumen — und er hilft zusätzlich der Akustik, wenn Textilien dazukommen."
+        ],
+        [
+          "Licht in drei Ebenen planen",
+          "Grundlicht für den Raum, Arbeitslicht über Küche und Tisch, Stimmungslicht für den Abend. In einem kompakten Volumen erzeugt eine einzelne Deckenleuchte Schatten und lässt den Raum kleiner wirken; drei separat schaltbare Ebenen machen aus derselben Fläche mehrere Räume. Auslässe und Schalter stehen in der Elektroplanung fest, bevor die Wände geschlossen werden."
+        ],
+        [
+          "Spiegel und Sichtachsen gezielt einsetzen",
+          "Ein Spiegel gegenüber einem Fenster verdoppelt die wahrgenommene Tiefe und den Lichteintrag. Eine freie Sichtachse von der Tür bis zur gegenüberliegenden Fensterfront tut dasselbe ohne Bauteil. Beides kostet nichts und wirkt stärker als jede Farbwahl."
         ]
       ],
       "mistakes": [
@@ -1265,6 +1689,14 @@
         [
           "Beleuchtung erst am Ende planen",
           "Steckdosen und Auslässe liegen in der Elektroplanung fest. Nachträgliche Änderungen sind sichtbar und teuer."
+        ],
+        [
+          "Alles gleichzeitig entscheiden wollen",
+          "Grundriss, Technik, Oberflächen und Möbel haben eine Reihenfolge. Wer bei den Farben anfängt, muss sie dreimal ändern."
+        ],
+        [
+          "Offene Regale überall einplanen",
+          "Sie wirken leicht und sind akustisch nützlich, zeigen aber jede Unordnung. In einem kompakten Raum ist die Mischung aus geschlossenem Stauraum und wenigen offenen Flächen die belastbarere Lösung."
         ]
       ],
       "faq": [
@@ -1298,6 +1730,14 @@
         [
           "Was im Vertrag stehen sollte",
           "Spezifikation statt Prospekt, Zahlungsplan mit Meilensteinen, Liefer- und Entladebedingungen, Abnahmeverfahren, Gewährleistung und Ansprechpartner. Ein Vertrag, der die Ausstattung nicht benennt, verschiebt jeden Streit auf später."
+        ],
+        [
+          "Was eine belastbare Spezifikation enthält",
+          "Außenmaße und Gewicht, Aufbau von Boden, Wand und Dach, Dämmstoff und Stärke, Fenster mit Verglasung und Öffnungsart, Heizsystem und Leistung, Lüftung, Elektroinstallation, Sanitärobjekte, Einbauten mit Materialangabe, Fassade, Fahrgestell und Lieferumfang. Fehlt einer dieser Punkte, ist er später Verhandlungssache."
+        ],
+        [
+          "Abnahme und Mängelrüge",
+          "Vereinbaren Sie, wann und wie abgenommen wird — im Werk vor Verladung, bei Anlieferung oder nach Aufstellung — und in welcher Form Mängel festgehalten werden. Fotodokumentation vor Versand und ein Abnahmeprotokoll bei Übergabe sind der Unterschied zwischen einer sachlichen Klärung und einer Diskussion über Erinnerungen."
         ]
       ],
       "mistakes": [
@@ -1312,6 +1752,14 @@
         [
           "Sich auf Renderings verlassen",
           "Ein Bild ist keine Spezifikation. Lassen Sie sich die Ausstattung schriftlich geben."
+        ],
+        [
+          "Anzahlung ohne Meilensteine leisten",
+          "Ein Zahlungsplan, der an Produktionsfortschritt und Nachweise gekoppelt ist, schützt beide Seiten. Ein Plan, der nur an Daten hängt, schützt niemanden."
+        ],
+        [
+          "Änderungen mündlich vereinbaren",
+          "Jede Spezifikationsänderung gehört schriftlich in die Auftragsunterlage. Was nur besprochen wurde, wird nicht gebaut."
         ]
       ],
       "faq": [
@@ -1345,6 +1793,14 @@
         [
           "Landesrecht beachten",
           "Die Bauordnungen sind Ländersache. Rettungswege, Abstandsflächen, Anforderungen an Aufenthaltsräume und das anzuwendende Verfahren unterscheiden sich zwischen Bayern und Schleswig-Holstein deutlich."
+        ],
+        [
+          "Grunderwerbsteuer und Nebenkosten des Grundstücks",
+          "Beim Grundstückskauf kommen Grunderwerbsteuer, Notar- und Grundbuchkosten sowie gegebenenfalls Maklerprovision hinzu. Die Sätze unterscheiden sich je Bundesland deutlich. Diese Positionen stehen in keinem Tiny-House-Angebot und gehören trotzdem in dasselbe Budget."
+        ],
+        [
+          "Regionale Unterschiede beim Verfahren",
+          "In manchen Bundesländern gilt für kleine Vorhaben innerhalb eines Bebauungsplans die Genehmigungsfreistellung, in anderen nicht. Auch die Anforderungen an Rettungswege im Loft und die Definition eines Aufenthaltsraums unterscheiden sich. Fragen Sie nach der Landesbauordnung und nicht nach allgemeinen Regeln."
         ]
       ],
       "mistakes": [
@@ -1359,6 +1815,14 @@
         [
           "Mit der Bestellung auf die Genehmigung warten",
           "Beides parallel zu starten spart Monate — solange die Bestellung erst nach einer belastbaren Auskunft erfolgt."
+        ],
+        [
+          "Angebote aus verschiedenen Ländern ohne Lieferkosten vergleichen",
+          "Ein Werkspreis ohne Fracht, Abwicklung und Entladung ist keine Vergleichsgrundlage. Rechnen Sie alles bis zum abgesetzten Haus."
+        ],
+        [
+          "Die Gemeinde erst nach dem Grundstückskauf kontaktieren",
+          "Das ist in Deutschland der teuerste Fehler in diesem Themenfeld — und der einzige, der sich vollständig kostenlos vermeiden lässt."
         ]
       ],
       "faq": [
@@ -1392,6 +1856,14 @@
         [
           "Dunstabzug und Lüftung zusammendenken",
           "Kochen ist nach dem Duschen die zweitgrößte Feuchtequelle im Haus. Abluft nach außen oder Umluft mit funktionierender Wohnraumlüftung — beides ist planbar, aber es muss entschieden sein, bevor die Wand geschlossen ist."
+        ],
+        [
+          "Die Arbeitsdreieck-Regel gilt auch auf zwei Metern",
+          "Kühlschrank, Spüle und Kochfeld sollten in dieser Reihenfolge und ohne Kreuzung erreichbar sein. In einer Zeile heißt das: Kühlschrank außen, Spüle in der Mitte, Kochfeld am anderen Ende, mit Arbeitsfläche zwischen Spüle und Kochfeld. Wer das umdreht, trägt Töpfe über die Spüle."
+        ],
+        [
+          "Wasserdruck und Abfluss der Spüle",
+          "Bei Off-Grid-Betrieb oder langen Leitungswegen entscheidet die Pumpe über den empfundenen Komfort mehr als die Armatur. Und ein Abfluss, der nach dem Transport wieder Gefälle hat, ist ein Punkt der Endkontrolle — kein Detail, das man auf der Baustelle bemerkt haben möchte."
         ]
       ],
       "mistakes": [
@@ -1406,6 +1878,14 @@
         [
           "Den Dunstabzug nachrüsten wollen",
           "Die Durchführung durch die gedämmte Hülle gehört in die Produktionsspezifikation, nicht in eine spätere Bohrung."
+        ],
+        [
+          "Den Kühlschrank neben den Herd stellen",
+          "Auf kurzer Zeile ist das der häufigste Planungsfehler. Der Kühlschrank arbeitet gegen die Abwärme und verbraucht dauerhaft mehr."
+        ],
+        [
+          "Hängeschränke bis zur Decke weglassen",
+          "Die letzten dreißig Zentimeter unter der Decke sind der einzige Stauraum, der keiner Fläche im Weg steht. Sie wegzulassen ist in einem Tiny House eine teure Entscheidung."
         ]
       ],
       "faq": [
@@ -1439,6 +1919,14 @@
         [
           "Sommerwärme steigt nach oben",
           "Ohne Verschattung und Nachtlüftung wird das Loft im Juli der wärmste Ort im Haus. Ein zu öffnendes Fenster im Loft ist deshalb Komfort, Nachtauskühlung und im Ernstfall Rettungsweg in einem."
+        ],
+        [
+          "Absturzsicherung und Brüstung",
+          "Eine Empore braucht eine Brüstung oder Absturzsicherung, deren Höhe und Ausführung die Landesbauordnung vorgibt. Mit Kindern ist zusätzlich der Abstand zwischen den Füllstäben relevant. Das ist ein Werksdetail und keine nachträgliche Ergänzung — und es beeinflusst, wie offen das Loft zum Wohnraum wirkt."
+        ],
+        [
+          "Matratze, Belüftung und Kondensat",
+          "Eine Matratze direkt auf einer geschlossenen Plattform kann an der Unterseite Feuchte sammeln, weil die Luft dort steht. Ein Lattenrost oder eine belüftete Unterkonstruktion löst das dauerhaft. In einem kompakten, dichten Haus ist das einer der wenigen Punkte, an denen Schimmel dort entsteht, wo niemand hinsieht."
         ]
       ],
       "mistakes": [
@@ -1453,6 +1941,14 @@
         [
           "Für zwei Personen zwei Lofts bestellen",
           "Die zweite Empore ist selten nötig. MD 1 oder MD 5 bieten dann mehr Wohnfläche pro Euro."
+        ],
+        [
+          "Die Treppe steiler planen als man tatsächlich geht",
+          "Auf dem Plan spart eine steile Treppe Fläche. Im Alltag, mit Wäschekorb oder nachts, entscheidet sie darüber, ob das Loft genutzt wird."
+        ],
+        [
+          "Keine Steckdose im Loft vorsehen",
+          "Lampe, Telefon und Wecker brauchen Strom auf der Ebene, auf der geschlafen wird. Nachrüsten heißt hier: Kabel sichtbar an der Wand."
         ]
       ],
       "faq": [
@@ -1486,6 +1982,14 @@
         [
           "Aufstellort und Geräusch",
           "In einem kleinen Volumen steht die Anlage zwangsläufig nah am Wohnbereich. Aufstellort, Entkopplung und Nachtabsenkung gehören in die Planung — ein Gerät, das nachts stört, wird abgeschaltet und schützt dann nichts mehr."
+        ],
+        [
+          "Zentral oder dezentral",
+          "Eine zentrale Anlage mit Kanälen verteilt gleichmäßig und ist leise, braucht aber Platz für Gerät und Leitungen. Dezentrale Einzelgeräte in der Außenwand sparen Kanäle und sind einfacher, arbeiten aber paarweise im Wechsel und sind hörbarer. In einem Tiny House ist die Entscheidung vor allem eine Platzfrage — und sie fällt vor der Produktion."
+        ],
+        [
+          "Was die Anlage nicht kann",
+          "Sie ersetzt weder Dunstabzug beim Braten noch das Stoßlüften nach dem Duschen in einem Bad ohne eigenen Abluftpunkt. Sie hält den Grundzustand, und genau darin liegt ihr Wert: Sie verhindert die schleichende Feuchte, nicht die Spitze. Beides zusammen ergibt das Konzept."
         ]
       ],
       "mistakes": [
@@ -1500,6 +2004,14 @@
         [
           "Die Anlage im Urlaub ausschalten",
           "Ein unbelüftetes, ausgekühltes Haus sammelt Feuchte an den kältesten Flächen. Grundlüftung kostet wenig und verhindert viel."
+        ],
+        [
+          "Die Außenluftöffnung in Bodennähe platzieren",
+          "Ansaugung nahe am Boden holt Staub, Pollen und im Winter Schnee. Position und Höhe der Außendurchlässe gehören in die Planung."
+        ],
+        [
+          "Die Anlage nach Quadratmetern statt nach Personen auslegen",
+          "Der Luftwechsel folgt der Feuchte- und CO₂-Last, und die erzeugen Menschen. Zwei Personen in 28 Quadratmetern brauchen mehr Wechsel, als die Fläche vermuten lässt."
         ]
       ],
       "faq": [
@@ -1533,6 +2045,14 @@
         [
           "Innen: wenige Materialien, konsequent geführt",
           "Zwei bis drei Oberflächen im ganzen Haus wirken größer, ruhiger und teurer als sechs. In einem kompakten Volumen ist Zurückhaltung die wirksamste Gestaltungsstrategie."
+        ],
+        [
+          "Proportion schlägt Detail",
+          "Ob ein kompaktes Gebäude gut aussieht, entscheidet sich an drei Verhältnissen: Länge zu Höhe, Fensterfläche zu geschlossener Fläche und Dachüberstand zu Wandhöhe. Stimmen diese, trägt auch eine schlichte Fassade. Stimmen sie nicht, rettet kein Material die Ansicht."
+        ],
+        [
+          "Innen und außen als ein Entwurf",
+          "Wenn die Fassadenlinie im Innenraum eine Entsprechung hat — eine Fensterachse, die auf eine Möbelkante trifft, eine Materialfuge, die durchläuft — wirkt ein kleines Haus zusammenhängend statt zusammengesetzt. Das ist kostenlos, aber nur planbar, bevor gebaut wird."
         ]
       ],
       "mistakes": [
@@ -1547,6 +2067,14 @@
         [
           "Materialien mischen, um Charakter zu erzeugen",
           "Auf kleiner Fläche erzeugt das Unruhe statt Charakter. Weniger ist hier messbar mehr."
+        ],
+        [
+          "Dunkle Fassade ohne Verschattung wählen",
+          "Eine dunkle Fläche in Südlage heizt sich stark auf und gibt die Wärme abends an den Innenraum ab. Farbe, Ausrichtung und Verschattung sind eine Entscheidung."
+        ],
+        [
+          "Zu viele Fensterformate mischen",
+          "Drei verschiedene Fensterhöhen auf acht Metern Fassade wirken unruhig und verteuern gleichzeitig die Fertigung. Weniger Formate, konsequent gesetzt, sehen besser aus und kosten weniger."
         ]
       ],
       "faq": [
@@ -1580,6 +2108,14 @@
         [
           "Fläche ist der stärkste Hebel überhaupt",
           "28 statt 140 Quadratmeter bedeutet weniger Material, weniger Heizvolumen, weniger Instandhaltung und weniger versiegelte Fläche. Das ist der belastbarste Nachhaltigkeitsvorteil des Konzepts — und er entsteht ohne jede Zusatztechnik."
+        ],
+        [
+          "Flächenverbrauch und Versiegelung",
+          "Ein Punkt- oder Schraubfundament versiegelt einen Bruchteil dessen, was eine Bodenplatte versiegelt, und lässt sich rückstandsarm zurückbauen. Das ist der ökologische Vorteil, der bei Tiny Houses am seltensten genannt und am leichtesten nachzuweisen ist — und er hängt allein an der Fundamentwahl."
+        ],
+        [
+          "Rückbaubarkeit und Trennbarkeit",
+          "Ein Aufbau, dessen Schichten sich trennen lassen, ist am Ende der Nutzungsdauer verwertbar; ein verklebter Verbund ist es nicht. Stahl ist sortenrein trennbar und hat einen etablierten Recyclingweg. Die relevante Frage an jeden Hersteller lautet deshalb: Wie ist der Aufbau gefügt — geschraubt oder verklebt?"
         ]
       ],
       "mistakes": [
@@ -1594,6 +2130,14 @@
         [
           "Mit unbelegbaren Aussagen werben",
           "Wer keine Nachweise hat, sollte keine Zahlen nennen. Nachprüfbare Angaben sind das Einzige, was in diesem Feld trägt."
+        ],
+        [
+          "Ökobilanz nur über Materialien führen",
+          "Über die Nutzungsdauer dominiert der Betrieb. Eine Bilanz, die den Energieverbrauch ausklammert, ist keine Bilanz."
+        ],
+        [
+          "Mit Zertifikaten werben, die nicht das Gebäude betreffen",
+          "Ein Zertifikat für einen einzelnen Baustoff sagt nichts über das fertige Haus. Fragen Sie, worauf sich ein Nachweis genau bezieht."
         ]
       ],
       "faq": [
@@ -1627,6 +2171,14 @@
         [
           "Batterie überbrückt Stunden, keine Jahreszeiten",
           "Ein Speicher trägt über die Nacht und einen bewölkten Tag. Er trägt nicht über einen mitteleuropäischen Winter. Eine realistische Off-Grid-Planung kombiniert gute Hülle, passende Wärmepumpe, Solar für die Übergangszeit und eine definierte Rückfallebene."
+        ],
+        [
+          "Die Rückfallebene gehört in die Auslegung",
+          "Jedes autarke System braucht einen definierten Plan für den Fall, dass der Ertrag ausbleibt: ein Generator, ein Kaminofen, ein Notanschluss oder schlicht die Entscheidung, das Haus im Januar nicht zu nutzen. Wer diese Ebene nicht benennt, hat sie trotzdem — nur ungeplant und im ungünstigsten Moment."
+        ],
+        [
+          "Wasser ist der engere Flaschenhals als Strom",
+          "Strom lässt sich erzeugen und speichern. Trinkwasser in geprüfter Qualität und die rechtskonforme Abwasserentsorgung lassen sich das nur mit Genehmigung und laufender Kontrolle. In allen fünf Zielmärkten ist das der Punkt, an dem Autarkiepläne tatsächlich scheitern."
         ]
       ],
       "mistakes": [
@@ -1641,6 +2193,14 @@
         [
           "Elektrische Direktheizung im Off-Grid-Konzept",
           "Sie sprengt jede Batterieauslegung. In einem autarken Haus ist sie die teuerste denkbare Wärmequelle."
+        ],
+        [
+          "Die Eigenverbräuche der Anlage vergessen",
+          "Wechselrichter, Laderegler, Steuerung und Pumpen laufen durch. In einer kleinen Anlage ist dieser Eigenverbrauch ein spürbarer Anteil des Winterertrags."
+        ],
+        [
+          "Die Batterie im unbeheizten Bereich unterbringen",
+          "Kälte reduziert Kapazität und Lebensdauer erheblich. Der Aufstellort ist eine Auslegungsfrage, keine Restplatzverwertung."
         ]
       ],
       "faq": [
@@ -1674,6 +2234,14 @@
         [
           "Die Entfernung zum Netz ist die verborgene Variable",
           "Zwei identische Häuser auf zwei Grundstücken zwanzig Kilometer auseinander können sich um einen fünfstelligen Betrag unterscheiden — und nichts davon steckt im Haus."
+        ],
+        [
+          "Warum Ausstattungslinien sinnvoller sind als Einzelpositionen",
+          "Eine Linie legt Fassade, Oberflächen, Beschläge und Einbauten gemeinsam fest und ist deshalb sowohl in der Fertigung als auch im Ergebnis stimmiger als eine Liste einzeln gewählter Aufpreise. MD 8 existiert genau deshalb: dieselbe Grundfläche wie MD 7, aber die gehobene Linie als Ausgangspunkt statt als Aufpreisliste."
+        ],
+        [
+          "Wann ein Mehrpreis sich rechnet",
+          "Bei Dämmung, Lüftung und Verglasung über den Betrieb. Bei Ausstattungstiefe über Bewertungen, wenn vermietet wird. Bei Fassadenmaterial über den Wartungsaufwand. Rein optische Aufpreise ohne einen dieser drei Effekte sind Geschmacksentscheidungen — legitim, aber sie sollten als solche kalkuliert werden."
         ]
       ],
       "mistakes": [
@@ -1688,6 +2256,14 @@
         [
           "Nachträgliche Änderungen einplanen",
           "Änderungen vor Produktionsbeginn sind günstig, danach teuer und nach Auslieferung am teuersten."
+        ],
+        [
+          "Den Wiederverkaufswert ignorieren",
+          "Genehmigungslage, Standortbindung und Ausstattungstiefe bestimmen, was ein Objekt später wert ist. Das ist bei einer fünfstelligen Investition kein Nebenaspekt."
+        ],
+        [
+          "Preise ohne Stand und Gültigkeit vergleichen",
+          "Ein Preis ohne Datum und ohne Angabe, wie lange er gilt, ist eine Momentaufnahme. Fragen Sie nach der Bindungsfrist."
         ]
       ],
       "faq": [
@@ -1721,6 +2297,14 @@
         [
           "Wo sich Mehrpreis rechnet und wo nicht",
           "Dämmung, Lüftung und Verglasung zahlen sich über den Betrieb zurück. Ausstattungstiefe zahlt sich bei Vermietung über Bewertungen zurück. Rein optische Aufpreise tun weder das eine noch das andere."
+        ],
+        [
+          "Die Zehnjahresrechnung",
+          "Anschaffung, Erschließung und Nebenkosten am Anfang, danach Energie, Wasser, Wartung, Versicherung, Standplatz oder Grundsteuer und eine jährliche Rücklage. Über zehn Jahre entscheidet die zweite Gruppe häufig mehr über die Gesamtkosten als die Wahl zwischen zwei Modellen. Stellen Sie beide Spalten nebeneinander, bevor Sie entscheiden."
+        ],
+        [
+          "Was sich später kaum noch ändern lässt",
+          "Aufbau, Dämmung, Fensteranteil, Position der Installationswand und Fahrgestellauslegung. Alles davon ist im Werk günstig und danach teuer bis unmöglich. Küche, Oberflächen und Möbel dagegen lassen sich jederzeit tauschen. Wer sparen muss, spart bei der zweiten Gruppe."
         ]
       ],
       "mistakes": [
@@ -1735,6 +2319,14 @@
         [
           "Am Feuchteschutz sparen",
           "Die eingesparte Lüftungsanlage ist die teuerste Ersparnis im ganzen Projekt."
+        ],
+        [
+          "Die Kosten der Verzögerung nicht einrechnen",
+          "Ein Haus, das steht, während die Genehmigung fehlt, verursacht Standkosten, Zwischenfinanzierung und im schlechtesten Fall doppelten Transport."
+        ],
+        [
+          "Skonto und Zahlungsziel übersehen",
+          "Zahlungsbedingungen sind Teil des Preises. Ein Angebot mit besserem Zahlungsziel kann bei gleichem Betrag das günstigere sein."
         ]
       ],
       "faq": [
@@ -1768,6 +2360,14 @@
         [
           "Wäsche ist der zweite Posten",
           "Bettwäsche und Handtücher für vier Personen bei häufigem Wechsel rechtfertigen früh einen Vertrag mit einem Wäschedienst. Selbstwaschen bindet Zeit und blockiert bei einem Objekt ohne eigene Waschmaschine den Wechseltag."
+        ],
+        [
+          "Ein Wechsel in Schritten",
+          "Textilien abziehen, Bad, Küche, Böden, Oberflächen, Auffüllen der Verbrauchsmaterialien, Sichtkontrolle auf Schäden, Fotodokumentation. Wer diese Reihenfolge als Checkliste hinterlegt, bekommt gleichbleibende Qualität auch dann, wenn die Reinigung wechselt — und das ist bei Vermietung der eigentliche Qualitätsfaktor."
+        ],
+        [
+          "Was zwischen den Saisons ansteht",
+          "Fenster innen und außen, Lüftungsfilter, Duschabläufe und Silikonfugen, Textilien in die Wäsche, Matratzenschoner tauschen. Eine gründliche Runde vor und nach der Hauptsaison verhindert die schleichende Abnutzung, die sonst erst nach zwei Jahren als Gesamteindruck auffällt."
         ]
       ],
       "mistakes": [
@@ -1782,6 +2382,14 @@
         [
           "Keinen Puffer zwischen Buchungen lassen",
           "Ein zu enger Wechsel produziert genau die Beschwerden, die Bewertungen kosten."
+        ],
+        [
+          "Dampfreiniger auf Holzoberflächen einsetzen",
+          "Feuchte und Hitze zusammen lösen Verklebungen und lassen Oberflächen aufquellen. In einem Haus mit vielen Holzeinbauten ist das der schnellste Weg zu sichtbarem Verschleiß."
+        ],
+        [
+          "Ohne Schadensdokumentation arbeiten",
+          "Ein Foto nach jedem Wechsel klärt später, wann ein Schaden entstanden ist. Ohne diese Routine ist jede Diskussion mit Gast oder Versicherung offen."
         ]
       ],
       "faq": [
@@ -1815,6 +2423,14 @@
         [
           "Mehrere Einheiten verbessern die Rechnung",
           "Ab der zweiten Einheit amortisieren sich Reinigungsrouten, Wäscheverträge und Wartungsbesuche. Deshalb ist die Erweiterbarkeit des Standorts ein wirtschaftliches Kriterium und nicht nur ein Wunsch."
+        ],
+        [
+          "Auslastung ist eine Verteilung, kein Mittelwert",
+          "Sechzig Prozent Jahresauslastung können bedeuten: volle Sommermonate und leerer Winter, oder gleichmäßige Wochenenden. Beide führen zu völlig unterschiedlichen Reinigungs-, Wäsche- und Verwaltungskosten bei identischem Umsatz. Kalkulieren Sie mit einem Monatsprofil, nicht mit einer Jahreszahl."
+        ],
+        [
+          "Steuerliche Einordnung ändert das Ergebnis",
+          "Ob die Vermietung als private Vermögensverwaltung oder als gewerbliche Tätigkeit gilt, hängt unter anderem von Umfang und Zusatzleistungen ab und wirkt sich auf Steuer und Abschreibung aus. Diese Frage gehört vor die Investition zur Steuerberatung — nicht in die erste Steuererklärung danach."
         ]
       ],
       "mistakes": [
@@ -1829,6 +2445,14 @@
         [
           "Die Regulierung nach der Investition prüfen",
           "Eine Nächtebegrenzung oder Anzeigepflicht kann das Geschäftsmodell nachträglich halbieren."
+        ],
+        [
+          "Die eigene Arbeitszeit nicht bewerten",
+          "Kommunikation, Wechsel, Wartung und Buchhaltung sind Stunden. Wer sie mit null ansetzt, rechnet eine Rendite aus, die es so nicht gibt."
+        ],
+        [
+          "Nur eine Plattform nutzen",
+          "Eine Änderung an Ranking oder Gebühren einer Plattform trifft dann den gesamten Umsatz. Zweitkanal und Direktbuchung sind Risikostreuung."
         ]
       ],
       "faq": [
@@ -1862,6 +2486,14 @@
         [
           "Der Stil passt zur Auslegung",
           "Nordische Standorte verlangen ohnehin lange Heizperioden, Windschutz und Lüftung mit Wärmerückgewinnung. Ein Modell wie MD 6 verbindet diese technische Auslegung mit der Silhouette, die dort erwartet wird."
+        ],
+        [
+          "Kunstlicht ist im Norden die halbe Miete",
+          "Wo das Tageslicht von November bis Februar knapp ist, trägt das Kunstlicht den Innenraum. Warme Farbtemperatur, mehrere schaltbare Ebenen und indirektes Licht an der Decke verhindern das Gefühl, ab 16 Uhr in einer Höhle zu sitzen. Das ist der Teil des Stils, den man auf Fotos nicht sieht und im Januar sofort merkt."
+        ],
+        [
+          "Der Übergang nach draußen zählt doppelt",
+          "Eine Terrasse oder Veranda, die auf dem gleichen Niveau wie der Innenraum liegt, verlängert den Blick und wirkt schon im März wie zusätzlicher Raum — auch wenn man erst im Mai draußen sitzt. Schwellenlose Übergänge sind deshalb im Norden kein Komfortdetail, sondern eine Raumwirkung."
         ]
       ],
       "mistakes": [
@@ -1876,6 +2508,14 @@
         [
           "Textilien weglassen",
           "Sie sind gleichzeitig Stilmittel, Akustikmaßnahme und Wärmeempfinden. In einem harten, hellen Raum fehlen sie sofort."
+        ],
+        [
+          "Kaltweißes Licht einsetzen, weil es heller wirkt",
+          "Es wirkt heller und gleichzeitig ungemütlich. In einem kleinen, hellen Innenraum kippt das Ergebnis dadurch von skandinavisch zu klinisch."
+        ],
+        [
+          "Nur helle Böden wählen",
+          "Ein durchgehend heller Boden zeigt in einem Haushalt mit Außenbereich jeden Schuhabdruck. Ein etwas dunklerer oder gemusterter Eingangsbereich löst das ohne Stilbruch."
         ]
       ],
       "faq": [
@@ -1909,6 +2549,14 @@
         [
           "Wartungsarm statt wartungsfrei",
           "Fassade, Dach und Rinnen brauchen einmal im Jahr eine Kontrolle. Wer das nicht selbst machen will oder kann, sollte eine beschichtete Fassade und einen Wartungsvertrag von Anfang an einplanen."
+        ],
+        [
+          "Licht, Kontrast und Blendung",
+          "Mit dem Alter steigt der Lichtbedarf deutlich, und gleichzeitig stört Blendung stärker. Hohe Beleuchtungsstärke an Küche, Bad und Treppe, Kontraste an Kanten und Stufen sowie blendfreie Leuchten sind wirksamer als jede Griffstange. Diese Punkte kosten in der Planung nichts und lassen sich später nur mit sichtbarem Aufwand nachrüsten."
+        ],
+        [
+          "Wartung und Hilfe organisieren",
+          "Ein kompaktes Haus verlangt einmal jährlich eine Kontrolle von Dach, Rinnen und Fensteranschlüssen — Arbeiten in Höhe, die man nicht ewig selbst macht. Ein Wartungsvertrag von Anfang an, eine beschichtete statt einer zu pflegenden Fassade und eine Zufahrt, die im Winter geräumt wird, gehören zur Entscheidung dazu."
         ]
       ],
       "mistakes": [
@@ -1923,6 +2571,14 @@
         [
           "Die Zufahrt im Winter nicht bedenken",
           "Ein Feldweg ist im Notfall auch die Zufahrt für den Rettungsdienst."
+        ],
+        [
+          "Die Dusche mit hoher Tasse planen",
+          "Eine bodengleiche Dusche ist im Werk günstig herzustellen und später der Unterschied zwischen nutzbar und nicht nutzbar. Nachträglich ist sie im Tiny House kaum umsetzbar."
+        ],
+        [
+          "Nur den heutigen Zustand planen",
+          "Ein Grundriss für ein Jahrzehnt sollte den Fall mitdenken, dass eine Treppe irgendwann nicht mehr täglich gegangen wird. Das ist eine Modellentscheidung, keine Ausstattungsfrage."
         ]
       ],
       "faq": [
@@ -1956,6 +2612,14 @@
         [
           "Lokal statt cloudabhängig",
           "Ein Standort mit schwachem Netz und ein System, das ohne Cloud nicht heizt, sind eine schlechte Kombination. Achten Sie auf lokale Steuerbarkeit — besonders bei Ferien- und Vermietungsobjekten."
+        ],
+        [
+          "Fernüberwachung ist der eigentliche Nutzen",
+          "Bei einem Ferien- oder Vermietungsobjekt liegt der Wert nicht in der Bequemlichkeit, sondern in der Information: Temperatur unter Frostgrenze, Feuchte über Schwellwert, Wasser am Boden, Tür offen geblieben. Vier Meldungen, die alle einen Schaden verhindern, der um ein Vielfaches teurer wäre als die Sensorik."
+        ],
+        [
+          "Strom, Netz und Ausfallverhalten",
+          "Jede Komponente braucht Strom und die meisten ein Netz. Entscheidend ist, was passiert, wenn eines von beidem fehlt: Ein Thermostat, das ohne Verbindung auf einer sicheren Temperatur weiterregelt, ist brauchbar; eines, das dann gar nichts tut, ist ein Risiko. Diese Frage gehört vor die Produktauswahl."
         ]
       ],
       "mistakes": [
@@ -1970,6 +2634,14 @@
         [
           "Wassermelder weglassen",
           "Der günstigste Sensor im Haus verhindert den teuersten Schaden. Unter Spüle und Dusche gehört je einer hin."
+        ],
+        [
+          "Zutrittscodes nicht rotieren",
+          "Ein Code, den fünfzig Gäste kennen, ist kein Zutrittsschutz. Wechselnde Codes pro Buchung sind der halbe Grund, warum das System überhaupt sinnvoll ist."
+        ],
+        [
+          "Sensorik ohne Alarmierung installieren",
+          "Ein Wassermelder, dessen Meldung niemand bekommt, ist ein Stück Plastik unter der Spüle. Meldeweg und Empfänger gehören mit eingerichtet."
         ]
       ],
       "faq": [
@@ -2003,6 +2675,14 @@
         [
           "Netzgekoppelt ist meist die bessere Rechnung",
           "Solar auf einem angeschlossenen Haus senkt die Betriebskosten ohne Batterieaufwand und ohne Winterrisiko. Vollständige Autarkie ist eine deutlich teurere Entscheidung, die man bewusst treffen sollte."
+        ],
+        [
+          "Ausrichtung und Neigung im Winter",
+          "Für den Winterertrag ist eine steilere Neigung günstiger als die im Jahresmittel optimale, weil die Sonne flach steht und Schnee abrutscht. Bei einem Flachdachmodell heißt das aufgeständert; bei MD 6 mit Steildach ergibt sich die Neigung ohnehin. Wer auf Jahresertrag optimiert, verliert genau in den Monaten, in denen der Ertrag gebraucht wird."
+        ],
+        [
+          "Einspeisung, Eigenverbrauch oder Insel",
+          "Netzgekoppelt mit Eigenverbrauch ist wirtschaftlich fast immer die beste Variante: kein Batterieaufwand, kein Winterrisiko, jede erzeugte Kilowattstunde spart eine gekaufte. Eine Inselanlage ist eine Entscheidung für Unabhängigkeit, nicht für Wirtschaftlichkeit — und sie sollte bewusst so getroffen werden."
         ]
       ],
       "mistakes": [
@@ -2017,6 +2697,14 @@
         [
           "Speicher ohne Lastprofil dimensionieren",
           "Ein Speicher, der die Grundlast trägt, aber die Spitzen nicht, ist im Alltag nutzlos."
+        ],
+        [
+          "Module flach auf ein Flachdach legen",
+          "Flach liegende Module verschmutzen, werden nicht vom Regen gereinigt und liefern im Winter besonders wenig. Eine Aufständerung ist keine Option, sondern die Voraussetzung."
+        ],
+        [
+          "Die Dachlast nicht mitrechnen",
+          "Module, Unterkonstruktion und im Winter Schnee darauf sind eine zusätzliche Last. Sie gehört in die Statik, nicht auf das fertige Dach."
         ]
       ],
       "faq": [
@@ -2050,6 +2738,14 @@
         [
           "Speichermasse ist begrenzt",
           "Ein leichtes, transportables Gebäude hat wenig Speichermasse. Es erwärmt sich schneller als ein massives Haus und kühlt schneller ab. Das ist ein Nachteil am Tag und ein Vorteil in der Nacht — vorausgesetzt, man nutzt ihn."
+        ],
+        [
+          "Querlüftung braucht zwei Öffnungen",
+          "Ein einzelnes gekipptes Fenster erzeugt kaum Luftwechsel. Zwei gegenüberliegende Öffnungen — idealerweise eine unten und eine im Loft — erzeugen einen Kamineffekt, der ein kompaktes Haus in einer kühlen Nacht spürbar auskühlt. Das ist eine Grundrissentscheidung, keine Bedienungsanleitung."
+        ],
+        [
+          "Wo Verschattung am meisten bringt",
+          "An der Ost- und Westfassade, weil die Sonne dort flach einfällt und ein Dachüberstand nichts nützt. Nach Süden wirkt ein ausreichender Überstand im Sommer sehr gut und lässt im Winter die tief stehende Sonne herein. Wer nur nach Süden verschattet, verschattet an der falschen Stelle."
         ]
       ],
       "mistakes": [
@@ -2064,6 +2760,14 @@
         [
           "Das Loftfenster nicht öffenbar planen",
           "Ohne Nachtauskühlung ist das Loft im Sommer der unbrauchbarste Raum des Hauses."
+        ],
+        [
+          "Tagsüber lüften",
+          "Wer bei 32 Grad die Fenster öffnet, holt Wärme herein. Ein kompaktes Haus wird tagsüber geschlossen und beschattet und nachts gelüftet — genau umgekehrt zum Reflex."
+        ],
+        [
+          "Das Loft im Sommer als Schlafplatz voraussetzen",
+          "Warme Luft steigt. Ohne Nachtauskühlung und öffenbares Fenster ist das Loft im Hochsommer der unbrauchbarste Raum im Haus."
         ]
       ],
       "faq": [
@@ -2097,6 +2801,14 @@
         [
           "Wärmebrücken werden mitgeplant",
           "Stahl leitet Wärme besser als Holz. Deshalb gehören thermische Trennung an Auflagerpunkten und die Ausbildung der Anschlüsse zur Auslegung — sonst gibt der Aufbau an den Details zurück, was er an der Fläche gewinnt."
+        ],
+        [
+          "Warum die Verbindungen zählen",
+          "Ein Stahlrahmen ist so gut wie seine Knoten. Verschraubte Verbindungen lassen sich prüfen, nachziehen und am Ende der Nutzungsdauer trennen; geschweißte sind steifer, aber nach dem Verzinken nicht mehr ohne Nacharbeit veränderbar. Die Ausführung wird in der Produktionsspezifikation festgelegt und vor Versand geprüft."
+        ],
+        [
+          "Auflagerpunkte bestimmen das Fundament",
+          "Wo die Konstruktion ihre Lasten abgibt, entscheidet über Zahl und Lage der Fundamentpunkte. Diese Angaben liefern wir, damit der lokale Betrieb das Fundament dazu passend herstellt — nicht umgekehrt. Ein Fundament, das nach Augenmaß gesetzt wurde, ist der häufigste Grund für Verzug bei der Aufstellung."
         ]
       ],
       "mistakes": [
@@ -2111,6 +2823,14 @@
         [
           "Nachträglich in die Konstruktion bohren",
           "Durchdringungen des Tragwerks und der Dichtebene gehören in die Produktionsspezifikation, nicht auf die Baustelle."
+        ],
+        [
+          "Den Rahmen direkt auf Erdreich auflegen",
+          "Dauerfeuchte am Auflagerpunkt ist die einzige Situation, in der auch eine verzinkte Konstruktion vorzeitig leidet. Der Aufbau muss trocken liegen und belüftet sein."
+        ],
+        [
+          "Nach dem Verzinken bohren oder schweißen",
+          "Jede spätere Bearbeitung durchtrennt die Schutzschicht. Wenn Durchdringungen nötig sind, gehören sie in die Werksplanung."
         ]
       ],
       "faq": [
@@ -2144,6 +2864,14 @@
         [
           "Saisonales und tägliches trennen",
           "Winterkleidung, Sportgeräte und Werkzeug gehören nicht in dieselbe Fläche wie das, was täglich gebraucht wird. Wer keinen externen Lagerort hat, sollte diese Menge ehrlich einschätzen, bevor das Modell gewählt wird."
+        ],
+        [
+          "Der Ort, an dem Dinge zuerst liegenbleiben",
+          "Zwischen Tür und Küche. Wenn dort keine definierte Ablage mit Haken, Fläche und einem Platz für Schuhe existiert, entsteht sie trotzdem — nur ungeplant und im Blickfeld. Eine halbhohe Bank mit Klappe an dieser Stelle löst mehr Unordnung als jeder zusätzliche Schrank an anderer Stelle."
+        ],
+        [
+          "Saisonales gehört ausgelagert oder eingeplant",
+          "Winterreifen, Gartenmöbel, Werkzeug, Weihnachtskiste: Dieser Bedarf verschwindet nicht dadurch, dass man kleiner wohnt. Entweder gibt es ein Nebengebäude, einen Kellerersatz oder einen externen Lagerplatz — oder er muss im Grundriss stehen. Ihn zu ignorieren ist der häufigste Grund, warum ein Tiny House nach zwei Jahren zu klein wirkt."
         ]
       ],
       "mistakes": [
@@ -2158,6 +2886,14 @@
         [
           "Nur an Kleidung denken",
           "Werkzeug, Vorräte, Reinigungsmittel, Bettwäsche und Saisonales brauchen ebenfalls definierte Plätze."
+        ],
+        [
+          "Nur nach Volumen planen, nicht nach Zugriff",
+          "Ein tiefer Stauraum, an dessen hinteres Drittel man nicht kommt, ist zu zwei Dritteln nutzbar. Auszüge statt Türen lösen das dort, wo es zählt."
+        ],
+        [
+          "Die Bettfläche im Loft nicht als Stauraum nutzen",
+          "Unter einer erhöhten Liegefläche oder in Schubladen am Fußende steckt der am leichtesten zu gewinnende Stauraum im ganzen Haus."
         ]
       ],
       "faq": [
@@ -2191,6 +2927,14 @@
         [
           "Miete, Laufzeit, Kündigung",
           "Ein Standplatzvertrag mit kurzer Laufzeit unter einem Haus, dessen Umsetzung fünfstellig kostet, ist ein Risiko. Laufzeit, Verlängerung, Kündigungsfristen und Preisanpassung gehören geprüft, bevor das Haus bestellt wird."
+        ],
+        [
+          "Was ein Standplatzvertrag regeln sollte",
+          "Laufzeit und Verlängerung, Kündigungsfristen beider Seiten, Preisanpassung, Nebenkosten, Vorgaben zu Maßen und Fassade, Vermietungsrecht, Übertragbarkeit bei Verkauf und die Regelung für den Fall, dass der Platz den Betrieb einstellt. Die letzten beiden Punkte fehlen am häufigsten und wiegen am schwersten."
+        ],
+        [
+          "Tiny-House-Siedlungen als eigene Kategorie",
+          "Sie lösen die Zulässigkeitsfrage, weil sie sie im Bebauungsplan bereits geklärt haben, und bringen Infrastruktur mit. Dafür gelten Gestaltungsvorgaben, Gemeinschaftsregeln und ein Preis, der über einem gewöhnlichen Grundstück liegen kann. Für Dauerwohnen ist das häufig der schnellste realistische Weg in Deutschland."
         ]
       ],
       "mistakes": [
@@ -2205,6 +2949,14 @@
         [
           "Die Erschließung des Stellplatzes nicht prüfen",
           "Auch auf einem Platz sind Anschlusspunkte, Leistung und Kosten unterschiedlich. Fragen Sie konkret nach."
+        ],
+        [
+          "Den Platz nur im Sommer besichtigen",
+          "Belegung, Geräusch, Zufahrt und Atmosphäre unterscheiden sich zwischen August und Februar erheblich. Fahren Sie zweimal hin."
+        ],
+        [
+          "Nachbarschaft und Abstand nicht prüfen",
+          "Auf verdichteten Plätzen entscheidet der Abstand zur nächsten Einheit über Wohnqualität und, bei Vermietung, über den Nachtpreis."
         ]
       ],
       "faq": [
@@ -2238,6 +2990,14 @@
         [
           "Entfernung ist der Kostenfaktor",
           "Wie beim Abwasser bestimmt fast ausschließlich die Distanz zum bestehenden Netz die Anschlusskosten. Der örtliche Netzbetreiber nennt sie für Ihre konkrete Adresse — kostenlos und vor dem Grundstückskauf."
+        ],
+        [
+          "Zählerplatz und Verteilung",
+          "Der Zählerschrank braucht einen definierten, zugänglichen Platz nach den Vorgaben des Netzbetreibers — bei einem kompakten Haus ist das eine Grundrissfrage, weil er weder im Bad noch hinter einem Schrank stehen darf. Die Unterverteilung im Haus sollte ausreichend Reserveplätze haben, damit spätere Erweiterungen ohne Tausch möglich sind."
+        ],
+        [
+          "Ladepunkt fürs Auto mitdenken",
+          "Eine Wallbox verdoppelt in der Spitze die Anschlussleistung eines kleinen Hauses. Wer sie jetzt oder später will, sollte sie beim Anschlussantrag mit angeben und die Leitung mitverlegen — beides ist im Zuge der Erstinstallation ein Bruchteil dessen, was die Nachrüstung kostet."
         ]
       ],
       "mistakes": [
@@ -2252,6 +3012,14 @@
         [
           "Im Ausland mit deutschen Normen planen",
           "Anschluss und Abnahme erfolgen nach lokalem Recht durch eine dort zugelassene Fachkraft."
+        ],
+        [
+          "Nur eine Steckdosenreihe pro Wand einplanen",
+          "Auf kleiner Fläche stehen Möbel dicht, und jede verdeckte Steckdose ist verloren. Positionen gehören mit der Möblierung zusammen festgelegt."
+        ],
+        [
+          "Außensteckdosen vergessen",
+          "Terrasse, Beleuchtung, Werkzeug und im Vermietungsbetrieb der Hochdruckreiniger brauchen einen Außenanschluss. Nachrüsten heißt: Durchdringung der gedämmten Hülle."
         ]
       ],
       "faq": [
@@ -2285,6 +3053,14 @@
         [
           "Wartung heißt hier vor allem Hinschauen",
           "Sichtkontrolle einmal jährlich: Anschlüsse, Entwässerung, Übergänge um Fenster, Sockelbereich. Wo Wasser abtrocknen kann, hält die Fassade lange. Wo es steht, entstehen die Probleme — unabhängig vom Material."
+        ],
+        [
+          "Warum die Verlegerichtung zählt",
+          "Horizontale Schalung leitet Wasser an jeder Fuge entlang, vertikale lässt es ablaufen. In schlagregenreichen Lagen ist die Verlegerichtung deshalb kein Stilthema, sondern eine Frage der Trocknungsfähigkeit — und sie bestimmt zusammen mit der Hinterlüftung, wie lange die Fassade hält."
+        ],
+        [
+          "Hinterlüftung ist die eigentliche Konstruktion",
+          "Eine Holzfassade schützt nicht durch Dichtheit, sondern dadurch, dass die Feuchte, die dahinter kommt, wieder abtrocknen kann. Der Lüftungsspalt, seine Zu- und Abluftöffnungen und ein insektensicherer, aber offener Sockelabschluss sind das, was über die Lebensdauer entscheidet."
         ]
       ],
       "mistakes": [
@@ -2299,6 +3075,14 @@
         [
           "Den Sockelbereich zuwachsen lassen",
           "Bewuchs und aufgeschüttete Erde am Sockel halten Feuchte fest. Das ist der häufigste Ausgangspunkt für Fassadenschäden."
+        ],
+        [
+          "Die Sockelbelüftung mit Kies oder Pflanzen schließen",
+          "Ein geschlossener Sockelabschluss unterbindet die Hinterlüftung und hält Feuchte fest. Das ist der häufigste vermeidbare Fassadenschaden überhaupt."
+        ],
+        [
+          "Endstücke und Schnittkanten unbehandelt lassen",
+          "Hirnholz nimmt ein Vielfaches der Feuchte auf. Schnittkanten am Bauteil gehören behandelt, auch wenn die Fläche unbehandelt bleiben soll."
         ]
       ],
       "faq": [
@@ -2332,6 +3116,14 @@
         [
           "Entladung ist ein eigener Vorgang",
           "Kran oder Schwerlaststapler, abhängig von Zufahrt und Zielposition. Das Fundament muss vorbereitet und vermessen sein, bevor der Transport rollt. Ein Haus, das ankommt und nicht abgesetzt werden kann, verursacht Standkosten."
+        ],
+        [
+          "Was auf der Fahrt tatsächlich beansprucht wird",
+          "Nicht das Gewicht, sondern die Verwindung. Ein Gebäude auf einem Tieflader erfährt Torsion über Bodenwellen, Beschleunigung beim Bremsen und Schwingungen über Stunden. Deshalb werden Einbauten verzurrt, Schränke gesichert und empfindliche Elemente gesondert transportiert — und deshalb ist die Fotodokumentation vor Verladung Teil des Ablaufs."
+        ],
+        [
+          "Wer wann vor Ort sein muss",
+          "Am Entladetag brauchen Sie: eine ansprechbare Person auf dem Grundstück, das fertige und vermessene Fundament, freie Zufahrt und Kranstellfläche sowie eine Entscheidung, wo genau die Einheit steht — auf zehn Zentimeter. Diese vier Punkte klären wir vorab schriftlich, weil der Kran nach Stunden abgerechnet wird."
         ]
       ],
       "mistakes": [
@@ -2346,6 +3138,14 @@
         [
           "Oberleitungen und Äste vergessen",
           "Höhe ist die am häufigsten übersehene Dimension bei der letzten Zufahrt."
+        ],
+        [
+          "Den Nachbarn nicht informieren",
+          "Ein Tieflader und ein Kran belegen für einige Stunden die Straße. Ein Hinweis vorher verhindert die Diskussion währenddessen — und manchmal die Anzeige danach."
+        ],
+        [
+          "Die Wetterlage nicht einplanen",
+          "Kranarbeiten bei starkem Wind werden abgebrochen, und weicher Untergrund trägt keinen Tieflader. Ein Ausweichtermin gehört in die Planung."
         ]
       ],
       "faq": [
@@ -2379,6 +3179,14 @@
         [
           "Vermietung ist nicht mitversichert",
           "Eine Gebäudeversicherung deckt gewerbliche Vermietung nicht automatisch ab. Wer vermietet, braucht die Betreiberhaftpflicht — vor dem ersten Gast, nicht nach dem ersten Schaden."
+        ],
+        [
+          "Was in der Police stehen sollte",
+          "Der Versicherungsort mit Adresse, die Bauart und Bauweise, der Neuwert einschließlich Einbauten, die versicherten Gefahren inklusive Elementarschäden, die Regelung für Abwesenheitszeiten und — falls vermietet wird — der gewerbliche Nutzungszweck. Fehlt der letzte Punkt, ist im Schadensfall die Leistungsfreiheit das wahrscheinliche Ergebnis."
+        ],
+        [
+          "Der Transport ist eine eigene Deckung",
+          "Während der Fahrt greift weder Gebäude- noch Hausratversicherung. Die Transportdeckung ist zeitlich begrenzt und muss zum Lieferumfang und zur vereinbarten Lieferklausel passen. Wer trägt das Risiko ab welchem Punkt — diese Frage beantwortet der Vertrag, nicht die Gewohnheit."
         ]
       ],
       "mistakes": [
@@ -2393,6 +3201,14 @@
         [
           "Bei Vermietung mit privater Deckung arbeiten",
           "Im Schadensfall ist das die teuerste Ersparnis des Projekts."
+        ],
+        [
+          "Leerstandsklauseln überlesen",
+          "Viele Policen kürzen oder verweigern die Leistung, wenn ein Gebäude über eine bestimmte Zeit unbewohnt und ungeheizt war. Für Ferienobjekte ist genau das der Normalfall."
+        ],
+        [
+          "Die Einbauten nicht mitversichern",
+          "Küche, Bad und Möbel aus eigener Fertigung sind ein erheblicher Teil des Werts. Ob sie zum Gebäude oder zum Hausrat zählen, gehört ausdrücklich geklärt."
         ]
       ],
       "faq": [
@@ -2426,6 +3242,14 @@
         [
           "MD 6 ist das Modell für den harten Fall",
           "Steildach für Schneeabtrag, größere Aufbauhöhe, Auslegung auf lange Heizperioden. In milden Lagen zahlt man dafür mit, ohne den Vorteil zu nutzen — dort bringen MD 1 oder MD 3 mehr Fläche pro Euro."
+        ],
+        [
+          "Übergangszeit ist der eigentliche Test",
+          "März und Oktober sind die Monate, in denen ein knapp ausgelegtes Haus auffällt: nachts kalt, tagsüber durch Sonneneinstrahlung zu warm, dazu hohe Luftfeuchte. Ein System, das in diesen Wochen ohne ständiges Nachregeln funktioniert, funktioniert auch im Januar und im Juli."
+        ],
+        [
+          "Speichermasse gezielt einsetzen",
+          "Ein leichtes Gebäude reagiert schnell — das ist im Winter beim Aufheizen ein Vorteil und im Sommer ein Nachteil. Ein Estrich im Bodenaufbau, eine massive Arbeitsplatte oder eine gemauerte Fläche hinter dem Ofen puffern Temperaturspitzen, ohne die Reaktionsfähigkeit ganz zu verlieren."
         ]
       ],
       "mistakes": [
@@ -2440,6 +3264,14 @@
         [
           "Frostschutz im Winterurlaub abschalten",
           "Ein ausgekühltes, unbelüftetes Haus sammelt Feuchte. Frostwächterbetrieb und Grundlüftung kosten wenig."
+        ],
+        [
+          "Die Heizung nach der kältesten Nacht auslegen",
+          "Eine auf den Extremfall dimensionierte Anlage taktet den Rest des Jahres und arbeitet ineffizient. Ausgelegt wird auf die Norm, ergänzt um eine definierte Spitzenlösung."
+        ],
+        [
+          "Verschattung nur für den Sommer denken",
+          "Eine feste Verschattung, die im Dezember die tief stehende Sonne aussperrt, kostet solare Gewinne genau dann, wenn sie am meisten wert sind. Beweglich oder richtig dimensioniert ist die Antwort."
         ]
       ],
       "faq": [
@@ -2473,6 +3305,14 @@
         [
           "Genehmigungsrechtlich derselbe Ausgangspunkt",
           "Beide sind bauliche Anlagen. Der Unterschied liegt nicht im Verfahren, sondern in Fläche, Grundrissfreiheit und Erweiterbarkeit."
+        ],
+        [
+          "Wann zwei Einheiten sinnvoller sind als eine große",
+          "Bei getrennten Nutzungen: Wohnen und Vermieten, Haupthaus und Gästehaus, Wohnen und Werkstatt. Zwei kleine Einheiten lassen sich getrennt beheizen, getrennt vermieten und einzeln veräußern. Für eine zusammenhängende Wohnfläche für vier Personen sind sie dagegen fast immer die schlechtere Lösung als ein Modulgebäude."
+        ],
+        [
+          "Genehmigung, Statik und Fundament unterscheiden sich im Aufwand",
+          "Ein Modulgebäude wird auf der Baustelle gefügt und braucht eine durchgehende Gründung, Schnittstellenplanung und in der Regel mehr örtliche Planungsleistung. Ein Tiny House kommt als Einheit auf Punktfundamente und steht am selben Tag. Der Unterschied liegt weniger im Verfahren als im Bauablauf — und der kostet Zeit und Geld."
         ]
       ],
       "mistakes": [
@@ -2487,6 +3327,14 @@
         [
           "Nur den Quadratmeterpreis vergleichen",
           "Transport, Aufstellung, Fundament und Schnittstellen unterscheiden sich zwischen den Bauweisen erheblich."
+        ],
+        [
+          "Modulbau mit Fertighaus gleichsetzen",
+          "Modulbau meint raumgroße, im Werk fertiggestellte Einheiten. Ein Fertighaus wird aus Wandelementen auf der Baustelle errichtet. Bauablauf, Termin und Kosten unterscheiden sich erheblich."
+        ],
+        [
+          "Erweiterbarkeit annehmen, ohne sie zu planen",
+          "Ein späterer Anbau braucht Vorbereitung an Statik, Hülle und Technik. Wer sie nicht von Anfang an vorsieht, baut später ein zweites Gebäude neben das erste."
         ]
       ],
       "faq": [
@@ -2520,6 +3368,14 @@
         [
           "Rechtlich getrennt betrachten",
           "Eine Straßenzulassung sagt etwas über die Fahrt und nichts über das dauerhafte Stehen. Sobald ein Fahrzeug dauerhaft an einem Ort steht und bewohnt wird, wird die Frage baurechtlich — auch beim Wohnwagen."
+        ],
+        [
+          "Wertentwicklung und Weiterverkauf",
+          "Ein Wohnwagen verliert wie ein Fahrzeug und wird nach Alter und Laufleistung bewertet. Ein genehmigtes, standortgebundenes Gebäude wird nach Zustand, Lage und Genehmigungslage bewertet. Das ist der Unterschied, der sich erst nach zehn Jahren zeigt — und dann sehr deutlich."
+        ],
+        [
+          "Technik und Normen sind zwei Welten",
+          "Ein Wohnwagen folgt Fahrzeugnormen: 12-Volt-Systeme, Gasanlagen mit Prüfintervall, leichte Aufbauten. Ein Gebäude folgt Bauvorschriften: 220-Volt-Installation nach lokalem Recht, Anschluss an Wasser und Kanal, Nachweise zu Rettungswegen und Aufenthaltsräumen. Nichts davon ist übertragbar, auch nicht teilweise."
         ]
       ],
       "mistakes": [
@@ -2534,6 +3390,14 @@
         [
           "Die baurechtliche Frage über die Zulassung lösen wollen",
           "Die Nutzung entscheidet, nicht das Nummernschild."
+        ],
+        [
+          "Einen Wohnwagen dauerhaft als Wohnsitz anmelden wollen",
+          "Für eine Meldeadresse braucht es eine zulässige Wohnnutzung am Standort. Das Fahrzeug ändert daran nichts."
+        ],
+        [
+          "Die Betriebskosten des Winterbetriebs unterschätzen",
+          "Ein Aufbau ohne Winterauslegung heizt bei jeder Kältewelle gegen die Hülle an. Über eine Saison ist das ein spürbarer Betrag."
         ]
       ],
       "faq": [
@@ -2567,6 +3431,14 @@
         [
           "Bei Vermietung schneller",
           "Beschläge, Oberflächen, Duscharmaturen und Textilien verschleißen bei häufigem Wechsel um ein Vielfaches schneller. Eine jährliche Rücklage für Ersatz gehört ab dem ersten Jahr in die Kalkulation, nicht ab dem vierten."
+        ],
+        [
+          "Die Herbstrunde im Detail",
+          "Rinnen und Fallrohre freimachen, Dachfläche und Anschlüsse sichtprüfen, Silikonfugen an Bad und Küche kontrollieren, Fensterdichtungen reinigen und mit Pflegemittel behandeln, Beschläge fetten, Entwässerung am Sockel freihalten, Lüftungsfilter tauschen. Zwei Stunden im Jahr, und fast alles davon ohne Werkzeug."
+        ],
+        [
+          "Ein Wartungsheft zahlt sich beim Verkauf aus",
+          "Datum, ausgeführte Arbeiten, getauschte Teile und Fotos. Bei einem Gebäude, das zehn Jahre alt ist, entscheidet die Nachweisbarkeit der Pflege über den Preis genauso wie der Zustand — und im Schadensfall über die Position gegenüber der Versicherung."
         ]
       ],
       "mistakes": [
@@ -2581,6 +3453,14 @@
         [
           "Nur reagieren statt kontrollieren",
           "Fast jedes ernste Problem in einem kompakten Gebäude beginnt als kleines und sichtbares."
+        ],
+        [
+          "Silikonfugen erst tauschen, wenn sie schwarz sind",
+          "Ist der Schimmel im Material, geht er nicht mehr raus. Fugen im Nassbereich sind Verschleißteile mit einem Intervall, keine dauerhafte Ausführung."
+        ],
+        [
+          "Die Dachfläche nie betreten oder ansehen",
+          "Was man nicht kontrolliert, meldet sich erst als Feuchtefleck im Innenraum. Eine Leiter und zehn Minuten im Herbst ersetzen die teure Variante."
         ]
       ],
       "faq": [
@@ -2614,6 +3494,14 @@
         [
           "Regenwasser ersetzt kein Trinkwasser",
           "Für Toilettenspülung und Garten ist Regenwassernutzung eine sinnvolle Ergänzung. Als Trinkwasser ist sie es nicht — und die Trennung der Systeme muss dann eindeutig ausgeführt sein."
+        ],
+        [
+          "Leitungslänge und Warmwasserverlust",
+          "Jeder Meter zwischen Erzeuger und Zapfstelle ist Wasser, das kalt in der Leitung steht und beim nächsten Öffnen weggelaufen wird. Deshalb liegen Küche und Bad an derselben Installationswand — das spart über ein Jahr mehr Wasser und Energie als jede Sparbrause, und es ist eine Grundrissentscheidung."
+        ],
+        [
+          "Winterfestigkeit der Zuleitung",
+          "Frostfreie Verlegetiefe, ein absperrbarer und entleerbarer Abschnitt vor dem Haus und im Zweifel eine Begleitheizung. Bei Ferienobjekten kommt eine dokumentierte Entleerungsroutine dazu. Der häufigste konkrete Winterschaden an einem Tiny House entsteht nicht an der Hülle, sondern hier."
         ]
       ],
       "mistakes": [
@@ -2628,6 +3516,14 @@
         [
           "Die Entfernung zum Netz schätzen",
           "Der Versorger nennt sie Ihnen für Ihre Adresse — vor dem Grundstückskauf."
+        ],
+        [
+          "Den Wasserdruck nicht prüfen",
+          "Am Ende einer langen privaten Zuleitung oder bei Pumpenbetrieb kann der Druck für eine angenehme Dusche zu gering sein. Das lässt sich vorher messen."
+        ],
+        [
+          "Filter und Enthärtung erst nach dem ersten Kalkschaden einplanen",
+          "Wasserhärte ist regional sehr unterschiedlich und greift Armaturen, Boiler und Wärmetauscher an. Der Wert steht beim Versorger."
         ]
       ],
       "faq": [
@@ -2661,6 +3557,14 @@
         [
           "Schneelast gehört in die Konstruktion",
           "In alpinen Lagen und in Skandinavien ist die Dachlast eine eigene Rechnung. MD 6 mit Steildach führt Schnee ab, statt ihn zu sammeln — der Grund, warum es dort am häufigsten gewählt wird."
+        ],
+        [
+          "Kältebrücken sind im Winter sichtbar",
+          "Bei Frost zeigt sich an der Fassade und an Innenoberflächen, wo die Dämmebene unterbrochen ist: Reifbilder außen, kalte Streifen innen. Eine Kontrolle an einem sehr kalten Morgen im ersten Winter ist die günstigste Qualitätsprüfung, die es gibt — und die einzige, die die reale Ausführung beurteilt statt der Planung."
+        ],
+        [
+          "Schnee auf dem Dach und vor der Tür",
+          "Neben der Dachlast entscheidet, wohin der Schnee fällt: vor die Eingangstür, auf die Terrasse, auf den Zuweg oder auf die Wärmepumpe. Bei Flachdachmodellen bleibt er liegen und wirkt zusätzlich dämmend, bei Steildach rutscht er ab. Beides hat Folgen für die Planung der Außenflächen."
         ]
       ],
       "mistakes": [
@@ -2675,6 +3579,14 @@
         [
           "Nur auf die Dämmstärke schauen",
           "Ohne Dichtheit und Lüftung verliert der beste Aufbau seinen Vorteil."
+        ],
+        [
+          "Die Wärmepumpe in den Schneebereich stellen",
+          "Ein Außengerät, das im Winter vom Dach zugeschüttet wird oder in einer Schneewehe steht, verliert Leistung genau dann, wenn sie gebraucht wird."
+        ],
+        [
+          "Ohne Ersatzwärme planen",
+          "Ein Stromausfall im Januar entleert ein leichtes Gebäude schnell. Ein Ofen, ein Notstromanschluss oder ein Plan für die Entleerung der Leitungen gehört dazu."
         ]
       ],
       "faq": [
@@ -2708,6 +3620,14 @@
         [
           "Betrieb entscheidet mit",
           "Ein winterfest gebautes Haus, in dem die Lüftung abgeschaltet und im Urlaub die Heizung ausgemacht wird, verhält sich nicht winterfest. Die Auslegung liefert die Voraussetzung, der Betrieb das Ergebnis."
+        ],
+        [
+          "Was die Auslegung in Zahlen bedeutet",
+          "Für Dauerwohnen in einer kalten Region wird der Aufbau in der Regel eine Stufe stärker gedämmt, der Fensteranteil bewusst begrenzt, eine Lüftung mit Wärmerückgewinnung als Standard gesetzt und die Wärmeerzeugung auf stetigen Betrieb ausgelegt. Der Mehrpreis liegt im Bereich einer Ausstattungsposition und amortisiert sich über den Betrieb."
+        ],
+        [
+          "Der Unterschied zwischen bewohnbar und angenehm",
+          "Ein Haus, in dem man im Januar wohnen kann, und eines, in dem man im Januar gern wohnt, unterscheiden sich in Details: keine Zugluft an den Füßen, warme Bodenoberflächen, ausreichend Kunstlicht, ein Platz zum Trocknen nasser Kleidung und ein Eingangsbereich, in dem Schnee liegen bleiben darf. Diese Punkte kosten wenig und entscheiden über den Winteralltag."
         ]
       ],
       "mistakes": [
@@ -2722,6 +3642,14 @@
         [
           "Nur auf Temperatur schauen",
           "Wind und Feuchte machen im nordeuropäischen Winter oft mehr aus als die reine Außentemperatur."
+        ],
+        [
+          "Ohne Trocknungsmöglichkeit für Kleidung planen",
+          "Nasse Jacken und Schuhe im Wohnbereich sind im Winter eine tägliche Feuchtequelle. Ein belüfteter Platz dafür gehört in den Grundriss."
+        ],
+        [
+          "Den Eingangsbereich ohne Vordach planen",
+          "Bei Schnee und Regen ist der Bereich vor der Tür der Punkt, an dem Nässe ins Haus kommt. Ein Vordach oder eine überdachte Fläche löst das dauerhaft."
         ]
       ],
       "faq": [

@@ -70,7 +70,7 @@ built out.
 | Model editorial copy (MD 1–MD 8, five languages) | `data/model-copy.json` |
 | Model page long-form sections | `data/depth-copy.json` |
 | Country question sets (20 × 5 countries × 5 languages) | `data/country-qa.json` |
-| Blog topics (58 subjects, German) | `data/blog-topics.json` |
+| Blog subjects (58, five points and five mistakes each) | `data/blog-topics.json` |
 | Blog category material, per format | `data/blog-categories.json` |
 | English knowledge library (nine subjects) | `data/en-blog.json` |
 | The five-market appendix | `APPENDIX` in `tools/build-modunera-depth.mjs` |
@@ -165,7 +165,7 @@ reads to a search engine as one page repeated. Where that stands now:
 | Country page | 330–860 | 1,200–2,050 |
 | Country question page | did not exist | 1,000–1,420 |
 | English subject page | did not exist | 1,100–1,800 |
-| Blog post / guide | 605–740 | 1,500–1,800 |
+| Blog post / guide | 605–740 | 1,650–1,900 |
 
 ## Duplication
 
@@ -181,12 +181,15 @@ format of the same subject do not reuse each other's text. Measured across all
 
 | | Before | Now |
 |---|---|---|
-| Mean overlap between any two posts | ~95% | 11.8% |
+| Mean overlap between any two posts | ~95% | 10.0% |
 | Guide vs checklist of the same subject | 100% | 27% |
 | Pairs above 85% | almost all | 0 |
-| Worst remaining pair | 100% | 67% (two checklists in one category) |
+| Pairs above 70% | almost all | 0 |
+| Worst remaining pair | 100% | 56% (two checklists in one category) |
 
 Adding more shared boilerplate would raise the word counts and undo this, so it
-is deliberately not done. Going further means writing more per-subject material
-into `data/blog-topics.json` — two more points and two more mistakes per subject
-would add roughly 400 words each and push the remaining category overlap down.
+is deliberately not done. Length comes only from `data/blog-topics.json`, which
+now holds 22,400 words of per-subject source: five points, five mistakes and
+three questions for each of the 58 subjects. Article bodies run 490–850 words on
+top of the shared market appendix; taking them to 1,500 means roughly doubling
+that corpus again, subject by subject.
