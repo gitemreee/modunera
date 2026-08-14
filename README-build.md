@@ -10,11 +10,21 @@ deploy time — the generators below produce the committed HTML.
 node tools/rebrand-modunera.mjs           # brand normalisation, legacy asset removal
 node tools/build-modunera-europe.mjs      # countries, regions, cities, services, Europe guides
 node tools/build-modunera-locales.mjs     # Dutch, Danish and French sections
-node tools/build-modunera-depth.mjs       # MD 1–MD 8 in five languages, country questions, EN blog
-node tools/build-modunera-v2.mjs          # navigation, comparison pages, guide hubs, sitemaps
-node tools/build-modunera-depth.mjs --extend   # append the question sets and the market appendix
+node tools/build-modunera-depth.mjs       # MD 1–MD 8 in five languages, country questions, blogs
+node tools/build-modunera-v2.mjs          # navigation, comparison pages, guide hubs, cookie notice
+node tools/build-modunera-depth.mjs --extend   # appendix, product word, blocked-claim removal
+node tools/build-hreflang-v7.mjs          # reciprocal five-language clusters
+node tools/build-nordic-redirects.mjs     # 301s for the corrected Danish slugs
+node tools/build-content-lastmod.mjs      # real content dates, from a content hash
+node tools/build-seo-governance-v7.mjs    # robots policy, location gate, sitemaps
 node tools/validate-modunera.mjs          # gate: canonicals, JSON-LD, links, brand, colours
+node tools/validate-seo-v7.mjs            # gate: claims, sitemap, hreflang, schema, legal
 ```
+
+The four V7 steps run **after** the content pipeline, in that order. They read the
+finished HTML, so running any content generator afterwards undoes them — that is
+the one ordering mistake this pipeline will not tell you about, because every
+individual command still succeeds.
 
 The order matters, and the depth layer runs twice on purpose.
 
@@ -87,6 +97,43 @@ Never edit `assets/css/styles.css` between the `MODUNERA BRAND PALETTE`
 markers — that block is regenerated from `tools/design-system-v2.css` on every
 build. Edits outside the markers survive, but the generated block is appended
 last and therefore wins on equal specificity.
+
+## SEO governance (V7)
+
+Applied from the August 2026 audit pack. Five things it changes and why.
+
+**Claims.** `data/blocked-claims.json` lists phrases that cannot be published until
+the business supplies evidence — own production, 13+ years, hot-dip galvanising,
+3,500 kg, CYR/Knott, double-tempered glazing, 220 V, same-day response. The pass
+runs in `build-modunera-depth.mjs --extend` because those phrases live in three
+layers at once: the current generators, the data corpora, and roughly 11,000 pages
+baked by the retired `tools/generate_scale_v3.py`. `validate-seo-v7.mjs` asserts
+the count of remaining hits is zero, so a claim cannot come back through a new
+generator without failing the build. Delete a rule when the evidence in
+`REQUIRED-BUSINESS-INPUTS.md` arrives — do not edit pages.
+
+**The location gate.** 14,641 of 15,054 pages are programmatic location pages. They
+default to `noindex,follow` and stay out of the sitemap until an entry in
+`data/location-index-policy.json` scores at least 75 against the ten mandatory
+fields in the pack's quality gate. The allow-list is deliberately empty: these
+pages are a data store, not 14,641 search results.
+
+**lastmod.** Git file dates are useless here — the pipeline rewrites navigation and
+footer on every page, so git sees all 15,000 as modified whenever either changes.
+`build-content-lastmod.mjs` hashes the page's own content instead (main, title,
+description) and only moves a date when that hash moves.
+
+**hreflang.** `build-hreflang-v7.mjs` composes clusters from the same slug tables the
+pages are generated from, writes the identical set to every member so reciprocity
+holds by construction, and adds no tag for a language that has no equivalent page.
+It also strips the sets earlier generators wrote, which pointed many German pages
+at a single English hub.
+
+**Statutory pages.** `/legal/impressum/`, `/legal/datenschutz/` and `/legal/cookies/`
+are `noindex,follow` while they are incomplete, and the validator fails if any of
+them becomes indexable. Remove them from `INCOMPLETE_LEGAL` in
+`build-seo-governance-v7.mjs` once section 1 of `REQUIRED-BUSINESS-INPUTS.md` is
+satisfied.
 
 ## The product word
 

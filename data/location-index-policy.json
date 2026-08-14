@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0",
+  "default_status": "noindex",
+  "minimum_quality_score": 75,
+  "approved_urls": [],
+  "entries": [],
+  "note": "Populate only after the local-page quality gate is met. An empty allow-list intentionally keeps every programmatic location page out of the sitemap."
+}
+

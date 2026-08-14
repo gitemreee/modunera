@@ -1613,6 +1613,34 @@ async function buildHomeModels() {
    Both phases are idempotent. */
 const extendOnly = process.argv.includes("--extend");
 
+/* Claims that cannot be published until the business supplies evidence. The
+   register is data/blocked-claims.json; this pass applies it to the built HTML
+   because the phrases sit in three layers at once — the current generators, the
+   data corpora, and roughly 11,000 pages baked years ago by the retired
+   tools/generate_scale_v3.py. Longest phrase first, so "aus eigener Produktion"
+   is caught before the bare "eigener Produktion" that is a substring of it.
+   Re-running finds nothing, which keeps the pipeline idempotent. */
+const CLAIM_RULES = JSON.parse(await readFile(join(ROOT, "data/blocked-claims.json"), "utf8")).rules;
+const CLAIM_REPLACEMENTS = CLAIM_RULES
+  .flatMap((rule) => rule.replacements.map(([from, to]) => ({ from, to })))
+  .sort((a, b) => b.from.length - a.from.length);
+
+async function normaliseClaims() {
+  const files = (await walk(ROOT)).filter((f) => extname(f).toLowerCase() === ".html");
+  let changed = 0;
+  for (const file of files) {
+    const original = await readFile(file, "utf8");
+    let html = original;
+    for (const { from, to } of CLAIM_REPLACEMENTS) {
+      if (html.includes(from)) html = html.split(from).join(to);
+    }
+    if (html === original) continue;
+    await writeFile(file, html, "utf8");
+    changed += 1;
+  }
+  return changed;
+}
+
 /* --- the product word, on every page ------------------------------------- */
 
 /* Buyers in all five markets search the English words — Germans type "Tiny House"
@@ -1692,12 +1720,14 @@ if (extendOnly) {
   const countries = await extendCountryPages();
   const articles = await extendArticles();
   const titles = await normaliseTitles();
+  const claims = await normaliseClaims();
   console.log(`depth layer (extend):
   ${rewritten.changed} blog posts rewritten from per-topic material (${rewritten.skipped} left alone)
   ${homes} home pages given the eight-model grid
   ${countries} country pages extended with their question set
   ${articles} library pages extended with the five-market appendix
-  ${titles} titles given the product word`);
+  ${titles} titles given the product word
+  ${claims} pages cleared of claims that are not yet evidenced`);
 } else {
   const models = await buildModelPages();
   const questions = await buildQuestionPages();

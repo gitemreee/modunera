@@ -1,0 +1,549 @@
+{
+  "_comment": "English posts, second batch. Sixteen further subjects, none overlapping the nine categories or the first twelve posts. Same shape: five sections of two paragraphs, three questions.",
+  "posts": [
+    {
+      "slug": "tiny-house-windows-and-glazing",
+      "category": "technology-and-construction",
+      "name": "Windows",
+      "title": "Windows in a tiny house: how much glass, facing which way.",
+      "lead": "Glass is what makes a compact interior feel generous and what loses the most heat. Both facts are settled by orientation before they are settled by specification.",
+      "sections": [
+        ["Orientation decides more than the glazing unit", [
+          "A large opening facing south gains heat all winter and overheats in July; the same opening facing north gives even light and no gain at all. Deciding which elevation carries the glass is free on the drawing and impossible afterwards.",
+          "In practice most compact plans want the main glazing towards the view and the evening light, with a smaller high window opposite for cross light. That combination reads as space; one big window alone reads as a corridor."
+        ]],
+        ["Triple glazing is not automatic", [
+          "Triple units cut heat loss and add weight — roughly 30 kg per square metre against 20 for double. On a transported building that weight has to be carried by the frame and lifted by the crane, so it is a structural decision as much as a thermal one.",
+          "In a mild coastal climate double glazing with a good coating can be the better trade. In an alpine or Scandinavian winter, triple pays back and also removes the cold draught you feel standing next to a large pane."
+        ]],
+        ["Shading belongs outside the glass", [
+          "Once solar radiation is through the pane it is inside the house, and an internal blind only converts it to radiant heat. External shading — a roof overhang, a shutter, a screen — stops it before it arrives and is several times more effective.",
+          "A fixed overhang sized for the summer sun angle still lets the low winter sun in. That is the cheapest climate control in the project and it costs nothing but a drawing note."
+        ]],
+        ["Opening lights are a ventilation question", [
+          "Fixed glass is cheaper and tighter, and a house with no openable window relies entirely on mechanical ventilation. At minimum, put an opening light at each end of the plan so the house can be purged on a warm evening.",
+          "A rooflight over the loft does more for summer comfort than any wall window: warm air leaves at the highest point, and that is the one place it collects."
+        ]],
+        ["Frames, seals and the coastal case", [
+          "Aluminium-clad timber gives a warm inside face and a maintenance-free outside one, and it is the usual answer for a house that travels. All-timber frames need the same attention as timber cladding; all-PVC frames move more than the opening they sit in.",
+          "Near the sea, ask specifically about the ironmongery finish. Handles and hinges corrode long before the frame does, and replacing them on a sealed unit is not a five-minute job."
+        ]]
+      ],
+      "faq": [
+        ["How much glazing should a tiny house have?", "Enough for one generous opening towards the view and a smaller one opposite for cross light. Beyond that, each additional square metre costs heat in winter and gains it in summer."],
+        ["Is triple glazing worth it?", "In a Scandinavian or alpine winter, yes. In a mild coastal climate, good double glazing can be the better trade once the extra weight is counted."],
+        ["Do I need openable windows with mechanical ventilation?", "Yes — at least one at each end. Mechanical ventilation handles moisture, not the purge you want on a warm evening."]
+      ]
+    },
+    {
+      "slug": "tiny-house-insulation-materials",
+      "category": "technology-and-construction",
+      "name": "Insulation",
+      "title": "Insulation compared: mineral wool, wood fibre and rigid boards.",
+      "lead": "Thickness is the number on the brochure. What actually decides comfort is how the material behaves when the wall gets damp and how hot the house gets in August.",
+      "sections": [
+        ["Mineral wool is the default for good reasons", [
+          "It is cheap, non-combustible, fills irregular cavities without gaps and lets vapour through so a wall can dry. Its weakness is that it does nothing for summer comfort: it is light, so it stores almost no heat.",
+          "It also settles if it is not restrained properly in a wall that travels by road. Ask how the batts are held, because a settled cavity leaves a cold strip along the top of the wall that nobody sees until the thermal camera does."
+        ]],
+        ["Wood fibre buys you the summer", [
+          "Wood fibre is three to four times denser than mineral wool, which means it takes far longer for outside heat to travel through it. In a lightweight compact building that phase shift is the difference between a loft that is usable in August and one that is not.",
+          "It costs more, weighs more and needs the same ventilated cavity behind the cladding. For a house that will be lived in year round rather than let in the shoulder seasons, it is usually the better money."
+        ]],
+        ["Rigid boards buy thickness back", [
+          "PIR and phenolic boards deliver the same resistance in roughly two thirds of the depth, which matters when every centimetre of wall is a centimetre of floor. The catch is that they are vapour-tight, so the wall build-up has to be designed around that, not adapted to it.",
+          "They also need careful taping at every joint. A rigid board wall with sloppy joints performs worse than a properly filled mineral wool one, whatever the datasheet says."
+        ]],
+        ["The vapour layer is part of the insulation", [
+          "Insulation only works dry. A vapour control layer on the warm side, continuous and properly sealed at every penetration, is what keeps it that way. One badly taped socket box undoes a metre of perfect wall.",
+          "Ask to see photographs of that layer before the wall is closed. It is the single most informative image in a build record and the one thing you cannot inspect afterwards."
+        ]],
+        ["Floor and roof are not the same problem", [
+          "The floor cassette sits above a ventilated void and loses heat to moving outside air, so it wants the same treatment as a wall. The roof takes the summer sun directly and is where phase shift earns its keep — the argument for wood fibre is strongest there.",
+          "Ask for the build-up of all three separately. A specification that quotes one figure for the whole envelope is a specification that has not been thought about."
+        ]]
+      ],
+      "faq": [
+        ["Which insulation is best for a tiny house?", "Wood fibre in the roof for summer comfort, mineral wool or wood fibre in the walls, and rigid board only where depth is genuinely critical."],
+        ["How thick should the insulation be?", "Ask for the resulting U-value per element rather than a thickness. The same figure needs different depths depending on material."],
+        ["Why does my loft overheat?", "Almost always a light roof build-up with no thermal mass. Phase shift, not resistance, is what controls August temperatures."]
+      ]
+    },
+    {
+      "slug": "tiny-house-roof",
+      "category": "technology-and-construction",
+      "name": "Roof",
+      "title": "The roof: pitch, covering and the details that leak.",
+      "lead": "A compact building has a large roof relative to its volume, so the roof carries more of the thermal and water performance than it would on a house.",
+      "sections": [
+        ["Pitch is decided by snow and by transport height", [
+          "A steeper roof sheds snow and rain and adds height, which is exactly the dimension a road transport cannot spare. Most transportable designs land between five and fifteen degrees, and the ones that go higher pay for it in permits.",
+          "Where snow load is genuine — alpine sites, Scandinavian inland — the structure is sized for it, not the pitch. A shallow roof with a correctly calculated frame is safer than a steep roof with an optimistic one."
+        ]],
+        ["Standing seam is the durable covering", [
+          "A folded metal seam has no fixings through the waterproof plane, which is why it outlasts every other option on a building that flexes in transit. It also drums in rain, which is a separate problem solved by mass and a resilient layer beneath.",
+          "Membrane roofs are cheaper and perfectly serviceable, with a shorter life and more sensitivity to the detail at every upstand. Ask what the warranty covers and for how long."
+        ]],
+        ["Overhangs are worth their width", [
+          "An overhang keeps rain off the cladding, shades the glass in summer and protects the head of every window. It is the cheapest longevity measure available and it is routinely trimmed to save transport width.",
+          "Where an overhang would breach the 2.55 metre transport limit, it can be delivered separately and fixed on site. Ask for that option rather than accepting a flush eaves."
+        ]],
+        ["Penetrations are where roofs fail", [
+          "Flue, ventilation terminals, solar mounts and the aerial all pierce the waterproof plane. Each one needs a proprietary detail, not a bead of sealant, and each one should be listed on the drawing before production.",
+          "Add any future penetration now. Fitting a flue through a finished roof means opening the build-up and hoping the vapour layer is repaired as well as it was made."
+        ]],
+        ["Gutters and where the water goes", [
+          "A small roof produces a surprising volume in a downpour and it lands exactly where the house meets the ground. Without gutters, that water splashes back onto the lowest board of the cladding — the place rot starts.",
+          "Take the downpipe away from the house and into a soakaway or a butt. A pipe that discharges at the base of the wall solves nothing."
+        ]]
+      ],
+      "faq": [
+        ["What roof pitch does a tiny house need?", "Usually five to fifteen degrees. Steeper sheds snow better but adds transport height, which is the dimension that triggers permits."],
+        ["Metal or membrane?", "Standing-seam metal lasts longest on a building that flexes in transit. Membrane is cheaper with a shorter life and more sensitive details."],
+        ["Do I need gutters?", "Yes. Without them, roof water splashes back onto the lowest cladding board, which is where rot begins."]
+      ]
+    },
+    {
+      "slug": "tiny-house-electrical-installation",
+      "category": "technology-and-construction",
+      "name": "Electrics",
+      "title": "The electrical installation: supply, consumer unit and what to plan for.",
+      "lead": "Most of the electrical work is invisible and irreversible. Two decisions matter more than the rest: how much supply you have, and where the cables run.",
+      "sections": [
+        ["Size the supply before choosing appliances", [
+          "A single-phase 16 A connection is a common rural offer and it will not run an instantaneous water heater, an induction hob and a heat pump at the same time. Knowing the available supply first changes the appliance list, not the other way round.",
+          "Where the supply is limited, load management — a controller that sheds the water heater while the hob is on — is cheaper than upgrading the connection. Ask for it at specification, not after the first tripped breaker."
+        ]],
+        ["The consumer unit needs room to grow", [
+          "Fit a unit with spare ways. A solar inverter, a battery, an EV point or an outbuilding each need a way, and a full board means an additional enclosure bolted somewhere it does not belong.",
+          "Residual current protection on all final circuits is now standard and worth insisting on regardless of local minimum. In a building with an outdoor socket and a metal frame, it is not a formality."
+        ]],
+        ["Sockets: count them, then add four", [
+          "Small houses are socket-poor because the wall length is short. Count what you plug in on a normal evening — router, laptop, lamps, chargers, kettle, vacuum — and place them where those things live rather than at even spacing.",
+          "Two at worktop height in the kitchen, two at desk height, one beside each side of the bed and one on the terrace is a reasonable floor. Every one of them is a drawing note and an extension lead if it is missed."
+        ]],
+        ["Earthing a steel-framed building", [
+          "A steel chassis is a conductive structure that has to be bonded properly, and the arrangement differs depending on whether the house is on a mains connection, a generator or an island inverter. This is a point to have documented, not assumed.",
+          "Keep the test certificate. It is the document an insurer asks for after any electrical incident, and it is what a buyer's surveyor looks for."
+        ]],
+        ["Plan the low-voltage side too", [
+          "Network cable to the desk, a route for an external aerial, speaker cable if you want it, and a conduit from the consumer unit to the roof for future solar. All are trivial before the walls close and disproportionate afterwards.",
+          "Pull a spare draw cord in every conduit. It costs nothing and it is what makes a future change possible without opening anything."
+        ]]
+      ],
+      "faq": [
+        ["What electrical supply does a tiny house need?", "It depends on the appliances. An instantaneous water heater plus induction plus a heat pump will not run on a small rural connection without load management."],
+        ["How many sockets should I specify?", "More than the plan suggests. Count what you plug in on a normal evening and place them where those things live, then add a few."],
+        ["Does the steel frame need special earthing?", "It needs proper bonding, and the arrangement differs between a mains connection, a generator and an island inverter. Get it documented and keep the certificate."]
+      ]
+    },
+    {
+      "slug": "tiny-house-ventilation-mvhr",
+      "category": "technology-and-construction",
+      "name": "Ventilation",
+      "title": "Mechanical ventilation with heat recovery, explained for a small house.",
+      "lead": "In an airtight compact building this is not a comfort upgrade — it is the system that stops the walls getting wet. It is also the one most often specified badly.",
+      "sections": [
+        ["Why a small house needs it more, not less", [
+          "Two people produce several litres of water vapour a day through breathing, cooking and washing. In 200 cubic metres that is diluted; in 70 it is not. The smaller the volume, the faster the humidity climbs and the sooner it reaches the coldest surface.",
+          "Opening a window works and throws the heat out with the moisture. Heat recovery keeps 80 to 90 per cent of it, which in a house with a small heat demand is most of the heating bill."
+        ]],
+        ["Sizing is about air changes, not unit size", [
+          "The unit is chosen for the volume and the number of occupants, and in a tiny house that means the smallest unit on the market, running slowly. A unit that is too large runs at its noisiest low setting and short-cycles.",
+          "Ask for the design airflow per room: supply to living and sleeping, extract from kitchen and bathroom. A specification with no room-by-room figures has not been designed."
+        ]],
+        ["Ducting decides whether it works", [
+          "Short runs, smooth bore, gentle bends and a sealed connection at every joint. Flexible ribbed duct pulled tight around a corner halves the flow, and that is the most common installation fault in any building.",
+          "Route the ducts on the drawing. A unit fitted into whatever space is left over ends up with the worst possible duct run and a cupboard you cannot use."
+        ]],
+        ["Filters and noise are the ownership experience", [
+          "Two filters, twice a year, is the whole maintenance routine — and it is the routine that decides whether the system still works in year five. Buy the filters in pairs and put a reminder in the calendar.",
+          "Site the unit away from the sleeping area and on resilient mounts. It runs continuously, so anything audible becomes intolerable rather than familiar."
+        ]],
+        ["Summer bypass and frost protection", [
+          "A summer bypass stops the unit recovering heat you do not want on a warm night. Frost protection stops the heat exchanger icing when it is well below zero outside. Both are standard on good units and absent on cheap ones.",
+          "In a Scandinavian or alpine winter the frost strategy matters: a pre-heater draws power, a defrost cycle interrupts flow. Ask which the unit uses before it is ordered."
+        ]]
+      ],
+      "faq": [
+        ["Can I just open a window instead?", "For a purge, yes. For daily moisture removal in an airtight house, no — you would be throwing out the heat you paid for, several times a day, all winter."],
+        ["How much maintenance does MVHR need?", "Two filters twice a year, plus keeping the condensate drain clear. That is the whole routine, and skipping it halves the airflow."],
+        ["Is it noisy?", "Not if it is sized correctly and mounted on resilient supports away from the sleeping area. A unit that is too large for the house is the usual cause of complaints."]
+      ]
+    },
+    {
+      "slug": "tiny-house-storage-solutions",
+      "category": "layout-and-interior",
+      "name": "Storage",
+      "title": "Where the storage actually is in a tiny house.",
+      "lead": "Two adults need six to eight cubic metres. Here is where it comes from, in the order of how much each place gives back.",
+      "sections": [
+        ["Under the bed, first and by a distance", [
+          "A standard double platform holds about 1.5 cubic metres — a fifth of everything you need, in the one place that costs no floor area at all. Drawers on runners beat a lift-up base, which needs the mattress moved every time.",
+          "Divide it: one drawer for out-of-season clothing, one for bedding, one for the things you use twice a year. An undivided volume becomes a place things disappear into."
+        ]],
+        ["Full height beats wide", [
+          "A 600mm wide cupboard that runs floor to ceiling holds more than a 1200mm one that stops at head height, and it takes half the wall. In a compact plan, the top 600mm of every wall is the most under-used volume in the building.",
+          "Put the things you reach for daily between knee and shoulder, and everything else above and below. A step stool is a smaller sacrifice than a second cupboard."
+        ]],
+        ["The stairs are furniture", [
+          "Each tread of a loft stair can be a drawer, and a run of eight treads gives roughly half a cubic metre in a space that otherwise holds nothing. It has to be designed that way from the start; a built stair cannot be hollowed out later.",
+          "The volume beside the stair, under the lowest treads, takes the awkward tall things — the vacuum, the ironing board, the broom."
+        ]],
+        ["Outside takes what does not belong inside", [
+          "Bikes, garden tools, firewood, sports equipment and the seasonal awning have no business inside a compact envelope. A weatherproof store on the terrace or against the north elevation is the cheapest cubic metre in the whole project.",
+          "Plan it with the house rather than buying it afterwards. Its position affects the terrace layout and, on a small plot, the neighbour's view."
+        ]],
+        ["The places people forget", [
+          "Above the door openings, the void behind the bathroom door, the depth of the wall between two rooms, the kick space under the kitchen units, and the plenum under a raised loft floor. None is large; together they are another cubic metre.",
+          "None of them can be added later without opening a finished surface. Ask for them at the drawing stage and take the ones that suit how you live."
+        ]]
+      ],
+      "faq": [
+        ["How much storage does a tiny house need?", "Six to eight cubic metres for two adults in permanent occupation. Half again with a child."],
+        ["What is the single biggest storage win?", "Under-bed drawers — about 1.5 cubic metres for no floor area at all. Divided, not one open volume."],
+        ["Can storage be added later?", "Freestanding, yes, at the cost of floor area. Built-in — stair drawers, wall depth, plenum — no: those need opening a finished surface."]
+      ]
+    },
+    {
+      "slug": "tiny-house-living-as-a-couple",
+      "category": "use-and-business-model",
+      "name": "Two people",
+      "title": "Two people in a tiny house: what actually causes friction.",
+      "lead": "It is not the square metres. It is that there is nowhere to be out of earshot, and that everything one person leaves out is in the other person's line of sight.",
+      "sections": [
+        ["Somewhere to be alone matters more than space", [
+          "The single most common reason couples leave a compact house is that neither can be unobserved. A door, a level change or a closable loft is what solves it, and a curtain is not. This is a plan decision, made once.",
+          "Even where a second room is impossible, a seat facing away in a different part of the house, with its own light, does more than another two square metres of open floor."
+        ]],
+        ["Sound separation is half the answer", [
+          "One person on a phone call occupies the whole house unless the partition has mass. Filling the cavity and doubling the board on one side is a few centimetres and turns a visual divider into a real one.",
+          "The bathroom door matters as much. In a compact plan it opens onto the living space, and a hollow leaf makes every use of the room a shared event."
+        ]],
+        ["Two of everything, or a rule", [
+          "One wardrobe rail, one worktop, one desk: shared resources in a small house need either duplication or an agreement. Duplication costs volume; the agreement costs nothing and has to be actually made rather than assumed.",
+          "The practical version is dedicated zones — your shelf, my drawer, this half of the rail. It sounds petty and it is what makes a compact house sustainable over years."
+        ]],
+        ["Cooking and cleaning happen in the living room", [
+          "In an open plan the person cooking is in the room with the person relaxing. Quiet appliances, a hood under 50 dB and enough worktop to avoid clutter are not luxuries here — they are what stops one person's activity dominating the evening.",
+          "The same is true of the washing machine. Run it while you are out, or specify one quiet enough to run while you are in."
+        ]],
+        ["Outdoor space doubles the house", [
+          "A covered terrace is the second room a compact plan cannot contain, and for two people it is where the extra distance comes from. Six months of usable outdoor space changes the experience more than any interior change.",
+          "Give it two seating positions, not one. That way the same trick — being in the same place without being on top of each other — works outside as well."
+        ]]
+      ],
+      "faq": [
+        ["Do couples actually manage in a tiny house?", "Many do, for years. The ones who do not usually leave because there is nowhere to be alone, not because of floor area."],
+        ["What is the most important feature for two people?", "A closable second space, and a partition with enough mass to make it real. MD 3 is the model built around that."],
+        ["Does an open plan work?", "For one person, well. For two, only with a genuine acoustic and visual separation somewhere in the plan."]
+      ]
+    },
+    {
+      "slug": "tiny-house-accessibility",
+      "category": "layout-and-interior",
+      "name": "Accessibility",
+      "title": "A tiny house that still works at seventy.",
+      "lead": "Most compact plans assume a ladder and a bathroom you turn sideways in. Both are fine at forty and neither is at seventy, and both are cheap to change on the drawing.",
+      "sections": [
+        ["Sleeping on one level is the whole decision", [
+          "Everything else about ageing in a compact house is manageable; a loft reached by a steep stair is not. A ground-floor sleeping space — MD 3 or larger — is what makes the house a twenty-year proposition rather than a ten-year one.",
+          "If a loft is the only option, specify a proper stair with a handrail rather than a ladder, and a going deep enough to descend facing forward. That distinction matters long before seventy."
+        ]],
+        ["Doors and clear widths", [
+          "An 800mm door leaf and a 900mm clear route through the plan cost almost nothing at design stage and are the difference between a house that accommodates a walking frame and one that does not.",
+          "Avoid thresholds. A flush transition to the terrace helps everyone with a wheeled anything — a suitcase, a pushchair, a wheelchair — and it is the same detail that makes the house feel bigger."
+        ]],
+        ["The bathroom is where retrofitting is hardest", [
+          "A level-access shower with no upstand, blocking in the walls for future grab rails, and a door that opens outward are three specification lines. Adding any of them later means stripping the room back to the frame.",
+          "The blocking in particular costs nothing now: a plywood pad behind the board where a rail might one day go. Nobody regrets it."
+        ]],
+        ["Reach, light and switches", [
+          "Sockets at 450mm rather than skirting height, switches at 1000mm, and pull cords rather than rotary controls where possible. All of these are standard accessible practice and none of them look institutional when done at design stage.",
+          "Light levels matter more with age than most people expect. Layered lighting — ambient, task and a night route to the bathroom — is worth planning as carefully as the daylight."
+        ]],
+        ["The approach from the car", [
+          "The path, the step at the door and the gradient of the plot are what actually decide whether the house is reachable. A perfect interior at the top of three steps and a gravel slope is not accessible.",
+          "Deal with it when the terrace is designed. A ramp added afterwards is a ramp that looks added afterwards."
+        ]]
+      ],
+      "faq": [
+        ["Can a tiny house work for an older buyer?", "Yes, with ground-floor sleeping, a level-access shower and no thresholds. A loft-only plan is the one arrangement that does not age well."],
+        ["What should I specify now for later?", "Blocking behind the bathroom walls for future grab rails, 800mm doors, a flush terrace threshold and sockets at 450mm. All are free at design stage."],
+        ["Which model suits this best?", "MD 3 or larger, for the ground-floor room. The wider plans also give the 900mm clear route a loft-only layout cannot."]
+      ]
+    },
+    {
+      "slug": "tiny-house-with-pets",
+      "category": "layout-and-interior",
+      "name": "Pets",
+      "title": "A tiny house with a dog or a cat: the practical details.",
+      "lead": "An animal in a compact house is mostly a storage and a floor-finish question, plus one thing people never think about until it happens: what the house does when you leave.",
+      "sections": [
+        ["Floors take the punishment", [
+          "Claws mark soft finishes and wet paws find every unsealed joint. A resilient floor with welded or sealed seams handles both; an oiled softwood does not. This is the finish decision worth spending on.",
+          "Keep a hard-wearing zone by the door with a mat well or a recessed tray. In a small plan the entrance is also the living room, so the dirt has nowhere to be contained unless you plan for it."
+        ]],
+        ["Feeding and sleeping need a designed place", [
+          "Bowls in the middle of a compact floor are an obstacle. A recess in the kitchen kick space, or a shallow niche under the stair, takes them out of the route without taking floor area.",
+          "The same for the bed. An animal bed in the wrong place blocks the one clear path through the house; in the right place it fills a corner that was doing nothing."
+        ]],
+        ["Storage for the animal is real volume", [
+          "Food, leads, towels, toys, litter, a carrier and the vet paperwork add up to a shelf and a half. It is not much and it is exactly the volume that gets forgotten when the storage schedule is written.",
+          "A cat litter tray needs a ventilated position out of the living space. In a compact plan the usual answer is the bathroom, which means the bathroom needs the room for it."
+        ]],
+        ["Leaving the house is the thing nobody plans", [
+          "A well-sealed compact building with the ventilation running is comfortable when you are out. Without ventilation, on a summer day, it is not — and unlike a large house it heats up in an hour, not an afternoon.",
+          "Specify a summer bypass on the ventilation and external shading on the main glazing. Those two together are what make the house safe to leave an animal in."
+        ]],
+        ["Outdoor access and the terrace", [
+          "A cat flap through an insulated wall is a detail, not a hole — it needs a sealed, insulated liner or it becomes a cold bridge and a draught. Ask for it before production.",
+          "A fenced or screened section of terrace does more for a dog than any interior arrangement, and it is the same screening that gives you privacy."
+        ]]
+      ],
+      "faq": [
+        ["What flooring works with a dog?", "A resilient floor with sealed or welded seams. Oiled softwood marks and lets water into the joints."],
+        ["Is a tiny house safe to leave a pet in?", "With ventilation running and external shading on the main glazing, yes. Without both, a compact house heats up in an hour on a summer day."],
+        ["Where does a litter tray go?", "The bathroom, in practice — which means the bathroom has to be sized with it in mind rather than after the fact."]
+      ]
+    },
+    {
+      "slug": "tiny-house-in-winter",
+      "category": "operation-and-maintenance",
+      "name": "Winter",
+      "title": "A tiny house through winter: what to do and when.",
+      "lead": "Nothing about winter in a well-built compact house is difficult. It is just a short list of things that have to happen before it gets cold rather than during.",
+      "sections": [
+        ["October: the water", [
+          "Check the trace heating works, confirm the drain-down valve turns, and lag anything in an unheated void that is not already lagged. A frozen pipe is the most common winter failure and the most completely avoidable.",
+          "If the house will stand empty, decide now whether you are draining it or holding a base temperature. Both work; deciding in January does not."
+        ]],
+        ["November: the envelope", [
+          "Walk the outside and look at four things: the sealant around the windows, the lowest board of the cladding, the gutter, and whether anything is stacked against the wall trapping moisture. Twenty minutes, once a year.",
+          "Clear the ventilation terminals of leaves and check the condensate drain runs. A blocked condensate outlet in December is a water leak in a wall cavity by February."
+        ]],
+        ["December to February: humidity and heat", [
+          "Keep the ventilation running continuously rather than boosting it occasionally. Continuous low-rate extraction is what keeps the humidity below the point where condensation forms on the coldest surface.",
+          "Resist the urge to close the trickle paths to save heat. Heat recovery already keeps most of it; sealing the house up is how you get mould behind the wardrobe."
+        ]],
+        ["Snow, if it settles", [
+          "A shallow roof holds snow rather than shedding it, which is fine if the structure was calculated for the local load and a problem if it was not. Ask for the figure when the house is specified, not when it snows.",
+          "Clear snow away from the base of the cladding and the terrace door. Standing snow against timber, melting and refreezing, is harder on a facade than rain."
+        ]],
+        ["March: what to check before you relax", [
+          "Look at the same four envelope points again, replace the ventilation filters, and check the loft for any sign that condensation formed over winter. Damp there is the earliest warning of a ventilation problem.",
+          "Note anything you found. A one-page winter log is what turns an unexplained problem in year five into a five-minute diagnosis."
+        ]]
+      ],
+      "faq": [
+        ["Can you live in a tiny house all winter?", "Yes, in a four-season specification: adequate insulation, continuous ventilation, freeze protection and a heat source sized for the local design temperature."],
+        ["What is the most common winter failure?", "A frozen pipe in an unheated void or at an outside tap. Trace heating and a drain-down valve prevent it entirely."],
+        ["Should I turn ventilation down to save heat?", "No. Heat recovery keeps most of the heat, and reducing the flow is how humidity reaches the coldest surface and condenses there."]
+      ]
+    },
+    {
+      "slug": "tiny-house-summer-overheating",
+      "category": "energy-and-off-grid",
+      "name": "Summer",
+      "title": "Stopping a tiny house overheating in summer.",
+      "lead": "A small, well-insulated, heavily glazed building heats up fast and has almost no mass to absorb it. Three measures fix it and all three are decided before production.",
+      "sections": [
+        ["Shade the glass from outside", [
+          "Once the sun is through the pane the heat is inside. An external overhang, shutter or screen intercepts it; an internal blind converts it to radiant heat and warms the room anyway. The difference in effect is roughly threefold.",
+          "A fixed overhang sized to the summer sun angle blocks the high July sun and lets the low December sun through. That is a drawing dimension, not a product."
+        ]],
+        ["Give the roof some mass", [
+          "The roof takes the most radiation and a lightweight build-up passes it straight through by mid-afternoon. A denser insulation — wood fibre rather than mineral wool — delays that transfer by hours, which is enough to move the peak past bedtime.",
+          "This is why the loft is always the hottest place in a compact house and why it is the element worth upgrading if the budget only allows one."
+        ]],
+        ["Purge at night, close during the day", [
+          "The Mediterranean habit works everywhere: open up when the outside air is cooler than the inside, close and shade when it is not. In a small volume the air changes quickly, so a two-hour evening purge genuinely resets the house.",
+          "This needs an openable window at each end and a rooflight over the loft. A house with only fixed glazing cannot do it at all."
+        ]],
+        ["Cooling, if you need it", [
+          "An air-to-air heat pump reverses in summer, and in a compact house the smallest unit is more than enough. It costs electricity at exactly the time solar is producing most, which makes it the natural pairing with a roof array.",
+          "Size it against the shaded, purged house rather than the unshaded one. Cooling a badly shaded building is the expensive way to solve a drawing problem."
+        ]],
+        ["Where the appliances are", [
+          "A fridge in a sunlit corner, a router in a closed cupboard and an inverter in an unventilated void all add heat and all shorten their own life. In a small volume the sum is noticeable.",
+          "Give each a ventilated position. It costs nothing at the plan stage and it is one of the reasons some compact houses feel warm with no obvious cause."
+        ]]
+      ],
+      "faq": [
+        ["Why does my tiny house overheat?", "Usually a lightweight roof build-up plus unshaded glazing. Both are fixed at design stage, and internal blinds do not substitute for external shading."],
+        ["Do I need air conditioning?", "Rarely, if the glass is shaded externally and the roof has some mass. Where you do, a reversible heat pump is the smallest and pairs well with solar."],
+        ["Does night purging really work?", "In a small volume, yes — the air changes fast enough that a two-hour evening purge resets the house. It needs openable windows at both ends."]
+      ]
+    },
+    {
+      "slug": "tiny-house-insurance",
+      "category": "permits-and-law",
+      "name": "Insurance",
+      "title": "Insuring a tiny house: what the questions are really asking.",
+      "lead": "Insurers classify before they price, and every awkward question is about which category the building falls into. Answering them clearly is most of the work.",
+      "sections": [
+        ["Movable or immovable is the first fork", [
+          "A house on a permanent foundation, connected to services, is insured as a building. The same house on wheels, unconnected, is closer to a leisure vehicle policy. The premium, the cover and the claims process all differ.",
+          "Say which you are before asking for a quote. A policy taken out under the wrong description is a policy that may not pay."
+        ]],
+        ["Occupation type changes everything", [
+          "Permanent residence, holiday use, short-term letting and unoccupied for months are four different risks. Unoccupancy in particular has clauses — many policies reduce cover after thirty or sixty days empty.",
+          "If you let the house, you need a policy that covers paying guests. A domestic policy usually excludes them entirely, and that exclusion surfaces only at claim time."
+        ]],
+        ["What they will ask about the construction", [
+          "Frame material, cladding material, whether there is a wood-burning stove, how the house is anchored, and whether the electrical installation has a certificate. Each answer moves the price, and a certificate you already have moves it downward.",
+          "Keep the build documentation. Photographs of the frame and the vapour layer, the electrical certificate, the flue installation record — these are the difference between a straightforward claim and an argument."
+        ]],
+        ["Anchoring and wind", [
+          "A lightweight building has a wind uplift question that a masonry house does not. Insurers ask how it is held down, and on exposed coastal plots they ask precisely. A designed anchoring detail with a calculation answers it.",
+          "This is also worth having for your own sake. Uplift is the failure mode that damages a compact building most severely and most suddenly."
+        ]],
+        ["Contents, liability and the terrace", [
+          "Contents cover in a small house is easy to underestimate — a fitted interior means much of what you would call contents elsewhere is part of the building here. Ask which side of the line the fitted furniture sits on.",
+          "Public liability matters if anyone else uses the terrace, and it is usually cheap. It is also usually absent from the first quote unless you ask."
+        ]]
+      ],
+      "faq": [
+        ["Can I insure a tiny house normally?", "Yes, once it is correctly classified. A house on a permanent foundation with services is insured as a building; on wheels and unconnected, it is a different product."],
+        ["Does letting need a different policy?", "Yes. A domestic policy usually excludes paying guests entirely, and the exclusion appears at claim time rather than at purchase."],
+        ["What documents will they want?", "The electrical certificate, the flue record if there is a stove, the anchoring detail, and ideally photographs from the build. Having them lowers the price."]
+      ]
+    },
+    {
+      "slug": "tiny-house-resale-value",
+      "category": "comparison-and-alternatives",
+      "name": "Resale",
+      "title": "What a tiny house is worth in five years, and what holds that value.",
+      "lead": "Compact buildings depreciate very differently depending on three things: the structure, the paperwork and whether the buyer can put it anywhere.",
+      "sections": [
+        ["The structure sets the floor", [
+          "A steel frame with a correctly executed envelope is a fifty-year building and is valued as one. A light timber leisure unit is designed for seasonal use and is valued on a depreciation curve closer to a caravan.",
+          "This is the single largest factor and it is decided at purchase. Nothing you do afterwards moves a building from one category to the other."
+        ]],
+        ["Paperwork is worth real money", [
+          "A documented build — frame photographs, insulation build-up, electrical certificate, flue record, maintenance log — lets a buyer verify what they are buying. Without it, they are pricing in a risk, and the discount is larger than the cost of keeping the file.",
+          "Start the file at handover. Reconstructing it three years later is impossible for exactly the parts that matter."
+        ]],
+        ["Siteability is what the buyer is actually buying", [
+          "A house that fits standard road transport, needs no exceptional permit to move and has a documented foundation interface can go anywhere. One that is 3.2 metres wide is worth less because moving it is a project.",
+          "The 2.55 metre width is not just a delivery convenience. It is what keeps the second buyer's options open."
+        ]],
+        ["What ages badly", [
+          "Highly specific interiors, unusual colours, bespoke fittings that cannot be replaced, and anything that dates hard. In a small house every one of those is a large proportion of what the buyer sees.",
+          "Keep the fixed elements neutral and put the personality into the things that move. That is not a compromise; it is what makes the house work for the next occupant too."
+        ]],
+        ["The market for used compact houses", [
+          "It exists, it is thin, and it moves on trust. Photographs from the build phase, a moisture reading and a look at the chassis underside are what an informed buyer checks — which means those are what an informed seller prepares.",
+          "Price against comparable new plus the cost of the site work already done. A house already sited, connected and permitted is worth more than the same house on a lorry."
+        ]]
+      ],
+      "faq": [
+        ["Does a tiny house hold its value?", "A steel-framed one with a proper envelope and documentation, largely yes. A light seasonal unit depreciates much faster."],
+        ["What most affects resale?", "Structure first, then documentation, then whether the house can be moved on standard transport without exceptional permits."],
+        ["Should I keep the build photographs?", "Yes — they are the only evidence of what is inside a closed wall, and a buyer without them prices in a risk larger than the file was worth."]
+      ]
+    },
+    {
+      "slug": "tiny-house-site-preparation",
+      "category": "transport-and-import",
+      "name": "Site works",
+      "title": "Preparing the site: the programme from decision to delivery.",
+      "lead": "The house takes weeks to build and the site often takes longer to be ready. Running them in the wrong order is the most common cause of a house waiting on a lorry.",
+      "sections": [
+        ["Start the utilities first, always", [
+          "Connection lead times run from weeks to a year depending on region and utility. It is the longest single item in the programme and the one most often started last, after the house is ordered.",
+          "Apply as soon as the plot is secured, before the model is chosen. Everything else can be compressed; this cannot."
+        ]],
+        ["Ground investigation before groundwork", [
+          "A probe costs little and decides the foundation type, which decides the groundwork cost and duration. Skipping it means finding out during excavation, when the machine is already on site and charging by the day.",
+          "On sloping or made ground, get an engineer's opinion at the same time. Two site visits at the start prevent a redesign in the middle."
+        ]],
+        ["Access before anything is delivered", [
+          "The route from the public road to the final position has to take a lorry and a crane. Widening a gate, trimming a branch, laying a temporary track or arranging a road closure are all lead-time items measured in weeks.",
+          "Do the walk with a tape and a camera. Photograph the entrance, the narrowest point, the last turn and the standing position for the crane, and send them with dimensions."
+        ]],
+        ["Sequence the groundwork so it cures", [
+          "Concrete needs time. A strip foundation poured the week before delivery is a foundation being loaded before it has reached strength. Build the wait into the programme rather than discovering it.",
+          "Screw piles avoid this entirely, which is part of why they suit a compressed schedule even where a strip would otherwise be preferable."
+        ]],
+        ["The week before delivery", [
+          "Confirm the crane, confirm the levels with an instrument, clear the standing area, arrange the mats if the ground is soft, and make sure someone with authority is on site on the day. A delivery with nobody empowered to make a decision is a delivery that stops.",
+          "Have the utilities terminated where the house will meet them, capped and marked. Connecting on the day is a morning; digging on the day is a week."
+        ]]
+      ],
+      "faq": [
+        ["How long does site preparation take?", "The groundwork is days to a fortnight. The utility connections are weeks to a year, and that is what sets the programme."],
+        ["What should I do first?", "Apply for the utility connections, before choosing a model. Everything else can be compressed; connection lead times cannot."],
+        ["What is most often forgotten?", "Access. Widening a gate or arranging a road closure is a lead-time item, and it is discovered on delivery day more often than any other problem."]
+      ]
+    },
+    {
+      "slug": "tiny-house-lighting",
+      "category": "layout-and-interior",
+      "name": "Lighting",
+      "title": "Lighting a tiny house: three layers, not one ceiling fitting.",
+      "lead": "A single bright ceiling light makes a small room look like a small room. Layered light makes the same volume read as several places.",
+      "sections": [
+        ["Ambient light should be indirect", [
+          "A downlight grid in a compact ceiling flattens everything and puts your own shadow on whatever you are doing. Light bounced off the ceiling or a wall gives the same illumination without the flatness and without the glare from a loft bed.",
+          "A cove or an uplight above the kitchen run is the usual answer. It costs a channel detail on the drawing and nothing afterwards."
+        ]],
+        ["Task light where the tasks are", [
+          "Under-cabinet light on the worktop, a directional light at the desk, a reading light each side of the bed. Each is small, each is switched separately, and together they let you light one part of the house without lighting all of it.",
+          "That selectivity is what makes a compact interior feel larger after dark: a lit corner and a dim one read as two spaces."
+        ]],
+        ["Accent light does the rest", [
+          "One fitting picking out a texture — the cladding on a feature wall, a shelf, a plant — gives the eye somewhere to go. In a small room that is disproportionately effective and costs one circuit.",
+          "Outside, a single light on the terrace tree or the facade extends the visual space beyond the glass. At night an unlit window is a black mirror; a lit exterior gives you back the view."
+        ]],
+        ["Colour temperature and dimming", [
+          "Warm white, around 2700K, everywhere you relax; neutral, around 3500K, over the worktop and the desk. Mixing them within one sightline looks like a mistake, so decide the boundary on the plan.",
+          "Dim everything you can. In a small volume the difference between full and quarter output is the difference between a kitchen and a living room."
+        ]],
+        ["Wiring it is a production decision", [
+          "Every circuit, switch position and driver location is fixed when the walls close. Adding a two-way switch at the loft, or a socket for a floor lamp where the sofa will be, is a line on a drawing now and a chase in a finished wall later.",
+          "Mark the furniture on the plan before the lighting is set out. Lighting designed against an empty plan lands in the wrong places."
+        ]]
+      ],
+      "faq": [
+        ["How many lights does a tiny house need?", "Fewer fittings than a grid of downlights, but on more separate circuits. Selectivity matters more than quantity."],
+        ["What colour temperature?", "Around 2700K where you relax and 3500K over worktops. Do not mix them within one sightline."],
+        ["Can I change the lighting later?", "Fittings, yes. Circuits, switch positions and driver locations are fixed when the walls close."]
+      ]
+    },
+    {
+      "slug": "tiny-house-interior-materials",
+      "category": "layout-and-interior",
+      "name": "Materials",
+      "title": "Colour and material in a small interior: what makes it read larger.",
+      "lead": "The received advice is to paint everything white. That is half right and it is the wrong half that gets applied.",
+      "sections": [
+        ["Continuity matters more than lightness", [
+          "A small room reads larger when the eye is not stopped — one floor material running everywhere, one wall tone, one ceiling. Three different floor finishes in twenty-eight square metres subdivides the space visually and makes each part feel smaller.",
+          "That is why an all-white interior often does work: not because white is light, but because it is continuous. The same continuity in a warm mid-tone works just as well and feels less clinical."
+        ]],
+        ["Run the floor through the threshold", [
+          "The single most effective trick in a compact house is the same floor level and, where possible, a similar material inside and on the terrace. The eye reads the two as one space and the house borrows the outside.",
+          "It also removes the threshold, which helps everyone with anything on wheels."
+        ]],
+        ["Timber wants restraint", [
+          "Wood on every surface in a small volume becomes oppressive by about the third surface. One elevation of timber against plainer walls reads as warmth; four elevations reads as a sauna.",
+          "Keep the ceiling the lightest surface. A dark ceiling in a two-and-a-half-metre room is felt physically, not just seen."
+        ]],
+        ["Reflection is a tool and a trap", [
+          "A mirror opposite a window doubles the daylight and the view and genuinely enlarges the room. A high-gloss cabinet front near the same window shows every fingerprint and every reflection of the extractor hood.",
+          "Matt or satin on the large surfaces, reflection reserved for one deliberate place."
+        ]],
+        ["Texture carries a small room", [
+          "With little floor area, the surfaces are close to the eye, so texture does the work that scale does in a large room. A woven blind, a linen curtain, a rough plaster or a brushed timber grain give the interest that pattern would give elsewhere.",
+          "Pattern, by contrast, is best kept to things you can change. In a small house a bold permanent pattern is unavoidable in a way it never is in a large one."
+        ]]
+      ],
+      "faq": [
+        ["Should everything be white?", "Not necessarily. What makes a small interior read larger is continuity — one floor, one wall tone — rather than lightness. A warm mid-tone works equally well."],
+        ["How much timber is too much?", "About three surfaces. One timber elevation against plainer walls reads as warmth; timber everywhere reads as a sauna."],
+        ["Do mirrors help?", "One, placed to reflect a window or a view, genuinely helps. Reflective cabinet fronts mostly show fingerprints."]
+      ]
+    }
+  ]
+}

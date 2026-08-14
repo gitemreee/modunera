@@ -415,10 +415,10 @@ const CLOSE_MARK = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false
    reads before the first message — what we build, how quickly we answer — is
    translated, so the Dutch and Danish sections no longer open a German panel. */
 const DOCK_COPY = {
-  de: { dialog: "WhatsApp Kontakt", reply: "Antwort meist am selben Tag", close: "Schließen", intro: "Wir fertigen in eigener Produktion und liefern nach Europa:", cta: "Projekt starten", phone: "Anrufen", open: "WhatsApp öffnen",
+  de: { dialog: "WhatsApp Kontakt", reply: "Antwort meist am selben Tag", close: "Schließen", intro: "Wir fertigen nach eigener Spezifikation und liefern nach Europa:", cta: "Projekt starten", phone: "Anrufen", open: "WhatsApp öffnen",
     services: ["Tiny Houses", "Modulbau", "Stahlbau", "Bungalows", "Möbel nach Maß"],
     message: "Hallo MODUNERA. Zielland/Ort: __. Nutzung: __. Personen: __. Budget: __. Bitte senden Sie mir eine Ersteinschätzung." },
-  en: { dialog: "WhatsApp contact", reply: "Usually replies the same day", close: "Close", intro: "We manufacture in our own production and deliver across Europe:", cta: "Start your project", phone: "Call us", open: "Open WhatsApp",
+  en: { dialog: "WhatsApp contact", reply: "Replies on working days", close: "Close", intro: "We build to our own specification and deliver across Europe:", cta: "Start your project", phone: "Call us", open: "Open WhatsApp",
     services: ["Tiny houses", "Modular buildings", "Steel structures", "Bungalows", "Bespoke furniture"],
     message: "Hello MODUNERA. Destination/place: __. Intended use: __. People: __. Budget: __. Please send a first assessment." },
   nl: { dialog: "WhatsApp-contact", reply: "Meestal dezelfde dag antwoord", close: "Sluiten", intro: "Wij produceren in eigen fabriek en leveren in heel Europa:", cta: "Start uw project", phone: "Bel ons", open: "WhatsApp openen",
@@ -1211,6 +1211,38 @@ async function rewriteBrand() {
 
 /* Swaps the legacy two-icon rail for the WhatsApp dock on the pages this layer
    does not regenerate — the 7,572 German pages carry their own footer. */
+/* The cookie notice on 7,545 pages called the site "diese Demo" — written by the
+   legacy tools/generate_scale_v3.py, which is no longer in the pipeline, so the
+   wording persisted in committed HTML. It is not a demo and saying so on every
+   page is a trust problem, not a wording problem. The text is also now accurate:
+   no analytics service is configured in assets/js/integration-config.json, so
+   none loads regardless of the choice made here. */
+const COOKIE_NOTICE = {
+  de: ["Ihre Privatsphäre", "Wir speichern nur Ihre Auswahl lokal in Ihrem Browser. Analyse- und Marketingdienste sind nicht aktiv.", "Nur notwendig", "Alle akzeptieren"],
+  en: ["Your privacy", "We store only your choice, locally in your browser. No analytics or marketing services are active.", "Necessary only", "Accept all"],
+  nl: ["Uw privacy", "Wij bewaren alleen uw keuze, lokaal in uw browser. Er zijn geen analyse- of marketingdiensten actief.", "Alleen noodzakelijk", "Alles accepteren"],
+  da: ["Dit privatliv", "Vi gemmer kun dit valg, lokalt i din browser. Der er ingen analyse- eller marketingtjenester aktive.", "Kun nødvendige", "Accepter alle"],
+  fr: ["Votre vie privée", "Nous ne conservons que votre choix, localement dans votre navigateur. Aucun service d'analyse ou de marketing n'est actif.", "Nécessaires uniquement", "Tout accepter"],
+};
+
+async function rewriteCookieNotice() {
+  const files = (await walk(ROOT)).filter((f) => extname(f).toLowerCase() === ".html");
+  let changed = 0;
+  for (const file of files) {
+    const original = await readFile(file, "utf8");
+    if (!original.includes('<div class="cookie">')) continue;
+    const [title, text, essential, all] = COOKIE_NOTICE[detectLang(original)] ?? COOKIE_NOTICE.de;
+    const markup = `<div class="cookie"><strong>${title}</strong><p class="legal-note">${text}</p>` +
+      `<div class="cookie-actions"><button class="btn btn-dark" data-cookie="essential">${essential}</button>` +
+      `<button class="btn btn-primary" data-cookie="all">${all}</button></div></div>`;
+    const html = original.replace(/<div class="cookie">[\s\S]*?<\/div><\/div>/, markup);
+    if (html === original) continue;
+    await writeFile(file, html, "utf8");
+    changed += 1;
+  }
+  return changed;
+}
+
 async function rewriteWhatsapp() {
   const files = (await walk(ROOT)).filter((f) => extname(f).toLowerCase() === ".html");
   let changed = 0;
@@ -1337,6 +1369,7 @@ async function main() {
   const heroSlideshows = await insertHeroSlides();
   const brandChanged = await rewriteBrand();
   const waChanged = await rewriteWhatsapp();
+  const cookieChanged = await rewriteCookieNotice();
   const sitemap = await buildSitemaps();
 
   // keep the build report in step, since validate-modunera.mjs reports its sitemap_urls
@@ -1360,6 +1393,7 @@ async function main() {
     heroSlideshows,
     brandRewritten: brandChanged,
     whatsappDocks: waChanged,
+    cookieNotices: cookieChanged,
     sitemap,
   }));
 }

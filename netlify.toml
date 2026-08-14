@@ -68,3 +68,6 @@
   for = "/*.html"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+
+# Danish location slugs are redirected from the generated _redirects file,
+# built by tools/build-nordic-redirects.mjs — one source of truth, not two.

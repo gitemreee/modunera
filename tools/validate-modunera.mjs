@@ -165,6 +165,12 @@ if (issues.length) {
     unique_canonicals: canonicalOwners.size,
     json_ld_blocks: jsonLdBlocks,
     checked_local_references: checkedReferences,
-    sitemap_urls: Number(JSON.parse(await readFile(join(ROOT, "build-report-modunera.json"), "utf8")).sitemap_urls),
+    // counted from the sitemap files themselves. It used to come from
+    // build-report-modunera.json, which is written before the SEO governance step
+    // rewrites the sitemap, so the number reported was the pre-gate one.
+    sitemap_urls: (await Promise.all((await readdir(join(ROOT, "sitemaps")).catch(() => []))
+      .filter((f) => f.endsWith(".xml"))
+      .map(async (f) => ((await readFile(join(ROOT, "sitemaps", f), "utf8")).match(/<loc>/g) ?? []).length)))
+      .reduce((a, b) => a + b, 0),
   }));
 }
