@@ -63,6 +63,7 @@ built out.
 | Change | File |
 |---|---|
 | Visual language: type scale, spacing, cards, colours | `tools/design-system-v2.css` |
+| The palette | the `:root` token block at the top of `tools/design-system-v2.css` |
 | Navigation entries | `MENU` in `tools/build-modunera-v2.mjs` |
 | Brand claim ("Design Your Nature") | `CLAIM` in `tools/build-modunera-v2.mjs` |
 | WhatsApp dock copy and services | `whatsappDock()` / `WA_SERVICES` in `tools/build-modunera-v2.mjs` |
@@ -84,6 +85,33 @@ Never edit `assets/css/styles.css` between the `MODUNERA BRAND PALETTE`
 markers — that block is regenerated from `tools/design-system-v2.css` on every
 build. Edits outside the markers survive, but the generated block is appended
 last and therefore wins on equal specificity.
+
+## Palette
+
+Five colours, plus one derived shade because CSS needs a pressed state and a
+surface deeper than the darkest of the five:
+
+| Token | Hex | Role |
+|---|---|---|
+| `--moss` | `#3A5A40` | body text, dark surfaces, primary action |
+| `--leaf` | `#588157` | secondary action, hover, figures on light |
+| `--sage` | `#A3B18A` | light accents on dark, chips, the brand claim |
+| `--cream` | `#DAD7CD` | alternating sections, notices, accents on dark |
+| `--paper-white` | `#F5F5F5` | page ground |
+| `--moss-deep` | `#2E4733` | derived: footer, pressed states |
+
+The old token names (`--terracotta`, `--charcoal`, `--sand`, `--forest-950` and
+the rest) are kept and remapped onto these, so the 164-class v1 contract keeps
+working and nothing had to be renamed for the site to repaint.
+
+Two contrast rules fall out of the palette and are worth knowing before editing:
+Leaf on white measures 4.1:1, so it fills buttons but never sets small text; and
+Sage on Moss measures 3.4:1, so accents on dark surfaces take Cream at 5.4:1 while
+large figures on those grounds can still take Sage.
+
+**The logo is deliberately not repainted.** The master lockup keeps its terracotta
+mark and near-black wordmark; `tools/generate-brand-assets.py` derives the shipped
+sizes from it unchanged.
 
 ## Brand assets
 
@@ -146,7 +174,7 @@ so. Adding a market means adding it to both JS files, both delivery selects
 
 `tools/validate-modunera.mjs` exits non-zero on: a missing canonical, duplicate
 canonicals, missing `lang`, invalid JSON-LD, a broken local link, a missing
-brand colour, a surviving legacy brand string, or a duplicated country/service
+palette colour, a surviving legacy brand string, or a duplicated country/service
 link in the homepage navigation. It also asserts the required page set exists.
 
 Current numbers: 14,976 pages, 14,976 unique canonicals, 14,972 sitemap URLs,

@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 const ROOT = fileURLToPath(new URL("../", import.meta.url));
 const BASE = "https://modunera.com/";
 const EXPECTED_WHATSAPP = "905535435342";
-const REQUIRED_COLORS = ["#C29B72", "#8D321F", "#3A4027", "#2B2D31"];
+const REQUIRED_COLORS = ["#3A5A40", "#588157", "#A3B18A", "#DAD7CD", "#F5F5F5"];
 const SKIP_DIRECTORIES = new Set([".git", ".github", "node_modules"]);
 const REQUIRED_FILES = [
   "assets/images/modunera-logo.png",

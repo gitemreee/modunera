@@ -7,8 +7,8 @@
    instead of pillowy shadows, sharp 8px radii, tabular figures for specs and
    prices, and tighter grids so more of the offer fits on one screen.
 
-   The corporate palette is unchanged: beige #C29B72, terracotta #8D321F,
-   olive #3A4027, charcoal #2B2D31.
+   The palette is the five-colour eco set: Moss #3A5A40, Leaf #588157,
+   Beige #A3B18A, Cream #DAD7CD, White #F5F5F5.
 
    This file is appended verbatim to assets/css/styles.css by updateBrandCss()
    in tools/build-modunera-europe.mjs, between the palette markers. It layers on
@@ -17,19 +17,29 @@
    Edit this file, then re-run the build — never edit the generated block.
    ============================================================================ */
 
-/* --- Tokens --------------------------------------------------------------- */
+/* --- Tokens ---------------------------------------------------------------
+   The palette is the five-colour eco set:
+     Moss   #3A5A40   darkest — text, dark surfaces, primary action
+     Leaf   #588157   mid green — secondary action, hover, data figures
+     Beige  #A3B18A   light sage — light accents on dark, chips, the brand claim
+     Cream  #DAD7CD   warm light neutral — alternating sections, notices
+     White  #F5F5F5   page ground
+   One derived shade is added because CSS needs a pressed state and a surface
+   deeper than Moss: --moss-deep #2E4733, Moss darkened.
+   The old token names are kept and remapped so the 164-class v1 contract keeps
+   working — nothing has to be renamed for the site to repaint. */
 :root{
-  --beige:#C29B72;--terracotta:#8D321F;--olive:#3A4027;--charcoal:#2B2D31;
-  --brand:#8D321F;--brand-dark:#6f2718;--wine:#8D321F;
-  --forest:#3A4027;--forest-950:#2B2D31;--forest-900:#3A4027;--forest-800:#4d5737;--forest-700:#66704b;
-  --sand:#C29B72;--sand-2:#ead9c8;--clay:#8D321F;
-  /* brand tokens under their documented names; the aliases below keep the 164-class
-     v1 contract working without repainting the site */
-  --brand-beige:#C29B72;--brand-terracotta:#8D321F;--brand-olive:#3A4027;
-  --brand-charcoal:#2B2D31;--brand-cream:#F4E9DA;
-  --paper:#faf8f5;--paper-2:#f1ece5;--ink:#2B2D31;--muted:#6c6a66;
-  --line:rgba(43,45,49,.14);--line-strong:rgba(43,45,49,.26);
-  --shadow:0 1px 2px rgba(43,45,49,.07);--shadow-soft:0 1px 2px rgba(43,45,49,.05);
+  --moss:#3A5A40;--leaf:#588157;--sage:#A3B18A;--cream:#DAD7CD;--paper-white:#F5F5F5;
+  --moss-deep:#2E4733;
+  --beige:#A3B18A;--terracotta:#3A5A40;--olive:#588157;--charcoal:#3A5A40;
+  --brand:#3A5A40;--brand-dark:#2E4733;--wine:#3A5A40;
+  --forest:#3A5A40;--forest-950:#2E4733;--forest-900:#3A5A40;--forest-800:#588157;--forest-700:#6E9268;
+  --sand:#A3B18A;--sand-2:#DAD7CD;--clay:#3A5A40;
+  --brand-beige:#A3B18A;--brand-terracotta:#3A5A40;--brand-olive:#588157;
+  --brand-charcoal:#3A5A40;--brand-cream:#DAD7CD;
+  --paper:#F5F5F5;--paper-2:#DAD7CD;--ink:#3A5A40;--muted:#4A5748;
+  --line:rgba(58,90,64,.18);--line-strong:rgba(58,90,64,.34);
+  --shadow:0 1px 2px rgba(46,71,51,.08);--shadow-soft:0 1px 2px rgba(46,71,51,.06);
   --max:1200px;
   /* compact type scale */
   --fs-display:clamp(2.1rem,4vw,3.4rem);
@@ -48,7 +58,7 @@
 /* --- Base -----------------------------------------------------------------
    The site type now follows the wordmark: MODUNERA is set in a geometric sans
    with circular bowls, so Poppins carries the same construction through the
-   interface. Manrope stays as the first fallback. Colours are untouched. */
+   interface. Manrope stays as the first fallback. */
 :root{--display:"Poppins","Manrope",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
   --serif:var(--display)}
 html,body{background:var(--paper);color:var(--charcoal)}
@@ -92,10 +102,11 @@ p{margin:0 0 10px}
 .section-header p{color:var(--muted);max-width:60ch;margin:0}
 
 /* --- Brand lockup ---------------------------------------------------------
-   The master logo is a 3.97:1 lockup (terracotta roof/mountain mark plus a
-   charcoal wordmark) on transparency. object-fit:contain keeps the ratio no
-   matter what box it lands in; the header surface stays light so the charcoal
-   wordmark reads. */
+   The master logo is a 3.97:1 lockup on transparency and is deliberately left in
+   its original colours — a terracotta roof/mountain mark and a near-black
+   wordmark — while the rest of the site runs on the green palette.
+   object-fit:contain keeps the ratio in whatever box it lands in; the header
+   surface stays light so the wordmark reads. */
 .brand{display:flex;align-items:center;gap:12px}
 .brand img{width:150px;height:auto;max-height:38px;object-fit:contain}
 /* Brand line: "Design Your Nature" set in a handwriting face beside the lockup.
@@ -112,12 +123,12 @@ p{margin:0 0 10px}
 .footer .brand img,.factory-copy .brand img{filter:brightness(0) invert(1);opacity:.92}
 
 /* --- Navigation ----------------------------------------------------------- */
-.nav{background:rgba(250,248,245,.94);backdrop-filter:blur(16px) saturate(1.05);border-bottom:1px solid var(--line)}
+.nav{background:rgba(245,245,245,.94);backdrop-filter:blur(16px) saturate(1.05);border-bottom:1px solid var(--line)}
 .nav-inner{height:62px;gap:18px}
 .nav-links{gap:22px;font-size:.82rem;font-weight:750;letter-spacing:-.005em}
 .nav-links>a,.nav-dropdown>button{padding:20px 0}
 .nav-links>a:after{bottom:14px;height:2px;background:var(--terracotta)}
-.nav-menu{top:52px;left:-16px;min-width:288px;border-radius:var(--r);padding:8px;border:1px solid var(--line);box-shadow:0 10px 30px rgba(43,45,49,.12)}
+.nav-menu{top:52px;left:-16px;min-width:288px;border-radius:var(--r);padding:8px;border:1px solid var(--line);box-shadow:0 10px 30px rgba(46,71,51,.14)}
 /* v1 laid label and sublabel side by side, which wraps badly once the sublabel is
    more than a word or two. Stack them instead. */
 .nav-menu a{display:block;padding:9px 11px;border-radius:6px;font-size:.83rem;font-weight:750}
@@ -146,7 +157,7 @@ p{margin:0 0 10px}
 .lang-switch:hover{border-color:var(--terracotta);color:var(--terracotta)}
 .lang-switch .flag{width:20px;height:14px}
 .flag{display:inline-block;width:20px;height:14px;border-radius:2px;flex:none;
-  box-shadow:0 0 0 1px rgba(43,45,49,.16) inset;object-fit:cover;vertical-align:middle}
+  box-shadow:0 0 0 1px rgba(46,71,51,.16) inset;object-fit:cover;vertical-align:middle}
 .lang-dropdown .nav-menu{min-width:190px;left:auto;right:-8px}
 .lang-dropdown .nav-menu a{display:flex;align-items:center;justify-content:flex-start;gap:10px}
 .lang-dropdown .nav-menu a>span{display:inline;text-align:left}
@@ -192,13 +203,13 @@ p{margin:0 0 10px}
 .hero{min-height:0;height:auto;max-height:none}
 .hero-content{padding:52px 0 58px}
 .hero h1{font-size:var(--fs-display);font-weight:820;line-height:1.05;letter-spacing:-.028em;max-width:19ch;margin:12px 0 14px}
-.hero-panel{padding:34px 38px;border-radius:var(--r);background:rgba(250,248,245,.95)}
+.hero-panel{padding:34px 38px;border-radius:var(--r);background:rgba(245,245,245,.95)}
 .hero-panel p{font-size:.98rem;max-width:52ch;color:var(--muted)}
 .hero-actions{gap:10px;margin-top:18px}
 .hero-proof{margin-top:20px;font-size:var(--fs-small)}
 .page-hero{padding:44px 0 32px;background:linear-gradient(120deg,#f0e6da 0%,#faf8f5 58%,#eceade 100%)}
 .page-hero+.section,.page-hero+section .container>.kpi-row:first-child{padding-top:32px}
-.page-hero:after{background:radial-gradient(circle,rgba(141,50,31,.1),rgba(141,50,31,0) 70%)}
+.page-hero:after{background:radial-gradient(circle,rgba(58,90,64,.1),rgba(58,90,64,0) 70%)}
 /* v1 sized these with their own clamps (up to 101px and 104px), which outrank a
    bare h1 selector — they have to be overridden by name. */
 .page-hero h1,.country-hero h1{font-size:var(--fs-h1);font-weight:820;line-height:1.08;letter-spacing:-.028em;max-width:24ch;margin:8px 0 0;color:var(--charcoal)}
@@ -367,8 +378,8 @@ p{margin:0 0 10px}
 .wa-launch svg,.wa-call svg{width:27px;height:27px}
 .wa-launch{background:#25D366;box-shadow:0 8px 22px rgba(37,211,102,.42)}
 .wa-launch:hover{transform:scale(1.06);box-shadow:0 12px 28px rgba(37,211,102,.5)}
-.wa-call{position:relative;background:var(--charcoal);box-shadow:0 8px 20px rgba(43,45,49,.3)}
-.wa-call:hover{transform:scale(1.06);background:var(--terracotta);box-shadow:0 12px 26px rgba(141,50,31,.42)}
+.wa-call{position:relative;background:var(--charcoal);box-shadow:0 8px 20px rgba(46,71,51,.3)}
+.wa-call:hover{transform:scale(1.06);background:var(--terracotta);box-shadow:0 12px 26px rgba(58,90,64,.42)}
 /* The handset needs a label on a pointer device; on touch the aria-label carries it. */
 .wa-tip{position:absolute;right:calc(100% + 10px);top:50%;transform:translateY(-50%);
   white-space:nowrap;background:var(--charcoal);color:#fff;border-radius:6px;padding:5px 9px;
@@ -461,7 +472,7 @@ p{margin:0 0 10px}
   .lang-dropdown{position:static}
   .lang-dropdown .nav-menu{position:absolute;top:46px;right:0;left:auto;min-width:186px;
     background:#fff;border:1px solid var(--line);border-left:1px solid var(--line);
-    border-radius:var(--r);padding:7px;box-shadow:0 14px 32px rgba(43,45,49,.2);z-index:30}
+    border-radius:var(--r);padding:7px;box-shadow:0 14px 32px rgba(46,71,51,.2);z-index:30}
   .lang-dropdown .nav-menu a{padding:9px 10px;border-radius:6px}
   /* v1's own media query hid this; put it back so phones can reach the English site */
   .nav-actions .lang-switch{display:inline-flex}
@@ -494,8 +505,8 @@ p{margin:0 0 10px}
   .hero-grain{display:none}
   .hero-content{position:relative;display:block;padding:0;margin-top:-26px}
   .hero-panel{width:calc(100% - 24px);margin:0 auto;border-radius:var(--r);
-    box-shadow:0 -2px 18px rgba(43,45,49,.1)}
-  .hero-panel{width:100%;background:rgba(250,248,245,.96)}
+    box-shadow:0 -2px 18px rgba(46,71,51,.1)}
+  .hero-panel{width:100%;background:rgba(245,245,245,.96)}
   .hero h1{font-size:1.85rem;margin:8px 0 10px}
   .hero-panel p{font-size:.9rem;max-width:none}
   .hero-proof{display:none}
@@ -600,3 +611,73 @@ p{margin:0 0 10px}
   .model-card{min-height:290px}
   .model-card h3{font-size:1.3rem}
 }
+
+/* --- v1 surfaces that still carried the warm palette ----------------------- */
+/* Most of the v1 sheet already draws from tokens, so remapping them repaints the
+   site. These rules hardcoded warm hexes and had to be named to follow. */
+.cta-band{background:linear-gradient(135deg,var(--moss) 0%,var(--leaf) 100%);color:#fff}
+.cta-band p{color:rgba(255,255,255,.86)}
+.footer{background:var(--moss-deep);color:var(--cream)}
+.footer a{color:var(--cream)}
+.footer a:hover{color:var(--sage)}
+.footer p{color:rgba(218,215,205,.76)}
+.footer h4{color:#fff}
+.footer-bottom{border-top-color:rgba(255,255,255,.14);color:rgba(218,215,205,.72)}
+.page-hero{background:linear-gradient(135deg,var(--cream) 0%,var(--paper-white) 62%,#E7E4DB 100%);
+  color:var(--ink);border-bottom:1px solid var(--line)}
+.page-hero .breadcrumbs,.page-hero .breadcrumbs a{color:var(--muted)}
+.notice{background:var(--cream);border-left-color:var(--leaf);color:var(--moss)}
+.answer-box{background:var(--cream);border-left-color:var(--leaf)}
+.nav-menu a:hover{background:var(--cream)}
+.btn-sand{background:var(--sage);color:var(--moss-deep)}
+.btn-sand:hover{background:var(--leaf);color:#fff}
+.section-dark{background:var(--moss-deep);color:#fff}
+.section-moss{background:var(--cream)}
+.studio-price{color:var(--sage)}
+.price,.price-figure{color:var(--moss)}
+.process-item>span{background:var(--sage);color:var(--moss-deep)}
+.option-card,.radio-card{background:#fff;border-color:var(--line)}
+.option-card:has(input:checked),.radio-card:has(input:checked){background:var(--cream);border-color:var(--leaf)}
+.trust-rail{background:var(--paper);color:var(--ink)}
+.hero{background:var(--paper)}
+.scroll-progress{background:var(--leaf)}
+.toast{background:var(--moss-deep)}
+.lightbox button{background:var(--paper-white);color:var(--moss)}
+/* Leaf on white measures 4.1:1 — fine for a filled button with bold white text,
+   too weak for small text, so text accents take Moss and fills take Leaf. */
+.btn-primary{background:var(--moss);color:#fff}
+.btn-primary:hover{background:var(--leaf)}
+.btn-dark{background:var(--moss-deep);color:#fff}
+.btn-dark:hover{background:var(--moss)}
+.btn-outline{border-color:var(--line-strong);color:var(--moss)}
+.btn-outline:hover{border-color:var(--leaf);color:var(--leaf)}
+.btn-light{background:var(--paper-white);color:var(--moss)}
+.btn-light:hover{background:var(--cream)}
+
+/* --- accents on dark surfaces ---------------------------------------------- */
+/* The eyebrow, the site's signature micro-label, is Moss — and several dark
+   surfaces are painted Moss too, so on those it vanished into its own background.
+   It is 10.9px, so it needs 4.5:1: Sage on Moss gives only 3.4:1, Cream gives
+   5.4:1. Large figures on the same grounds can take Sage, which measures 4.7:1
+   against Moss deep and only has to clear 3:1 at that size. */
+.section-dark .eyebrow,.factory-copy .eyebrow,.closing-cta .eyebrow,.cta-band .eyebrow,
+.technical-panel .eyebrow,.tool-result .eyebrow,.config-summary .eyebrow,
+.article-visual-hero .eyebrow,.location-hero .eyebrow,.model-highlight .eyebrow{color:var(--cream)}
+.section-dark .blog-meta,.factory-copy .blog-meta,.closing-cta .blog-meta,
+.article-visual-hero .blog-meta,.location-hero .blog-meta{color:var(--cream)}
+.section-dark .eyebrow:before,.factory-copy .eyebrow:before,.closing-cta .eyebrow:before,
+.cta-band .eyebrow:before,.technical-panel .eyebrow:before,.tool-result .eyebrow:before,
+.config-summary .eyebrow:before,.article-visual-hero .eyebrow:before,
+.location-hero .eyebrow:before,.model-highlight .eyebrow:before{background:var(--cream)}
+.factory-copy{background:var(--moss)}
+.technical-panel,.tool-result,.config-summary{background:var(--moss);color:#fff}
+.tool-result .big,.config-summary .price,.technical-panel strong{color:var(--sage)}
+.factory-copy p,.closing-cta p,.section-dark p{color:rgba(255,255,255,.86)}
+/* .value-card is a white card, and v1 puts it inside .section-dark, which sets
+   color:#fff on everything below it — so its heading and body were white on white
+   and had been invisible since the v2 card restyle. The card carries its own text
+   colours rather than inheriting the section's. */
+.section-dark .value-card,.value-card{color:var(--ink)}
+.value-card h3{color:var(--ink)}
+.value-card strong{color:var(--leaf)}
+.value-card p,.section-dark .value-card p{color:var(--muted)}

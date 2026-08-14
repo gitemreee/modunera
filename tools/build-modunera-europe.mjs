@@ -111,7 +111,7 @@ function head({ file, lang, title, description, image = "hero-forest.webp", alte
   const root = rootFor(file);
   const canonical = canonicalFor(file);
   const locale = lang === "de" ? "de_DE" : "en_GB";
-  return `<!doctype html><html lang="${lang === "de" ? "de-DE" : "en"}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)}</title><meta name="description" content="${esc(description)}"><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><meta name="theme-color" content="#C29B72"><link rel="canonical" href="${canonical}">${alternateDe ? `<link rel="alternate" hreflang="de" href="${alternateDe}">` : ""}${alternateEn ? `<link rel="alternate" hreflang="en" href="${alternateEn}">` : ""}${alternateDe ? `<link rel="alternate" hreflang="x-default" href="${alternateDe}">` : ""}<link rel="stylesheet" href="${root}assets/css/styles.css"><link rel="icon" type="image/png" href="${root}assets/images/modunera-mark.png"><meta property="og:type" content="website"><meta property="og:site_name" content="MODUNERA"><meta property="og:locale" content="${locale}"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${BASE}assets/images/gallery/${image}"><meta name="twitter:card" content="summary_large_image">${schemas(schema)}</head><body>`;
+  return `<!doctype html><html lang="${lang === "de" ? "de-DE" : "en"}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(title)}</title><meta name="description" content="${esc(description)}"><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"><meta name="theme-color" content="#3A5A40"><link rel="canonical" href="${canonical}">${alternateDe ? `<link rel="alternate" hreflang="de" href="${alternateDe}">` : ""}${alternateEn ? `<link rel="alternate" hreflang="en" href="${alternateEn}">` : ""}${alternateDe ? `<link rel="alternate" hreflang="x-default" href="${alternateDe}">` : ""}<link rel="stylesheet" href="${root}assets/css/styles.css"><link rel="icon" type="image/png" href="${root}assets/images/modunera-mark.png"><meta property="og:type" content="website"><meta property="og:site_name" content="MODUNERA"><meta property="og:locale" content="${locale}"><meta property="og:title" content="${esc(title)}"><meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${BASE}assets/images/gallery/${image}"><meta name="twitter:card" content="summary_large_image">${schemas(schema)}</head><body>`;
 }
 
 function nav(root, lang) {
@@ -407,7 +407,7 @@ async function updateExistingText() {
     const original = await readFile(file, "utf8");
     let next = original
       .replaceAll("modunera-logo.svg", "modunera-logo.png")
-      .replace(/<meta name="theme-color" content="#[0-9a-fA-F]{6}">/g, '<meta name="theme-color" content="#C29B72">')
+      .replace(/<meta name="theme-color" content="#[0-9a-fA-F]{6}">/g, '<meta name="theme-color" content="#3A5A40">')
       .replaceAll('href="https://wa.me/905535435342"', `href="${genericDeWa}"`);
     if (extname(file).toLowerCase() === ".html" && !/<link rel="canonical" href="[^"]+">/.test(next)) {
       next = next.replace("</head>", `<link rel="canonical" href="${canonicalFor(rel)}"></head>`);
