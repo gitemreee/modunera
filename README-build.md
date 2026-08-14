@@ -99,6 +99,7 @@ surface deeper than the darkest of the five:
 | `--cream` | `#DAD7CD` | alternating sections, notices, accents on dark |
 | `--paper-white` | `#F5F5F5` | page ground |
 | `--moss-deep` | `#2E4733` | derived: footer, pressed states |
+| `--roof` | `#97311A` | headings and navigation — sampled from the logo mark |
 
 The old token names (`--terracotta`, `--charcoal`, `--sand`, `--forest-950` and
 the rest) are kept and remapped onto these, so the 164-class v1 contract keeps
@@ -111,7 +112,10 @@ large figures on those grounds can still take Sage.
 
 **The logo is deliberately not repainted.** The master lockup keeps its terracotta
 mark and near-black wordmark; `tools/generate-brand-assets.py` derives the shipped
-sizes from it unchanged.
+sizes from it unchanged. `--roof` is that mark's colour, sampled from the master —
+headings and the navigation take it, so the one element that is not repainted sets
+the colour of the page's voice. It measures 6.95:1 on White and 5.26:1 on Cream,
+but only 1.02:1 on Moss, so every dark surface names its headings back to white.
 
 ## Brand assets
 

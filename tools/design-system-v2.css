@@ -31,6 +31,9 @@
 :root{
   --moss:#3A5A40;--leaf:#588157;--sage:#A3B18A;--cream:#DAD7CD;--paper-white:#F5F5F5;
   --moss-deep:#2E4733;
+  /* The roof of the logo mark, sampled from the master file. Headings take it, so
+     the one element that is not repainted sets the colour of the page's voice. */
+  --roof:#97311A;
   --beige:#A3B18A;--terracotta:#3A5A40;--olive:#588157;--charcoal:#3A5A40;
   --brand:#3A5A40;--brand-dark:#2E4733;--wine:#3A5A40;
   --forest:#3A5A40;--forest-950:#2E4733;--forest-900:#3A5A40;--forest-800:#588157;--forest-700:#6E9268;
@@ -681,3 +684,55 @@ p{margin:0 0 10px}
 .value-card h3{color:var(--ink)}
 .value-card strong{color:var(--leaf)}
 .value-card p,.section-dark .value-card p{color:var(--muted)}
+
+/* --- headings take the roof colour of the logo ---------------------------- */
+/* #97311A is sampled from the mark on the master lockup — the one part of the
+   identity that is not repainted. On the page grounds it measures 6.95:1 on
+   White and 5.26:1 on Cream. On Moss it measures 1.02:1, so every dark surface
+   has to be named and kept white; a heading inheriting white from its section
+   would otherwise be overridden by the bare h1/h2/h3 rule, which is more
+   specific than an inherited colour. */
+h1,h2,h3,.section-header h2,.editorial-copy h2,.wide-copy h2,.article-content h2,
+.faq-preview h2,.value-card h3,.state-card h3,.benefit-card h3,.quality-card h3,
+.blog-card h3,.journey-card h3,.adv-card h3,.use-card h3,.compare-card h3,
+.tool-card h3,.option-card h3,.article h2,.article h3{color:var(--roof)}
+
+/* Dark grounds: the roof colour disappears into them, so they stay white. */
+.footer h1,.footer h2,.footer h3,.footer h4,
+.cta-band h1,.cta-band h2,.cta-band h3,
+.section-dark h1,.section-dark h2,.section-dark h3,
+.factory-copy h1,.factory-copy h2,.factory-copy h3,
+.closing-cta h1,.closing-cta h2,.closing-cta h3,
+.article-visual-hero h1,.article-visual-hero h2,.article-visual-hero h3,
+.location-hero h1,.location-hero h2,.location-hero h3,
+.model-highlight h1,.model-highlight h2,.model-highlight h3,
+.technical-panel h1,.technical-panel h2,.technical-panel h3,
+.tool-result h1,.tool-result h2,.tool-result h3,
+.config-summary h1,.config-summary h2,.config-summary h3,
+.model-card h3,.model-display-content h3,.editorial-caption strong,
+.project-caption strong,.hero h1,.hero h2{color:#fff}
+/* the white value card sits inside .section-dark, so it needs its heading back */
+.section-dark .value-card h3{color:var(--roof)}
+/* the hero copy sits on a light panel, not on the photograph */
+.hero .hero-panel h1,.hero .hero-panel h2{color:var(--roof)}
+
+/* --- navigation in the roof colour ---------------------------------------- */
+/* The header and its panels follow the headings. On the nav's near-white ground
+   the roof colour measures 6.95:1, on the white dropdown 7.3:1 and on the cream
+   hover state 5.26:1. The sublabels stay muted so the panel keeps a hierarchy,
+   and the WhatsApp button stays Moss so the call to action does not merge into
+   the links around it. */
+.nav-links>a,.nav-dropdown>button{color:var(--roof)}
+.nav-links>a:hover,.nav-dropdown>button:hover{color:var(--moss)}
+.nav-links>a:after{background:var(--roof)}
+.nav-menu a{color:var(--roof)}
+.nav-menu a:hover{color:var(--moss);background:var(--cream)}
+.nav-col h5{color:var(--roof);opacity:.72}
+.mobile-toggle{color:var(--roof)}
+.lang-switch{color:var(--roof)}
+.lang-switch:hover{border-color:var(--roof);color:var(--roof)}
+.lang-dropdown .nav-menu a[aria-current=true]{background:var(--cream);color:var(--roof)}
+/* v1 set the second line of the hero heading in a different colour to the first.
+   With headings on the roof colour that device would leave half the h1 green, so
+   the emphasis is carried by the italic alone and the heading reads as one. */
+.hero h1 em,.hero-panel h1 em{color:var(--roof)}
