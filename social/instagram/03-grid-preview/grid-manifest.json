@@ -9,7 +9,7 @@
       "source": "IMG_20250519_182528.jpg",
       "title": null,
       "watermark_band_removed_px": 141,
-      "note": "substituted for IMG_20250519_182509.jpg (see comment)",
+      "note": "substituted for IMG_20250519_182509.jpg, which would not transfer",
       "file": "social/instagram/04-post-drafts/post-01.jpg",
       "pixels": "540x675"
     },
@@ -27,9 +27,10 @@
     {
       "post": 3,
       "type": "photograph",
-      "source": "IMG_20250618_094223.jpg",
+      "source": "20231214_121220.jpg",
       "title": "BUILT WITH PURPOSE",
-      "watermark_band_removed_px": 142,
+      "watermark_band_removed_px": 0,
+      "note": "replaced IMG_20250618_094223.jpg — scaffolding dominated the frame",
       "file": "social/instagram/04-post-drafts/post-03.jpg",
       "pixels": "540x675"
     },
@@ -87,18 +88,20 @@
     {
       "post": 9,
       "type": "photograph",
-      "source": "IMG_20260206_161331.jpg",
+      "source": "20240227_113020.jpg",
       "title": "SPACE TO BREATHE",
       "watermark_band_removed_px": 0,
+      "note": "replaced IMG_20260206_161331.jpg — an unfinished grey terrace",
       "file": "social/instagram/04-post-drafts/post-09.jpg",
       "pixels": "540x675"
     },
     {
       "post": 10,
       "type": "photograph",
-      "source": "20231207_103831.jpg",
+      "source": "IMG_20250913_183727.jpg",
       "title": "FROM FRAME TO FINISH",
       "watermark_band_removed_px": 0,
+      "note": "replaced 20231207_103831.jpg — dim workshop, awkward pose. This frame carries the caption literally: the steel frame in front, the finished house behind",
       "file": "social/instagram/04-post-drafts/post-10.jpg",
       "pixels": "540x675"
     },

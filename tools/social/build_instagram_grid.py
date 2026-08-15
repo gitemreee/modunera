@@ -34,7 +34,9 @@ import json
 import sys
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFont
+import math
+
+from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont, ImageStat
 
 ROOT = Path(__file__).resolve().parents[2]
 SELECTED = ROOT / "social/instagram/01-selected"
@@ -101,6 +103,95 @@ def strip_camera_watermark(im: Image.Image) -> tuple[Image.Image, int]:
     if band < h * 0.01:
         return im, 0
     return im.crop((0, 0, w, h - band)), band
+
+
+
+def _curve(lut_fn) -> list[int]:
+    return [max(0, min(255, round(lut_fn(v / 255) * 255))) for v in range(256)]
+
+
+def grade(im: Image.Image, *, warmth: float = 1.0, lift: float = 0.0,
+          contrast: float = 1.0, saturation: float = 1.0) -> Image.Image:
+    """One grade across the whole grid, so twelve phone photographs taken in three
+    years on two cameras read as one brand rather than as an album.
+
+    Four moves, all gentle, none of them a filter:
+
+      1. Grey-world white balance, damped. Phone auto-white-balance drifts green
+         under a workshop roof and blue in open shade; the drift is what makes a
+         feed look like snapshots. Correction is pulled only 60% of the way to
+         neutral so the warmth of evening light survives.
+      2. A soft S-curve. Adds the depth a flat phone JPEG lacks. The curve is
+         anchored at both ends, so nothing clips to pure black or pure white.
+      3. Saturation pulled slightly down. Phone JPEGs oversaturate greens; the
+         palette this brand uses is muted, and the photographs have to sit next to
+         moss and sage without shouting.
+      4. A wide, shallow vignette. Two stops at the extreme corner, nothing
+         anywhere the eye actually reads.
+
+    Deliberately not done: HDR tone mapping, clarity, local contrast, sky
+    replacement, colour-popping. The brief rules those out and they are what makes
+    a manufacturer's feed look like a stock library.
+    """
+    im = im.convert("RGB")
+
+    # 1. white balance
+    stat = ImageStat.Stat(im)
+    r, g, b = stat.mean
+    grey = (r + g + b) / 3
+    damp = 0.6
+    scale = [1 + damp * ((grey / c) - 1) if c > 4 else 1 for c in (r, g, b)]
+    scale[0] *= warmth          # a touch of warmth is a brand decision, not a fix
+    scale[2] /= warmth
+    im = im.point(_curve(lambda v: v * scale[0]) + _curve(lambda v: v * scale[1])
+                  + _curve(lambda v: v * scale[2]))
+
+    # 2. the S-curve, plus any shadow lift the photograph needs
+    def s(v: float) -> float:
+        v = v + lift * (1 - v) ** 2.2
+        v = v + (contrast - 1) * 0.5 * math.sin(2 * math.pi * (v - 0.5)) / (2 * math.pi) * 4
+        return max(0.0, min(1.0, v))
+    lut = _curve(s)
+    im = im.point(lut * 3)
+
+    # 3. saturation
+    if saturation != 1.0:
+        im = ImageEnhance.Color(im).enhance(saturation)
+
+    # 4. vignette
+    w, h = im.size
+    small = 200
+    mask = Image.new("L", (small, small))
+    px = mask.load()
+    cx = cy = (small - 1) / 2
+    for y in range(small):
+        for x in range(small):
+            d = (((x - cx) / cx) ** 2 + ((y - cy) / cy) ** 2) ** 0.5
+            px[x, y] = int(max(0, min(1, (d - 0.62) / 0.75)) ** 1.7 * 74)
+    mask = mask.resize((w, h), Image.BILINEAR)
+    im.paste(Image.new("RGB", (w, h), (10, 18, 14)), (0, 0), mask)
+    return im
+
+
+def frosted_foot(im: Image.Image, height_ratio: float = 0.30) -> Image.Image:
+    """A graduated blur under the caption instead of a heavier dark bar.
+
+    A busy foot — decking planks, gravel, a steel frame — competes with type no
+    matter how dark the scrim is. Blurring it lets the caption sit on the
+    photograph rather than on a panel laid over it, and keeps the picture's
+    colour and light. The blur is graduated so there is no visible seam.
+    """
+    w, h = im.size
+    band = int(h * height_ratio)
+    strip = im.crop((0, h - band, w, h))
+    blurred = strip.filter(ImageFilter.GaussianBlur(radius=w / 46))
+    ramp = Image.new("L", (1, band))
+    for y in range(band):
+        t = y / max(band - 1, 1)
+        ramp.putpixel((0, y), int(255 * min(1.0, (t ** 1.7) * 1.15)))
+    out = im.copy()
+    out.paste(blurred, (0, h - band), ramp.resize((w, band), Image.BILINEAR))
+    return out
 
 
 def cover(im: Image.Image, w: int, h: int, focus: float = 0.5) -> Image.Image:
@@ -184,15 +275,19 @@ def tracked(draw: ImageDraw.ImageDraw, xy, text: str, f, fill, tracking: int = 0
     return x
 
 
-def photo_post(source: Path, title: str | None, focus: float) -> Image.Image:
+def photo_post(source: Path, title: str | None, focus: float, look: dict | None = None) -> Image.Image:
     im = Image.open(source).convert("RGB")
     im, band = strip_camera_watermark(im)
     canvas = cover(im, POST_W, POST_H, focus)
+    canvas = grade(canvas, **(look or {}))
     canvas = head_scrim(canvas)
     if title:
-        canvas = foot_scrim(canvas, height_ratio=0.36, strength=195)
+        # blur first, then darken: a blurred foot needs far less darkening, which
+        # is how the caption reads without a black bar across the picture
+        canvas = frosted_foot(canvas)
+        canvas = foot_scrim(canvas, height_ratio=0.34, strength=150)
     else:
-        canvas = foot_scrim(canvas, height_ratio=0.26, strength=130)
+        canvas = foot_scrim(canvas, height_ratio=0.26, strength=118)
     draw = ImageDraw.Draw(canvas)
     place_logo(canvas, light=True)
     if title:
@@ -234,18 +329,30 @@ def card_post(lines: list[str], ground: tuple[int, int, int], light_type: bool,
 # of strongest frames. Recorded here rather than silently swapped.
 POSTS = [
     dict(kind="photo", src="IMG_20250519_182528.jpg", title=None, focus=0.5,
-         note="substituted for IMG_20250519_182509.jpg (see comment)"),
+         look=dict(warmth=1.02, lift=0.03, contrast=1.16, saturation=0.94),
+         note="substituted for IMG_20250519_182509.jpg, which would not transfer"),
     dict(kind="cream", lines=["DESIGN", "YOUR", "NATURE"], size=96),
-    dict(kind="photo", src="IMG_20250618_094223.jpg", title="BUILT WITH PURPOSE", focus=0.5),
+    dict(kind="photo", src="20231214_121220.jpg", title="BUILT WITH PURPOSE", focus=0.24,
+         look=dict(warmth=0.99, lift=0.05, contrast=1.20, saturation=0.88),
+         note="replaced IMG_20250618_094223.jpg — scaffolding dominated the frame"),
     dict(kind="forest", lines=["TINY HOUSE", "MODULAR HOME", "STEEL STRUCTURE", "CUSTOM FURNITURE"], size=62),
-    dict(kind="photo", src="IMG_20250807_131955.jpg", title="MADE AROUND YOU", focus=0.42),
-    dict(kind="photo", src="IMG_20250913_193621.jpg", title="HOME, AFTER DARK", focus=0.45),
-    dict(kind="photo", src="IMG_20250913_104632.jpg", title="FROM TÜRKİYE TO EUROPE", focus=0.5),
+    dict(kind="photo", src="IMG_20250807_131955.jpg", title="MADE AROUND YOU", focus=0.42,
+         look=dict(warmth=1.01, lift=0.02, contrast=1.14, saturation=0.93)),
+    dict(kind="photo", src="IMG_20250913_193621.jpg", title="HOME, AFTER DARK", focus=0.45,
+         look=dict(warmth=1.04, lift=0.06, contrast=1.10, saturation=0.98)),
+    dict(kind="photo", src="IMG_20250913_104632.jpg", title="FROM TÜRKİYE TO EUROPE", focus=0.52,
+         look=dict(warmth=1.01, lift=0.02, contrast=1.18, saturation=0.90)),
     dict(kind="cream", lines=["DELIVERY", "ACROSS", "DE · NL · DK", "LU · CH"], size=72),
-    dict(kind="photo", src="IMG_20260206_161331.jpg", title="SPACE TO BREATHE", focus=0.5),
-    dict(kind="photo", src="20231207_103831.jpg", title="FROM FRAME TO FINISH", focus=0.5),
+    dict(kind="photo", src="20240227_113020.jpg", title="SPACE TO BREATHE", focus=0.66,
+         look=dict(warmth=1.02, lift=0.04, contrast=1.15, saturation=0.92),
+         note="replaced IMG_20260206_161331.jpg — an unfinished grey terrace"),
+    dict(kind="photo", src="IMG_20250913_183727.jpg", title="FROM FRAME TO FINISH", focus=0.5,
+         look=dict(warmth=1.01, lift=0.03, contrast=1.17, saturation=0.91),
+         note="replaced 20231207_103831.jpg — dim workshop, awkward pose. This frame "
+              "carries the caption literally: the steel frame in front, the finished house behind"),
     dict(kind="forest", lines=["MINIMAL.", "MODERN.", "NATURAL."], size=96),
-    dict(kind="photo", src="IMG_20250525_142713.jpg", title=None, focus=0.42),
+    dict(kind="photo", src="IMG_20250525_142713.jpg", title=None, focus=0.42,
+         look=dict(warmth=1.02, lift=0.03, contrast=1.15, saturation=0.93)),
 ]
 
 
@@ -256,7 +363,7 @@ def main() -> None:
     rendered, manifest = [], []
     for i, spec in enumerate(POSTS, start=1):
         if spec["kind"] == "photo":
-            img = photo_post(SELECTED / spec["src"], spec["title"], spec["focus"])
+            img = photo_post(SELECTED / spec["src"], spec["title"], spec["focus"], spec.get("look"))
             entry = {"post": i, "type": "photograph", "source": spec["src"],
                      "title": spec["title"], "watermark_band_removed_px": img.info.get("watermark_band_px", 0)}
             if spec.get("note"):

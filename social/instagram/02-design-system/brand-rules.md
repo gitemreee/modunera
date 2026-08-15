@@ -134,24 +134,74 @@ source folder was moved, renamed, deleted or edited.
 |---|---|---|
 | 1 | A-frame and deck, no caption | `IMG_20250519_182528.jpg` |
 | 2 | Cream card — DESIGN YOUR NATURE | — |
-| 3 | Module under construction — BUILT WITH PURPOSE | `IMG_20250618_094223.jpg` |
+| 3 | Module in the workshop — BUILT WITH PURPOSE | `20231214_121220.jpg` |
 | 4 | Green card — the four services | — |
 | 5 | Interior, kitchen and desk — MADE AROUND YOU | `IMG_20250807_131955.jpg` |
 | 6 | Lit A-frame at dusk — HOME, AFTER DARK | `IMG_20250913_193621.jpg` |
 | 7 | Module on the trailer — FROM TÜRKİYE TO EUROPE | `IMG_20250913_104632.jpg` |
 | 8 | Cream card — DELIVERY ACROSS DE · NL · DK · LU · CH | — |
-| 9 | Covered terrace — SPACE TO BREATHE | `IMG_20260206_161331.jpg` |
-| 10 | Workshop, cutting timber — FROM FRAME TO FINISH | `20231207_103831.jpg` |
+| 9 | Loft stair and living space — SPACE TO BREATHE | `20240227_113020.jpg` |
+| 10 | Steel frame in front, finished house behind — FROM FRAME TO FINISH | `IMG_20250913_183727.jpg` |
 | 11 | Green card — MINIMAL. MODERN. NATURAL. | — |
 | 12 | A-frame on the lawn, no caption | `IMG_20250525_142713.jpg` |
 
-**One substitution.** The brief names `IMG_20250519_182509.jpg` for post 1. That
+### What was culled, and why
+
+Three frames were removed from `01-selected/` after seeing them at grid scale.
+Copies only — the originals in the shared folder are untouched.
+
+| Removed | Reason | Replaced by |
+|---|---|---|
+| `IMG_20250618_094223.jpg` | Orange scaffolding dominated the frame; the house was the smallest thing in it | `20231214_121220.jpg` |
+| `IMG_20260206_161331.jpg` | A grey unfinished terrace. Reads as a building site, not a product | `20240227_113020.jpg` |
+| `20231207_103831.jpg` | Dim workshop, awkward pose, cluttered background | `IMG_20250913_183727.jpg` |
+
+The third replacement earns its caption literally: a red steel frame in the
+foreground, a finished house behind it — *from frame to finish* in one frame.
+
+Three further frames are held in `00-candidates/` as alternates rather than
+deleted: `IMG_20250519_183120.jpg`, `20250126_192414.jpg`,
+`IMG_20250724_101400.jpg`. They are good photographs that this particular twelve
+had no room for.
+
+**One substitution.****One substitution.** The brief names `IMG_20250519_182509.jpg` for post 1. That
 file is 9.7 MB and would not transfer through the connector after four attempts.
 `IMG_20250519_182528.jpg` is used instead: the same building, the same deck, the
 same session, and also on the brief's own list of strongest frames. Swap it back
 by editing one line in `POSTS` if the original can be placed in `01-selected/`.
 
-## 8. What is deliberately not done yet
+## 8. Photographic treatment
+
+Twelve photographs taken across three years on two cameras will not read as one
+brand on their own. One grade is applied to all of them — the same four moves,
+with per-frame amounts, so the feed is cohesive without any frame looking
+processed.
+
+| Move | What it does | Why |
+|---|---|---|
+| Grey-world white balance, damped to 60% | Pulls the colour cast out | Phone auto-white-balance drifts green under a workshop roof and blue in open shade. That drift is what makes a feed look like snapshots. Damping to 60% keeps the warmth of evening light instead of neutralising it away |
+| Soft S-curve, anchored at both ends | Adds depth | A flat phone JPEG has no shadow structure. Anchoring means nothing clips to pure black or pure white |
+| Saturation 0.88–0.98 | Takes the shout out of the greens | Phone JPEGs oversaturate foliage, and these frames sit beside moss and sage |
+| Wide shallow vignette | Holds the eye in the frame | Two stops at the extreme corner and nothing where the eye actually reads |
+
+**Deliberately not done:** HDR tone mapping, clarity, local contrast, sky
+replacement, colour popping, skin smoothing, any preset. Those are what make a
+manufacturer's feed look like a stock library, and the brief rules them out.
+
+### The frosted foot
+
+Where a caption sits, the bottom 30% of the photograph is **graduated Gaussian
+blur** rather than a heavier dark bar. A busy foot — decking planks, gravel, a
+steel frame — competes with type no matter how dark a scrim is. Blurring it lets
+the caption sit *on* the photograph instead of on a panel laid over it, and keeps
+the picture's own colour and light. The blur ramps to zero so there is no seam,
+and the scrim over it drops from 195 to 150 because a blurred foot needs far less
+darkening.
+
+Posts without a caption get the scrim only, at 118 — just enough to carry
+`modunera.com`.
+
+## 9. What is deliberately not done yet
 
 - No high-resolution finals. Drafts render at 540 × 675; `--full` produces
   1080 × 1350 when the artwork is approved.
