@@ -56,8 +56,8 @@
       "source": "IMG_20250807_131955.jpg",
       "title": "MADE AROUND YOU",
       "watermark_band_removed_px": 107,
-      "head_scrim": 0.38,
-      "foot_scrim": 0.18,
+      "head_scrim": 0.39,
+      "foot_scrim": 0.19,
       "file": "social/instagram/04-post-drafts/post-05.jpg",
       "pixels": "1080x1350"
     },
@@ -85,60 +85,103 @@
     },
     {
       "post": 8,
-      "type": "card, off-white",
-      "lines": [
-        "DELIVERY",
-        "ACROSS",
-        "DE · NL · DK",
-        "LU · CH"
-      ],
+      "type": "numeral",
+      "figure": "5",
       "file": "social/instagram/04-post-drafts/post-08.jpg",
       "pixels": "1080x1350"
     },
     {
       "post": 9,
-      "type": "photograph",
-      "source": "20240227_113020.jpg",
-      "title": "SPACE TO BREATHE",
-      "watermark_band_removed_px": 0,
-      "head_scrim": 0.85,
-      "foot_scrim": 0.4,
-      "note": "replaced IMG_20260206_161331.jpg — an unfinished grey terrace",
+      "type": "specification card",
+      "model": "MD 1",
       "file": "social/instagram/04-post-drafts/post-09.jpg",
       "pixels": "1080x1350"
     },
     {
       "post": 10,
-      "type": "photograph",
-      "source": "IMG_20250913_183727.jpg",
-      "title": "FROM FRAME TO FINISH",
-      "watermark_band_removed_px": 0,
-      "head_scrim": 0.0,
-      "foot_scrim": 0.38,
-      "note": "replaced 20231207_103831.jpg — dim workshop, awkward pose. This frame carries the caption literally: the steel frame in front, the finished house behind",
+      "type": "photo over band",
+      "source": "mc3-exterior.webp",
+      "lines": [
+        "ONE SHELL.",
+        "EIGHT PLANS."
+      ],
       "file": "social/instagram/04-post-drafts/post-10.jpg",
       "pixels": "1080x1350"
     },
     {
       "post": 11,
-      "type": "card, forest green",
-      "lines": [
-        "MINIMAL.",
-        "MODERN.",
-        "NATURAL."
-      ],
+      "type": "detail",
+      "source": "mc5-interior.webp",
       "file": "social/instagram/04-post-drafts/post-11.jpg",
       "pixels": "1080x1350"
     },
     {
       "post": 12,
       "type": "photograph",
+      "source": "20240227_113020.jpg",
+      "title": "SPACE TO BREATHE",
+      "watermark_band_removed_px": 0,
+      "head_scrim": 0.85,
+      "foot_scrim": 0.4,
+      "file": "social/instagram/04-post-drafts/post-12.jpg",
+      "pixels": "1080x1350"
+    },
+    {
+      "post": 13,
+      "type": "photograph",
+      "source": "IMG_20250913_183727.jpg",
+      "title": "FROM FRAME TO FINISH",
+      "watermark_band_removed_px": 0,
+      "head_scrim": 0.0,
+      "foot_scrim": 0.38,
+      "file": "social/instagram/04-post-drafts/post-13.jpg",
+      "pixels": "1080x1350"
+    },
+    {
+      "post": 14,
+      "type": "card, forest green",
+      "lines": [
+        "MINIMAL.",
+        "MODERN.",
+        "NATURAL."
+      ],
+      "file": "social/instagram/04-post-drafts/post-14.jpg",
+      "pixels": "1080x1350"
+    },
+    {
+      "post": 15,
+      "type": "specification card",
+      "model": "MD 6",
+      "file": "social/instagram/04-post-drafts/post-15.jpg",
+      "pixels": "1080x1350"
+    },
+    {
+      "post": 16,
+      "type": "numeral",
+      "figure": "8",
+      "file": "social/instagram/04-post-drafts/post-16.jpg",
+      "pixels": "1080x1350"
+    },
+    {
+      "post": 17,
+      "type": "photo over band",
+      "source": "mc7-solar.webp",
+      "lines": [
+        "OFF-GRID",
+        "READY."
+      ],
+      "file": "social/instagram/04-post-drafts/post-17.jpg",
+      "pixels": "1080x1350"
+    },
+    {
+      "post": 18,
+      "type": "photograph",
       "source": "IMG_20250525_142713.jpg",
       "title": null,
       "watermark_band_removed_px": 107,
       "head_scrim": 0.43,
       "foot_scrim": 0.4,
-      "file": "social/instagram/04-post-drafts/post-12.jpg",
+      "file": "social/instagram/04-post-drafts/post-18.jpg",
       "pixels": "1080x1350"
     }
   ]

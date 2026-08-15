@@ -408,37 +408,200 @@ def card_post(lines: list[str], ground: tuple[int, int, int], light_type: bool,
     return canvas
 
 
+
+GALLERY = ROOT / "assets/images/gallery"
+
+# Specifications come from the same data/pricing.json the website quotes, so a
+# post can never advertise a figure the site has moved on from.
+PRICING = json.loads((ROOT / "data/pricing.json").read_text(encoding="utf8"))["models"]
+
+
+def model_rows(code: str) -> list[tuple[str, str]]:
+    m = PRICING[code]
+    return [("Length", m["lengths"].replace(",", ".")), ("Width", "2.55 m"),
+            ("Layout", m["layout_en"]), ("From", f"{m['base_eur']:,} €".replace(",", "."))]
+
+
+def concept_mark(draw: ImageDraw.ImageDraw, light: bool) -> None:
+    """Renders are labelled. The brief requires it and it is the difference
+    between showing a design and implying a photograph."""
+    f = F_BODY(23)
+    draw.text((MARGIN, POST_H - SAFE_BOTTOM - 34), "CONCEPT", font=f,
+              fill=(255, 255, 255, 200) if light else (INK[0] + 40, INK[1] + 40, INK[2] + 40))
+
+
+def spec_post(model: str, name: str, sub: str, rows: list[tuple[str, str]]) -> Image.Image:
+    """A specification sheet, not a slogan. The model name sits large at the top
+    of the safe square, the figures run as label/value rows under a hairline, and
+    the lower half is left empty. Nothing is centred."""
+    canvas = Image.new("RGB", (POST_W, POST_H), CREAM)
+    draw = ImageDraw.Draw(canvas)
+    place_logo(canvas, light=False)
+
+    top = SAFE_TOP + 210
+    tracked(draw, (MARGIN, top), model, F_TITLE(132), INK, tracking=-2)
+    tracked(draw, (MARGIN, top + 168), name.upper(), F_TITLE(34), ROOF, tracking=4)
+    draw.text((MARGIN, top + 214), sub, font=F_BODY(30), fill=(90, 104, 92))
+
+    y = top + 300
+    draw.rectangle([MARGIN, y, POST_W - MARGIN, y + 2], fill=(151, 49, 26, 90))
+    y += 34
+    for label, value in rows:
+        tracked(draw, (MARGIN, y + 6), label.upper(), F_BODY(22), (110, 124, 112), tracking=3)
+        f = F_TITLE(38)
+        draw.text((POST_W - MARGIN - draw.textlength(value, font=f), y - 4), value, font=f, fill=INK)
+        y += 62
+        draw.rectangle([MARGIN, y - 14, POST_W - MARGIN, y - 13], fill=(32, 46, 36, 40))
+
+    place_domain(draw, light=False)
+    return canvas
+
+
+def duo_post(source: Path, statement: list[str], ground: tuple[int, int, int],
+             light_type: bool, focus: float = 0.5, concept: bool = False,
+             look: dict | None = None) -> Image.Image:
+    """Photograph above, colour band below. The type never sits on the picture at
+    all, which is a different relationship from a caption and gives the grid a
+    second rhythm."""
+    split = 830
+    canvas = Image.new("RGB", (POST_W, POST_H), ground)
+    im = Image.open(source).convert("RGB")
+    im, _ = strip_camera_watermark(im)
+    src_w, src_h = im.size
+    photo = cover(im, POST_W, split, focus)
+    look = dict(look or {})
+    look.pop("noisy", None)
+    photo = grade(photo, **look)
+    reduction = max(src_w / POST_W, src_h / split)
+    photo = sharpen(photo, amount=min(1.20, 0.72 + 0.28 * reduction),
+                    micro=min(1.0, 0.55 + 0.28 * reduction))
+    canvas.paste(photo, (0, 0))
+
+    draw = ImageDraw.Draw(canvas)
+    luma, _ = _luma(canvas, (MARGIN, SAFE_TOP + 36, MARGIN + 246, SAFE_TOP + 106))
+    need = scrim_need(luma)
+    if need > 0.04:
+        head = head_scrim(canvas.crop((0, 0, POST_W, split)), height_ratio=0.30,
+                          strength=int(150 * need))
+        canvas.paste(head, (0, 0))
+    place_logo(canvas, light=True)
+
+    ink = PAPER if light_type else INK
+    y = split + 74
+    draw.rectangle([MARGIN, y, MARGIN + 92, y + 3], fill=SAGE if light_type else ROOF)
+    y += 40
+    for line in statement:
+        tracked(draw, (MARGIN, y), line, F_TITLE(52), ink, tracking=2)
+        y += 66
+
+    if concept:
+        tracked(draw, (MARGIN, split + 22), "CONCEPT", F_BODY(23),
+                (150, 163, 148) if light_type else (139, 120, 110), tracking=3)
+    place_domain(draw, light=light_type)
+    return canvas
+
+
+def numeral_post(figure: str, label: list[str], ground: tuple[int, int, int],
+                 light_type: bool) -> Image.Image:
+    """One figure, very large, as the image itself. The label is small and low.
+    A grid needs somewhere the eye stops, and a numeral does that without a
+    photograph."""
+    canvas = Image.new("RGB", (POST_W, POST_H), ground)
+    draw = ImageDraw.Draw(canvas)
+    place_logo(canvas, light=light_type)
+    ink = PAPER if light_type else INK
+    accent = SAGE if light_type else ROOF
+
+    f = F_TITLE(430)
+    box = draw.textbbox((0, 0), figure, font=f)
+    draw.text((MARGIN - 18, SAFE_TOP + 170 - box[1]), figure, font=f, fill=accent)
+
+    y = POST_H - SAFE_BOTTOM - 150 - 56 * len(label)
+    draw.rectangle([MARGIN, y - 40, MARGIN + 92, y - 37], fill=ink)
+    for line in label:
+        tracked(draw, (MARGIN, y), line, F_TITLE(46), ink, tracking=2)
+        y += 58
+    place_domain(draw, light=light_type)
+    return canvas
+
+
+def detail_post(source: Path, focus: float = 0.5, concept: bool = False,
+                look: dict | None = None) -> Image.Image:
+    """A tight architectural crop, full bleed, no statement. The grid needs to
+    breathe, and a frame with nothing to read is how it does that."""
+    im = Image.open(source).convert("RGB")
+    im, _ = strip_camera_watermark(im)
+    src_w, src_h = im.size
+    canvas = cover(im, POST_W, POST_H, focus)
+    look = dict(look or {})
+    look.pop("noisy", None)
+    canvas = grade(canvas, **look)
+    reduction = max(src_w / POST_W, src_h / POST_H)
+    canvas = sharpen(canvas, amount=min(1.20, 0.72 + 0.28 * reduction),
+                     micro=min(1.0, 0.55 + 0.28 * reduction))
+    luma, _ = _luma(canvas, (MARGIN, SAFE_TOP + 36, MARGIN + 246, SAFE_TOP + 106))
+    need = scrim_need(luma)
+    if need > 0.04:
+        canvas = head_scrim(canvas, height_ratio=0.24, strength=int(150 * need))
+    foot_luma, _ = _luma(canvas, (0, POST_H - SAFE_BOTTOM - 170, POST_W, POST_H - SAFE_BOTTOM))
+    foot_need = scrim_need(foot_luma, floor=78.0)
+    if foot_need > 0.04:
+        canvas = foot_scrim(canvas, height_ratio=0.24, strength=int(140 * foot_need))
+    draw = ImageDraw.Draw(canvas)
+    place_logo(canvas, light=True)
+    if concept:
+        tracked(draw, (MARGIN, POST_H - SAFE_BOTTOM - 34), "CONCEPT", F_BODY(23),
+                (255, 255, 255), tracking=3)
+    place_domain(draw, light=True)
+    return canvas
+
+
 # The order the brief specifies, left to right, top to bottom.
 # IMG_20250519_182509.jpg is named in the brief; it is 9.7 MB and would not come
 # down the connector after four attempts. IMG_20250519_182528.jpg replaces it —
 # the same A-frame and deck, the same session, and also on the brief's own list
 # of strongest frames. Recorded here rather than silently swapped.
+L_EXT = dict(warmth=1.02, lift=0.03, contrast=1.16, saturation=0.94)
+L_INT = dict(warmth=1.02, lift=0.04, contrast=1.15, saturation=0.92)
+
 POSTS = [
-    dict(kind="photo", src="IMG_20250519_182528.jpg", title=None, focus=0.5,
-         look=dict(warmth=1.02, lift=0.03, contrast=1.16, saturation=0.94),
+    # ---- row 1 : photograph, statement, photograph
+    dict(kind="photo", src="IMG_20250519_182528.jpg", title=None, focus=0.5, look=L_EXT,
          note="substituted for IMG_20250519_182509.jpg, which would not transfer"),
     dict(kind="cream", lines=["DESIGN", "YOUR", "NATURE"], size=96),
     dict(kind="photo", src="20231214_121220.jpg", title="BUILT WITH PURPOSE", focus=0.24,
          look=dict(warmth=0.99, lift=0.05, contrast=1.20, saturation=0.88),
          note="replaced IMG_20250618_094223.jpg — scaffolding dominated the frame"),
+
+    # ---- row 2 : the four services, an interior, the night frame
     dict(kind="forest", lines=["TINY HOUSE", "MODULAR HOME", "STEEL STRUCTURE", "CUSTOM FURNITURE"], size=62),
-    dict(kind="photo", src="IMG_20250807_131955.jpg", title="MADE AROUND YOU", focus=0.42,
-         look=dict(warmth=1.01, lift=0.02, contrast=1.14, saturation=0.93)),
+    dict(kind="photo", src="IMG_20250807_131955.jpg", title="MADE AROUND YOU", focus=0.42, look=L_INT),
     dict(kind="photo", src="IMG_20250913_193621.jpg", title="HOME, AFTER DARK", focus=0.45,
          look=dict(warmth=1.04, lift=0.06, contrast=1.10, saturation=0.98, noisy=True)),
-    dict(kind="photo", src="IMG_20250913_104632.jpg", title="FROM TÜRKİYE TO EUROPE", focus=0.52,
-         look=dict(warmth=1.01, lift=0.02, contrast=1.18, saturation=0.90)),
-    dict(kind="cream", lines=["DELIVERY", "ACROSS", "DE · NL · DK", "LU · CH"], size=72),
-    dict(kind="photo", src="20240227_113020.jpg", title="SPACE TO BREATHE", focus=0.66,
-         look=dict(warmth=1.02, lift=0.04, contrast=1.15, saturation=0.92),
-         note="replaced IMG_20260206_161331.jpg — an unfinished grey terrace"),
-    dict(kind="photo", src="IMG_20250913_183727.jpg", title="FROM FRAME TO FINISH", focus=0.5,
-         look=dict(warmth=1.01, lift=0.03, contrast=1.17, saturation=0.91),
-         note="replaced 20231207_103831.jpg — dim workshop, awkward pose. This frame "
-              "carries the caption literally: the steel frame in front, the finished house behind"),
+
+    # ---- row 3 : delivery, a numeral, a specification sheet
+    dict(kind="photo", src="IMG_20250913_104632.jpg", title="FROM TÜRKİYE TO EUROPE", focus=0.52, look=L_EXT),
+    dict(kind="numeral", figure="5", label=["COUNTRIES,", "ONE ROUTE"], ground=CREAM, light=False),
+    dict(kind="spec", model="MD 1", name="Panorama and loft", sub="Living · holiday home",
+         rows=model_rows("mc1")),
+
+    # ---- row 4 : photo-over-band, a detail, a photograph
+    dict(kind="duo", src_path=GALLERY / "mc3-exterior.webp", lines=["ONE SHELL.", "EIGHT PLANS."],
+         ground=MOSS_DEEP, light=True, focus=0.5, concept=True, look=L_EXT),
+    dict(kind="detail", src_path=GALLERY / "mc5-interior.webp", focus=0.5, concept=True, look=L_INT),
+    dict(kind="photo", src="20240227_113020.jpg", title="SPACE TO BREATHE", focus=0.66, look=L_INT),
+
+    # ---- row 5 : frame to finish, a statement, a specification sheet
+    dict(kind="photo", src="IMG_20250913_183727.jpg", title="FROM FRAME TO FINISH", focus=0.5, look=L_EXT),
     dict(kind="forest", lines=["MINIMAL.", "MODERN.", "NATURAL."], size=96),
-    dict(kind="photo", src="IMG_20250525_142713.jpg", title=None, focus=0.42,
-         look=dict(warmth=1.02, lift=0.03, contrast=1.15, saturation=0.93)),
+    dict(kind="spec", model="MD 6", name="Chalet concept", sub="Mountain sites · resort",
+         rows=model_rows("mc6")),
+
+    # ---- row 6 : a numeral, a detail, the closing photograph
+    dict(kind="numeral", figure="8", label=["MODELS,", "ONE SYSTEM"], ground=MOSS_DEEP, light=True),
+    dict(kind="duo", src_path=GALLERY / "mc7-solar.webp", lines=["OFF-GRID", "READY."],
+         ground=CREAM, light=False, focus=0.5, concept=True, look=L_EXT),
+    dict(kind="photo", src="IMG_20250525_142713.jpg", title=None, focus=0.42, look=L_EXT),
 ]
 
 
@@ -458,9 +621,24 @@ def main() -> None:
         elif spec["kind"] == "cream":
             img = card_post(spec["lines"], CREAM, light_type=False, size=spec["size"])
             entry = {"post": i, "type": "card, off-white", "lines": spec["lines"]}
-        else:
+        elif spec["kind"] == "forest":
             img = card_post(spec["lines"], MOSS_DEEP, light_type=True, size=spec["size"])
             entry = {"post": i, "type": "card, forest green", "lines": spec["lines"]}
+        elif spec["kind"] == "spec":
+            img = spec_post(spec["model"], spec["name"], spec["sub"], spec["rows"])
+            entry = {"post": i, "type": "specification card", "model": spec["model"]}
+        elif spec["kind"] == "duo":
+            img = duo_post(spec["src_path"], spec["lines"], spec["ground"], spec["light"],
+                           spec.get("focus", 0.5), spec.get("concept", False), spec.get("look"))
+            entry = {"post": i, "type": "photo over band", "source": str(spec["src_path"].name),
+                     "lines": spec["lines"]}
+        elif spec["kind"] == "numeral":
+            img = numeral_post(spec["figure"], spec["label"], spec["ground"], spec["light"])
+            entry = {"post": i, "type": "numeral", "figure": spec["figure"]}
+        else:
+            img = detail_post(spec["src_path"], spec.get("focus", 0.5),
+                              spec.get("concept", False), spec.get("look"))
+            entry = {"post": i, "type": "detail", "source": str(spec["src_path"].name)}
 
         out = DRAFTS / f"post-{i:02d}.jpg"
         draft = img if DRAFT_SCALE == 1.0 else img.resize(
@@ -473,21 +651,21 @@ def main() -> None:
 
     # The profile preview: three columns, four rows, each post cropped to the
     # square Instagram actually shows in the grid, with the same 2 px gutter.
-    cell = 470
+    cell = 380
     gutter = 4
-    sheet = Image.new("RGB", (cell * 3 + gutter * 2, cell * 4 + gutter * 3), (255, 255, 255))
+    sheet = Image.new("RGB", (cell * 3 + gutter * 2, cell * 6 + gutter * 5), (255, 255, 255))
     for i, img in enumerate(rendered):
         square = img.crop((0, SAFE_TOP, POST_W, POST_H - SAFE_BOTTOM)).resize((cell, cell), Image.LANCZOS)
         sheet.paste(square, ((i % 3) * (cell + gutter), (i // 3) * (cell + gutter)))
-    sheet.save(PREVIEW / "profile-grid-3x4.jpg", quality=90, optimize=True)
+    sheet.save(PREVIEW / "profile-grid-3x6.jpg", quality=90, optimize=True)
 
     # And a preview of the full 4:5 frames, which is what a visitor sees when a
     # post is opened rather than scanned.
-    fw, fh = 380, 475
-    full = Image.new("RGB", (fw * 3 + gutter * 2, fh * 4 + gutter * 3), (255, 255, 255))
+    fw, fh = 320, 400
+    full = Image.new("RGB", (fw * 3 + gutter * 2, fh * 6 + gutter * 5), (255, 255, 255))
     for i, img in enumerate(rendered):
         full.paste(img.resize((fw, fh), Image.LANCZOS), ((i % 3) * (fw + gutter), (i // 3) * (fh + gutter)))
-    full.save(PREVIEW / "post-frames-3x4.jpg", quality=90, optimize=True)
+    full.save(PREVIEW / "post-frames-3x6.jpg", quality=90, optimize=True)
 
     (PREVIEW / "grid-manifest.json").write_text(
         json.dumps({"generated_for": "MODUNERA", "post_size": "1080x1350",
@@ -495,7 +673,7 @@ def main() -> None:
         encoding="utf8")
     print(json.dumps({"posts": len(manifest),
                       "drafts": str(DRAFTS.relative_to(ROOT)),
-                      "preview": str((PREVIEW / "profile-grid-3x4.jpg").relative_to(ROOT)),
+                      "preview": str((PREVIEW / "profile-grid-3x6.jpg").relative_to(ROOT)),
                       "watermarks_removed": sum(1 for m in manifest if m.get("watermark_band_removed_px"))},
                      ensure_ascii=False))
 
