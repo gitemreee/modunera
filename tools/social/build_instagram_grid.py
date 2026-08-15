@@ -61,7 +61,10 @@ INK = (32, 46, 36)
 # the bottom of a 1080x1350 post. Nothing that identifies the brand goes there.
 SAFE_TOP = 135
 SAFE_BOTTOM = 135
-MARGIN = 74
+# Tightened from 74. One margin for the logo, the caption, the card statement and
+# the domain, so everything sits on the same optical frame — a logo pulled left
+# while the caption below it stays put reads as a mistake, not as a decision.
+MARGIN = 56
 
 
 def font(name: str, size: int) -> ImageFont.FreeTypeFont:
@@ -209,7 +212,7 @@ def cover(im: Image.Image, w: int, h: int, focus: float = 0.5) -> Image.Image:
     return resized.crop((0, top, w, top + h))
 
 
-def head_scrim(im: Image.Image, height_ratio: float = 0.22, strength: int = 118) -> Image.Image:
+def head_scrim(im: Image.Image, height_ratio: float = 0.24, strength: int = 140) -> Image.Image:
     """A soft darkening at the head only, so the white logo reads on a bright sky.
 
     Without it the lockup vanished on the workshop wall and the tree canopy — a
@@ -251,7 +254,7 @@ def place_logo(canvas: Image.Image, light: bool) -> None:
     logo = Image.open(BRAND / name).convert("RGBA")
     target_w = 246
     logo = logo.resize((target_w, round(logo.height * target_w / logo.width)), Image.LANCZOS)
-    canvas.paste(logo, (MARGIN, SAFE_TOP + 82), logo)
+    canvas.paste(logo, (MARGIN, SAFE_TOP + 36), logo)
 
 
 def place_domain(draw: ImageDraw.ImageDraw, light: bool) -> None:

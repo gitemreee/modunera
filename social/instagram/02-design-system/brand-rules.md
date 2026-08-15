@@ -67,7 +67,12 @@ Rules, all enforced by the script:
 
 - **246 px wide** on a 1080 px post — 22.8% of the width. It is a signature, not
   a headline.
-- **Top left**, 74 px from the left edge, 217 px from the top.
+- **Top left**, 56 px from the left edge, 171 px from the top. That leaves 36 px
+  of headroom inside the square the profile grid shows — measured, not assumed:
+  the grid crop starts at 135 px and the lockup starts at 171 px.
+- The outer margin is 56 px for everything — logo, caption, card statement and
+  domain — so they sit on one optical frame. A logo pulled left while the caption
+  below it stays put reads as a mistake rather than as a decision.
 - Never centred, never enlarged, never placed on its own box or plate behind the
   photograph, never re-coloured, never redrawn.
 - No alternative lockup is used. The "digital sunrise" direction has been deleted
@@ -93,10 +98,10 @@ Posts are **1080 × 1350** (4:5). Instagram shows them in the profile grid as a
 
 | Element | Position |
 |---|---|
-| Outer margin | 74 px |
-| Logo | x 74, y 217 |
-| Caption baseline | x 74, y 1109 |
-| Domain | right-aligned to x 1006, baseline y 1185 |
+| Outer margin | 56 px |
+| Logo | x 56, y 171 |
+| Caption baseline | x 56, y 1109 |
+| Domain | right-aligned to x 1024, baseline y 1185 |
 | Card statement block | optically centred in the safe square, 26 px above true centre |
 | Rule above card statement | 92 × 3 px, 54 px above the first line |
 
