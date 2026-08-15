@@ -131,12 +131,48 @@ frame. The script detects that band — a run of bright, colourless rows spannin
 the width — and crops it. Cropping another manufacturer's branding out of ours is
 not retouching, and a photograph without a band is left untouched.
 
-## 6. Rhythm of the grid
+## 6. Rhythm of the grid — arrangement A
 
-Photograph, card, photograph — so a card never sits beside another card and never
-directly above one. Green and cream cards alternate down the column. Two posts
-carry no caption at all (the first and the last), which gives the grid somewhere
-to rest.
+Five arrangements were rendered from the same photographs and compared
+(`03-grid-preview/options/`). **A was chosen because it is the only one that
+survives a Reel**, and that is a mechanical fact rather than a preference.
+
+Instagram fills the profile grid newest-first from the top left, so every new post
+pushes every existing post along by one. An arrangement whose rule names a
+*column* — three rails, centre spine, row bands — is destroyed by any post that is
+not part of a group of three. A Reel is posted when the video is ready, alone, and
+cannot be batched into threes.
+
+So the rule is about adjacency instead:
+
+> **A card never touches a card** — not beside it, not above or below it.
+> **A Reel counts as a picture tile** and may be posted at any position.
+
+That relationship is between neighbours, so a shift moves the pattern without
+breaking it. `03-grid-preview/options/after-one-reel-*.jpg` shows both cases: the
+three-rail grid loses the meaning of all three columns, the checkerboard keeps its
+rhythm.
+
+**The arithmetic this forces.** In a three-column grid the largest set of cells
+where no two touch is a checkerboard — half of them. At most 45 of 90 posts can be
+cards; at least 45 must carry a picture. The constraint on this feed is pictures,
+not ideas.
+
+| Source | Tiles |
+|---|---|
+| 11 real photographs × 2 crops | 22 |
+| 26 model renders, marked CONCEPT | 26 |
+| **Total picture tiles** | **48** |
+
+Every real photograph appears twice, in a different crop with a different caption;
+every render appears once. Seeing the same house twice across ninety posts is
+unavoidable at this archive size — the answer is more photography, and the series
+are sized so new frames drop in without rebuilding anything.
+
+**Series are interleaved, not batched.** `build_feed_plan.py` cycles round-robin
+through specification, voice, questions and figures rather than emitting eight
+spec cards in a row. Pictures alternate photograph and render, so a real house is
+never more than one tile from the last one.
 
 ## 7. Source files
 
