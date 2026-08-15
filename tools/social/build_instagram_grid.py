@@ -58,7 +58,8 @@ SAGE = (163, 177, 138)        # #A3B18A
 CREAM = (218, 215, 205)       # #DAD7CD  the off-white card ground
 PAPER = (245, 245, 245)       # #F5F5F5
 ROOF = (151, 49, 26)          # #97311A  the logo's roof red
-INK = (32, 46, 36)
+INK = (32, 46, 36)            # body text only — the site sets headings in roof red
+LIGHT_GROUND = PAPER          # #F5F5F5, what the site actually paints as its page
 
 # Instagram crops the grid thumbnail to a centred square: 135 px off the top and
 # the bottom of a 1080x1350 post. Nothing that identifies the brand goes there.
@@ -390,7 +391,9 @@ def card_post(lines: list[str], ground: tuple[int, int, int], light_type: bool,
     draw = ImageDraw.Draw(canvas)
     place_logo(canvas, light=light_type)
 
-    ink = PAPER if light_type else INK
+    # Headings on a light ground take the roof red, exactly as h1/h2/h3 do on
+    # every page of the site. Ink is for body copy.
+    ink = PAPER if light_type else ROOF
     accent = SAGE if light_type else ROOF
     f = F_TITLE(size)
     leading = int(size * 1.34)
@@ -434,13 +437,13 @@ def spec_post(model: str, name: str, sub: str, rows: list[tuple[str, str]]) -> I
     """A specification sheet, not a slogan. The model name sits large at the top
     of the safe square, the figures run as label/value rows under a hairline, and
     the lower half is left empty. Nothing is centred."""
-    canvas = Image.new("RGB", (POST_W, POST_H), CREAM)
+    canvas = Image.new("RGB", (POST_W, POST_H), LIGHT_GROUND)
     draw = ImageDraw.Draw(canvas)
     place_logo(canvas, light=False)
 
     top = SAFE_TOP + 210
-    tracked(draw, (MARGIN, top), model, F_TITLE(132), INK, tracking=-2)
-    tracked(draw, (MARGIN, top + 168), name.upper(), F_TITLE(34), ROOF, tracking=4)
+    tracked(draw, (MARGIN, top), model, F_TITLE(132), ROOF, tracking=-2)
+    tracked(draw, (MARGIN, top + 168), name.upper(), F_TITLE(34), INK, tracking=4)
     draw.text((MARGIN, top + 214), sub, font=F_BODY(30), fill=(90, 104, 92))
 
     y = top + 300
@@ -509,7 +512,7 @@ def numeral_post(figure: str, label: list[str], ground: tuple[int, int, int],
     canvas = Image.new("RGB", (POST_W, POST_H), ground)
     draw = ImageDraw.Draw(canvas)
     place_logo(canvas, light=light_type)
-    ink = PAPER if light_type else INK
+    ink = PAPER if light_type else ROOF
     accent = SAGE if light_type else ROOF
 
     f = F_TITLE(430)
@@ -581,7 +584,7 @@ POSTS = [
 
     # ---- row 3 : delivery, a numeral, a specification sheet
     dict(kind="photo", src="IMG_20250913_104632.jpg", title="FROM TÜRKİYE TO EUROPE", focus=0.52, look=L_EXT),
-    dict(kind="numeral", figure="5", label=["COUNTRIES,", "ONE ROUTE"], ground=CREAM, light=False),
+    dict(kind="numeral", figure="5", label=["COUNTRIES,", "ONE ROUTE"], ground=LIGHT_GROUND, light=False),
     dict(kind="spec", model="MD 1", name="Panorama and loft", sub="Living · holiday home",
          rows=model_rows("mc1")),
 
@@ -600,7 +603,7 @@ POSTS = [
     # ---- row 6 : a numeral, a detail, the closing photograph
     dict(kind="numeral", figure="8", label=["MODELS,", "ONE SYSTEM"], ground=MOSS_DEEP, light=True),
     dict(kind="duo", src_path=GALLERY / "mc7-solar.webp", lines=["OFF-GRID", "READY."],
-         ground=CREAM, light=False, focus=0.5, concept=True, look=L_EXT),
+         ground=LIGHT_GROUND, light=False, focus=0.5, concept=True, look=L_EXT),
     dict(kind="photo", src="IMG_20250525_142713.jpg", title=None, focus=0.42, look=L_EXT),
 ]
 
@@ -619,7 +622,7 @@ def main() -> None:
             if spec.get("note"):
                 entry["note"] = spec["note"]
         elif spec["kind"] == "cream":
-            img = card_post(spec["lines"], CREAM, light_type=False, size=spec["size"])
+            img = card_post(spec["lines"], LIGHT_GROUND, light_type=False, size=spec["size"])
             entry = {"post": i, "type": "card, off-white", "lines": spec["lines"]}
         elif spec["kind"] == "forest":
             img = card_post(spec["lines"], MOSS_DEEP, light_type=True, size=spec["size"])

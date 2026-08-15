@@ -20,10 +20,12 @@ social, and nothing is brightened for the feed.
 | Moss deep | `#2E4733` | Forest-green card ground |
 | Moss | `#3A5A40` | Reserved; darker rules and hover states on the site |
 | Sage | `#A3B18A` | The short rule above the type on a green card |
-| Cream | `#DAD7CD` | Off-white card ground |
+| Paper | `#F5F5F5` | Light card ground — the same ground the site paints on `body` |
+| Cream | `#DAD7CD` | The site's *alternating* section band. Not used as a card ground |
 | Paper | `#F5F5F5` | Type on a green card |
 | Roof red | `#97311A` | The short rule above the type on a cream card. Sampled from the logo mark |
-| Ink | `#202E24` | Type on a cream card |
+| Roof red | `#97311A` | **All headings on a light ground**, exactly as `h1,h2,h3` and every card `h3` are painted on the site |
+| Ink | `#202E24` | Body and label text on a light ground only |
 
 Forbidden, and not present in any output: neon, gold, gradients used as
 decoration, heavy drop shadow, artificial 3D, HDR-look grading, stock-photo
@@ -40,9 +42,15 @@ The site's display face is **Manrope**. It is not installed in the environment
 that renders these drafts, so the drafts are set in **Work Sans** — the closest
 humanist geometric available, same skeleton, same proportions.
 
-**This is a draft substitution, not a brand decision.** Install Manrope and
-re-run the script with `--full` before anything is published; the layout is
-metric-driven and will not need redesigning.
+**This is a draft substitution, not a brand decision, and it is a genuine
+mismatch until it is fixed.** The site declares `--display: "Poppins","Manrope"`
+and sets `body` in Manrope. Neither can be fetched in this environment — Google
+Fonts returns nothing through the proxy and GitHub raw returns 403 — so the
+drafts are set in Work Sans.
+
+Install Poppins and Manrope and change `F_TITLE`/`F_BODY` at the top of the
+script before anything is published. The layout is metric-driven, so nothing
+needs redesigning; only the faces change.
 
 | Role | Face | Size at 1080×1350 | Tracking |
 |---|---|---|---|
