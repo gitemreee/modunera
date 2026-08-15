@@ -51,6 +51,7 @@ jobs:
           node tools/build-modunera-v2.mjs
           node tools/build-modunera-depth.mjs --extend
           node tools/build-hreflang-v7.mjs
+          node tools/build-photo-placement.mjs
           node tools/build-image-attrs.mjs
           node tools/build-nordic-redirects.mjs
           node tools/build-content-lastmod.mjs
@@ -90,6 +91,7 @@ jobs:
           node tools/build-modunera-v2.mjs
           node tools/build-modunera-depth.mjs --extend
           node tools/build-hreflang-v7.mjs
+          node tools/build-photo-placement.mjs
           node tools/build-image-attrs.mjs
           node tools/build-nordic-redirects.mjs
           node tools/build-content-lastmod.mjs
