@@ -43,7 +43,12 @@ SELECTED = ROOT / "social/instagram/01-selected"
 DRAFTS = ROOT / "social/instagram/04-post-drafts"
 PREVIEW = ROOT / "social/instagram/03-grid-preview"
 BRAND = ROOT / "assets/brand"
-FONTS = Path("/mnt/skills/examples/canvas-design/canvas-fonts")
+# The site's own faces. Poppins is --display (headings), Manrope is body; both
+# are committed here as TTF because Pillow cannot read the woff2 that Google
+# Fonts and Fontsource ship, and because a render must not depend on a network
+# fetch. Converted from @fontsource/poppins and @fontsource/manrope — see
+# tools/social/fonts/README.md.
+FONTS = Path(__file__).resolve().parent / "fonts"
 
 POST_W, POST_H = 1080, 1350
 # Drafts render at post size. A half-size draft cannot answer "is this sharp
@@ -75,12 +80,10 @@ def font(name: str, size: int) -> ImageFont.FreeTypeFont:
     return ImageFont.truetype(str(FONTS / name), size)
 
 
-# Manrope is the site's display face and is not installed here. Work Sans is the
-# closest humanist geometric available and is used for the drafts; the
-# substitution is recorded in 02-design-system/brand-rules.md so the final
-# artwork can be re-rendered in Manrope without redesigning anything.
-F_TITLE = lambda s: font("WorkSans-Bold.ttf", s)
-F_BODY = lambda s: font("WorkSans-Regular.ttf", s)
+# The site's real stack, not a substitute. Headings take Poppins, as --display
+# does on every page; the domain and small labels take Manrope, as body does.
+F_TITLE = lambda s: font("Poppins-Bold.ttf", s)
+F_BODY = lambda s: font("Manrope-Regular.ttf", s)
 
 
 def strip_camera_watermark(im: Image.Image) -> tuple[Image.Image, int]:

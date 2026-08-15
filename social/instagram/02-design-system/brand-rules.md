@@ -38,25 +38,27 @@ photograph is untouched.
 
 ## 2. Type
 
-The site's display face is **Manrope**. It is not installed in the environment
-that renders these drafts, so the drafts are set in **Work Sans** — the closest
-humanist geometric available, same skeleton, same proportions.
+The feed is set in **the site's own faces** — Poppins for headings, exactly as
+`--display` is declared on every page, and Manrope for the domain and small
+labels, as `body` is set. Not a substitute, not something that resembles them.
 
-**This is a draft substitution, not a brand decision, and it is a genuine
-mismatch until it is fixed.** The site declares `--display: "Poppins","Manrope"`
-and sets `body` in Manrope. Neither can be fetched in this environment — Google
-Fonts returns nothing through the proxy and GitHub raw returns 403 — so the
-drafts are set in Work Sans.
+They live in `tools/social/fonts/` as TTF and are committed, for two reasons:
+Pillow reads TTF and OTF but not the woff2 that Google Fonts and Fontsource ship,
+and a render must not depend on a network fetch — the artwork has to come out the
+same on a machine with no outbound access. Provenance, licence and the conversion
+command are in `tools/social/fonts/README.md`. Both faces are SIL OFL 1.1.
 
-Install Poppins and Manrope and change `F_TITLE`/`F_BODY` at the top of the
-script before anything is published. The layout is metric-driven, so nothing
-needs redesigning; only the faces change.
+Earlier drafts were set in Work Sans because neither face would download here.
+That is resolved: `registry.npmjs.org` bypasses the proxy, Fontsource publishes
+every Google Font to npm, and the woff2 was unwrapped to TTF with `fonttools`.
+No upload, no second repository, no dependency added to the project — the fonts
+are the artifact, the tools were scaffolding.
 
 | Role | Face | Size at 1080×1350 | Tracking |
 |---|---|---|---|
-| Card statement | Work Sans Bold | 62–96 px | +2 px |
-| Photo caption | Work Sans Bold | 37 px | +3 px |
-| Domain | Work Sans Regular | 30 px | 0 |
+| Card statement | Poppins Bold | 62–96 px | +2 px |
+| Photo caption | Poppins Bold | 37 px | +3 px |
+| Domain | Manrope Regular | 30 px | 0 |
 
 Card line leading is 1.34× the size. Captions are English, short, upper case, and
 never more than four words. No post carries a number, an index, or an "01/09".
