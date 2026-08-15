@@ -1320,7 +1320,7 @@ function heroSlides(root) {
     const priority = i === 0 ? 'fetchpriority="high"' : 'fetchpriority="low"';
     // Phones get a 3:4 crop: a landscape still in a tall portrait box loses about
     // two thirds of its width to object-fit:cover, which left the house unreadable.
-    return `<picture><source media="(max-width:640px)" srcset="${base}-portrait.webp"><img src="${base}-1400.webp" srcset="${base}-760.webp 760w, ${base}-1400.webp 1400w" sizes="100vw" alt="" decoding="async" ${priority}></picture>`;
+    return `<picture><source media="(max-width:640px)" srcset="${base}-portrait.webp"><img src="${base}-1100.webp" srcset="${base}-760.webp 760w, ${base}-1100.webp 1100w" sizes="(min-width:921px) 50vw, 100vw" alt="" decoding="async" ${priority}></picture>`;
   }).join("");
   return `<div class="hero-slides" aria-hidden="true">${imgs}</div>`;
 }

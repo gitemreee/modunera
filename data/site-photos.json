@@ -8,19 +8,19 @@
       "alt_de": "Fertiges MODUNERA Tiny House mit A-Frame-Front und umlaufender Holzterrasse unter Olivenbäumen",
       "files": [
         {
-          "file": "assets/images/photos/aframe-deck-olive-1400.webp",
-          "px": "1400x788",
-          "kb": 442
+          "file": "assets/images/photos/aframe-deck-olive-1100.webp",
+          "px": "1100x619",
+          "kb": 247
         },
         {
           "file": "assets/images/photos/aframe-deck-olive-760.webp",
           "px": "760x428",
-          "kb": 140
+          "kb": 121
         },
         {
           "file": "assets/images/photos/aframe-deck-olive-portrait.webp",
-          "px": "760x1013",
-          "kb": 303
+          "px": "780x680",
+          "kb": 194
         }
       ]
     },
@@ -31,19 +31,19 @@
       "alt_de": "Tiny House mit A-Frame-Giebel und Holzfassade auf einer Rasenfläche, seitliche Ansicht",
       "files": [
         {
-          "file": "assets/images/photos/aframe-lawn-1400.webp",
-          "px": "1400x788",
-          "kb": 410
+          "file": "assets/images/photos/aframe-lawn-1100.webp",
+          "px": "1100x619",
+          "kb": 240
         },
         {
           "file": "assets/images/photos/aframe-lawn-760.webp",
           "px": "760x428",
-          "kb": 145
+          "kb": 125
         },
         {
           "file": "assets/images/photos/aframe-lawn-portrait.webp",
-          "px": "760x1013",
-          "kb": 399
+          "px": "780x680",
+          "kb": 223
         }
       ]
     },
@@ -54,19 +54,19 @@
       "alt_de": "Beleuchtetes Tiny House am Abend, warmes Licht hinter der Glasfront und Gartenbeleuchtung",
       "files": [
         {
-          "file": "assets/images/photos/aframe-night-1400.webp",
-          "px": "1400x788",
-          "kb": 308
+          "file": "assets/images/photos/aframe-night-1100.webp",
+          "px": "1100x619",
+          "kb": 179
         },
         {
           "file": "assets/images/photos/aframe-night-760.webp",
           "px": "760x428",
-          "kb": 112
+          "kb": 95
         },
         {
           "file": "assets/images/photos/aframe-night-portrait.webp",
-          "px": "760x1013",
-          "kb": 287
+          "px": "780x680",
+          "kb": 168
         }
       ]
     },
@@ -77,19 +77,19 @@
       "alt_de": "Tiny House im Olivenhain, Frontansicht mit Terrasse und Zugangsstufen",
       "files": [
         {
-          "file": "assets/images/photos/aframe-olive-grove-1400.webp",
-          "px": "1400x788",
-          "kb": 533
+          "file": "assets/images/photos/aframe-olive-grove-1100.webp",
+          "px": "1100x619",
+          "kb": 297
         },
         {
           "file": "assets/images/photos/aframe-olive-grove-760.webp",
           "px": "760x428",
-          "kb": 165
+          "kb": 144
         },
         {
           "file": "assets/images/photos/aframe-olive-grove-portrait.webp",
-          "px": "760x1013",
-          "kb": 314
+          "px": "780x680",
+          "kb": 217
         }
       ]
     },
@@ -102,12 +102,12 @@
         {
           "file": "assets/images/photos/interior-kitchen-desk-1200.webp",
           "px": "1200x800",
-          "kb": 159
+          "kb": 130
         },
         {
           "file": "assets/images/photos/interior-kitchen-desk-760.webp",
           "px": "760x507",
-          "kb": 78
+          "kb": 64
         }
       ]
     },
@@ -120,12 +120,12 @@
         {
           "file": "assets/images/photos/interior-loft-stair-1200.webp",
           "px": "1200x800",
-          "kb": 151
+          "kb": 121
         },
         {
           "file": "assets/images/photos/interior-loft-stair-760.webp",
           "px": "760x507",
-          "kb": 71
+          "kb": 57
         }
       ]
     },
@@ -138,12 +138,12 @@
         {
           "file": "assets/images/photos/interior-wood-1200.webp",
           "px": "1200x800",
-          "kb": 198
+          "kb": 151
         },
         {
           "file": "assets/images/photos/interior-wood-760.webp",
           "px": "760x507",
-          "kb": 83
+          "kb": 65
         }
       ]
     },
@@ -156,12 +156,12 @@
         {
           "file": "assets/images/photos/interior-stair-white-1200.webp",
           "px": "1200x800",
-          "kb": 46
+          "kb": 36
         },
         {
           "file": "assets/images/photos/interior-stair-white-760.webp",
           "px": "760x507",
-          "kb": 25
+          "kb": 20
         }
       ]
     },
@@ -174,12 +174,12 @@
         {
           "file": "assets/images/photos/production-cladding-1200.webp",
           "px": "1200x800",
-          "kb": 299
+          "kb": 242
         },
         {
           "file": "assets/images/photos/production-cladding-760.webp",
           "px": "760x507",
-          "kb": 137
+          "kb": 112
         }
       ]
     },
@@ -190,19 +190,19 @@
       "alt_de": "Stahlrahmen im Vordergrund, fertiggestelltes Tiny House dahinter auf dem Werksgelände",
       "files": [
         {
-          "file": "assets/images/photos/production-frame-and-finish-1400.webp",
-          "px": "1400x788",
-          "kb": 383
+          "file": "assets/images/photos/production-frame-and-finish-1100.webp",
+          "px": "1100x619",
+          "kb": 231
         },
         {
           "file": "assets/images/photos/production-frame-and-finish-760.webp",
           "px": "760x428",
-          "kb": 144
+          "kb": 124
         },
         {
           "file": "assets/images/photos/production-frame-and-finish-portrait.webp",
-          "px": "760x1013",
-          "kb": 337
+          "px": "780x680",
+          "kb": 220
         }
       ]
     },
@@ -215,12 +215,12 @@
         {
           "file": "assets/images/photos/delivery-trailer-1200.webp",
           "px": "1200x800",
-          "kb": 202
+          "kb": 166
         },
         {
           "file": "assets/images/photos/delivery-trailer-760.webp",
           "px": "760x507",
-          "kb": 90
+          "kb": 73
         }
       ]
     }

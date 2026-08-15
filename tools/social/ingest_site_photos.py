@@ -81,9 +81,21 @@ PLAN = {
 
 # The sizes the site's templates ask for. Hero stills carry a portrait crop as
 # well, because a landscape frame in a tall phone box loses two thirds of itself.
-WIDE = [(1400, 788), (760, 428)]
-PORTRAIT = (760, 1013)
+# The hero is a 50/50 split above 920 px: the photograph occupies half the
+# viewport, so at a 1440 px window it is displayed at 720 CSS px, not 1440. The
+# widest tier that ever shows it full-bleed is the 920 px one. 1100 covers that
+# with headroom for a dense display; 1400 was twice the art that is ever drawn.
+WIDE = [(1100, 619), (760, 428)]
+# Below 640 px the hero is not a portrait box at all — design-system-v2.css
+# stacks it as a 340 px band across the full width. A 760x1013 crop was both
+# oversized and the wrong shape for it. 780x680 is exactly a 390 px phone at 2x.
+PORTRAIT = (780, 680)
 GALLERY = [(1200, 800), (760, 507)]
+
+# Sharpened photographs cost more to encode than smooth ones — the high-frequency
+# detail is real information and webp charges for it. 76 holds the crispness the
+# sharpening pass created while giving back most of the weight.
+QUALITY = 76
 
 
 # Kept in step with HERO_SLIDES in tools/build-modunera-v2.mjs.
@@ -113,7 +125,7 @@ def export(im: Image.Image, src_size, target, focus: float, look: dict, dest: Pa
     out = sharpen(out, amount=min(1.20, 0.72 + 0.28 * reduction),
                   micro=min(1.0, 0.55 + 0.28 * reduction))
     dest.parent.mkdir(parents=True, exist_ok=True)
-    out.save(dest, "WEBP", quality=82, method=6)
+    out.save(dest, "WEBP", quality=QUALITY, method=6)
     return dest.stat().st_size
 
 
