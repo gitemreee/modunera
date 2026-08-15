@@ -402,8 +402,10 @@ def main() -> None:
 
     (OUT / "links.md").write_text(
         "# Highlight covers\n\n"
-        "Two sets. `brand/` is the logo's own backing with the roof red on it, one\n"
-        "pairing for all nine. `varied/` rotates seven grounds from the palette.\n\n"
+        "**Use `varied/`.** The single-colour set was rendered and set aside: one\n"
+        "pairing across nine circles reads as a row of buttons, which is tidy and\n"
+        "says nothing — the palette is doing no work. `brand/` stays in the tree as\n"
+        "the alternative, not as the recommendation.\n\n"
         "Upload each as a story, then add it to a highlight and set the cover to that\n"
         "story. The name goes in Instagram's own field — the artwork carries no text,\n"
         "because Instagram already prints the name under the circle and a word inside\n"

@@ -1,7 +1,9 @@
 # Highlight covers
 
-Two sets. `brand/` is the logo's own backing with the roof red on it, one
-pairing for all nine. `varied/` rotates seven grounds from the palette.
+**Use `varied/`.** The single-colour set was rendered and set aside: one
+pairing across nine circles reads as a row of buttons, which is tidy and
+says nothing — the palette is doing no work. `brand/` stays in the tree as
+the alternative, not as the recommendation.
 
 Upload each as a story, then add it to a highlight and set the cover to that
 story. The name goes in Instagram's own field — the artwork carries no text,
