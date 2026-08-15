@@ -93,3 +93,26 @@ The questions each input closes, so the priority is visible:
 | Structural calculations | Snow and wind suitability statements per market |
 | Approved price list | `Offer` schema with `priceValidUntil` instead of the current request-a-quote flow |
 | Any of the above | The corresponding production-FAQ answers stop deferring to the data sheet and state the figure |
+
+## Social responsibility — proposed, not confirmed
+
+Raised as a possible post subject: that MODUNERA donates one hundred trees to
+TEMA Vakfı for every tiny house sold.
+
+**This is not published anywhere and no post carries it.** It is held here rather
+than written into a caption for three reasons, and all three have to clear before
+it can go out:
+
+| Needed | Why |
+|---|---|
+| Written confirmation that the donation actually happens | A commitment stated publicly is a commitment owed. If the number is a hundred, it has to be a hundred, per house, verifiably |
+| TEMA Vakfı's agreement to be named | Naming a foundation as a partner without its consent is its problem as much as ours, and it is the kind of claim that gets checked |
+| The exact wording, agreed with them | "We donate to TEMA" and "we are a TEMA partner" are different claims with different consequences |
+
+Until then the responsibility angle is carried by post 8 of the launch nine — a
+fire-safety message that names no organisation, claims no partnership and asks
+nothing of anyone. It says something true without needing a signature.
+
+If the donation is real, this becomes one of the strongest posts on the account,
+because almost nobody in the category can evidence one. It is worth doing
+properly rather than quickly.
