@@ -151,25 +151,68 @@ def icon_book(d, x, y, s, c, w):
               (x + s * 0.88, y + s * 0.18)], c, round(w * 0.8))
 
 
-def icon_pin(d, x, y, s, c, w):
-    """A globe, not a pin.
+EU_BLUE = (0, 51, 153)          # Pantone Reflex Blue, the flag's field
+EU_GOLD = (255, 204, 0)         # Pantone Yellow, the stars
 
-    A pin means one place and this highlight is five countries, so the pin was
-    wrong before it was drawn badly. Filling its head with a ring of stars made it
-    worse: at 380 px the stars were dots, at 44 px a berry.
 
-    Three strokes, and the third is the one that was missing. The previous globe
-    had two latitude lines and no equator, and both latitudes were drawn as chords
-    from 0.09 to 0.91 — but a circle at that height is 0.974 wide, so each line
-    stopped short of the outline at both ends and floated inside it. Four strokes,
-    two of them not touching anything. The equator is the one line that can run the
-    full diameter and meet the circle exactly, so it is the one that stays; the
-    wide meridian is narrowed to 0.32-0.68 so the pair no longer closes into an eye.
+def _star(d, cx, cy, r, colour):
+    """One five-pointed star, point up, inscribed in radius r.
+
+    The inner radius is not a taste decision: a regular pentagram's inner vertices
+    sit at sin(18)/sin(126) of the outer, which is 0.382. Anything fatter is a
+    cartoon star and anything thinner is a splat, and the flag's star is the
+    regular one.
     """
-    m = s * 0.02
-    d.ellipse([x + m, y + m, x + s - m, y + s - m], outline=c, width=w)
-    d.ellipse([x + s * 0.32, y + m, x + s * 0.68, y + s - m], outline=c, width=w)
-    _line(d, [(x + m, y + s * 0.50), (x + s - m, y + s * 0.50)], c, w)
+    import math
+    pts = []
+    for i in range(10):
+        a = math.radians(-90 + i * 36)
+        rr = r if i % 2 == 0 else r * 0.382
+        pts.append((cx + rr * math.cos(a), cy + rr * math.sin(a)))
+    d.polygon(pts, fill=colour)
+
+
+def icon_pin(d, x, y, s, c, w):
+    """A map marker with the European flag set into its head.
+
+    This started as a pin, became a globe, and is a pin again by instruction. The
+    globe was accurate and said nothing: a circle with a meridian and an equator
+    means the world, and this highlight is one continent and five specific markets
+    in it. The flag names the place the way nothing drawn in two brand colours can.
+
+    Stars in the head were tried once before, on the brand ground, and failed —
+    at 44 px a ring of small marks with nothing behind it read as a berry. The
+    field is what fixes that. A dark blue disc with a gold ring inside it survives
+    being 5 px across, because by then it is no longer being read as twelve stars;
+    it is being read as the flag, which is how the flag is read at every small
+    size it appears at.
+
+    Geometry is the flag's own: the star circle's radius is a fixed fraction of
+    the field, and each star is inscribed in a circle one sixth of that radius.
+
+    One caveat, recorded rather than resolved: Switzerland is one of the five
+    markets and is not in the EU, so this mark is a geographic sign for Europe and
+    not a claim about membership. It carries no EU wording and sits under a
+    highlight named EUROPE, which is the use the emblem's guidance allows.
+    """
+    import math
+    cx, cy, r = x + s * 0.50, y + s * 0.35, s * 0.34
+    rd = r - w / 2                          # the field stops at the inside of the stroke
+    d.ellipse([cx - rd, cy - rd, cx + rd, cy + rd], fill=EU_BLUE)
+    ring = rd * 0.62
+    for i in range(12):
+        a = math.radians(i * 30 - 90)
+        _star(d, cx + ring * math.cos(a), cy + ring * math.sin(a), ring / 6, EU_GOLD)
+
+    # The teardrop: the head's arc, then the two tangents down to the point. Drawn
+    # from the tangent points rather than from a guessed pair of coordinates, so
+    # the straight sides meet the circle instead of crossing it or stopping short.
+    apex_y = y + s * 0.99
+    al = math.degrees(math.acos(r / (apex_y - cy)))
+    pts = [(cx + r * math.cos(math.radians(90 + al + k * (360 - 2 * al) / 96)),
+            cy + r * math.sin(math.radians(90 + al + k * (360 - 2 * al) / 96)))
+           for k in range(97)]
+    _line(d, pts + [(cx, apex_y), pts[0]], c, w)
 
 
 def icon_gear(d, x, y, s, c, w):
@@ -297,7 +340,7 @@ COVERS = [
     dict(slug="guides", label="GUIDES", icon=icon_book, glyph=None,
          ground=g.MOSS, ink=g.CREAM, link="modunera.com/en/guides/",
          note="Permits, delivery and comparison"),
-    dict(slug="europe", label="EUROPE", icon=icon_pin, glyph=None,
+    dict(slug="europe", label="EUROPE", icon=icon_pin, glyph=None, art=True,
          ground=g.CREAM, ink=g.MOSS_DEEP, link="modunera.com/en/countries/",
          note="Germany, Netherlands, Denmark, Luxembourg, Switzerland"),
     dict(slug="quality", label="QUALITY", icon=icon_gear, glyph=None,
@@ -326,16 +369,27 @@ BRAND_GROUND, BRAND_INK = g.CREAM, g.ROOF
 TARGET = 380 * SS               # the longest side of every icon's ink, normalised
 
 
-def _draw_alone(spec, s: float, stroke: int) -> Image.Image:
-    """One icon on its own transparent layer, so its ink can be measured."""
+def _draw_alone(spec, s: float, stroke: int, colour=None) -> Image.Image:
+    """One icon on its own transparent layer, so its ink can be measured.
+
+    Eight of the nine are one colour, so they are drawn as a coverage mask and
+    tinted afterwards — which is what lets the same drawing serve both sets. The
+    flag cannot be: its blue and its gold are the flag, not a treatment, so an
+    `art` icon is drawn straight into RGBA with its outline colour handed in.
+    """
     pad = int(s * 0.6)
-    layer = Image.new("LA", (int(s + pad * 2), int(s + pad * 2)), (0, 0))
+    size = (int(s + pad * 2),) * 2
+    if spec.get("art"):
+        layer = Image.new("RGBA", size, (0, 0, 0, 0))
+        c = tuple(colour or spec["ink"]) + (255,)
+    else:
+        layer = Image.new("LA", size, (0, 0))
+        c = (255, 255)
     d = ImageDraw.Draw(layer)
     if spec.get("glyph"):
-        spec["icon"](d, pad, pad, s, (255, 255), stroke,
-                     font=g.F_TITLE(int(s * spec["glyph"])))
+        spec["icon"](d, pad, pad, s, c, stroke, font=g.F_TITLE(int(s * spec["glyph"])))
     else:
-        spec["icon"](d, pad, pad, s, (255, 255), stroke)
+        spec["icon"](d, pad, pad, s, c, stroke)
     return layer
 
 
@@ -354,20 +408,19 @@ def cover(spec: dict, brand: bool = False) -> Image.Image:
     scaling the finished artwork would have made the thin icons thin-lined too.
     Then the measured ink, not the box, is centred.
     """
+    colour = BRAND_INK if brand else spec["ink"]
     stroke = STROKE * SS
     s = SAFE_D * SS * 0.62
-    box = _draw_alone(spec, s, stroke).getbbox()
+    box = _draw_alone(spec, s, stroke, colour).getbbox()
     s *= TARGET / max(box[2] - box[0], box[3] - box[1])
 
-    layer = _draw_alone(spec, s, stroke)
-    box = layer.getbbox()
-    ink = layer.crop(box)
+    layer = _draw_alone(spec, s, stroke, colour)
+    ink = layer.crop(layer.getbbox())
 
-    ground = BRAND_GROUND if brand else spec["ground"]
-    big = Image.new("RGB", (W * SS, H * SS), ground)
-    tint = Image.new("RGB", ink.size, BRAND_INK if brand else spec["ink"])
-    big.paste(tint, (CENTRE[0] * SS - ink.width // 2,
-                     CENTRE[1] * SS - ink.height // 2), ink.getchannel("A"))
+    big = Image.new("RGB", (W * SS, H * SS), BRAND_GROUND if brand else spec["ground"])
+    art = ink.convert("RGB") if spec.get("art") else Image.new("RGB", ink.size, colour)
+    big.paste(art, (CENTRE[0] * SS - ink.width // 2,
+                    CENTRE[1] * SS - ink.height // 2), ink.getchannel("A"))
     return big.resize((W, H), Image.LANCZOS)
 
 
@@ -389,6 +442,17 @@ def check() -> list[str]:
             problems.append(f"{c['slug']}: icon on ground is {r:.2f}:1, needs 3.0")
         if i and COVERS[i - 1]["ground"] == c["ground"]:
             problems.append(f"{c['slug']}: same ground as {COVERS[i-1]['slug']} beside it")
+        if c.get("art"):
+            # The flag brings two colours the palette does not own, so both are
+            # measured rather than assumed: the field against every ground it can
+            # land on, and the stars against the field.
+            for name, ground in (("varied", c["ground"]), ("brand", BRAND_GROUND)):
+                r = g.contrast(EU_BLUE, ground)
+                if r < 3.0:
+                    problems.append(f"{c['slug']}: field on the {name} ground is {r:.2f}:1")
+            r = g.contrast(EU_GOLD, EU_BLUE)
+            if r < 3.0:
+                problems.append(f"{c['slug']}: stars on the field are {r:.2f}:1")
     if len({tuple(c["ground"]) for c in COVERS}) < 5:
         problems.append("fewer than five distinct grounds across the row")
     return problems
