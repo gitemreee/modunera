@@ -4,7 +4,7 @@ Nine regions chosen for camping and holiday-home density rather than for populat
 
 ## The rule for hashtags
 
-Five per post. Three for the place, one for the subject, one for the brand. The generic tiny-house tags are dropped: they are the most contested terms in the category and a new account does not rank in them, whereas #vulkaneifel or #hochsauerland is a small pool of people who are actually there.
+Five per post. Three for the place, two for intent. The branded tag is gone: clicking #modunera from a MODUNERA post returns the reader to MODUNERA posts, which is a link back to where they already are. A branded tag earns its slot only when other people use it — customers posting their own house — and nobody does yet, so it collected nothing while costing a fifth of the budget. It belongs in the bio instead, where it accumulates without spending a post. The generic category tags are out for a different reason: #tinyhouse and #tinyhousedeutschland are the most contested terms in the market and a new account does not rank in either, while #vulkaneifel is a small pool of people already standing where a tiny house would go.
 
 ## Before you tag
 
@@ -14,15 +14,15 @@ An Instagram place tag is read by some people as 'this is where the picture was 
 
 | # | Instagram location | Region | Hashtags | Page on the site |
 |---|---|---|---|---|
-| 9 | **Ostseebad Binz** | Rügen, Mecklenburg-Vorpommern | #ruegen #binz #ostseeinsel #transport #modunera | `/standorte/mecklenburg-vorpommern/ostseebad-binz/` |
-| 8 | **Bodenmais** | Bayerischer Wald, Bayern | #bayerischerwald #bodenmais #nationalpark #waldbrandschutz #modunera | `/standorte/bayern/bodenmais/` |
-| 7 | **Winterberg** | Hochsauerland, Nordrhein-Westfalen | #sauerland #winterberg #hochsauerland #holzfassade #modunera | `/standorte/nordrhein-westfalen/winterberg/` |
-| 6 | **Titisee-Neustadt** | Hochschwarzwald, Baden-Württemberg | #schwarzwald #titisee #hochschwarzwald #tinyhouseschweiz #modunera | `/standorte/baden-wuerttemberg/titisee-neustadt/` |
-| 5 | **Waren (Müritz)** | Mecklenburgische Seenplatte, Mecklenburg-Vorpommern | #mueritz #mecklenburgischeseenplatte #warenmueritz #ferienhaus #modunera | `/standorte/mecklenburg-vorpommern/waren/` |
-| 4 | **Bispingen** | Lüneburger Heide, Niedersachsen | #lueneburgerheide #bispingen #heidekreis #modulhaus #modunera | `/standorte/niedersachsen/bispingen/` |
-| 3 | **Gerolstein** | Vulkaneifel, Rheinland-Pfalz | #vulkaneifel #eifel #gerolstein #stahlbau #modunera | `/standorte/rheinland-pfalz/gerolstein/` |
-| 2 | **Prien am Chiemsee** | Chiemgau, Bayern | #prienamchiemsee #chiemsee #chiemgau #grundriss #modunera | `/standorte/bayern/prien-am-chiemsee/` |
-| 1 | **Fehmarn, Germany** | Ostholstein, Schleswig-Holstein | #fehmarn #ostsee #ostholstein #tinyhousedeutschland #modunera | `/standorte/schleswig-holstein/fehmarn/` |
+| 9 | **Ostseebad Binz** | Rügen, Mecklenburg-Vorpommern | #ruegen #binz #ostseeinsel #transport #schwertransport | `/standorte/mecklenburg-vorpommern/ostseebad-binz/` |
+| 8 | **Bodenmais** | Bayerischer Wald, Bayern | #bayerischerwald #bodenmais #nationalpark #waldbrandschutz #naturschutz | `/standorte/bayern/bodenmais/` |
+| 7 | **Winterberg** | Hochsauerland, Nordrhein-Westfalen | #sauerland #winterberg #hochsauerland #holzfassade #handwerk | `/standorte/nordrhein-westfalen/winterberg/` |
+| 6 | **Titisee-Neustadt** | Hochschwarzwald, Baden-Württemberg | #schwarzwald #titisee #hochschwarzwald #tinyhouseschweiz #tinyhouseeurope | `/standorte/baden-wuerttemberg/titisee-neustadt/` |
+| 5 | **Waren (Müritz)** | Mecklenburgische Seenplatte, Mecklenburg-Vorpommern | #mueritz #mecklenburgischeseenplatte #warenmueritz #ferienhaus #seegrundstueck | `/standorte/mecklenburg-vorpommern/waren/` |
+| 4 | **Bispingen** | Lüneburger Heide, Niedersachsen | #lueneburgerheide #bispingen #heidekreis #modulhaus #fertighaus | `/standorte/niedersachsen/bispingen/` |
+| 3 | **Gerolstein** | Vulkaneifel, Rheinland-Pfalz | #vulkaneifel #eifel #gerolstein #stahlbau #modulbau | `/standorte/rheinland-pfalz/gerolstein/` |
+| 2 | **Prien am Chiemsee** | Chiemgau, Bayern | #prienamchiemsee #chiemsee #chiemgau #grundriss #wochenendhaus | `/standorte/bayern/prien-am-chiemsee/` |
+| 1 | **Fehmarn, Germany** | Ostholstein, Schleswig-Holstein | #fehmarn #ostsee #ostholstein #tinyhousedeutschland #ferienhaus | `/standorte/schleswig-holstein/fehmarn/` |
 
 ## Why each one
 

@@ -88,6 +88,17 @@ def build(name: str) -> Path:
     return path
 
 
+def strip_domain_line(text: str) -> str:
+    """Remove a bare modunera.com line the caption already ends with.
+
+    Post 1 signs off with the domain in both languages. Once the sheet appends a
+    link line of its own, leaving that in prints the address twice in one caption,
+    which reads as a mistake rather than as emphasis.
+    """
+    lines = [l for l in text.split("\n") if l.strip() != "modunera.com"]
+    return "\n".join(lines).rstrip()
+
+
 def build_post_sheet(name: str) -> Path:
     """The posting sheet: one block per post, five hashtags, and the place tag.
 
@@ -106,10 +117,11 @@ def build_post_sheet(name: str) -> Path:
         f"**Publish {order[0]} first and {order[-1]} last.** Instagram puts the most recent",
         "post at the top left, so the post you want in that corner goes up last. Work",
         "down this page in order.\n",
-        "Each block is one caption: English, a rule, German, then five hashtags. Copy",
-        "the whole block. The place tag goes in Instagram's own location field, not in",
-        "the caption.\n",
-        f"> {loc['honesty_note']}\n",
+        "Each block is one caption: English, a rule, German, the page on the site, then",
+        "five hashtags. Copy the whole block. The place tag goes in Instagram's own",
+        "location field, not in the caption.\n",
+        f"> **On the address line.** {loc['link_rule']}\n",
+        f"> **On the place tag.** {loc['honesty_note']}\n",
         "---\n",
     ]
 
@@ -117,8 +129,11 @@ def build_post_sheet(name: str) -> Path:
         e, p = entries[n], places[n]
         out.append(f"## {n} · `post-{n}.jpg`\n")
         out.append(f"**Location:** {p['instagram_tag']} — {p['region']}\n")
-        out.append("```\n" + e["en"] + "\n\n—\n\n" + e["de"] + "\n\n"
-                   + " ".join(p["hashtags"]) + "\n```\n")
+        block = strip_domain_line(e["en"]) + "\n\n—\n\n" + strip_domain_line(e["de"])
+        if p.get("link"):
+            block += f"\n\n{p['link']}"
+        block += "\n\n" + " ".join(p["hashtags"])
+        out.append("```\n" + block + "\n```\n")
         out.append("---\n")
 
     path = CAPTIONS / f"{name}-post.md"

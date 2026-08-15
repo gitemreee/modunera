@@ -4,11 +4,13 @@
 post at the top left, so the post you want in that corner goes up last. Work
 down this page in order.
 
-Each block is one caption: English, a rule, German, then five hashtags. Copy
-the whole block. The place tag goes in Instagram's own location field, not in
-the caption.
+Each block is one caption: English, a rule, German, the page on the site, then
+five hashtags. Copy the whole block. The place tag goes in Instagram's own
+location field, not in the caption.
 
-> An Instagram place tag is read by some people as 'this is where the picture was taken'. None of these photographs were taken in Germany — production is in Türkiye. Posts 1, 6 and 9 say so in the caption, so the tag reads as market. Post 5 does not, and it is the one that asserts 'a completed unit, not a visualisation' most directly; either skip the tag there or accept that it reads as a location claim. Recommended: tag it, because the account bio and every neighbouring post state the origin — but it is a decision, not an oversight.
+> **On the address line.** modunera.com, not www.modunera.com: the site's canonical is the apex host and netlify.toml carries no www redirect, so the shorter form is the one that is certain to resolve. Worth being plain about what this line does — an Instagram caption URL is not clickable and passes no SEO value; Instagram's outbound links are nofollow and caption text is not a link at all. It is there for recall, so a reader can remember or type it. The lever that actually moves traffic is the clickable link in the bio, and Story link stickers. Where a post raises a specific question, the line names the page that answers it rather than repeating the bare domain.
+
+> **On the place tag.** An Instagram place tag is read by some people as 'this is where the picture was taken'. None of these photographs were taken in Germany — production is in Türkiye. Posts 1, 6 and 9 say so in the caption, so the tag reads as market. Post 5 does not, and it is the one that asserts 'a completed unit, not a visualisation' most directly; either skip the tag there or accept that it reads as a location claim. Recommended: tag it, because the account bio and every neighbouring post state the origin — but it is a decision, not an oversight.
 
 ---
 
@@ -31,7 +33,9 @@ Von der Türkei nach Deutschland, in die Niederlande, nach Dänemark, Luxemburg 
 
 Herkunft ist keine Fußnote: produziert in der Türkei, geplant für Europa.
 
-#ruegen #binz #ostseeinsel #transport #modunera
+modunera.com/laender/deutschland
+
+#ruegen #binz #ostseeinsel #transport #schwertransport
 ```
 
 ---
@@ -55,7 +59,7 @@ Wir bauen in der Natur, also sagen wir es hier: kein offenes Feuer bei Wind, kei
 
 Wenn Sie Rauch sehen, rufen Sie an, bevor Sie sich sicher sind. In Deutschland, den Niederlanden, Dänemark, Luxemburg und der Schweiz gilt 112.
 
-#bayerischerwald #bodenmais #nationalpark #waldbrandschutz #modunera
+#bayerischerwald #bodenmais #nationalpark #waldbrandschutz #naturschutz
 ```
 
 ---
@@ -79,7 +83,9 @@ Fugenbilder, Kantenabschlüsse und die Anschlüsse an Fenster und Dach entstehen
 
 Phase zwei von fünf: die Hülle. Witterungs- und Feuchteschutz, bevor irgendetwas nach Haus aussieht.
 
-#sauerland #winterberg #hochsauerland #holzfassade #modunera
+modunera.com/factory
+
+#sauerland #winterberg #hochsauerland #holzfassade #handwerk
 ```
 
 ---
@@ -103,7 +109,9 @@ Produziert wird in der Türkei. Ob Straße, Ro-Ro-Fähre oder Tieflader sinnvoll
 
 Zielland und Ort per WhatsApp: +90 553 543 5342
 
-#schwarzwald #titisee #hochschwarzwald #tinyhouseschweiz #modunera
+modunera.com/laender/deutschland
+
+#schwarzwald #titisee #hochschwarzwald #tinyhouseschweiz #tinyhouseeurope
 ```
 
 ---
@@ -127,7 +135,9 @@ Große Glasflächen holen tagsüber den Außenraum herein und geben abends etwas
 
 Diese Aufnahme zeigt eine ausgeführte Einheit, keine Visualisierung.
 
-#mueritz #mecklenburgischeseenplatte #warenmueritz #ferienhaus #modunera
+modunera.com/projects
+
+#mueritz #mecklenburgischeseenplatte #warenmueritz #ferienhaus #seegrundstueck
 ```
 
 ---
@@ -151,7 +161,9 @@ Tiny House, Modulbau, Stahlbau, Möbel nach Maß. Die Möbel entstehen im selben
 
 Gefertigt wird nach eigener Spezifikation, geliefert wird nach Europa.
 
-#lueneburgerheide #bispingen #heidekreis #modulhaus #modunera
+modunera.com/modelle
+
+#lueneburgerheide #bispingen #heidekreis #modulhaus #fertighaus
 ```
 
 ---
@@ -175,7 +187,9 @@ Jedes MODUNERA Haus beginnt mit der tragenden Stahlkonstruktion: Maße, Fahrgest
 
 Was am Ende sichtbar bleibt, hängt an dem, was Sie später nicht mehr sehen.
 
-#vulkaneifel #eifel #gerolstein #stahlbau #modunera
+modunera.com/qualitaet
+
+#vulkaneifel #eifel #gerolstein #stahlbau #modulbau
 ```
 
 ---
@@ -199,7 +213,9 @@ Wo ein Haus steht, entscheidet über Ausrichtung, Fensterflächen, Zugang und Au
 
 Acht Modelle als Ausgangspunkt. Ein Grundstück als Vorgabe.
 
-#prienamchiemsee #chiemsee #chiemgau #grundriss #modunera
+modunera.com/modelle
+
+#prienamchiemsee #chiemsee #chiemgau #grundriss #wochenendhaus
 ```
 
 ---
@@ -215,8 +231,6 @@ MODUNERA builds tiny houses, modular buildings, steel structures and furniture m
 
 On this account a photograph is a photograph. Anything drawn is labelled as a concept.
 
-modunera.com
-
 —
 
 Das ist kein Rendering, sondern eine Fotografie eines fertigen Hauses.
@@ -227,7 +241,7 @@ In diesem Feed ist eine Fotografie eine Fotografie. Entwürfe werden als Entwurf
 
 modunera.com
 
-#fehmarn #ostsee #ostholstein #tinyhousedeutschland #modunera
+#fehmarn #ostsee #ostholstein #tinyhousedeutschland #ferienhaus
 ```
 
 ---
