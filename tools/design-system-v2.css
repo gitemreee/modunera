@@ -713,7 +713,7 @@ h1,h2,h3,.section-header h2,.editorial-copy h2,.wide-copy h2,.article-content h2
 /* the white value card sits inside .section-dark, so it needs its heading back */
 .section-dark .value-card h3{color:var(--roof)}
 /* the hero copy sits on a light panel, not on the photograph */
-.hero .hero-panel h1,.hero .hero-panel h2{color:var(--roof)}
+.hero .hero-panel h1,.hero .hero-panel h2{color:#fff}
 
 /* --- navigation in the roof colour ---------------------------------------- */
 /* The header and its panels follow the headings. On the nav's near-white ground
@@ -1006,11 +1006,14 @@ h1,h2,h3,.section-header h2,.editorial-copy h2,.wide-copy h2,.article-content h2
   animation:hero-slide 40s linear infinite}
 .hero-slides picture>img{position:static;inset:auto;width:100%;height:100%;
   object-fit:cover;opacity:1;animation:none;display:block}
+/* Four stills, not five: only finished houses go in the hero, and there are four
+   of those worth showing. 40s / 4 = 10s each, so the keyframes below hold each
+   frame proportionally longer. */
 .hero-slides picture:nth-child(1){animation-delay:0s}
-.hero-slides picture:nth-child(2){animation-delay:8s}
-.hero-slides picture:nth-child(3){animation-delay:16s}
-.hero-slides picture:nth-child(4){animation-delay:24s}
-.hero-slides picture:nth-child(5){animation-delay:32s}
+.hero-slides picture:nth-child(2){animation-delay:10s}
+.hero-slides picture:nth-child(3){animation-delay:20s}
+.hero-slides picture:nth-child(4){animation-delay:30s}
+@keyframes hero-slide{0%{opacity:0}2.5%{opacity:1}23%{opacity:1}25.5%{opacity:0}100%{opacity:0}}
 @media(prefers-reduced-motion:reduce){
   .hero-slides picture{animation:none;opacity:0}
   .hero-slides picture:nth-child(1){opacity:1}
@@ -1059,8 +1062,11 @@ h1,h2,h3,.section-header h2,.editorial-copy h2,.wide-copy h2,.article-content h2
   height:min(720px,calc(100svh - 78px));
   min-height:560px;
   align-items:center;
-  background:#fff;
-  color:var(--ink);
+  /* Back to the green ground. The white version read as a blank sheet with a
+     photograph taped to it; the diagonal gives the half its own depth and the
+     picture something to sit against. */
+  background:linear-gradient(118deg,#35533C 0%,#2E4733 44%,#26402C 100%);
+  color:#fff;
 }
 /* The right half, from the container's centre line so the text column and the
    picture cannot collide as the viewport widens. transform:none because the v1
@@ -1075,40 +1081,43 @@ h1,h2,h3,.section-header h2,.editorial-copy h2,.wide-copy h2,.article-content h2
   background-position:center 52%;
 }
 .hero-grain{inset:0;border-radius:0;opacity:.05}
-/* Nothing over the picture. A fade would have to be white here, and white poured
-   over a photograph reads as a printing fault; a clean edge reads as a decision. */
-.hero-media:after{background:none}
+/* The seam fades into the green rather than butting against it, so the two halves
+   read as one frame. */
+.hero-media:after{
+  background:linear-gradient(90deg,
+    rgba(46,71,51,1) 0%,rgba(46,71,51,.72) 6%,rgba(46,71,51,.24) 15%,rgba(46,71,51,0) 28%);
+}
 .hero-content{padding:0;display:block}
 .hero-panel{
   width:auto;max-width:min(520px,46vw);padding:0;border:0;border-radius:0;
   background:none;box-shadow:none;backdrop-filter:none;
 }
-.hero .hero-panel h1,.hero .hero-panel h2{color:var(--roof)}
-.hero h1 em,.hero-panel h1 em{color:var(--roof);font-style:normal;opacity:.72}
+.hero .hero-panel h1,.hero .hero-panel h2{color:#fff}
+.hero h1 em,.hero-panel h1 em{color:var(--sage);font-style:normal}
 .hero h1{max-width:none;margin:14px 0 16px}
-.hero-panel p{max-width:none;color:var(--muted);font-size:1rem;line-height:1.55}
-.hero-kicker{color:var(--roof)}
-.hero-kicker:before{background:var(--roof);height:2px}
+.hero-panel p{max-width:none;color:rgba(255,255,255,.82);font-size:1rem;line-height:1.55}
+.hero-kicker{color:var(--sage)}
+.hero-kicker:before{background:var(--sage);height:2px}
 .hero-actions{margin-top:26px}
 /* The call to action takes the roof red too. Moss green here would be a third
    colour in a two-colour half, and the button is the thing the eye lands on
    after the headline. */
 .hero-actions .btn-primary{background:var(--roof);color:#fff}
 .hero-actions .btn-primary:hover{background:#7d2815;color:#fff}
-.hero-actions .btn-outline{border-color:rgba(151,49,26,.42);color:var(--roof);background:transparent}
-.hero-actions .btn-outline:hover{border-color:var(--roof);background:rgba(151,49,26,.07);color:var(--roof)}
+.hero-actions .btn-outline{border-color:rgba(255,255,255,.5);color:#fff;background:transparent}
+.hero-actions .btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.13);color:#fff}
 /* The three facts become a hairline rail along the text column instead of three
    floating pills, which read as tags rather than as statements. */
 .hero-proof{
   display:flex;gap:0;flex-wrap:nowrap;margin-top:34px;padding-top:15px;
-  border-top:1px solid rgba(151,49,26,.26);
+  border-top:1px solid rgba(255,255,255,.24);
 }
 .hero-proof span{
   flex:1 1 0;min-width:0;padding:0 14px 0 0;margin:0;border:0;border-radius:0;
-  background:none;backdrop-filter:none;color:var(--roof);
+  background:none;backdrop-filter:none;color:rgba(255,255,255,.88);
   font-size:.68rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;line-height:1.35;
 }
-.hero-proof span+span{padding-left:14px;border-left:1px solid rgba(151,49,26,.2)}
+.hero-proof span+span{padding-left:14px;border-left:1px solid rgba(255,255,255,.18)}
 .hero-scroll{display:none}
 
 /* Below the split the halves stack: the photograph takes a band across the top
@@ -1122,7 +1131,9 @@ h1,h2,h3,.section-header h2,.editorial-copy h2,.wide-copy h2,.article-content h2
      The band therefore has to restate its own geometry, or the phone inherits a
      picture pinned to the right half and a 179px text column. */
   .hero-media{position:relative;inset:auto;width:100%;height:400px;transform:none;border-radius:0}
-  .hero-media:after{background:none}
+  .hero-media:after{
+    background:linear-gradient(0deg,rgba(46,71,51,1) 0%,rgba(46,71,51,.35) 22%,transparent 52%);
+  }
   .hero-grain{display:none}
   .hero-content{position:relative;display:block;padding:34px 0 8px;margin-top:0}
   .hero-panel{width:100%;max-width:none;padding:0;background:none;box-shadow:none;border-radius:0}

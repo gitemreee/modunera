@@ -1303,15 +1303,16 @@ async function rewriteWhatsapp() {
    prepared by tools/social/ingest_site_photos.py so the grading matches the
    social feed. The renders stay where they belong: illustrating the eight models.
 
-   Order is a decision. The two frames whose planting and light could be central
-   Europe lead; the night frame closes, because it is the one that sells the idea
-   of living in it rather than owning it. */
+   Finished houses only. A steel frame and a half-clad module belong on the
+   production page, not in the first thing a buyer sees — the hero has to show
+   what they would be buying, complete. Four frames rather than five, because
+   there are four worth showing and padding it with a weaker one costs more than
+   the extra slide is worth. */
 const HERO_SLIDES = [
-  "aframe-deck-olive",
-  "aframe-lawn",
   "aframe-olive-grove",
-  "production-frame-and-finish",
+  "aframe-lawn",
   "aframe-night",
+  "aframe-deck-olive",
 ];
 
 function heroSlides(root) {
