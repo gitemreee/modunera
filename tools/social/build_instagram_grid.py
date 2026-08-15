@@ -245,6 +245,26 @@ def cover(im: Image.Image, w: int, h: int, focus: float = 0.5) -> Image.Image:
     return resized.crop((0, top, w, top + h))
 
 
+
+def _luma(im: Image.Image, box) -> tuple[float, float]:
+    """Mean brightness and standard deviation of a region, 0-255."""
+    st = ImageStat.Stat(im.crop(box).convert("L"))
+    return st.mean[0], st.stddev[0]
+
+
+def scrim_need(luma: float, floor: float = 86.0, span: float = 105.0) -> float:
+    """How much darkening this region actually needs for white type, 0 to 1.
+
+    White on a region already at or below `floor` clears 4.5:1 on its own, so it
+    gets nothing. Above that the need ramps with the deficit. This is why not every
+    frame carries a gradient: the night shot and the dark cladding do not need one,
+    and putting one there only flattens a photograph that was already right.
+    """
+    if luma <= floor:
+        return 0.0
+    return min(1.0, (luma - floor) / span)
+
+
 def head_scrim(im: Image.Image, height_ratio: float = 0.24, strength: int = 140) -> Image.Image:
     """A soft darkening at the head only, so the white logo reads on a bright sky.
 
@@ -314,28 +334,53 @@ def tracked(draw: ImageDraw.ImageDraw, xy, text: str, f, fill, tracking: int = 0
 def photo_post(source: Path, title: str | None, focus: float, look: dict | None = None) -> Image.Image:
     im = Image.open(source).convert("RGB")
     im, band = strip_camera_watermark(im)
+    src_w, src_h = im.size
     canvas = cover(im, POST_W, POST_H, focus)
+
     look = dict(look or {})
-    sharp = look.pop("sharp", 1.0)
-    micro = look.pop("micro", 1.0)
+    noisy = look.pop("noisy", False)
     canvas = grade(canvas, **look)
-    # after the resize and the grade, before anything is laid over it
-    canvas = sharpen(canvas, amount=sharp, micro=micro)
-    canvas = head_scrim(canvas)
+
+    # Sharpening follows how far the frame was actually reduced rather than a
+    # number typed per photograph: a frame downscaled 1.7x lost more edge than one
+    # downscaled 1.3x and can take more back. A high-ISO frame is exempt, because
+    # sharpening grain is still sharpening grain.
+    reduction = max(src_w / POST_W, src_h / POST_H)
+    amount = 0.0 if noisy else min(1.20, 0.72 + 0.28 * reduction)
+    micro = 0.35 if noisy else min(1.0, 0.55 + 0.28 * reduction)
+    canvas = sharpen(canvas, amount=(0.55 if noisy else amount), micro=micro)
+
+    # --- gradients only where the photograph needs them ----------------------
+    logo_luma, _ = _luma(canvas, (MARGIN, SAFE_TOP + 36, MARGIN + 246, SAFE_TOP + 106))
+    head_need = scrim_need(logo_luma)
+    if head_need > 0.04:
+        canvas = head_scrim(canvas, height_ratio=0.24, strength=int(150 * head_need))
+
+    foot_box = (0, POST_H - SAFE_BOTTOM - 170, POST_W, POST_H - SAFE_BOTTOM)
+    foot_luma, foot_var = _luma(canvas, foot_box)
+    foot_need = scrim_need(foot_luma, floor=78.0)
+
     if title:
-        # blur first, then darken: a blurred foot needs far less darkening, which
-        # is how the caption reads without a black bar across the picture
-        canvas = frosted_foot(canvas)
-        canvas = foot_scrim(canvas, height_ratio=0.34, strength=150)
-    else:
-        canvas = foot_scrim(canvas, height_ratio=0.26, strength=118)
+        # A blurred foot is for a busy one. A calm foot — grass, a dark wall, the
+        # night — reads better sharp, and blurring it would be the artificial look
+        # the brief rules out.
+        if foot_need > 0.15 and foot_var > 44:
+            canvas = frosted_foot(canvas, height_ratio=0.28)
+            foot_need *= 0.72          # blur already did most of the separating
+        if foot_need > 0.04:
+            canvas = foot_scrim(canvas, height_ratio=0.34, strength=int(190 * foot_need))
+    elif foot_need > 0.04:
+        canvas = foot_scrim(canvas, height_ratio=0.26, strength=int(150 * foot_need))
+
     draw = ImageDraw.Draw(canvas)
     place_logo(canvas, light=True)
     if title:
-        f = F_TITLE(37)
-        tracked(draw, (MARGIN, POST_H - SAFE_BOTTOM - 106), title, f, (255, 255, 255), tracking=3)
+        tracked(draw, (MARGIN, POST_H - SAFE_BOTTOM - 106), title, F_TITLE(37),
+                (255, 255, 255), tracking=3)
     place_domain(draw, light=True)
     canvas.info["watermark_band_px"] = band
+    canvas.info["head_scrim"] = round(head_need, 2)
+    canvas.info["foot_scrim"] = round(foot_need, 2)
     return canvas
 
 
@@ -370,30 +415,30 @@ def card_post(lines: list[str], ground: tuple[int, int, int], light_type: bool,
 # of strongest frames. Recorded here rather than silently swapped.
 POSTS = [
     dict(kind="photo", src="IMG_20250519_182528.jpg", title=None, focus=0.5,
-         look=dict(warmth=1.02, lift=0.03, contrast=1.16, saturation=0.94, sharp=1.15, micro=1.0),
+         look=dict(warmth=1.02, lift=0.03, contrast=1.16, saturation=0.94),
          note="substituted for IMG_20250519_182509.jpg, which would not transfer"),
     dict(kind="cream", lines=["DESIGN", "YOUR", "NATURE"], size=96),
     dict(kind="photo", src="20231214_121220.jpg", title="BUILT WITH PURPOSE", focus=0.24,
-         look=dict(warmth=0.99, lift=0.05, contrast=1.20, saturation=0.88, sharp=1.10, micro=0.9),
+         look=dict(warmth=0.99, lift=0.05, contrast=1.20, saturation=0.88),
          note="replaced IMG_20250618_094223.jpg — scaffolding dominated the frame"),
     dict(kind="forest", lines=["TINY HOUSE", "MODULAR HOME", "STEEL STRUCTURE", "CUSTOM FURNITURE"], size=62),
     dict(kind="photo", src="IMG_20250807_131955.jpg", title="MADE AROUND YOU", focus=0.42,
-         look=dict(warmth=1.01, lift=0.02, contrast=1.14, saturation=0.93, sharp=1.05, micro=0.85)),
+         look=dict(warmth=1.01, lift=0.02, contrast=1.14, saturation=0.93)),
     dict(kind="photo", src="IMG_20250913_193621.jpg", title="HOME, AFTER DARK", focus=0.45,
-         look=dict(warmth=1.04, lift=0.06, contrast=1.10, saturation=0.98, sharp=0.55, micro=0.35)),
+         look=dict(warmth=1.04, lift=0.06, contrast=1.10, saturation=0.98, noisy=True)),
     dict(kind="photo", src="IMG_20250913_104632.jpg", title="FROM TÜRKİYE TO EUROPE", focus=0.52,
-         look=dict(warmth=1.01, lift=0.02, contrast=1.18, saturation=0.90, sharp=1.15, micro=1.0)),
+         look=dict(warmth=1.01, lift=0.02, contrast=1.18, saturation=0.90)),
     dict(kind="cream", lines=["DELIVERY", "ACROSS", "DE · NL · DK", "LU · CH"], size=72),
     dict(kind="photo", src="20240227_113020.jpg", title="SPACE TO BREATHE", focus=0.66,
-         look=dict(warmth=1.02, lift=0.04, contrast=1.15, saturation=0.92, sharp=1.05, micro=0.85),
+         look=dict(warmth=1.02, lift=0.04, contrast=1.15, saturation=0.92),
          note="replaced IMG_20260206_161331.jpg — an unfinished grey terrace"),
     dict(kind="photo", src="IMG_20250913_183727.jpg", title="FROM FRAME TO FINISH", focus=0.5,
-         look=dict(warmth=1.01, lift=0.03, contrast=1.17, saturation=0.91, sharp=1.15, micro=1.0),
+         look=dict(warmth=1.01, lift=0.03, contrast=1.17, saturation=0.91),
          note="replaced 20231207_103831.jpg — dim workshop, awkward pose. This frame "
               "carries the caption literally: the steel frame in front, the finished house behind"),
     dict(kind="forest", lines=["MINIMAL.", "MODERN.", "NATURAL."], size=96),
     dict(kind="photo", src="IMG_20250525_142713.jpg", title=None, focus=0.42,
-         look=dict(warmth=1.02, lift=0.03, contrast=1.15, saturation=0.93, sharp=1.10, micro=0.95)),
+         look=dict(warmth=1.02, lift=0.03, contrast=1.15, saturation=0.93)),
 ]
 
 
@@ -406,7 +451,8 @@ def main() -> None:
         if spec["kind"] == "photo":
             img = photo_post(SELECTED / spec["src"], spec["title"], spec["focus"], spec.get("look"))
             entry = {"post": i, "type": "photograph", "source": spec["src"],
-                     "title": spec["title"], "watermark_band_removed_px": img.info.get("watermark_band_px", 0)}
+                     "title": spec["title"], "watermark_band_removed_px": img.info.get("watermark_band_px", 0),
+                     "head_scrim": img.info.get("head_scrim"), "foot_scrim": img.info.get("foot_scrim")}
             if spec.get("note"):
                 entry["note"] = spec["note"]
         elif spec["kind"] == "cream":

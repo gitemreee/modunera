@@ -9,6 +9,8 @@
       "source": "IMG_20250519_182528.jpg",
       "title": null,
       "watermark_band_removed_px": 141,
+      "head_scrim": 0.0,
+      "foot_scrim": 0.62,
       "note": "substituted for IMG_20250519_182509.jpg, which would not transfer",
       "file": "social/instagram/04-post-drafts/post-01.jpg",
       "pixels": "1080x1350"
@@ -30,6 +32,8 @@
       "source": "20231214_121220.jpg",
       "title": "BUILT WITH PURPOSE",
       "watermark_band_removed_px": 0,
+      "head_scrim": 0.73,
+      "foot_scrim": 0.13,
       "note": "replaced IMG_20250618_094223.jpg — scaffolding dominated the frame",
       "file": "social/instagram/04-post-drafts/post-03.jpg",
       "pixels": "1080x1350"
@@ -52,6 +56,8 @@
       "source": "IMG_20250807_131955.jpg",
       "title": "MADE AROUND YOU",
       "watermark_band_removed_px": 107,
+      "head_scrim": 0.38,
+      "foot_scrim": 0.18,
       "file": "social/instagram/04-post-drafts/post-05.jpg",
       "pixels": "1080x1350"
     },
@@ -61,6 +67,8 @@
       "source": "IMG_20250913_193621.jpg",
       "title": "HOME, AFTER DARK",
       "watermark_band_removed_px": 0,
+      "head_scrim": 0.0,
+      "foot_scrim": 0.0,
       "file": "social/instagram/04-post-drafts/post-06.jpg",
       "pixels": "1080x1350"
     },
@@ -70,6 +78,8 @@
       "source": "IMG_20250913_104632.jpg",
       "title": "FROM TÜRKİYE TO EUROPE",
       "watermark_band_removed_px": 0,
+      "head_scrim": 0.47,
+      "foot_scrim": 1.0,
       "file": "social/instagram/04-post-drafts/post-07.jpg",
       "pixels": "1080x1350"
     },
@@ -91,6 +101,8 @@
       "source": "20240227_113020.jpg",
       "title": "SPACE TO BREATHE",
       "watermark_band_removed_px": 0,
+      "head_scrim": 0.85,
+      "foot_scrim": 0.4,
       "note": "replaced IMG_20260206_161331.jpg — an unfinished grey terrace",
       "file": "social/instagram/04-post-drafts/post-09.jpg",
       "pixels": "1080x1350"
@@ -101,6 +113,8 @@
       "source": "IMG_20250913_183727.jpg",
       "title": "FROM FRAME TO FINISH",
       "watermark_band_removed_px": 0,
+      "head_scrim": 0.0,
+      "foot_scrim": 0.38,
       "note": "replaced 20231207_103831.jpg — dim workshop, awkward pose. This frame carries the caption literally: the steel frame in front, the finished house behind",
       "file": "social/instagram/04-post-drafts/post-10.jpg",
       "pixels": "1080x1350"
@@ -122,6 +136,8 @@
       "source": "IMG_20250525_142713.jpg",
       "title": null,
       "watermark_band_removed_px": 107,
+      "head_scrim": 0.43,
+      "foot_scrim": 0.4,
       "file": "social/instagram/04-post-drafts/post-12.jpg",
       "pixels": "1080x1350"
     }

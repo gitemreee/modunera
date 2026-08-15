@@ -204,8 +204,13 @@ Two radii, because they do different jobs:
 | Output sharpening | 1.1 px | 58–120% | Puts the edge back on cladding seams, window frames, deck boards, stair nosings |
 
 Both use a threshold (4 and 3), so flat sky and shadow are left alone and sensor
-noise is not amplified. The night frame runs at roughly half — `sharp=0.55,
-micro=0.35` — because sharpening a high-ISO frame sharpens its grain.
+noise is not amplified.
+
+The amount is **derived from how far the frame was actually reduced**, not typed
+per photograph: a frame downscaled 1.7× lost more edge than one downscaled 1.3×
+and can take more back. Swap a photograph and its sharpening follows. The only
+exemption is `noisy=True` on the night frame, because sharpening grain is still
+sharpening grain.
 
 Order matters and is fixed: crop → grade → **sharpen** → scrims → type. Sharpening
 before the scrims means the frosted foot stays soft and the type stays clean.
@@ -216,10 +221,36 @@ unsharp above is micro-contrast, not HDR: it has no local tone mapping and, at
 radius 34 and under 30%, cannot produce the halo that gives HDR away. Those other
 moves are what make a manufacturer's feed look like a stock library.
 
+### Gradients are measured, not applied
+
+Before any scrim, the renderer samples the brightness of the region behind the
+logo and the region behind the caption. White type on a region already at or
+below 86/255 clears 4.5:1 on its own, so that region gets **nothing**. Above it,
+the scrim ramps with the deficit only.
+
+What the twelve actually received:
+
+| Post | Head | Foot | Why |
+|---|---|---|---|
+| 1 | none | 0.62 | Dark cladding behind the lockup; bright gravel at the foot |
+| 3 | 0.73 | 0.13 | Bright workshop wall |
+| 5 | 0.38 | 0.18 | White kitchen |
+| 6 | none | none | The night frame needs no help at either end |
+| 7 | 0.47 | 1.00 | Open sky, and a busy street at the foot |
+| 9 | 0.85 | 0.40 | White interior wall — the brightest in the set |
+| 10 | none | 0.38 | Dark cladding |
+| 12 | 0.43 | 0.40 | Sky through trees |
+
+Three of eight need no head scrim and one needs neither. Putting a gradient on a
+photograph that was already right only flattens it.
+
 ### The frosted foot
 
-Where a caption sits, the bottom 30% of the photograph is **graduated Gaussian
-blur** rather than a heavier dark bar. A busy foot — decking planks, gravel, a
+Where a caption sits **on a busy, bright foot**, the bottom 28% is **graduated
+Gaussian blur** rather than a heavier dark bar. A calm foot — grass, a dark wall,
+the night — reads better sharp, so it is left sharp: the renderer requires both a
+scrim need above 0.15 and a local standard deviation above 44 before it blurs
+anything. A busy foot — decking planks, gravel, a
 steel frame — competes with type no matter how dark a scrim is. Blurring it lets
 the caption sit *on* the photograph instead of on a panel laid over it, and keeps
 the picture's own colour and light. The blur ramps to zero so there is no seam,
