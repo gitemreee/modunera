@@ -133,6 +133,17 @@ SAFE_BOTTOM = 135
 # while the caption below it stays put reads as a mistake, not as a decision.
 MARGIN = 56
 
+# Where each element sits. Declared once because two things read them: the code
+# that draws the element, and ink_mask, which reproduces it to measure the ground
+# underneath. If those two ever disagreed the scrim would be solved for somewhere
+# the type is not, which is the failure this whole arrangement exists to prevent.
+DOMAIN_TEXT = "modunera.com"
+CAPTION_Y = POST_H - SAFE_BOTTOM - 106
+CAPTION_SIZE = 37
+CAPTION_TRACK = CAPTION_SIZE * 0.15 * 0.42
+LOGO_XY = (MARGIN, SAFE_TOP + 36)
+LOGO_W = 246
+
 
 def font(name: str, size: int) -> ImageFont.FreeTypeFont:
     return ImageFont.truetype(str(FONTS / name), size)
@@ -383,6 +394,92 @@ def scrim_alpha_for(bright: float, target: float = 4.6) -> int:
     return 255
 
 
+def ink_mask(title: str | None, want: str) -> Image.Image:
+    """A mask of exactly the pixels one element will cover.
+
+    Drawn from the same constants the renderer draws from, so the ground can be
+    measured where the ink actually lands. This is the third and last version of
+    the same lesson: the scrim was first solved from a band's mean, then from a
+    band's high percentile, and both were still measuring a rectangle rather than
+    a word. Post 7's caption is 327 px wide inside a 644 px box, so nearly half of
+    what was sampled was ground no letter ever touched — and the bright half it
+    did touch was averaged away by the comfortable majority beside it.
+    """
+    m = Image.new("L", (POST_W, POST_H), 0)
+    if want == "caption" and title:
+        tracked(ImageDraw.Draw(m), (MARGIN, CAPTION_Y), title,
+                F_LABEL(CAPTION_SIZE), 255, tracking=CAPTION_TRACK)
+    elif want == "domain":
+        d = ImageDraw.Draw(m)
+        d.text(domain_xy(d), DOMAIN_TEXT, font=F_BODY(30), fill=255)
+    elif want == "logo":
+        logo = Image.open(BRAND / "modunera-master-logo-mountain-v1-white-600.png").convert("RGBA")
+        logo = logo.resize((LOGO_W, round(logo.height * LOGO_W / logo.width)), Image.LANCZOS)
+        m.paste(logo.getchannel("A"), LOGO_XY)
+    return m
+
+
+def luma_under(im: Image.Image, mask: Image.Image, pct: float = 92.0) -> float:
+    """The brightest ground an element is actually read against.
+
+    Two decisions, both of which earlier versions got wrong.
+
+    It measures the *ring* — the band a few pixels wide around each stroke, with
+    the strokes themselves excluded — not the pixels the strokes cover. The eye
+    separates a letter from the ground beside it, and on a photograph those are
+    different values. Excluding the strokes also means this works identically on a
+    finished post as on a bare one, so the renderer and the check that verifies it
+    can share one function instead of disagreeing by a measurement method.
+
+    And it takes a high percentile rather than a mode, because a caption whose
+    twelve letters average comfortably but whose three brightest letters sit on
+    sunlit timber is a caption with three letters missing.
+    """
+    # The ring sits clear of the stroke rather than against it. A band starting at
+    # the glyph edge picks up the drawn type's own antialiasing once the ink is on,
+    # so the same photograph would measure darker before the type than after — and
+    # a check that disagreed with the renderer by that much would be measuring the
+    # gap between two methods rather than the legibility of a post.
+    inner = mask.filter(ImageFilter.MaxFilter(7))
+    outer = mask.filter(ImageFilter.MaxFilter(15))
+    grey = im.convert("L")
+    hit = sorted(v for v, o, i in zip(grey.get_flattened_data(),
+                                      outer.get_flattened_data(),
+                                      inner.get_flattened_data())
+                 if o > 140 and i <= 140)
+    if not hit:
+        return 0.0
+    return float(hit[min(len(hit) - 1, int(len(hit) * pct / 100))])
+
+
+def apply_until_legible(canvas: Image.Image, masks: list[Image.Image], scrim,
+                        target: float = 4.6, cap: int = 250):
+    """Darken, measure, repeat — instead of solving once and hoping.
+
+    scrim_alpha_for computes the alpha a flat ground would need, but a gradient
+    does not deliver its full alpha everywhere the type sits, and a photograph is
+    not flat. Every previous version of this got the estimate wrong in a new way
+    and shipped green while missing its own target: first the mean, then the ramp
+    peak, then the fixed sampling box. The estimate is now a starting point rather
+    than an answer, and the loop is what guarantees the number.
+
+    Returns the darkened canvas and the alpha that was actually used. A frame that
+    already clears the target is returned untouched, at alpha 0, so a photograph
+    that never needed a gradient never gets one.
+    """
+    worst = lambda c: min(contrast(WHITE, (v, v, v))
+                          for v in [luma_under(c, m) for m in masks]) if masks else 99.0
+    if worst(canvas) >= target:
+        return canvas, 0
+    alpha = max(scrim_alpha_for(luma_under(canvas, m)) for m in masks)
+    while alpha <= cap:
+        out = scrim(canvas, alpha)
+        if worst(out) >= target:
+            return out, alpha
+        alpha += 12
+    return scrim(canvas, cap), cap
+
+
 def head_scrim(im: Image.Image, height_ratio: float = 0.24, strength: int = 140) -> Image.Image:
     """A soft darkening at the head only, so the white logo reads on a bright sky.
 
@@ -441,25 +538,44 @@ def place_logo(canvas: Image.Image, light: bool) -> None:
     never enlarged, never boxed — the brief is explicit on all three."""
     name = "modunera-master-logo-mountain-v1-white-600.png" if light else "modunera-master-logo-mountain-v1-600.png"
     logo = Image.open(BRAND / name).convert("RGBA")
-    target_w = 246
-    logo = logo.resize((target_w, round(logo.height * target_w / logo.width)), Image.LANCZOS)
-    canvas.paste(logo, (MARGIN, SAFE_TOP + 36), logo)
+    logo = logo.resize((LOGO_W, round(logo.height * LOGO_W / logo.width)), Image.LANCZOS)
+    canvas.paste(logo, LOGO_XY, logo)
 
 
-def place_domain(draw: ImageDraw.ImageDraw, light: bool, on_photo: bool = True) -> None:
+def domain_xy(draw: ImageDraw.ImageDraw) -> tuple[int, int]:
+    """Where modunera.com sits. One definition, used by the drawing and by the
+    mask that measures the ground under it — if those two drifted apart the
+    measurement would be of somewhere the type is not."""
+    f = F_BODY(30)
+    box = draw.textbbox((0, 0), DOMAIN_TEXT, font=f)
+    return (POST_W - MARGIN - (box[2] - box[0]),
+            POST_H - SAFE_BOTTOM - 30 - (box[3] - box[1]))
+
+
+def body_on(ground: tuple[int, int, int]) -> tuple[int, int, int]:
+    """The body colour this ground can carry, at 4.5:1 or better.
+
+    The site has three body values — white on a photograph, #BCCAC2 inside
+    .section-dark, --muted on paper — and picking between them by a light/dark
+    flag works until a ground turns up that is neither. Roof red is exactly that
+    case: it is dark, so the flag chose #BCCAC2, which measures 4.46:1 on it and
+    fails. Choose by measurement instead and the question does not arise again.
+    """
+    for candidate in (MUTED, ON_MOSS, WHITE):
+        if contrast(candidate, ground) >= 4.5:
+            return candidate
+    return WHITE if contrast(WHITE, ground) > contrast(MUTED, ground) else MUTED
+
+
+def place_domain(draw: ImageDraw.ImageDraw, light: bool, on_photo: bool = True,
+                 ground: tuple[int, int, int] | None = None) -> None:
     """Lower case, bottom right, inside the safe square.
 
-    It is body copy, so it takes whichever body colour the ground calls for: on a
-    photograph the site sets copy in white (.hero p), on a moss panel in #BCCAC2
-    (.section-dark p), on paper in --muted. Three grounds, three values."""
-    f = F_BODY(30)
-    text = "modunera.com"
-    right = POST_W - MARGIN
-    bottom = POST_H - SAFE_BOTTOM - 30
-    box = draw.textbbox((0, 0), text, font=f)
-    fill = (WHITE if on_photo else ON_MOSS) if light else MUTED
-    draw.text((right - (box[2] - box[0]), bottom - (box[3] - box[1])), text,
-              font=f, fill=fill)
+    It is body copy, so it takes whichever body colour its ground can carry. On a
+    photograph that is white, over a scrim sized for it. On a flat panel the
+    colour is measured against the panel rather than assumed from its darkness."""
+    fill = WHITE if on_photo else (body_on(ground) if ground else (ON_MOSS if light else MUTED))
+    draw.text(domain_xy(draw), DOMAIN_TEXT, font=F_BODY(30), fill=fill)
 
 
 def tracked(draw: ImageDraw.ImageDraw, xy, text: str, f, fill, tracking: float = 0):
@@ -496,23 +612,20 @@ def photo_post(source: Path, title: str | None, focus: float, look: dict | None 
     canvas = sharpen(canvas, amount=(0.55 if noisy else amount), micro=micro)
 
     # --- gradients only where the photograph needs them ----------------------
-    # Each gradient is sized to the ground the type it protects actually sits on:
-    # measure the brightest part of that box, then solve for the alpha that brings
-    # it under 4.6:1. A frame that already clears it — the night shot, the dark
+    # Each gradient is solved from the ground the element it protects actually
+    # covers — the glyphs, not a rectangle around them. See ink_mask and
+    # luma_under. A frame that already clears 4.6:1 — the night shot, the dark
     # cladding — gets nothing at all.
-    logo_box = (MARGIN, SAFE_TOP + 36, MARGIN + 246, SAFE_TOP + 106)
-    head_alpha = scrim_alpha_for(_luma_bright(canvas, logo_box))
-    if head_alpha:
-        canvas = head_scrim(canvas, height_ratio=0.24, strength=head_alpha)
+    canvas, head_alpha = apply_until_legible(
+        canvas, [ink_mask(None, "logo")],
+        lambda c, a: head_scrim(c, height_ratio=0.24, strength=a))
 
     # The foot carries two elements on very different grounds — the caption at the
     # left and the domain at the right — so both are measured and the stronger
     # requirement wins. On the lawn frame the caption sits on dark grass and the
     # domain on sunlit white pebbles; one number for the whole band served neither.
-    cap_box = (MARGIN, POST_H - SAFE_BOTTOM - 118, 700, POST_H - SAFE_BOTTOM - 56)
-    dom_box = (700, POST_H - SAFE_BOTTOM - 66, POST_W - MARGIN, POST_H - SAFE_BOTTOM - 10)
     foot_box = (0, POST_H - SAFE_BOTTOM - 170, POST_W, POST_H - SAFE_BOTTOM)
-    boxes = [dom_box] + ([cap_box] if title else [])
+    masks = [ink_mask(None, "domain")] + ([ink_mask(title, "caption")] if title else [])
 
     # A blurred foot is for a busy one. A calm foot — grass, a dark wall, the
     # night — reads better sharp, and blurring it would be the artificial look the
@@ -521,22 +634,21 @@ def photo_post(source: Path, title: str | None, focus: float, look: dict | None 
     # busy ground uniform, which helps, but it does not make a bright ground dark.
     # On the lawn frame the discount was subtracting darkening that the white
     # pebbles still needed, and the domain measured 3.58:1 because of it.
-    if title and _luma(canvas, foot_box)[1] > 44 \
-            and max(scrim_alpha_for(_luma_bright(canvas, b)) for b in boxes) > 40:
+    need = lambda: max(scrim_alpha_for(luma_under(canvas, m)) for m in masks)
+    if title and _luma(canvas, foot_box)[1] > 44 and need() > 40:
         canvas = frosted_foot(canvas, height_ratio=0.28)
 
-    foot_alpha = max(scrim_alpha_for(_luma_bright(canvas, b)) for b in boxes)
-    if foot_alpha:
-        canvas = foot_scrim(canvas, height_ratio=0.34 if title else 0.26,
-                            strength=foot_alpha)
+    ratio = 0.34 if title else 0.26
+    canvas, foot_alpha = apply_until_legible(
+        canvas, masks, lambda c, a: foot_scrim(c, height_ratio=ratio, strength=a))
 
     draw = ImageDraw.Draw(canvas)
     place_logo(canvas, light=True)
     if title:
         # the caption is a small uppercase label, which the site tracks open at
         # +0.15em on .eyebrow — the one place it opens type up at all
-        tracked(draw, (MARGIN, POST_H - SAFE_BOTTOM - 106), title, F_LABEL(37),
-                (255, 255, 255), tracking=37 * 0.15 * 0.42)
+        tracked(draw, (MARGIN, CAPTION_Y), title, F_LABEL(CAPTION_SIZE),
+                WHITE, tracking=CAPTION_TRACK)
     place_domain(draw, light=True)
     canvas.info["watermark_band_px"] = band
     canvas.info["head_scrim"] = head_alpha      # 0-255 alpha, solved not dialled
@@ -580,7 +692,7 @@ def card_post(lines: list[str], ground: tuple[int, int, int], light_type: bool,
         # the site's h2 tracking, -0.021em, scaled to this size
         tracked(draw, (MARGIN, top + i * leading), line, f, ink, tracking=-size * 0.021)
 
-    place_domain(draw, light=light_type, on_photo=False)
+    place_domain(draw, light=light_type, on_photo=False, ground=ground)
     return canvas
 
 
@@ -679,7 +791,7 @@ def duo_post(source: Path, statement: list[str], ground: tuple[int, int, int],
     if concept:
         tracked(draw, (MARGIN, split + 22), "CONCEPT", F_LABEL(23),
                 ON_MOSS if light_type else MUTED, tracking=23 * 0.15)
-    place_domain(draw, light=light_type, on_photo=False)
+    place_domain(draw, light=light_type, on_photo=False, ground=ground)
     return canvas
 
 
@@ -706,7 +818,7 @@ def numeral_post(figure: str, label: list[str], ground: tuple[int, int, int],
     for line in label:
         tracked(draw, (MARGIN, y), line, F_LABEL(46), label_fill, tracking=46 * 0.15 * 0.42)
         y += 58
-    place_domain(draw, light=light_type, on_photo=False)
+    place_domain(draw, light=light_type, on_photo=False, ground=ground)
     return canvas
 
 

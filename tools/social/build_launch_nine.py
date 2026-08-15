@@ -86,7 +86,11 @@ def photo(key: str, title: str | None = None) -> Image.Image:
 
 PLAN = [
     dict(n=1, role="picture", template="photo", key="lawn",
-         title="DELIVERED, NOT RENDERED",
+         # "Delivered" was the one word in the nine that nothing backs. Finished is
+         # what the photograph shows and what the caption claims; delivered is a
+         # completed handover to a customer, and no file here ties this frame to
+         # one. One word, and it is the difference between evidence and a claim.
+         title="FINISHED, NOT RENDERED",
          why="The opening post is a finished house in daylight. An account that "
              "opens on a render asks to be doubted."),
 
@@ -101,9 +105,14 @@ PLAN = [
              "buyer asks about a house built abroad."),
 
     dict(n=4, role="card", template="card",
-         lines=["TINY HOUSE", "MODULAR HOME", "STEEL STRUCTURE", "CUSTOM FURNITURE"], size=62,
+         # Five lines, not four. /leistungen/ advertises Modulbau, Stahlbau,
+         # Bungalows and Möbel nach Maß beside the tiny house itself, so a card
+         # listing four was under-claiming against the company's own page — and
+         # the caption's "four things actually being built" was not traceable.
+         lines=["TINY HOUSE", "MODULAR HOME", "STEEL STRUCTURE",
+                "BUNGALOWS", "CUSTOM FURNITURE"], size=58,
          ground=g.MOSS_DEEP, type_colour=g.CREAM, rule_colour=g.CREAM, light_type=True,
-         why="The forest ground and the white logo. Four lines of plain scope, no "
+         why="The forest ground and the white logo. Five lines of plain scope, no "
              "adjectives — the card that says what the company does."),
 
     dict(n=5, role="picture", template="photo", key="night",
@@ -112,7 +121,13 @@ PLAN = [
              "photograph in the set."),
 
     dict(n=6, role="card", template="numeral", figure="5",
-         label=["COUNTRIES,", "ONE ROUTE"],
+         # "ONE ROUTE" contradicted this post's own caption, which says the route
+         # is confirmed per project and not promised in general — and a reader
+         # sees the card before the disclaimer. pricing.json carries five separate
+         # delivery tariffs, and the Luxembourg entry's own note is "Route
+         # projektbezogen bestätigt". The figure is sound; the second line was the
+         # unsourced half. "One maker" is the claim that is actually true.
+         label=["COUNTRIES,", "ONE MAKER"],
          ground=g.ROOF, type_colour=g.WHITE, rule_colour=g.CREAM, light_type=True,
          why="A red ground, once. It is the loudest tile in the grid, so it "
              "carries the fact worth being loud about."),
@@ -123,7 +138,10 @@ PLAN = [
              "case twice, at two distances."),
 
     dict(n=8, role="card", template="card", lines=["ONE SPARK", "IS ENOUGH."], size=88,
-         ground=g.CHARCOAL, type_colour=g.CREAM, rule_colour=g.ROOF, light_type=True,
+         # The rule was roof red on charcoal: 1.90:1, invisible at 120 px, and
+         # against the system's own line that red is the one colour the site never
+         # gives that mark. Cream measures 10.79:1 and is what the document says.
+         ground=g.CHARCOAL, type_colour=g.CREAM, rule_colour=g.CREAM, light_type=True,
          why="The only near-black in the brand, taken from the logo's own "
              "wordmark. It stops the scroll because nothing else in the grid is "
              "this dark, and it says something that is not about selling."),
@@ -159,17 +177,27 @@ def render(spec: dict) -> Image.Image:
 def check(plan: list[dict]) -> list[str]:
     """Assert the things that are cheap to get wrong and expensive to publish.
 
-    Contrast is checked against the declared pair, the card-adjacency rule against
-    the arrangement, and ground repetition against the reading order — a grid whose
-    tiles 2 and 4 share a ground reads as two halves rather than as a composition.
+    The first version of this skipped every photo post and never looked at the
+    domain, which is how two failing captions and a 4.46:1 domain shipped past a
+    green build. It also asserted the numeral card against type_colour and
+    rule_colour keys that render() never forwards to numeral_post, so that
+    assertion was decorative. Both are fixed: flat grounds are checked here from
+    the declared pair, and photographs are checked in check_rendered() against the
+    pixels, because on a photograph the ground is not knowable until it is drawn.
     """
     problems = []
     for s in plan:
-        if s["role"] != "card" and s["template"] != "duo":
-            continue
-        ratio = g.contrast(s["type_colour"], s["ground"])
-        if ratio < 3.0:
-            problems.append(f"post {s['n']}: type on ground is {ratio:.2f}:1, display needs 3.0")
+        if s["template"] == "photo":
+            continue                      # nothing flat to assert; see check_rendered
+        for role, colour in (("type", s["type_colour"]), ("rule", s["rule_colour"])):
+            ratio = g.contrast(colour, s["ground"])
+            floor = 3.0 if role == "type" else 3.0
+            if ratio < floor:
+                problems.append(
+                    f"post {s['n']}: {role} on ground is {ratio:.2f}:1, needs {floor}")
+        body = g.body_on(s["ground"])
+        if g.contrast(body, s["ground"]) < 4.5:
+            problems.append(f"post {s['n']}: no body colour clears 4.5:1 on this ground")
 
     # a card never touches a card, horizontally or vertically, in 3 columns
     roles = {s["n"]: s["role"] for s in plan}
@@ -188,6 +216,37 @@ def check(plan: list[dict]) -> list[str]:
 
     if len({s.get("ground") for s in plan if s.get("ground")}) < 4:
         problems.append("fewer than four distinct grounds across nine posts")
+    return problems
+
+
+def check_rendered(plan: list[dict], images: list[Image.Image]) -> list[str]:
+    """The checks that can only be made against pixels.
+
+    On a flat card the ground is a constant and the contrast is arithmetic. On a
+    photograph it is not knowable until the frame is graded, sharpened and
+    scrimmed — so this runs after the render, and it measures the ground under the
+    glyph masks rather than under a box around them, for the reason ink_mask
+    explains. Anything below 4.5:1 fails the build; the renderer targets 4.6 and
+    should be held to its own number.
+    """
+    problems = []
+    for spec, img in zip(plan, images):
+        if spec["template"] != "photo":
+            continue
+        elements = {"logo": None, "domain": None}
+        if spec.get("title"):
+            elements["caption"] = spec["title"]
+        for name, title in elements.items():
+            # The same measurement the renderer solved against — g.luma_under
+            # reads the ring around each stroke and excludes the strokes, so it
+            # gives the same answer on a finished post as on a bare one. A check
+            # that measured differently from the thing it checks would only ever
+            # be testing the difference between two measurement methods.
+            v = g.luma_under(img, g.ink_mask(title, name))
+            ratio = g.contrast(g.WHITE, (v, v, v))
+            if ratio < 4.5:
+                problems.append(
+                    f"post {spec['n']}: white {name} measures {ratio:.2f}:1, needs 4.5")
     return problems
 
 
@@ -211,11 +270,16 @@ def main() -> None:
         raise SystemExit(1)
 
     OUT.mkdir(parents=True, exist_ok=True)
-    images = []
-    for spec in PLAN:
-        im = render(spec)
+    images = [render(spec) for spec in PLAN]
+
+    rendered = check_rendered(PLAN, images)
+    if rendered:
+        for p in rendered:
+            print(f"FAIL {p}", file=sys.stderr)
+        raise SystemExit(1)
+
+    for spec, im in zip(PLAN, images):
         im.save(OUT / f"post-{spec['n']}.jpg", quality=92, optimize=True)
-        images.append(im)
 
     sheet(images, OUT / "grid.jpg")
 
