@@ -231,6 +231,10 @@ def main() -> None:
         raise SystemExit(1)
     cover = draw_type(bare)
     cover.save(OUT / "cover.png", optimize=True)
+    # A JPEG as well. The PNG is 1.5 MB of lossless flat colour and photograph,
+    # which is a slow download on a phone for a file Facebook re-compresses on
+    # upload anyway. 505 KB, visually identical at this size.
+    cover.save(OUT / "cover.jpg", quality=94, optimize=True)
     crops(cover).save(OUT / "cover-crops.jpg", quality=94, optimize=True)
     print(json.dumps({"file": "social/instagram/12-facebook/cover.png",
                       "px": f"{W}x{H}", "upload_as": "851x315 or this 2x file",
