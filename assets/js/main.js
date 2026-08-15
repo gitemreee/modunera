@@ -37,7 +37,18 @@
 
   // location search
   const locInput=qs('#locationSearch'),locResults=qs('#locationResults');
-  if(locInput&&locResults&&window.MC_LOCATIONS){const render=()=>{const term=locInput.value.trim().toLocaleLowerCase('de-DE');if(term.length<2){locResults.classList.remove('open');return}const hits=window.MC_LOCATIONS.filter(x=>(x.n+' '+x.s).toLocaleLowerCase('de-DE').includes(term)).slice(0,10);locResults.innerHTML=hits.length?hits.map(x=>{const base=location.pathname.includes('/standorte/')?'../':'';const u=location.protocol==='file:'?base+x.u.replace(/^\//,''):siteRoot.replace(/\/$/,'')+x.u;return `<a href="${u}"><strong>${x.n}</strong><span>${x.s}</span></a>`}).join(''):'<div style="padding:15px">Kein Ort gefunden.</div>';locResults.classList.add('open')};locInput.addEventListener('input',render);document.addEventListener('click',e=>{if(!locResults.contains(e.target)&&e.target!==locInput)locResults.classList.remove('open')})}
+  // The place index is a megabyte of JSON — every town in five countries — and it
+  // was loaded on page load for a search box most visitors never touch. It is now
+  // fetched the first time the box is focused, which takes 1,003 KB off the home
+  // page. data-locations-src is written by build-modunera-europe.mjs.
+  if(locInput&&locResults){
+    const render=()=>{const term=locInput.value.trim().toLocaleLowerCase('de-DE');if(term.length<2||!window.MC_LOCATIONS){locResults.classList.remove('open');return}const hits=window.MC_LOCATIONS.filter(x=>(x.n+' '+x.s).toLocaleLowerCase('de-DE').includes(term)).slice(0,10);locResults.innerHTML=hits.length?hits.map(x=>{const base=location.pathname.includes('/standorte/')?'../':'';const u=location.protocol==='file:'?base+x.u.replace(/^\//,''):siteRoot.replace(/\/$/,'')+x.u;return `<a href="${u}"><strong>${x.n}</strong><span>${x.s}</span></a>`}).join(''):'<div style="padding:15px">Kein Ort gefunden.</div>';locResults.classList.add('open')};
+    let loading=false;
+    const load=()=>{const src=locInput.dataset.locationsSrc;if(loading||window.MC_LOCATIONS||!src)return;loading=true;const s=document.createElement('script');s.src=src;s.onload=render;document.head.appendChild(s)};
+    locInput.addEventListener('focus',load,{once:true});
+    locInput.addEventListener('input',()=>{load();render()});
+    document.addEventListener('click',e=>{if(!locResults.contains(e.target)&&e.target!==locInput)locResults.classList.remove('open')});
+  }
 
   // faq / blog filters
   const faqSearch=qs('#faqSearch'),faqFilters=qsa('[data-faq-filter]');const applyFaq=()=>{if(!faqSearch)return;const term=faqSearch.value.toLowerCase(),active=qs('[data-faq-filter].active')?.dataset.faqFilter||'all';qsa('.faq-item[data-category]').forEach(i=>i.classList.toggle('hidden',!((active==='all'||i.dataset.category===active)&&i.textContent.toLowerCase().includes(term))))};if(faqSearch)faqSearch.addEventListener('input',applyFaq);faqFilters.forEach(b=>b.onclick=()=>{faqFilters.forEach(x=>x.classList.remove('active'));b.classList.add('active');applyFaq()});

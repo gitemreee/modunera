@@ -16,6 +16,7 @@ node tools/build-production-faq-v7.mjs    # production, quality, delivery and bu
 node tools/build-modunera-v2.mjs          # navigation, comparison pages, guide hubs, cookie notice
 node tools/build-modunera-depth.mjs --extend   # appendix, product word, blocked-claim removal
 node tools/build-hreflang-v7.mjs          # reciprocal five-language clusters
+node tools/build-image-attrs.mjs          # intrinsic size, lazy loading, deferred place index
 node tools/build-nordic-redirects.mjs     # 301s for the corrected Danish slugs
 node tools/build-content-lastmod.mjs      # real content dates, from a content hash
 node tools/build-seo-governance-v7.mjs    # robots policy, location gate, sitemaps

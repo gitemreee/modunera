@@ -1140,3 +1140,28 @@ h1,h2,h3,.section-header h2,.editorial-copy h2,.wide-copy h2,.article-content h2
   .hero-proof span{display:block;padding:6px 0;font-size:.66rem}
   .hero-proof span+span{padding-left:0;border-left:0;border-top:1px solid rgba(151,49,26,.16)}
 }
+
+/* --- contrast, from docs/project-audit.md ----------------------------------
+   Three measured AA failures, all from a rule written for one component being
+   applied to a component that only shares its class.
+
+   .value-card.feature is not a white card. It is a photograph with a dark
+   gradient over it and white type, and v2's card rules — ink headings, muted
+   body — were applied to it as well, putting #97311A on a dark picture at
+   1.34:1 and #4A5748 at 1.33:1. The plain white .value-card is correct and is
+   left alone. */
+.value-card.feature,.value-card.feature h3,.value-card.feature h4,
+.value-card.feature strong{color:#fff}
+.value-card.feature p,.section-dark .value-card.feature p{color:rgba(255,255,255,.88)}
+.value-card.feature .eyebrow{color:var(--sage)}
+
+/* .source-link is small link text in the palette's lightest green: sage on white
+   measures 2.28:1. It appears on the country, model and service pages. Moss at
+   the same size measures 7.0:1. */
+.source-link{color:var(--moss)}
+.source-link:hover{color:var(--roof)}
+
+/* Two near-misses closed while the file is open: moss-deep on sage measured 4.42
+   against a required 4.5, and the process caption 4.10. */
+.btn-sand{background:var(--sage);color:#233A28}
+.process-item small{color:#C6D4CB}

@@ -1,83 +1,119 @@
-name: Build MODUNERA Europe expansion
+name: Build and validate MODUNERA
+
+# The previous version of this file ran three of the twelve pipeline steps and
+# asserted two brand files the rebrand step had retired, on a branch that no
+# longer exists and only when the workflow file itself changed. It was a check
+# that verified nothing. This runs the pipeline documented in README-build.md,
+# in that order, and then both gates.
+#
+# It does not commit or push. The generated HTML is committed by hand, because
+# the pipeline rewrites navigation and footer on 15,000 pages and a bot commit
+# of that size hides the change the author actually made. What this workflow
+# answers is narrower and more useful: does the pipeline still run clean, and is
+# the committed HTML the same HTML the generators would produce right now?
 
 on:
   push:
-    branches:
-      - codex/modunera-europe-growth
-    paths:
-      - ".github/workflows/build-modunera.yml"
+    branches: [main, "codex/**", "claude/**"]
+  pull_request:
+  workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  build-site:
+  build-and-validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 45
     steps:
-      - name: Check out expansion branch
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Apply MODUNERA rebrand
-        run: node tools/rebrand-modunera.mjs
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
 
-      - name: Build countries, locations, services and guides
-        run: node tools/build-modunera-europe.mjs
+      - name: Record the committed HTML before the build
+        run: |
+          find . -name '*.html' -not -path './.git/*' -print0 \
+            | sort -z | xargs -0 sha1sum > /tmp/committed.sha
 
-      - name: Apply the v2 layer (navigation, comparisons, guide hub)
-        run: node tools/build-modunera-v2.mjs
-
-      - name: Validate generated site
-        shell: bash
+      - name: Run the pipeline
         run: |
           set -euo pipefail
-          node tools/validate-modunera.mjs
-          test -f assets/images/modunera-logo.png
-          test -f assets/images/modunera-mark.png
-          test -f laender/niederlande/index.html
-          test -f en/countries/netherlands/index.html
-          test -f leistungen/moebel-nach-mass/index.html
-          test -f blog/europa/tiny-house-transport-tuerkei-europa/index.html
-          test -f faq/europa/index.html
+          node tools/rebrand-modunera.mjs
+          node tools/build-modunera-europe.mjs
+          node tools/build-modunera-locales.mjs
+          node tools/build-modunera-depth.mjs
+          node tools/build-news-v7.mjs
+          node tools/build-production-faq-v7.mjs
+          node tools/build-modunera-v2.mjs
+          node tools/build-modunera-depth.mjs --extend
+          node tools/build-hreflang-v7.mjs
+          node tools/build-image-attrs.mjs
+          node tools/build-nordic-redirects.mjs
+          node tools/build-content-lastmod.mjs
+          node tools/build-seo-governance-v7.mjs
 
-          html_count=$(find . -type f -name 'index.html' | wc -l)
-          if [ "$html_count" -lt 14700 ]; then
-            echo "Expected at least 14,700 HTML pages; found $html_count."
-            exit 1
-          fi
+      - name: Gate — canonicals, JSON-LD, links, brand, colours
+        run: node tools/validate-modunera.mjs
 
-          if grep -RIlE 'MC Tiny|MC TINY|mctiny\.com|mc-tiny-logo\.png|Mc-Tiny|MCTINY' \
-            --include='*.html' --include='*.xml' --include='*.json' \
-            --include='*.js' --include='*.css' --include='*.txt' \
-            --include='*.md' --include='*.csv' --include='*.py' \
-            --include='*.webmanifest' \
-            --exclude='rebrand-modunera.mjs' \
-            --exclude='build-modunera-europe.mjs' \
-            --exclude='validate-modunera.mjs' \
-            --exclude-dir='.git' --exclude-dir='.github' . | grep -q .; then
-            echo "Legacy brand references remain in public text files."
-            exit 1
-          fi
+      - name: Gate — claims, sitemap, hreflang, schema, legal
+        run: node tools/validate-seo-v7.mjs
 
-          grep -q '#C29B72' assets/css/styles.css
-          grep -q '#8D321F' assets/css/styles.css
-          grep -q '#3A4027' assets/css/styles.css
-          grep -q '#2B2D31' assets/css/styles.css
-          grep -q '905535435342' index.html
-          grep -q 'https://modunera.com/sitemap.xml' robots.txt
+      - name: Audit report
+        run: node tools/audit-project.mjs --json build-report-audit.json
 
-      - name: Commit generated site
-        shell: bash
+      - name: The committed HTML must match what the generators produce
         run: |
           set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A
-          if git diff --cached --quiet; then
-            echo "No generated changes were required."
-          else
-            git commit -m "Build MODUNERA Europe growth site"
-            git push origin HEAD:codex/modunera-europe-growth
+          find . -name '*.html' -not -path './.git/*' -print0 \
+            | sort -z | xargs -0 sha1sum > /tmp/rebuilt.sha
+          if ! diff -q /tmp/committed.sha /tmp/rebuilt.sha > /dev/null; then
+            echo "::error::The committed HTML differs from a fresh build."
+            echo "Run the pipeline locally and commit the result. First differences:"
+            diff /tmp/committed.sha /tmp/rebuilt.sha | head -20
+            exit 1
           fi
+          echo "Committed HTML matches a fresh build."
+
+      - name: The pipeline must be idempotent
+        run: |
+          set -euo pipefail
+          node tools/rebrand-modunera.mjs
+          node tools/build-modunera-europe.mjs
+          node tools/build-modunera-locales.mjs
+          node tools/build-modunera-depth.mjs
+          node tools/build-news-v7.mjs
+          node tools/build-production-faq-v7.mjs
+          node tools/build-modunera-v2.mjs
+          node tools/build-modunera-depth.mjs --extend
+          node tools/build-hreflang-v7.mjs
+          node tools/build-image-attrs.mjs
+          node tools/build-nordic-redirects.mjs
+          node tools/build-content-lastmod.mjs
+          node tools/build-seo-governance-v7.mjs
+          find . -name '*.html' -not -path './.git/*' -print0 \
+            | sort -z | xargs -0 sha1sum > /tmp/second.sha
+          diff -q /tmp/rebuilt.sha /tmp/second.sha \
+            || { echo "::error::A second pipeline pass changed the output."; exit 1; }
+          echo "Two consecutive passes produce identical HTML."
+
+      - name: Brand assets the site depends on
+        run: |
+          set -euo pipefail
+          test -f assets/brand/modunera-master-logo-mountain-v1-600.png
+          test -f assets/brand/modunera-mark-v1.png
+          test -f assets/css/styles.css
+          test -f robots.txt && test -f sitemap.xml && test -f llms.txt
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: build-reports
+          path: |
+            build-report-audit.json
+            build-report-modunera.json
+            build-report-seo-v7.json
+          retention-days: 14
