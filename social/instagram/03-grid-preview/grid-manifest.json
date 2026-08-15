@@ -9,8 +9,8 @@
       "source": "IMG_20250519_182528.jpg",
       "title": null,
       "watermark_band_removed_px": 141,
-      "head_scrim": 0.0,
-      "foot_scrim": 0.62,
+      "head_scrim": 108,
+      "foot_scrim": 135,
       "note": "substituted for IMG_20250519_182509.jpg, which would not transfer",
       "file": "social/instagram/04-post-drafts/post-01.jpg",
       "pixels": "1080x1350"
@@ -32,8 +32,8 @@
       "source": "20231214_121220.jpg",
       "title": "BUILT WITH PURPOSE",
       "watermark_band_removed_px": 0,
-      "head_scrim": 0.73,
-      "foot_scrim": 0.13,
+      "head_scrim": 120,
+      "foot_scrim": 111,
       "note": "replaced IMG_20250618_094223.jpg — scaffolding dominated the frame",
       "file": "social/instagram/04-post-drafts/post-03.jpg",
       "pixels": "1080x1350"
@@ -56,8 +56,8 @@
       "source": "IMG_20250807_131955.jpg",
       "title": "MADE AROUND YOU",
       "watermark_band_removed_px": 107,
-      "head_scrim": 0.39,
-      "foot_scrim": 0.19,
+      "head_scrim": 120,
+      "foot_scrim": 78,
       "file": "social/instagram/04-post-drafts/post-05.jpg",
       "pixels": "1080x1350"
     },
@@ -67,8 +67,8 @@
       "source": "IMG_20250913_193621.jpg",
       "title": "HOME, AFTER DARK",
       "watermark_band_removed_px": 0,
-      "head_scrim": 0.0,
-      "foot_scrim": 0.0,
+      "head_scrim": 0,
+      "foot_scrim": 0,
       "file": "social/instagram/04-post-drafts/post-06.jpg",
       "pixels": "1080x1350"
     },
@@ -78,8 +78,8 @@
       "source": "IMG_20250913_104632.jpg",
       "title": "FROM TÜRKİYE TO EUROPE",
       "watermark_band_removed_px": 0,
-      "head_scrim": 0.47,
-      "foot_scrim": 1.0,
+      "head_scrim": 51,
+      "foot_scrim": 129,
       "file": "social/instagram/04-post-drafts/post-07.jpg",
       "pixels": "1080x1350"
     },
@@ -121,8 +121,8 @@
       "source": "20240227_113020.jpg",
       "title": "SPACE TO BREATHE",
       "watermark_band_removed_px": 0,
-      "head_scrim": 0.85,
-      "foot_scrim": 0.4,
+      "head_scrim": 102,
+      "foot_scrim": 105,
       "file": "social/instagram/04-post-drafts/post-12.jpg",
       "pixels": "1080x1350"
     },
@@ -132,8 +132,8 @@
       "source": "IMG_20250913_183727.jpg",
       "title": "FROM FRAME TO FINISH",
       "watermark_band_removed_px": 0,
-      "head_scrim": 0.0,
-      "foot_scrim": 0.38,
+      "head_scrim": 0,
+      "foot_scrim": 105,
       "file": "social/instagram/04-post-drafts/post-13.jpg",
       "pixels": "1080x1350"
     },
@@ -179,8 +179,8 @@
       "source": "IMG_20250525_142713.jpg",
       "title": null,
       "watermark_band_removed_px": 107,
-      "head_scrim": 0.43,
-      "foot_scrim": 0.4,
+      "head_scrim": 150,
+      "foot_scrim": 132,
       "file": "social/instagram/04-post-drafts/post-18.jpg",
       "pixels": "1080x1350"
     }

@@ -87,6 +87,28 @@ def over(colour: tuple[int, int, int], alpha: float,
 LINE = over(INK, 0.18, PAPER)         # --line on paper: rgba(58,90,64,.18)
 LINE_STRONG = over(INK, 0.30, PAPER)  # the heavier divider above a data block
 
+# The logo's own wordmark colour, sampled out of assets/brand/. It is the only
+# near-black the brand owns, so a black card uses this rather than #000.
+CHARCOAL = (35, 36, 38)       # #232426
+
+
+def _srgb(c: int) -> float:
+    v = c / 255
+    return v / 12.92 if v <= 0.03928 else ((v + 0.055) / 1.055) ** 2.4
+
+
+def contrast(a: tuple[int, int, int], b: tuple[int, int, int]) -> float:
+    """WCAG contrast ratio. Display type needs 3.0, body copy 4.5.
+
+    Worth having in the renderer rather than in a checklist because the two
+    pairings that read as most obviously "on brand" are the two that fail: roof
+    red on moss deep is 1.34 and moss on roof red is 1.02 — red and green sit at
+    almost the same luminance, so the type vanishes at the 120 px the grid
+    actually shows. Put cream or white between them instead."""
+    la = 0.2126 * _srgb(a[0]) + 0.7152 * _srgb(a[1]) + 0.0722 * _srgb(a[2])
+    lb = 0.2126 * _srgb(b[0]) + 0.7152 * _srgb(b[1]) + 0.0722 * _srgb(b[2])
+    return (max(la, lb) + 0.05) / (min(la, lb) + 0.05)
+
 # --- who gets which colour -------------------------------------------------
 # Counted on seven rendered page types, every visible h1/h2/h3:
 #
@@ -301,6 +323,26 @@ def _luma(im: Image.Image, box) -> tuple[float, float]:
     return st.mean[0], st.stddev[0]
 
 
+def _luma_bright(im: Image.Image, box, pct: float = 82.0) -> float:
+    """The brightness white type actually has to survive in a region.
+
+    Not the mean. A foot band that is half black cladding and half sunlit timber
+    has a perfectly comfortable mean and an illegible caption: the words fail
+    where they cross the bright half, and averaging is precisely what hides that.
+    One patch bright enough to swallow the type is a failure however dark the rest
+    of the band is, so take a high percentile — at 82 a bright fifth of the region
+    is enough to call for a scrim, while a few blown highlights are not.
+    """
+    hist = im.crop(box).convert("L").histogram()
+    target = sum(hist) * pct / 100
+    run = 0
+    for value, count in enumerate(hist):
+        run += count
+        if run >= target:
+            return float(value)
+    return 255.0
+
+
 def scrim_need(luma: float, floor: float = 86.0, span: float = 105.0) -> float:
     """How much darkening this region actually needs for white type, 0 to 1.
 
@@ -314,16 +356,52 @@ def scrim_need(luma: float, floor: float = 86.0, span: float = 105.0) -> float:
     return min(1.0, (luma - floor) / span)
 
 
+SCRIM_RGB = (14, 24, 18)
+
+
+def scrim_alpha_for(bright: float, target: float = 4.6) -> int:
+    """The alpha that actually brings `bright` down to where white clears `target`.
+
+    Solved rather than dialled. The previous code multiplied a hand-picked ceiling
+    of 190 by the need, which is a guess wearing a formula: on the lawn frame the
+    need saturated at 1.0, the ceiling gave 190, and the domain still measured
+    3.78:1 against the white pebbles because 190 was simply not enough for that
+    ground. Asking what alpha the ground requires removes the guess, and returns 0
+    for the frames that need nothing so a good photograph is never flattened.
+
+    0 to 255, for a scrim of SCRIM_RGB composited in sRGB, which is how Pillow
+    blends. A grey proxy is fair here: the darkening is neutral, so hue barely
+    moves the ratio, and the input is already a luminance percentile.
+    """
+    scrim_grey = 0.2126 * SCRIM_RGB[0] + 0.7152 * SCRIM_RGB[1] + 0.0722 * SCRIM_RGB[2]
+    for alpha in range(0, 256, 3):
+        a = alpha / 255
+        blended = bright * (1 - a) + scrim_grey * a
+        v = round(max(0.0, min(255.0, blended)))
+        if contrast(WHITE, (v, v, v)) >= target:
+            return alpha
+    return 255
+
+
 def head_scrim(im: Image.Image, height_ratio: float = 0.24, strength: int = 140) -> Image.Image:
     """A soft darkening at the head only, so the white logo reads on a bright sky.
 
     Without it the lockup vanished on the workshop wall and the tree canopy — a
-    logo that disappears on a third of the grid is not a logo."""
+    logo that disappears on a third of the grid is not a logo.
+
+    The gradient peaks at the logo and fades below it, rather than peaking at the
+    very top of the post. That distinction is the whole point: the top 135 px are
+    cropped out of the grid thumbnail, so a ramp that spends its strength up there
+    delivers only a fraction of it where the logo actually sits. Measured on the
+    frame photographs, the old ramp gave the lockup about a quarter of the
+    darkening it was asked for.
+    """
     w, h = im.size
-    band = int(h * height_ratio)
+    logo_bottom = SAFE_TOP + 118                    # the lockup, plus a little air
+    band = max(int(h * height_ratio), logo_bottom + 150)
     ramp = Image.new("L", (1, band))
     for y in range(band):
-        t = 1 - (y / max(band - 1, 1))
+        t = 1.0 if y <= logo_bottom else 1 - (y - logo_bottom) / max(band - logo_bottom, 1)
         ramp.putpixel((0, y), int(strength * (t ** 1.9)))
     mask = ramp.resize((w, band), Image.BILINEAR)
     out = im.copy()
@@ -338,9 +416,18 @@ def foot_scrim(im: Image.Image, height_ratio: float = 0.34, strength: int = 165)
     """
     w, h = im.size
     band = int(h * height_ratio)
+    # The ramp reaches full strength at the *top of the type*, not at the bottom of
+    # the post and not at the bottom of the safe square, and holds it from there
+    # down. Both of those earlier choices spent the gradient below everything it
+    # was protecting: measured on the lawn frame, the caption and the domain were
+    # receiving about 40 % and 62 % of the requested alpha respectively, which is
+    # why white kept failing there however high the ceiling went. Peaking at the
+    # type means the alpha that scrim_alpha_for solves for is the alpha the type
+    # actually gets.
+    peak = max(1, (h - SAFE_BOTTOM - 120) - (h - band))
     scrim = Image.new("L", (1, band))
     for y in range(band):
-        t = y / max(band - 1, 1)
+        t = min(1.0, y / peak)
         scrim.putpixel((0, y), int(strength * (t ** 2.1)))
     mask = scrim.resize((w, band), Image.BILINEAR)
     layer = Image.new("RGB", (w, band), (14, 24, 18))
@@ -409,26 +496,39 @@ def photo_post(source: Path, title: str | None, focus: float, look: dict | None 
     canvas = sharpen(canvas, amount=(0.55 if noisy else amount), micro=micro)
 
     # --- gradients only where the photograph needs them ----------------------
-    logo_luma, _ = _luma(canvas, (MARGIN, SAFE_TOP + 36, MARGIN + 246, SAFE_TOP + 106))
-    head_need = scrim_need(logo_luma)
-    if head_need > 0.04:
-        canvas = head_scrim(canvas, height_ratio=0.24, strength=int(150 * head_need))
+    # Each gradient is sized to the ground the type it protects actually sits on:
+    # measure the brightest part of that box, then solve for the alpha that brings
+    # it under 4.6:1. A frame that already clears it — the night shot, the dark
+    # cladding — gets nothing at all.
+    logo_box = (MARGIN, SAFE_TOP + 36, MARGIN + 246, SAFE_TOP + 106)
+    head_alpha = scrim_alpha_for(_luma_bright(canvas, logo_box))
+    if head_alpha:
+        canvas = head_scrim(canvas, height_ratio=0.24, strength=head_alpha)
 
+    # The foot carries two elements on very different grounds — the caption at the
+    # left and the domain at the right — so both are measured and the stronger
+    # requirement wins. On the lawn frame the caption sits on dark grass and the
+    # domain on sunlit white pebbles; one number for the whole band served neither.
+    cap_box = (MARGIN, POST_H - SAFE_BOTTOM - 118, 700, POST_H - SAFE_BOTTOM - 56)
+    dom_box = (700, POST_H - SAFE_BOTTOM - 66, POST_W - MARGIN, POST_H - SAFE_BOTTOM - 10)
     foot_box = (0, POST_H - SAFE_BOTTOM - 170, POST_W, POST_H - SAFE_BOTTOM)
-    foot_luma, foot_var = _luma(canvas, foot_box)
-    foot_need = scrim_need(foot_luma, floor=78.0)
+    boxes = [dom_box] + ([cap_box] if title else [])
 
-    if title:
-        # A blurred foot is for a busy one. A calm foot — grass, a dark wall, the
-        # night — reads better sharp, and blurring it would be the artificial look
-        # the brief rules out.
-        if foot_need > 0.15 and foot_var > 44:
-            canvas = frosted_foot(canvas, height_ratio=0.28)
-            foot_need *= 0.72          # blur already did most of the separating
-        if foot_need > 0.04:
-            canvas = foot_scrim(canvas, height_ratio=0.34, strength=int(190 * foot_need))
-    elif foot_need > 0.04:
-        canvas = foot_scrim(canvas, height_ratio=0.26, strength=int(150 * foot_need))
+    # A blurred foot is for a busy one. A calm foot — grass, a dark wall, the
+    # night — reads better sharp, and blurring it would be the artificial look the
+    # brief rules out. The frost goes on first and the alpha is measured after it,
+    # rather than measured before and then discounted by a fixed 28 %: blur makes a
+    # busy ground uniform, which helps, but it does not make a bright ground dark.
+    # On the lawn frame the discount was subtracting darkening that the white
+    # pebbles still needed, and the domain measured 3.58:1 because of it.
+    if title and _luma(canvas, foot_box)[1] > 44 \
+            and max(scrim_alpha_for(_luma_bright(canvas, b)) for b in boxes) > 40:
+        canvas = frosted_foot(canvas, height_ratio=0.28)
+
+    foot_alpha = max(scrim_alpha_for(_luma_bright(canvas, b)) for b in boxes)
+    if foot_alpha:
+        canvas = foot_scrim(canvas, height_ratio=0.34 if title else 0.26,
+                            strength=foot_alpha)
 
     draw = ImageDraw.Draw(canvas)
     place_logo(canvas, light=True)
@@ -439,24 +539,34 @@ def photo_post(source: Path, title: str | None, focus: float, look: dict | None 
                 (255, 255, 255), tracking=37 * 0.15 * 0.42)
     place_domain(draw, light=True)
     canvas.info["watermark_band_px"] = band
-    canvas.info["head_scrim"] = round(head_need, 2)
-    canvas.info["foot_scrim"] = round(foot_need, 2)
+    canvas.info["head_scrim"] = head_alpha      # 0-255 alpha, solved not dialled
+    canvas.info["foot_scrim"] = foot_alpha
     return canvas
 
 
 def card_post(lines: list[str], ground: tuple[int, int, int], light_type: bool,
-              size: int = 82, rule: bool = True) -> Image.Image:
+              size: int = 82, rule: bool = True,
+              type_colour: tuple[int, int, int] | None = None,
+              rule_colour: tuple[int, int, int] | None = None) -> Image.Image:
+    """A statement on a flat ground.
+
+    The two defaults below are the site's own pairing and cover the feed. The two
+    overrides exist because a profile that uses one pairing ninety times reads as
+    a template — a run of posts wants roof-red type on paper next to cream on
+    moss next to white on red next to cream on charcoal. Any override still has
+    to clear contrast; `contrast()` is here to check it rather than trust it.
+    """
     canvas = Image.new("RGB", (POST_W, POST_H), ground)
     draw = ImageDraw.Draw(canvas)
     place_logo(canvas, light=light_type)
 
     # Light ground: roof red, as every section h2 and card h3 on the site.
     # Dark ground: pure white, as every heading inside .section-dark.
-    ink = WHITE if light_type else ROOF
+    ink = type_colour if type_colour else (WHITE if light_type else ROOF)
     # The short rule is the site's .eyebrow:before — 16x2px in --terracotta, which
     # the v2 layer remaps to #3A5A40, so it is moss on light and cream on dark. It
     # was red here, which is the one colour the site never gives that mark.
-    accent = CREAM if light_type else INK
+    accent = rule_colour if rule_colour else (CREAM if light_type else INK)
     f = F_TITLE(size)
     leading = int(size * 1.34)
     block_h = leading * len(lines)
@@ -525,7 +635,9 @@ def spec_post(model: str, name: str, sub: str, rows: list[tuple[str, str]]) -> I
 
 def duo_post(source: Path, statement: list[str], ground: tuple[int, int, int],
              light_type: bool, focus: float = 0.5, concept: bool = False,
-             look: dict | None = None) -> Image.Image:
+             look: dict | None = None,
+             type_colour: tuple[int, int, int] | None = None,
+             rule_colour: tuple[int, int, int] | None = None) -> Image.Image:
     """Photograph above, colour band below. The type never sits on the picture at
     all, which is a different relationship from a caption and gives the grid a
     second rhythm."""
@@ -555,9 +667,10 @@ def duo_post(source: Path, statement: list[str], ground: tuple[int, int, int],
     # The band below the photograph is a section, so its statement follows the
     # section rule: white on moss, roof red on paper. It was moss-on-paper here,
     # which is the one colour the site never gives a heading below the page title.
-    ink = WHITE if light_type else ROOF
+    ink = type_colour if type_colour else (WHITE if light_type else ROOF)
     y = split + 74
-    draw.rectangle([MARGIN, y, MARGIN + 92, y + 3], fill=CREAM if light_type else INK)
+    draw.rectangle([MARGIN, y, MARGIN + 92, y + 3],
+                   fill=rule_colour if rule_colour else (CREAM if light_type else INK))
     y += 40
     for line in statement:
         tracked(draw, (MARGIN, y), line, F_TITLE(52), ink, tracking=-52 * 0.021)

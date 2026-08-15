@@ -1,0 +1,308 @@
+[
+  {
+    "n": 1,
+    "de": "Das ist kein Rendering, sondern eine Fotografie eines fertigen Hauses.\n\nMODUNERA fertigt Tiny Houses, Modulbauten, Stahlkonstruktionen und Möbel nach Maß. Produziert wird in der Türkei, geliefert wird nach Deutschland, in die Niederlande, nach Dänemark, Luxemburg und in die Schweiz. Acht Grundrisse, MD 1 bis MD 8, stehen auf einer gemeinsamen technischen Basis; die Längen reichen modellabhängig von 8,00 bis 9,70 m.\n\nIn diesem Feed ist eine Fotografie eine Fotografie. Entwürfe werden als Entwurf gekennzeichnet.\n\nmodunera.com",
+    "en": "This is a photograph, not a render. The house is finished.\n\nMODUNERA builds tiny houses, modular buildings, steel structures and furniture made to measure. Production is in Türkiye; delivery is to Germany, the Netherlands, Denmark, Luxembourg and Switzerland. Eight plans, MD 1 to MD 8, sit on one technical basis, with lengths from 8.00 to 9.70 m depending on the model.\n\nOn this account a photograph is a photograph. Anything drawn is labelled as a concept.\n\nmodunera.com",
+    "hashtags_de": [
+      "#tinyhouse",
+      "#tinyhousedeutschland",
+      "#modulhaus",
+      "#minihaus",
+      "#tinyhousekaufen",
+      "#tinyhouseliving",
+      "#wohnraum",
+      "#hausbau",
+      "#stahlbau",
+      "#aframe",
+      "#naturnahwohnen",
+      "#modunera"
+    ],
+    "hashtags_en": [
+      "#tinyhouse",
+      "#tinyhouseeurope",
+      "#modularhome",
+      "#tinyliving",
+      "#tinyhousebuilder",
+      "#tinyhouseliving",
+      "#smallspaceliving",
+      "#steelframe",
+      "#aframe",
+      "#madeinturkiye",
+      "#modunera"
+    ],
+    "unsourced": [
+      "Founding year, years of production experience — blocked in REQUIRED-BUSINESS-INPUTS §2, so the opening post introduces the range instead of the company history.",
+      "2,55 m common base width: published on the site (home page and /en/) but not present in data/pricing.json, so it was left out under the pricing.json-only rule.",
+      "Entry price (MD 7, 42.900 € in data/pricing.json): sourceable, but deliberately not used — a caption cannot carry the site's 'Indikation ab Werk, verbindlich ist nur ein geprüftes Angebot' caveat.",
+      "Which model this house is: the photograph is not tied to an MD code in 08-launch-nine/manifest.json."
+    ]
+  },
+  {
+    "n": 2,
+    "de": "Design Your Nature ist kein Slogan über Natur, sondern eine Reihenfolge: erst der Ort, dann der Grundriss.\n\nWo ein Haus steht, entscheidet über Ausrichtung, Fensterflächen, Zugang und Aufteilung. Deshalb wird jedes Projekt konfiguriert und nicht ausgewählt.\n\nAcht Modelle als Ausgangspunkt. Ein Grundstück als Vorgabe.",
+    "en": "Design Your Nature is less a slogan than an order of work: the site first, then the plan.\n\nWhere a house stands decides its orientation, its glazing, its access and its layout. That is why each project is configured rather than picked off a list.\n\nEight models as a starting point. One piece of land as the brief.",
+    "hashtags_de": [
+      "#designyournature",
+      "#tinyhouse",
+      "#architektur",
+      "#minimalismus",
+      "#wohnkonzept",
+      "#grundriss",
+      "#planung",
+      "#minimalwohnen",
+      "#naturnahwohnen",
+      "#modunera"
+    ],
+    "hashtags_en": [
+      "#designyournature",
+      "#tinyhouse",
+      "#modulardesign",
+      "#architecture",
+      "#minimalism",
+      "#tinyhouseplans",
+      "#smallhomedesign",
+      "#floorplan",
+      "#tinyhouseeurope",
+      "#modunera"
+    ],
+    "unsourced": [
+      "No project, plot or location is named — no site reference exists that can be published."
+    ]
+  },
+  {
+    "n": 3,
+    "de": "Im Vordergrund ein Stahlrahmen, dahinter ein fertiges Haus.\n\nJedes MODUNERA Haus beginnt mit der tragenden Stahlkonstruktion: Maße, Fahrgestell, Geometrie, Tragfähigkeit. Erst wenn diese Punkte geprüft sind, kommen Hülle, Technik und Innenausbau dazu. Der Korrosionsschutz wird auftragsbezogen festgelegt und steht im technischen Datenblatt zum jeweiligen Angebot.\n\nWas am Ende sichtbar bleibt, hängt an dem, was Sie später nicht mehr sehen.",
+    "en": "A steel frame in front, a finished house behind it.\n\nEvery MODUNERA house starts with the load-bearing steel structure: dimensions, chassis, geometry, load capacity. Only once those points are checked do the envelope, the services and the interior follow. Corrosion protection is specified per order and stated in the technical data sheet that comes with the quotation.\n\nWhat stays visible at the end depends on what you stop seeing early.",
+    "hashtags_de": [
+      "#stahlbau",
+      "#stahlkonstruktion",
+      "#tinyhouse",
+      "#modulbau",
+      "#tragwerk",
+      "#rohbau",
+      "#hausbau",
+      "#handwerk",
+      "#tinyhousedeutschland",
+      "#modunera"
+    ],
+    "hashtags_en": [
+      "#steelframe",
+      "#steelstructure",
+      "#tinyhouse",
+      "#modularbuilding",
+      "#framing",
+      "#construction",
+      "#buildquality",
+      "#craftsmanship",
+      "#tinyhouseeurope",
+      "#modunera"
+    ],
+    "unsourced": [
+      "Steel grade and the galvanising process/standard — blocked claim 'galvanised-steel' in data/blocked-claims.json until the specification and inspection record exist.",
+      "Frame weight, permitted mass, 3,5 t road classification, chassis manufacturer — blocked claim 'weight-and-chassis-brands'.",
+      "Production duration for the frame stage — no sourced lead time anywhere in the repo."
+    ]
+  },
+  {
+    "n": 4,
+    "de": "Vier Zeilen, weil es vier Dinge sind, die tatsächlich gebaut werden.\n\nTiny House, Modulbau, Stahlbau, Möbel nach Maß. Die Möbel entstehen im selben Haus wie der Rohbau — deshalb sind Küche, Treppe und Stauraum Teil des Grundrisses und nicht etwas, das nachträglich hineingestellt wird.\n\nGefertigt wird nach eigener Spezifikation, geliefert wird nach Europa.",
+    "en": "Four lines, because there are four things actually being built.\n\nTiny house, modular building, steel structure, furniture made to measure. The furniture is made in the same building as the shell, which is why the kitchen, the stair and the storage are part of the plan rather than something placed into it afterwards.\n\nBuilt to our own specification, delivered into Europe.",
+    "hashtags_de": [
+      "#modulhaus",
+      "#fertighaus",
+      "#tinyhouse",
+      "#stahlbau",
+      "#moebelnachmass",
+      "#innenausbau",
+      "#tischlerei",
+      "#wohnraum",
+      "#minihaus",
+      "#modunera"
+    ],
+    "hashtags_en": [
+      "#modularhome",
+      "#prefab",
+      "#tinyhouse",
+      "#steelfabrication",
+      "#bespokefurniture",
+      "#custommade",
+      "#joinery",
+      "#interiorfitout",
+      "#tinyhouseeurope",
+      "#modunera"
+    ],
+    "unsourced": [
+      "Facility address, size, or the legal relationship to the workshop — blocked in REQUIRED-BUSINESS-INPUTS §2. 'Im selben Haus wie der Rohbau' is the site's own published wording and is as far as this caption goes.",
+      "Bungalows are the fifth line on the site's own service list but are not on this card, so they are not named in the caption."
+    ]
+  },
+  {
+    "n": 5,
+    "de": "Abends zeigt ein Grundriss, ob er funktioniert: Man sieht, wo Licht gebraucht wird und wo nicht.\n\nGroße Glasflächen holen tagsüber den Außenraum herein und geben abends etwas davon zurück. Heizung, Kühlung, Beleuchtung und Möblierung werden projektbezogen ausgelegt und nicht als Paket verkauft.\n\nDiese Aufnahme zeigt eine ausgeführte Einheit, keine Visualisierung.",
+    "en": "A plan shows what it is worth after dark: you can see where light is needed and where it is not.\n\nLarge glazed areas pull the outside in during the day and give some of it back at night. Heating, cooling, lighting and furniture are specified per project rather than sold as a package.\n\nThis is a photograph of a completed unit, not a visualisation.",
+    "hashtags_de": [
+      "#tinyhouse",
+      "#minihaus",
+      "#tinyhouseliving",
+      "#ferienhaus",
+      "#glamping",
+      "#wohnenimgruenen",
+      "#naturnahwohnen",
+      "#aframe",
+      "#tinyhousedeutschland",
+      "#modunera"
+    ],
+    "hashtags_en": [
+      "#tinyhouse",
+      "#tinyliving",
+      "#cabinlife",
+      "#aframe",
+      "#glamping",
+      "#holidayrental",
+      "#offgridliving",
+      "#smallspaceliving",
+      "#tinyhouseeurope",
+      "#modunera"
+    ],
+    "unsourced": [
+      "Glazing build-up, Ug/Uw values — blocked claim 'glazing' in data/blocked-claims.json.",
+      "Heating output, insulation U-values, measured energy consumption — REQUIRED-BUSINESS-INPUTS §3.",
+      "The model shown: the night photograph is not tied to an MD code in the manifest, so no model is named."
+    ]
+  },
+  {
+    "n": 6,
+    "de": "Fünf Zielmärkte: Deutschland, Niederlande, Dänemark, Luxemburg und die Schweiz.\n\nProduziert wird in der Türkei. Ob Straße, Ro-Ro-Fähre oder Tieflader sinnvoll ist, hängt an Zielort, Maßen und Zufahrt — die Route wird projektbezogen bestätigt und nicht pauschal versprochen. Genehmigung und Abnahme bleiben Sache der zuständigen Behörde im Zielland; die Unterlagen dafür liefern wir.\n\nZielland und Ort per WhatsApp: +90 553 543 5342",
+    "en": "Five target markets: Germany, the Netherlands, Denmark, Luxembourg and Switzerland.\n\nProduction is in Türkiye. Whether road, Ro-Ro ferry or low-loader makes sense depends on the destination, the dimensions and the final access — the route is confirmed per project, not promised in general. Permits and sign-off stay with the authority in your country; we supply the documents that go with the application.\n\nDestination and site by WhatsApp: +90 553 543 5342",
+    "hashtags_de": [
+      "#tinyhouse",
+      "#tinyhousedeutschland",
+      "#tinyhouseschweiz",
+      "#modulhaus",
+      "#minihaus",
+      "#tinyhousekaufen",
+      "#transport",
+      "#logistik",
+      "#europa",
+      "#modunera"
+    ],
+    "hashtags_en": [
+      "#tinyhouse",
+      "#tinyhouseeurope",
+      "#tinyhousenetherlands",
+      "#tinyhousedenmark",
+      "#tinyhouseswitzerland",
+      "#modularhome",
+      "#logistics",
+      "#shipping",
+      "#madeinturkiye",
+      "#modunera"
+    ],
+    "unsourced": [
+      "Delivery prices per country exist in data/pricing.json (DE 6.800 €, NL 7.600 €, CH 7.900 €, DK 10.500 €, LU 7.000 €) but are configurator tariffs whose own note says the route is confirmed per project — not usable as a caption figure.",
+      "Transit time, carrier, ferry/Ro-Ro basis and exclusions — REQUIRED-BUSINESS-INPUTS §5.",
+      "Customs: A.TR may not be described as making a delivery duty-free (blocked claim 'atr-automatic-exemption'), so customs is left out of this caption entirely."
+    ]
+  },
+  {
+    "n": 7,
+    "de": "Eine Fassade wird nicht montiert, sie wird eingepasst — Brett für Brett.\n\nFugenbilder, Kantenabschlüsse und die Anschlüsse an Fenster und Dach entstehen im selben Haus wie der Rohbau. Das ist der Grund, warum eine Naht noch gerade läuft, wenn das Haus auf dem Grundstück steht. Welche Fassadenausführung ein Projekt bekommt, wird mit dem Paket festgelegt und im Angebot dokumentiert.\n\nPhase zwei von fünf: die Hülle. Witterungs- und Feuchteschutz, bevor irgendetwas nach Haus aussieht.",
+    "en": "A façade is not attached. It is fitted, board by board.\n\nJoint lines, edge details and the connections to windows and roof are made in the same building as the shell. That is the reason a seam still reads straight once the house is standing on site. Which façade build-up a project gets is set with the package and documented in the quotation.\n\nPhase two of five: the envelope. Weather and moisture protection, before anything looks like a house.",
+    "hashtags_de": [
+      "#fassade",
+      "#holzfassade",
+      "#tinyhouse",
+      "#handwerk",
+      "#modulbau",
+      "#werkstatt",
+      "#hausbau",
+      "#detailliebe",
+      "#tinyhousedeutschland",
+      "#modunera"
+    ],
+    "hashtags_en": [
+      "#cladding",
+      "#timbercladding",
+      "#tinyhouse",
+      "#craftsmanship",
+      "#modularbuilding",
+      "#workshop",
+      "#buildquality",
+      "#tinyhousebuild",
+      "#tinyhouseeurope",
+      "#modunera"
+    ],
+    "unsourced": [
+      "Façade materials: /qualitaet/ lists 'Thermowood+ / Verbund / Stehfalz je nach Paket' but flags the final execution as project-specific, so no material is named in the caption.",
+      "Timber species, treatment class, service life or maintenance interval — nothing sourced; no durability claim is made.",
+      "Fitting time per house — no sourced figure."
+    ]
+  },
+  {
+    "n": 8,
+    "de": "Ein Funke reicht. In einem trockenen Sommer ist das keine Redewendung.\n\nWir bauen in der Natur, also sagen wir es hier: kein offenes Feuer bei Wind, keine Zigarette aus dem Autofenster, kein Grill auf trockenem Gras, kein Glas im Gras. Asche ist erst dann kalt, wenn sie sich kalt anfühlt.\n\nWenn Sie Rauch sehen, rufen Sie an, bevor Sie sich sicher sind. In Deutschland, den Niederlanden, Dänemark, Luxemburg und der Schweiz gilt 112.",
+    "en": "One spark is enough. In a dry summer that is not a figure of speech.\n\nWe build in wooded places, so we will say it here: no open fire in wind, no cigarette out of a car window, no barbecue on dry grass, no glass left in the grass. Ash is cold when it feels cold, and not before.\n\nIf you see smoke, call before you are certain. In Germany, the Netherlands, Denmark, Luxembourg and Switzerland the number is 112.",
+    "hashtags_de": [
+      "#waldbrandschutz",
+      "#brandschutz",
+      "#waldbrandgefahr",
+      "#naturschutz",
+      "#umweltschutz",
+      "#verantwortung",
+      "#wald",
+      "#naturnahwohnen",
+      "#modunera"
+    ],
+    "hashtags_en": [
+      "#wildfireprevention",
+      "#firesafety",
+      "#forestprotection",
+      "#wildfireawareness",
+      "#drysummer",
+      "#respectnature",
+      "#tinyhouse",
+      "#buildinnature",
+      "#modunera"
+    ],
+    "unsourced": [
+      "No partnership, donation, certification, charitable commitment or campaign is claimed or implied — none is confirmed, so the post carries none. No organisation name and no branded hashtag is used for the same reason.",
+      "Fire-related product specifications (the flame-retardant cabling listed on /qualitaet/) were deliberately not used: making a public-safety post about our own build-up would turn care into a sales claim, and the spec is flagged project-specific.",
+      "112 is the emergency number in all five target markets — a general public fact, not a MODUNERA claim. It is the only figure in this caption."
+    ]
+  },
+  {
+    "n": 9,
+    "de": "Fertig heißt hier: Das Haus steht auf dem Anhänger und verlässt den Hof.\n\nVon der Türkei nach Deutschland, in die Niederlande, nach Dänemark, Luxemburg und in die Schweiz. Vor der Verladung steht die Endkontrolle: Dokumentation und Sichtprüfung, dann die Freigabe für die Logistik. Danach entscheiden die Route — Straße, Fähre oder Tieflader — und die letzten hundert Meter zum Grundstück, die vorher geprüft werden.\n\nHerkunft ist keine Fußnote: produziert in der Türkei, geplant für Europa.",
+    "en": "Finished, here, means the house is on the trailer and leaving the yard.\n\nFrom Türkiye to Germany, the Netherlands, Denmark, Luxembourg and Switzerland. Before loading comes the final check: documentation and visual inspection, then release for logistics. After that it is the route — road, ferry or low-loader — and the last hundred metres onto the site, which are checked in advance.\n\nOrigin is not a footnote: manufactured in Türkiye, designed for Europe.",
+    "hashtags_de": [
+      "#tinyhouse",
+      "#tinyhouseaufraedern",
+      "#transport",
+      "#schwertransport",
+      "#modulhaus",
+      "#lieferung",
+      "#logistik",
+      "#europa",
+      "#tinyhousedeutschland",
+      "#modunera"
+    ],
+    "hashtags_en": [
+      "#tinyhouse",
+      "#tinyhouseonwheels",
+      "#transport",
+      "#heavyhaulage",
+      "#modularhome",
+      "#madeinturkiye",
+      "#tinyhousedelivery",
+      "#shippingtoeurope",
+      "#tinyhouseeurope",
+      "#modunera"
+    ],
+    "unsourced": [
+      "Transit time from the yard to a German site — no sourced figure (REQUIRED-BUSINESS-INPUTS §5).",
+      "Carrier, ferry/Ro-Ro basis, route assumptions and what the delivery price excludes — same gap.",
+      "Whether a crane, foundation or screw piles are needed on arrival is answered per project on /produktion-faq/, so no general statement is made here.",
+      "Total weight of the loaded unit — blocked claim 'weight-and-chassis-brands'."
+    ]
+  }
+]

@@ -1,0 +1,102 @@
+{
+  "set": "launch nine — the first posts on an empty profile",
+  "arrangement": "3x3 checkerboard; a card never touches a card",
+  "forbidden_pairings": {
+    "roof on moss deep": 1.34,
+    "moss on roof": 1.02
+  },
+  "posts": [
+    {
+      "n": 1,
+      "role": "picture",
+      "template": "photo",
+      "file": "post-1.jpg",
+      "why": "The opening post is a finished house in daylight. An account that opens on a render asks to be doubted.",
+      "photograph": "IMG_20250525_142713.jpg",
+      "logo": "white"
+    },
+    {
+      "n": 2,
+      "role": "card",
+      "template": "card",
+      "file": "post-2.jpg",
+      "why": "The slogan in the site's own pairing — roof red on paper, moss rule. It anchors everything that follows to the website.",
+      "ground": "#F5F5F5",
+      "type": "#97311A",
+      "contrast": 6.95,
+      "logo": "colour"
+    },
+    {
+      "n": 3,
+      "role": "picture",
+      "template": "photo",
+      "file": "post-3.jpg",
+      "why": "Structure before surface. It answers the first question a European buyer asks about a house built abroad.",
+      "photograph": "IMG_20250913_183727.jpg",
+      "logo": "white"
+    },
+    {
+      "n": 4,
+      "role": "card",
+      "template": "card",
+      "file": "post-4.jpg",
+      "why": "The forest ground and the white logo. Four lines of plain scope, no adjectives — the card that says what the company does.",
+      "ground": "#2E4733",
+      "type": "#DAD7CD",
+      "contrast": 7.06,
+      "logo": "white"
+    },
+    {
+      "n": 5,
+      "role": "picture",
+      "template": "photo",
+      "file": "post-5.jpg",
+      "why": "The centre of a 3x3 is where the eye lands. It gets the strongest photograph in the set.",
+      "photograph": "IMG_20250913_193621.jpg",
+      "logo": "white"
+    },
+    {
+      "n": 6,
+      "role": "card",
+      "template": "numeral",
+      "file": "post-6.jpg",
+      "why": "A red ground, once. It is the loudest tile in the grid, so it carries the fact worth being loud about.",
+      "ground": "#97311A",
+      "type": "#FFFFFF",
+      "contrast": 7.58,
+      "logo": "white"
+    },
+    {
+      "n": 7,
+      "role": "picture",
+      "template": "photo",
+      "file": "post-7.jpg",
+      "why": "Workmanship at close range. Paired with 3 it makes the production case twice, at two distances.",
+      "photograph": "20231214_121220.jpg",
+      "logo": "white"
+    },
+    {
+      "n": 8,
+      "role": "card",
+      "template": "card",
+      "file": "post-8.jpg",
+      "why": "The only near-black in the brand, taken from the logo's own wordmark. It stops the scroll because nothing else in the grid is this dark, and it says something that is not about selling.",
+      "ground": "#232426",
+      "type": "#DAD7CD",
+      "contrast": 10.79,
+      "logo": "white"
+    },
+    {
+      "n": 9,
+      "role": "picture",
+      "template": "duo",
+      "file": "post-9.jpg",
+      "why": "Photograph above, paper band below in moss green — the one green type in the set, and the one post where the type never sits on the picture at all.",
+      "ground": "#F5F5F5",
+      "type": "#3A5A40",
+      "contrast": 7.09,
+      "logo": "white",
+      "photograph": "IMG_20250913_104632.jpg"
+    }
+  ]
+}
