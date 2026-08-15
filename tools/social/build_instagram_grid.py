@@ -452,6 +452,123 @@ def luma_under(im: Image.Image, mask: Image.Image, pct: float = 92.0) -> float:
     return float(hit[min(len(hit) - 1, int(len(hit) * pct / 100))])
 
 
+def gradient(size: tuple[int, int], stops: list[tuple[float, tuple[int, int, int]]],
+             horizontal: bool = True) -> Image.Image:
+    """A linear ramp between brand colours.
+
+    The ramp stays between moss-deep and moss and does not reach leaf. Leaf
+    #588157 measures 4.48:1 against white — close enough to look usable and under
+    the 4.5 body copy needs, which is exactly the kind of value that gets waved
+    through. A ground that cannot carry the type that will sit on it is not a
+    ground, however good the colour is on its own.
+    """
+    w, h = size
+    n = w if horizontal else h
+    strip = Image.new("RGB", (n, 1))
+    px = strip.load()
+    for i in range(n):
+        t = i / max(n - 1, 1)
+        lo = max([s for s in stops if s[0] <= t], key=lambda s: s[0], default=stops[0])
+        hi = min([s for s in stops if s[0] >= t], key=lambda s: s[0], default=stops[-1])
+        if hi[0] == lo[0]:
+            px[i, 0] = lo[1]
+            continue
+        k = (t - lo[0]) / (hi[0] - lo[0])
+        px[i, 0] = tuple(round(a + (b - a) * k) for a, b in zip(lo[1], hi[1]))
+    return strip.resize((w, h), Image.BILINEAR) if horizontal else \
+        strip.transpose(Image.ROTATE_90).resize((w, h), Image.BILINEAR)
+
+
+# --- national flags ----------------------------------------------------------
+# Official colours and official proportions. These are not brand assets and they
+# are not decoration: a flag drawn in the wrong red, or a square flag stretched to
+# a rectangle to tidy up a row, is a factual error about somebody's country and
+# the sort a reader in that country notices immediately. Switzerland's flag is
+# square by law, Denmark's Dannebrog is 37:28 with the cross offset toward the
+#
+# The names are endonyms rather than German exonyms — Nederland, not
+# Niederlande. Everything else in the artwork is the system's English;
+# a country is the one thing worth naming in its own language.
+# The two that look alike — the Netherlands and Luxembourg — differ in
+# the blue, so the difference has to be drawn rather than approximated.
+
+FLAGS = {
+    "DE": dict(ratio=5 / 3, name="Deutschland",
+               bands=[(0, 0, 0), (221, 0, 0), (255, 206, 0)]),
+    "NL": dict(ratio=3 / 2, name="Nederland",
+               bands=[(174, 28, 40), (255, 255, 255), (33, 70, 139)]),
+    "DK": dict(ratio=37 / 28, name="Danmark", cross=(200, 16, 46)),
+    "LU": dict(ratio=5 / 3, name="Luxembourg",
+               bands=[(237, 41, 57), (255, 255, 255), (0, 161, 222)]),
+    "CH": dict(ratio=1.0, name="Schweiz", cross=(255, 0, 0), swiss=True),
+}
+FLAG_ORDER = ["DE", "NL", "DK", "LU", "CH"]
+
+
+def flag(code: str, height: int) -> Image.Image:
+    """One flag at the given height, at its own proportions."""
+    spec = FLAGS[code]
+    h = height
+    w = round(h * spec["ratio"])
+    im = Image.new("RGB", (w, h), (255, 255, 255))
+    d = ImageDraw.Draw(im)
+
+    if "bands" in spec:
+        for i, colour in enumerate(spec["bands"]):
+            d.rectangle([0, round(h * i / 3), w, round(h * (i + 1) / 3)], fill=colour)
+    elif spec.get("swiss"):
+        d.rectangle([0, 0, w, h], fill=spec["cross"])
+        arm, half = h * 0.20, h * 0.30           # arms 6:7 of the field, centred
+        d.rectangle([w / 2 - half, h / 2 - arm / 2, w / 2 + half, h / 2 + arm / 2],
+                    fill=(255, 255, 255))
+        d.rectangle([w / 2 - arm / 2, h / 2 - half, w / 2 + arm / 2, h / 2 + half],
+                    fill=(255, 255, 255))
+    else:                                        # the Nordic cross
+        d.rectangle([0, 0, w, h], fill=spec["cross"])
+        arm = h * 3 / 14
+        x = h * 12 / 28                          # offset toward the hoist
+        d.rectangle([0, h / 2 - arm / 2, w, h / 2 + arm / 2], fill=(255, 255, 255))
+        d.rectangle([x - arm / 2, 0, x + arm / 2, h], fill=(255, 255, 255))
+    return im
+
+
+def flag_row(codes: list[str], height: int, gap: int) -> Image.Image:
+    """The flags in a row, each at its own width, on a transparent ground."""
+    flags = [flag(c, height) for c in codes]
+    w = sum(f.width for f in flags) + gap * (len(flags) - 1)
+    row = Image.new("RGBA", (w, height), (0, 0, 0, 0))
+    x = 0
+    for f in flags:
+        row.paste(f, (x, 0))
+        x += f.width + gap
+    return row
+
+
+def band_scrim(im: Image.Image, top: int, bottom: int, strength: int,
+               feather: int = 150) -> Image.Image:
+    """A darkened band with both edges feathered, for type that sits mid-frame.
+
+    The head and foot gradients each anchor to an edge, which is right when the
+    type is at an edge and useless when it is not. The triptych's slogan sits at
+    the middle of its panel — placed there because that is where the picture is
+    calm — and neither existing scrim reaches it. Feathering both sides keeps it a
+    gradient rather than a bar laid across a photograph.
+    """
+    w, h = im.size
+    ramp = Image.new("L", (1, h), 0)
+    for y in range(h):
+        if top <= y <= bottom:
+            t = 1.0
+        elif y < top:
+            t = max(0.0, 1 - (top - y) / feather)
+        else:
+            t = max(0.0, 1 - (y - bottom) / feather)
+        ramp.putpixel((0, y), int(strength * (t ** 1.6)))
+    out = im.copy()
+    out.paste(Image.new("RGB", (w, h), SCRIM_RGB), (0, 0), ramp.resize((w, h)))
+    return out
+
+
 def apply_until_legible(canvas: Image.Image, masks: list[Image.Image], scrim,
                         target: float = 4.6, cap: int = 250):
     """Darken, measure, repeat — instead of solving once and hoping.

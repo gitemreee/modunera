@@ -214,13 +214,45 @@ COVERS = [
 ]
 
 
+TARGET = 380 * SS               # the longest side of every icon's ink, normalised
+
+
+def _draw_alone(fn, s: float, stroke: int) -> Image.Image:
+    """One icon on its own transparent layer, so its ink can be measured."""
+    pad = int(s * 0.6)
+    layer = Image.new("LA", (int(s + pad * 2), int(s + pad * 2)), (0, 0))
+    fn(ImageDraw.Draw(layer), pad, pad, s, (255, 255), stroke)
+    return layer
+
+
 def cover(spec: dict) -> Image.Image:
-    big = Image.new("RGB", (W * SS, H * SS), spec["ground"])
-    d = ImageDraw.Draw(big)
+    """Draw the icon, measure where its ink actually landed, then place that.
+
+    Placing by the nominal box was wrong twice over, and both were visible in the
+    row. Vertically: an icon whose shape does not fill its box sits wherever its
+    coordinates happen to fall — the book was 27 px low and the layers 20 px low,
+    which reads as a wobble down the row rather than as a design. And in size: the
+    A-frame's ink measured 408 px across while the map pin's measured 262, so the
+    same nominal box produced icons that looked a third apart.
+
+    So it is drawn twice. The first pass measures, the second redraws at a
+    corrected scale — with the stroke weight held constant, because normalising by
+    scaling the finished artwork would have made the thin icons thin-lined too.
+    Then the measured ink, not the box, is centred.
+    """
+    stroke = STROKE * SS
     s = SAFE_D * SS * 0.62
-    x = CENTRE[0] * SS - s / 2
-    y = CENTRE[1] * SS - s / 2
-    spec["icon"](d, x, y, s, spec["ink"], STROKE * SS)
+    box = _draw_alone(spec["icon"], s, stroke).getbbox()
+    s *= TARGET / max(box[2] - box[0], box[3] - box[1])
+
+    layer = _draw_alone(spec["icon"], s, stroke)
+    box = layer.getbbox()
+    ink = layer.crop(box)
+
+    big = Image.new("RGB", (W * SS, H * SS), spec["ground"])
+    tint = Image.new("RGB", ink.size, spec["ink"])
+    big.paste(tint, (CENTRE[0] * SS - ink.width // 2,
+                     CENTRE[1] * SS - ink.height // 2), ink.getchannel("A"))
     return big.resize((W, H), Image.LANCZOS)
 
 
