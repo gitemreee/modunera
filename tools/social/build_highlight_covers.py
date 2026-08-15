@@ -112,16 +112,26 @@ def icon_house(d, x, y, s, c, w):
 
 
 def icon_tag(d, x, y, s, c, w, font=None):
-    """The tag, with a euro in it. A tag alone is a label; a tag with a currency
-    is a price."""
-    _line(d, [(x + s * 0.40, y + s * 0.04), (x + s * 0.96, y + s * 0.04),
-              (x + s * 0.96, y + s * 0.60), (x + s * 0.50, y + s * 0.98),
-              (x + s * 0.04, y + s * 0.52), (x + s * 0.40, y + s * 0.04)], c, w)
-    r = s * 0.075
-    cx, cy = x + s * 0.78, y + s * 0.22
+    """A tag lying flat, point to the left, with a euro set in the body.
+
+    It was drawn on the diagonal and the diagonal was the whole problem. A tag
+    tipped 45 degrees has no horizontal field inside it, so the euro had to go in
+    a corner, where it sat against two sloping edges and read as debris caught in
+    a pentagon. Laid flat, the body is a plain rectangle and the euro sits in the
+    middle of it at the size a euro wants to be \u2014 which is the only reason the
+    tag is here at all. A tag alone is a label; a tag with a currency is a price.
+    """
+    _line(d, [(x + s * 0.30, y + s * 0.16), (x + s * 0.98, y + s * 0.16),
+              (x + s * 0.98, y + s * 0.84), (x + s * 0.30, y + s * 0.84),
+              (x + s * 0.02, y + s * 0.50), (x + s * 0.30, y + s * 0.16)], c, w)
+    # The hole has to be wider than the stroke that draws it. At r = 0.055 s it was
+    # 42 px across drawn with a 104 px pen, so the ring closed on itself and came
+    # out as a dot \u2014 a tag with a dot punched in it is a tag with a smudge on it.
+    r = s * 0.10
+    cx, cy = x + s * 0.22, y + s * 0.50
     d.ellipse([cx - r, cy - r, cx + r, cy + r], outline=c, width=w)
     if font:
-        _glyph(d, x + s * 0.10, y + s * 0.24, s * 0.68, "\u20ac", c, font)
+        _glyph(d, x + s * 0.40, y + s * 0.20, s * 0.58, "\u20ac", c, font)
 
 
 def icon_book(d, x, y, s, c, w):
@@ -141,29 +151,25 @@ def icon_book(d, x, y, s, c, w):
               (x + s * 0.88, y + s * 0.18)], c, round(w * 0.8))
 
 
-def _spanner(d, x, y, s, c, w):
-    """An open-ended spanner: a shaft with a C at its head. Small enough to sit on
-    something else, which is where it is used twice in this set."""
-    _line(d, [(x + s * 0.16, y + s * 0.90), (x + s * 0.62, y + s * 0.38)], c, w)
-    r = s * 0.24
-    cx, cy = x + s * 0.74, y + s * 0.24
-    d.arc([cx - r, cy - r, cx + r, cy + r], 40, 300, fill=c, width=w)
-
-
 def icon_pin(d, x, y, s, c, w):
     """A globe, not a pin.
 
     A pin means one place and this highlight is five countries, so the pin was
     wrong before it was drawn badly. Filling its head with a ring of stars made it
-    worse: at 380 px the stars were dots, at 44 px a berry. Meridians are two
-    ellipses and two lines, they mean international everywhere, and they hold
-    their shape all the way down.
+    worse: at 380 px the stars were dots, at 44 px a berry.
+
+    Three strokes, and the third is the one that was missing. The previous globe
+    had two latitude lines and no equator, and both latitudes were drawn as chords
+    from 0.09 to 0.91 — but a circle at that height is 0.974 wide, so each line
+    stopped short of the outline at both ends and floated inside it. Four strokes,
+    two of them not touching anything. The equator is the one line that can run the
+    full diameter and meet the circle exactly, so it is the one that stays; the
+    wide meridian is narrowed to 0.32-0.68 so the pair no longer closes into an eye.
     """
-    m = s * 0.03
+    m = s * 0.02
     d.ellipse([x + m, y + m, x + s - m, y + s - m], outline=c, width=w)
-    d.ellipse([x + s * 0.30, y + m, x + s * 0.70, y + s - m], outline=c, width=w)
-    _line(d, [(x + s * 0.09, y + s * 0.34), (x + s * 0.91, y + s * 0.34)], c, w)
-    _line(d, [(x + s * 0.09, y + s * 0.66), (x + s * 0.91, y + s * 0.66)], c, w)
+    d.ellipse([x + s * 0.32, y + m, x + s * 0.68, y + s - m], outline=c, width=w)
+    _line(d, [(x + m, y + s * 0.50), (x + s - m, y + s * 0.50)], c, w)
 
 
 def icon_gear(d, x, y, s, c, w):
@@ -181,26 +187,49 @@ def icon_gear(d, x, y, s, c, w):
               (cx + s * 0.18, cy - s * 0.15)], c, w)
 
 
-def icon_hand_tool(d, x, y, s, c, w):
-    """A spanner crossed with a hammer.
+def _rot(pts, deg, cx=0.5, cy=0.5):
+    """Turn a path given in 0..1 icon space about its centre.
 
-    A hand gripping a tool was the reference and it does not survive this size:
-    fingers at 44 px are a scribble, and at 380 they were a scribble with more
-    pixels in it. Two crossed tools is the older sign for the same thing and it is
-    made of straight lines, which is what this stroke weight is good at.
-
-    The handle runs into the head rather than up to it. Ending it at the edge left
-    a hairline of ground between the two and the head read as a separate block
-    floating beside a stick.
+    Coordinates may leave the unit box once turned. That is safe here: every icon
+    is drawn onto a padded transparent layer, measured by the bounding box of its
+    ink and normalised from that, so a shape that overruns its nominal box is
+    sized and centred by what it actually covers rather than by what it declared.
     """
-    _line(d, [(x + s * 0.10, y + s * 0.92), (x + s * 0.70, y + s * 0.26)], c, w)
-    r = s * 0.16
-    cx, cy = x + s * 0.80, y + s * 0.16
-    d.arc([cx - r, cy - r, cx + r, cy + r], 35, 295, fill=c, width=w)
-    _line(d, [(x + s * 0.90, y + s * 0.92), (x + s * 0.30, y + s * 0.22)], c, w)
-    _line(d, [(x + s * 0.10, y + s * 0.06), (x + s * 0.44, y + s * 0.06),
-              (x + s * 0.44, y + s * 0.28), (x + s * 0.10, y + s * 0.28),
-              (x + s * 0.10, y + s * 0.06)], c, w)
+    import math
+    a = math.radians(deg)
+    ca, sa = math.cos(a), math.sin(a)
+    return [((px - cx) * ca - (py - cy) * sa + cx,
+             (px - cx) * sa + (py - cy) * ca + cy) for px, py in pts]
+
+
+def icon_hammer(d, x, y, s, c, w):
+    """One claw hammer, in outline like the rest of the set.
+
+    Crossed tools were here and they read as scissors with a flag on them. Two
+    objects at this stroke weight is one object too many: the X of the two handles
+    is the biggest shape in the frame, so the eye reads the X first and the tools
+    second, and the two heads — a rectangle and an open arc — end up as debris at
+    the top corners. The arc in particular came off as a stray letter C.
+
+    A single tool has no X to read. The claw went through two versions before this
+    one. Drawn as a two-pronged notch off the left end it needed four vertices
+    inside a fifth of the frame and they closed into a beak at this pen weight.
+    Dropped entirely in favour of a stepped head — thin pein, deep face — it got
+    worse: a horizontal block with a tapered grip hanging off the right of it is
+    the silhouette of a power drill, and that is what it read as, on both sizes.
+
+    Upright is the problem. Every drill is drawn level and every hammer worth
+    recognising is drawn mid-swing, so the tilt is doing more work here than any
+    detail in the head. Turned 30 degrees the drill reading goes, and the claw can
+    come back as a single blunt wedge — two vertices instead of four, which is
+    what this pen can hold.
+    """
+    head = _rot([(0.40, 0.06), (0.98, 0.06), (0.98, 0.36), (0.40, 0.36),
+                 (0.14, 0.26), (0.06, 0.13), (0.40, 0.06)], -30)
+    grip = _rot([(0.48, 0.36), (0.68, 0.36), (0.62, 0.98), (0.42, 0.98),
+                 (0.48, 0.36)], -30)
+    for path in (head, grip):
+        _line(d, [(x + px * s, y + py * s) for px, py in path], c, w)
 
 
 def icon_truck(d, x, y, s, c, w):
@@ -262,7 +291,7 @@ COVERS = [
     dict(slug="models", label="MODELS", icon=icon_house, glyph=None,
          ground=g.MOSS_DEEP, ink=g.CREAM, link="modunera.com/en/models/",
          note="Eight models, MD 1 to MD 8"),
-    dict(slug="prices", label="PRICES", icon=icon_tag, glyph=0.30,
+    dict(slug="prices", label="PRICES", icon=icon_tag, glyph=0.36,
          ground=g.PAPER, ink=g.ROOF, link="modunera.com/en/price-comparison/",
          note="Price comparison across the five markets"),
     dict(slug="guides", label="GUIDES", icon=icon_book, glyph=None,
@@ -274,7 +303,7 @@ COVERS = [
     dict(slug="quality", label="QUALITY", icon=icon_gear, glyph=None,
          ground=g.CHARCOAL, ink=g.SAGE, link="modunera.com/en/advantages/",
          note="What a tiny house does well, and what it does not solve"),
-    dict(slug="build", label="WHAT WE BUILD", icon=icon_hand_tool, glyph=None,
+    dict(slug="build", label="WHAT WE BUILD", icon=icon_hammer, glyph=None,
          ground=g.ROOF, ink=g.WHITE, link="modunera.com/en/services/",
          note="Modular, steel, bungalows and bespoke furniture"),
     dict(slug="production", label="PRODUCTION", icon=icon_truck, glyph=None,
