@@ -50,7 +50,16 @@ BRAND = ROOT / "assets/brand"
 # tools/social/fonts/README.md.
 FONTS = Path(__file__).resolve().parent / "fonts"
 
-POST_W, POST_H = 1080, 1350
+# Square. Instagram's profile grid is no longer a 1:1 crop of a taller post, so a
+# 1080x1350 upload and the tile that represents it are two different shapes, and
+# Instagram asks which part of the post the tile should show. That question is
+# answered by hand, once per post, and it is where the logos ended up shifted.
+#
+# A square post removes the question rather than answering it more carefully: the
+# post and its tile are the same picture, nothing is cropped on upload, nothing is
+# chosen afterwards. It costs height in the feed — a 4:5 post occupies more of a
+# phone screen — and that is the trade being made deliberately.
+POST_W, POST_H = 1080, 1080
 # Drafts render at post size. A half-size draft cannot answer "is this sharp
 # enough", which is the question the drafts exist to answer. Approval still gates
 # publication — 05-approved is what makes something final, not the pixel count.
@@ -124,10 +133,13 @@ def contrast(a: tuple[int, int, int], b: tuple[int, int, int]) -> float:
 # moss is pure white, not off-white; the small label above it is cream #DAD7CD,
 # the same as .eyebrow on .section-dark; body copy there is #BCCAC2.
 
-# Instagram crops the grid thumbnail to a centred square: 135 px off the top and
-# the bottom of a 1080x1350 post. Nothing that identifies the brand goes there.
-SAFE_TOP = 135
-SAFE_BOTTOM = 135
+# Nothing is cropped any more, so there is no dead band to keep clear of. These
+# stay at zero rather than being deleted: every placement in this file and in the
+# scripts that import it is expressed relative to them, and zero is the honest
+# value for "the post is the frame". If a format with a crop ever comes back,
+# it comes back here and nowhere else.
+SAFE_TOP = 0
+SAFE_BOTTOM = 0
 # Tightened from 74. One margin for the logo, the caption, the card statement and
 # the domain, so everything sits on the same optical frame — a logo pulled left
 # while the caption below it stays put reads as a mistake, not as a decision.
@@ -870,7 +882,10 @@ def duo_post(source: Path, statement: list[str], ground: tuple[int, int, int],
     """Photograph above, colour band below. The type never sits on the picture at
     all, which is a different relationship from a caption and gives the grid a
     second rhythm."""
-    split = 830
+    # Where the photograph ends and the colour band begins. Proportional, not a
+    # pixel count: it was 830 of 1350, and left as a constant it would have given
+    # a square post a 250 px band with the statement hanging off the bottom.
+    split = round(POST_H * 0.61)
     canvas = Image.new("RGB", (POST_W, POST_H), ground)
     im = Image.open(source).convert("RGB")
     im, _ = strip_camera_watermark(im)
