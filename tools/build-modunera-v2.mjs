@@ -1294,11 +1294,17 @@ async function rewriteWhatsapp() {
 /* Hero slideshow. Five stills, crossfaded by CSS alone — no library, no script.
    Only the first is fetched at high priority; the rest are hints-lowered so they
    never compete with the page. */
-const HERO_SLIDES = 5;
+/* Display order, not file order. The buyer is in Germany, the Netherlands,
+   Denmark, Luxembourg or Switzerland, and the first thing they saw was a house
+   under palm trees followed by a pool scene — which reads as a holiday resort in
+   the tropics, not as a house that can stand through a northern winter. The two
+   renders whose planting and light could be central Europe lead; the palms go
+   last, where they are one frame in a rotation rather than the first impression. */
+const HERO_ORDER = [4, 3, 5, 1, 2];
 
 function heroSlides(root) {
-  const imgs = Array.from({ length: HERO_SLIDES }, (_, i) => {
-    const base = `${root}assets/images/hero-slides/slide-${i + 1}`;
+  const imgs = HERO_ORDER.map((slide, i) => {
+    const base = `${root}assets/images/hero-slides/slide-${slide}`;
     const priority = i === 0 ? 'fetchpriority="high"' : 'fetchpriority="low"';
     // Phones get a 3:4 crop: a landscape still in a tall portrait box loses about
     // two thirds of its width to object-fit:cover, which left the house unreadable.

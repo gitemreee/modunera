@@ -10,7 +10,7 @@
   const toast=(msg)=>{let t=qs('.toast');if(!t){t=document.createElement('div');t.className='toast';document.body.appendChild(t)}t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)};
   window.MCTiny={toast};
   const progress=qs('.scroll-progress');
-  const onScroll=()=>{if(progress){const d=document.documentElement;const max=d.scrollHeight-d.clientHeight;progress.style.width=(max?d.scrollTop/max*100:0)+'%'}const hm=qs('.hero-media');if(hm&&!matchMedia('(prefers-reduced-motion: reduce)').matches)hm.style.transform=`scale(1.04) translateY(${scrollY*.025}px)`};
+  const onScroll=()=>{if(progress){const d=document.documentElement;const max=d.scrollHeight-d.clientHeight;progress.style.width=(max?d.scrollTop/max*100:0)+'%'}};
   addEventListener('scroll',onScroll,{passive:true});onScroll();
   // one panel at a time: opening a section closes whatever else was open, and so
   // does closing the drawer or clicking anywhere outside the navigation
