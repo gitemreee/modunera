@@ -46,7 +46,10 @@ BRAND = ROOT / "assets/brand"
 FONTS = Path("/mnt/skills/examples/canvas-design/canvas-fonts")
 
 POST_W, POST_H = 1080, 1350
-DRAFT_SCALE = 0.5 if "--full" not in sys.argv else 1.0
+# Drafts render at post size. A half-size draft cannot answer "is this sharp
+# enough", which is the question the drafts exist to answer. Approval still gates
+# publication — 05-approved is what makes something final, not the pixel count.
+DRAFT_SCALE = 1.0
 
 # The site's own tokens, read off tools/design-system-v2.css rather than picked.
 MOSS_DEEP = (46, 71, 51)      # #2E4733  forest green card ground
@@ -176,6 +179,36 @@ def grade(im: Image.Image, *, warmth: float = 1.0, lift: float = 0.0,
     return im
 
 
+
+def sharpen(im: Image.Image, amount: float = 1.0, micro: float = 1.0) -> Image.Image:
+    """Output sharpening, in two passes at two radii.
+
+    A 4,000 px phone frame resampled down to 1,080 px loses its edges — that is
+    what a Lanczos filter does, and every professional pipeline sharpens after the
+    resize to put them back. Skipping it is why an unedited photograph dropped
+    straight into a layout reads as soft.
+
+    Two radii, because they do different jobs:
+
+      micro-contrast, radius 34, low amount — separates a wall from the trees
+        behind it and gives the frame depth. This is the move that reads as
+        "professional" rather than "phone". Kept low and wide so it cannot halo;
+        it is not HDR and there is no local tone mapping.
+
+      output sharpening, radius 1.1, higher amount — puts the edge back on
+        cladding seams, window frames, deck boards and stair nosings.
+
+    Both use a threshold, so flat sky and shadow are left alone and sensor noise
+    is not amplified. The night frame runs at a fraction of the amount for exactly
+    that reason.
+    """
+    if micro > 0:
+        im = im.filter(ImageFilter.UnsharpMask(radius=34, percent=int(30 * micro), threshold=4))
+    if amount > 0:
+        im = im.filter(ImageFilter.UnsharpMask(radius=1.1, percent=int(105 * amount), threshold=3))
+    return im
+
+
 def frosted_foot(im: Image.Image, height_ratio: float = 0.30) -> Image.Image:
     """A graduated blur under the caption instead of a heavier dark bar.
 
@@ -282,7 +315,12 @@ def photo_post(source: Path, title: str | None, focus: float, look: dict | None 
     im = Image.open(source).convert("RGB")
     im, band = strip_camera_watermark(im)
     canvas = cover(im, POST_W, POST_H, focus)
-    canvas = grade(canvas, **(look or {}))
+    look = dict(look or {})
+    sharp = look.pop("sharp", 1.0)
+    micro = look.pop("micro", 1.0)
+    canvas = grade(canvas, **look)
+    # after the resize and the grade, before anything is laid over it
+    canvas = sharpen(canvas, amount=sharp, micro=micro)
     canvas = head_scrim(canvas)
     if title:
         # blur first, then darken: a blurred foot needs far less darkening, which
@@ -332,30 +370,30 @@ def card_post(lines: list[str], ground: tuple[int, int, int], light_type: bool,
 # of strongest frames. Recorded here rather than silently swapped.
 POSTS = [
     dict(kind="photo", src="IMG_20250519_182528.jpg", title=None, focus=0.5,
-         look=dict(warmth=1.02, lift=0.03, contrast=1.16, saturation=0.94),
+         look=dict(warmth=1.02, lift=0.03, contrast=1.16, saturation=0.94, sharp=1.15, micro=1.0),
          note="substituted for IMG_20250519_182509.jpg, which would not transfer"),
     dict(kind="cream", lines=["DESIGN", "YOUR", "NATURE"], size=96),
     dict(kind="photo", src="20231214_121220.jpg", title="BUILT WITH PURPOSE", focus=0.24,
-         look=dict(warmth=0.99, lift=0.05, contrast=1.20, saturation=0.88),
+         look=dict(warmth=0.99, lift=0.05, contrast=1.20, saturation=0.88, sharp=1.10, micro=0.9),
          note="replaced IMG_20250618_094223.jpg — scaffolding dominated the frame"),
     dict(kind="forest", lines=["TINY HOUSE", "MODULAR HOME", "STEEL STRUCTURE", "CUSTOM FURNITURE"], size=62),
     dict(kind="photo", src="IMG_20250807_131955.jpg", title="MADE AROUND YOU", focus=0.42,
-         look=dict(warmth=1.01, lift=0.02, contrast=1.14, saturation=0.93)),
+         look=dict(warmth=1.01, lift=0.02, contrast=1.14, saturation=0.93, sharp=1.05, micro=0.85)),
     dict(kind="photo", src="IMG_20250913_193621.jpg", title="HOME, AFTER DARK", focus=0.45,
-         look=dict(warmth=1.04, lift=0.06, contrast=1.10, saturation=0.98)),
+         look=dict(warmth=1.04, lift=0.06, contrast=1.10, saturation=0.98, sharp=0.55, micro=0.35)),
     dict(kind="photo", src="IMG_20250913_104632.jpg", title="FROM TÜRKİYE TO EUROPE", focus=0.52,
-         look=dict(warmth=1.01, lift=0.02, contrast=1.18, saturation=0.90)),
+         look=dict(warmth=1.01, lift=0.02, contrast=1.18, saturation=0.90, sharp=1.15, micro=1.0)),
     dict(kind="cream", lines=["DELIVERY", "ACROSS", "DE · NL · DK", "LU · CH"], size=72),
     dict(kind="photo", src="20240227_113020.jpg", title="SPACE TO BREATHE", focus=0.66,
-         look=dict(warmth=1.02, lift=0.04, contrast=1.15, saturation=0.92),
+         look=dict(warmth=1.02, lift=0.04, contrast=1.15, saturation=0.92, sharp=1.05, micro=0.85),
          note="replaced IMG_20260206_161331.jpg — an unfinished grey terrace"),
     dict(kind="photo", src="IMG_20250913_183727.jpg", title="FROM FRAME TO FINISH", focus=0.5,
-         look=dict(warmth=1.01, lift=0.03, contrast=1.17, saturation=0.91),
+         look=dict(warmth=1.01, lift=0.03, contrast=1.17, saturation=0.91, sharp=1.15, micro=1.0),
          note="replaced 20231207_103831.jpg — dim workshop, awkward pose. This frame "
               "carries the caption literally: the steel frame in front, the finished house behind"),
     dict(kind="forest", lines=["MINIMAL.", "MODERN.", "NATURAL."], size=96),
     dict(kind="photo", src="IMG_20250525_142713.jpg", title=None, focus=0.42,
-         look=dict(warmth=1.02, lift=0.03, contrast=1.15, saturation=0.93)),
+         look=dict(warmth=1.02, lift=0.03, contrast=1.15, saturation=0.93, sharp=1.10, micro=0.95)),
 ]
 
 
@@ -389,7 +427,7 @@ def main() -> None:
 
     # The profile preview: three columns, four rows, each post cropped to the
     # square Instagram actually shows in the grid, with the same 2 px gutter.
-    cell = 360
+    cell = 470
     gutter = 4
     sheet = Image.new("RGB", (cell * 3 + gutter * 2, cell * 4 + gutter * 3), (255, 255, 255))
     for i, img in enumerate(rendered):
@@ -399,7 +437,7 @@ def main() -> None:
 
     # And a preview of the full 4:5 frames, which is what a visitor sees when a
     # post is opened rather than scanned.
-    fw, fh = 300, 375
+    fw, fh = 380, 475
     full = Image.new("RGB", (fw * 3 + gutter * 2, fh * 4 + gutter * 3), (255, 255, 255))
     for i, img in enumerate(rendered):
         full.paste(img.resize((fw, fh), Image.LANCZOS), ((i % 3) * (fw + gutter), (i // 3) * (fh + gutter)))

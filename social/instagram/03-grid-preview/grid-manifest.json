@@ -1,7 +1,7 @@
 {
   "generated_for": "MODUNERA",
   "post_size": "1080x1350",
-  "draft_scale": 0.5,
+  "draft_scale": 1.0,
   "posts": [
     {
       "post": 1,
@@ -11,7 +11,7 @@
       "watermark_band_removed_px": 141,
       "note": "substituted for IMG_20250519_182509.jpg, which would not transfer",
       "file": "social/instagram/04-post-drafts/post-01.jpg",
-      "pixels": "540x675"
+      "pixels": "1080x1350"
     },
     {
       "post": 2,
@@ -22,7 +22,7 @@
         "NATURE"
       ],
       "file": "social/instagram/04-post-drafts/post-02.jpg",
-      "pixels": "540x675"
+      "pixels": "1080x1350"
     },
     {
       "post": 3,
@@ -32,7 +32,7 @@
       "watermark_band_removed_px": 0,
       "note": "replaced IMG_20250618_094223.jpg — scaffolding dominated the frame",
       "file": "social/instagram/04-post-drafts/post-03.jpg",
-      "pixels": "540x675"
+      "pixels": "1080x1350"
     },
     {
       "post": 4,
@@ -44,7 +44,7 @@
         "CUSTOM FURNITURE"
       ],
       "file": "social/instagram/04-post-drafts/post-04.jpg",
-      "pixels": "540x675"
+      "pixels": "1080x1350"
     },
     {
       "post": 5,
@@ -53,7 +53,7 @@
       "title": "MADE AROUND YOU",
       "watermark_band_removed_px": 107,
       "file": "social/instagram/04-post-drafts/post-05.jpg",
-      "pixels": "540x675"
+      "pixels": "1080x1350"
     },
     {
       "post": 6,
@@ -62,7 +62,7 @@
       "title": "HOME, AFTER DARK",
       "watermark_band_removed_px": 0,
       "file": "social/instagram/04-post-drafts/post-06.jpg",
-      "pixels": "540x675"
+      "pixels": "1080x1350"
     },
     {
       "post": 7,
@@ -71,7 +71,7 @@
       "title": "FROM TÜRKİYE TO EUROPE",
       "watermark_band_removed_px": 0,
       "file": "social/instagram/04-post-drafts/post-07.jpg",
-      "pixels": "540x675"
+      "pixels": "1080x1350"
     },
     {
       "post": 8,
@@ -83,7 +83,7 @@
         "LU · CH"
       ],
       "file": "social/instagram/04-post-drafts/post-08.jpg",
-      "pixels": "540x675"
+      "pixels": "1080x1350"
     },
     {
       "post": 9,
@@ -93,7 +93,7 @@
       "watermark_band_removed_px": 0,
       "note": "replaced IMG_20260206_161331.jpg — an unfinished grey terrace",
       "file": "social/instagram/04-post-drafts/post-09.jpg",
-      "pixels": "540x675"
+      "pixels": "1080x1350"
     },
     {
       "post": 10,
@@ -103,7 +103,7 @@
       "watermark_band_removed_px": 0,
       "note": "replaced 20231207_103831.jpg — dim workshop, awkward pose. This frame carries the caption literally: the steel frame in front, the finished house behind",
       "file": "social/instagram/04-post-drafts/post-10.jpg",
-      "pixels": "540x675"
+      "pixels": "1080x1350"
     },
     {
       "post": 11,
@@ -114,7 +114,7 @@
         "NATURAL."
       ],
       "file": "social/instagram/04-post-drafts/post-11.jpg",
-      "pixels": "540x675"
+      "pixels": "1080x1350"
     },
     {
       "post": 12,
@@ -123,7 +123,7 @@
       "title": null,
       "watermark_band_removed_px": 107,
       "file": "social/instagram/04-post-drafts/post-12.jpg",
-      "pixels": "540x675"
+      "pixels": "1080x1350"
     }
   ]
 }

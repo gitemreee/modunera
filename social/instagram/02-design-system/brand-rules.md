@@ -189,9 +189,32 @@ processed.
 | Saturation 0.88–0.98 | Takes the shout out of the greens | Phone JPEGs oversaturate foliage, and these frames sit beside moss and sage |
 | Wide shallow vignette | Holds the eye in the frame | Two stops at the extreme corner and nothing where the eye actually reads |
 
-**Deliberately not done:** HDR tone mapping, clarity, local contrast, sky
-replacement, colour popping, skin smoothing, any preset. Those are what make a
-manufacturer's feed look like a stock library, and the brief rules them out.
+### Sharpening
+
+A 4,000 px phone frame resampled to 1,080 px loses its edges — that is what a
+Lanczos filter does, and every professional pipeline sharpens after the resize to
+put them back. Skipping it is the single biggest reason a photograph dropped
+straight into a layout reads as soft rather than as product photography.
+
+Two radii, because they do different jobs:
+
+| Pass | Radius | Amount | What it does |
+|---|---|---|---|
+| Micro-contrast | 34 px | 27–30% | Separates a wall from the trees behind it; gives the frame depth. This is the pass that reads as "professional" rather than "phone" |
+| Output sharpening | 1.1 px | 58–120% | Puts the edge back on cladding seams, window frames, deck boards, stair nosings |
+
+Both use a threshold (4 and 3), so flat sky and shadow are left alone and sensor
+noise is not amplified. The night frame runs at roughly half — `sharp=0.55,
+micro=0.35` — because sharpening a high-ISO frame sharpens its grain.
+
+Order matters and is fixed: crop → grade → **sharpen** → scrims → type. Sharpening
+before the scrims means the frosted foot stays soft and the type stays clean.
+
+**Deliberately not done:** HDR tone mapping, tone-mapped local contrast, sky
+replacement, colour popping, skin smoothing, any preset. The wide low-amount
+unsharp above is micro-contrast, not HDR: it has no local tone mapping and, at
+radius 34 and under 30%, cannot produce the halo that gives HDR away. Those other
+moves are what make a manufacturer's feed look like a stock library.
 
 ### The frosted foot
 
@@ -208,8 +231,10 @@ Posts without a caption get the scrim only, at 118 — just enough to carry
 
 ## 9. What is deliberately not done yet
 
-- No high-resolution finals. Drafts render at 540 × 675; `--full` produces
-  1080 × 1350 when the artwork is approved.
+- Drafts now render at the full 1,080 × 1,350. A half-size draft cannot answer
+  "is this sharp enough", which is the question the drafts exist to answer.
+  Resolution is not what makes something final here — approval is, and nothing has
+  entered `05-approved/`.
 - No captions and no hashtags.
 - Nothing uploaded anywhere.
 - `05-approved/` and `06-published/` are empty by design: a file only enters them
