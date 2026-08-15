@@ -50,16 +50,19 @@ BRAND = ROOT / "assets/brand"
 # tools/social/fonts/README.md.
 FONTS = Path(__file__).resolve().parent / "fonts"
 
-# Square. Instagram's profile grid is no longer a 1:1 crop of a taller post, so a
-# 1080x1350 upload and the tile that represents it are two different shapes, and
-# Instagram asks which part of the post the tile should show. That question is
-# answered by hand, once per post, and it is where the logos ended up shifted.
+# 4:5, and the whole of it is shown.
 #
-# A square post removes the question rather than answering it more carefully: the
-# post and its tile are the same picture, nothing is cropped on upload, nothing is
-# chosen afterwards. It costs height in the feed — a 4:5 post occupies more of a
-# phone screen — and that is the trade being made deliberately.
-POST_W, POST_H = 1080, 1080
+# This went the wrong way once and the account paid for it, so the finding is
+# recorded rather than the conclusion. Instagram's profile grid tile is taller
+# than it is wide. A 1080x1350 post fills that tile exactly. A 1080x1080 square
+# does not — it is cropped left and right to fit, which took the first letter off
+# every line of type in the set, because every line is anchored to the left
+# margin. "STEEL BEFORE TIMBER" arrived as "EEL BEFORE TIMBER".
+#
+# The safe bands below are what led to squaring it: they assumed the tile was a
+# centred 1:1 crop of the post. It is not, and it no longer is — the tile shows
+# the full 4:5. So the format goes back and the bands stay at zero.
+POST_W, POST_H = 1080, 1350
 # Drafts render at post size. A half-size draft cannot answer "is this sharp
 # enough", which is the question the drafts exist to answer. Approval still gates
 # publication — 05-approved is what makes something final, not the pixel count.
@@ -133,13 +136,18 @@ def contrast(a: tuple[int, int, int], b: tuple[int, int, int]) -> float:
 # moss is pure white, not off-white; the small label above it is cream #DAD7CD,
 # the same as .eyebrow on .section-dark; body copy there is #BCCAC2.
 
-# Nothing is cropped any more, so there is no dead band to keep clear of. These
-# stay at zero rather than being deleted: every placement in this file and in the
-# scripts that import it is expressed relative to them, and zero is the honest
-# value for "the post is the frame". If a format with a crop ever comes back,
-# it comes back here and nowhere else.
+# Zero, because the tile shows the whole post. These stay in the file rather than
+# being deleted: every placement here and in the scripts that import this is
+# written relative to them, so a format with a crop would come back in one place.
 SAFE_TOP = 0
 SAFE_BOTTOM = 0
+
+# Instagram draws its own furniture on top of the grid tile: a view count with an
+# eye icon at the bottom left, and a reel or carousel mark at the top right. The
+# count sat directly across the caption on every photographic post — visible in
+# the account as "0" over the words. Nothing of ours goes in either corner.
+IG_OVERLAY_BL = (0, 160)      # width, height of the bottom-left furniture, at 1080
+IG_OVERLAY_TR = (150, 130)
 # Tightened from 74. One margin for the logo, the caption, the card statement and
 # the domain, so everything sits on the same optical frame — a logo pulled left
 # while the caption below it stays put reads as a mistake, not as a decision.
@@ -150,10 +158,13 @@ MARGIN = 56
 # underneath. If those two ever disagreed the scrim would be solved for somewhere
 # the type is not, which is the failure this whole arrangement exists to prevent.
 DOMAIN_TEXT = "modunera.com"
-CAPTION_Y = POST_H - SAFE_BOTTOM - 106
+# Lifted clear of Instagram's view count, which sits in the bottom-left corner of
+# the tile and was printing straight across the caption. The domain stays at the
+# foot because it is on the right, where the corner is free.
+CAPTION_Y = POST_H - SAFE_BOTTOM - IG_OVERLAY_BL[1] - 78
 CAPTION_SIZE = 37
 CAPTION_TRACK = CAPTION_SIZE * 0.15 * 0.42
-LOGO_XY = (MARGIN, SAFE_TOP + 36)
+LOGO_XY = (MARGIN, SAFE_TOP + MARGIN)
 LOGO_W = 246
 
 
@@ -182,6 +193,18 @@ def strip_camera_watermark(im: Image.Image) -> tuple[Image.Image, int]:
     The strip is a near-white band the full width of the image carrying dark
     text. Rows are scanned upward from the bottom while they stay bright and
     close to grey; the first row that does not is the real photograph.
+
+    Brightness is judged by the row's median, not by counting bright pixels. The
+    counting version stopped partway into the band on the olive-grove frame and
+    left the top half of "vivo X200 Pro | ZEISS" in the picture: the rows running
+    through the lettering have enough dark pixels to fail a count, while their
+    median is still white, because the text is thin and the band is not. That
+    frame lost 141 px of a roughly 240 px band, and the remainder showed up in a
+    finished layout.
+
+    Colourlessness still has to hold as well. Asphalt and an overcast sky are
+    both grey, and the transport frame ends on a car park — brightness alone
+    would have eaten into it.
     """
     w, h = im.size
     small = im.convert("RGB").resize((160, h), Image.BILINEAR)
@@ -190,14 +213,15 @@ def strip_camera_watermark(im: Image.Image) -> tuple[Image.Image, int]:
     band = 0
     for offset in range(1, limit):
         y = h - offset
-        bright = colourless = 0
+        greys, colourless = [], 0
         for x in range(0, 160, 4):
             r, g, b = px[x, y]
-            if (r + g + b) / 3 > 195:
-                bright += 1
+            greys.append((r + g + b) / 3)
             if max(r, g, b) - min(r, g, b) < 26:
                 colourless += 1
-        if bright < 30 or colourless < 32:  # of 40 samples
+        greys.sort()
+        median = greys[len(greys) // 2]
+        if median < 186 or colourless < 34:    # of 40 samples
             break
         band = offset
     if band < h * 0.01:
@@ -643,14 +667,16 @@ def foot_scrim(im: Image.Image, height_ratio: float = 0.34, strength: int = 165)
     w, h = im.size
     band = int(h * height_ratio)
     # The ramp reaches full strength at the *top of the type*, not at the bottom of
-    # the post and not at the bottom of the safe square, and holds it from there
-    # down. Both of those earlier choices spent the gradient below everything it
-    # was protecting: measured on the lawn frame, the caption and the domain were
-    # receiving about 40 % and 62 % of the requested alpha respectively, which is
-    # why white kept failing there however high the ceiling went. Peaking at the
-    # type means the alpha that scrim_alpha_for solves for is the alpha the type
-    # actually gets.
-    peak = max(1, (h - SAFE_BOTTOM - 120) - (h - band))
+    # the post, and holds it from there down. Earlier versions peaked at the edge
+    # and spent the gradient below everything it was protecting: measured, the
+    # caption was receiving about 40 % of the requested alpha and the domain 62 %,
+    # which is why white kept failing however high the ceiling went.
+    #
+    # It reads CAPTION_Y rather than an offset from the foot, so moving the caption
+    # moves the gradient with it. Lifting the caption clear of Instagram's view
+    # count left it above the old peak, and the cladding frame failed at 4.17:1 —
+    # a gradient anchored to the wrong end of the post is the same bug twice.
+    peak = max(1, (CAPTION_Y - 30) - (h - band))
     scrim = Image.new("L", (1, band))
     for y in range(band):
         t = min(1.0, y / peak)

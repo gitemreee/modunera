@@ -58,17 +58,16 @@ L_INT = dict(warmth=1.02, lift=0.04, contrast=1.15, saturation=0.92)
 L_NIGHT = dict(warmth=1.04, lift=0.06, contrast=1.10, saturation=0.98, noisy=True)
 L_YARD = dict(warmth=0.99, lift=0.05, contrast=1.20, saturation=0.88)
 
-# The third value is the vertical focus of the crop. All five were re-chosen for
-# the square: a 1:1 frame takes a shorter slice out of the same photograph than a
-# 4:5 did, so every previous value landed somewhere else — on the lawn frame it
-# pushed the house into the top half and filled the bottom with gravel. Picked by
-# rendering the candidates side by side rather than by adjusting one at a time.
+# The third value is the vertical focus of the crop, back to the values chosen for
+# 4:5. They were re-picked for a square in between, which was the wrong format —
+# a square is cropped left and right by the grid tile, and every line of type in
+# this set is anchored to the left margin.
 PHOTOS = {
-    "lawn":     ("IMG_20250525_142713.jpg", L_EXT, 0.30),     # house full width, lawn under it
-    "frame":    ("IMG_20250913_183727.jpg", L_EXT, 0.55),     # the red steel frame is the subject, not a detail
-    "night":    ("IMG_20250913_193621.jpg", L_NIGHT, 0.46),   # the lit A-frame centred
-    "cladding": ("20231214_121220.jpg", L_YARD, 0.38),        # the timber wall, with the steps
-    "trailer":  ("IMG_20250913_104632.jpg", L_EXT, 0.46),     # wheels visible, it is a transport post
+    "lawn":     ("IMG_20250525_142713.jpg", L_EXT, 0.42),
+    "frame":    ("IMG_20250913_183727.jpg", L_EXT, 0.50),
+    "night":    ("IMG_20250913_193621.jpg", L_NIGHT, 0.45),
+    "cladding": ("20231214_121220.jpg", L_YARD, 0.24),
+    "trailer":  ("IMG_20250913_104632.jpg", L_EXT, 0.52),
 }
 
 
