@@ -109,14 +109,21 @@ def icon_book(d, x, y, s, c, w):
 
 
 def icon_pin(d, x, y, s, c, w):
-    """A map pin, for five countries and seven thousand pages of them."""
-    r = s * 0.34
-    cx, cy = x + s / 2, y + s * 0.38
-    d.arc([cx - r, cy - r, cx + r, cy + r], 155, 25, fill=c, width=w)
-    _line(d, [(cx - r * 0.906, cy + r * 0.423), (cx, y + s * 0.98)], c, w)
-    _line(d, [(cx + r * 0.906, cy + r * 0.423), (cx, y + s * 0.98)], c, w)
-    rr = s * 0.10
-    d.ellipse([cx - rr, cy - rr, cx + rr, cy + rr], outline=c, width=w)
+    """A map pin, drawn as one closed path.
+
+    It was an arc plus two straight lines meeting at the point. The maths was
+    right — the lines started exactly where the arc ended — and it still looked
+    broken, because a 26 px stroke on an arc and a 26 px stroke on a line meet at
+    an angle and leave a notch on the outside of the join. Pillow has no line-join
+    for that. One continuous curve has no joins to get wrong.
+    """
+    _curve(d, x, y, s, [((0.50, 0.97), (0.34, 0.72), (0.15, 0.60), (0.15, 0.42)),
+                        ((0.15, 0.42), (0.15, 0.16), (0.33, 0.04), (0.50, 0.04)),
+                        ((0.50, 0.04), (0.67, 0.04), (0.85, 0.16), (0.85, 0.42)),
+                        ((0.85, 0.42), (0.85, 0.60), (0.66, 0.72), (0.50, 0.97))], c, w)
+    r = s * 0.105
+    cx, cy = x + s * 0.50, y + s * 0.40
+    d.ellipse([cx - r, cy - r, cx + r, cy + r], outline=c, width=w)
 
 
 def icon_leaf(d, x, y, s, c, w):
@@ -132,23 +139,22 @@ def icon_leaf(d, x, y, s, c, w):
 
 
 def icon_flame(d, x, y, s, c, w):
-    """A flame. The one cover that is not about selling.
+    """A flame: one leaning teardrop, and nothing inside it.
 
-    Straight segments made a diamond inside a diamond. A flame is a teardrop —
-    narrow and pointed at the top, heavy and round at the bottom — and the whole
-    of that reading is in how fast it widens."""
-    # Symmetric about its axis, this is a water drop and nothing else. What makes
-    # a flame is the shoulder: one flank leaves the tip, turns back on itself, and
-    # only then swings wide. Without that inflection the shape stays a droplet
-    # however narrow the tip is drawn.
-    _curve(d, x, y, s, [((0.46, 0.02), (0.30, 0.24), (0.14, 0.44), (0.13, 0.66)),
-                        ((0.13, 0.66), (0.12, 0.88), (0.30, 0.98), (0.50, 0.98)),
-                        ((0.50, 0.98), (0.72, 0.98), (0.88, 0.86), (0.88, 0.64)),
-                        ((0.88, 0.64), (0.88, 0.44), (0.70, 0.40), (0.68, 0.22)),
-                        ((0.68, 0.22), (0.66, 0.12), (0.56, 0.06), (0.46, 0.02))], c, w)
-    _curve(d, x, y, s, [((0.46, 0.50), (0.60, 0.62), (0.66, 0.74), (0.60, 0.85)),
-                        ((0.60, 0.85), (0.54, 0.93), (0.40, 0.92), (0.35, 0.83)),
-                        ((0.35, 0.83), (0.30, 0.72), (0.38, 0.62), (0.46, 0.50))], c, w)
+    Two earlier versions. Straight segments made a diamond inside a diamond. Then
+    a symmetrical teardrop, which is a water drop — what separates a flame from a
+    drop is the lean and the way one flank turns back before it swings wide. The
+    version that added that also added a self-intersection at the shoulder, which
+    at this stroke weight showed as a snag.
+
+    The inner flame is gone with it. At the 32 px an avatar row is read at, an
+    inner mark inside an outline is two strokes half a pixel apart — mud, not
+    detail. The lean carries the reading on its own.
+    """
+    _curve(d, x, y, s, [((0.44, 0.04), (0.24, 0.30), (0.13, 0.50), (0.14, 0.70)),
+                        ((0.14, 0.70), (0.15, 0.89), (0.31, 0.97), (0.50, 0.97)),
+                        ((0.50, 0.97), (0.69, 0.97), (0.86, 0.88), (0.86, 0.66)),
+                        ((0.86, 0.66), (0.86, 0.44), (0.60, 0.34), (0.44, 0.04))], c, w)
 
 
 def icon_frame(d, x, y, s, c, w):
