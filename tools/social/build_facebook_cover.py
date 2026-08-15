@@ -41,11 +41,23 @@ PHONE = (211, 0, 1491, H)               # the middle 1280 px
 # cover's bottom edge, about 16 px in from the left of an 820-wide display. At
 # this file's scale that is the corner below — nothing legible goes in it.
 AVATAR = (0, 428, 400, H)
-PANEL = 1020                            # the green panel's right edge, before the fade
-FADE = 260                              # how far the photograph dissolves into it
-TEXT_X = 260                            # inside the phone crop, right of its left edge
+# The panel sits on the RIGHT. It was on the left, and it covered the subject: in
+# this frame the A-frame is left of centre, so a left panel wide enough to carry
+# type buried the house and left only the dark cladding at its far end showing.
+# The photograph is what has to be seen; the type goes where the picture is quiet.
+PANEL = 950                             # the panel's left edge, before the fade
+FADE = 420                              # a long dissolve leftward, so the join is not an edge
+TEXT_X = 1010
+# Measured against the phone crop rather than chosen: at 30 px the two longest
+# lines ran to 1516 and 1511, past the 1491 the phone shows. 28 clears it by 8.
+BODY = 28
 
-PHOTO = "IMG_20250519_183120.jpg"       # the A-frame in the olive grove, 1.94:1
+# The olive-grove frame was here and it was the wrong picture for this shape: at
+# 2.7:1 the house shrank into a wall of foliage and the cover read as trees. This
+# one puts the A-frame across the centre with the deck running the full width, and
+# its left third is dark canopy already — which is where the panel goes, so the
+# join lands on foliage rather than cutting across the building.
+PHOTO = "IMG_20250519_182528.jpg"
 LOOK = dict(warmth=1.02, lift=0.03, contrast=1.16, saturation=0.94)
 
 
@@ -64,7 +76,7 @@ def build() -> Image.Image:
     # The photograph fills the whole frame; the panel is laid over its left. A
     # half-width photograph would have to be cropped to 1.3:1 and this frame is
     # 1.94:1 — cropping it that hard is what cost the website's hero its roofline.
-    photo = g.cover(im, W, H, 0.52)
+    photo = g.cover(im, W, H, 0.46)
     photo = g.grade(photo, **LOOK)
     reduction = max(src_w / W, src_h / H)
     photo = g.sharpen(photo, amount=min(1.20, 0.72 + 0.28 * reduction),
@@ -74,10 +86,10 @@ def build() -> Image.Image:
     # so the join is a dissolve rather than a seam.
     mask = Image.new("L", (W, 1), 0)
     for x in range(W):
-        if x <= PANEL:
+        if x >= PANEL:
             mask.putpixel((x, 0), 255)
-        elif x <= PANEL + FADE:
-            t = 1 - (x - PANEL) / FADE
+        elif x >= PANEL - FADE:
+            t = 1 - (PANEL - x) / FADE
             mask.putpixel((x, 0), int(255 * (t ** 1.4)))
     canvas = photo.copy()
     canvas.paste(Image.new("RGB", (W, H), g.MOSS_DEEP), (0, 0), mask.resize((W, H)))
@@ -88,16 +100,20 @@ def build() -> Image.Image:
 # Where each piece of type goes. Declared once so the drawing and the mask that
 # measures the ground under it cannot drift apart — the same arrangement the post
 # renderer uses, and for the same reason.
-SLOGAN = dict(xy=(TEXT_X, 212), text="DESIGN YOUR NATURE", size=58, colour=g.WHITE)
+SLOGAN = dict(xy=(TEXT_X, 196), text="DESIGN YOUR", size=58, colour=g.WHITE)
+SLOGAN2 = dict(xy=(TEXT_X, 266), text="NATURE", size=58, colour=g.WHITE)
 # Three short lines rather than two long ones. The second of the two ran past the
 # panel into the photograph, where white type has nothing to sit on — and it was
 # only visible in the phone crop, because on the desktop crop the fade is far
 # enough right to look deliberate.
-LINES = [(TEXT_X, 306, "Tiny Houses, Modulbau, Stahlbau und Möbel nach Maß."),
-         (TEXT_X, 344, "Produziert in der Türkei."),
-         (TEXT_X, 380, "Geliefert nach DE · NL · DK · LU · CH.")]
-LOGO_XY, LOGO_W = (TEXT_X, 70), 300
-RULE = (TEXT_X, 180, TEXT_X + 92, 183)
+# Short lines: the panel is 632 px of usable width, and the long single line that
+# fitted a full-width panel would now run off the frame.
+LINES = [(TEXT_X, 366, "Tiny Houses, Modulbau, Stahlbau,"),
+         (TEXT_X, 404, "Bungalows und Möbel nach Maß."),
+         (TEXT_X, 452, "Produziert in der Türkei."),
+         (TEXT_X, 490, "Geliefert nach DE · NL · DK · LU · CH.")]
+LOGO_XY, LOGO_W = (TEXT_X, 74), 290
+RULE = (TEXT_X, 166, TEXT_X + 92, 169)
 
 
 def line_masks() -> list[tuple[str, Image.Image]]:
@@ -111,13 +127,14 @@ def line_masks() -> list[tuple[str, Image.Image]]:
     this codebase. Measure the smallest thing that can fail on its own.
     """
     out = []
-    m = Image.new("L", (W, H), 0)
-    g.tracked(ImageDraw.Draw(m), SLOGAN["xy"], SLOGAN["text"],
-              g.F_TITLE(SLOGAN["size"]), 255, tracking=-SLOGAN["size"] * 0.021)
-    out.append(("slogan", m))
+    for n, spec in (("slogan 1", SLOGAN), ("slogan 2", SLOGAN2)):
+        m = Image.new("L", (W, H), 0)
+        g.tracked(ImageDraw.Draw(m), spec["xy"], spec["text"],
+                  g.F_TITLE(spec["size"]), 255, tracking=-spec["size"] * 0.021)
+        out.append((n, m))
     for i, (x, y, text) in enumerate(LINES):
         m = Image.new("L", (W, H), 0)
-        ImageDraw.Draw(m).text((x, y), text, font=g.F_BODY(30), fill=255)
+        ImageDraw.Draw(m).text((x, y), text, font=g.F_BODY(BODY), fill=255)
         out.append((f"line {i + 1}", m))
     return out
 
@@ -140,10 +157,11 @@ def draw_type(canvas: Image.Image, mask_only: bool = False) -> Image.Image:
         canvas.paste(logo, LOGO_XY, logo)
         d.rectangle(list(RULE), fill=g.CREAM)
 
-    g.tracked(d, SLOGAN["xy"], SLOGAN["text"], g.F_TITLE(SLOGAN["size"]),
-              ink or SLOGAN["colour"], tracking=-SLOGAN["size"] * 0.021)
+    for spec in (SLOGAN, SLOGAN2):
+        g.tracked(d, spec["xy"], spec["text"], g.F_TITLE(spec["size"]),
+                  ink or spec["colour"], tracking=-spec["size"] * 0.021)
     for x, y, text in LINES:
-        d.text((x, y), text, font=g.F_BODY(30), fill=ink or g.ON_MOSS)
+        d.text((x, y), text, font=g.F_BODY(BODY), fill=ink or g.ON_MOSS)
     return target
 
 
@@ -186,6 +204,11 @@ def check(bare: Image.Image, mask: Image.Image) -> list[str]:
         problems.append(f"type spans x {x0}-{x1}, outside the phone crop {PHONE[0]}-{PHONE[2]}")
     if x0 < AVATAR[2] and y1 > AVATAR[1]:
         problems.append(f"type reaches y {y1}; the profile picture covers from {AVATAR[1]} down")
+
+    for text in [SLOGAN["text"], SLOGAN2["text"]] + [t for _, _, t in LINES]:
+        gone = g.missing_glyphs(text)
+        if gone:
+            problems.append(f"no glyph for {' '.join(gone)} in {text!r}")
 
     for name, m in line_masks():
         v = g.luma_under(bare, m)

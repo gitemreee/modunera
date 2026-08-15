@@ -186,6 +186,29 @@ F_BODY = lambda s: font("Poppins-Medium.ttf", s)       # 500, as body copy is
 F_LABEL = lambda s: font("Poppins-ExtraBold.ttf", s)   # 800, as .eyebrow is
 
 
+_CMAP: dict = {}
+
+
+def missing_glyphs(text: str) -> list[str]:
+    """Characters the committed fonts cannot draw.
+
+    Pillow does not complain about a character it has no glyph for — it draws
+    .notdef, an empty box, and the render completes and gets published. It has
+    happened twice: "TÜRKİYE" lost its dotted capital I to a latin-only subset,
+    and an arrow between the origin and the markets came out as a box on a
+    Facebook cover. Both were caught by looking, which is not a method.
+
+    Checked against the font files rather than against a list of what they were
+    expected to contain, so replacing a face re-answers the question by itself.
+    """
+    if not _CMAP:
+        from fontTools.ttLib import TTFont
+        for f in sorted(FONTS.glob("*.ttf")):
+            _CMAP[f.name] = set(TTFont(str(f)).getBestCmap())
+    common = set.intersection(*_CMAP.values()) if _CMAP else set()
+    return sorted({c for c in text if ord(c) not in common and c not in "\n\t"})
+
+
 def strip_camera_watermark(im: Image.Image) -> tuple[Image.Image, int]:
     """Remove the phone's burnt-in branding strip from the foot of the frame.
 
