@@ -78,160 +78,239 @@ def _curve(d, x, y, s, spans, colour, w):
     d.line([(x + px * s, y + py * s) for px, py in pts], fill=colour, width=w, joint="curve")
 
 
+
+
+def _glyph(d, x, y, s, ch, colour, font):
+    """A character used as artwork — the euro and the question mark.
+
+    Drawing a euro sign by hand is drawing a letter badly. The committed face
+    already carries both, so they are set rather than traced."""
+    box = d.textbbox((0, 0), ch, font=font)
+    d.text((x + (s - (box[2] - box[0])) / 2 - box[0],
+            y + (s - (box[3] - box[1])) / 2 - box[1]), ch, font=font, fill=colour)
+
+
 def icon_house(d, x, y, s, c, w):
-    """The A-frame, which is what MODUNERA actually builds and what the logo is."""
-    _line(d, [(x, y + s), (x + s / 2, y), (x + s, y + s)], c, w)
-    _line(d, [(x + s * 0.30, y + s * 0.60), (x + s * 0.70, y + s * 0.60)], c, w)
+    """The product in side view: a long body with the A-frame set into it.
+
+    The wheels came off. Drawn at 380 px they were two small ellipses under a busy
+    shape and the whole thing read as a machine; at the 44 px a phone uses, they
+    were grit. What identifies this as MODUNERA is the gable cutting through a
+    flat-roofed body, and that survives at any size — so it carries the tile alone,
+    with a ground line under it instead of wheels.
+    """
+    b0, b1 = y + s * 0.34, y + s * 0.84
+    _line(d, [(x + s * 0.06, b0), (x + s * 0.94, b0), (x + s * 0.94, b1),
+              (x + s * 0.06, b1), (x + s * 0.06, b0)], c, w)
+    _line(d, [(x + s * 0.30, b1), (x + s * 0.50, y + s * 0.08),
+              (x + s * 0.70, b1)], c, w)
+    for x0 in (0.13, 0.77):
+        _line(d, [(x + s * x0, y + s * 0.48), (x + s * (x0 + 0.10), y + s * 0.48),
+                  (x + s * (x0 + 0.10), y + s * 0.64), (x + s * x0, y + s * 0.64),
+                  (x + s * x0, y + s * 0.48)], c, w)
+    _line(d, [(x, y + s * 0.96), (x + s, y + s * 0.96)], c, w)
 
 
-def icon_tag(d, x, y, s, c, w):
-    """A price tag: a rectangle with one corner cut to a point, and its eyelet.
-
-    The first version was a square rotated forty-five degrees with a dot in it,
-    which is a diamond, not a tag. A tag is read by its asymmetry — three square
-    corners and one point — so the shape has to keep them."""
-    _line(d, [(x + s * 0.44, y + s * 0.06), (x + s * 0.94, y + s * 0.06),
-              (x + s * 0.94, y + s * 0.56), (x + s * 0.50, y + s * 0.96),
-              (x + s * 0.06, y + s * 0.52), (x + s * 0.44, y + s * 0.06)], c, w)
-    r = s * 0.085
-    cx, cy = x + s * 0.74, y + s * 0.26
+def icon_tag(d, x, y, s, c, w, font=None):
+    """The tag, with a euro in it. A tag alone is a label; a tag with a currency
+    is a price."""
+    _line(d, [(x + s * 0.40, y + s * 0.04), (x + s * 0.96, y + s * 0.04),
+              (x + s * 0.96, y + s * 0.60), (x + s * 0.50, y + s * 0.98),
+              (x + s * 0.04, y + s * 0.52), (x + s * 0.40, y + s * 0.04)], c, w)
+    r = s * 0.075
+    cx, cy = x + s * 0.78, y + s * 0.22
     d.ellipse([cx - r, cy - r, cx + r, cy + r], outline=c, width=w)
+    if font:
+        _glyph(d, x + s * 0.10, y + s * 0.24, s * 0.68, "\u20ac", c, font)
 
 
 def icon_book(d, x, y, s, c, w):
-    """An open book, for a hundred and ten articles."""
-    _line(d, [(x + s * 0.06, y + s * 0.20), (x + s * 0.06, y + s * 0.84)], c, w)
-    _line(d, [(x + s * 0.94, y + s * 0.20), (x + s * 0.94, y + s * 0.84)], c, w)
-    _line(d, [(x + s * 0.06, y + s * 0.20), (x + s * 0.48, y + s * 0.30),
-              (x + s * 0.48, y + s * 0.94), (x + s * 0.06, y + s * 0.84)], c, w)
-    _line(d, [(x + s * 0.94, y + s * 0.20), (x + s * 0.52, y + s * 0.30),
-              (x + s * 0.52, y + s * 0.94), (x + s * 0.94, y + s * 0.84)], c, w)
+    """An open book with a bookmark.
+
+    The spanner laid across it did not survive being small — it read as a hook —
+    and a book on its own says guides perfectly well. The ribbon is what makes it
+    a book in use rather than a shape."""
+    _line(d, [(x + s * 0.02, y + s * 0.14), (x + s * 0.02, y + s * 0.84)], c, w)
+    _line(d, [(x + s * 0.98, y + s * 0.14), (x + s * 0.98, y + s * 0.84)], c, w)
+    _line(d, [(x + s * 0.02, y + s * 0.14), (x + s * 0.48, y + s * 0.26),
+              (x + s * 0.48, y + s * 0.98), (x + s * 0.02, y + s * 0.84)], c, w)
+    _line(d, [(x + s * 0.98, y + s * 0.14), (x + s * 0.52, y + s * 0.26),
+              (x + s * 0.52, y + s * 0.98), (x + s * 0.98, y + s * 0.84)], c, w)
+    _line(d, [(x + s * 0.72, y + s * 0.21), (x + s * 0.72, y + s * 0.62),
+              (x + s * 0.80, y + s * 0.52), (x + s * 0.88, y + s * 0.60),
+              (x + s * 0.88, y + s * 0.18)], c, round(w * 0.8))
+
+
+def _spanner(d, x, y, s, c, w):
+    """An open-ended spanner: a shaft with a C at its head. Small enough to sit on
+    something else, which is where it is used twice in this set."""
+    _line(d, [(x + s * 0.16, y + s * 0.90), (x + s * 0.62, y + s * 0.38)], c, w)
+    r = s * 0.24
+    cx, cy = x + s * 0.74, y + s * 0.24
+    d.arc([cx - r, cy - r, cx + r, cy + r], 40, 300, fill=c, width=w)
 
 
 def icon_pin(d, x, y, s, c, w):
-    """A map pin, drawn as one closed path.
+    """A globe, not a pin.
 
-    It was an arc plus two straight lines meeting at the point. The maths was
-    right — the lines started exactly where the arc ended — and it still looked
-    broken, because a 26 px stroke on an arc and a 26 px stroke on a line meet at
-    an angle and leave a notch on the outside of the join. Pillow has no line-join
-    for that. One continuous curve has no joins to get wrong.
+    A pin means one place and this highlight is five countries, so the pin was
+    wrong before it was drawn badly. Filling its head with a ring of stars made it
+    worse: at 380 px the stars were dots, at 44 px a berry. Meridians are two
+    ellipses and two lines, they mean international everywhere, and they hold
+    their shape all the way down.
     """
-    _curve(d, x, y, s, [((0.50, 0.97), (0.34, 0.72), (0.15, 0.60), (0.15, 0.42)),
-                        ((0.15, 0.42), (0.15, 0.16), (0.33, 0.04), (0.50, 0.04)),
-                        ((0.50, 0.04), (0.67, 0.04), (0.85, 0.16), (0.85, 0.42)),
-                        ((0.85, 0.42), (0.85, 0.60), (0.66, 0.72), (0.50, 0.97))], c, w)
-    r = s * 0.105
-    cx, cy = x + s * 0.50, y + s * 0.40
-    d.ellipse([cx - r, cy - r, cx + r, cy + r], outline=c, width=w)
+    m = s * 0.03
+    d.ellipse([x + m, y + m, x + s - m, y + s - m], outline=c, width=w)
+    d.ellipse([x + s * 0.30, y + m, x + s * 0.70, y + s - m], outline=c, width=w)
+    _line(d, [(x + s * 0.09, y + s * 0.34), (x + s * 0.91, y + s * 0.34)], c, w)
+    _line(d, [(x + s * 0.09, y + s * 0.66), (x + s * 0.91, y + s * 0.66)], c, w)
 
 
-def icon_leaf(d, x, y, s, c, w):
-    """A leaf: two bezier flanks from base to tip, plus the midrib.
+def icon_gear(d, x, y, s, c, w):
+    """A gear with a tick in it: the thing was made, and it was checked."""
+    import math
+    r_out, r_in, teeth = s * 0.46, s * 0.36, 10
+    cx, cy = x + s * 0.5, y + s * 0.5
+    pts = []
+    for i in range(teeth * 2):
+        a = math.radians(i * 180 / teeth - 90)
+        r = r_out if i % 2 == 0 else r_in
+        pts.append((cx + r * math.cos(a), cy + r * math.sin(a)))
+    _line(d, pts + [pts[0]], c, w)
+    _line(d, [(cx - s * 0.16, cy), (cx - s * 0.04, cy + s * 0.13),
+              (cx + s * 0.18, cy - s * 0.15)], c, w)
 
-    Built from arcs first, which produced a symmetrical lens with a diagonal
-    through it — the empty-set sign. A leaf is not symmetrical about its axis in
-    the way an arc pair is: each flank leaves the base almost along the axis and
-    swings wide near the middle, and that changing rate is what makes it read."""
-    _curve(d, x, y, s, [((0.12, 0.90), (0.06, 0.44), (0.40, 0.08), (0.90, 0.10)),
-                        ((0.90, 0.10), (0.92, 0.60), (0.56, 0.94), (0.12, 0.90))], c, w)
-    _curve(d, x, y, s, [((0.12, 0.90), (0.38, 0.64), (0.62, 0.40), (0.90, 0.10))], c, w)
 
+def icon_hand_tool(d, x, y, s, c, w):
+    """A spanner crossed with a hammer.
 
-def icon_flame(d, x, y, s, c, w):
-    """A flame: one leaning teardrop, and nothing inside it.
+    A hand gripping a tool was the reference and it does not survive this size:
+    fingers at 44 px are a scribble, and at 380 they were a scribble with more
+    pixels in it. Two crossed tools is the older sign for the same thing and it is
+    made of straight lines, which is what this stroke weight is good at.
 
-    Two earlier versions. Straight segments made a diamond inside a diamond. Then
-    a symmetrical teardrop, which is a water drop — what separates a flame from a
-    drop is the lean and the way one flank turns back before it swings wide. The
-    version that added that also added a self-intersection at the shoulder, which
-    at this stroke weight showed as a snag.
-
-    The inner flame is gone with it. At the 32 px an avatar row is read at, an
-    inner mark inside an outline is two strokes half a pixel apart — mud, not
-    detail. The lean carries the reading on its own.
+    The handle runs into the head rather than up to it. Ending it at the edge left
+    a hairline of ground between the two and the head read as a separate block
+    floating beside a stick.
     """
-    _curve(d, x, y, s, [((0.44, 0.04), (0.24, 0.30), (0.13, 0.50), (0.14, 0.70)),
-                        ((0.14, 0.70), (0.15, 0.89), (0.31, 0.97), (0.50, 0.97)),
-                        ((0.50, 0.97), (0.69, 0.97), (0.86, 0.88), (0.86, 0.66)),
-                        ((0.86, 0.66), (0.86, 0.44), (0.60, 0.34), (0.44, 0.04))], c, w)
+    _line(d, [(x + s * 0.10, y + s * 0.92), (x + s * 0.70, y + s * 0.26)], c, w)
+    r = s * 0.16
+    cx, cy = x + s * 0.80, y + s * 0.16
+    d.arc([cx - r, cy - r, cx + r, cy + r], 35, 295, fill=c, width=w)
+    _line(d, [(x + s * 0.90, y + s * 0.92), (x + s * 0.30, y + s * 0.22)], c, w)
+    _line(d, [(x + s * 0.10, y + s * 0.06), (x + s * 0.44, y + s * 0.06),
+              (x + s * 0.44, y + s * 0.28), (x + s * 0.10, y + s * 0.28),
+              (x + s * 0.10, y + s * 0.06)], c, w)
 
 
-def icon_frame(d, x, y, s, c, w):
-    """Four panels: a portfolio.
-
-    An open square with a diagonal through it read as a pencil, which is an edit
-    icon in every interface anyone has used. Four panels cannot be mistaken for
-    an instruction."""
-    for cx in (0.04, 0.54):
-        for cy in (0.04, 0.54):
-            _line(d, [(x + s * cx, y + s * cy), (x + s * (cx + 0.42), y + s * cy),
-                      (x + s * (cx + 0.42), y + s * (cy + 0.42)),
-                      (x + s * cx, y + s * (cy + 0.42)),
-                      (x + s * cx, y + s * cy)], c, w)
-
-
-def icon_bubble(d, x, y, s, c, w):
-    """A speech bubble, for a hundred and sixty answers."""
-    _line(d, [(x + s * 0.06, y + s * 0.72), (x + s * 0.06, y + s * 0.10),
-              (x + s * 0.94, y + s * 0.10), (x + s * 0.94, y + s * 0.72),
-              (x + s * 0.38, y + s * 0.72), (x + s * 0.20, y + s * 0.94),
-              (x + s * 0.20, y + s * 0.72), (x + s * 0.06, y + s * 0.72)], c, w)
+def icon_truck(d, x, y, s, c, w):
+    """A flatbed with a load on it. Production ends when something leaves the yard,
+    and this is the page that answers what happens then."""
+    _line(d, [(x + s * 0.02, y + s * 0.30), (x + s * 0.02, y + s * 0.72),
+              (x + s * 0.58, y + s * 0.72), (x + s * 0.58, y + s * 0.30),
+              (x + s * 0.02, y + s * 0.30)], c, w)
+    for i in range(2):
+        _line(d, [(x + s * 0.02, y + s * (0.44 + i * 0.14)),
+                  (x + s * 0.58, y + s * (0.44 + i * 0.14))], c, round(w * 0.7))
+    _line(d, [(x + s * 0.58, y + s * 0.72), (x + s * 0.58, y + s * 0.44),
+              (x + s * 0.78, y + s * 0.44), (x + s * 0.94, y + s * 0.58),
+              (x + s * 0.94, y + s * 0.72), (x + s * 0.58, y + s * 0.72)], c, w)
+    r = s * 0.085
+    for cx in (0.20, 0.44, 0.80):
+        d.ellipse([x + s * cx - r, y + s * 0.72 - r * 0.3,
+                   x + s * cx + r, y + s * 0.72 + r * 1.7], outline=c, width=w)
 
 
-def icon_layers(d, x, y, s, c, w):
-    """Stacked planes: modules, and the steel under them."""
-    for i, dy in enumerate((0.10, 0.42, 0.74)):
-        _line(d, [(x + s * 0.50, y + s * dy), (x + s * 0.96, y + s * (dy + 0.13)),
-                  (x + s * 0.50, y + s * (dy + 0.26)), (x + s * 0.04, y + s * (dy + 0.13)),
-                  (x + s * 0.50, y + s * dy)], c, w)
+def icon_bubble(d, x, y, s, c, w, font=None):
+    """Two bubbles: one asks, one answers. A single bubble is a message; a pair
+    with a question mark is a FAQ."""
+    _line(d, [(x + s * 0.30, y + s * 0.04), (x + s * 0.98, y + s * 0.04),
+              (x + s * 0.98, y + s * 0.52), (x + s * 0.52, y + s * 0.52),
+              (x + s * 0.40, y + s * 0.68), (x + s * 0.40, y + s * 0.52),
+              (x + s * 0.30, y + s * 0.52), (x + s * 0.30, y + s * 0.04)], c, w)
+    _line(d, [(x + s * 0.02, y + s * 0.42), (x + s * 0.24, y + s * 0.42)], c, w)
+    _line(d, [(x + s * 0.02, y + s * 0.42), (x + s * 0.02, y + s * 0.90),
+              (x + s * 0.18, y + s * 0.90), (x + s * 0.30, y + s * 1.02),
+              (x + s * 0.30, y + s * 0.90), (x + s * 0.62, y + s * 0.90),
+              (x + s * 0.62, y + s * 0.58)], c, w)
+    if font:
+        _glyph(d, x + s * 0.44, y + s * 0.02, s * 0.42, "?", c, font)
+
+
+def icon_leaves(d, x, y, s, c, w):
+    """A seedling: a stem out of the ground with two leaves.
+
+    The palm went. Two leaves above an open hand is a face — the leaves become
+    eyes and the palm becomes a mouth — and a thumb on the end of the curve did
+    not undo it, because the reading comes from the arrangement rather than from
+    the detail. A stem does the same job with no ambiguity: something growing,
+    in ground worth keeping.
+    """
+    _line(d, [(x + s * 0.50, y + s * 0.92), (x + s * 0.50, y + s * 0.34)], c, w)
+    for dx, dy, sc, flip in ((0.02, 0.14, 0.46, True), (0.52, 0.06, 0.46, False)):
+        pts = [((0.12, 0.90), (0.06, 0.44), (0.40, 0.08), (0.90, 0.10)),
+               ((0.90, 0.10), (0.92, 0.60), (0.56, 0.94), (0.12, 0.90))]
+        if flip:
+            pts = [tuple((1 - px, py) for px, py in seg) for seg in pts]
+        _curve(d, x + s * dx, y + s * dy, s * sc, pts, c, round(w * 0.85))
+    _line(d, [(x + s * 0.14, y + s * 0.94), (x + s * 0.86, y + s * 0.94)], c, w)
 
 
 # --- the covers ---------------------------------------------------------------
 
 COVERS = [
-    dict(slug="models", label="MODELS", icon=icon_house,
+    dict(slug="models", label="MODELS", icon=icon_house, glyph=None,
          ground=g.MOSS_DEEP, ink=g.CREAM, link="modunera.com/en/models/",
          note="Eight models, MD 1 to MD 8"),
-    dict(slug="prices", label="PRICES", icon=icon_tag,
+    dict(slug="prices", label="PRICES", icon=icon_tag, glyph=0.30,
          ground=g.PAPER, ink=g.ROOF, link="modunera.com/en/price-comparison/",
          note="Price comparison across the five markets"),
-    dict(slug="guides", label="GUIDES", icon=icon_book,
+    dict(slug="guides", label="GUIDES", icon=icon_book, glyph=None,
          ground=g.MOSS, ink=g.CREAM, link="modunera.com/en/guides/",
          note="Permits, delivery and comparison"),
-    dict(slug="europe", label="EUROPE", icon=icon_pin,
+    dict(slug="europe", label="EUROPE", icon=icon_pin, glyph=None,
          ground=g.CREAM, ink=g.MOSS_DEEP, link="modunera.com/en/countries/",
          note="Germany, Netherlands, Denmark, Luxembourg, Switzerland"),
-    dict(slug="quality", label="QUALITY", icon=icon_leaf,
+    dict(slug="quality", label="QUALITY", icon=icon_gear, glyph=None,
          ground=g.CHARCOAL, ink=g.SAGE, link="modunera.com/en/advantages/",
          note="What a tiny house does well, and what it does not solve"),
-    dict(slug="build", label="WHAT WE BUILD", icon=icon_layers,
+    dict(slug="build", label="WHAT WE BUILD", icon=icon_hand_tool, glyph=None,
          ground=g.ROOF, ink=g.WHITE, link="modunera.com/en/services/",
          note="Modular, steel, bungalows and bespoke furniture"),
-    dict(slug="production", label="PRODUCTION", icon=icon_frame,
+    dict(slug="production", label="PRODUCTION", icon=icon_truck, glyph=None,
          ground=g.SAGE, ink=g.MOSS_DEEP, link="modunera.com/en/production-faq/",
          note="Production, quality, delivery and purchase — 60 questions"),
-    dict(slug="faq", label="FAQ", icon=icon_bubble,
+    dict(slug="faq", label="FAQ", icon=icon_bubble, glyph=0.26,
          ground=g.PAPER, ink=g.MOSS_DEEP, link="modunera.com/en/faq/",
          note="Permits, delivery, customs and buying"),
-    dict(slug="nature", label="NATURE", icon=icon_flame,
+    dict(slug="nature", label="NATURE", icon=icon_leaves, glyph=None,
          ground=g.CHARCOAL, ink=g.CREAM, link=None,
          note="Care on wooded sites. Not a sales highlight, and it has no link."),
 ]
+
+# Set one: the logo's own backing, and the roof red on it. One pairing for all
+# nine, which is the quieter row — it reads as a set of buttons rather than as
+# nine decisions. 5.26:1, comfortably above the 3.0 an icon needs.
+BRAND_GROUND, BRAND_INK = g.CREAM, g.ROOF
 
 
 TARGET = 380 * SS               # the longest side of every icon's ink, normalised
 
 
-def _draw_alone(fn, s: float, stroke: int) -> Image.Image:
+def _draw_alone(spec, s: float, stroke: int) -> Image.Image:
     """One icon on its own transparent layer, so its ink can be measured."""
     pad = int(s * 0.6)
     layer = Image.new("LA", (int(s + pad * 2), int(s + pad * 2)), (0, 0))
-    fn(ImageDraw.Draw(layer), pad, pad, s, (255, 255), stroke)
+    d = ImageDraw.Draw(layer)
+    if spec.get("glyph"):
+        spec["icon"](d, pad, pad, s, (255, 255), stroke,
+                     font=g.F_TITLE(int(s * spec["glyph"])))
+    else:
+        spec["icon"](d, pad, pad, s, (255, 255), stroke)
     return layer
 
 
-def cover(spec: dict) -> Image.Image:
+def cover(spec: dict, brand: bool = False) -> Image.Image:
     """Draw the icon, measure where its ink actually landed, then place that.
 
     Placing by the nominal box was wrong twice over, and both were visible in the
@@ -248,15 +327,16 @@ def cover(spec: dict) -> Image.Image:
     """
     stroke = STROKE * SS
     s = SAFE_D * SS * 0.62
-    box = _draw_alone(spec["icon"], s, stroke).getbbox()
+    box = _draw_alone(spec, s, stroke).getbbox()
     s *= TARGET / max(box[2] - box[0], box[3] - box[1])
 
-    layer = _draw_alone(spec["icon"], s, stroke)
+    layer = _draw_alone(spec, s, stroke)
     box = layer.getbbox()
     ink = layer.crop(box)
 
-    big = Image.new("RGB", (W * SS, H * SS), spec["ground"])
-    tint = Image.new("RGB", ink.size, spec["ink"])
+    ground = BRAND_GROUND if brand else spec["ground"]
+    big = Image.new("RGB", (W * SS, H * SS), ground)
+    tint = Image.new("RGB", ink.size, BRAND_INK if brand else spec["ink"])
     big.paste(tint, (CENTRE[0] * SS - ink.width // 2,
                      CENTRE[1] * SS - ink.height // 2), ink.getchannel("A"))
     return big.resize((W, H), Image.LANCZOS)
@@ -292,31 +372,44 @@ def main() -> None:
             print(f"FAIL {p}", file=sys.stderr)
         raise SystemExit(1)
 
-    OUT.mkdir(parents=True, exist_ok=True)
-    circles = []
-    for spec in COVERS:
-        im = cover(spec)
-        im.save(OUT / f"{spec['slug']}.png", optimize=True)
-        circles.append(circle_preview(im))
+    for name, brand in (("brand", True), ("varied", False)):
+        out = OUT / name
+        out.mkdir(parents=True, exist_ok=True)
+        circles = []
+        for spec in COVERS:
+            im = cover(spec, brand=brand)
+            im.save(out / f"{spec['slug']}.png", optimize=True)
+            circles.append(circle_preview(im))
 
-    # the row as it appears under the bio, on the white the profile is drawn on
-    gap = 22
-    board = Image.new("RGB", (sum(c.width for c in circles) + gap * (len(circles) + 1),
-                              circles[0].height + gap * 2), (255, 255, 255))
-    x = gap
-    for c in circles:
-        board.paste(c, (x, gap))
-        x += c.width + gap
-    board.save(OUT / "contact-sheet.jpg", quality=94, optimize=True)
+        gap = 22
+        board = Image.new("RGB", (sum(c.width for c in circles) + gap * (len(circles) + 1),
+                                  circles[0].height + gap * 2), (255, 255, 255))
+        x = gap
+        for c in circles:
+            board.paste(c, (x, gap))
+            x += c.width + gap
+        board.save(out / "contact-sheet.jpg", quality=94, optimize=True)
+
+        # and the row at the size it is actually read, which is where a busy icon dies
+        small = [c.resize((44, 44), Image.LANCZOS) for c in circles]
+        tiny = Image.new("RGB", (44 * len(small) + 12 * (len(small) + 1), 68), (255, 255, 255))
+        x = 12
+        for c in small:
+            tiny.paste(c, (x, 12))
+            x += 44 + 12
+        tiny.resize((tiny.width * 2, tiny.height * 2), Image.NEAREST).save(
+            out / "at-44px.jpg", quality=94)
 
     (OUT / "links.md").write_text(
         "# Highlight covers\n\n"
+        "Two sets. `brand/` is the logo's own backing with the roof red on it, one\n"
+        "pairing for all nine. `varied/` rotates seven grounds from the palette.\n\n"
         "Upload each as a story, then add it to a highlight and set the cover to that\n"
         "story. The name goes in Instagram's own field — the artwork carries no text,\n"
         "because Instagram already prints the name under the circle and a word inside\n"
         "it would be the same word twice.\n\n"
-        "Everything sits inside the centre circle. The 1080x1920 frame is only what\n"
-        "Instagram accepts for upload; the corners are never shown.\n\n"
+        "`at-44px.jpg` in each folder is the row at the size a phone draws it. An icon\n"
+        "that only works in the big preview is an icon that does not work.\n\n"
         "| Name to type | File | Link to put in the highlight |\n|---|---|---|\n"
         + "".join(f"| {c['label']} | `{c['slug']}.png` | "
                  f"{'https://' + c['link'] if c['link'] else '—'} |\n" for c in COVERS)
@@ -324,8 +417,7 @@ def main() -> None:
         + "".join(f"- **{c['label']}** — {c['note']}\n" for c in COVERS),
         encoding="utf8")
 
-    print(json.dumps({"covers": len(COVERS),
-                      "grounds": len({tuple(c["ground"]) for c in COVERS}),
+    print(json.dumps({"sets": ["brand", "varied"], "covers": len(COVERS),
                       "out": str(OUT.relative_to(g.ROOT))}))
 
 

@@ -1,12 +1,15 @@
 # Highlight covers
 
+Two sets. `brand/` is the logo's own backing with the roof red on it, one
+pairing for all nine. `varied/` rotates seven grounds from the palette.
+
 Upload each as a story, then add it to a highlight and set the cover to that
 story. The name goes in Instagram's own field — the artwork carries no text,
 because Instagram already prints the name under the circle and a word inside
 it would be the same word twice.
 
-Everything sits inside the centre circle. The 1080x1920 frame is only what
-Instagram accepts for upload; the corners are never shown.
+`at-44px.jpg` in each folder is the row at the size a phone draws it. An icon
+that only works in the big preview is an icon that does not work.
 
 | Name to type | File | Link to put in the highlight |
 |---|---|---|
