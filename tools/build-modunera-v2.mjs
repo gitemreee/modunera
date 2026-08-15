@@ -1294,17 +1294,29 @@ async function rewriteWhatsapp() {
 /* Hero slideshow. Five stills, crossfaded by CSS alone — no library, no script.
    Only the first is fetched at high priority; the rest are hints-lowered so they
    never compete with the page. */
-/* Display order, not file order. The buyer is in Germany, the Netherlands,
-   Denmark, Luxembourg or Switzerland, and the first thing they saw was a house
-   under palm trees followed by a pool scene — which reads as a holiday resort in
-   the tropics, not as a house that can stand through a northern winter. The two
-   renders whose planting and light could be central Europe lead; the palms go
-   last, where they are one frame in a rotation rather than the first impression. */
-const HERO_ORDER = [4, 3, 5, 1, 2];
+/* Real photographs, not renders.
+
+   The hero ran on five renders, and the first two a visitor saw were a house
+   under palm trees and a poolside scene — which reads as a holiday resort in the
+   tropics to a buyer in Germany, the Netherlands, Denmark, Luxembourg or
+   Switzerland. These are five finished MODUNERA houses, photographed on site,
+   prepared by tools/social/ingest_site_photos.py so the grading matches the
+   social feed. The renders stay where they belong: illustrating the eight models.
+
+   Order is a decision. The two frames whose planting and light could be central
+   Europe lead; the night frame closes, because it is the one that sells the idea
+   of living in it rather than owning it. */
+const HERO_SLIDES = [
+  "aframe-deck-olive",
+  "aframe-lawn",
+  "aframe-olive-grove",
+  "production-frame-and-finish",
+  "aframe-night",
+];
 
 function heroSlides(root) {
-  const imgs = HERO_ORDER.map((slide, i) => {
-    const base = `${root}assets/images/hero-slides/slide-${slide}`;
+  const imgs = HERO_SLIDES.map((name, i) => {
+    const base = `${root}assets/images/photos/${name}`;
     const priority = i === 0 ? 'fetchpriority="high"' : 'fetchpriority="low"';
     // Phones get a 3:4 crop: a landscape still in a tall portrait box loses about
     // two thirds of its width to object-fit:cover, which left the house unreadable.

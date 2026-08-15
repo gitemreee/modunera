@@ -1,0 +1,228 @@
+{
+  "_comment": "Real project photographs prepared by tools/social/ingest_site_photos.py. Alt text is written by hand, per photograph, because it is read aloud.",
+  "photos": [
+    {
+      "name": "aframe-deck-olive",
+      "category": "finished",
+      "source": "IMG_20250519_182528.jpg",
+      "alt_de": "Fertiges MODUNERA Tiny House mit A-Frame-Front und umlaufender Holzterrasse unter Olivenbäumen",
+      "files": [
+        {
+          "file": "assets/images/photos/aframe-deck-olive-1400.webp",
+          "px": "1400x788",
+          "kb": 442
+        },
+        {
+          "file": "assets/images/photos/aframe-deck-olive-760.webp",
+          "px": "760x428",
+          "kb": 140
+        },
+        {
+          "file": "assets/images/photos/aframe-deck-olive-portrait.webp",
+          "px": "760x1013",
+          "kb": 303
+        }
+      ]
+    },
+    {
+      "name": "aframe-lawn",
+      "category": "finished",
+      "source": "IMG_20250525_142713.jpg",
+      "alt_de": "Tiny House mit A-Frame-Giebel und Holzfassade auf einer Rasenfläche, seitliche Ansicht",
+      "files": [
+        {
+          "file": "assets/images/photos/aframe-lawn-1400.webp",
+          "px": "1400x788",
+          "kb": 410
+        },
+        {
+          "file": "assets/images/photos/aframe-lawn-760.webp",
+          "px": "760x428",
+          "kb": 145
+        },
+        {
+          "file": "assets/images/photos/aframe-lawn-portrait.webp",
+          "px": "760x1013",
+          "kb": 399
+        }
+      ]
+    },
+    {
+      "name": "aframe-night",
+      "category": "finished",
+      "source": "IMG_20250913_193621.jpg",
+      "alt_de": "Beleuchtetes Tiny House am Abend, warmes Licht hinter der Glasfront und Gartenbeleuchtung",
+      "files": [
+        {
+          "file": "assets/images/photos/aframe-night-1400.webp",
+          "px": "1400x788",
+          "kb": 308
+        },
+        {
+          "file": "assets/images/photos/aframe-night-760.webp",
+          "px": "760x428",
+          "kb": 112
+        },
+        {
+          "file": "assets/images/photos/aframe-night-portrait.webp",
+          "px": "760x1013",
+          "kb": 287
+        }
+      ]
+    },
+    {
+      "name": "aframe-olive-grove",
+      "category": "finished",
+      "source": "IMG_20250519_183120.jpg",
+      "alt_de": "Tiny House im Olivenhain, Frontansicht mit Terrasse und Zugangsstufen",
+      "files": [
+        {
+          "file": "assets/images/photos/aframe-olive-grove-1400.webp",
+          "px": "1400x788",
+          "kb": 533
+        },
+        {
+          "file": "assets/images/photos/aframe-olive-grove-760.webp",
+          "px": "760x428",
+          "kb": 165
+        },
+        {
+          "file": "assets/images/photos/aframe-olive-grove-portrait.webp",
+          "px": "760x1013",
+          "kb": 314
+        }
+      ]
+    },
+    {
+      "name": "interior-kitchen-desk",
+      "category": "interior",
+      "source": "IMG_20250807_131955.jpg",
+      "alt_de": "Innenraum eines Tiny House mit Küchenzeile, Esstisch am Fenster und Sitzbereich",
+      "files": [
+        {
+          "file": "assets/images/photos/interior-kitchen-desk-1200.webp",
+          "px": "1200x800",
+          "kb": 159
+        },
+        {
+          "file": "assets/images/photos/interior-kitchen-desk-760.webp",
+          "px": "760x507",
+          "kb": 78
+        }
+      ]
+    },
+    {
+      "name": "interior-loft-stair",
+      "category": "interior",
+      "source": "20240227_113020.jpg",
+      "alt_de": "Wohnbereich mit Sofa und Treppe mit integrierten Schubladen zum Schlafloft",
+      "files": [
+        {
+          "file": "assets/images/photos/interior-loft-stair-1200.webp",
+          "px": "1200x800",
+          "kb": 151
+        },
+        {
+          "file": "assets/images/photos/interior-loft-stair-760.webp",
+          "px": "760x507",
+          "kb": 71
+        }
+      ]
+    },
+    {
+      "name": "interior-wood",
+      "category": "interior",
+      "source": "20250126_192414.jpg",
+      "alt_de": "Innenausbau mit Holzoberflächen, indirekter Beleuchtung und Einbauküche",
+      "files": [
+        {
+          "file": "assets/images/photos/interior-wood-1200.webp",
+          "px": "1200x800",
+          "kb": 198
+        },
+        {
+          "file": "assets/images/photos/interior-wood-760.webp",
+          "px": "760x507",
+          "kb": 83
+        }
+      ]
+    },
+    {
+      "name": "interior-stair-white",
+      "category": "interior",
+      "source": "IMG_20250724_101400.jpg",
+      "alt_de": "Heller Innenraum mit weißer Treppe, Stauraum unter den Stufen und Küchenzeile",
+      "files": [
+        {
+          "file": "assets/images/photos/interior-stair-white-1200.webp",
+          "px": "1200x800",
+          "kb": 46
+        },
+        {
+          "file": "assets/images/photos/interior-stair-white-760.webp",
+          "px": "760x507",
+          "kb": 25
+        }
+      ]
+    },
+    {
+      "name": "production-cladding",
+      "category": "production",
+      "source": "20231214_121220.jpg",
+      "alt_de": "Tiny House in der Fertigung: Holzfassade montiert, Fenster eingesetzt, Modul auf dem Fahrgestell",
+      "files": [
+        {
+          "file": "assets/images/photos/production-cladding-1200.webp",
+          "px": "1200x800",
+          "kb": 299
+        },
+        {
+          "file": "assets/images/photos/production-cladding-760.webp",
+          "px": "760x507",
+          "kb": 137
+        }
+      ]
+    },
+    {
+      "name": "production-frame-and-finish",
+      "category": "production",
+      "source": "IMG_20250913_183727.jpg",
+      "alt_de": "Stahlrahmen im Vordergrund, fertiggestelltes Tiny House dahinter auf dem Werksgelände",
+      "files": [
+        {
+          "file": "assets/images/photos/production-frame-and-finish-1400.webp",
+          "px": "1400x788",
+          "kb": 383
+        },
+        {
+          "file": "assets/images/photos/production-frame-and-finish-760.webp",
+          "px": "760x428",
+          "kb": 144
+        },
+        {
+          "file": "assets/images/photos/production-frame-and-finish-portrait.webp",
+          "px": "760x1013",
+          "kb": 337
+        }
+      ]
+    },
+    {
+      "name": "delivery-trailer",
+      "category": "delivery",
+      "source": "IMG_20250913_104632.jpg",
+      "alt_de": "Tiny House auf dem Tieflader vor der Fertigung, bereit für den Transport",
+      "files": [
+        {
+          "file": "assets/images/photos/delivery-trailer-1200.webp",
+          "px": "1200x800",
+          "kb": 202
+        },
+        {
+          "file": "assets/images/photos/delivery-trailer-760.webp",
+          "px": "760x507",
+          "kb": 90
+        }
+      ]
+    }
+  ]
+}
