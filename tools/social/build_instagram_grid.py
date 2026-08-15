@@ -56,16 +56,51 @@ POST_W, POST_H = 1080, 1350
 # publication — 05-approved is what makes something final, not the pixel count.
 DRAFT_SCALE = 1.0
 
-# The site's own tokens, read off tools/design-system-v2.css rather than picked.
-MOSS_DEEP = (46, 71, 51)      # #2E4733  forest green card ground
-MOSS = (58, 90, 64)           # #3A5A40
+# The site's own tokens, read off a rendered page rather than off the stylesheet:
+# design-system-v2.css is appended after styles.css and overrides it, so what the
+# stylesheet declares and what the browser paints are not the same thing.
+MOSS_DEEP = (46, 71, 51)      # #2E4733  forest green card ground, --moss-deep
+MOSS = (58, 90, 64)           # #3A5A40  --moss, the same value as --ink
 SAGE = (163, 177, 138)        # #A3B18A
-CREAM = (218, 215, 205)       # #DAD7CD  the off-white card ground
+CREAM = (218, 215, 205)       # #DAD7CD  --cream / --paper-2
 PAPER = (245, 245, 245)       # #F5F5F5
 ROOF = (151, 49, 26)          # #97311A  the logo's roof red
 INK = (58, 90, 64)            # #3A5A40, the site's --ink. Not a near-black.
 MUTED = (74, 87, 72)          # #4A5748, the site's --muted — body and label copy
 LIGHT_GROUND = PAPER          # #F5F5F5, what the site actually paints as its page
+WHITE = (255, 255, 255)       # what a heading takes on any dark ground — see below
+ON_MOSS = (188, 202, 194)     # body copy inside .section-dark, measured
+
+
+def over(colour: tuple[int, int, int], alpha: float,
+         ground: tuple[int, int, int]) -> tuple[int, int, int]:
+    """A translucent token flattened onto its ground.
+
+    Pillow draws onto an RGB canvas and silently discards a fourth component, so
+    fill=(151,49,26,90) does not paint a 35% line — it paints a solid one. The
+    site's hairlines are --line, rgba(58,90,64,.18), which is nearly invisible;
+    the difference between that and a solid rule is the difference between a
+    datasheet and a form. Blend here rather than hoping alpha survives."""
+    return tuple(round(c * alpha + gnd * (1 - alpha)) for c, gnd in zip(colour, ground))
+
+
+LINE = over(INK, 0.18, PAPER)         # --line on paper: rgba(58,90,64,.18)
+LINE_STRONG = over(INK, 0.30, PAPER)  # the heavier divider above a data block
+
+# --- who gets which colour -------------------------------------------------
+# Counted on seven rendered page types, every visible h1/h2/h3:
+#
+#     roof red #97311A   76   every section h2 and every card h3 on a light ground
+#     white    #FFFFFF   33   every heading on a dark ground, hero included
+#     moss     #3A5A40    5   the page-title h1 of an interior page, once per page
+#
+# So moss is not a heading colour in general — it does exactly one job, the title
+# at the top of a page. A card in the feed is a statement inside a stream, which
+# is the section-h2 case, and that is red 76 times out of 76. The cards keep red.
+#
+# The dark-ground rule is just as strict and the feed was missing it: a heading on
+# moss is pure white, not off-white; the small label above it is cream #DAD7CD,
+# the same as .eyebrow on .section-dark; body copy there is #BCCAC2.
 
 # Instagram crops the grid thumbnail to a centred square: 135 px off the top and
 # the bottom of a 1080x1350 post. Nothing that identifies the brand goes there.
@@ -324,15 +359,20 @@ def place_logo(canvas: Image.Image, light: bool) -> None:
     canvas.paste(logo, (MARGIN, SAFE_TOP + 36), logo)
 
 
-def place_domain(draw: ImageDraw.ImageDraw, light: bool) -> None:
-    """Lower case, bottom right, inside the safe square."""
+def place_domain(draw: ImageDraw.ImageDraw, light: bool, on_photo: bool = True) -> None:
+    """Lower case, bottom right, inside the safe square.
+
+    It is body copy, so it takes whichever body colour the ground calls for: on a
+    photograph the site sets copy in white (.hero p), on a moss panel in #BCCAC2
+    (.section-dark p), on paper in --muted. Three grounds, three values."""
     f = F_BODY(30)
     text = "modunera.com"
     right = POST_W - MARGIN
     bottom = POST_H - SAFE_BOTTOM - 30
     box = draw.textbbox((0, 0), text, font=f)
+    fill = (WHITE if on_photo else ON_MOSS) if light else MUTED
     draw.text((right - (box[2] - box[0]), bottom - (box[3] - box[1])), text,
-              font=f, fill=(255, 255, 255, 235) if light else MUTED)
+              font=f, fill=fill)
 
 
 def tracked(draw: ImageDraw.ImageDraw, xy, text: str, f, fill, tracking: float = 0):
@@ -410,10 +450,13 @@ def card_post(lines: list[str], ground: tuple[int, int, int], light_type: bool,
     draw = ImageDraw.Draw(canvas)
     place_logo(canvas, light=light_type)
 
-    # Headings on a light ground take the roof red, exactly as h1/h2/h3 do on
-    # every page of the site. Ink is for body copy.
-    ink = PAPER if light_type else ROOF
-    accent = SAGE if light_type else ROOF
+    # Light ground: roof red, as every section h2 and card h3 on the site.
+    # Dark ground: pure white, as every heading inside .section-dark.
+    ink = WHITE if light_type else ROOF
+    # The short rule is the site's .eyebrow:before — 16x2px in --terracotta, which
+    # the v2 layer remaps to #3A5A40, so it is moss on light and cream on dark. It
+    # was red here, which is the one colour the site never gives that mark.
+    accent = CREAM if light_type else INK
     f = F_TITLE(size)
     leading = int(size * 1.34)
     block_h = leading * len(lines)
@@ -427,7 +470,7 @@ def card_post(lines: list[str], ground: tuple[int, int, int], light_type: bool,
         # the site's h2 tracking, -0.021em, scaled to this size
         tracked(draw, (MARGIN, top + i * leading), line, f, ink, tracking=-size * 0.021)
 
-    place_domain(draw, light=light_type)
+    place_domain(draw, light=light_type, on_photo=False)
     return canvas
 
 
@@ -467,14 +510,14 @@ def spec_post(model: str, name: str, sub: str, rows: list[tuple[str, str]]) -> I
     draw.text((MARGIN, top + 214), sub, font=F_BODY(30), fill=MUTED)
 
     y = top + 300
-    draw.rectangle([MARGIN, y, POST_W - MARGIN, y + 2], fill=(151, 49, 26, 90))
+    draw.rectangle([MARGIN, y, POST_W - MARGIN, y + 2], fill=LINE_STRONG)
     y += 34
     for label, value in rows:
         tracked(draw, (MARGIN, y + 6), label.upper(), F_LABEL(22), MUTED, tracking=22 * 0.15)
         f = F_TITLE(38)
         draw.text((POST_W - MARGIN - draw.textlength(value, font=f), y - 4), value, font=f, fill=INK)
         y += 62
-        draw.rectangle([MARGIN, y - 14, POST_W - MARGIN, y - 13], fill=(32, 46, 36, 40))
+        draw.rectangle([MARGIN, y - 14, POST_W - MARGIN, y - 13], fill=LINE)
 
     place_domain(draw, light=False)
     return canvas
@@ -509,9 +552,12 @@ def duo_post(source: Path, statement: list[str], ground: tuple[int, int, int],
         canvas.paste(head, (0, 0))
     place_logo(canvas, light=True)
 
-    ink = PAPER if light_type else INK
+    # The band below the photograph is a section, so its statement follows the
+    # section rule: white on moss, roof red on paper. It was moss-on-paper here,
+    # which is the one colour the site never gives a heading below the page title.
+    ink = WHITE if light_type else ROOF
     y = split + 74
-    draw.rectangle([MARGIN, y, MARGIN + 92, y + 3], fill=SAGE if light_type else ROOF)
+    draw.rectangle([MARGIN, y, MARGIN + 92, y + 3], fill=CREAM if light_type else INK)
     y += 40
     for line in statement:
         tracked(draw, (MARGIN, y), line, F_TITLE(52), ink, tracking=-52 * 0.021)
@@ -519,8 +565,8 @@ def duo_post(source: Path, statement: list[str], ground: tuple[int, int, int],
 
     if concept:
         tracked(draw, (MARGIN, split + 22), "CONCEPT", F_LABEL(23),
-                (150, 163, 148) if light_type else MUTED, tracking=23 * 0.15)
-    place_domain(draw, light=light_type)
+                ON_MOSS if light_type else MUTED, tracking=23 * 0.15)
+    place_domain(draw, light=light_type, on_photo=False)
     return canvas
 
 
@@ -532,19 +578,22 @@ def numeral_post(figure: str, label: list[str], ground: tuple[int, int, int],
     canvas = Image.new("RGB", (POST_W, POST_H), ground)
     draw = ImageDraw.Draw(canvas)
     place_logo(canvas, light=light_type)
-    ink = PAPER if light_type else ROOF
-    accent = SAGE if light_type else ROOF
+    # The figure is display type at heading scale, so it follows the heading rule;
+    # the words under it are a label, so they follow .eyebrow — ink on paper,
+    # cream on moss. Two colours, both the site's, instead of one flat one.
+    figure_fill = WHITE if light_type else ROOF
+    label_fill = CREAM if light_type else INK
 
     f = F_TITLE(430)
     box = draw.textbbox((0, 0), figure, font=f)
-    draw.text((MARGIN - 18, SAFE_TOP + 170 - box[1]), figure, font=f, fill=accent)
+    draw.text((MARGIN - 18, SAFE_TOP + 170 - box[1]), figure, font=f, fill=figure_fill)
 
     y = POST_H - SAFE_BOTTOM - 150 - 56 * len(label)
-    draw.rectangle([MARGIN, y - 40, MARGIN + 92, y - 37], fill=ink)
+    draw.rectangle([MARGIN, y - 40, MARGIN + 92, y - 37], fill=label_fill)
     for line in label:
-        tracked(draw, (MARGIN, y), line, F_LABEL(46), ink, tracking=46 * 0.15 * 0.42)
+        tracked(draw, (MARGIN, y), line, F_LABEL(46), label_fill, tracking=46 * 0.15 * 0.42)
         y += 58
-    place_domain(draw, light=light_type)
+    place_domain(draw, light=light_type, on_photo=False)
     return canvas
 
 

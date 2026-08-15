@@ -22,3 +22,7 @@ desktop.ini
 .vscode/
 .idea/
 *.swp
+
+# Python bytecode from the social tooling
+__pycache__/
+*.pyc

@@ -1,8 +1,9 @@
 # MODUNERA — Instagram design system
 
-For the twelve-post launch grid. Every value here is taken from the live site
-(`tools/design-system-v2.css` and `assets/brand/`) rather than chosen for the
-feed, so the profile and the website read as one brand.
+For the twelve-post launch grid. Every value here is measured off a **rendered
+page**, not read out of `tools/design-system-v2.css`, because that file is
+appended after `styles.css` and overrides it — the stylesheet and the browser
+disagree, and the browser is what a visitor compares the feed against.
 
 Rendered by `tools/social/build_instagram_grid.py`. Change a value here and in
 that file together — the script is the source of truth for what is produced, this
@@ -15,17 +16,55 @@ document for why.
 The five-colour eco set the site already uses. No sixth colour is introduced for
 social, and nothing is brightened for the feed.
 
-| Token | Hex | Where it is used |
+| Token | Hex | What it is |
 |---|---|---|
-| Moss deep | `#2E4733` | Forest-green card ground |
-| Moss | `#3A5A40` | Reserved; darker rules and hover states on the site |
-| Sage | `#A3B18A` | The short rule above the type on a green card |
-| Paper | `#F5F5F5` | Light card ground — the same ground the site paints on `body` |
-| Cream | `#DAD7CD` | The site's *alternating* section band. Not used as a card ground |
-| Paper | `#F5F5F5` | Type on a green card |
-| Roof red | `#97311A` | The short rule above the type on a cream card. Sampled from the logo mark |
-| Roof red | `#97311A` | **All headings on a light ground**, exactly as `h1,h2,h3` and every card `h3` are painted on the site |
-| Ink | `#202E24` | Body and label text on a light ground only |
+| `--moss-deep` | `#2E4733` | The dark card ground, and the site's `.section-dark` |
+| `--ink` / `--moss` | `#3A5A40` | One value under two names. Also `--terracotta` |
+| `--sage` | `#A3B18A` | Site accent; not used as type or as a rule in the feed |
+| `--paper` | `#F5F5F5` | The light card ground, and the site's `body` |
+| `--cream` / `--paper-2` | `#DAD7CD` | Labels on a dark ground; the site's alternating band |
+| `--roof` | `#97311A` | The logo's roof red |
+| `--muted` | `#4A5748` | Body copy on a light ground |
+
+### Which of them a given element takes
+
+Not a preference. Counted on seven rendered page types — every visible
+`h1`/`h2`/`h3` on `/`, `/qualitaet/`, `/modelle/`, `/produktion-faq/`,
+`/factory/`, `/projects/` and `/faq/`:
+
+| Colour | Count | What it is painting |
+|---|---|---|
+| `--roof` `#97311A` | **76** | Every section `h2` and every card `h3` on a light ground |
+| `#FFFFFF` | **33** | Every heading on a dark ground, the hero included |
+| `--ink` `#3A5A40` | **5** | The page-title `h1` of an interior page — once per page |
+
+So moss is not a general heading colour: it does exactly one job, the title at the
+top of a page. **A card in the feed is a statement inside a stream, which is the
+section-`h2` case, and that is red 76 times out of 76.** The cards take roof red.
+This is the one decision here that was open, and the count closed it.
+
+Everything else follows from the ground:
+
+| Element | On paper `#F5F5F5` | On moss `#2E4733` |
+|---|---|---|
+| Statement / heading | `--roof` `#97311A` | `#FFFFFF` — pure white, not off-white |
+| The short rule (`.eyebrow:before`, 16×2px) | `--ink` `#3A5A40` | `--cream` `#DAD7CD` |
+| Small uppercase label | `--ink` `#3A5A40` | `--cream` `#DAD7CD` |
+| Body copy, `modunera.com` | `--muted` `#4A5748` | `#BCCAC2` |
+| Hairline divider | `--line`, `rgba(58,90,64,.18)` flattened to `#D3D9D4` | — |
+
+Type on a **photograph** is a third case and takes white, as `.hero h1` does.
+
+Four things this corrected, all of them silent until measured. The dark cards had
+off-white `#F5F5F5` headings where the site paints `#FFFFFF`. The short rule was
+roof red on light cards; the site's `.eyebrow:before` is `--terracotta`, which the
+v2 layer remaps to `#3A5A40`, so it is moss there and cream on green — red is the
+one colour the site never gives that mark. The photo-and-band posts set their
+statement in moss on paper, which is the page-title colour, not the section one.
+And the spec sheet drew its hairlines with `fill=(151,49,26,90)`: Pillow discards
+the fourth component on an RGB canvas, so a 35 % rule was painting as a solid red
+line. Translucent tokens are now flattened onto their ground by `over()` rather
+than trusting alpha to survive.
 
 Forbidden, and not present in any output: neon, gold, gradients used as
 decoration, heavy drop shadow, artificial 3D, HDR-look grading, stock-photo
@@ -38,9 +77,11 @@ photograph is untouched.
 
 ## 2. Type
 
-The feed is set in **the site's own faces** — Poppins for headings, exactly as
-`--display` is declared on every page, and Manrope for the domain and small
-labels, as `body` is set. Not a substitute, not something that resembles them.
+The feed is set in **the site's own face** — Poppins, everywhere. Not a
+substitute, not something that resembles it. Manrope is declared in `styles.css`
+and never reaches the page: the v2 layer sets `body` to `var(--display)`, so the
+computed family is Poppins for body copy too. It is kept in `tools/social/fonts/`
+as the declared fallback, and nothing in the feed is set in it.
 
 They live in `tools/social/fonts/` as TTF and are committed, for two reasons:
 Pillow reads TTF and OTF but not the woff2 that Google Fonts and Fontsource ship,
@@ -63,8 +104,9 @@ overrides what `styles.css` declares, so the file and the page disagree:
 |---|---|---|---|---|
 | `h1` (page hero) | Poppins | 820 | **−0.028em** | `--ink` `#3A5A40` |
 | `h2`, `h3` (sections, cards) | Poppins | 800 | **−0.021em** | `--roof` `#97311A` |
-| `.eyebrow` | Poppins | 800 | **+0.15em**, uppercase | `--ink` |
+| `.eyebrow` | Poppins | 800 | **+0.15em**, uppercase | `--ink`, cream on dark |
 | `p` | Poppins | 500 | normal | `--muted` `#4A5748` |
+| any heading on `.section-dark` | Poppins | 800 | −0.021em | `#FFFFFF` |
 
 Two things this corrected. **The whole site is Poppins** — body included, despite
 `styles.css` naming Manrope, because the v2 layer sets `body` to `var(--display)`.
