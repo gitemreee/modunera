@@ -32,7 +32,7 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-from PIL import Image, ImageDraw
+from PIL import Image, ImageChops, ImageDraw
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import build_instagram_grid as g  # noqa: E402
@@ -81,6 +81,64 @@ def tile_xy(col: int, row: int) -> tuple[int, int]:
     return col * TW, row * TH
 
 
+def blob(board: Image.Image, circles: list[tuple[int, int, int]], colour) -> None:
+    """Several overlapping circles painted as one shape.
+
+    Pasting them one at a time leaves a seam wherever two overlap, because each
+    paste blends its own antialiased edge over the last. Union the masks first and
+    paint once, and the result is a single organic field with no internal edges.
+
+    This is what the first version of this board was missing. Discs placed apart
+    read as four islands on a page; the reference boards chain their shapes so a
+    field runs from one corner of the board to the other, and that continuity is
+    the connection — not the fact that the ground is the same colour underneath.
+    """
+    mask = Image.new("L", board.size, 0)
+    for cx, cy, r in circles:
+        size = r * 2
+        m = Image.new("L", (size * 2, size * 2), 0)
+        ImageDraw.Draw(m).ellipse((0, 0, size * 2 - 1, size * 2 - 1), fill=255)
+        layer = Image.new("L", board.size, 0)
+        layer.paste(m.resize((size, size), Image.LANCZOS), (cx - r, cy - r))
+        # lighter, not paste: the union of the masks. Pasting each circle over the
+        # last blends its antialiased rim into the mask that is already there, and
+        # the rim survives as a faint arc inside what should be a single field.
+        mask = ImageChops.lighter(mask, layer)
+    board.paste(Image.new("RGB", board.size, colour), (0, 0), mask)
+
+
+STRADDLED: list = []
+
+
+def type_on(board: Image.Image, box: tuple[int, int, int, int]):
+    """The palette colour that can be read on whatever the board has there.
+
+    The fields move when the composition is adjusted, and type placed against an
+    assumed ground goes with them: the figure 5 was written in roof red onto what
+    had become a roof-red field and vanished completely, and two country names
+    ended up straddling the seam between moss and cream. Sampling the board where
+    the type will go removes the assumption — the layout can be moved freely and
+    the colours follow.
+
+    The darkest patch in the box decides, not the average: type has to be legible
+    over all of what it crosses, not over most of it.
+    """
+    grey = board.crop(box).convert("L")
+    hist = sorted(v for v in grey.get_flattened_data())
+    dark = hist[int(len(hist) * 0.10)]
+    light = hist[int(len(hist) * 0.90)]
+    for candidate in (g.WHITE, g.CREAM, g.CHARCOAL, g.ROOF, g.INK):
+        if min(g.contrast(candidate, (dark,) * 3),
+               g.contrast(candidate, (light,) * 3)) >= 4.5:
+            return candidate
+    # Nothing clears 4.5 against both ends, which means the box straddles a light
+    # field and a dark one. That is a layout fault, not a colour choice — no ink
+    # is readable on cream and moss at once — so it is reported instead of being
+    # papered over with whichever colour looks least bad.
+    STRADDLED.append((box, dark, light))
+    return g.WHITE if dark < 110 else g.CHARCOAL
+
+
 def disc(board: Image.Image, cx: int, cy: int, r: int, colour) -> None:
     """A circle big enough to cross tiles, drawn smooth.
 
@@ -113,14 +171,17 @@ def trial_a() -> Image.Image:
     margin so the ground and the discs run behind them rather than being
     interrupted.
     """
-    b = Image.new("RGB", (BW, BH), g.PAPER)
+    b = Image.new("RGB", (BW, BH), g.CREAM)
     M = 96
 
-    #        centre                 radius  colour
-    disc(b, 1500, 620, 820, g.MOSS_DEEP)     # under tiles 1-2-3, into row 2
-    disc(b, 2880, 2180, 700, g.CREAM)        # tile 6, into 9
-    disc(b, 560, 3320, 840, g.MOSS_DEEP)     # tiles 4-7
-    disc(b, 2160, 5010, 950, g.SAGE)         # centred on the seam of 11-12
+    # Four fields, each several circles merged, chained so colour runs from the
+    # top of the board to the bottom without a break. Coverage is about 55 % —
+    # the first version sat near 25 % and read as islands on a page.
+    blob(b, [(760, 380, 780), (1560, 620, 840), (1180, 1560, 720),
+         (540, 2020, 900)], g.MOSS_DEEP)   # the last one takes tile 4 whole
+    blob(b, [(2900, 1980, 660), (2680, 2760, 600), (3120, 2600, 480)], g.ROOF)
+    blob(b, [(420, 3380, 820), (620, 4250, 620), (200, 4500, 460)], g.MOSS_DEEP)
+    blob(b, [(2760, 4900, 860), (3180, 4380, 560), (2200, 5300, 620)], g.SAGE)
     d = ImageDraw.Draw(b)
 
     # Every element is placed against the disc it lands on, not against the page.
@@ -131,58 +192,67 @@ def trial_a() -> Image.Image:
     # row 1 — photograph, the slogan on the moss disc, photograph
     b.paste(photo("lawn", TW - M * 2, TH - M * 2, 0.36), (M, M))
     x, y = tile_xy(1, 0)
+    c = type_on(b, (x + M, y + 300, x + TW - M, y + 740))
     for i, line in enumerate(["DESIGN", "YOUR", "NATURE"]):
-        g.tracked(d, (x + M, y + 330 + i * 132), line, g.F_TITLE(108), g.WHITE,
+        g.tracked(d, (x + M, y + 330 + i * 132), line, g.F_TITLE(108), c,
                   tracking=-108 * 0.021)
     x, y = tile_xy(2, 0)
     b.paste(photo("night", TW - M * 2, TH - M * 2, 0.46), (x + M, y + M))
 
     # row 2 — the list on paper, a photograph, the figure on the cream disc
     x, y = tile_xy(0, 1)
-    d.rectangle([x + M, y + 300, x + M + 92, y + 303], fill=g.INK)
-    g.tracked(d, (x + M, y + 350), "WHAT WE BUILD", g.F_LABEL(30), g.INK, tracking=30 * 0.15)
+    c = type_on(b, (x + M, y + 290, x + TW - M, y + 1000))
+    d.rectangle([x + M, y + 300, x + M + 92, y + 303], fill=c)
+    g.tracked(d, (x + M, y + 350), "WHAT WE BUILD", g.F_LABEL(30), c, tracking=30 * 0.15)
     for i, line in enumerate(["TINY HOUSE", "MODULAR HOME", "STEEL STRUCTURE",
                               "BUNGALOWS", "CUSTOM FURNITURE"]):
-        g.tracked(d, (x + M, y + 470 + i * 104), line, g.F_TITLE(56), g.ROOF,
+        g.tracked(d, (x + M, y + 470 + i * 104), line, g.F_TITLE(56), c,
                   tracking=-56 * 0.021)
     x, y = tile_xy(1, 1)
     b.paste(photo("grove", TW - M * 2, TH - M * 2, 0.52), (x + M, y + M))
     x, y = tile_xy(2, 1)
-    g.tracked(d, (x + M, y + 300), "5", g.F_TITLE(420), g.ROOF, tracking=0)
-    g.tracked(d, (x + M, y + 900), "COUNTRIES,", g.F_LABEL(44), g.INK, tracking=44 * 0.15 * 0.42)
-    g.tracked(d, (x + M, y + 972), "ONE MAKER", g.F_LABEL(44), g.INK, tracking=44 * 0.15 * 0.42)
+    c = type_on(b, (x + M, y + 300, x + TW - M, y + 1030))
+    g.tracked(d, (x + M, y + 300), "5", g.F_TITLE(420), c, tracking=0)
+    g.tracked(d, (x + M, y + 900), "COUNTRIES,", g.F_LABEL(44), c, tracking=44 * 0.15 * 0.42)
+    g.tracked(d, (x + M, y + 972), "ONE MAKER", g.F_LABEL(44), c, tracking=44 * 0.15 * 0.42)
 
     # row 3 — a statement on the second moss disc, then two photographs
     x, y = tile_xy(0, 2)
-    d.rectangle([x + M, y + 380, x + M + 92, y + 383], fill=g.CREAM)
+    c = type_on(b, (x + M, y + 370, x + TW - M, y + 830))
+    d.rectangle([x + M, y + 380, x + M + 92, y + 383], fill=c)
     for i, line in enumerate(["STEEL", "BEFORE", "TIMBER"]):
-        g.tracked(d, (x + M, y + 440 + i * 128), line, g.F_TITLE(104), g.WHITE,
+        g.tracked(d, (x + M, y + 440 + i * 128), line, g.F_TITLE(104), c,
                   tracking=-104 * 0.021)
     x, y = tile_xy(1, 2)
     b.paste(photo("cladding", TW - M * 2, TH - M * 2, 0.30), (x + M, y + M))
     x, y = tile_xy(2, 2)
     b.paste(photo("kitchen", TW - M * 2, TH - M * 2, 0.5), (x + M, y + M))
 
-    # row 4 — a photograph, then the flags and the lockup on the sage disc
+    # row 4 — a photograph, the lockup on cream, the flags on the sage field.
+    # The flags were in the middle tile and straddled moss, cream and sage at once;
+    # no ink is readable across all three. Moved whole onto one field instead.
     x, y = tile_xy(0, 3)
     b.paste(photo("trailer", TW - M * 2, TH - M * 2, 0.5), (x + M, y + M))
+
     x, y = tile_xy(1, 3)
-    g.tracked(d, (x + 210, y + 300), "WHERE WE DELIVER", g.F_LABEL(30), g.CHARCOAL,
-              tracking=30 * 0.15)
-    yy = y + 400
-    for code in g.FLAG_ORDER:
-        f = g.flag(code, 68)
-        b.paste(f, (x + 210, yy))
-        d.rectangle([x + 210, yy, x + 210 + f.width, yy + 68], outline=g.CHARCOAL, width=2)
-        g.tracked(d, (x + 210 + f.width + 32, yy + 16), g.FLAGS[code]["name"],
-                  g.F_BODY(42), g.CHARCOAL, tracking=0)
-        yy += 100
-    x, y = tile_xy(2, 3)
     logo = Image.open(g.BRAND / "modunera-master-logo-mountain-v1-600.png").convert("RGBA")
     lw = 460
     logo = logo.resize((lw, round(logo.height * lw / logo.width)), Image.LANCZOS)
-    b.paste(logo, (x + M, y + 520), logo)
-    g.tracked(d, (x + M, y + 700), "modunera.com", g.F_BODY(46), g.CHARCOAL, tracking=0)
+    b.paste(logo, (x + 300, y + 520), logo)
+    g.tracked(d, (x + 300, y + 700), "modunera.com", g.F_BODY(46),
+              type_on(b, (x + 300, y + 690, x + 300 + 340, y + 756)), tracking=0)
+
+    x, y = tile_xy(2, 3)
+    c = type_on(b, (x + M, y + 290, x + TW - M, y + 950))
+    g.tracked(d, (x + M, y + 300), "WHERE WE DELIVER", g.F_LABEL(30), c, tracking=30 * 0.15)
+    yy = y + 400
+    for code in g.FLAG_ORDER:
+        f = g.flag(code, 68)
+        b.paste(f, (x + M, yy))
+        d.rectangle([x + M, yy, x + M + f.width, yy + 68], outline=c, width=2)
+        g.tracked(d, (x + M + f.width + 32, yy + 16), g.FLAGS[code]["name"],
+                  g.F_BODY(42), c, tracking=0)
+        yy += 100
     return b
 
 
@@ -257,6 +327,11 @@ def main() -> None:
         sheet(board, OUT / f"trial-{name}.jpg")
         board.resize((BW // 3, BH // 3), Image.LANCZOS).save(
             OUT / f"board-{name}.jpg", quality=88, optimize=True)
+        if STRADDLED:
+            for box, dark, light in STRADDLED:
+                print(f"  WARN type at {box} straddles ground {dark}-{light}; "
+                      f"no palette colour clears 4.5 on both", file=sys.stderr)
+            STRADDLED.clear()
         print(f"{name}: {OUT.relative_to(g.ROOT)}/trial-{name}.jpg")
 
 
