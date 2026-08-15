@@ -142,12 +142,11 @@ def contrast(a: tuple[int, int, int], b: tuple[int, int, int]) -> float:
 SAFE_TOP = 0
 SAFE_BOTTOM = 0
 
-# Instagram draws its own furniture on top of the grid tile: a view count with an
-# eye icon at the bottom left, and a reel or carousel mark at the top right. The
-# count sat directly across the caption on every photographic post — visible in
-# the account as "0" over the words. Nothing of ours goes in either corner.
-IG_OVERLAY_BL = (0, 160)      # width, height of the bottom-left furniture, at 1080
-IG_OVERLAY_TR = (150, 130)
+# The view count that appears over the bottom-left of a grid tile is shown to the
+# account holder only; a visitor does not see it on a normal post. It is public on
+# Reels. So it is not a reason to move anything on these — the caption was lifted
+# clear of it for a week on a premise that only ever applied to the owner's own
+# view of the profile.
 # Tightened from 74. One margin for the logo, the caption, the card statement and
 # the domain, so everything sits on the same optical frame — a logo pulled left
 # while the caption below it stays put reads as a mistake, not as a decision.
@@ -158,10 +157,10 @@ MARGIN = 56
 # underneath. If those two ever disagreed the scrim would be solved for somewhere
 # the type is not, which is the failure this whole arrangement exists to prevent.
 DOMAIN_TEXT = "modunera.com"
-# Lifted clear of Instagram's view count, which sits in the bottom-left corner of
-# the tile and was printing straight across the caption. The domain stays at the
-# foot because it is on the right, where the corner is free.
-CAPTION_Y = POST_H - SAFE_BOTTOM - IG_OVERLAY_BL[1] - 78
+# At the foot, using the whole frame. The old value kept the caption 135 px up
+# from the bottom because that band was assumed to be cropped away in the grid;
+# the whole 4:5 is shown, so the type sits where the picture actually ends.
+CAPTION_Y = POST_H - SAFE_BOTTOM - 165
 CAPTION_SIZE = 37
 CAPTION_TRACK = CAPTION_SIZE * 0.15 * 0.42
 LOGO_XY = (MARGIN, SAFE_TOP + MARGIN)
