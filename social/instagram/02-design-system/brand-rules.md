@@ -54,11 +54,33 @@ every Google Font to npm, and the woff2 was unwrapped to TTF with `fonttools`.
 No upload, no second repository, no dependency added to the project — the fonts
 are the artifact, the tools were scaffolding.
 
+### What the site actually computes
+
+Read off a rendered page, not off the stylesheet — `design-system-v2.css`
+overrides what `styles.css` declares, so the file and the page disagree:
+
+| Element | Face | Weight | Tracking | Colour |
+|---|---|---|---|---|
+| `h1` (page hero) | Poppins | 820 | **−0.028em** | `--ink` `#3A5A40` |
+| `h2`, `h3` (sections, cards) | Poppins | 800 | **−0.021em** | `--roof` `#97311A` |
+| `.eyebrow` | Poppins | 800 | **+0.15em**, uppercase | `--ink` |
+| `p` | Poppins | 500 | normal | `--muted` `#4A5748` |
+
+Two things this corrected. **The whole site is Poppins** — body included, despite
+`styles.css` naming Manrope, because the v2 layer sets `body` to `var(--display)`.
+The feed had the domain and labels in Manrope; they are Poppins now.
+
+And **the site tracks display type tight and only opens up uppercase labels.**
+The feed was tracking everything open at +2 and +3 px, which was the single most
+visible difference between a card and a page heading. Card statements now carry
+−0.021em like an `h2`; captions, spec labels and CONCEPT carry the `.eyebrow`
+treatment.
+
 | Role | Face | Size at 1080×1350 | Tracking |
 |---|---|---|---|
-| Card statement | Poppins Bold | 62–96 px | +2 px |
-| Photo caption | Poppins Bold | 37 px | +3 px |
-| Domain | Manrope Regular | 30 px | 0 |
+| Card statement | Poppins ExtraBold (800) | 56–96 px | −0.021em |
+| Photo caption | Poppins ExtraBold (800) | 37 px | +0.063em, uppercase |
+| Domain | Poppins Medium (500) | 30 px | normal |
 
 Card line leading is 1.34× the size. Captions are English, short, upper case, and
 never more than four words. No post carries a number, an index, or an "01/09".

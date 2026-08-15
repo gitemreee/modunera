@@ -63,7 +63,8 @@ SAGE = (163, 177, 138)        # #A3B18A
 CREAM = (218, 215, 205)       # #DAD7CD  the off-white card ground
 PAPER = (245, 245, 245)       # #F5F5F5
 ROOF = (151, 49, 26)          # #97311A  the logo's roof red
-INK = (32, 46, 36)            # body text only — the site sets headings in roof red
+INK = (58, 90, 64)            # #3A5A40, the site's --ink. Not a near-black.
+MUTED = (74, 87, 72)          # #4A5748, the site's --muted — body and label copy
 LIGHT_GROUND = PAPER          # #F5F5F5, what the site actually paints as its page
 
 # Instagram crops the grid thumbnail to a centred square: 135 px off the top and
@@ -80,10 +81,19 @@ def font(name: str, size: int) -> ImageFont.FreeTypeFont:
     return ImageFont.truetype(str(FONTS / name), size)
 
 
-# The site's real stack, not a substitute. Headings take Poppins, as --display
-# does on every page; the domain and small labels take Manrope, as body does.
-F_TITLE = lambda s: font("Poppins-Bold.ttf", s)
-F_BODY = lambda s: font("Manrope-Regular.ttf", s)
+# Measured off the rendered site rather than read off the stylesheet, because the
+# v2 layer overrides what styles.css declares. What a page actually computes:
+#
+#   h1        Poppins 820, letter-spacing -0.028em, colour --ink   #3A5A40
+#   h2        Poppins 800, letter-spacing -0.021em, colour --roof  #97311A
+#   .eyebrow  Poppins 800, letter-spacing +0.15em, uppercase, --ink
+#   p         Poppins 500, normal tracking, colour --muted         #4A5748
+#
+# So the whole site is Poppins — body included, despite styles.css naming Manrope,
+# because design-system-v2.css sets body to var(--display). The feed follows that.
+F_TITLE = lambda s: font("Poppins-ExtraBold.ttf", s)   # 800, as h1 and h2 are
+F_BODY = lambda s: font("Poppins-Medium.ttf", s)       # 500, as body copy is
+F_LABEL = lambda s: font("Poppins-ExtraBold.ttf", s)   # 800, as .eyebrow is
 
 
 def strip_camera_watermark(im: Image.Image) -> tuple[Image.Image, int]:
@@ -322,12 +332,16 @@ def place_domain(draw: ImageDraw.ImageDraw, light: bool) -> None:
     bottom = POST_H - SAFE_BOTTOM - 30
     box = draw.textbbox((0, 0), text, font=f)
     draw.text((right - (box[2] - box[0]), bottom - (box[3] - box[1])), text,
-              font=f, fill=(255, 255, 255, 235) if light else INK)
+              font=f, fill=(255, 255, 255, 235) if light else MUTED)
 
 
-def tracked(draw: ImageDraw.ImageDraw, xy, text: str, f, fill, tracking: int = 0):
-    """Letter-spaced type. Pillow has no tracking, and the labels need it to read
-    as architectural rather than as a caption."""
+def tracked(draw: ImageDraw.ImageDraw, xy, text: str, f, fill, tracking: float = 0):
+    """Letter-spaced type, positive or negative. Pillow has no tracking at all.
+
+    The site tracks display type *tight* — h1 at -0.028em, h2 at -0.021em — and
+    only opens it up for uppercase labels, where .eyebrow sits at +0.15em. The
+    feed follows both conventions rather than tracking everything open, which was
+    the single most visible difference between a card and a page heading."""
     x, y = xy
     for ch in text:
         draw.text((x, y), ch, font=f, fill=fill)
@@ -379,8 +393,10 @@ def photo_post(source: Path, title: str | None, focus: float, look: dict | None 
     draw = ImageDraw.Draw(canvas)
     place_logo(canvas, light=True)
     if title:
-        tracked(draw, (MARGIN, POST_H - SAFE_BOTTOM - 106), title, F_TITLE(37),
-                (255, 255, 255), tracking=3)
+        # the caption is a small uppercase label, which the site tracks open at
+        # +0.15em on .eyebrow — the one place it opens type up at all
+        tracked(draw, (MARGIN, POST_H - SAFE_BOTTOM - 106), title, F_LABEL(37),
+                (255, 255, 255), tracking=37 * 0.15 * 0.42)
     place_domain(draw, light=True)
     canvas.info["watermark_band_px"] = band
     canvas.info["head_scrim"] = round(head_need, 2)
@@ -408,7 +424,8 @@ def card_post(lines: list[str], ground: tuple[int, int, int], light_type: bool,
         draw.rectangle([MARGIN, top - 54, MARGIN + 92, top - 51], fill=accent)
 
     for i, line in enumerate(lines):
-        tracked(draw, (MARGIN, top + i * leading), line, f, ink, tracking=2)
+        # the site's h2 tracking, -0.021em, scaled to this size
+        tracked(draw, (MARGIN, top + i * leading), line, f, ink, tracking=-size * 0.021)
 
     place_domain(draw, light=light_type)
     return canvas
@@ -445,15 +462,15 @@ def spec_post(model: str, name: str, sub: str, rows: list[tuple[str, str]]) -> I
     place_logo(canvas, light=False)
 
     top = SAFE_TOP + 210
-    tracked(draw, (MARGIN, top), model, F_TITLE(132), ROOF, tracking=-2)
-    tracked(draw, (MARGIN, top + 168), name.upper(), F_TITLE(34), INK, tracking=4)
-    draw.text((MARGIN, top + 214), sub, font=F_BODY(30), fill=(90, 104, 92))
+    tracked(draw, (MARGIN, top), model, F_TITLE(132), ROOF, tracking=-132 * 0.028)
+    tracked(draw, (MARGIN, top + 168), name.upper(), F_LABEL(34), INK, tracking=34 * 0.15 * 0.42)
+    draw.text((MARGIN, top + 214), sub, font=F_BODY(30), fill=MUTED)
 
     y = top + 300
     draw.rectangle([MARGIN, y, POST_W - MARGIN, y + 2], fill=(151, 49, 26, 90))
     y += 34
     for label, value in rows:
-        tracked(draw, (MARGIN, y + 6), label.upper(), F_BODY(22), (110, 124, 112), tracking=3)
+        tracked(draw, (MARGIN, y + 6), label.upper(), F_LABEL(22), MUTED, tracking=22 * 0.15)
         f = F_TITLE(38)
         draw.text((POST_W - MARGIN - draw.textlength(value, font=f), y - 4), value, font=f, fill=INK)
         y += 62
@@ -497,12 +514,12 @@ def duo_post(source: Path, statement: list[str], ground: tuple[int, int, int],
     draw.rectangle([MARGIN, y, MARGIN + 92, y + 3], fill=SAGE if light_type else ROOF)
     y += 40
     for line in statement:
-        tracked(draw, (MARGIN, y), line, F_TITLE(52), ink, tracking=2)
+        tracked(draw, (MARGIN, y), line, F_TITLE(52), ink, tracking=-52 * 0.021)
         y += 66
 
     if concept:
-        tracked(draw, (MARGIN, split + 22), "CONCEPT", F_BODY(23),
-                (150, 163, 148) if light_type else (139, 120, 110), tracking=3)
+        tracked(draw, (MARGIN, split + 22), "CONCEPT", F_LABEL(23),
+                (150, 163, 148) if light_type else MUTED, tracking=23 * 0.15)
     place_domain(draw, light=light_type)
     return canvas
 
@@ -525,7 +542,7 @@ def numeral_post(figure: str, label: list[str], ground: tuple[int, int, int],
     y = POST_H - SAFE_BOTTOM - 150 - 56 * len(label)
     draw.rectangle([MARGIN, y - 40, MARGIN + 92, y - 37], fill=ink)
     for line in label:
-        tracked(draw, (MARGIN, y), line, F_TITLE(46), ink, tracking=2)
+        tracked(draw, (MARGIN, y), line, F_LABEL(46), ink, tracking=46 * 0.15 * 0.42)
         y += 58
     place_domain(draw, light=light_type)
     return canvas
@@ -556,8 +573,8 @@ def detail_post(source: Path, focus: float = 0.5, concept: bool = False,
     draw = ImageDraw.Draw(canvas)
     place_logo(canvas, light=True)
     if concept:
-        tracked(draw, (MARGIN, POST_H - SAFE_BOTTOM - 34), "CONCEPT", F_BODY(23),
-                (255, 255, 255), tracking=3)
+        tracked(draw, (MARGIN, POST_H - SAFE_BOTTOM - 34), "CONCEPT", F_LABEL(23),
+                (255, 255, 255), tracking=23 * 0.15)
     place_domain(draw, light=True)
     return canvas
 
