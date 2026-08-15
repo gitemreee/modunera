@@ -1,8 +1,8 @@
 [
   {
     "n": 1,
-    "de": "Das ist kein Rendering, sondern eine Fotografie eines fertigen Hauses.\n\nMODUNERA fertigt Tiny Houses, Modulbauten, Stahlkonstruktionen und Möbel nach Maß. Produziert wird in der Türkei, geliefert wird nach Deutschland, in die Niederlande, nach Dänemark, Luxemburg und in die Schweiz. Acht Grundrisse, MD 1 bis MD 8, stehen auf einer gemeinsamen technischen Basis; die Längen reichen modellabhängig von 8,00 bis 9,70 m.\n\nIn diesem Feed ist eine Fotografie eine Fotografie. Entwürfe werden als Entwurf gekennzeichnet.\n\nmodunera.com",
-    "en": "This is a photograph, not a render. The house is finished.\n\nMODUNERA builds tiny houses, modular buildings, steel structures and furniture made to measure. Production is in Türkiye; delivery is to Germany, the Netherlands, Denmark, Luxembourg and Switzerland. Eight plans, MD 1 to MD 8, sit on one technical basis, with lengths from 8.00 to 9.70 m depending on the model.\n\nOn this account a photograph is a photograph. Anything drawn is labelled as a concept.\n\nmodunera.com",
+    "de": "Das ist kein Rendering, sondern eine Fotografie eines fertigen Hauses.\n\nMODUNERA fertigt Tiny Houses, Modulbauten, Stahlkonstruktionen und Möbel nach Maß. Produziert wird in der Türkei, geliefert wird nach Deutschland, in die Niederlande, nach Dänemark, Luxemburg und in die Schweiz. Acht Grundrisse, MD 1 bis MD 8, stehen auf derselben technischen Basis von 2,55 m Breite; die Längen reichen modellabhängig von 8,00 bis 9,70 m.\n\nIn diesem Feed ist eine Fotografie eine Fotografie. Entwürfe werden als Entwurf gekennzeichnet.\n\nmodunera.com",
+    "en": "This is a photograph, not a render. The house is finished.\n\nMODUNERA builds tiny houses, modular buildings, steel structures and furniture made to measure. Production is in Türkiye; delivery is to Germany, the Netherlands, Denmark, Luxembourg and Switzerland. Eight plans, MD 1 to MD 8, share the same 2.55 m base width, with lengths from 8.00 to 9.70 m depending on the model.\n\nOn this account a photograph is a photograph. Anything drawn is labelled as a concept.\n\nmodunera.com",
     "hashtags_de": [
       "#tinyhouse",
       "#tinyhousedeutschland",
@@ -32,7 +32,6 @@
     ],
     "unsourced": [
       "Founding year, years of production experience — blocked in REQUIRED-BUSINESS-INPUTS §2, so the opening post introduces the range instead of the company history.",
-      "2,55 m common base width: published on the site (home page and /en/) but not present in data/pricing.json, so it was left out under the pricing.json-only rule.",
       "Entry price (MD 7, 42.900 € in data/pricing.json): sourceable, but deliberately not used — a caption cannot carry the site's 'Indikation ab Werk, verbindlich ist nur ein geprüftes Angebot' caveat.",
       "Which model this house is: the photograph is not tied to an MD code in 08-launch-nine/manifest.json."
     ]
@@ -272,8 +271,8 @@
   },
   {
     "n": 9,
-    "de": "Fertig heißt hier: Das Haus steht auf dem Anhänger und verlässt den Hof.\n\nVon der Türkei nach Deutschland, in die Niederlande, nach Dänemark, Luxemburg und in die Schweiz. Vor der Verladung steht die Endkontrolle: Dokumentation und Sichtprüfung, dann die Freigabe für die Logistik. Danach entscheiden die Route — Straße, Fähre oder Tieflader — und die letzten hundert Meter zum Grundstück, die vorher geprüft werden.\n\nHerkunft ist keine Fußnote: produziert in der Türkei, geplant für Europa.",
-    "en": "Finished, here, means the house is on the trailer and leaving the yard.\n\nFrom Türkiye to Germany, the Netherlands, Denmark, Luxembourg and Switzerland. Before loading comes the final check: documentation and visual inspection, then release for logistics. After that it is the route — road, ferry or low-loader — and the last hundred metres onto the site, which are checked in advance.\n\nOrigin is not a footnote: manufactured in Türkiye, designed for Europe.",
+    "de": "Fertig heißt hier: Das Haus steht auf dem Anhänger und verlässt den Hof.\n\nVon der Türkei nach Deutschland, in die Niederlande, nach Dänemark, Luxemburg und in die Schweiz. Vor der Verladung steht die Endkontrolle: Dokumentation und Sichtprüfung, dann die Freigabe für die Logistik. Alle acht Modelle stehen auf derselben Basisbreite von 2,55 m; was sich je Projekt ändert, sind Länge, Route — Straße, Fähre oder Tieflader — und die letzten hundert Meter zum Grundstück, die vorher geprüft werden.\n\nHerkunft ist keine Fußnote: produziert in der Türkei, geplant für Europa.",
+    "en": "Finished, here, means the house is on the trailer and leaving the yard.\n\nFrom Türkiye to Germany, the Netherlands, Denmark, Luxembourg and Switzerland. Before loading comes the final check: documentation and visual inspection, then release for logistics. All eight models share the same 2.55 m base width; what changes per project is the length, the route — road, ferry or low-loader — and the last hundred metres onto the site, which are checked in advance.\n\nOrigin is not a footnote: manufactured in Türkiye, designed for Europe.",
     "hashtags_de": [
       "#tinyhouse",
       "#tinyhouseaufraedern",
