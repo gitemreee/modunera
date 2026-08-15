@@ -1,0 +1,154 @@
+{
+  "generated_at": "2026-08-15",
+  "pages": 15165,
+  "indexable_pages": 515,
+  "noindex_pages": 14650,
+  "head": {
+    "missing_title": 1,
+    "missing_description": 1,
+    "missing_canonical": 1,
+    "missing_lang": 1,
+    "title_over_65_chars": 14362,
+    "title_under_25_chars": 2,
+    "description_over_165_chars": 126,
+    "description_under_70_chars": 9,
+    "missing_og_title": 17,
+    "missing_og_image": 17,
+    "missing_twitter_card": 18,
+    "pages_with_hreflang": 302
+  },
+  "duplicates_among_indexable": {
+    "duplicate_title_strings": 4,
+    "worst_title": {
+      "title": "Guides – MODUNERA | Tiny House",
+      "pages": 2
+    },
+    "duplicate_description_strings": 4,
+    "worst_description": {
+      "pages": 3
+    }
+  },
+  "headings": {
+    "pages_without_h1": 1,
+    "pages_with_more_than_one_h1": 0,
+    "examples_without_h1": [
+      "google1292ab011b78c207.html"
+    ]
+  },
+  "structured_data": {
+    "invalid_json_ld_pages": 0,
+    "types": {
+      "FAQPage": 14913,
+      "WebPage": 14542,
+      "BreadcrumbList": 7803,
+      "BlogPosting": 249,
+      "CollectionPage": 161,
+      "Product": 40,
+      "Article": 38,
+      "Service": 20,
+      "NewsArticle": 18,
+      "ItemList": 7,
+      "Organization": 4,
+      "Blog": 3,
+      "WebApplication": 2
+    },
+    "pages_with_breadcrumb": 7803,
+    "pages_with_faqpage": 14920,
+    "pages_with_organization": 330,
+    "pages_with_website": 1,
+    "pages_with_service": 20,
+    "pages_with_product": 14556,
+    "pages_with_article": 71,
+    "pages_with_localbusiness": 0
+  },
+  "images": {
+    "img_tags": 74668,
+    "missing_alt_attribute": 0,
+    "empty_alt_decorative": 25,
+    "missing_width_or_height": 44187,
+    "missing_loading_attribute": 45036,
+    "referenced_but_absent": 0,
+    "referenced_but_absent_examples": [],
+    "files_present_but_unreferenced": 33,
+    "heaviest": [
+      {
+        "file": "assets/brand/modunera-digital-sunrise-glow-v1.png",
+        "kb": 1226
+      },
+      {
+        "file": "assets/images/mc-3.webp",
+        "kb": 502
+      },
+      {
+        "file": "assets/images/gallery/mc1-exterior.webp",
+        "kb": 440
+      },
+      {
+        "file": "assets/images/mc-1.webp",
+        "kb": 392
+      },
+      {
+        "file": "assets/images/mc-4.webp",
+        "kb": 378
+      },
+      {
+        "file": "assets/images/gallery/interior-feature.webp",
+        "kb": 318
+      },
+      {
+        "file": "assets/images/hero.webp",
+        "kb": 300
+      },
+      {
+        "file": "assets/images/hero-slides/slide-2-1400.webp",
+        "kb": 285
+      },
+      {
+        "file": "assets/images/gallery/mc3-exterior.webp",
+        "kb": 281
+      },
+      {
+        "file": "assets/images/gallery/mc6-living.webp",
+        "kb": 275
+      },
+      {
+        "file": "assets/images/mc-2.webp",
+        "kb": 264
+      },
+      {
+        "file": "assets/images/gallery/hero-forest.webp",
+        "kb": 263
+      }
+    ]
+  },
+  "links": {
+    "internal_links_checked": 1387913,
+    "broken": 0,
+    "broken_examples": []
+  },
+  "conversion": {
+    "whatsapp_links": 52613,
+    "whatsapp_wrong_number": 0,
+    "whatsapp_wrong_number_examples": [],
+    "whatsapp_without_prefilled_text": 0,
+    "mailto_links": 0,
+    "tel_links": 30305,
+    "forms": 8
+  },
+  "crawl_contract": {
+    "robots_txt": "7 lines",
+    "robots_blocks_ai": false,
+    "sitemap_index": "present",
+    "sitemap_urls": 514,
+    "sitemap_urls_without_a_page": 0,
+    "sitemap_url_examples_without_a_page": [],
+    "indexable_pages_missing_from_sitemap": 1,
+    "llms_txt": "880 bytes",
+    "llms_full_txt": "3807 bytes"
+  },
+  "performance_signals": {
+    "external_render_blocking_references": 0,
+    "external_reference_examples": [],
+    "inline_style_attributes": 1237
+  }
+}
