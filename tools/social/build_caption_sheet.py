@@ -15,7 +15,19 @@ That reversal is also why the checkerboard survives it. Reversing a sequence in 
 three-column grid is a 180-degree rotation, and rotation preserves adjacency, so
 "a card never touches a card" holds whichever direction the set is published in.
 
-Writes social/instagram/07-captions/<set>.md
+Two sheets come out of the same data:
+
+  <set>.md        the full reference — both languages, the full hashtag sets, the
+                  "not said, and why" list, and the treatment behind each post
+  <set>-post.md   what you actually post from — one block per post, five hashtags,
+                  the place tag, and nothing else to scroll past
+
+The five-tag sheet exists because Instagram's own limit on this account is five,
+and because five is a better number anyway: the generic category tags are the most
+contested terms in the market and a new account does not rank in them, whereas a
+regional tag is a small pool of people who are already there.
+
+Writes social/instagram/07-captions/<set>.md and <set>-post.md
 
 Usage: python3 tools/social/build_caption_sheet.py [set]
        set defaults to launch-nine
@@ -76,11 +88,49 @@ def build(name: str) -> Path:
     return path
 
 
+def build_post_sheet(name: str) -> Path:
+    """The posting sheet: one block per post, five hashtags, and the place tag.
+
+    Deliberately thinner than the reference sheet. This one is read on a phone
+    with the Instagram composer open, so everything that is not copied out of it
+    is in the way.
+    """
+    entries = {e["n"]: e for e in
+               json.loads((CAPTIONS / f"{name}.json").read_text(encoding="utf8"))}
+    loc = json.loads((CAPTIONS / f"{name}-locations.json").read_text(encoding="utf8"))
+    places = {p["n"]: p for p in loc["posts"]}
+    order = sorted(entries, reverse=True)
+
+    out = [
+        f"# MODUNERA — {name.replace('-', ' ')}, ready to post\n",
+        f"**Publish {order[0]} first and {order[-1]} last.** Instagram puts the most recent",
+        "post at the top left, so the post you want in that corner goes up last. Work",
+        "down this page in order.\n",
+        "Each block is one caption: English, a rule, German, then five hashtags. Copy",
+        "the whole block. The place tag goes in Instagram's own location field, not in",
+        "the caption.\n",
+        f"> {loc['honesty_note']}\n",
+        "---\n",
+    ]
+
+    for n in order:
+        e, p = entries[n], places[n]
+        out.append(f"## {n} · `post-{n}.jpg`\n")
+        out.append(f"**Location:** {p['instagram_tag']} — {p['region']}\n")
+        out.append("```\n" + e["en"] + "\n\n—\n\n" + e["de"] + "\n\n"
+                   + " ".join(p["hashtags"]) + "\n```\n")
+        out.append("---\n")
+
+    path = CAPTIONS / f"{name}-post.md"
+    path.write_text("\n".join(out), encoding="utf8")
+    return path
+
+
 def main() -> None:
     name = sys.argv[1] if len(sys.argv) > 1 else "launch-nine"
-    path = build(name)
-    print(json.dumps({"set": name, "file": str(path.relative_to(ROOT)),
-                      "bytes": path.stat().st_size}))
+    made = [build(name), build_post_sheet(name)]
+    print(json.dumps({"set": name,
+                      "files": [str(p.relative_to(ROOT)) for p in made]}))
 
 
 if __name__ == "__main__":

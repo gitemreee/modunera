@@ -1,0 +1,90 @@
+{
+  "set": "launch-nine",
+  "market": "Germany",
+  "why_these": "Nine regions chosen for camping and holiday-home density rather than for population. A tiny house is bought by someone who already thinks about a plot, a pitch or a second home, and in Germany those people are concentrated in the coastal islands, the lake districts and the low mountain ranges — not in the cities. Each place has a real page under /standorte/, so a post that carries the tag has somewhere on the site to land.",
+  "honesty_note": "An Instagram place tag is read by some people as 'this is where the picture was taken'. None of these photographs were taken in Germany — production is in Türkiye. Posts 1, 6 and 9 say so in the caption, so the tag reads as market. Post 5 does not, and it is the one that asserts 'a completed unit, not a visualisation' most directly; either skip the tag there or accept that it reads as a location claim. Recommended: tag it, because the account bio and every neighbouring post state the origin — but it is a decision, not an oversight.",
+  "hashtag_rule": "Five per post. Three for the place, one for the subject, one for the brand. The generic tiny-house tags are dropped: they are the most contested terms in the category and a new account does not rank in them, whereas #vulkaneifel or #hochsauerland is a small pool of people who are actually there.",
+  "posts": [
+    {
+      "n": 1,
+      "place": "Fehmarn",
+      "instagram_tag": "Fehmarn, Germany",
+      "region": "Ostholstein, Schleswig-Holstein",
+      "page": "standorte/schleswig-holstein/fehmarn/",
+      "why": "Baltic island with one of the highest campsite densities in Germany, and a long-standing holiday-home market. The opening post gets the strongest place.",
+      "hashtags": ["#fehmarn", "#ostsee", "#ostholstein", "#tinyhousedeutschland", "#modunera"]
+    },
+    {
+      "n": 2,
+      "place": "Prien am Chiemsee",
+      "instagram_tag": "Prien am Chiemsee",
+      "region": "Chiemgau, Bayern",
+      "page": "standorte/bayern/prien-am-chiemsee/",
+      "why": "The Chiemsee shore is dense with campsites and holiday plots, and Bavaria is the strongest region for second homes.",
+      "hashtags": ["#prienamchiemsee", "#chiemsee", "#chiemgau", "#grundriss", "#modunera"]
+    },
+    {
+      "n": 3,
+      "place": "Gerolstein",
+      "instagram_tag": "Gerolstein",
+      "region": "Vulkaneifel, Rheinland-Pfalz",
+      "page": "standorte/rheinland-pfalz/gerolstein/",
+      "why": "Vulkaneifel is a nature park with heavy camping traffic and cheap land by western German standards. A structural post suits a region people go to for the ground itself.",
+      "hashtags": ["#vulkaneifel", "#eifel", "#gerolstein", "#stahlbau", "#modunera"]
+    },
+    {
+      "n": 4,
+      "place": "Bispingen",
+      "instagram_tag": "Bispingen",
+      "region": "Lüneburger Heide, Niedersachsen",
+      "page": "standorte/niedersachsen/bispingen/",
+      "why": "The Heide sits between Hamburg and Hannover and is one of the densest holiday-park areas in the north.",
+      "hashtags": ["#lueneburgerheide", "#bispingen", "#heidekreis", "#modulhaus", "#modunera"]
+    },
+    {
+      "n": 5,
+      "place": "Waren (Müritz)",
+      "instagram_tag": "Waren (Müritz)",
+      "region": "Mecklenburgische Seenplatte, Mecklenburg-Vorpommern",
+      "page": "standorte/mecklenburg-vorpommern/waren/",
+      "why": "The largest inland lake district in Germany, and the centre of the grid deserves the largest market. Evening light on water is what people come here for.",
+      "hashtags": ["#mueritz", "#mecklenburgischeseenplatte", "#warenmueritz", "#ferienhaus", "#modunera"]
+    },
+    {
+      "n": 6,
+      "place": "Titisee-Neustadt",
+      "instagram_tag": "Titisee-Neustadt",
+      "region": "Hochschwarzwald, Baden-Württemberg",
+      "page": "standorte/baden-wuerttemberg/titisee-neustadt/",
+      "why": "Black Forest, and the corner of Germany closest to Switzerland — the right place for the post about five countries and one route.",
+      "hashtags": ["#schwarzwald", "#titisee", "#hochschwarzwald", "#tinyhouseschweiz", "#modunera"]
+    },
+    {
+      "n": 7,
+      "place": "Winterberg",
+      "instagram_tag": "Winterberg",
+      "region": "Hochsauerland, Nordrhein-Westfalen",
+      "page": "standorte/nordrhein-westfalen/winterberg/",
+      "why": "Sauerland is the holiday region for the Ruhr, which is the largest population block in the country. A workmanship post in front of the biggest domestic audience.",
+      "hashtags": ["#sauerland", "#winterberg", "#hochsauerland", "#holzfassade", "#modunera"]
+    },
+    {
+      "n": 8,
+      "place": "Bodenmais",
+      "instagram_tag": "Bodenmais",
+      "region": "Bayerischer Wald, Bayern",
+      "page": "standorte/bayern/bodenmais/",
+      "why": "Beside the Bavarian Forest National Park — the largest contiguous woodland in central Europe. A fire-safety message belongs where the forest is.",
+      "hashtags": ["#bayerischerwald", "#bodenmais", "#nationalpark", "#waldbrandschutz", "#modunera"]
+    },
+    {
+      "n": 9,
+      "place": "Ostseebad Binz, Rügen",
+      "instagram_tag": "Ostseebad Binz",
+      "region": "Rügen, Mecklenburg-Vorpommern",
+      "page": "standorte/mecklenburg-vorpommern/ostseebad-binz/",
+      "why": "Germany's largest island. Everything on it arrived over a bridge or on a ferry, which is exactly the subject of the transport post.",
+      "hashtags": ["#ruegen", "#binz", "#ostseeinsel", "#transport", "#modunera"]
+    }
+  ]
+}
