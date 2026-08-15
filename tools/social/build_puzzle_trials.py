@@ -322,11 +322,16 @@ def sheet(board: Image.Image, path: Path, cell: int = 330, gut: int = 4) -> None
 
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
-    for name, fn in [("a-paper", trial_a), ("b-forest", trial_b)]:
+    for name, fn in [("a-paper", trial_a), ("b-forest", trial_b), ("c-frames", trial_c)]:
         board = fn()
         sheet(board, OUT / f"trial-{name}.jpg")
         board.resize((BW // 3, BH // 3), Image.LANCZOS).save(
             OUT / f"board-{name}.jpg", quality=88, optimize=True)
+        thin = [(n, f) for n, f in coverage(board, g.PAPER if name == "c-frames"
+                                            else g.CREAM) if f < 0.45]
+        if thin:
+            print("  thin tiles: " + ", ".join(f"{n} at {f:.0%}" for n, f in thin),
+                  file=sys.stderr)
         if STRADDLED:
             for box, dark, light in STRADDLED:
                 print(f"  WARN type at {box} straddles ground {dark}-{light}; "
@@ -335,5 +340,234 @@ def main() -> None:
         print(f"{name}: {OUT.relative_to(g.ROOT)}/trial-{name}.jpg")
 
 
+
+# --- trial C: the frame board -------------------------------------------------
+# A third device, and the most delicate of the three. The connection is not a
+# field of colour but a set of thin open rectangles that begin in one tile and
+# end in another: the eye follows a line across the gutter as readily as it
+# completes a curve, and a line costs almost no surface, so the ground stays
+# light without the board going empty.
+#
+# Light is not the problem. Empty is. This one is pale and dense at once — every
+# tile carries a photograph, a rule, a label or a frame edge, and the white is
+# the space between things rather than the absence of them.
+
+def coverage(board: Image.Image, ground) -> list[tuple[int, float]]:
+    """How much of each tile is something rather than nothing.
+
+    "Too empty" is the criticism this board kept earning, and it is not a matter
+    of taste that can be left to the eye at preview size — a tile that is 80 %
+    bare ground looks calm in a 330 px preview and looks unfinished at full size
+    on a phone. So it is counted: every pixel that differs from the ground by more
+    than a JPEG's worth of noise is content. Below 45 % a tile is reported.
+    """
+    from PIL import ImageChops
+    flat = Image.new("RGB", (TW, TH), ground)
+    out = []
+    for r in range(ROWS):
+        for c in range(COLS):
+            x, y = tile_xy(c, r)
+            tile = board.crop((x, y, x + TW, y + TH))
+            diff = ImageChops.difference(tile, flat).convert("L").point(
+                lambda v: 255 if v > 12 else 0)
+            filled = sum(diff.get_flattened_data()) / 255 / (TW * TH)
+            out.append((r * COLS + c + 1, filled))
+    return out
+
+
+def vtext(board: Image.Image, xy, text: str, font, colour, tracking=0.0,
+          clockwise: bool = True) -> None:
+    """Type running up or down the edge of the board.
+
+    Pillow cannot rotate text, so it is drawn flat on its own layer and the layer
+    is turned. Worth the detour: a vertical line of type is the cheapest way to
+    fill a tall margin without adding another block, and it is what stops a
+    three-column board reading as three separate columns."""
+    pad = 40
+    tmp = Image.new("RGBA", (2200, font.size + pad * 2), (0, 0, 0, 0))
+    g.tracked(ImageDraw.Draw(tmp), (0, pad), text, font, colour + (255,), tracking=tracking)
+    tmp = tmp.crop(tmp.getbbox())
+    tmp = tmp.rotate(-90 if clockwise else 90, expand=True)
+    board.paste(tmp, xy, tmp)
+
+
+def open_frame(d: ImageDraw.ImageDraw, box, colour, w: int = 4) -> None:
+    d.rectangle(list(box), outline=colour, width=w)
+
+
+def trial_c() -> Image.Image:
+    """Blocks and photographs fill the tiles; thin frames cross the seams.
+
+    The first version of this put type straight onto the ground and measured 3 %
+    coverage on the slogan tile. Type is almost no pixels — a line of it fills a
+    tile the way a signature fills a page — so a tile carrying only words reads as
+    unfinished however good the words are. Every tile now has a photograph or a
+    block under it, and the frames are what join them.
+
+    Every block crosses at least one seam, so the connection survives the gutter.
+    """
+    b = Image.new("RGB", (BW, BH), g.PAPER)
+    d = ImageDraw.Draw(b)
+    M = 60
+
+    #  x0    y0    x1    y1    colour        what it crosses
+    for x0, y0, x1, y1, col in [
+            (900, M, 2400, TH - M, g.CREAM),                 # tile 2, into 1 and 3
+            (M, TH + M, 1240, TH * 2 - M, g.MOSS_DEEP),      # tile 4, into 5
+            (2000, TH + 200, BW - M, TH * 2 - M, g.CREAM),   # tile 6, into 5
+            (900, TH * 2 + M, 2360, TH * 3 - M, g.CREAM),    # tile 8, into 7 and 9
+            (940, TH * 3 + M, 2220, BH - M, g.MOSS_DEEP),    # tile 11, into 10 and 12
+            (2140, TH * 3 + 240, BW - M, BH - M, g.SAGE)]:   # tile 12, into 11
+        d.rectangle([x0, y0, x1, y1], fill=col)
+
+    # Photographs go on after the blocks, so a block behind one becomes its margin
+    b.paste(photo("lawn", 1020, TH - M * 2, 0.34), (M, M))
+    b.paste(photo("night", 960, TH - M * 2, 0.46), (2220, M))
+    b.paste(photo("grove", 900, TH - M * 2, 0.52), (1140, TH + M))
+    b.paste(photo("cladding", 1020, TH - M * 2, 0.32), (M, TH * 2 + M))
+    b.paste(photo("loft", 960, TH - M * 2, 0.5), (2220, TH * 2 + M))
+    b.paste(photo("trailer", 1020, TH - M * 2, 0.48), (M, TH * 3 + M))
+
+    R = g.ROOF
+    # the frames, last, so they read as drawn over the whole board
+    open_frame(d, (760, 700, 1900, 1500), R)      # 1 -> 2, and down into 4/5
+    open_frame(d, (1980, 1180, 3060, 1900), R)    # 3 -> 6
+    open_frame(d, (700, 2500, 1820, 3300), R)     # 7 -> 8, across the row above
+    open_frame(d, (1900, 3700, 2980, 4500), R)    # 9 -> 12
+
+    x, y = tile_xy(1, 0)
+    c = type_on(b, (x + 120, y + 420, x + TW - 120, y + 900))
+    for i, line in enumerate(["DESIGN", "YOUR", "NATURE"]):
+        g.tracked(d, (x + 120, y + 440 + i * 132), line, g.F_TITLE(104), c,
+                  tracking=-104 * 0.021)
+
+    x, y = tile_xy(0, 1)
+    c = type_on(b, (x + 120, y + 300, x + 1000, y + 1010))
+    g.tracked(d, (x + 120, y + 320), "WHAT WE BUILD", g.F_LABEL(30), c, tracking=30 * 0.15)
+    for i, line in enumerate(["TINY HOUSE", "MODULAR HOME", "STEEL STRUCTURE",
+                              "BUNGALOWS", "CUSTOM FURNITURE"]):
+        g.tracked(d, (x + 120, y + 450 + i * 104), line, g.F_TITLE(56), c,
+                  tracking=-56 * 0.021)
+
+    vtext(b, (3090, TH + 320), "DESIGN YOUR NATURE", g.F_LABEL(36), g.INK,
+          tracking=36 * 0.15)
+
+    x, y = tile_xy(1, 2)
+    c = type_on(b, (x + 120, y + 300, x + TW - 120, y + 1020))
+    g.tracked(d, (x + 120, y + 300), "5", g.F_TITLE(400), c, tracking=0)
+    g.tracked(d, (x + 120, y + 880), "LÄNDER,", g.F_LABEL(44), c, tracking=44 * 0.15 * 0.42)
+    g.tracked(d, (x + 120, y + 952), "EIN HERSTELLER", g.F_LABEL(44), c,
+              tracking=44 * 0.15 * 0.42)
+
+    x, y = tile_xy(1, 3)
+    c = type_on(b, (x + 120, y + 260, x + TW - 60, y + 1000))
+    g.tracked(d, (x + 120, y + 280), "WHERE WE DELIVER", g.F_LABEL(30), c, tracking=30 * 0.15)
+    yy = y + 400
+    for code in g.FLAG_ORDER:
+        f = g.flag(code, 64)
+        b.paste(f, (x + 120, yy))
+        d.rectangle([x + 120, yy, x + 120 + f.width, yy + 64], outline=c, width=2)
+        g.tracked(d, (x + 120 + f.width + 30, yy + 14), g.FLAGS[code]["name"],
+                  g.F_BODY(40), c, tracking=0)
+        yy += 94
+
+    x, y = tile_xy(2, 3)
+    logo = Image.open(g.BRAND / "modunera-master-logo-mountain-v1-600.png").convert("RGBA")
+    lw = 470
+    logo = logo.resize((lw, round(logo.height * lw / logo.width)), Image.LANCZOS)
+    b.paste(logo, (x + 180, y + 640), logo)
+    g.tracked(d, (x + 180, y + 820), "modunera.com", g.F_BODY(44),
+              type_on(b, (x + 180, y + 810, x + 180 + 340, y + 876)), tracking=0)
+    return b
+
+
+def sheet(board: Image.Image, path: Path, cell: int = 330, gut: int = 4) -> None:
+    """The profile view: the twelve tiles, cut and set back down with the gutter
+    Instagram draws between them. The gutter is the honest part — a board that
+    only works without it is a board that will not work."""
+    im = Image.new("RGB", (cell * COLS + gut * (COLS - 1),
+                           round(cell * TH / TW) * ROWS + gut * (ROWS - 1)), (255, 255, 255))
+    ch = round(cell * TH / TW)
+    for r in range(ROWS):
+        for c in range(COLS):
+            x, y = tile_xy(c, r)
+            tile = board.crop((x, y, x + TW, y + TH)).resize((cell, ch), Image.LANCZOS)
+            im.paste(tile, (c * (cell + gut), r * (ch + gut)))
+    im.save(path, quality=93, optimize=True)
+
+
+def main() -> None:
+    OUT.mkdir(parents=True, exist_ok=True)
+    for name, fn in [("a-paper", trial_a), ("b-forest", trial_b), ("c-frames", trial_c)]:
+        board = fn()
+        sheet(board, OUT / f"trial-{name}.jpg")
+        board.resize((BW // 3, BH // 3), Image.LANCZOS).save(
+            OUT / f"board-{name}.jpg", quality=88, optimize=True)
+        thin = [(n, f) for n, f in coverage(board, g.PAPER if name == "c-frames"
+                                            else g.CREAM) if f < 0.45]
+        if thin:
+            print("  thin tiles: " + ", ".join(f"{n} at {f:.0%}" for n, f in thin),
+                  file=sys.stderr)
+        if STRADDLED:
+            for box, dark, light in STRADDLED:
+                print(f"  WARN type at {box} straddles ground {dark}-{light}; "
+                      f"no palette colour clears 4.5 on both", file=sys.stderr)
+            STRADDLED.clear()
+        print(f"{name}: {OUT.relative_to(g.ROOT)}/trial-{name}.jpg")
+
+
+
+# --- trial C: the frame board -------------------------------------------------
+# A third device, and the most delicate of the three. The connection is not a
+# field of colour but a set of thin open rectangles that begin in one tile and
+# end in another: the eye follows a line across the gutter as readily as it
+# completes a curve, and a line costs almost no surface, so the ground stays
+# light without the board going empty.
+#
+# Light is not the problem. Empty is. This one is pale and dense at once — every
+# tile carries a photograph, a rule, a label or a frame edge, and the white is
+# the space between things rather than the absence of them.
+
+def coverage(board: Image.Image, ground) -> list[tuple[int, float]]:
+    """How much of each tile is something rather than nothing.
+
+    "Too empty" is the criticism this board kept earning, and it is not a matter
+    of taste that can be left to the eye at preview size — a tile that is 80 %
+    bare ground looks calm in a 330 px preview and looks unfinished at full size
+    on a phone. So it is counted: every pixel that differs from the ground by more
+    than a JPEG's worth of noise is content. Below 45 % a tile is reported.
+    """
+    from PIL import ImageChops
+    flat = Image.new("RGB", (TW, TH), ground)
+    out = []
+    for r in range(ROWS):
+        for c in range(COLS):
+            x, y = tile_xy(c, r)
+            tile = board.crop((x, y, x + TW, y + TH))
+            diff = ImageChops.difference(tile, flat).convert("L").point(
+                lambda v: 255 if v > 12 else 0)
+            filled = sum(diff.get_flattened_data()) / 255 / (TW * TH)
+            out.append((r * COLS + c + 1, filled))
+    return out
+
+
+def vtext(board: Image.Image, xy, text: str, font, colour, tracking=0.0,
+          clockwise: bool = True) -> None:
+    """Type running up or down the edge of the board.
+
+    Pillow cannot rotate text, so it is drawn flat on its own layer and the layer
+    is turned. Worth the detour: a vertical line of type is the cheapest way to
+    fill a tall margin without adding another block, and it is what stops a
+    three-column board reading as three separate columns."""
+    pad = 40
+    tmp = Image.new("RGBA", (2200, font.size + pad * 2), (0, 0, 0, 0))
+    g.tracked(ImageDraw.Draw(tmp), (0, pad), text, font, colour + (255,), tracking=tracking)
+    tmp = tmp.crop(tmp.getbbox())
+    tmp = tmp.rotate(-90 if clockwise else 90, expand=True)
+    board.paste(tmp, xy, tmp)
+
+
+def open_frame(d: ImageDraw.ImageDraw, box, colour, w: int = 4) -> None:
+    d.rectangle(list(box), outline=colour, width=w)
 if __name__ == "__main__":
     main()
