@@ -1,0 +1,69 @@
+{
+  "_comment": [
+    "The twelve component cards on /qualitaet/. Each entry gives the card its own",
+    "sentence instead of the placeholder all twelve carried.",
+    "",
+    "Rule for every line below, and for anything added to it: describe what the",
+    "component is and what job it does, then say where the certified figure lives.",
+    "Never state the figure. Section-imposed values — U-values, axle loads, steel",
+    "grades, glazing build-ups — are listed in REQUIRED-BUSINESS-INPUTS.md as",
+    "publish blockers, and a card that guesses one turns a blocked claim into a",
+    "published one.",
+    "",
+    "'match' is the card's <h3> exactly as it stands in the committed HTML. The",
+    "generator matches on it rather than on position, so reordering the grid does",
+    "not silently move the copy."
+  ],
+  "page": "qualitaet/index.html",
+  "lang": "de",
+  "cards": [
+    {
+      "match": "Tragende Stahlkonstruktion",
+      "de": "Der Lastabtrag läuft über einen geschweißten Stahlrahmen, nicht über die Verkleidung — die Fassade trägt nichts und kann deshalb nach Klima gewählt werden. Profilquerschnitte, Stahlgüte und Korrosionsschutz stehen im technischen Datenblatt zum Angebot."
+    },
+    {
+      "match": "Stahlfahrgestell",
+      "de": "Das Fahrgestell entscheidet, ob eine Einheit auf eigener Achse fahren darf oder auf den Tieflader muss. Hersteller, zulässige Gesamtmasse und der Umfang der Typgenehmigung werden je Modell im Angebot benannt."
+    },
+    {
+      "match": "Thermowood+ / Verbund / Stehfalz je nach Paket",
+      "de": "Die Fassade wird nach Standort gewählt: thermisch behandeltes Holz, Verbundplatte oder Stehfalzblech. Küste, Alpenlage und Waldrand stellen unterschiedliche Anforderungen; welche Variante zu Ihrem Paket gehört, steht in der Konfiguration."
+    },
+    {
+      "match": "Masse und Zulassung",
+      "de": "Leergewicht, Achslast und zulässige Gesamtmasse bestimmen Transportart und nötige Fahrerlaubnis. Verbindlich ist der Wiegeschein der gebauten Einheit, nicht ein Katalogwert."
+    },
+    {
+      "match": "Vier Kurbelstützen",
+      "de": "Nach dem Abstellen wird die Einheit über vier Stützen ausgerichtet und das Fahrwerk entlastet. Untergrund und Lastverteilung am Aufstellort gehören zur Planung, nicht zur Lieferung."
+    },
+    {
+      "match": "Wärmeisolierte PVC-Tischlerei",
+      "de": "Fenster und Türen sitzen in thermisch getrennten Profilen, damit der Rahmen keine Wärmebrücke neben der gedämmten Wand bildet. Die Leistungserklärung des Herstellers gehört zu den Projektunterlagen."
+    },
+    {
+      "match": "Isolierverglasung nach Modell",
+      "de": "Welche Verglasung eingebaut wird, entscheidet das Klima am Standort — an der Nordsee ist die Anforderung eine andere als im Wallis. Aufbau, Beschichtung und U-Wert stehen in der Leistungserklärung des Herstellers; auf dieser Seite steht kein Wert, der nicht belegt ist."
+    },
+    {
+      "match": "Flammhemmende Kabel und Kanäle",
+      "de": "Leitungen laufen in Kanälen aus flammhemmendem Material, damit ein Fehler in der Elektrik die Ausbreitung nicht beschleunigt. Die Materialklassen sind im Elektro-Datenblatt dokumentiert."
+    },
+    {
+      "match": "Halogenfreie 230 V / 50 Hz-Elektroinstallation",
+      "de": "Europäische Netzspannung und halogenfreie Isolierung — im Brandfall entstehen keine halogenhaltigen Rauchgase. Der Anschluss an das örtliche Netz bleibt Aufgabe einer Elektrofachkraft vor Ort."
+    },
+    {
+      "match": "Klima-Infrastruktur",
+      "de": "Leitungen, Auslässe und Stromversorgung für Heizung und Kühlung werden im Rohbau verlegt, weil sie später hinter geschlossenen Wänden liegen. Welche Geräte eingebaut werden, richtet sich nach dem Klima am Standort."
+    },
+    {
+      "match": "Lackierte Küchenschränke",
+      "de": "Korpusse und Fronten entstehen in derselben Fertigung wie der übrige Innenausbau, lackiert statt foliert. Farbe, Griffe und Auszüge werden je Projekt festgelegt."
+    },
+    {
+      "match": "Massive Paneel-Arbeitsplatten",
+      "de": "Massives Paneel statt beschichteter Spanplatte, weil die Kante an Spüle und Kochfeld am stärksten beansprucht wird und eine aufgequollene Kante nicht reparabel ist. Stärke und Material werden im Angebot benannt."
+    }
+  ]
+}

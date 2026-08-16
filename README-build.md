@@ -15,6 +15,7 @@ node tools/build-news-v7.mjs              # sourced local news, five market hubs
 node tools/build-production-faq-v7.mjs    # production, quality, delivery and buying FAQ
 node tools/build-modunera-v2.mjs          # navigation, comparison pages, guide hubs, cookie notice
 node tools/build-modunera-depth.mjs --extend   # appendix, product word, blocked-claim removal
+node tools/build-quality-spec.mjs         # the twelve component cards on /qualitaet/
 node tools/build-hreflang-v7.mjs          # reciprocal five-language clusters
 node tools/build-photo-placement.mjs      # real photographs on factory, projects, quality
 node tools/build-image-attrs.mjs          # intrinsic size, lazy loading, deferred place index
@@ -43,6 +44,13 @@ navigation, the WhatsApp dock and the sitemap. The news and production-FAQ
 generators run there for the same reason: they emit an empty `<nav class="nav">`
 for v2 to fill, and v2 reads their hub paths and labels out of `data/news.json`
 and `data/production-faq.json` to build the menu entries that point at them.
+
+`build-quality-spec.mjs` runs **after** the `--extend` phase and not before it,
+because the claim pass renames the headings it matches on. The glazing card was
+called "Doppelt gehärtetes Thermopane" until the register learned to catch the
+capitalised form; the pass now renames it, and a step that had already written
+copy under the old heading would have written it twice, in two places, under two
+names. Matching on a heading means running after whatever last changed one.
 
 `build-modunera-depth.mjs` has two phases because v2 sits between them. Phase one
 writes new pages, which then need v2's navigation and sitemap entries. Phase two

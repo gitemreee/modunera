@@ -219,6 +219,22 @@
         [
           "double-tempered glazing",
           "insulating glazing specified per model"
+        ],
+        [
+          "Doppelt gehärtete Thermopane-Isolierverglasung",
+          "Isolierverglasung nach Modell"
+        ],
+        [
+          "Doppelt gehärtetes Thermopane",
+          "Isolierverglasung nach Modell"
+        ],
+        [
+          "Doppelt gehärtete",
+          "Modellbezogen ausgelegte"
+        ],
+        [
+          "Doppelt gehärtet",
+          "Modellbezogen ausgelegt"
         ]
       ]
     },
