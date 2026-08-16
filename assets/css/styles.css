@@ -1,4 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=Caveat:wght@500;600;700&display=swap');
+/* Fonts, served from this origin.
+
+   This file used to open with an @import of fonts.googleapis.com, which put a
+   third-party request on all 15,164 pages of a site that sells into Germany. Two
+   things were wrong with it and neither was small.
+
+   Legally: Google Fonts transmits the visitor's IP address to Google before any
+   consent is possible, and this site's own cookie notice tells the reader in five
+   languages that no analysis or marketing service is active. A German court has
+   already awarded damages over exactly this arrangement, and the request fired on
+   every page load regardless of what the reader chose in the notice.
+
+   Technically: an @import inside a stylesheet is the slowest way to load a font.
+   The browser cannot discover it until this file has downloaded and parsed, then
+   it fetches Google's CSS, then the font files from a second host — four round
+   trips across two origins before the first character is drawn. Same-origin
+   @font-face is discovered as this file parses.
+
+   What is loaded, from measurement rather than from the old import list. A pass
+   over seven page types recorded the computed family and weight of every element
+   that renders its own text:
+
+     Poppins   2,480 elements   400, 500, 600, 700, 800
+     Caveat       28 elements   600, and only the two words of the brand claim
+     Manrope       0 elements
+
+   Manrope was in the import and reached no element on any page, because every
+   rule that names it names Poppins first. Five weights were being downloaded for
+   nothing and are simply gone. Caveat is subset to the fourteen characters of
+   "Design Your Nature" — 70 KB of handwriting for two words became 7 KB, with the
+   contextual alternates kept, since those are what make it join like handwriting.
+
+   Licences are OFL and travel with the files: see POPPINS-LICENSE.txt and
+   CAVEAT-LICENSE.txt in assets/fonts/. */
+@font-face{font-family:"Poppins";font-style:normal;font-weight:400;font-display:swap;src:url("../fonts/poppins-latin-400.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Poppins";font-style:normal;font-weight:400;font-display:swap;src:url("../fonts/poppins-latin-ext-400.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Poppins";font-style:normal;font-weight:500;font-display:swap;src:url("../fonts/poppins-latin-500.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Poppins";font-style:normal;font-weight:500;font-display:swap;src:url("../fonts/poppins-latin-ext-500.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Poppins";font-style:normal;font-weight:600;font-display:swap;src:url("../fonts/poppins-latin-600.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Poppins";font-style:normal;font-weight:600;font-display:swap;src:url("../fonts/poppins-latin-ext-600.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Poppins";font-style:normal;font-weight:700;font-display:swap;src:url("../fonts/poppins-latin-700.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Poppins";font-style:normal;font-weight:700;font-display:swap;src:url("../fonts/poppins-latin-ext-700.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Poppins";font-style:normal;font-weight:800;font-display:swap;src:url("../fonts/poppins-latin-800.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Poppins";font-style:normal;font-weight:800;font-display:swap;src:url("../fonts/poppins-latin-ext-800.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Caveat";font-style:normal;font-weight:600;font-display:swap;src:url("../fonts/caveat-claim-600.woff2") format("woff2")}
 
 
 /* MODUNERA Europe Platform V4 — immersive commerce + SEO compatible */
