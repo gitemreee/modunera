@@ -1399,8 +1399,10 @@ body{
 
 /* the top bar sits inside the frame, not stuck to the window */
 .nav{
-  position:sticky; top:12px; z-index:60;
-  margin:14px auto 0; width:calc(100% - 28px);
+  position:fixed; z-index:80;
+  top:calc(clamp(12px,3.4vw,56px) + 14px);
+  left:50%; transform:translateX(-50%);
+  width:min(1572px, calc(100vw - clamp(12px,3.4vw,56px)*2 - 28px));
   background:var(--glass-light-strong); -webkit-backdrop-filter:var(--blur); backdrop-filter:var(--blur);
   border:1px solid var(--glass-edge); border-radius:var(--r-pill); box-shadow:var(--lift-sm);
 }
@@ -1635,7 +1637,7 @@ body{
   body{padding:0; background:#EEF1EB}
   .app-shell{border-radius:0; box-shadow:none; min-height:100svh; backdrop-filter:none;
     background:linear-gradient(180deg,#F8F9F7 0%,#F1F4EF 100%)}
-  .nav{margin:10px auto 0; width:calc(100% - 20px); top:10px}
+  .nav{top:10px; left:10px; right:10px; width:auto; transform:none}
   .hero{margin:10px; height:calc(78svh - 10px)}
   .section-soft,.section-dark,.cta-band,.footer{margin:10px}
   .footer{border-radius:var(--r-card) var(--r-card) 0 0; margin-bottom:0}
@@ -1724,9 +1726,18 @@ body.scrolled .nav{
 body.scrolled .nav-inner{padding-block:6px}
 body.scrolled .brand img{transform:scale(.9); transform-origin:left center; transition:transform .22s ease}
 @media (max-width:720px){
-  .nav{position:sticky; top:8px; margin-top:8px; z-index:80}
+  .nav{top:8px; left:10px; right:10px; width:auto; transform:none}
   body.scrolled .brand-claim{display:none}   /* the name stays, the claim yields */
 }
 @media (prefers-reduced-motion:reduce){
   .nav,.brand img{transition:none}
 }
+
+/* --- the bar is out of the frame, so the frame makes room for it ----------
+   Fixed elements leave no space behind them. The shell's first child would sit
+   under the bar, so the shell opens with the bar's own height plus the gap it
+   floats in — declared once as a token rather than guessed per breakpoint. */
+:root{--bar:92px}
+.app-main{padding-top:var(--bar)}
+@media (max-width:720px){ :root{--bar:76px} }
+body.scrolled .nav{background:rgba(255,255,255,.62)}

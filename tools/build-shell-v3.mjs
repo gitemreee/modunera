@@ -101,6 +101,12 @@ async function walk(dir, out = []) {
   return out;
 }
 
+/* The nav runs from navAt to its own </nav>; everything after that up to the end
+   of the footer is the shell's content. */
+const navEnd = (html, from) => html.indexOf("</nav>", from) + "</nav>".length;
+const navOf = (html, from) => html.slice(from, navEnd(html, from));
+const bodyAfterNav = (html, from, close) => html.slice(navEnd(html, from), close);
+
 let wrapped = 0, already = 0, skipped = 0;
 for (const file of await walk(".")) {
   if (SKIP.test(file)) { skipped += 1; continue; }
@@ -120,8 +126,13 @@ for (const file of await walk(".")) {
        the page rather than to the window, and only came into view once the
        reader reached the very bottom. Outside the shell it is fixed to the
        viewport, which is what a rail is for. */
-    rail(file) + `<div class="app-shell">` + `<div class="app-main">` +
-    original.slice(navAt, close) +
+    /* The nav goes outside the shell too, and for the same reason the rail did.
+       .app-shell clips with overflow:hidden, which makes it a scroll container,
+       and a sticky child of a scroll container sticks to the container — which
+       scrolls with the page. Measured before the move: nav top -2592 after a
+       2600px scroll. Outside the shell it is fixed to the window and stays. */
+    rail(file) + navOf(original, navAt, close) + `<div class="app-shell">` + `<div class="app-main">` +
+    bodyAfterNav(original, navAt, close) +
     `</div></div>` +
     original.slice(close);
 
