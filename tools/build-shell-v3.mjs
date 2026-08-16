@@ -114,7 +114,13 @@ for (const file of await walk(".")) {
   const close = footEnd + "</footer>".length;
   const html =
     original.slice(0, navAt) +
-    `<div class="app-shell">` + rail(file) + `<div class="app-main">` +
+    /* The rail is a SIBLING of the shell, not a child. .app-shell carries a
+       backdrop-filter, and a backdrop-filter makes an element the containing
+       block for position:fixed descendants — so a rail inside it was pinned to
+       the page rather than to the window, and only came into view once the
+       reader reached the very bottom. Outside the shell it is fixed to the
+       viewport, which is what a rail is for. */
+    rail(file) + `<div class="app-shell">` + `<div class="app-main">` +
     original.slice(navAt, close) +
     `</div></div>` +
     original.slice(close);

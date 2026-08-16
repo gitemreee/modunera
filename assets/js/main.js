@@ -85,7 +85,7 @@
   const lb=qs('.lightbox');qsa('[data-lightbox]').forEach(b=>b.onclick=()=>{if(lb){qs('img',lb).src=b.dataset.lightbox;lb.classList.add('open')}});if(lb){qs('button',lb).onclick=()=>lb.classList.remove('open');lb.onclick=e=>{if(e.target===lb)lb.classList.remove('open')}};
 
   // cookie preferences
-  const cookie=qs('.cookie');if(cookie&&!localStorage.getItem('mcCookie')){setTimeout(()=>cookie.classList.add('show'),900);qsa('[data-cookie]',cookie).forEach(b=>b.onclick=()=>{localStorage.setItem('mcCookie',b.dataset.cookie);cookie.classList.remove('show');toast('Cookie-Einstellung gespeichert');initIntegrations()})}
+  const cookie=qs('.cookie');if(cookie&&!localStorage.getItem('mcCookie')){setTimeout(()=>cookie.classList.add('show'),900);qsa('[data-cookie]',cookie).forEach(b=>b.onclick=()=>{localStorage.setItem('mcCookie',b.dataset.cookie);cookie.classList.remove('show');initIntegrations()})}
 
   initIntegrations();
 

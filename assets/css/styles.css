@@ -1826,4 +1826,126 @@ body{
 @media (prefers-reduced-transparency:reduce){
   @media (max-width:720px){ .hero .hero-panel{backdrop-filter:none; background:#1A261D} }
 }
+
+/* --- phone, second pass ---------------------------------------------------
+   Three things the first pass got wrong, all of them only visible on a phone.
+
+   The headline was still sized as a headline. On a 390px column the hero opened
+   as a wall of type with no photograph under it — the reader met the words
+   before they met the house, which for a manufacturer is the wrong order. The
+   hero is now capped so the photograph is part of the first screen, and the type
+   is set to fit inside what is left rather than to fill it.
+
+   The rail was pinned to the page instead of the window. .app-shell carries a
+   backdrop-filter and that makes it the containing block for fixed children, so
+   the bar only arrived when the reader reached the bottom of the document. It is
+   now a sibling of the shell — the markup change is in build-shell-v3.mjs — and
+   fixed to the viewport, which is what makes it a rail rather than a footer.
+
+   The cookie notice took the whole screen and asked two questions. One button,
+   one line, and it goes. */
+@media (max-width:720px){
+  .hero{max-height:74svh}
+  .hero .hero-content{display:flex; align-items:flex-end; height:100%}
+  .hero .hero-panel{padding:20px 17px 18px}
+  .hero h1{font-size:clamp(23px,5.9vw,29px); line-height:1.16; margin-bottom:9px}
+  .hero .hero-kicker{font-size:9.5px; margin-bottom:10px}
+  .hero p{font-size:14px; line-height:1.5}
+  .hero .hero-actions{margin-top:14px; gap:8px}
+  .hero .hero-actions .btn{padding:12px 16px; font-size:12.5px}
+  .hero .hero-proof{display:none}   /* the same three facts sit in the strip below */
+
+  /* the rail clears the dock instead of sitting under it */
+  .rail{bottom:16px; left:16px; right:auto; transform:none}
+  .rail-group{flex-direction:row; padding:7px 8px; gap:4px}
+  .rail-btn{width:40px; height:40px}
+  .rail-btn svg{width:19px; height:19px}
+  .wa-dock{bottom:76px}
+
+  .cookie{left:10px; right:10px; bottom:10px; width:auto; max-width:none; padding:16px 16px 14px}
+  .cookie strong{font-size:14px}
+  .cookie .legal-note{font-size:12px; margin:6px 0 12px}
+  .cookie-actions{display:grid; grid-template-columns:1fr; gap:8px}
+}
+
+/* --- phone, third pass: let the house be on the first screen --------------
+   The panel was still eating the viewport. Shrinking the headline was not
+   enough, because what filled the screen was everything under it: five lines of
+   paragraph and two full-width buttons stacked. A manufacturer's first screen
+   that contains no manufactured thing is the wrong first screen.
+
+   So the hero gets a fixed share of the viewport rather than a content-driven
+   height, the panel is pinned to its foot at the size it needs and no more, and
+   the paragraph is clamped to three lines — the full sentence is two scrolls
+   down in the page's own words, and the hero's job is the house and the two
+   buttons, not the argument. */
+@media (max-width:720px){
+  .hero{height:78svh; max-height:none; display:block; position:relative}
+  .hero .container,.hero .hero-content{
+    position:absolute; inset:auto 0 0 0; display:block; height:auto; padding:0;
+  }
+  .hero .hero-panel{
+    padding:16px 15px 15px; border-radius:0 0 var(--r-card) var(--r-card);
+    background:rgba(24,36,27,.74);
+  }
+  .hero h1{font-size:clamp(21px,5.4vw,26px); line-height:1.15; margin:0 0 7px}
+  .hero .hero-kicker{font-size:9px; letter-spacing:.12em; margin-bottom:7px}
+  .hero p{
+    font-size:13px; line-height:1.45; margin:0;
+    display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;
+  }
+  .hero .hero-actions{display:grid; grid-template-columns:1fr 1fr; gap:7px; margin-top:12px}
+  .hero .hero-actions .btn{padding:11px 8px; font-size:11px; letter-spacing:.02em}
+}
+
+/* --- phone, fourth pass: two overlaps ------------------------------------
+   The photograph stopped short of the panel and left a grey band, because the
+   v2 rules that corrected the <picture> wrappers give the slide container its
+   own height; under a fixed-height hero that height is no longer the hero's.
+   Pinned explicitly here rather than adjusted, so it cannot drift again.
+
+   And the dock sat on top of the hero's second button. The rail is bottom-left,
+   so the dock goes bottom-right on the same line: two thumb targets at the two
+   corners, nothing over the content. */
+@media (max-width:720px){
+  .hero .hero-media,.hero .hero-slides,.hero .hero-slides picture,.hero .hero-slides img{
+    position:absolute; inset:0; width:100%; height:100%; max-height:none; aspect-ratio:auto;
+  }
+  .hero .hero-slides img{object-fit:cover}
+  .wa-dock{bottom:16px; right:16px; left:auto}
+  .wa-rail{flex-direction:row; gap:8px}
+  .wa-panel{right:0; bottom:64px; max-width:calc(100vw - 32px)}
+}
+
+/* The A-frame sits left of centre in the olive-grove frame, so a centred cover
+   crop on a portrait viewport puts the tree in the middle and the house half off
+   the edge. Biased left, the subject lands in the frame. */
+@media (max-width:720px){ .hero .hero-slides img{object-position:32% 58%} }
+
+/* The A-frame sits left of centre in the olive-grove frame, so a centred cover
+   crop on a portrait viewport puts the tree in the middle and the house half off
+   the edge. Biased left and low, the subject lands in the frame. The slideshow
+   underneath is untouched: four photographs on a 40-second cycle, staggered on
+   picture:nth-child, which is where v2 corrected it for the <picture> wrappers. */
+@media (max-width:720px){ .hero .hero-slides img{object-position:32% 58%} }
+
+/* --- phone: the frame fills the screen ------------------------------------
+   The floating frame is a desktop idea. It works there because a 1440px window
+   has room to spare around it; a 390px one does not, and the background reduced
+   to a 12px band down each edge reads as a rendering fault rather than depth.
+   So on a phone the shell goes edge to edge and the inner radii do the work the
+   outer one was doing. */
+@media (max-width:720px){
+  body{padding:0; background:#EEF1EB}
+  .app-shell{border-radius:0; box-shadow:none; min-height:100svh; backdrop-filter:none;
+    background:linear-gradient(180deg,#F8F9F7 0%,#F1F4EF 100%)}
+  .nav{margin:10px auto 0; width:calc(100% - 20px); top:10px}
+  .hero{margin:10px; height:calc(78svh - 10px)}
+  .section-soft,.section-dark,.cta-band,.footer{margin:10px}
+  .footer{border-radius:var(--r-card) var(--r-card) 0 0; margin-bottom:0}
+}
+/* The A-frame sits left of centre in the olive-grove frame, so a centred cover
+   crop on a portrait viewport puts the tree in the middle and the house half off
+   the edge. Biased left and low, the subject lands in the frame. */
+@media (max-width:720px){ .hero .hero-slides img{object-position:32% 58%} }
 /* MODUNERA BRAND PALETTE END */
