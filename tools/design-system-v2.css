@@ -1727,7 +1727,6 @@ body.scrolled .nav-inner{padding-block:6px}
 body.scrolled .brand img{transform:scale(.9); transform-origin:left center; transition:transform .22s ease}
 @media (max-width:720px){
   .nav{top:8px; left:10px; right:10px; width:auto; transform:none}
-  body.scrolled .brand-claim{display:none}   /* the name stays, the claim yields */
 }
 @media (prefers-reduced-motion:reduce){
   .nav,.brand img{transition:none}
@@ -1741,3 +1740,21 @@ body.scrolled .brand img{transform:scale(.9); transform-origin:left center; tran
 .app-main{padding-top:var(--bar)}
 @media (max-width:720px){ :root{--bar:76px} }
 body.scrolled .nav{background:rgba(255,255,255,.62)}
+
+/* --- the claim goes down and comes back ----------------------------------
+   Hiding it past 40px was half a behaviour: it left on the way down and only
+   returned at the very top, so a reader who scrolled up two screens to check
+   something got a bar that still looked stripped. It now follows direction —
+   away while descending, back the moment the reader goes up — which is the
+   pattern every reader already knows from a phone's own chrome.
+
+   Collapsed with max-width and opacity rather than display:none, because a
+   width can be animated and a display cannot, and a claim that pops is worse
+   than a claim that leaves. */
+.brand-claim{
+  overflow:hidden; white-space:nowrap; max-width:24ch;
+  transition:opacity .22s ease, max-width .3s cubic-bezier(.2,.8,.3,1);
+}
+body.scrolled .brand-claim{opacity:0; max-width:0}
+body.scrolled.scroll-up .brand-claim{opacity:1; max-width:24ch}
+@media (prefers-reduced-motion:reduce){ .brand-claim{transition:opacity .15s ease} }

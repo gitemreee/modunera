@@ -63,8 +63,8 @@
   },{passive:true,capture:true});
 
   window.MODUNERA={toast,track};
-  const progress=qs('.scroll-progress');
-  const onScroll=()=>{const d=document.documentElement;if(progress){const max=d.scrollHeight-d.clientHeight;progress.style.width=(max?d.scrollTop/max*100:0)+'%'}document.body.classList.toggle('scrolled',d.scrollTop>40)};
+  let lastY=0;const progress=qs('.scroll-progress');
+  const onScroll=()=>{const d=document.documentElement;if(progress){const max=d.scrollHeight-d.clientHeight;progress.style.width=(max?d.scrollTop/max*100:0)+'%'}const y=d.scrollTop;const b=document.body;b.classList.toggle('scrolled',y>40);if(Math.abs(y-lastY)>6){b.classList.toggle('scroll-up',y<lastY);lastY=y}};
   addEventListener('scroll',onScroll,{passive:true});onScroll();
   // one panel at a time: opening a section closes whatever else was open, and so
   // does closing the drawer or clicking anywhere outside the navigation
