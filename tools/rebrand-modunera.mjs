@@ -46,6 +46,24 @@ const replacements = [
   ["mc-tiny-logo.png", "modunera-logo.png"],
   ["mc-tiny-konfiguration.txt", "modunera-konfiguration.txt"],
   ["mc-tiny-leads.csv", "modunera-leads.csv"],
+  // The percent-encoded forms, and they are not a curiosity. Every WhatsApp link
+  // on the site carries a prefilled message in its query string, and a query
+  // string is URL-encoded — so the space in "MC Tiny" is %20 and none of the
+  // plain-text rules below could ever see it. The literal rule reported zero
+  // remaining occurrences while 7,406 pages still opened WhatsApp with "Hallo MC
+  // Tiny": the customer greeting the company by a name it no longer has, in a
+  // message the customer sends. It is the one place a stale brand is not just
+  // visible but spoken aloud by the reader.
+  //
+  // These run before the plain-text rules because "MC Tiny" is not a substring of
+  // "MC%20Tiny" and order does not matter for correctness here — it matters for
+  // reading, since a maintainer who meets the literal rule first will assume it
+  // covers the encoded case, which is the assumption that let this survive.
+  ["MC%20Tiny", "MODUNERA"],
+  ["MC%20TINY", "MODUNERA"],
+  ["mc%20tiny", "modunera"],
+  ["MC+Tiny", "MODUNERA"],
+  ["MC-Tiny%20", "MODUNERA%20"],
   ["MC Tiny", "MODUNERA"],
   ["MC TINY", "MODUNERA"],
   ["MC-Tiny", "MODUNERA"],
