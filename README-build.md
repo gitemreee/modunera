@@ -22,6 +22,7 @@ node tools/build-image-attrs.mjs          # intrinsic size, lazy loading, deferr
 node tools/build-nordic-redirects.mjs     # 301s for the corrected Danish slugs
 node tools/build-content-lastmod.mjs      # real content dates, from a content hash
 node tools/build-seo-governance-v7.mjs    # robots policy, location gate, sitemaps
+node tools/build-shell-v3.mjs             # floating frame, left rail (runs last: it wraps finished pages)
 node tools/validate-modunera.mjs          # gate: canonicals, JSON-LD, links, brand, colours
 node tools/validate-seo-v7.mjs            # gate: claims, sitemap, hreflang, schema, legal
 ```

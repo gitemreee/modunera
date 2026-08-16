@@ -1480,4 +1480,254 @@ h1,h2,h3,.section-header h2,.editorial-copy h2,.wide-copy h2,.article-content h2
    against a required 4.5, and the process caption 4.10. */
 .btn-sand{background:var(--sage);color:#233A28}
 .process-item small{color:#C6D4CB}
+
+/* ============================================================================
+   v3 — "glass" layer
+   ----------------------------------------------------------------------------
+   Requested from a reference design: floating rounded panels, frosted glass over
+   photography, pill controls, soft wide shadows, and a light airy ground instead
+   of flat white. This layer sits on top of v2 the same way v2 sits on top of v1 —
+   it repaints geometry and surface, and touches no class it does not name, so the
+   164-class contract keeps working and nothing can break by omission.
+
+   Three things the reference gets right that are worth stating, because they are
+   what make the difference between this and a rounded-corner pass:
+
+   1. Glass needs something behind it. backdrop-filter blurs what it overlays, so
+      on a flat white section it does nothing at all. The page ground below is a
+      soft two-stop wash rather than #F5F5F5, and every glass surface either sits
+      on a photograph or on that wash.
+   2. The radius has to scale with the element. One radius on everything reads as
+      a filter, not a design: the outer frame takes 36px, cards 26px, chips and
+      buttons go fully round.
+   3. Shadows are wide, soft and low-opacity — 60px of blur at 12% — not the 4px
+      dark drop that reads as a 2012 card.
+
+   Palette is unchanged. The reference is blue-and-white because its photograph is
+   desert sky; ours are timber and forest, so the same treatment lands green and
+   warm on its own. No new colour is introduced.
+   ============================================================================ */
+
+:root{
+  /* radius scale */
+  --r-frame:36px; --r-card:26px; --r-soft:18px; --r-pill:999px;
+  /* glass surfaces */
+  --glass-light:rgba(255,255,255,.66);
+  --glass-light-strong:rgba(255,255,255,.82);
+  --glass-dark:rgba(30,42,33,.46);
+  --glass-edge:rgba(255,255,255,.55);
+  --glass-edge-dark:rgba(255,255,255,.16);
+  --blur:saturate(1.5) blur(22px);
+  /* shadows: wide, soft, low */
+  --lift:0 24px 60px -22px rgba(24,38,28,.34);
+  --lift-sm:0 10px 30px -14px rgba(24,38,28,.28);
+  --lift-lg:0 40px 90px -30px rgba(24,38,28,.40);
+}
+
+/* --- buttons and chips become pills --------------------------------------- */
+.btn,.wa-cta,.chip,.tag,.pill,.filter-btn,.lang-switch{border-radius:var(--r-pill)}
+.btn{box-shadow:var(--lift-sm); transition:transform .18s ease, box-shadow .18s ease}
+.btn:hover{transform:translateY(-1px); box-shadow:var(--lift)}
+.btn-light,.btn-sand{-webkit-backdrop-filter:var(--blur); backdrop-filter:var(--blur)}
+
+/* --- hero: the photograph lives inside a rounded frame -------------------- */
+.page-hero,.location-hero,.article-visual-hero,.hero{
+  border-radius:var(--r-frame);
+  margin:18px auto; max-width:1440px; width:calc(100% - 28px);
+  overflow:hidden; box-shadow:var(--lift-lg);
+}
+.location-hero img,.article-visual-hero img,.hero img{border-radius:inherit}
+/* the copy block over a photograph is glass, not a flat scrim */
+.location-hero-content,.article-visual-hero .container>*,.hero-content{position:relative}
+.location-hero .answer-box,.hero .answer-box{
+  background:var(--glass-dark); -webkit-backdrop-filter:var(--blur); backdrop-filter:var(--blur);
+  border:1px solid var(--glass-edge-dark); border-radius:var(--r-card); color:#fff;
+}
+.hero-kicker,.eyebrow{letter-spacing:.16em}
+
+/* --- cards: glass, generous radius ---------------------------------------- */
+.benefit-card,.journey-card,.state-card,.answer-box,.notice,.toc,.compare,
+.faq-item,.process-grid>div,.benefit,.data-strip,.article-aside .toc,.places-list,.cookie{
+  border-radius:var(--r-card);
+}
+.benefit-card,.journey-card,.state-card,.toc,.process-grid>div,.benefit{
+  background:var(--glass-light); -webkit-backdrop-filter:var(--blur); backdrop-filter:var(--blur);
+  border:1px solid var(--glass-edge); box-shadow:var(--lift-sm);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.benefit-card:hover,.journey-card:hover,.state-card:hover{transform:translateY(-3px); box-shadow:var(--lift)}
+.answer-box{
+  background:var(--glass-light-strong); -webkit-backdrop-filter:var(--blur); backdrop-filter:var(--blur);
+  border:1px solid var(--glass-edge); box-shadow:var(--lift-sm);
+}
+.data-strip{
+  background:var(--glass-light-strong); -webkit-backdrop-filter:var(--blur); backdrop-filter:var(--blur);
+  border:1px solid var(--glass-edge); box-shadow:var(--lift-sm); border-radius:var(--r-pill);
+}
+
+/* --- sections and media --------------------------------------------------- */
+.section-soft,.section-dark{border-radius:var(--r-frame); margin-inline:auto; max-width:1440px; width:calc(100% - 28px)}
+.wide-feature .visual,.visual img,.article img,.gallery img,.places-list img{border-radius:var(--r-card)}
+.compare{overflow:hidden; border:1px solid rgba(58,90,64,.12); box-shadow:var(--lift-sm); background:var(--glass-light-strong)}
+.compare table{border-radius:inherit}
+.faq-item{background:var(--glass-light); border:1px solid var(--glass-edge); margin-bottom:10px; box-shadow:var(--lift-sm)}
+.faq-question{border-radius:var(--r-card)}
+
+/* --- the WhatsApp dock is already floating; make it match ------------------ */
+.wa-panel{border-radius:var(--r-card); box-shadow:var(--lift-lg); border:1px solid var(--glass-edge)}
+.wa-launch,.wa-call{border-radius:var(--r-pill); box-shadow:var(--lift)}
+.cookie{
+  background:var(--glass-light-strong); -webkit-backdrop-filter:var(--blur); backdrop-filter:var(--blur);
+  border:1px solid var(--glass-edge); box-shadow:var(--lift-lg);
+}
+
+/* --- calls to action and footer ------------------------------------------- */
+.cta-band{
+  border-radius:var(--r-frame); margin:24px auto; max-width:1440px; width:calc(100% - 28px);
+  box-shadow:var(--lift);
+}
+.footer{
+  border-radius:var(--r-frame) var(--r-frame) 0 0; margin-inline:auto;
+  max-width:1440px; width:calc(100% - 28px);
+}
+
+/* --- phones: the frame insets shrink, the radius does not ----------------- */
+@media (max-width:720px){
+  :root{--r-frame:24px; --r-card:20px}
+  .nav,.page-hero,.location-hero,.article-visual-hero,.hero,.section-soft,.section-dark,
+  .cta-band,.footer{width:calc(100% - 16px)}
+  .nav{top:8px; margin-top:8px}
+}
+
+/* --- reduced transparency and reduced motion ------------------------------
+   backdrop-filter is a comfort setting for some readers and a battery cost on
+   older phones. Where the platform reports either preference, the glass becomes
+   an opaque surface of the same colour rather than disappearing — the layout is
+   identical, only the blur is dropped. */
+@media (prefers-reduced-transparency:reduce),(prefers-reduced-motion:reduce){
+  .nav,.benefit-card,.journey-card,.state-card,.toc,.answer-box,.data-strip,
+  .process-grid>div,.benefit,.faq-item,.cookie,.compare{
+    -webkit-backdrop-filter:none; backdrop-filter:none; background:#FBFCFA;
+  }
+  .location-hero .answer-box,.hero .answer-box{backdrop-filter:none; background:rgba(30,42,33,.86)}
+  .btn:hover,.benefit-card:hover,.journey-card:hover,.state-card:hover{transform:none}
+}
+
+/* --- Hero, third pass: one photograph, the copy on glass over it ----------
+   The v2 hero splits the frame — green panel left, photograph right — and that
+   split is what broke on a phone under the v3 frame. Below 920px the two halves
+   stack, so the copy landed on the page ground while keeping the white it was
+   given for the green half: the first line of the h1 rendered white on a light
+   background and was simply not there. Caught in a 390px screenshot, not in the
+   stylesheet, which is where it would never have shown.
+
+   The fix is the reference design's own answer rather than a patch. The
+   photograph fills the frame at every width and the copy sits on a frosted panel
+   over it, so the type never leaves a dark ground and the layout stops depending
+   on which side of a breakpoint the viewport is on. One rule, both problems. */
+.hero{position:relative; min-height:min(78vh,720px); display:flex; align-items:flex-end}
+.hero .hero-media,.hero .hero-slides,.hero .hero-slides picture{position:absolute; inset:0}
+.hero .hero-slides img{width:100%; height:100%; object-fit:cover}
+/* a graded wash, darkest where the type is, so the panel has something to sit on
+   and the photograph is still legible above it */
+.hero::after{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background:linear-gradient(180deg,rgba(24,38,28,.10) 0%,rgba(24,38,28,.28) 46%,rgba(24,38,28,.72) 100%);
+}
+.hero .container,.hero .hero-content{position:relative; z-index:2; width:100%}
+.hero .hero-panel{
+  background:var(--glass-dark); -webkit-backdrop-filter:var(--blur); backdrop-filter:var(--blur);
+  border:1px solid var(--glass-edge-dark); border-radius:var(--r-card);
+  padding:clamp(20px,3vw,38px); box-shadow:var(--lift);
+  max-width:min(660px,100%); margin:clamp(18px,4vw,46px) 0;
+}
+.hero h1,.hero p,.hero .hero-kicker,.hero .eyebrow{color:#fff}
+.hero h1 span,.hero .claim-b{color:var(--sage)}
+.hero .hero-proof,.hero .hero-proof span{color:#E8EFE9}
+.hero .hero-proof{border-top:1px solid rgba(255,255,255,.22); padding-top:14px; margin-top:18px}
+.hero .hero-actions .btn-outline{border-color:rgba(255,255,255,.55); color:#fff}
+.hero .hero-grain,.hero .hero-scroll{z-index:2}
+.hero .hero-scroll{color:#E8EFE9}
+@media (max-width:920px){
+  .hero{min-height:min(86vh,680px)}
+  .hero .hero-panel{max-width:100%}
+  .hero .hero-actions{display:flex; flex-direction:column; gap:10px}
+}
+
+/* --- the shell: background, floating frame, left rail ---------------------
+   Written against tools/build-shell-v3.mjs, which puts .app-shell > .rail +
+   .app-main into every page. The first v3 attempt styled the existing layout and
+   missed the point: the reference is not a page with rounded corners, it is a
+   card floating on a background with a rail pinned to its edge, and none of those
+   three elements existed in the markup for a stylesheet to reach. */
+body{
+  min-height:100vh;
+  padding:clamp(12px,3.4vw,56px);
+  background:linear-gradient(rgba(24,38,28,.55),rgba(24,38,28,.65)),
+             url("../images/photos/aframe-night-1100.webp") center/cover fixed no-repeat,
+             #24301F;
+}
+.app-shell{
+  position:relative; max-width:1600px; margin:0 auto;
+  background:linear-gradient(180deg,#F8F9F7 0%,#F1F4EF 100%);
+  border-radius:var(--r-frame); overflow:hidden;
+  box-shadow:0 44px 110px -34px rgba(8,18,12,.62), 0 0 0 1px rgba(255,255,255,.5) inset;
+}
+.app-main{position:relative}
+
+/* the rail floats over the content, pinned to the left of the frame, and stays
+   put while the page scrolls — computed from the frame's own edge so it tracks
+   the centred max-width instead of the viewport */
+.rail{position:fixed; top:50%; transform:translateY(-50%); z-index:70;
+  left:max(calc(clamp(12px,3.4vw,56px) + 16px), calc((100vw - 1600px)/2 + clamp(12px,3.4vw,56px) + 16px));}
+.rail-group{
+  display:flex; flex-direction:column; gap:8px; padding:10px 8px;
+  background:var(--glass-light-strong); -webkit-backdrop-filter:var(--blur); backdrop-filter:var(--blur);
+  border:1px solid var(--glass-edge); border-radius:var(--r-pill); box-shadow:var(--lift);
+}
+.rail-btn{
+  width:44px; height:44px; border-radius:var(--r-pill);
+  display:grid; place-items:center; color:var(--moss); position:relative;
+  transition:background .18s ease, color .18s ease;
+}
+.rail-btn svg{width:21px; height:21px}
+.rail-btn:hover,.rail-btn:focus-visible{background:var(--moss); color:#fff}
+/* the label an icon-only button owes the reader */
+.rail-btn::after{
+  content:attr(data-tip); position:absolute; left:calc(100% + 10px); white-space:nowrap;
+  background:var(--moss); color:#fff; font-size:12px; letter-spacing:.04em;
+  padding:6px 11px; border-radius:var(--r-pill); opacity:0; pointer-events:none;
+  transform:translateX(-4px); transition:opacity .16s ease, transform .16s ease;
+}
+.rail-btn:hover::after,.rail-btn:focus-visible::after{opacity:1; transform:none}
+
+/* the top bar sits inside the frame, not stuck to the window */
+.nav{
+  position:sticky; top:12px; z-index:60;
+  margin:14px auto 0; width:calc(100% - 28px);
+  background:var(--glass-light-strong); -webkit-backdrop-filter:var(--blur); backdrop-filter:var(--blur);
+  border:1px solid var(--glass-edge); border-radius:var(--r-pill); box-shadow:var(--lift-sm);
+}
+.nav-inner{padding-block:10px}
+.nav-menu{border-radius:var(--r-card); box-shadow:var(--lift); border:1px solid rgba(58,90,64,.10)}
+
+/* the hero fills the frame under the bar, and the copy floats on it */
+.hero,.page-hero,.location-hero,.article-visual-hero{
+  border-radius:var(--r-card); margin:14px; overflow:hidden; box-shadow:var(--lift);
+}
+.hero .hero-panel{margin-left:76px}          /* clear of the rail */
+.section-soft,.section-dark,.cta-band{border-radius:var(--r-card); margin:14px; width:auto}
+.footer{border-radius:var(--r-card); margin:14px; width:auto}
+
+/* phones: the rail goes to the foot as a horizontal bar, the frame keeps its
+   radius. The reference is a desktop composition and was given as one — this is
+   the same components rearranged, not a different design. */
+@media (max-width:900px){
+  .rail{position:fixed; left:50%; top:auto; bottom:14px; transform:translateX(-50%)}
+  .rail-group{flex-direction:row}
+  .rail-btn::after{left:50%; bottom:calc(100% + 10px); transform:translateX(-50%)}
+  .rail-btn:hover::after,.rail-btn:focus-visible::after{transform:translateX(-50%)}
+  .hero .hero-panel{margin-left:0}
+  .wa-dock{bottom:84px}
+}
 /* MODUNERA BRAND PALETTE END */
