@@ -387,7 +387,12 @@ function nav(root, lang, alternates = {}) {
     })
     .join("");
   const picker = `<div class="nav-dropdown lang-dropdown"><button type="button" class="lang-switch" aria-label="Sprache / Language">${FLAGS[lang]}<span class="lang-code">${lang.toUpperCase()}</span></button><div class="nav-menu">${languages}</div></div>`;
-  return `<nav class="nav" aria-label="${m.label}"><div class="container nav-inner">${brandLockup(root, root + m.home, lang)}<div class="nav-links">${links}</div><div class="nav-actions">${picker}<a class="btn btn-primary" href="${waLink(m.ctaMsg)}" target="_blank" rel="noopener">${m.cta}</a><button class="mobile-toggle" aria-label="${m.toggle}">☰</button></div></div></nav>`;
+  return `<nav class="nav" aria-label="${m.label}"><div class="container nav-inner">${brandLockup(root, root + m.home, lang)}<div class="nav-links">${links}</div>${/* The WhatsApp button is gone from the bar. It was the third copy on the same
+      screen: the rail carries it on the left, the dock carries it bottom-right,
+      and the menu already has Kontakt. Three buttons for one action is not three
+      chances to click, it is a bar with no room left for the menu — and the two
+      that remain are the two a reader actually reaches for. */""}
+    <div class="nav-actions">${picker}<button class="mobile-toggle" aria-label="${m.toggle}">☰</button></div></div></nav>`;
 }
 
 function chrome(root, lang, alternates = {}) {
