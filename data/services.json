@@ -1,0 +1,227 @@
+{
+  "_comment": [
+    "Per-service content for /leistungen/<slug>/ and /en/services/<slug>/.",
+    "",
+    "Why this file exists: the four service pages were 770 words each, of which",
+    "about 700 were the same words. The process strip, the three FAQs and the",
+    "five-market block were identical on all four; only the one-line intro and the",
+    "service name changed. Four pages, one page's worth of content, and the one",
+    "thing a reader wants — what is different about this capability — appearing",
+    "nowhere.",
+    "",
+    "Rule for everything below, same as data/quality-spec.json: describe how the",
+    "work is done and what decides whether it can be done. No certified figures, no",
+    "load ratings, no U-values, no lead times. Those are publish blockers in",
+    "REQUIRED-BUSINESS-INPUTS.md. What is written here is the engineering logic of",
+    "the trade, which is true regardless of which documents arrive, plus the limits",
+    "MODUNERA already publishes elsewhere on the site.",
+    "",
+    "'decides' is the section that earns the page. Every one of these services",
+    "fails for a predictable reason — transport width, site zoning, a load case",
+    "calculated for the wrong country, a kitchen specified after the wall closed —",
+    "and a buyer who reads it before enquiring asks a better first question."
+  ],
+  "reviewed_at": "2026-08-16",
+  "services": {
+    "modulbau": {
+      "lead": {
+        "de": "Ein Modul ist ein Raum, der in der Halle fertig gebaut und in einem Stück gesetzt wird. Fast alles an ihm wird davon bestimmt, was auf der Straße transportiert werden darf — Breite, Höhe und Gewicht sind Entwurfsgrößen, nicht Nebenbedingungen.",
+        "en": "A module is a room built complete in the shop and set in one piece. Almost everything about it is decided by what may travel by road: width, height and weight are design parameters, not afterthoughts."
+      },
+      "makes": {
+        "de": ["Wohn- und Gästemodule", "Hotelzimmer, Rezeption und Sanitärblöcke", "Büro-, Verkaufs- und Werkstatteinheiten", "Anbauten und Erweiterungen bestehender Gebäude"],
+        "en": ["Residential and guest modules", "Hotel rooms, reception and sanitary blocks", "Office, retail and workshop units", "Extensions to existing buildings"]
+      },
+      "decides": {
+        "de": [
+          ["Das Transportmaß, nicht die Halle", "Die Grenze für ein Modul setzt die Straße. Was ohne Sondertransport fahren darf, bestimmt Breite und Höhe; alles darüber ist herstellbar, ändert aber Route, Genehmigung, Begleitung und Kosten. Diese Frage gehört an den Anfang des Entwurfs, nicht ans Ende."],
+          ["Die Fuge zwischen zwei Modulen", "Zwei Module nebeneinander sind nicht zwei Gebäude. An der gemeinsamen Kante treffen Schall, Brand und Feuchte aufeinander, und dieser Anschluss ist der aufwendigste Teil eines mehrteiligen Gebäudes. Er wird konstruiert, bevor die Module gebaut werden."],
+          ["Kran und Fundament", "Ein Modul wird geliefert, nicht vor Ort errichtet. Der Kran muss die endgültige Position erreichen, und das Fundament muss vorher fertig und maßhaltig sein. Zufahrt, Aufstellfläche und Untergrund sind Teil der Machbarkeit."],
+          ["Baurecht bleibt Baurecht", "Ein Modul, das stehen bleibt, ist ein Gebäude. Vorgefertigt heißt nicht genehmigungsfrei. Zone, Nutzung und Dauer entscheidet die zuständige Stelle am Standort — nicht die Bauweise."]
+        ],
+        "en": [
+          ["The transport envelope, not the factory", "What limits a module is the road. What may travel without a special-transport permit sets its width and height; anything larger is buildable but changes the route, the permits, the escort and the cost. This belongs at the start of the design, not at the end."],
+          ["The joint between two modules", "Two modules side by side are not two buildings. Sound, fire and moisture all meet at the shared edge, and that junction is the most demanding part of a multi-module building. It is engineered before the modules are built."],
+          ["Crane and foundation", "A module is delivered, not erected on site. The crane has to reach the final position and the foundation has to be finished and dimensionally correct before it arrives. Access, standing area and ground conditions are part of feasibility."],
+          ["Planning law still applies", "A module that stays is a building. Prefabricated does not mean permit-free. Zoning, use and duration are decided by the competent authority at the site, not by the method of construction."]
+        ]
+      },
+      "scope": {
+        "de": {
+          "in": ["Tragstruktur, Hülle und Innenausbau", "Haustechnik bis zur Anschlusskante", "Werksseitige Kontrolle und Dokumentation"],
+          "out": ["Fundament und Erdarbeiten", "Kran, Montage vor Ort und Verbindung mehrerer Module, sofern nicht beauftragt", "Anschluss an Wasser, Abwasser und Strom", "Genehmigung im Zielland"]
+        },
+        "en": {
+          "in": ["Structure, envelope and interior fit-out", "Building services up to the connection point", "Factory inspection and documentation"],
+          "out": ["Foundation and ground works", "Crane, site assembly and joining of multiple modules unless contracted", "Connection to water, wastewater and power", "Permits in the destination country"]
+        }
+      },
+      "faq": {
+        "de": [
+          ["Wie groß kann ein einzelnes Modul sein?", "Die Grenze setzt der Transport, nicht die Fertigung. Was ohne Sondertransport fahren darf, bestimmt Breite und Höhe. Darüber hinaus ist vieles herstellbar, aber Route, Genehmigung und Kosten ändern sich — deshalb wird diese Frage vor dem Entwurf geklärt."],
+          ["Kann man später erweitern?", "Ja, wenn die Erweiterung von Anfang an vorgesehen ist. Anschlusskante, Technikführung und Fundament müssen darauf vorbereitet sein. Nachträglich ein Modul anzudocken ist möglich, kostet aber mehr, als es gleich mitzuplanen."],
+          ["Braucht ein Modulgebäude eine Baugenehmigung?", "Wenn es stehen bleibt: ja. Die Vorfertigung ändert daran nichts. Zuständig ist die Stelle am Standort; die Länderseiten nennen für jeden Zielmarkt, wer das ist und welcher Plan gilt."],
+          ["Was unterscheidet ein Modul vom Tiny House?", "Das Tiny House steht auf einem Fahrgestell und bleibt beweglich; das Modul steht auf einem Fundament und wird einmal gesetzt. Daraus folgt fast jeder weitere Unterschied — Zulassung, Genehmigungsweg, Fundament, Transport."],
+          ["Wie lange dauert die Fertigung?", "Das hängt von Stückzahl, Ausbaustandard und Freigabezeiten ab. Ein Termin wird nach der Bemusterung zugesagt und nicht davor, weil jede frühere Zahl geraten wäre."]
+        ],
+        "en": [
+          ["How large can a single module be?", "The limit is transport, not production. What may travel without a special-transport permit sets the width and height. Larger is often buildable, but route, permits and cost change with it — which is why the question is settled before the design, not after."],
+          ["Can it be extended later?", "Yes, if the extension is planned from the start. The connecting edge, the service routing and the foundation have to be prepared for it. Adding a module afterwards is possible but costs more than allowing for it at the outset."],
+          ["Does a modular building need planning permission?", "If it stays, yes. Prefabrication changes nothing about that. The competent authority is local; the country pages name it for each market, along with the plan that governs the site."],
+          ["What separates a module from a tiny house?", "A tiny house sits on a chassis and stays movable; a module sits on a foundation and is set once. Nearly every other difference follows from that — approval, permit route, foundation, transport."],
+          ["How long does production take?", "It depends on quantity, specification level and how quickly approvals come back. A date is committed after specification sign-off and not before, because any earlier figure would be a guess."]
+        ]
+      }
+    },
+    "stahlbau": {
+      "lead": {
+        "de": "Stahl trägt dort, wo die Form allein nicht trägt. Wir setzen ihn ein, wo ein Holzquerschnitt doppelt so hoch werden müsste oder gar nicht ginge: bei großen Spannweiten, bei Punktlasten und überall dort, wo der Rahmen den Transport überstehen muss, bevor er ein Gebäude trägt.",
+        "en": "Steel carries the load where the shape alone cannot. We use it where a timber section would have to be twice as deep or would not work at all: long spans, point loads, and anywhere the frame has to survive the journey before it carries a building."
+      },
+      "makes": {
+        "de": ["Rahmen für Tiny Houses und Raummodule", "Unterkonstruktionen und Fahrgestellrahmen", "Vordächer, Carports und Terrassenkonstruktionen", "Zwischendecken, Galerien und Podeste", "Sonderkonstruktionen nach freigegebener Zeichnung"],
+        "en": ["Frames for tiny houses and building modules", "Sub-structures and chassis frames", "Canopies, carports and deck structures", "Mezzanines, galleries and platforms", "Bespoke structures to approved drawings"]
+      },
+      "decides": {
+        "de": [
+          ["Der Lastfall gehört zum Standort", "Ein Rahmen wird für einen Ort gerechnet, nicht für ein Produkt. Schnee an der dänischen Küste, Schnee in Graubünden und Wind in der Nordsee sind drei verschiedene Lastfälle. Eine Konstruktion, die für den einen ausgelegt ist, ist für den anderen nicht automatisch zulässig — deshalb gehört die standortbezogene Berechnung in das Zielland."],
+          ["Korrosionsschutz nach Umgebung", "Küstenluft, Streusalz und dauerhafte Feuchte stellen andere Anforderungen als eine trockene Innenkonstruktion. Verfahren und Schichtaufbau werden je Projekt festgelegt und dokumentiert; das ist ein Teil der Unterlagen, nicht ein Detail der Ausführung."],
+          ["Die Anschlusspunkte werden vergessen", "Der Rahmen ist selten das Problem. Wo seine Last in das Fundament oder in den Bestand übergeht, wird es eng: Ankerbild, Toleranzen und Untergrund entscheiden, ob die Konstruktion aufgestellt werden kann, wie sie gezeichnet wurde."],
+          ["Geschweißt oder verschraubt entscheidet die Route", "Ein Rahmen reist entweder in einem Stück oder in Segmenten mit verschraubten Stößen. Das ist keine Werkstattfrage, sondern eine Transportfrage, und sie wird vor der Fertigung beantwortet."]
+        ],
+        "en": [
+          ["The load case belongs to the site", "A frame is calculated for a place, not for a product. Snow on the Danish coast, snow in Graubünden and wind on the North Sea are three different load cases. A structure designed for one is not automatically valid for another, which is why the site-specific calculation belongs in the destination country."],
+          ["Corrosion protection follows exposure", "Coastal air, road salt and permanent damp make demands that a dry internal structure does not. Process and coating build-up are set per project and documented; that is part of the paperwork, not a detail of the workmanship."],
+          ["The connections are what get forgotten", "The frame is rarely the problem. Where its load passes into the foundation or into an existing building is where it gets tight: anchor pattern, tolerances and ground conditions decide whether the structure can be erected as drawn."],
+          ["Welded or bolted is a transport decision", "A frame travels either in one piece or in segments with bolted splices. That is not a workshop preference but a route question, and it is answered before fabrication."]
+        ]
+      },
+      "scope": {
+        "de": {
+          "in": ["Konstruktion und Fertigung nach freigegebener Zeichnung", "Oberflächenbehandlung und Kennzeichnung", "Werksdokumentation zur gelieferten Konstruktion"],
+          "out": ["Statische Berechnung für den Zielstandort", "Fundament, Anker und Erdarbeiten", "Montage vor Ort, sofern nicht beauftragt", "Prüfungen und Abnahmen durch Stellen im Zielland"]
+        },
+        "en": {
+          "in": ["Engineering and fabrication to approved drawings", "Surface treatment and marking", "Works documentation for the delivered structure"],
+          "out": ["Structural calculation for the destination site", "Foundation, anchors and ground works", "Site erection unless contracted", "Inspection and sign-off by bodies in the destination country"]
+        }
+      },
+      "faq": {
+        "de": [
+          ["Rechnet MODUNERA die Statik?", "Die Konstruktion entsteht nach freigegebener Zeichnung. Die standortbezogene Berechnung — Schnee, Wind, Baugrund, örtliche Norm — gehört in das Zielland und wird dort beauftragt. Wir liefern die Ausführungsunterlagen, die dafür gebraucht werden."],
+          ["Warum Stahl und nicht Holz?", "Wegen Spannweite und Punktlast. Wo ein Holzquerschnitt unverhältnismäßig hoch würde, bleibt der Stahlrahmen schlank und lässt den Grundriss frei. Bei kurzen Spannweiten und ohne besondere Lasten ist Holz oft die bessere und günstigere Wahl — das sagen wir dann auch."],
+          ["Verzinkt oder lackiert?", "Das entscheidet die Umgebung. Küste, Streusalz und dauerhafte Feuchte verlangen mehr als eine trockene Innenkonstruktion. Verfahren und Schichtaufbau werden je Projekt festgelegt und in den Unterlagen dokumentiert."],
+          ["Kann ein Rahmen in Teilen geliefert werden?", "Ja. Ob geschweißt in einem Stück oder verschraubt in Segmenten, entscheidet die Route zum Grundstück — Breite, Höhe, Kurvenradien und die letzte Zufahrt."],
+          ["Liefern Sie auch nur die Konstruktion, ohne Ausbau?", "Ja. Stahlbau wird auch einzeln angeboten, wenn Hülle und Ausbau vor Ort oder von einem anderen Gewerk kommen."]
+        ],
+        "en": [
+          ["Does MODUNERA do the structural calculation?", "The structure is fabricated to approved drawings. The site-specific calculation — snow, wind, ground, local code — belongs in the destination country and is commissioned there. We supply the fabrication documents it needs."],
+          ["Why steel rather than timber?", "Span and point loads. Where a timber section would become disproportionately deep, a steel frame stays slim and leaves the plan open. For short spans with no unusual loads, timber is often the better and cheaper answer — and we say so."],
+          ["Galvanised or coated?", "Exposure decides. Coast, road salt and permanent damp demand more than a dry internal structure. Process and coating build-up are set per project and recorded in the documentation."],
+          ["Can a frame be delivered in parts?", "Yes. Welded in one piece or bolted in segments is decided by the route to the site — width, height, turning radii and the final access."],
+          ["Do you supply the structure alone, without fit-out?", "Yes. Steel work is offered on its own where the envelope and interior come from site or from another trade."]
+        ]
+      }
+    },
+    "bungalows": {
+      "lead": {
+        "de": "Ein Bungalow ist ein Gebäude, kein Fahrzeug. Dieser eine Satz entscheidet alles Weitere: kein Fahrgestell, keine Straßenzulassung, aber vom ersten Tag an eine Genehmigungsfrage — und ein Fundament, das vor der Lieferung fertig sein muss.",
+        "en": "A bungalow is a building, not a vehicle. That single sentence decides everything else: no chassis, no road approval, but a planning question from day one — and a foundation that has to be finished before delivery."
+      },
+      "makes": {
+        "de": ["Ferienhäuser für Parks und Resorts", "Glamping- und Hospitality-Einheiten", "Gästehäuser und Nebengebäude", "Ebenerdige Einheiten ohne Treppe"],
+        "en": ["Holiday homes for parks and resorts", "Glamping and hospitality units", "Guest houses and annexes", "Single-level units without stairs"]
+      },
+      "decides": {
+        "de": [
+          ["Die Zone, bevor alles andere", "Ob am Standort überhaupt gebaut werden darf und ob dort gewohnt werden darf, sind zwei verschiedene Fragen — und die zweite ist der häufigste Grund, aus dem ein Projekt scheitert. In dänischen sommerhusområder und niederländischen Erholungsgebieten ist ganzjähriges Wohnen grundsätzlich beschränkt, auch wo attraktive Grundstücke liegen."],
+          ["Das Fundament gehört zum Zeitplan", "Streifen, Punkt oder Platte entscheidet der Baugrund. Wichtiger für den Termin ist: das Fundament muss fertig, ausgehärtet und maßhaltig sein, bevor die Einheit ankommt. Ein Liefertermin ohne fertiges Fundament ist kein Termin."],
+          ["Über Transportbreite kommt es in Abschnitten", "Was breiter ist, als auf der Straße transportiert werden darf, wird in Abschnitten geliefert und vor Ort verbunden. Das ist normal und geplant — aber es verändert Kran, Montagezeit und die Fuge, die später dicht bleiben muss."],
+          ["Erschließung ist selten schon da", "Auf Resort- und Campingflächen liegen Wasser, Abwasser und Strom oft nicht dort, wo die Einheit stehen soll. Wer das erst nach der Lieferung prüft, hat ein fertiges Haus ohne Anschluss."]
+        ],
+        "en": [
+          ["Zoning, before anything else", "Whether the site may be built on and whether it may be lived on are two different questions — and the second is the most common reason a project fails. In Danish sommerhusområder and Dutch recreation zones, year-round living is restricted in principle, including where the most attractive plots are."],
+          ["The foundation is part of the schedule", "Strip, pad or raft is decided by the ground. What matters more for the date: the foundation has to be finished, cured and dimensionally correct before the unit arrives. A delivery date without a finished foundation is not a date."],
+          ["Beyond transport width it arrives in sections", "Anything wider than may be carried on the road is delivered in sections and joined on site. That is normal and planned for — but it changes the crane, the assembly time and the joint that has to stay weathertight afterwards."],
+          ["Services are rarely already there", "On resort and campsite land, water, wastewater and power are often not where the unit is going. Checking that after delivery leaves a finished building with nothing to connect it to."]
+        ]
+      },
+      "scope": {
+        "de": {
+          "in": ["Einheit komplett ausgebaut bis zur Anschlusskante", "Innenausbau und Möbel nach Vereinbarung", "Werksseitige Kontrolle und Dokumentation"],
+          "out": ["Fundament, Erschließung und Anschlüsse", "Genehmigung und Nachweise im Zielland", "Außenanlagen, Terrasse und Zuwegung, sofern nicht beauftragt"]
+        },
+        "en": {
+          "in": ["Unit finished through to the connection point", "Interior fit-out and furniture where agreed", "Factory inspection and documentation"],
+          "out": ["Foundation, site services and connections", "Permits and certificates in the destination country", "Landscaping, decking and access unless contracted"]
+        }
+      },
+      "faq": {
+        "de": [
+          ["Braucht ein Bungalow eine Baugenehmigung?", "Ja. Er steht auf einem Fundament und ist damit ein Gebäude. Die Fahrgestell-Diskussion, die beim Tiny House manchmal geführt wird, gibt es hier nicht — und das ist eher ein Vorteil, weil der Weg von Anfang an eindeutig ist."],
+          ["Kann ein Bungalow ganzjährig bewohnt werden?", "Technisch ja, wenn Dämmung, Fenster, Lüftung und Heizung auf das Klima am Standort ausgelegt sind. Rechtlich hängt es an der Zone: in Ferien- und Erholungsgebieten ist Dauerwohnen in mehreren unserer Zielmärkte grundsätzlich beschränkt."],
+          ["Wird der Bungalow in einem Stück geliefert?", "Bis zur zulässigen Transportbreite ja, darüber in Abschnitten, die vor Ort verbunden werden. Welche Variante gilt, entscheidet die Route zum Grundstück und die letzte Zufahrt, nicht der Grundriss."],
+          ["Lohnt sich das für ein Resort mit mehreren Einheiten?", "Dort besonders, weil Wiederholung sich auszahlt: gleiche Einheit, gleiche Anschlüsse, gleicher Ablauf beim Aufstellen. Abweichungen je Einheit kosten in der Regel mehr, als sie dem Gast bringen."],
+          ["Ist ein Bungalow barrierefrei?", "Ebenerdig ist der Ausgangspunkt, nicht das Ergebnis. Türbreiten, Schwellen, Wendekreise und die Ausstattung des Bads müssen dafür ausgelegt werden; das wird bei der Bemusterung festgelegt und nicht nachträglich."]
+        ],
+        "en": [
+          ["Does a bungalow need planning permission?", "Yes. It sits on a foundation and is therefore a building. The chassis argument sometimes made for tiny houses does not exist here — which is arguably an advantage, because the route is unambiguous from the start."],
+          ["Can a bungalow be lived in year-round?", "Technically yes, where insulation, windows, ventilation and heating are specified for the local climate. Legally it depends on the zone: in holiday and recreation areas, permanent occupation is restricted in principle across several of our markets."],
+          ["Is a bungalow delivered in one piece?", "Up to the permitted transport width, yes; beyond it, in sections joined on site. Which applies is decided by the route and the final access, not by the floor plan."],
+          ["Does it make sense for a resort with several units?", "Especially there, because repetition pays: the same unit, the same connections, the same installation sequence. Variations per unit usually cost more than they return in guest experience."],
+          ["Is a bungalow accessible?", "Single-level is the starting point, not the outcome. Door widths, thresholds, turning circles and the bathroom have to be specified for it — at sign-off, not afterwards."]
+        ]
+      }
+    },
+    "moebel-nach-mass": {
+      "lead": {
+        "de": "Die Möbel entstehen in derselben Fertigung wie der Innenausbau. Deshalb können sie in das Gebäude hineingeplant werden, statt später hineingestellt zu werden — was auf kleiner Fläche der Unterschied zwischen einem Raum ist, der funktioniert, und einem, der voll ist.",
+        "en": "The furniture is built in the same shop as the interiors. That is why it can be planned into the building rather than placed in it afterwards — which, on a small footprint, is the difference between a room that works and a room that is full."
+      },
+      "makes": {
+        "de": ["Küchen und Küchenblöcke", "Einbauschränke und Stauraum unter Treppe und Bett", "Treppen mit integriertem Stauraum", "Waschtische und Badmöbel", "Empfangs- und Objektmöbel für Hospitality"],
+        "en": ["Kitchens and kitchen blocks", "Fitted wardrobes and storage under stairs and beds", "Staircases with integrated storage", "Vanity units and bathroom furniture", "Reception and contract furniture for hospitality"]
+      },
+      "decides": {
+        "de": [
+          ["Gewicht, das niemand bemerkt", "In einem Tiny House geht jedes Kilo auf die Achslast. Die Einrichtung ist die Stelle, an der Gewicht am leichtesten dazukommt und am schwersten auffällt — deshalb werden Material und Aufbau der Möbel zusammen mit dem Gesamtgewicht geplant und nicht danach."],
+          ["Die Bewegungsfläche zwischen den Möbeln", "Auf kleiner Grundfläche entscheidet nicht die Möbelfläche, sondern der Gang dazwischen, ob der Raum benutzbar ist. Ein Zentimeter mehr Arbeitsplatte kann ein Durchgang weniger sein."],
+          ["Die Reihenfolge ist verbindlich", "Einbauten werden gesetzt, bevor die Wand geschlossen wird, weil Elektro, Wasser und Lüftung dahinter laufen. Eine späte Änderung an der Küche heißt, die Wand wieder zu öffnen — das ist der teuerste Änderungswunsch im ganzen Projekt."],
+          ["Material verhält sich nicht wie auf dem Foto", "Was auf dem Bild gleich aussieht, verhält sich an der Spülenkante und nach fünf Jahren Hotelnutzung sehr unterschiedlich. Die Auswahl richtet sich nach Beanspruchung und Reparierbarkeit, nicht nach dem Musterbrett."]
+        ],
+        "en": [
+          ["Weight nobody notices", "In a tiny house every kilo lands on the axle load. Furniture is where weight is easiest to add and hardest to see, which is why the material and construction of the built-ins are planned together with the total weight and not after it."],
+          ["The space between the furniture", "On a small footprint it is not the furniture area but the gap between it that decides whether the room is usable. One more centimetre of worktop can be one less circulation route."],
+          ["The sequence is binding", "Built-ins go in before the wall closes, because power, water and ventilation run behind them. A late change to the kitchen means opening the wall again — the most expensive change request in the whole project."],
+          ["Material does not behave the way it photographs", "What looks identical in a picture behaves very differently at the sink edge and after five years of hotel use. Selection follows wear and repairability, not the sample board."]
+        ]
+      },
+      "scope": {
+        "de": {
+          "in": ["Entwurf, Fertigung, Oberflächen und Beschläge", "Montage in der von uns gelieferten Einheit", "Vorbereitung der Ausschnitte und Anschlüsse für die vereinbarten Geräte"],
+          "out": ["Elektrogeräte, sofern nicht ausdrücklich im Angebot", "Anschluss an Wasser, Abwasser und Strom vor Ort", "Montage in fremden Gebäuden, sofern nicht beauftragt"]
+        },
+        "en": {
+          "in": ["Design, manufacture, finishes and hardware", "Installation in a unit supplied by us", "Cut-outs and service preparation for the agreed appliances"],
+          "out": ["Appliances unless explicitly quoted", "Connection to water, wastewater and power on site", "Installation in third-party buildings unless contracted"]
+        }
+      },
+      "faq": {
+        "de": [
+          ["Kann man Möbel auch ohne Haus bestellen?", "Ja. Küchen, Einbauten und Objektmöbel werden auch einzeln gefertigt. Lieferung und Montage werden dann getrennt kalkuliert, weil Zufahrt, Stockwerk und Bauzustand vor Ort andere Fragen sind als in unserer eigenen Einheit."],
+          ["Wann muss die Möbelplanung stehen?", "Vor dem Schließen der Wände. Elektro, Wasser und Lüftung laufen hinter den Einbauten; eine spätere Änderung heißt, die Wand wieder zu öffnen. Das ist der Punkt, an dem Termine im Projekt am häufigsten kippen."],
+          ["Wie viel Gewicht bringt die Einrichtung?", "Genug, um bei einem Tiny House auf der Achslast sichtbar zu werden. Deshalb wird die Einrichtung zusammen mit dem Gesamtgewicht geplant. Die verbindliche Zahl liefert der Wiegeschein der gebauten Einheit, nicht die Möbelliste."],
+          ["Sind Elektrogeräte enthalten?", "Nur wenn sie im Angebot stehen. Ausschnitte, Anschlüsse und Belüftung werden für die vereinbarten Geräte vorbereitet — ein anderes Gerät passt danach oft nicht ohne Umbau."],
+          ["Gibt es einen Möbelkatalog?", "Nein, weil jede Einheit andere Maße hat. Ausgangspunkt sind die Grundrisse der acht Modelle; darauf wird die Einrichtung projektbezogen entworfen."]
+        ],
+        "en": [
+          ["Can furniture be ordered without a building?", "Yes. Kitchens, built-ins and contract furniture are made on their own. Delivery and installation are then quoted separately, because access, floor level and site conditions are different questions from a unit we built ourselves."],
+          ["When does the furniture design have to be fixed?", "Before the walls close. Power, water and ventilation run behind the built-ins, so a later change means opening the wall again. This is where project dates most often slip."],
+          ["How much weight does the interior add?", "Enough to show up on the axle load of a tiny house. That is why the interior is planned together with the total weight. The binding figure comes from the weighbridge ticket for the built unit, not from the furniture list."],
+          ["Are appliances included?", "Only where they are quoted. Cut-outs, connections and ventilation are prepared for the agreed appliances — a different appliance afterwards often will not fit without rework."],
+          ["Is there a furniture catalogue?", "No, because every unit has different dimensions. The eight model layouts are the starting point, and the interior is designed onto them per project."]
+        ]
+      }
+    }
+  }
+}
