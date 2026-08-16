@@ -1948,4 +1948,64 @@ body{
    crop on a portrait viewport puts the tree in the middle and the house half off
    the edge. Biased left and low, the subject lands in the frame. */
 @media (max-width:720px){ .hero .hero-slides img{object-position:32% 58%} }
+
+/* --- hero: a card on the slideshow, not a block welded to it --------------
+   The panel met the photograph at a hard line, which reads as two images stacked
+   rather than one composition. It is now a separate card: inset from the frame,
+   translucent enough that the slideshow runs behind it, and sitting lower so the
+   photograph gets the upper two thirds. A gradient carries the eye from picture
+   into panel instead of a rule doing it. */
+.hero .hero-panel{
+  background:rgba(26,38,29,.62);
+  -webkit-backdrop-filter:saturate(1.35) blur(20px); backdrop-filter:saturate(1.35) blur(20px);
+  border:1px solid rgba(255,255,255,.18);
+}
+.hero::after{
+  background:linear-gradient(180deg,rgba(24,38,28,.06) 0%,rgba(24,38,28,.16) 40%,rgba(24,38,28,.52) 78%,rgba(24,38,28,.70) 100%);
+}
+
+@media (max-width:720px){
+  .hero{height:82svh}
+  .hero .container,.hero .hero-content{inset:auto 0 0 0; padding:0 10px 12px}
+  .hero .hero-panel{
+    border-radius:var(--r-card); padding:16px 15px 15px;
+    background:rgba(26,38,29,.58);
+  }
+  /* the photograph keeps the top two thirds; the card floats over the bottom */
+  .hero .hero-content{min-height:0}
+}
+
+/* --- the two fixed controls, in one language -----------------------------
+   The rail is the bar; WhatsApp sits directly above it and matches it. The phone
+   button is gone — two round buttons for two ways to say the same thing, when
+   the number is already in the footer and on the contact page. */
+.wa-call{display:none}
+.wa-launch{
+  background:var(--glass-light-strong); -webkit-backdrop-filter:var(--blur); backdrop-filter:var(--blur);
+  border:1px solid var(--glass-edge); color:var(--moss); box-shadow:var(--lift);
+}
+.wa-launch:hover{background:var(--moss); color:#fff}
+@media (max-width:720px){
+  .rail{left:14px; right:14px; bottom:14px}
+  .rail-group{justify-content:space-around; width:100%}
+  .wa-dock{bottom:72px; right:14px; left:auto}
+  .wa-panel{right:0; bottom:62px; max-width:calc(100vw - 28px)}
+}
+
+/* --- the feature card: the photograph fills it --------------------------- */
+.wide-feature{padding:0; overflow:hidden}
+.wide-feature .visual{margin:0; padding:0; border-radius:0}
+.wide-feature .visual img{display:block; width:100%; height:100%; object-fit:cover; border-radius:0}
+.wide-feature .wide-copy{padding:clamp(18px,3vw,34px)}
+@media (max-width:900px){ .wide-feature{display:block} .wide-feature .visual img{aspect-ratio:16/10} }
+
+/* --- interior pages get the same hero treatment ------------------------- */
+.page-hero,.location-hero,.article-visual-hero{position:relative}
+.location-hero .location-hero-content,.article-visual-hero .container{position:relative; z-index:2}
+@media (max-width:720px){
+  .page-hero,.location-hero,.article-visual-hero{margin:10px; border-radius:var(--r-card)}
+  .location-hero-overlay,.article-visual-overlay{
+    background:linear-gradient(180deg,rgba(24,38,28,.10) 0%,rgba(24,38,28,.55) 70%,rgba(24,38,28,.76) 100%);
+  }
+}
 /* MODUNERA BRAND PALETTE END */
