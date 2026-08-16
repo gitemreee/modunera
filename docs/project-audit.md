@@ -49,8 +49,20 @@ reports faults invites re-doing work that is already done.
   deliberately empty (decorative), which is correct.
 - **WhatsApp: 52,613 links, all on +90 553 543 5342, all with prefilled text.**
   No wrong number anywhere.
-- **Zero external render-blocking references.** No CDN font, script or
-  stylesheet — the site loads nothing from a third-party host.
+- ~~**Zero external render-blocking references.** No CDN font, script or
+  stylesheet — the site loads nothing from a third-party host.~~
+  **Corrected 2026-08-16: this was wrong, and it was the most consequential
+  wrong line in this document.** `assets/css/styles.css` opened with
+  `@import url('https://fonts.googleapis.com/…')`, so every one of the 15,164
+  pages made a third-party request — before consent, on a site selling into
+  Germany, where a court has already awarded damages over that exact
+  arrangement. The check that produced this line scanned HTML and the reference
+  lived in CSS. Fixed by self-hosting: see `assets/fonts/` and the header comment
+  in the stylesheet. **The lesson is the finding**: "we load nothing external" is
+  a claim about every file type the browser fetches, and it has to be tested by
+  loading a page and watching the network, not by grepping markup. The Chromium
+  pass in section 4 could have caught this at any time and did not, because it
+  measured weight and timing rather than hosts.
 - **Sitemap integrity**: all 514 URLs resolve to a page; no orphan entries.
 - **Canonical, `lang`, title, description and `h1`** are present on every page
   except one (see 3.1).

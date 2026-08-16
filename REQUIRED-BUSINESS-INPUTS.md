@@ -6,6 +6,7 @@ written conditionally. Send the evidence and the corresponding page can be
 completed and indexed.
 
 Reviewed 2026-08-14 against the V7 SEO and legal audit.
+Section 6 added 2026-08-16 from the Poland and Romania competitor analysis.
 
 ## 1. Legal entity — blocks `/legal/impressum/`, `/legal/datenschutz/`, `/legal/cookies/`
 
@@ -64,7 +65,33 @@ Until these exist, model pages describe layout and use, not certified performanc
 - [ ] Delivery quotations with route assumptions, carrier, ferry/Ro-Ro basis and exclusions
 - [ ] Actual service hours and measured response time, if a response promise is to be published
 
-## 6. The production FAQ answers its own sixty questions around these gaps
+## 6. Customs classification — blocks the landed-cost figures on `/preisvergleich/`
+
+Raised by the Poland and Romania competitor analysis, 2026-08-16. See
+`docs/competitor-analysis-poland-romania.md`, section 1a.
+
+The EU–Türkiye Customs Union covers industrial goods and an A.TR movement
+certificate removes the duty on them — but the union **excludes coal and steel
+products**. MODUNERA's product is built on a steel chassis and a load-bearing
+steel frame.
+
+Whether a prefabricated building on a steel frame is classified as a
+prefabricated building, inside the union, or is caught by the steel exclusion is
+a tariff-classification question. It cannot be answered from public guidance and
+it has not been answered here.
+
+- [ ] Written classification opinion from a customs broker, per model, against the
+      actual commodity code
+- [ ] Confirmation of whether an A.TR can be issued for that code
+- [ ] Import VAT treatment per destination market, and who is the importer of
+      record in each
+
+It is worth money in both directions. A clean classification is a sentence the
+site can use in all five markets. A dirty one means the delivery figures in
+`/preisvergleich/` are understated and must be revised before anyone quotes from
+them.
+
+## 7. The production FAQ answers its own sixty questions around these gaps
 
 `/produktion-faq/` and `/en/production-faq/` answer all sixty questions from
 `data/production-faq.json`, and forty of them are answered without the figure the
