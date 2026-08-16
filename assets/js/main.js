@@ -8,7 +8,61 @@
   // so the confirmation must not read as "we have received your enquiry"
   const LEAD_NOTE={de:'Angaben übernommen — bitte in WhatsApp absenden.',en:'Details prepared — please send them in WhatsApp.',nl:'Gegevens overgenomen — verstuur ze in WhatsApp.',da:'Oplysninger klar — send dem i WhatsApp.',fr:'Informations préparées — envoyez-les dans WhatsApp.'};
   const toast=(msg)=>{let t=qs('.toast');if(!t){t=document.createElement('div');t.className='toast';document.body.appendChild(t)}t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)};
-  window.MCTiny={toast};
+
+  // --- conversion events ------------------------------------------------------
+  // Nothing on this site posts to a server: a lead is stored locally and handed to
+  // WhatsApp. That makes WhatsApp the conversion, and until now it was the one
+  // thing not measured — the analytics block above loads GA4, GTM and Clarity but
+  // no code ever emitted an event, so the only question the business actually has
+  // ("which of 15,000 pages produce contact?") had no answer.
+  //
+  // track() is deliberately a no-op when nothing is configured. It does not queue,
+  // it does not retain, and it does not run before consent, because gtag and
+  // dataLayer are only created inside initIntegrations() and that is gated on
+  // mcCookie === 'all'. No consent means no globals means no event — which is the
+  // behaviour the cookie notice already promises in five languages.
+  const track=(name,params={})=>{try{
+    const payload={...params,page_path:location.pathname,page_type:pageType(),page_lang:document.documentElement.lang||''};
+    if(window.dataLayer)window.dataLayer.push({event:name,...payload});
+    if(typeof window.gtag==='function')window.gtag('event',name,payload);
+  }catch(err){/* measurement must never break the page it measures */}};
+
+  // Which kind of page produced the click. With 15,000 pages a raw path is noise;
+  // the useful cut is model page against location page against guide, and that is
+  // decidable from the URL in every language because the slugs are fixed per
+  // locale in data/locales.json.
+  const PAGE_TYPES=[[/^\/(en|nl|da|fr)?\/?$/,'home'],[/\/(modelle|models|modellen|modeller|modeles)\//,'model'],
+    [/\/(standorte|locations|locaties|lokationer|emplacements)\//,'location'],[/\/(laender|countries|landen|lande|pays)\//,'country'],
+    [/\/(leistungen|services|diensten|ydelser)\//,'service'],[/\/(ratgeber|guides|gidsen)\//,'guide'],[/\/blog\//,'blog'],
+    [/\/(faq|fragen|questions|vragen|spoergsmaal)/,'faq'],[/\/(konfigurator|studio|katalog|modellvergleich|preisvergleich|price-comparison|model-comparison)\//,'tool'],
+    [/\/(kontakt|contact)\//,'contact'],[/\/legal\//,'legal']];
+  const pageType=()=>{const p=location.pathname;for(const [re,name] of PAGE_TYPES)if(re.test(p))return name;return 'other'};
+
+  // Where on the page the link was. A dock click and a hero click are the same
+  // event with very different meaning: one is a reader who scrolled and decided,
+  // the other is a reader who arrived ready.
+  const linkPlace=(el)=>el.closest('.wa-dock')?'dock':el.closest('.nav')?'nav':el.closest('.location-hero,.page-hero,.article-visual-hero')?'hero'
+    :el.closest('.cta-band')?'cta-band':el.closest('.footer')?'footer':el.closest('form')?'form':'inline';
+
+  addEventListener('click',(e)=>{
+    const link=e.target.closest?.('a[href]');if(!link)return;
+    const href=link.getAttribute('href')||'';
+    if(href.startsWith('https://wa.me/'))track('whatsapp_click',{link_place:linkPlace(link)});
+    else if(href.startsWith('tel:'))track('phone_click',{link_place:linkPlace(link)});
+    else if(/\.(pdf|zip)$/i.test(href))track('document_download',{file:href.split('/').pop()});
+  },{passive:true,capture:true});
+
+  // The dock's launch button is a <button> inside an inline script written per
+  // page by build-modunera-v2.mjs, so it is reached by delegation rather than by
+  // editing 7,574 copies of that script. Opening the panel is a distinct signal
+  // from clicking through to WhatsApp: it is the moment of interest, and the gap
+  // between the two counts is the panel's own drop-off.
+  addEventListener('click',(e)=>{
+    const launch=e.target.closest?.('.wa-launch');if(!launch)return;
+    if(launch.getAttribute('aria-expanded')!=='true')track('whatsapp_panel_open',{trigger:'button'});
+  },{passive:true,capture:true});
+
+  window.MODUNERA={toast,track};
   const progress=qs('.scroll-progress');
   const onScroll=()=>{if(progress){const d=document.documentElement;const max=d.scrollHeight-d.clientHeight;progress.style.width=(max?d.scrollTop/max*100:0)+'%'}};
   addEventListener('scroll',onScroll,{passive:true});onScroll();
@@ -55,6 +109,6 @@
   const blogSearch=qs('#blogSearch'),blogFilters=qsa('[data-blog-filter]');const applyBlog=()=>{if(!blogSearch)return;const term=blogSearch.value.toLowerCase(),active=qs('[data-blog-filter].active')?.dataset.blogFilter||'all';qsa('.blog-card[data-blog-category]').forEach(i=>i.classList.toggle('hidden',!((active==='all'||i.dataset.blogCategory===active)&&i.textContent.toLowerCase().includes(term))))};if(blogSearch)blogSearch.addEventListener('input',applyBlog);blogFilters.forEach(b=>b.onclick=()=>{blogFilters.forEach(x=>x.classList.remove('active'));b.classList.add('active');applyBlog()});
 
   // generic lead forms: save locally and open WhatsApp
-  qsa('form[data-lead-form]').forEach(form=>form.addEventListener('submit',async e=>{e.preventDefault();const fd=Object.fromEntries(new FormData(form));const lead={...fd,source:location.pathname,createdAt:new Date().toISOString()};const leads=JSON.parse(localStorage.getItem('mcLeads')||'[]');leads.push(lead);localStorage.setItem('mcLeads',JSON.stringify(leads));const c=await integrationPromise;if(c.crmEndpoint){try{await fetch(c.crmEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(lead)})}catch(err){console.warn('CRM submission failed',err)}}toast(LEAD_NOTE[document.documentElement.lang?.slice(0,2)]||LEAD_NOTE.de);const msg='MODUNERA Anfrage\n'+Object.entries(fd).map(([k,v])=>`${k}: ${v}`).join('\n');setTimeout(()=>window.open('https://wa.me/905535435342?text='+encodeURIComponent(msg),'_blank'),450)}));
+  qsa('form[data-lead-form]').forEach(form=>form.addEventListener('submit',async e=>{e.preventDefault();const fd=Object.fromEntries(new FormData(form));const lead={...fd,source:location.pathname,createdAt:new Date().toISOString()};const leads=JSON.parse(localStorage.getItem('mcLeads')||'[]');leads.push(lead);localStorage.setItem('mcLeads',JSON.stringify(leads));const c=await integrationPromise;if(c.crmEndpoint){try{await fetch(c.crmEndpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(lead)})}catch(err){console.warn('CRM submission failed',err)}}track('lead_form_submit',{form_id:form.id||form.getAttribute('data-lead-form')||'unnamed',fields:Object.keys(fd).length});toast(LEAD_NOTE[document.documentElement.lang?.slice(0,2)]||LEAD_NOTE.de);const msg='MODUNERA Anfrage\n'+Object.entries(fd).map(([k,v])=>`${k}: ${v}`).join('\n');setTimeout(()=>window.open('https://wa.me/905535435342?text='+encodeURIComponent(msg),'_blank'),450)}));
 
 })();
