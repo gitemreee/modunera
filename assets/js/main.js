@@ -64,7 +64,7 @@
 
   window.MODUNERA={toast,track};
   const progress=qs('.scroll-progress');
-  const onScroll=()=>{if(progress){const d=document.documentElement;const max=d.scrollHeight-d.clientHeight;progress.style.width=(max?d.scrollTop/max*100:0)+'%'}};
+  const onScroll=()=>{const d=document.documentElement;if(progress){const max=d.scrollHeight-d.clientHeight;progress.style.width=(max?d.scrollTop/max*100:0)+'%'}document.body.classList.toggle('scrolled',d.scrollTop>40)};
   addEventListener('scroll',onScroll,{passive:true});onScroll();
   // one panel at a time: opening a section closes whatever else was open, and so
   // does closing the drawer or clicking anywhere outside the navigation

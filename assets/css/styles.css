@@ -2008,4 +2008,30 @@ body{
     background:linear-gradient(180deg,rgba(24,38,28,.10) 0%,rgba(24,38,28,.55) 70%,rgba(24,38,28,.76) 100%);
   }
 }
+
+/* --- the bar stays -------------------------------------------------------
+   It was sticky and it was not sticking, because .app-shell clipped with
+   overflow:hidden and that makes the shell a scroll container — a sticky child
+   then sticks to the shell, which scrolls with the page, so it never sticks to
+   anything the reader can see. overflow:clip does the same clipping without
+   creating the container, which is the whole reason it exists.
+
+   And the brand goes with it. A reader who screenshots a page halfway down
+   should have the name in the shot; a bar that leaves takes the only thing
+   identifying whose page it is. On scroll it gives up some weight rather than
+   the screen: thinner padding, more transparency, the page reading through it. */
+.nav{transition:padding .22s ease, background .22s ease, box-shadow .22s ease}
+body.scrolled .nav{
+  background:rgba(255,255,255,.58);
+  box-shadow:0 8px 26px -16px rgba(24,38,28,.34);
+}
+body.scrolled .nav-inner{padding-block:6px}
+body.scrolled .brand img{transform:scale(.9); transform-origin:left center; transition:transform .22s ease}
+@media (max-width:720px){
+  .nav{position:sticky; top:8px; margin-top:8px; z-index:80}
+  body.scrolled .brand-claim{display:none}   /* the name stays, the claim yields */
+}
+@media (prefers-reduced-motion:reduce){
+  .nav,.brand img{transition:none}
+}
 /* MODUNERA BRAND PALETTE END */
