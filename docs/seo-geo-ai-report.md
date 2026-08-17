@@ -12,6 +12,7 @@ Reproduce:
 node tools/validate-seo-v7.mjs
 node tools/score-location-pages.mjs --json build-report-location-quality.json
 node tools/audit-project.mjs --json build-report-audit.json
+node tools/score-indexed-originality.mjs --json build-report-originality.json
 ```
 
 ---
@@ -118,6 +119,50 @@ The 491 that pass are mostly Dutch pages, where the regional and climate
 paragraphs genuinely differ. They are the sensible first tranche if any promotion
 happens — and promotion should be a decision, taken deliberately, on a small
 batch, with the search-console effect measured before the next.
+
+### 3.35 P1 — fixed 2026-08-17: the appendix was the largest repeat on the indexed set
+
+The 514 pages offered to search had no originality instrument; only the noindex
+location corpus did. `tools/score-indexed-originality.mjs` is that instrument. It
+measures the share of a page's `<main>` sentences that appear on no other indexed
+page, after blanking place names and figures — the same normalisation
+`score-location-pages.mjs` uses, and for the same reason: a mail-merged sentence
+is textually unique on every page and original on none.
+
+Measured before the fix, the top repeats were not the disclaimer but the country
+permit paragraphs: the same sentence about `§ 35 BauGB` on 146 pages, the same one
+about Danish *sommerhusområder* on 146, the ordering checklist on 144. All of it
+came from one block — the `APPENDIX` in `build-modunera-depth.mjs --extend`, which
+was applied to the whole article library: 221 pages, ~640 words each. On a page
+about kitchen layout or acoustic separation, Danish holiday-zone permitting
+answers a question the reader did not ask.
+
+Scoped by subject rather than by tree. The decision now lives in
+`data/appendix-scope.json`, with a reason written against every category and every
+page type, and the default is drop, so a new section cannot inherit forty
+sentences by accident. Kept where siting, permitting, import or total cost is the
+subject — the Europe guides, the country-permit and cost and letting and transport
+categories, the bungalow and modular service pages. Dropped from interiors,
+technical construction, energy, maintenance, the bespoke-furniture and steel pages
+and the library hubs.
+
+| | Before | After |
+|---|---|---|
+| Pages carrying the appendix | 221 | 96 |
+| Mean originality, 514 indexed pages | 42.2% | **49.5%** |
+| Median originality | 34.0% | **42.9%** |
+| Indexed pages below 25% original | 241 | **161** |
+| Indexed pages below 50% original | 325 | **276** |
+| Pages sharing the `§ 35 BauGB` paragraph | 146 | 65 |
+| Pages sharing the ordering checklist | 144 | 63 |
+
+No page was deleted and the sitemap did not move: 15,164 pages, 514 URLs, both
+validators exit 0, and a second full run changes nothing.
+
+What did **not** improve, and is the next thing to fix: the `md-8` model pages
+(4.5–5.3% original) and the country question pages (5.4–5.7%) are now the worst on
+the site. Neither carries the appendix — their repetition is their own shared model
+and fact tables, which is a different problem with a different fix.
 
 ### 3.4 P2 — the indexing policy is expressed in two places and only one is enforced
 

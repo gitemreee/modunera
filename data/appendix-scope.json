@@ -1,0 +1,160 @@
+{
+  "_comment": [
+    "Which pages carry the five-market appendix, and which do not.",
+    "",
+    "The appendix is the block built by APPENDIX in tools/build-modunera-depth.mjs:",
+    "a card per destination market naming the competent authority, the governing",
+    "plan, whether permanent living is possible, the delivery price and the import",
+    "VAT rate; then the MD 1-MD 8 table; then the five-point ordering checklist.",
+    "",
+    "WHY THIS FILE EXISTS",
+    "",
+    "It was applied to every page in the article library, which put roughly 640",
+    "words and forty sentences of country permitting onto 221 pages, 144 of them",
+    "indexed. Measured on the indexed set, the same permit paragraph appeared on",
+    "146 pages and the same checklist on 144. On a page about kitchen layout or",
+    "acoustic separation, Danish sommerhusomraade zoning answers a question the",
+    "reader did not ask, and it is the single largest source of repetition among",
+    "the 514 pages the site actually offers to search.",
+    "",
+    "THE RULE",
+    "",
+    "Keep it where siting, permitting, import or total cost is the subject of the",
+    "page. Drop it everywhere else. Default is DROP: a page type that is not named",
+    "here does not get the appendix, so adding a tree cannot silently inherit it.",
+    "",
+    "The nine article categories are paired de/en explicitly rather than by index,",
+    "so reordering either corpus cannot quietly flip a decision.",
+    "",
+    "topic_overrides exists because one category is not uniform: comparison and",
+    "alternatives is mostly style comparison, where the appendix is off-topic, but",
+    "'tiny house versus caravan' and 'tiny house versus modular house' both turn on",
+    "the building-or-vehicle distinction that the country cards are the answer to.",
+    "Those two topics keep it; the category does not.",
+    "",
+    "Measured after this file was applied: see docs/seo-geo-ai-report.md and",
+    "node tools/score-indexed-originality.mjs."
+  ],
+  "reviewed_at": "2026-08-17",
+
+  "categories": [
+    {
+      "de": "genehmigung-und-recht",
+      "en": "permits-and-law",
+      "appendix": "keep",
+      "why": "The appendix is this subject. Authority, governing plan and whether permanent living is allowed are the four things these pages are about."
+    },
+    {
+      "de": "transport-und-import",
+      "en": "transport-and-import",
+      "appendix": "keep",
+      "why": "Each country card carries the delivery price and the import VAT rate for that market, which is the material of this category."
+    },
+    {
+      "de": "kosten-und-finanzierung",
+      "en": "costs-and-financing",
+      "appendix": "keep",
+      "why": "Delivery per market and the budget checklist — foundation, connections, unloading, fees, insurance — are cost material, not padding, on a costs page."
+    },
+    {
+      "de": "nutzung-und-geschaeftsmodell",
+      "en": "use-and-business-model",
+      "appendix": "keep",
+      "why": "Every card states whether permanent living, holiday use or letting is permitted. For a letting or glamping business that is the deciding fact, not background."
+    },
+    {
+      "de": "technik-und-konstruktion",
+      "en": "technology-and-construction",
+      "appendix": "drop",
+      "why": "Insulation, glazing, fire, ventilation, the steel frame. Danish zoning does not bear on a build-up, and forty sentences of it displaced the subject."
+    },
+    {
+      "de": "grundriss-und-innenraum",
+      "en": "layout-and-interior",
+      "appendix": "drop",
+      "why": "Kitchen, bathroom, storage, acoustics, sleeping arrangements. Nothing on these pages is decided by a commune's land-use plan."
+    },
+    {
+      "de": "energie-und-autarkie",
+      "en": "energy-and-off-grid",
+      "appendix": "drop",
+      "why": "Heating, solar, power, water. Off-grid supply is a technical subject; the permitting question belongs on the pages that are about permitting."
+    },
+    {
+      "de": "betrieb-und-wartung",
+      "en": "operation-and-maintenance",
+      "appendix": "drop",
+      "why": "Cleaning, damp, cladding care, servicing. These are read after the house exists, when the permit question is long settled."
+    },
+    {
+      "de": "vergleich-und-alternativen",
+      "en": "comparison-and-alternatives",
+      "appendix": "drop",
+      "why": "Mostly style comparison — chalet, modern, Scandinavian. See topic_overrides for the two subjects in it that are genuinely permitting questions."
+    }
+  ],
+
+  "topic_overrides": [
+    {
+      "topic": "vs-wohnwagen",
+      "appendix": "keep",
+      "why": "Tiny house against caravan is decided by whether the thing is a vehicle or a building, which is exactly what the country cards state."
+    },
+    {
+      "topic": "vs-modulhaus",
+      "appendix": "keep",
+      "why": "Same distinction: what separates the two in practice is the permitting route, not the construction."
+    }
+  ],
+
+  "trees": [
+    {
+      "match": "^blog/europa/",
+      "appendix": "keep",
+      "why": "The thirteen German Europe guides: permits per country, customs, transport, plot, budget, letting, year-round climate. The appendix is their summary."
+    },
+    {
+      "match": "^en/guides/",
+      "appendix": "keep",
+      "why": "The same thirteen guides in English, plus the manufacturer comparison."
+    },
+    {
+      "match": "^(en/guides|nl/gidsen|da/guides|fr/guides)/index\\.html$",
+      "appendix": "keep",
+      "why": "These hubs index the market guides and nothing else, so the appendix is the index of what they index."
+    },
+    {
+      "match": "^faq/europa/",
+      "appendix": "keep",
+      "why": "The Europe FAQ. The five-market question is the page."
+    },
+    {
+      "match": "^(leistungen/(bungalows|modulbau)|en/services/(bungalows|modular-buildings)|nl/diensten/(bungalows|modulaire-bouw)|da/ydelser/(bungalower|modulbyggeri)|fr/services/(bungalows|construction-modulaire))/index\\.html$",
+      "appendix": "keep",
+      "why": "A bungalow or a module set on a plot is a building. Where it may stand and who decides that is the reader's next question, in every one of the five markets."
+    }
+  ],
+
+  "dropped_trees": [
+    {
+      "match": "^(leistungen/(stahlbau|moebel-nach-mass)|en/services/(steel-structures|bespoke-furniture)|nl/diensten/(staalconstructies|meubels-op-maat)|da/ydelser/(staalkonstruktioner|specialfremstillede-moebler)|fr/services/(structures-acier|mobilier-sur-mesure))/",
+      "why": "A steel frame and a fitted kitchen are supplied into someone else's project. The buyer is not asking a commune whether they may own a wardrobe."
+    },
+    {
+      "match": "^(leistungen|en/services|nl/diensten|da/ydelser|fr/services)/index\\.html$",
+      "why": "The capability index. Its job is to route to six pages, and each of those answers the permitting question where it applies."
+    },
+    {
+      "match": "^(blog|ratgeber|en/blog)/index\\.html$",
+      "why": "Library hubs spanning all nine categories. They carry their own indexes and are long enough without it."
+    },
+    {
+      "match": "^(faq|en/faq)/index\\.html$",
+      "why": "The general FAQ already answers the permit question in its own words; faq/europa is the page that keeps the appendix."
+    },
+    {
+      "match": "^(katalog|vorteile|en/advantages)/index\\.html$",
+      "why": "Catalogue and advantages pages. Neither is about where the house may stand."
+    }
+  ]
+}

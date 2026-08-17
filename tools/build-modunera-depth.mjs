@@ -842,9 +842,52 @@ function appendixBlock(lang, root) {
 <section class="section section-soft"><div class="container">${sectionHeader(a.checklistEyebrow, a.checklistH2)}<ul class="check-list">${a.checklist.map((c) => `<li>${esc(c)}</li>`).join("")}</ul>${disclaimer(lang)}</div></section>${APPENDIX_CLOSE}`;
 }
 
-/* Which pages get the appendix: the article library and the guide hubs, not the
-   7,000 location pages (they have their own local content) and not the pages
-   this layer already writes in full. */
+/* Which pages get the appendix.
+
+   This used to be "the whole article library and the guide hubs", which put the
+   country permit paragraphs on 221 pages — 146 indexed pages carrying the same
+   sentence about Außenbereich and 146 the same one about sommerhusområder. On a
+   page about kitchen layout or acoustic separation that is forty sentences the
+   reader did not come for, and it was the largest single source of repetition
+   across the 514 indexed pages.
+
+   The scope now lives in data/appendix-scope.json, with a reason written against
+   every decision, so an argument about where the appendix belongs is an argument
+   about that file. Default is DROP: a tree that is not named there does not get
+   it, which means a new section cannot inherit forty sentences by accident. */
+const APPENDIX_SCOPE = JSON.parse(await readFile(join(ROOT, "data/appendix-scope.json"), "utf8"));
+
+const CATEGORY_APPENDIX = new Map();
+for (const c of APPENDIX_SCOPE.categories) {
+  CATEGORY_APPENDIX.set(c.de, c.appendix === "keep");
+  CATEGORY_APPENDIX.set(c.en, c.appendix === "keep");
+}
+const TOPIC_APPENDIX = new Map(
+  APPENDIX_SCOPE.topic_overrides.map((t) => [t.topic, t.appendix === "keep"]),
+);
+const KEEP_TREES = APPENDIX_SCOPE.trees.map((t) => new RegExp(t.match));
+const DROP_TREES = APPENDIX_SCOPE.dropped_trees.map((t) => new RegExp(t.match));
+
+/* A page's subject category, where the page has one. The German article library
+   resolves through blogTopicOf(); the English posts carry their category in
+   data/posts-en*.json; the category pages are named after the category itself. */
+const EN_POST_CATEGORY = new Map(LOCALE_POSTS.en.map((p) => [p.slug, p.category]));
+
+function appendixCategoryOf(rel) {
+  const de = blogTopicOf(rel);
+  if (de) return { category: de.topic.cat, topic: de.key };
+
+  const cat = rel.match(/^ratgeber\/([^/]+)\/index\.html$/);
+  if (cat && CATEGORY_APPENDIX.has(cat[1])) return { category: cat[1], topic: null };
+
+  const en = rel.match(/^en\/blog\/([^/]+)\/index\.html$/);
+  if (en) {
+    if (CATEGORY_APPENDIX.has(en[1])) return { category: en[1], topic: null };
+    if (EN_POST_CATEGORY.has(en[1])) return { category: EN_POST_CATEGORY.get(en[1]), topic: null };
+  }
+  return null;
+}
+
 function wantsAppendix(rel) {
   if (!rel.endsWith("index.html")) return false;
   // the 7,100 location pages carry their own local material and would be swamped
@@ -852,32 +895,56 @@ function wantsAppendix(rel) {
   // the pages this layer writes in full already contain everything the appendix has
   if (/^(modelle|en\/models|nl\/modellen|da\/modeller|fr\/modeles)\//.test(rel)) return false;
   if (/^(fragen|en\/questions|nl\/vragen-per-land|da\/spoergsmaal-per-land|fr\/questions-par-pays)\//.test(rel)) return false;
-  return (
-    /^(blog|ratgeber|leistungen|faq)\//.test(rel) ||
-    /^en\/(guides|blog|services|faq)\//.test(rel) ||
-    /^(nl\/gidsen|da\/guides|fr\/guides|nl\/diensten|da\/ydelser|fr\/services)\//.test(rel) ||
-    /^(vorteile|katalog|en\/advantages)\//.test(rel)
-  );
+
+  // an explicit drop beats everything: it is the reviewed decision for that page
+  if (DROP_TREES.some((re) => re.test(rel))) return false;
+  if (KEEP_TREES.some((re) => re.test(rel))) return true;
+
+  const subject = appendixCategoryOf(rel);
+  if (!subject) return false; // default drop
+  if (subject.topic && TOPIC_APPENDIX.has(subject.topic)) return TOPIC_APPENDIX.get(subject.topic);
+  return CATEGORY_APPENDIX.get(subject.category) === true;
+}
+
+/* The appendix is written into pages by --extend and removed from them by the
+   same pass when the scope changes. Without this, narrowing the scope would
+   leave the block on every page that already had it, because extendArticles()
+   only ever wrote. */
+function stripAppendix(html) {
+  return html.includes(APPENDIX_OPEN)
+    ? html.replace(new RegExp(`${APPENDIX_OPEN}[\\s\\S]*?${APPENDIX_CLOSE}`), "")
+    : html;
 }
 
 async function extendArticles() {
   const files = (await walk(ROOT)).filter((f) => extname(f).toLowerCase() === ".html");
   let changed = 0;
+  let removed = 0;
   for (const file of files) {
     const rel = relative(ROOT, file).replaceAll("\\", "/");
-    if (!wantsAppendix(rel)) continue;
+    // the location corpus has never carried the appendix and is 14,641 of the
+    // 15,164 files; skipping it here is what keeps this pass cheap
+    if (rel.startsWith("standorte/") || rel.startsWith("en/locations/")) continue;
+
     const html = await readFile(file, "utf8");
-    const tag = (html.match(/<html\s+lang="([a-z]{2})/i) ?? [, "de"])[1].toLowerCase();
-    const lang = APPENDIX[tag] ? tag : "de";
-    const block = appendixBlock(lang, rootFor(rel));
-    const next = html.includes(APPENDIX_OPEN)
-      ? html.replace(new RegExp(`${APPENDIX_OPEN}[\\s\\S]*?${APPENDIX_CLOSE}`), block)
-      : html.replace("</main>", block + "</main>");
+    let next;
+    if (wantsAppendix(rel)) {
+      const tag = (html.match(/<html\s+lang="([a-z]{2})/i) ?? [, "de"])[1].toLowerCase();
+      const lang = APPENDIX[tag] ? tag : "de";
+      const block = appendixBlock(lang, rootFor(rel));
+      next = html.includes(APPENDIX_OPEN)
+        ? html.replace(new RegExp(`${APPENDIX_OPEN}[\\s\\S]*?${APPENDIX_CLOSE}`), block)
+        : html.replace("</main>", block + "</main>");
+    } else {
+      next = stripAppendix(html);
+      if (next !== html) removed += 1;
+    }
     if (next !== html) {
       await writeFile(file, next, "utf8");
       changed += 1;
     }
   }
+  if (removed) console.log(`  appendix removed from ${removed} page(s) now out of scope`);
   return changed;
 }
 

@@ -1,0 +1,4387 @@
+{
+  "status": "ok",
+  "indexed_pages": 514,
+  "pages_with_prose": 514,
+  "mean_originality_pct": 49.5,
+  "median_originality_pct": 42.9,
+  "pages_below_25pct": 161,
+  "pages_below_50pct": 276,
+  "worst_pages": [
+    {
+      "rel": "fr/services/bungalows/index.html",
+      "url": "https://modunera.com/fr/services/bungalows/",
+      "sentences": 45,
+      "original": 2,
+      "originality": 4.4,
+      "repeated_sentences": 47
+    },
+    {
+      "rel": "fr/services/construction-modulaire/index.html",
+      "url": "https://modunera.com/fr/services/construction-modulaire/",
+      "sentences": 45,
+      "original": 2,
+      "originality": 4.4,
+      "repeated_sentences": 47
+    },
+    {
+      "rel": "nl/diensten/bungalows/index.html",
+      "url": "https://modunera.com/nl/diensten/bungalows/",
+      "sentences": 45,
+      "original": 2,
+      "originality": 4.4,
+      "repeated_sentences": 47
+    },
+    {
+      "rel": "nl/diensten/modulaire-bouw/index.html",
+      "url": "https://modunera.com/nl/diensten/modulaire-bouw/",
+      "sentences": 45,
+      "original": 2,
+      "originality": 4.4,
+      "repeated_sentences": 47
+    },
+    {
+      "rel": "en/models/md-8/index.html",
+      "url": "https://modunera.com/en/models/md-8/",
+      "sentences": 133,
+      "original": 6,
+      "originality": 4.5,
+      "repeated_sentences": 129
+    },
+    {
+      "rel": "fr/modeles/md-8/index.html",
+      "url": "https://modunera.com/fr/modeles/md-8/",
+      "sentences": 133,
+      "original": 6,
+      "originality": 4.5,
+      "repeated_sentences": 129
+    },
+    {
+      "rel": "da/modeller/md-8/index.html",
+      "url": "https://modunera.com/da/modeller/md-8/",
+      "sentences": 128,
+      "original": 6,
+      "originality": 4.7,
+      "repeated_sentences": 124
+    },
+    {
+      "rel": "da/ydelser/bungalower/index.html",
+      "url": "https://modunera.com/da/ydelser/bungalower/",
+      "sentences": 43,
+      "original": 2,
+      "originality": 4.7,
+      "repeated_sentences": 45
+    },
+    {
+      "rel": "da/ydelser/modulbyggeri/index.html",
+      "url": "https://modunera.com/da/ydelser/modulbyggeri/",
+      "sentences": 43,
+      "original": 2,
+      "originality": 4.7,
+      "repeated_sentences": 45
+    },
+    {
+      "rel": "nl/modellen/md-8/index.html",
+      "url": "https://modunera.com/nl/modellen/md-8/",
+      "sentences": 129,
+      "original": 6,
+      "originality": 4.7,
+      "repeated_sentences": 125
+    },
+    {
+      "rel": "modelle/md-8/index.html",
+      "url": "https://modunera.com/modelle/md-8/",
+      "sentences": 131,
+      "original": 7,
+      "originality": 5.3,
+      "repeated_sentences": 126
+    },
+    {
+      "rel": "en/questions/germany/index.html",
+      "url": "https://modunera.com/en/questions/germany/",
+      "sentences": 56,
+      "original": 3,
+      "originality": 5.4,
+      "repeated_sentences": 53
+    },
+    {
+      "rel": "fragen/deutschland/index.html",
+      "url": "https://modunera.com/fragen/deutschland/",
+      "sentences": 56,
+      "original": 3,
+      "originality": 5.4,
+      "repeated_sentences": 53
+    },
+    {
+      "rel": "fragen/luxemburg/index.html",
+      "url": "https://modunera.com/fragen/luxemburg/",
+      "sentences": 54,
+      "original": 3,
+      "originality": 5.6,
+      "repeated_sentences": 51
+    },
+    {
+      "rel": "fragen/niederlande/index.html",
+      "url": "https://modunera.com/fragen/niederlande/",
+      "sentences": 54,
+      "original": 3,
+      "originality": 5.6,
+      "repeated_sentences": 51
+    },
+    {
+      "rel": "en/questions/denmark/index.html",
+      "url": "https://modunera.com/en/questions/denmark/",
+      "sentences": 53,
+      "original": 3,
+      "originality": 5.7,
+      "repeated_sentences": 50
+    },
+    {
+      "rel": "en/questions/luxembourg/index.html",
+      "url": "https://modunera.com/en/questions/luxembourg/",
+      "sentences": 53,
+      "original": 3,
+      "originality": 5.7,
+      "repeated_sentences": 50
+    },
+    {
+      "rel": "en/questions/netherlands/index.html",
+      "url": "https://modunera.com/en/questions/netherlands/",
+      "sentences": 53,
+      "original": 3,
+      "originality": 5.7,
+      "repeated_sentences": 50
+    },
+    {
+      "rel": "en/questions/switzerland/index.html",
+      "url": "https://modunera.com/en/questions/switzerland/",
+      "sentences": 53,
+      "original": 3,
+      "originality": 5.7,
+      "repeated_sentences": 50
+    },
+    {
+      "rel": "fr/questions-par-pays/pays-bas/index.html",
+      "url": "https://modunera.com/fr/questions-par-pays/pays-bas/",
+      "sentences": 53,
+      "original": 3,
+      "originality": 5.7,
+      "repeated_sentences": 50
+    }
+  ],
+  "most_repeated_sentences": [
+    {
+      "pages": 161,
+      "words": 13,
+      "sentence": "alle angaben sind unverbindliche projektorientierung und keine rechts behörden statik energie oder steuerberatung"
+    },
+    {
+      "pages": 161,
+      "words": 11,
+      "sentence": "preise sind indikationen ab werk verbindlich ist ausschließlich ein geprüftes angebot"
+    },
+    {
+      "pages": 110,
+      "words": 17,
+      "sentence": "die basisbreite beträgt bei allen acht modellen # meter der unterschied liegt in länge aufteilung und ausstattungstiefe"
+    },
+    {
+      "pages": 110,
+      "words": 11,
+      "sentence": "entschieden wird nach nutzung personenzahl und standort nicht nach dem datenblatt"
+    },
+    {
+      "pages": 77,
+      "words": 16,
+      "sentence": "all figures are non binding project guidance and not legal authority structural energy or tax advice"
+    },
+    {
+      "pages": 77,
+      "words": 11,
+      "sentence": "prices are ex works indications only a checked quotation is binding"
+    },
+    {
+      "pages": 73,
+      "words": 13,
+      "sentence": "wegen der kleinen gemeindegrößen unterscheidet sich die praxis von ort zu ort spürbar"
+    },
+    {
+      "pages": 72,
+      "words": 8,
+      "sentence": "der unterschied liegt in länge aufteilung und ausstattungstiefe"
+    },
+    {
+      "pages": 65,
+      "words": 23,
+      "sentence": "im außenbereich nach # baugb ist wohnen nur in eng begrenzten fällen privilegiert das ist der häufigste grund aus dem deutsche projekte sche"
+    },
+    {
+      "pages": 65,
+      "words": 20,
+      "sentence": "viele attraktive standorte sind als erholungs oder freizeitgebiet ausgewiesen wo permanentes wohnen nicht erlaubt ist auch wenn es faktisch "
+    },
+    {
+      "pages": 65,
+      "words": 14,
+      "sentence": "in sommerhusområder ist die ganzjährige wohnnutzung grundsätzlich beschränkt ausnahmen sind an persönliche voraussetzungen geknüpft"
+    },
+    {
+      "pages": 65,
+      "words": 21,
+      "sentence": "außerhalb der bauzone ist wohnen nur in eng begrenzten ausnahmen zulässig das ist der häufigste grund aus dem schweizer projekte scheitern"
+    },
+    {
+      "pages": 64,
+      "words": 9,
+      "sentence": "konfigurator öffnen weiterlesen # faq lokale seiten material qualität"
+    },
+    {
+      "pages": 63,
+      "words": 10,
+      "sentence": "dieselbe frage wird in kopenhagen anders beantwortet als in zürich"
+    },
+    {
+      "pages": 63,
+      "words": 14,
+      "sentence": "diese fünf punkte gehören in jede projektprüfung unabhängig davon welches detail sie gerade recherchieren"
+    },
+    {
+      "pages": 63,
+      "words": 11,
+      "sentence": "deutschland zuständig die untere bauaufsichtsbehörde des kreises oder der kreisfreien stadt"
+    },
+    {
+      "pages": 63,
+      "words": 12,
+      "sentence": "maßgeblicher plan der bebauungsplan ersatzweise die beurteilung nach # oder # baugb"
+    },
+    {
+      "pages": 63,
+      "words": 19,
+      "sentence": "dauerwohnen ist möglich wenn das grundstück im innenbereich liegt oder ein bebauungsplan wohnnutzung zulässt und das vorhaben genehmigt wird"
+    },
+    {
+      "pages": 63,
+      "words": 4,
+      "sentence": "lieferung ab # einfuhr"
+    },
+    {
+      "pages": 63,
+      "words": 11,
+      "sentence": "es gilt der deutsche umsatzsteuersatz von # prozent auf die einfuhr"
+    }
+  ],
+  "pages": [
+    {
+      "rel": "index.html",
+      "url": "https://modunera.com/",
+      "sentences": 72,
+      "original": 68,
+      "originality": 94.4,
+      "repeated_sentences": 4
+    },
+    {
+      "rel": "blog/index.html",
+      "url": "https://modunera.com/blog/",
+      "sentences": 132,
+      "original": 23,
+      "originality": 17.4,
+      "repeated_sentences": 306
+    },
+    {
+      "rel": "blog/europa/index.html",
+      "url": "https://modunera.com/blog/europa/",
+      "sentences": 44,
+      "original": 3,
+      "originality": 6.8,
+      "repeated_sentences": 45
+    },
+    {
+      "rel": "blog/europa/anschluesse-strom-wasser-abwasser-europa/index.html",
+      "url": "https://modunera.com/blog/europa/anschluesse-strom-wasser-abwasser-europa/",
+      "sentences": 73,
+      "original": 29,
+      "originality": 39.7,
+      "repeated_sentences": 50
+    },
+    {
+      "rel": "blog/europa/ganzjaehrig-wohnen-klima-europa/index.html",
+      "url": "https://modunera.com/blog/europa/ganzjaehrig-wohnen-klima-europa/",
+      "sentences": 74,
+      "original": 31,
+      "originality": 41.9,
+      "repeated_sentences": 49
+    },
+    {
+      "rel": "blog/europa/gesamtbudget-tiny-house-europa/index.html",
+      "url": "https://modunera.com/blog/europa/gesamtbudget-tiny-house-europa/",
+      "sentences": 78,
+      "original": 33,
+      "originality": 42.3,
+      "repeated_sentences": 51
+    },
+    {
+      "rel": "blog/europa/grundstueck-stellplatz-europa/index.html",
+      "url": "https://modunera.com/blog/europa/grundstueck-stellplatz-europa/",
+      "sentences": 78,
+      "original": 34,
+      "originality": 43.6,
+      "repeated_sentences": 50
+    },
+    {
+      "rel": "blog/europa/tiny-house-daenemark-genehmigung/index.html",
+      "url": "https://modunera.com/blog/europa/tiny-house-daenemark-genehmigung/",
+      "sentences": 64,
+      "original": 6,
+      "originality": 9.4,
+      "repeated_sentences": 63
+    },
+    {
+      "rel": "blog/europa/tiny-house-deutschland-genehmigung/index.html",
+      "url": "https://modunera.com/blog/europa/tiny-house-deutschland-genehmigung/",
+      "sentences": 64,
+      "original": 6,
+      "originality": 9.4,
+      "repeated_sentences": 63
+    },
+    {
+      "rel": "blog/europa/tiny-house-hersteller-polen-rumaenien-tuerkei-vergleich/index.html",
+      "url": "https://modunera.com/blog/europa/tiny-house-hersteller-polen-rumaenien-tuerkei-vergleich/",
+      "sentences": 62,
+      "original": 20,
+      "originality": 32.3,
+      "repeated_sentences": 46
+    },
+    {
+      "rel": "blog/europa/tiny-house-luxemburg-genehmigung/index.html",
+      "url": "https://modunera.com/blog/europa/tiny-house-luxemburg-genehmigung/",
+      "sentences": 64,
+      "original": 6,
+      "originality": 9.4,
+      "repeated_sentences": 63
+    },
+    {
+      "rel": "blog/europa/tiny-house-niederlande-genehmigung/index.html",
+      "url": "https://modunera.com/blog/europa/tiny-house-niederlande-genehmigung/",
+      "sentences": 64,
+      "original": 5,
+      "originality": 7.8,
+      "repeated_sentences": 65
+    },
+    {
+      "rel": "blog/europa/tiny-house-schweiz-genehmigung/index.html",
+      "url": "https://modunera.com/blog/europa/tiny-house-schweiz-genehmigung/",
+      "sentences": 64,
+      "original": 6,
+      "originality": 9.4,
+      "repeated_sentences": 63
+    },
+    {
+      "rel": "blog/europa/tiny-house-transport-tuerkei-europa/index.html",
+      "url": "https://modunera.com/blog/europa/tiny-house-transport-tuerkei-europa/",
+      "sentences": 66,
+      "original": 24,
+      "originality": 36.4,
+      "repeated_sentences": 46
+    },
+    {
+      "rel": "blog/europa/vermietung-auslastung-europa/index.html",
+      "url": "https://modunera.com/blog/europa/vermietung-auslastung-europa/",
+      "sentences": 72,
+      "original": 29,
+      "originality": 40.3,
+      "repeated_sentences": 49
+    },
+    {
+      "rel": "blog/europa/zoll-einfuhr-tuerkei-europa/index.html",
+      "url": "https://modunera.com/blog/europa/zoll-einfuhr-tuerkei-europa/",
+      "sentences": 71,
+      "original": 26,
+      "originality": 36.6,
+      "repeated_sentences": 51
+    },
+    {
+      "rel": "blog/tiny-house-abwasser-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-abwasser-fehler-checkliste/",
+      "sentences": 49,
+      "original": 21,
+      "originality": 42.9,
+      "repeated_sentences": 28
+    },
+    {
+      "rel": "blog/tiny-house-abwasser-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-abwasser-leitfaden/",
+      "sentences": 47,
+      "original": 22,
+      "originality": 46.8,
+      "repeated_sentences": 25
+    },
+    {
+      "rel": "blog/tiny-house-airbnb-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-airbnb-fehler-checkliste/",
+      "sentences": 89,
+      "original": 20,
+      "originality": 22.5,
+      "repeated_sentences": 75
+    },
+    {
+      "rel": "blog/tiny-house-airbnb-glamping/index.html",
+      "url": "https://modunera.com/blog/tiny-house-airbnb-glamping/",
+      "sentences": 84,
+      "original": 23,
+      "originality": 27.4,
+      "repeated_sentences": 67
+    },
+    {
+      "rel": "blog/tiny-house-airbnb-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-airbnb-leitfaden/",
+      "sentences": 87,
+      "original": 21,
+      "originality": 24.1,
+      "repeated_sentences": 72
+    },
+    {
+      "rel": "blog/tiny-house-akustik-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-akustik-fehler-checkliste/",
+      "sentences": 48,
+      "original": 18,
+      "originality": 37.5,
+      "repeated_sentences": 30
+    },
+    {
+      "rel": "blog/tiny-house-akustik-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-akustik-leitfaden/",
+      "sentences": 50,
+      "original": 22,
+      "originality": 44,
+      "repeated_sentences": 28
+    },
+    {
+      "rel": "blog/tiny-house-auf-raedern-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-auf-raedern-fehler-checkliste/",
+      "sentences": 85,
+      "original": 21,
+      "originality": 24.7,
+      "repeated_sentences": 80
+    },
+    {
+      "rel": "blog/tiny-house-auf-raedern-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-auf-raedern-leitfaden/",
+      "sentences": 78,
+      "original": 17,
+      "originality": 21.8,
+      "repeated_sentences": 77
+    },
+    {
+      "rel": "blog/tiny-house-auf-raedern/index.html",
+      "url": "https://modunera.com/blog/tiny-house-auf-raedern/",
+      "sentences": 64,
+      "original": 10,
+      "originality": 15.6,
+      "repeated_sentences": 70
+    },
+    {
+      "rel": "blog/tiny-house-aus-der-tuerkei/index.html",
+      "url": "https://modunera.com/blog/tiny-house-aus-der-tuerkei/",
+      "sentences": 85,
+      "original": 23,
+      "originality": 27.1,
+      "repeated_sentences": 71
+    },
+    {
+      "rel": "blog/tiny-house-bad-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-bad-fehler-checkliste/",
+      "sentences": 49,
+      "original": 19,
+      "originality": 38.8,
+      "repeated_sentences": 30
+    },
+    {
+      "rel": "blog/tiny-house-bad-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-bad-leitfaden/",
+      "sentences": 49,
+      "original": 21,
+      "originality": 42.9,
+      "repeated_sentences": 28
+    },
+    {
+      "rel": "blog/tiny-house-baugenehmigung-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-baugenehmigung-fehler-checkliste/",
+      "sentences": 85,
+      "original": 21,
+      "originality": 24.7,
+      "repeated_sentences": 80
+    },
+    {
+      "rel": "blog/tiny-house-baugenehmigung-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-baugenehmigung-leitfaden/",
+      "sentences": 82,
+      "original": 21,
+      "originality": 25.6,
+      "repeated_sentences": 77
+    },
+    {
+      "rel": "blog/tiny-house-brandschutz-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-brandschutz-fehler-checkliste/",
+      "sentences": 48,
+      "original": 20,
+      "originality": 41.7,
+      "repeated_sentences": 28
+    },
+    {
+      "rel": "blog/tiny-house-brandschutz-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-brandschutz-leitfaden/",
+      "sentences": 46,
+      "original": 20,
+      "originality": 43.5,
+      "repeated_sentences": 26
+    },
+    {
+      "rel": "blog/tiny-house-chalet-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-chalet-fehler-checkliste/",
+      "sentences": 51,
+      "original": 21,
+      "originality": 41.2,
+      "repeated_sentences": 30
+    },
+    {
+      "rel": "blog/tiny-house-chalet-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-chalet-leitfaden/",
+      "sentences": 44,
+      "original": 17,
+      "originality": 38.6,
+      "repeated_sentences": 27
+    },
+    {
+      "rel": "blog/tiny-house-daemmung-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-daemmung-fehler-checkliste/",
+      "sentences": 47,
+      "original": 19,
+      "originality": 40.4,
+      "repeated_sentences": 28
+    },
+    {
+      "rel": "blog/tiny-house-daemmung-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-daemmung-leitfaden/",
+      "sentences": 44,
+      "original": 19,
+      "originality": 43.2,
+      "repeated_sentences": 25
+    },
+    {
+      "rel": "blog/tiny-house-energieverbrauch-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-energieverbrauch-fehler-checkliste/",
+      "sentences": 50,
+      "original": 18,
+      "originality": 36,
+      "repeated_sentences": 32
+    },
+    {
+      "rel": "blog/tiny-house-energieverbrauch-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-energieverbrauch-leitfaden/",
+      "sentences": 50,
+      "original": 21,
+      "originality": 42,
+      "repeated_sentences": 29
+    },
+    {
+      "rel": "blog/tiny-house-familie-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-familie-fehler-checkliste/",
+      "sentences": 51,
+      "original": 21,
+      "originality": 41.2,
+      "repeated_sentences": 30
+    },
+    {
+      "rel": "blog/tiny-house-familie-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-familie-leitfaden/",
+      "sentences": 45,
+      "original": 17,
+      "originality": 37.8,
+      "repeated_sentences": 28
+    },
+    {
+      "rel": "blog/tiny-house-fenster-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-fenster-fehler-checkliste/",
+      "sentences": 47,
+      "original": 18,
+      "originality": 38.3,
+      "repeated_sentences": 29
+    },
+    {
+      "rel": "blog/tiny-house-fenster-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-fenster-leitfaden/",
+      "sentences": 43,
+      "original": 17,
+      "originality": 39.5,
+      "repeated_sentences": 26
+    },
+    {
+      "rel": "blog/tiny-house-ferienpark-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-ferienpark-fehler-checkliste/",
+      "sentences": 87,
+      "original": 18,
+      "originality": 20.7,
+      "repeated_sentences": 75
+    },
+    {
+      "rel": "blog/tiny-house-ferienpark-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-ferienpark-leitfaden/",
+      "sentences": 87,
+      "original": 21,
+      "originality": 24.1,
+      "repeated_sentences": 72
+    },
+    {
+      "rel": "blog/tiny-house-feuchteschutz-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-feuchteschutz-fehler-checkliste/",
+      "sentences": 49,
+      "original": 21,
+      "originality": 42.9,
+      "repeated_sentences": 28
+    },
+    {
+      "rel": "blog/tiny-house-feuchteschutz-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-feuchteschutz-leitfaden/",
+      "sentences": 46,
+      "original": 20,
+      "originality": 43.5,
+      "repeated_sentences": 26
+    },
+    {
+      "rel": "blog/tiny-house-finanzierung-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-finanzierung-fehler-checkliste/",
+      "sentences": 82,
+      "original": 19,
+      "originality": 23.2,
+      "repeated_sentences": 74
+    },
+    {
+      "rel": "blog/tiny-house-finanzierung-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-finanzierung-leitfaden/",
+      "sentences": 77,
+      "original": 20,
+      "originality": 26,
+      "repeated_sentences": 68
+    },
+    {
+      "rel": "blog/tiny-house-gaestehaus-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-gaestehaus-fehler-checkliste/",
+      "sentences": 87,
+      "original": 18,
+      "originality": 20.7,
+      "repeated_sentences": 75
+    },
+    {
+      "rel": "blog/tiny-house-gaestehaus-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-gaestehaus-leitfaden/",
+      "sentences": 85,
+      "original": 19,
+      "originality": 22.4,
+      "repeated_sentences": 72
+    },
+    {
+      "rel": "blog/tiny-house-gastronomie-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-gastronomie-fehler-checkliste/",
+      "sentences": 86,
+      "original": 17,
+      "originality": 19.8,
+      "repeated_sentences": 75
+    },
+    {
+      "rel": "blog/tiny-house-gastronomie-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-gastronomie-leitfaden/",
+      "sentences": 87,
+      "original": 21,
+      "originality": 24.1,
+      "repeated_sentences": 72
+    },
+    {
+      "rel": "blog/tiny-house-genehmigung-deutschland/index.html",
+      "url": "https://modunera.com/blog/tiny-house-genehmigung-deutschland/",
+      "sentences": 78,
+      "original": 24,
+      "originality": 30.8,
+      "repeated_sentences": 70
+    },
+    {
+      "rel": "blog/tiny-house-glamping-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-glamping-fehler-checkliste/",
+      "sentences": 87,
+      "original": 18,
+      "originality": 20.7,
+      "repeated_sentences": 75
+    },
+    {
+      "rel": "blog/tiny-house-glamping-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-glamping-leitfaden/",
+      "sentences": 85,
+      "original": 19,
+      "originality": 22.4,
+      "repeated_sentences": 72
+    },
+    {
+      "rel": "blog/tiny-house-grundriss-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-grundriss-fehler-checkliste/",
+      "sentences": 51,
+      "original": 19,
+      "originality": 37.3,
+      "repeated_sentences": 32
+    },
+    {
+      "rel": "blog/tiny-house-grundriss-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-grundriss-leitfaden/",
+      "sentences": 46,
+      "original": 18,
+      "originality": 39.1,
+      "repeated_sentences": 30
+    },
+    {
+      "rel": "blog/tiny-house-grundstueck-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-grundstueck-fehler-checkliste/",
+      "sentences": 85,
+      "original": 21,
+      "originality": 24.7,
+      "repeated_sentences": 80
+    },
+    {
+      "rel": "blog/tiny-house-grundstueck-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-grundstueck-leitfaden/",
+      "sentences": 78,
+      "original": 18,
+      "originality": 23.1,
+      "repeated_sentences": 76
+    },
+    {
+      "rel": "blog/tiny-house-heizung-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-heizung-fehler-checkliste/",
+      "sentences": 49,
+      "original": 17,
+      "originality": 34.7,
+      "repeated_sentences": 32
+    },
+    {
+      "rel": "blog/tiny-house-heizung-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-heizung-leitfaden/",
+      "sentences": 50,
+      "original": 20,
+      "originality": 40,
+      "repeated_sentences": 30
+    },
+    {
+      "rel": "blog/tiny-house-homeoffice-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-homeoffice-fehler-checkliste/",
+      "sentences": 50,
+      "original": 20,
+      "originality": 40,
+      "repeated_sentences": 30
+    },
+    {
+      "rel": "blog/tiny-house-homeoffice-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-homeoffice-leitfaden/",
+      "sentences": 48,
+      "original": 20,
+      "originality": 41.7,
+      "repeated_sentences": 28
+    },
+    {
+      "rel": "blog/tiny-house-import-tuerkei-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-import-tuerkei-fehler-checkliste/",
+      "sentences": 93,
+      "original": 21,
+      "originality": 22.6,
+      "repeated_sentences": 81
+    },
+    {
+      "rel": "blog/tiny-house-import-tuerkei-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-import-tuerkei-leitfaden/",
+      "sentences": 90,
+      "original": 21,
+      "originality": 23.3,
+      "repeated_sentences": 78
+    },
+    {
+      "rel": "blog/tiny-house-innenraum-planen/index.html",
+      "url": "https://modunera.com/blog/tiny-house-innenraum-planen/",
+      "sentences": 46,
+      "original": 25,
+      "originality": 54.3,
+      "repeated_sentences": 21
+    },
+    {
+      "rel": "blog/tiny-house-kaufen-deutschland/index.html",
+      "url": "https://modunera.com/blog/tiny-house-kaufen-deutschland/",
+      "sentences": 76,
+      "original": 25,
+      "originality": 32.9,
+      "repeated_sentences": 62
+    },
+    {
+      "rel": "blog/tiny-house-kaufen-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-kaufen-fehler-checkliste/",
+      "sentences": 84,
+      "original": 20,
+      "originality": 23.8,
+      "repeated_sentences": 75
+    },
+    {
+      "rel": "blog/tiny-house-kaufen-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-kaufen-leitfaden/",
+      "sentences": 75,
+      "original": 16,
+      "originality": 21.3,
+      "repeated_sentences": 70
+    },
+    {
+      "rel": "blog/tiny-house-kueche-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-kueche-fehler-checkliste/",
+      "sentences": 49,
+      "original": 19,
+      "originality": 38.8,
+      "repeated_sentences": 30
+    },
+    {
+      "rel": "blog/tiny-house-kueche-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-kueche-leitfaden/",
+      "sentences": 48,
+      "original": 20,
+      "originality": 41.7,
+      "repeated_sentences": 28
+    },
+    {
+      "rel": "blog/tiny-house-loft-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-loft-fehler-checkliste/",
+      "sentences": 49,
+      "original": 19,
+      "originality": 38.8,
+      "repeated_sentences": 30
+    },
+    {
+      "rel": "blog/tiny-house-loft-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-loft-leitfaden/",
+      "sentences": 46,
+      "original": 18,
+      "originality": 39.1,
+      "repeated_sentences": 28
+    },
+    {
+      "rel": "blog/tiny-house-lueftung-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-lueftung-fehler-checkliste/",
+      "sentences": 48,
+      "original": 20,
+      "originality": 41.7,
+      "repeated_sentences": 28
+    },
+    {
+      "rel": "blog/tiny-house-lueftung-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-lueftung-leitfaden/",
+      "sentences": 45,
+      "original": 20,
+      "originality": 44.4,
+      "repeated_sentences": 25
+    },
+    {
+      "rel": "blog/tiny-house-modern-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-modern-fehler-checkliste/",
+      "sentences": 50,
+      "original": 20,
+      "originality": 40,
+      "repeated_sentences": 30
+    },
+    {
+      "rel": "blog/tiny-house-modern-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-modern-leitfaden/",
+      "sentences": 47,
+      "original": 19,
+      "originality": 40.4,
+      "repeated_sentences": 28
+    },
+    {
+      "rel": "blog/tiny-house-nachhaltigkeit-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-nachhaltigkeit-fehler-checkliste/",
+      "sentences": 49,
+      "original": 21,
+      "originality": 42.9,
+      "repeated_sentences": 28
+    },
+    {
+      "rel": "blog/tiny-house-nachhaltigkeit-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-nachhaltigkeit-leitfaden/",
+      "sentences": 45,
+      "original": 19,
+      "originality": 42.2,
+      "repeated_sentences": 26
+    },
+    {
+      "rel": "blog/tiny-house-nachhaltigkeit/index.html",
+      "url": "https://modunera.com/blog/tiny-house-nachhaltigkeit/",
+      "sentences": 28,
+      "original": 10,
+      "originality": 35.7,
+      "repeated_sentences": 18
+    },
+    {
+      "rel": "blog/tiny-house-off-grid-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-off-grid-fehler-checkliste/",
+      "sentences": 51,
+      "original": 19,
+      "originality": 37.3,
+      "repeated_sentences": 32
+    },
+    {
+      "rel": "blog/tiny-house-off-grid-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-off-grid-leitfaden/",
+      "sentences": 51,
+      "original": 22,
+      "originality": 43.1,
+      "repeated_sentences": 29
+    },
+    {
+      "rel": "blog/tiny-house-preise-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-preise-fehler-checkliste/",
+      "sentences": 79,
+      "original": 16,
+      "originality": 20.3,
+      "repeated_sentences": 74
+    },
+    {
+      "rel": "blog/tiny-house-preise-kosten/index.html",
+      "url": "https://modunera.com/blog/tiny-house-preise-kosten/",
+      "sentences": 80,
+      "original": 27,
+      "originality": 33.8,
+      "repeated_sentences": 65
+    },
+    {
+      "rel": "blog/tiny-house-preise-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-preise-leitfaden/",
+      "sentences": 76,
+      "original": 17,
+      "originality": 22.4,
+      "repeated_sentences": 71
+    },
+    {
+      "rel": "blog/tiny-house-reinigung-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-reinigung-fehler-checkliste/",
+      "sentences": 46,
+      "original": 19,
+      "originality": 41.3,
+      "repeated_sentences": 27
+    },
+    {
+      "rel": "blog/tiny-house-reinigung-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-reinigung-leitfaden/",
+      "sentences": 42,
+      "original": 17,
+      "originality": 40.5,
+      "repeated_sentences": 25
+    },
+    {
+      "rel": "blog/tiny-house-rendite-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-rendite-fehler-checkliste/",
+      "sentences": 85,
+      "original": 16,
+      "originality": 18.8,
+      "repeated_sentences": 75
+    },
+    {
+      "rel": "blog/tiny-house-rendite-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-rendite-leitfaden/",
+      "sentences": 84,
+      "original": 18,
+      "originality": 21.4,
+      "repeated_sentences": 72
+    },
+    {
+      "rel": "blog/tiny-house-scandinavian-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-scandinavian-fehler-checkliste/",
+      "sentences": 49,
+      "original": 19,
+      "originality": 38.8,
+      "repeated_sentences": 30
+    },
+    {
+      "rel": "blog/tiny-house-scandinavian-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-scandinavian-leitfaden/",
+      "sentences": 46,
+      "original": 19,
+      "originality": 41.3,
+      "repeated_sentences": 27
+    },
+    {
+      "rel": "blog/tiny-house-senioren-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-senioren-fehler-checkliste/",
+      "sentences": 49,
+      "original": 18,
+      "originality": 36.7,
+      "repeated_sentences": 31
+    },
+    {
+      "rel": "blog/tiny-house-senioren-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-senioren-leitfaden/",
+      "sentences": 48,
+      "original": 18,
+      "originality": 37.5,
+      "repeated_sentences": 30
+    },
+    {
+      "rel": "blog/tiny-house-smart-home-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-smart-home-fehler-checkliste/",
+      "sentences": 45,
+      "original": 17,
+      "originality": 37.8,
+      "repeated_sentences": 28
+    },
+    {
+      "rel": "blog/tiny-house-smart-home-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-smart-home-leitfaden/",
+      "sentences": 45,
+      "original": 20,
+      "originality": 44.4,
+      "repeated_sentences": 25
+    },
+    {
+      "rel": "blog/tiny-house-solar-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-solar-fehler-checkliste/",
+      "sentences": 51,
+      "original": 18,
+      "originality": 35.3,
+      "repeated_sentences": 33
+    },
+    {
+      "rel": "blog/tiny-house-solar-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-solar-leitfaden/",
+      "sentences": 50,
+      "original": 20,
+      "originality": 40,
+      "repeated_sentences": 30
+    },
+    {
+      "rel": "blog/tiny-house-sommerhitze-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-sommerhitze-fehler-checkliste/",
+      "sentences": 47,
+      "original": 18,
+      "originality": 38.3,
+      "repeated_sentences": 29
+    },
+    {
+      "rel": "blog/tiny-house-sommerhitze-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-sommerhitze-leitfaden/",
+      "sentences": 47,
+      "original": 21,
+      "originality": 44.7,
+      "repeated_sentences": 26
+    },
+    {
+      "rel": "blog/tiny-house-stahlrahmen-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-stahlrahmen-fehler-checkliste/",
+      "sentences": 47,
+      "original": 18,
+      "originality": 38.3,
+      "repeated_sentences": 29
+    },
+    {
+      "rel": "blog/tiny-house-stahlrahmen-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-stahlrahmen-leitfaden/",
+      "sentences": 46,
+      "original": 20,
+      "originality": 43.5,
+      "repeated_sentences": 26
+    },
+    {
+      "rel": "blog/tiny-house-stauraum-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-stauraum-fehler-checkliste/",
+      "sentences": 48,
+      "original": 17,
+      "originality": 35.4,
+      "repeated_sentences": 31
+    },
+    {
+      "rel": "blog/tiny-house-stauraum-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-stauraum-leitfaden/",
+      "sentences": 48,
+      "original": 19,
+      "originality": 39.6,
+      "repeated_sentences": 29
+    },
+    {
+      "rel": "blog/tiny-house-stellplatz-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-stellplatz-fehler-checkliste/",
+      "sentences": 81,
+      "original": 17,
+      "originality": 21,
+      "repeated_sentences": 80
+    },
+    {
+      "rel": "blog/tiny-house-stellplatz-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-stellplatz-leitfaden/",
+      "sentences": 80,
+      "original": 19,
+      "originality": 23.8,
+      "repeated_sentences": 77
+    },
+    {
+      "rel": "blog/tiny-house-strom-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-strom-fehler-checkliste/",
+      "sentences": 50,
+      "original": 18,
+      "originality": 36,
+      "repeated_sentences": 32
+    },
+    {
+      "rel": "blog/tiny-house-strom-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-strom-leitfaden/",
+      "sentences": 46,
+      "original": 17,
+      "originality": 37,
+      "repeated_sentences": 29
+    },
+    {
+      "rel": "blog/tiny-house-thermowood-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-thermowood-fehler-checkliste/",
+      "sentences": 46,
+      "original": 20,
+      "originality": 43.5,
+      "repeated_sentences": 26
+    },
+    {
+      "rel": "blog/tiny-house-thermowood-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-thermowood-leitfaden/",
+      "sentences": 44,
+      "original": 19,
+      "originality": 43.2,
+      "repeated_sentences": 25
+    },
+    {
+      "rel": "blog/tiny-house-transport-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-transport-fehler-checkliste/",
+      "sentences": 90,
+      "original": 18,
+      "originality": 20,
+      "repeated_sentences": 81
+    },
+    {
+      "rel": "blog/tiny-house-transport-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-transport-leitfaden/",
+      "sentences": 87,
+      "original": 19,
+      "originality": 21.8,
+      "repeated_sentences": 78
+    },
+    {
+      "rel": "blog/tiny-house-versicherung-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-versicherung-fehler-checkliste/",
+      "sentences": 80,
+      "original": 16,
+      "originality": 20,
+      "repeated_sentences": 80
+    },
+    {
+      "rel": "blog/tiny-house-versicherung-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-versicherung-leitfaden/",
+      "sentences": 78,
+      "original": 18,
+      "originality": 23.1,
+      "repeated_sentences": 76
+    },
+    {
+      "rel": "blog/tiny-house-vier-jahreszeiten/index.html",
+      "url": "https://modunera.com/blog/tiny-house-vier-jahreszeiten/",
+      "sentences": 40,
+      "original": 20,
+      "originality": 50,
+      "repeated_sentences": 20
+    },
+    {
+      "rel": "blog/tiny-house-vs-modulhaus-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-vs-modulhaus-fehler-checkliste/",
+      "sentences": 88,
+      "original": 19,
+      "originality": 21.6,
+      "repeated_sentences": 75
+    },
+    {
+      "rel": "blog/tiny-house-vs-modulhaus-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-vs-modulhaus-leitfaden/",
+      "sentences": 86,
+      "original": 20,
+      "originality": 23.3,
+      "repeated_sentences": 72
+    },
+    {
+      "rel": "blog/tiny-house-vs-wohnwagen-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-vs-wohnwagen-fehler-checkliste/",
+      "sentences": 87,
+      "original": 17,
+      "originality": 19.5,
+      "repeated_sentences": 76
+    },
+    {
+      "rel": "blog/tiny-house-vs-wohnwagen-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-vs-wohnwagen-leitfaden/",
+      "sentences": 88,
+      "original": 21,
+      "originality": 23.9,
+      "repeated_sentences": 73
+    },
+    {
+      "rel": "blog/tiny-house-wartung-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-wartung-fehler-checkliste/",
+      "sentences": 44,
+      "original": 17,
+      "originality": 38.6,
+      "repeated_sentences": 27
+    },
+    {
+      "rel": "blog/tiny-house-wartung-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-wartung-leitfaden/",
+      "sentences": 42,
+      "original": 17,
+      "originality": 40.5,
+      "repeated_sentences": 25
+    },
+    {
+      "rel": "blog/tiny-house-wasser-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-wasser-fehler-checkliste/",
+      "sentences": 49,
+      "original": 17,
+      "originality": 34.7,
+      "repeated_sentences": 32
+    },
+    {
+      "rel": "blog/tiny-house-wasser-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-wasser-leitfaden/",
+      "sentences": 46,
+      "original": 17,
+      "originality": 37,
+      "repeated_sentences": 29
+    },
+    {
+      "rel": "blog/tiny-house-winterfest-fehler-checkliste/index.html",
+      "url": "https://modunera.com/blog/tiny-house-winterfest-fehler-checkliste/",
+      "sentences": 45,
+      "original": 17,
+      "originality": 37.8,
+      "repeated_sentences": 28
+    },
+    {
+      "rel": "blog/tiny-house-winterfest-leitfaden/index.html",
+      "url": "https://modunera.com/blog/tiny-house-winterfest-leitfaden/",
+      "sentences": 43,
+      "original": 18,
+      "originality": 41.9,
+      "repeated_sentences": 25
+    },
+    {
+      "rel": "blog/winterfestes-tiny-house/index.html",
+      "url": "https://modunera.com/blog/winterfestes-tiny-house/",
+      "sentences": 41,
+      "original": 20,
+      "originality": 48.8,
+      "repeated_sentences": 21
+    },
+    {
+      "rel": "da/index.html",
+      "url": "https://modunera.com/da/",
+      "sentences": 22,
+      "original": 13,
+      "originality": 59.1,
+      "repeated_sentences": 9
+    },
+    {
+      "rel": "da/blog/index.html",
+      "url": "https://modunera.com/da/blog/",
+      "sentences": 65,
+      "original": 38,
+      "originality": 58.5,
+      "repeated_sentences": 27
+    },
+    {
+      "rel": "da/blog/brug-og-forretningsmodel/index.html",
+      "url": "https://modunera.com/da/blog/brug-og-forretningsmodel/",
+      "sentences": 34,
+      "original": 30,
+      "originality": 88.2,
+      "repeated_sentences": 6
+    },
+    {
+      "rel": "da/blog/drift-og-vedligehold/index.html",
+      "url": "https://modunera.com/da/blog/drift-og-vedligehold/",
+      "sentences": 36,
+      "original": 31,
+      "originality": 86.1,
+      "repeated_sentences": 7
+    },
+    {
+      "rel": "da/blog/energi-og-selvforsyning/index.html",
+      "url": "https://modunera.com/da/blog/energi-og-selvforsyning/",
+      "sentences": 41,
+      "original": 37,
+      "originality": 90.2,
+      "repeated_sentences": 6
+    },
+    {
+      "rel": "da/blog/indretning-og-interioer/index.html",
+      "url": "https://modunera.com/da/blog/indretning-og-interioer/",
+      "sentences": 46,
+      "original": 43,
+      "originality": 93.5,
+      "repeated_sentences": 3
+    },
+    {
+      "rel": "da/blog/oekonomi-og-finansiering/index.html",
+      "url": "https://modunera.com/da/blog/oekonomi-og-finansiering/",
+      "sentences": 38,
+      "original": 33,
+      "originality": 86.8,
+      "repeated_sentences": 7
+    },
+    {
+      "rel": "da/blog/sammenligning-og-alternativer/index.html",
+      "url": "https://modunera.com/da/blog/sammenligning-og-alternativer/",
+      "sentences": 38,
+      "original": 34,
+      "originality": 89.5,
+      "repeated_sentences": 6
+    },
+    {
+      "rel": "da/blog/teknik-og-konstruktion/index.html",
+      "url": "https://modunera.com/da/blog/teknik-og-konstruktion/",
+      "sentences": 46,
+      "original": 42,
+      "originality": 91.3,
+      "repeated_sentences": 6
+    },
+    {
+      "rel": "da/blog/tilladelse-og-lovgivning/index.html",
+      "url": "https://modunera.com/da/blog/tilladelse-og-lovgivning/",
+      "sentences": 42,
+      "original": 37,
+      "originality": 88.1,
+      "repeated_sentences": 7
+    },
+    {
+      "rel": "da/blog/tiny-house-akustik/index.html",
+      "url": "https://modunera.com/da/blog/tiny-house-akustik/",
+      "sentences": 37,
+      "original": 29,
+      "originality": 78.4,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "da/blog/tiny-house-at-bo-to/index.html",
+      "url": "https://modunera.com/da/blog/tiny-house-at-bo-to/",
+      "sentences": 36,
+      "original": 28,
+      "originality": 77.8,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "da/blog/tiny-house-badevaerelse/index.html",
+      "url": "https://modunera.com/da/blog/tiny-house-badevaerelse/",
+      "sentences": 40,
+      "original": 33,
+      "originality": 82.5,
+      "repeated_sentences": 9
+    },
+    {
+      "rel": "da/blog/tiny-house-belysning/index.html",
+      "url": "https://modunera.com/da/blog/tiny-house-belysning/",
+      "sentences": 36,
+      "original": 28,
+      "originality": 77.8,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "da/blog/tiny-house-byggemodning/index.html",
+      "url": "https://modunera.com/da/blog/tiny-house-byggemodning/",
+      "sentences": 38,
+      "original": 30,
+      "originality": 78.9,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "da/blog/tiny-house-elinstallation/index.html",
+      "url": "https://modunera.com/da/blog/tiny-house-elinstallation/",
+      "sentences": 38,
+      "original": 30,
+      "originality": 78.9,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "da/blog/tiny-house-facadebeklaedning/index.html",
+      "url": "https://modunera.com/da/blog/tiny-house-facadebeklaedning/",
+      "sentences": 39,
+      "original": 32,
+      "originality": 82.1,
+      "repeated_sentences": 9
+    },
+    {
+      "rel": "da/blog/tiny-house-forsikring/index.html",
+      "url": "https://modunera.com/da/blog/tiny-house-forsikring/",
+      "sentences": 39,
+      "original": 31,
+      "originality": 79.5,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "da/blog/tiny-house-fundament/index.html",
+      "url": "https://modunera.com/da/blog/tiny-house-fundament/",
+      "sentences": 39,
+      "original": 32,
+      "originality": 82.1,
+      "repeated_sentences": 9
+    },
+    {
+      "rel": "da/blog/tiny-house-gennem-vinteren/index.html",
+      "url": "https://modunera.com/da/blog/tiny-house-gennem-vinteren/",
+      "sentences": 37,
+      "original": 29,
+      "originality": 78.4,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "da/blog/tiny-house-gensalgsvaerdi/index.html",
+      "url": "https://modunera.com/da/blog/tiny-house-gensalgsvaerdi/",
+      "sentences": 35,
+      "original": 27,
+      "originality": 77.1,
+      "repeated_sentences": 8
+    },
+    {
+      "rel": "da/blog/tiny-house-hems-eller-stueplan/index.html",
+      "url": "https://modunera.com/da/blog/tiny-house-hems-eller-stueplan/",
+      "sentences": 35,
+      "original": 27,
+      "originality": 77.1,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "da/blog/tiny-house-hjemmearbejde/index.html",
+      "url": "https://modunera.com/da/blog/tiny-house-hjemmearbejde/",
+      "sentences": 37,
+      "original": 29,
+      "originality": 78.4,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "da/blog/tiny-house-indvendige-materialer/index.html",
+      "url": "https://modunera.com/da/blog/tiny-house-indvendige-materialer/",
+      "sentences": 37,
+      "original": 29,
+      "originality": 78.4,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "da/blog/tiny-house-isoleringsmaterialer/index.html",
+      "url": "https://modunera.com/da/blog/tiny-house-isoleringsmaterialer/",
+      "sentences": 38,
+      "original": 30,
+      "originality": 78.9,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "da/blog/tiny-house-koekken/index.html",
+      "url": "https://modunera.com/da/blog/tiny-house-koekken/",
+      "sentences": 38,
+      "original": 31,
+      "originality": 81.6,
+      "repeated_sentences": 9
+    },
+    {
+      "rel": "da/blog/tiny-house-med-kaeledyr/index.html",
+      "url": "https://modunera.com/da/blog/tiny-house-med-kaeledyr/",
+      "sentences": 35,
+      "original": 27,
+      "originality": 77.1,
+      "repeated_sentences": 8
+    },
+    {
+      "rel": "da/blog/tiny-house-opbevaringsloesninger/index.html",
+      "url": "https://modunera.com/da/blog/tiny-house-opbevaringsloesninger/",
+      "sentences": 37,
+      "original": 28,
+      "originality": 75.7,
+      "repeated_sentences": 11
+    },
+    {
+      "rel": "da/blog/tiny-house-opvarmning-sammenlignet/index.html",
+      "url": "https://modunera.com/da/blog/tiny-house-opvarmning-sammenlignet/",
+      "sentences": 35,
+      "original": 28,
+      "originality": 80,
+      "repeated_sentences": 9
+    },
+    {
+      "rel": "da/blog/tiny-house-overophedning-om-sommeren/index.html",
+      "url": "https://modunera.com/da/blog/tiny-house-overophedning-om-sommeren/",
+      "sentences": 39,
+      "original": 31,
+      "originality": 79.5,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "da/blog/tiny-house-tag/index.html",
+      "url": "https://modunera.com/da/blog/tiny-house-tag/",
+      "sentences": 37,
+      "original": 29,
+      "originality": 78.4,
+      "repeated_sentences": 8
+    },
+    {
+      "rel": "da/blog/tiny-house-terrasse-og-udeareal/index.html",
+      "url": "https://modunera.com/da/blog/tiny-house-terrasse-og-udeareal/",
+      "sentences": 38,
+      "original": 30,
+      "originality": 78.9,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "da/blog/tiny-house-til-familier/index.html",
+      "url": "https://modunera.com/da/blog/tiny-house-til-familier/",
+      "sentences": 34,
+      "original": 26,
+      "originality": 76.5,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "da/blog/tiny-house-tilgaengelighed/index.html",
+      "url": "https://modunera.com/da/blog/tiny-house-tilgaengelighed/",
+      "sentences": 34,
+      "original": 26,
+      "originality": 76.5,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "da/blog/tiny-house-tjekliste-foer-bestilling/index.html",
+      "url": "https://modunera.com/da/blog/tiny-house-tjekliste-foer-bestilling/",
+      "sentences": 39,
+      "original": 31,
+      "originality": 79.5,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "da/blog/tiny-house-vand-og-spildevand/index.html",
+      "url": "https://modunera.com/da/blog/tiny-house-vand-og-spildevand/",
+      "sentences": 38,
+      "original": 29,
+      "originality": 76.3,
+      "repeated_sentences": 11
+    },
+    {
+      "rel": "da/blog/tiny-house-ventilation-genvinding/index.html",
+      "url": "https://modunera.com/da/blog/tiny-house-ventilation-genvinding/",
+      "sentences": 40,
+      "original": 32,
+      "originality": 80,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "da/blog/tiny-house-vinduer-og-glas/index.html",
+      "url": "https://modunera.com/da/blog/tiny-house-vinduer-og-glas/",
+      "sentences": 38,
+      "original": 30,
+      "originality": 78.9,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "da/blog/transport-og-import/index.html",
+      "url": "https://modunera.com/da/blog/transport-og-import/",
+      "sentences": 37,
+      "original": 33,
+      "originality": 89.2,
+      "repeated_sentences": 6
+    },
+    {
+      "rel": "da/guides/index.html",
+      "url": "https://modunera.com/da/guides/",
+      "sentences": 56,
+      "original": 15,
+      "originality": 26.8,
+      "repeated_sentences": 45
+    },
+    {
+      "rel": "da/lande/index.html",
+      "url": "https://modunera.com/da/lande/",
+      "sentences": 4,
+      "original": 2,
+      "originality": 50,
+      "repeated_sentences": 2
+    },
+    {
+      "rel": "da/lande/danmark/index.html",
+      "url": "https://modunera.com/da/lande/danmark/",
+      "sentences": 57,
+      "original": 7,
+      "originality": 12.3,
+      "repeated_sentences": 51
+    },
+    {
+      "rel": "da/lande/holland/index.html",
+      "url": "https://modunera.com/da/lande/holland/",
+      "sentences": 57,
+      "original": 7,
+      "originality": 12.3,
+      "repeated_sentences": 51
+    },
+    {
+      "rel": "da/lande/luxembourg/index.html",
+      "url": "https://modunera.com/da/lande/luxembourg/",
+      "sentences": 57,
+      "original": 7,
+      "originality": 12.3,
+      "repeated_sentences": 51
+    },
+    {
+      "rel": "da/lande/schweiz/index.html",
+      "url": "https://modunera.com/da/lande/schweiz/",
+      "sentences": 59,
+      "original": 7,
+      "originality": 11.9,
+      "repeated_sentences": 53
+    },
+    {
+      "rel": "da/lande/tyskland/index.html",
+      "url": "https://modunera.com/da/lande/tyskland/",
+      "sentences": 57,
+      "original": 7,
+      "originality": 12.3,
+      "repeated_sentences": 51
+    },
+    {
+      "rel": "da/modeller/index.html",
+      "url": "https://modunera.com/da/modeller/",
+      "sentences": 17,
+      "original": 13,
+      "originality": 76.5,
+      "repeated_sentences": 4
+    },
+    {
+      "rel": "da/modeller/md-1/index.html",
+      "url": "https://modunera.com/da/modeller/md-1/",
+      "sentences": 130,
+      "original": 9,
+      "originality": 6.9,
+      "repeated_sentences": 123
+    },
+    {
+      "rel": "da/modeller/md-2/index.html",
+      "url": "https://modunera.com/da/modeller/md-2/",
+      "sentences": 129,
+      "original": 8,
+      "originality": 6.2,
+      "repeated_sentences": 123
+    },
+    {
+      "rel": "da/modeller/md-3/index.html",
+      "url": "https://modunera.com/da/modeller/md-3/",
+      "sentences": 130,
+      "original": 8,
+      "originality": 6.2,
+      "repeated_sentences": 124
+    },
+    {
+      "rel": "da/modeller/md-4/index.html",
+      "url": "https://modunera.com/da/modeller/md-4/",
+      "sentences": 130,
+      "original": 9,
+      "originality": 6.9,
+      "repeated_sentences": 123
+    },
+    {
+      "rel": "da/modeller/md-5/index.html",
+      "url": "https://modunera.com/da/modeller/md-5/",
+      "sentences": 130,
+      "original": 8,
+      "originality": 6.2,
+      "repeated_sentences": 124
+    },
+    {
+      "rel": "da/modeller/md-6/index.html",
+      "url": "https://modunera.com/da/modeller/md-6/",
+      "sentences": 130,
+      "original": 9,
+      "originality": 6.9,
+      "repeated_sentences": 123
+    },
+    {
+      "rel": "da/modeller/md-7/index.html",
+      "url": "https://modunera.com/da/modeller/md-7/",
+      "sentences": 130,
+      "original": 8,
+      "originality": 6.2,
+      "repeated_sentences": 124
+    },
+    {
+      "rel": "da/modeller/md-8/index.html",
+      "url": "https://modunera.com/da/modeller/md-8/",
+      "sentences": 128,
+      "original": 6,
+      "originality": 4.7,
+      "repeated_sentences": 124
+    },
+    {
+      "rel": "da/nyheder/index.html",
+      "url": "https://modunera.com/da/nyheder/",
+      "sentences": 10,
+      "original": 6,
+      "originality": 60,
+      "repeated_sentences": 4
+    },
+    {
+      "rel": "da/nyheder/koege-tiny-varigheden-boliglaboratorium/index.html",
+      "url": "https://modunera.com/da/nyheder/koege-tiny-varigheden-boliglaboratorium/",
+      "sentences": 18,
+      "original": 13,
+      "originality": 72.2,
+      "repeated_sentences": 5
+    },
+    {
+      "rel": "da/nyheder/vejle-tommeliden-tiny-house-omraade/index.html",
+      "url": "https://modunera.com/da/nyheder/vejle-tommeliden-tiny-house-omraade/",
+      "sentences": 17,
+      "original": 11,
+      "originality": 64.7,
+      "repeated_sentences": 6
+    },
+    {
+      "rel": "da/nyheder/vinge-18-tiny-house-grunde/index.html",
+      "url": "https://modunera.com/da/nyheder/vinge-18-tiny-house-grunde/",
+      "sentences": 18,
+      "original": 12,
+      "originality": 66.7,
+      "repeated_sentences": 6
+    },
+    {
+      "rel": "da/ofte-stillede-spoergsmaal/index.html",
+      "url": "https://modunera.com/da/ofte-stillede-spoergsmaal/",
+      "sentences": 21,
+      "original": 8,
+      "originality": 38.1,
+      "repeated_sentences": 14
+    },
+    {
+      "rel": "da/produktion-faq/index.html",
+      "url": "https://modunera.com/da/produktion-faq/",
+      "sentences": 49,
+      "original": 49,
+      "originality": 100,
+      "repeated_sentences": 0
+    },
+    {
+      "rel": "da/spoergsmaal-per-land/index.html",
+      "url": "https://modunera.com/da/spoergsmaal-per-land/",
+      "sentences": 18,
+      "original": 8,
+      "originality": 44.4,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "da/spoergsmaal-per-land/danmark/index.html",
+      "url": "https://modunera.com/da/spoergsmaal-per-land/danmark/",
+      "sentences": 50,
+      "original": 3,
+      "originality": 6,
+      "repeated_sentences": 47
+    },
+    {
+      "rel": "da/spoergsmaal-per-land/holland/index.html",
+      "url": "https://modunera.com/da/spoergsmaal-per-land/holland/",
+      "sentences": 50,
+      "original": 3,
+      "originality": 6,
+      "repeated_sentences": 47
+    },
+    {
+      "rel": "da/spoergsmaal-per-land/luxembourg/index.html",
+      "url": "https://modunera.com/da/spoergsmaal-per-land/luxembourg/",
+      "sentences": 50,
+      "original": 3,
+      "originality": 6,
+      "repeated_sentences": 47
+    },
+    {
+      "rel": "da/spoergsmaal-per-land/schweiz/index.html",
+      "url": "https://modunera.com/da/spoergsmaal-per-land/schweiz/",
+      "sentences": 52,
+      "original": 3,
+      "originality": 5.8,
+      "repeated_sentences": 49
+    },
+    {
+      "rel": "da/spoergsmaal-per-land/tyskland/index.html",
+      "url": "https://modunera.com/da/spoergsmaal-per-land/tyskland/",
+      "sentences": 50,
+      "original": 3,
+      "originality": 6,
+      "repeated_sentences": 47
+    },
+    {
+      "rel": "da/ydelser/index.html",
+      "url": "https://modunera.com/da/ydelser/",
+      "sentences": 3,
+      "original": 2,
+      "originality": 66.7,
+      "repeated_sentences": 1
+    },
+    {
+      "rel": "da/ydelser/bungalower/index.html",
+      "url": "https://modunera.com/da/ydelser/bungalower/",
+      "sentences": 43,
+      "original": 2,
+      "originality": 4.7,
+      "repeated_sentences": 45
+    },
+    {
+      "rel": "da/ydelser/modulbyggeri/index.html",
+      "url": "https://modunera.com/da/ydelser/modulbyggeri/",
+      "sentences": 43,
+      "original": 2,
+      "originality": 4.7,
+      "repeated_sentences": 45
+    },
+    {
+      "rel": "da/ydelser/specialfremstillede-moebler/index.html",
+      "url": "https://modunera.com/da/ydelser/specialfremstillede-moebler/",
+      "sentences": 3,
+      "original": 2,
+      "originality": 66.7,
+      "repeated_sentences": 1
+    },
+    {
+      "rel": "da/ydelser/staalkonstruktioner/index.html",
+      "url": "https://modunera.com/da/ydelser/staalkonstruktioner/",
+      "sentences": 3,
+      "original": 2,
+      "originality": 66.7,
+      "repeated_sentences": 1
+    },
+    {
+      "rel": "downloads/index.html",
+      "url": "https://modunera.com/downloads/",
+      "sentences": 9,
+      "original": 9,
+      "originality": 100,
+      "repeated_sentences": 0
+    },
+    {
+      "rel": "en/index.html",
+      "url": "https://modunera.com/en/",
+      "sentences": 23,
+      "original": 19,
+      "originality": 82.6,
+      "repeated_sentences": 4
+    },
+    {
+      "rel": "en/advantages/index.html",
+      "url": "https://modunera.com/en/advantages/",
+      "sentences": 43,
+      "original": 41,
+      "originality": 95.3,
+      "repeated_sentences": 2
+    },
+    {
+      "rel": "en/blog/index.html",
+      "url": "https://modunera.com/en/blog/",
+      "sentences": 49,
+      "original": 40,
+      "originality": 81.6,
+      "repeated_sentences": 9
+    },
+    {
+      "rel": "en/blog/comparison-and-alternatives/index.html",
+      "url": "https://modunera.com/en/blog/comparison-and-alternatives/",
+      "sentences": 33,
+      "original": 29,
+      "originality": 87.9,
+      "repeated_sentences": 5
+    },
+    {
+      "rel": "en/blog/costs-and-financing/index.html",
+      "url": "https://modunera.com/en/blog/costs-and-financing/",
+      "sentences": 75,
+      "original": 30,
+      "originality": 40,
+      "repeated_sentences": 53
+    },
+    {
+      "rel": "en/blog/energy-and-off-grid/index.html",
+      "url": "https://modunera.com/en/blog/energy-and-off-grid/",
+      "sentences": 36,
+      "original": 32,
+      "originality": 88.9,
+      "repeated_sentences": 5
+    },
+    {
+      "rel": "en/blog/layout-and-interior/index.html",
+      "url": "https://modunera.com/en/blog/layout-and-interior/",
+      "sentences": 36,
+      "original": 33,
+      "originality": 91.7,
+      "repeated_sentences": 4
+    },
+    {
+      "rel": "en/blog/operation-and-maintenance/index.html",
+      "url": "https://modunera.com/en/blog/operation-and-maintenance/",
+      "sentences": 32,
+      "original": 28,
+      "originality": 87.5,
+      "repeated_sentences": 5
+    },
+    {
+      "rel": "en/blog/permits-and-law/index.html",
+      "url": "https://modunera.com/en/blog/permits-and-law/",
+      "sentences": 79,
+      "original": 34,
+      "originality": 43,
+      "repeated_sentences": 53
+    },
+    {
+      "rel": "en/blog/technology-and-construction/index.html",
+      "url": "https://modunera.com/en/blog/technology-and-construction/",
+      "sentences": 40,
+      "original": 35,
+      "originality": 87.5,
+      "repeated_sentences": 7
+    },
+    {
+      "rel": "en/blog/tiny-house-accessibility/index.html",
+      "url": "https://modunera.com/en/blog/tiny-house-accessibility/",
+      "sentences": 36,
+      "original": 28,
+      "originality": 77.8,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "en/blog/tiny-house-acoustics/index.html",
+      "url": "https://modunera.com/en/blog/tiny-house-acoustics/",
+      "sentences": 37,
+      "original": 29,
+      "originality": 78.4,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "en/blog/tiny-house-bathroom/index.html",
+      "url": "https://modunera.com/en/blog/tiny-house-bathroom/",
+      "sentences": 41,
+      "original": 34,
+      "originality": 82.9,
+      "repeated_sentences": 9
+    },
+    {
+      "rel": "en/blog/tiny-house-cladding-thermowood/index.html",
+      "url": "https://modunera.com/en/blog/tiny-house-cladding-thermowood/",
+      "sentences": 42,
+      "original": 35,
+      "originality": 83.3,
+      "repeated_sentences": 9
+    },
+    {
+      "rel": "en/blog/tiny-house-electrical-installation/index.html",
+      "url": "https://modunera.com/en/blog/tiny-house-electrical-installation/",
+      "sentences": 38,
+      "original": 30,
+      "originality": 78.9,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "en/blog/tiny-house-for-families/index.html",
+      "url": "https://modunera.com/en/blog/tiny-house-for-families/",
+      "sentences": 37,
+      "original": 29,
+      "originality": 78.4,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "en/blog/tiny-house-foundation/index.html",
+      "url": "https://modunera.com/en/blog/tiny-house-foundation/",
+      "sentences": 42,
+      "original": 35,
+      "originality": 83.3,
+      "repeated_sentences": 9
+    },
+    {
+      "rel": "en/blog/tiny-house-heating-compared/index.html",
+      "url": "https://modunera.com/en/blog/tiny-house-heating-compared/",
+      "sentences": 37,
+      "original": 30,
+      "originality": 81.1,
+      "repeated_sentences": 9
+    },
+    {
+      "rel": "en/blog/tiny-house-home-office/index.html",
+      "url": "https://modunera.com/en/blog/tiny-house-home-office/",
+      "sentences": 80,
+      "original": 31,
+      "originality": 38.8,
+      "repeated_sentences": 57
+    },
+    {
+      "rel": "en/blog/tiny-house-in-winter/index.html",
+      "url": "https://modunera.com/en/blog/tiny-house-in-winter/",
+      "sentences": 36,
+      "original": 28,
+      "originality": 77.8,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "en/blog/tiny-house-insulation-materials/index.html",
+      "url": "https://modunera.com/en/blog/tiny-house-insulation-materials/",
+      "sentences": 39,
+      "original": 31,
+      "originality": 79.5,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "en/blog/tiny-house-insurance/index.html",
+      "url": "https://modunera.com/en/blog/tiny-house-insurance/",
+      "sentences": 80,
+      "original": 31,
+      "originality": 38.8,
+      "repeated_sentences": 57
+    },
+    {
+      "rel": "en/blog/tiny-house-interior-materials/index.html",
+      "url": "https://modunera.com/en/blog/tiny-house-interior-materials/",
+      "sentences": 38,
+      "original": 30,
+      "originality": 78.9,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "en/blog/tiny-house-kitchen/index.html",
+      "url": "https://modunera.com/en/blog/tiny-house-kitchen/",
+      "sentences": 38,
+      "original": 31,
+      "originality": 81.6,
+      "repeated_sentences": 9
+    },
+    {
+      "rel": "en/blog/tiny-house-lighting/index.html",
+      "url": "https://modunera.com/en/blog/tiny-house-lighting/",
+      "sentences": 36,
+      "original": 28,
+      "originality": 77.8,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "en/blog/tiny-house-living-as-a-couple/index.html",
+      "url": "https://modunera.com/en/blog/tiny-house-living-as-a-couple/",
+      "sentences": 80,
+      "original": 31,
+      "originality": 38.8,
+      "repeated_sentences": 57
+    },
+    {
+      "rel": "en/blog/tiny-house-loft-or-ground-floor-bedroom/index.html",
+      "url": "https://modunera.com/en/blog/tiny-house-loft-or-ground-floor-bedroom/",
+      "sentences": 37,
+      "original": 29,
+      "originality": 78.4,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "en/blog/tiny-house-order-checklist/index.html",
+      "url": "https://modunera.com/en/blog/tiny-house-order-checklist/",
+      "sentences": 39,
+      "original": 31,
+      "originality": 79.5,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "en/blog/tiny-house-resale-value/index.html",
+      "url": "https://modunera.com/en/blog/tiny-house-resale-value/",
+      "sentences": 35,
+      "original": 27,
+      "originality": 77.1,
+      "repeated_sentences": 8
+    },
+    {
+      "rel": "en/blog/tiny-house-roof/index.html",
+      "url": "https://modunera.com/en/blog/tiny-house-roof/",
+      "sentences": 37,
+      "original": 29,
+      "originality": 78.4,
+      "repeated_sentences": 8
+    },
+    {
+      "rel": "en/blog/tiny-house-site-preparation/index.html",
+      "url": "https://modunera.com/en/blog/tiny-house-site-preparation/",
+      "sentences": 80,
+      "original": 31,
+      "originality": 38.8,
+      "repeated_sentences": 57
+    },
+    {
+      "rel": "en/blog/tiny-house-storage-solutions/index.html",
+      "url": "https://modunera.com/en/blog/tiny-house-storage-solutions/",
+      "sentences": 36,
+      "original": 27,
+      "originality": 75,
+      "repeated_sentences": 11
+    },
+    {
+      "rel": "en/blog/tiny-house-summer-overheating/index.html",
+      "url": "https://modunera.com/en/blog/tiny-house-summer-overheating/",
+      "sentences": 38,
+      "original": 30,
+      "originality": 78.9,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "en/blog/tiny-house-terrace-and-outdoor-space/index.html",
+      "url": "https://modunera.com/en/blog/tiny-house-terrace-and-outdoor-space/",
+      "sentences": 38,
+      "original": 30,
+      "originality": 78.9,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "en/blog/tiny-house-ventilation-mvhr/index.html",
+      "url": "https://modunera.com/en/blog/tiny-house-ventilation-mvhr/",
+      "sentences": 41,
+      "original": 33,
+      "originality": 80.5,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "en/blog/tiny-house-water-and-wastewater/index.html",
+      "url": "https://modunera.com/en/blog/tiny-house-water-and-wastewater/",
+      "sentences": 38,
+      "original": 30,
+      "originality": 78.9,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "en/blog/tiny-house-windows-and-glazing/index.html",
+      "url": "https://modunera.com/en/blog/tiny-house-windows-and-glazing/",
+      "sentences": 38,
+      "original": 30,
+      "originality": 78.9,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "en/blog/tiny-house-with-pets/index.html",
+      "url": "https://modunera.com/en/blog/tiny-house-with-pets/",
+      "sentences": 35,
+      "original": 27,
+      "originality": 77.1,
+      "repeated_sentences": 8
+    },
+    {
+      "rel": "en/blog/transport-and-import/index.html",
+      "url": "https://modunera.com/en/blog/transport-and-import/",
+      "sentences": 72,
+      "original": 28,
+      "originality": 38.9,
+      "repeated_sentences": 51
+    },
+    {
+      "rel": "en/blog/use-and-business-model/index.html",
+      "url": "https://modunera.com/en/blog/use-and-business-model/",
+      "sentences": 74,
+      "original": 30,
+      "originality": 40.5,
+      "repeated_sentences": 51
+    },
+    {
+      "rel": "en/countries/index.html",
+      "url": "https://modunera.com/en/countries/",
+      "sentences": 3,
+      "original": 3,
+      "originality": 100,
+      "repeated_sentences": 0
+    },
+    {
+      "rel": "en/countries/denmark/index.html",
+      "url": "https://modunera.com/en/countries/denmark/",
+      "sentences": 81,
+      "original": 8,
+      "originality": 9.9,
+      "repeated_sentences": 74
+    },
+    {
+      "rel": "en/countries/germany/index.html",
+      "url": "https://modunera.com/en/countries/germany/",
+      "sentences": 84,
+      "original": 9,
+      "originality": 10.7,
+      "repeated_sentences": 76
+    },
+    {
+      "rel": "en/countries/luxembourg/index.html",
+      "url": "https://modunera.com/en/countries/luxembourg/",
+      "sentences": 81,
+      "original": 7,
+      "originality": 8.6,
+      "repeated_sentences": 75
+    },
+    {
+      "rel": "en/countries/netherlands/index.html",
+      "url": "https://modunera.com/en/countries/netherlands/",
+      "sentences": 81,
+      "original": 8,
+      "originality": 9.9,
+      "repeated_sentences": 74
+    },
+    {
+      "rel": "en/countries/switzerland/index.html",
+      "url": "https://modunera.com/en/countries/switzerland/",
+      "sentences": 82,
+      "original": 8,
+      "originality": 9.8,
+      "repeated_sentences": 75
+    },
+    {
+      "rel": "en/faq/index.html",
+      "url": "https://modunera.com/en/faq/",
+      "sentences": 23,
+      "original": 6,
+      "originality": 26.1,
+      "repeated_sentences": 29
+    },
+    {
+      "rel": "en/guides/index.html",
+      "url": "https://modunera.com/en/guides/",
+      "sentences": 45,
+      "original": 3,
+      "originality": 6.7,
+      "repeated_sentences": 46
+    },
+    {
+      "rel": "en/guides/connections-power-water-wastewater-europe/index.html",
+      "url": "https://modunera.com/en/guides/connections-power-water-wastewater-europe/",
+      "sentences": 71,
+      "original": 28,
+      "originality": 39.4,
+      "repeated_sentences": 49
+    },
+    {
+      "rel": "en/guides/customs-import-turkiye-europe/index.html",
+      "url": "https://modunera.com/en/guides/customs-import-turkiye-europe/",
+      "sentences": 70,
+      "original": 26,
+      "originality": 37.1,
+      "repeated_sentences": 50
+    },
+    {
+      "rel": "en/guides/plot-and-site-europe/index.html",
+      "url": "https://modunera.com/en/guides/plot-and-site-europe/",
+      "sentences": 75,
+      "original": 32,
+      "originality": 42.7,
+      "repeated_sentences": 49
+    },
+    {
+      "rel": "en/guides/rental-and-occupancy-europe/index.html",
+      "url": "https://modunera.com/en/guides/rental-and-occupancy-europe/",
+      "sentences": 70,
+      "original": 27,
+      "originality": 38.6,
+      "repeated_sentences": 49
+    },
+    {
+      "rel": "en/guides/tiny-house-denmark-permits/index.html",
+      "url": "https://modunera.com/en/guides/tiny-house-denmark-permits/",
+      "sentences": 62,
+      "original": 5,
+      "originality": 8.1,
+      "repeated_sentences": 62
+    },
+    {
+      "rel": "en/guides/tiny-house-germany-permits/index.html",
+      "url": "https://modunera.com/en/guides/tiny-house-germany-permits/",
+      "sentences": 62,
+      "original": 5,
+      "originality": 8.1,
+      "repeated_sentences": 62
+    },
+    {
+      "rel": "en/guides/tiny-house-luxembourg-permits/index.html",
+      "url": "https://modunera.com/en/guides/tiny-house-luxembourg-permits/",
+      "sentences": 62,
+      "original": 5,
+      "originality": 8.1,
+      "repeated_sentences": 62
+    },
+    {
+      "rel": "en/guides/tiny-house-manufacturers-poland-romania-turkiye-comparison/index.html",
+      "url": "https://modunera.com/en/guides/tiny-house-manufacturers-poland-romania-turkiye-comparison/",
+      "sentences": 63,
+      "original": 20,
+      "originality": 31.7,
+      "repeated_sentences": 47
+    },
+    {
+      "rel": "en/guides/tiny-house-netherlands-permits/index.html",
+      "url": "https://modunera.com/en/guides/tiny-house-netherlands-permits/",
+      "sentences": 62,
+      "original": 5,
+      "originality": 8.1,
+      "repeated_sentences": 62
+    },
+    {
+      "rel": "en/guides/tiny-house-switzerland-permits/index.html",
+      "url": "https://modunera.com/en/guides/tiny-house-switzerland-permits/",
+      "sentences": 62,
+      "original": 5,
+      "originality": 8.1,
+      "repeated_sentences": 62
+    },
+    {
+      "rel": "en/guides/tiny-house-transport-turkiye-europe/index.html",
+      "url": "https://modunera.com/en/guides/tiny-house-transport-turkiye-europe/",
+      "sentences": 67,
+      "original": 24,
+      "originality": 35.8,
+      "repeated_sentences": 47
+    },
+    {
+      "rel": "en/guides/total-budget-tiny-house-europe/index.html",
+      "url": "https://modunera.com/en/guides/total-budget-tiny-house-europe/",
+      "sentences": 76,
+      "original": 32,
+      "originality": 42.1,
+      "repeated_sentences": 50
+    },
+    {
+      "rel": "en/guides/year-round-living-climate-europe/index.html",
+      "url": "https://modunera.com/en/guides/year-round-living-climate-europe/",
+      "sentences": 72,
+      "original": 29,
+      "originality": 40.3,
+      "repeated_sentences": 49
+    },
+    {
+      "rel": "en/model-comparison/index.html",
+      "url": "https://modunera.com/en/model-comparison/",
+      "sentences": 18,
+      "original": 16,
+      "originality": 88.9,
+      "repeated_sentences": 2
+    },
+    {
+      "rel": "en/models/index.html",
+      "url": "https://modunera.com/en/models/",
+      "sentences": 17,
+      "original": 12,
+      "originality": 70.6,
+      "repeated_sentences": 5
+    },
+    {
+      "rel": "en/models/md-1/index.html",
+      "url": "https://modunera.com/en/models/md-1/",
+      "sentences": 136,
+      "original": 10,
+      "originality": 7.4,
+      "repeated_sentences": 128
+    },
+    {
+      "rel": "en/models/md-2/index.html",
+      "url": "https://modunera.com/en/models/md-2/",
+      "sentences": 134,
+      "original": 8,
+      "originality": 6,
+      "repeated_sentences": 128
+    },
+    {
+      "rel": "en/models/md-3/index.html",
+      "url": "https://modunera.com/en/models/md-3/",
+      "sentences": 135,
+      "original": 8,
+      "originality": 5.9,
+      "repeated_sentences": 129
+    },
+    {
+      "rel": "en/models/md-4/index.html",
+      "url": "https://modunera.com/en/models/md-4/",
+      "sentences": 135,
+      "original": 9,
+      "originality": 6.7,
+      "repeated_sentences": 128
+    },
+    {
+      "rel": "en/models/md-5/index.html",
+      "url": "https://modunera.com/en/models/md-5/",
+      "sentences": 135,
+      "original": 8,
+      "originality": 5.9,
+      "repeated_sentences": 129
+    },
+    {
+      "rel": "en/models/md-6/index.html",
+      "url": "https://modunera.com/en/models/md-6/",
+      "sentences": 135,
+      "original": 9,
+      "originality": 6.7,
+      "repeated_sentences": 128
+    },
+    {
+      "rel": "en/models/md-7/index.html",
+      "url": "https://modunera.com/en/models/md-7/",
+      "sentences": 135,
+      "original": 8,
+      "originality": 5.9,
+      "repeated_sentences": 129
+    },
+    {
+      "rel": "en/models/md-8/index.html",
+      "url": "https://modunera.com/en/models/md-8/",
+      "sentences": 133,
+      "original": 6,
+      "originality": 4.5,
+      "repeated_sentences": 129
+    },
+    {
+      "rel": "en/news/index.html",
+      "url": "https://modunera.com/en/news/",
+      "sentences": 24,
+      "original": 11,
+      "originality": 45.8,
+      "repeated_sentences": 13
+    },
+    {
+      "rel": "en/news/koege-tiny-varigheden-housing-laboratory/index.html",
+      "url": "https://modunera.com/en/news/koege-tiny-varigheden-housing-laboratory/",
+      "sentences": 18,
+      "original": 11,
+      "originality": 61.1,
+      "repeated_sentences": 7
+    },
+    {
+      "rel": "en/news/lisse-eight-tiny-houses-municipal-project/index.html",
+      "url": "https://modunera.com/en/news/lisse-eight-tiny-houses-municipal-project/",
+      "sentences": 18,
+      "original": 11,
+      "originality": 61.1,
+      "repeated_sentences": 7
+    },
+    {
+      "rel": "en/news/lueptitz-lossatal-tiny-house-settlement/index.html",
+      "url": "https://modunera.com/en/news/lueptitz-lossatal-tiny-house-settlement/",
+      "sentences": 20,
+      "original": 13,
+      "originality": 65,
+      "repeated_sentences": 7
+    },
+    {
+      "rel": "en/news/meppel-nieuwveense-landen-first-tiny-houses/index.html",
+      "url": "https://modunera.com/en/news/meppel-nieuwveense-landen-first-tiny-houses/",
+      "sentences": 18,
+      "original": 13,
+      "originality": 72.2,
+      "repeated_sentences": 5
+    },
+    {
+      "rel": "en/news/niederanven-3d-printed-tiny-house/index.html",
+      "url": "https://modunera.com/en/news/niederanven-3d-printed-tiny-house/",
+      "sentences": 16,
+      "original": 11,
+      "originality": 68.8,
+      "repeated_sentences": 5
+    },
+    {
+      "rel": "en/news/st-margrethen-tiny-house-building-application/index.html",
+      "url": "https://modunera.com/en/news/st-margrethen-tiny-house-building-application/",
+      "sentences": 17,
+      "original": 10,
+      "originality": 58.8,
+      "repeated_sentences": 7
+    },
+    {
+      "rel": "en/news/vejle-tommeliden-tiny-house-area/index.html",
+      "url": "https://modunera.com/en/news/vejle-tommeliden-tiny-house-area/",
+      "sentences": 16,
+      "original": 11,
+      "originality": 68.8,
+      "repeated_sentences": 5
+    },
+    {
+      "rel": "en/news/vinge-18-tiny-house-plots/index.html",
+      "url": "https://modunera.com/en/news/vinge-18-tiny-house-plots/",
+      "sentences": 17,
+      "original": 12,
+      "originality": 70.6,
+      "repeated_sentences": 5
+    },
+    {
+      "rel": "en/news/vlaardingen-hoofdstedenbuurt-compact-housing/index.html",
+      "url": "https://modunera.com/en/news/vlaardingen-hoofdstedenbuurt-compact-housing/",
+      "sentences": 18,
+      "original": 11,
+      "originality": 61.1,
+      "repeated_sentences": 7
+    },
+    {
+      "rel": "en/price-comparison/index.html",
+      "url": "https://modunera.com/en/price-comparison/",
+      "sentences": 23,
+      "original": 21,
+      "originality": 91.3,
+      "repeated_sentences": 2
+    },
+    {
+      "rel": "en/production-faq/index.html",
+      "url": "https://modunera.com/en/production-faq/",
+      "sentences": 64,
+      "original": 63,
+      "originality": 98.4,
+      "repeated_sentences": 1
+    },
+    {
+      "rel": "en/production-faq/delivery-customs-site/index.html",
+      "url": "https://modunera.com/en/production-faq/delivery-customs-site/",
+      "sentences": 25,
+      "original": 24,
+      "originality": 96,
+      "repeated_sentences": 1
+    },
+    {
+      "rel": "en/production-faq/fit-out-furniture-warranty/index.html",
+      "url": "https://modunera.com/en/production-faq/fit-out-furniture-warranty/",
+      "sentences": 24,
+      "original": 23,
+      "originality": 95.8,
+      "repeated_sentences": 1
+    },
+    {
+      "rel": "en/production-faq/manufacturing/index.html",
+      "url": "https://modunera.com/en/production-faq/manufacturing/",
+      "sentences": 17,
+      "original": 16,
+      "originality": 94.1,
+      "repeated_sentences": 1
+    },
+    {
+      "rel": "en/production-faq/permits-and-documents/index.html",
+      "url": "https://modunera.com/en/production-faq/permits-and-documents/",
+      "sentences": 18,
+      "original": 17,
+      "originality": 94.4,
+      "repeated_sentences": 1
+    },
+    {
+      "rel": "en/production-faq/power-water-wastewater/index.html",
+      "url": "https://modunera.com/en/production-faq/power-water-wastewater/",
+      "sentences": 19,
+      "original": 18,
+      "originality": 94.7,
+      "repeated_sentences": 1
+    },
+    {
+      "rel": "en/production-faq/price-contract-payment/index.html",
+      "url": "https://modunera.com/en/production-faq/price-contract-payment/",
+      "sentences": 22,
+      "original": 21,
+      "originality": 95.5,
+      "repeated_sentences": 1
+    },
+    {
+      "rel": "en/production-faq/structure-and-envelope/index.html",
+      "url": "https://modunera.com/en/production-faq/structure-and-envelope/",
+      "sentences": 17,
+      "original": 16,
+      "originality": 94.1,
+      "repeated_sentences": 1
+    },
+    {
+      "rel": "en/production-faq/weight-chassis-approval/index.html",
+      "url": "https://modunera.com/en/production-faq/weight-chassis-approval/",
+      "sentences": 17,
+      "original": 16,
+      "originality": 94.1,
+      "repeated_sentences": 1
+    },
+    {
+      "rel": "en/production-faq/windows-energy-seasons/index.html",
+      "url": "https://modunera.com/en/production-faq/windows-energy-seasons/",
+      "sentences": 20,
+      "original": 19,
+      "originality": 95,
+      "repeated_sentences": 1
+    },
+    {
+      "rel": "en/questions/index.html",
+      "url": "https://modunera.com/en/questions/",
+      "sentences": 15,
+      "original": 9,
+      "originality": 60,
+      "repeated_sentences": 6
+    },
+    {
+      "rel": "en/questions/denmark/index.html",
+      "url": "https://modunera.com/en/questions/denmark/",
+      "sentences": 53,
+      "original": 3,
+      "originality": 5.7,
+      "repeated_sentences": 50
+    },
+    {
+      "rel": "en/questions/germany/index.html",
+      "url": "https://modunera.com/en/questions/germany/",
+      "sentences": 56,
+      "original": 3,
+      "originality": 5.4,
+      "repeated_sentences": 53
+    },
+    {
+      "rel": "en/questions/luxembourg/index.html",
+      "url": "https://modunera.com/en/questions/luxembourg/",
+      "sentences": 53,
+      "original": 3,
+      "originality": 5.7,
+      "repeated_sentences": 50
+    },
+    {
+      "rel": "en/questions/netherlands/index.html",
+      "url": "https://modunera.com/en/questions/netherlands/",
+      "sentences": 53,
+      "original": 3,
+      "originality": 5.7,
+      "repeated_sentences": 50
+    },
+    {
+      "rel": "en/questions/switzerland/index.html",
+      "url": "https://modunera.com/en/questions/switzerland/",
+      "sentences": 53,
+      "original": 3,
+      "originality": 5.7,
+      "repeated_sentences": 50
+    },
+    {
+      "rel": "en/services/index.html",
+      "url": "https://modunera.com/en/services/",
+      "sentences": 2,
+      "original": 2,
+      "originality": 100,
+      "repeated_sentences": 0
+    },
+    {
+      "rel": "en/services/bespoke-furniture/index.html",
+      "url": "https://modunera.com/en/services/bespoke-furniture/",
+      "sentences": 34,
+      "original": 27,
+      "originality": 79.4,
+      "repeated_sentences": 7
+    },
+    {
+      "rel": "en/services/bungalows/index.html",
+      "url": "https://modunera.com/en/services/bungalows/",
+      "sentences": 76,
+      "original": 26,
+      "originality": 34.2,
+      "repeated_sentences": 54
+    },
+    {
+      "rel": "en/services/modular-buildings/index.html",
+      "url": "https://modunera.com/en/services/modular-buildings/",
+      "sentences": 79,
+      "original": 29,
+      "originality": 36.7,
+      "repeated_sentences": 54
+    },
+    {
+      "rel": "en/services/steel-structures/index.html",
+      "url": "https://modunera.com/en/services/steel-structures/",
+      "sentences": 35,
+      "original": 28,
+      "originality": 80,
+      "repeated_sentences": 7
+    },
+    {
+      "rel": "factory/index.html",
+      "url": "https://modunera.com/factory/",
+      "sentences": 13,
+      "original": 13,
+      "originality": 100,
+      "repeated_sentences": 0
+    },
+    {
+      "rel": "faq/index.html",
+      "url": "https://modunera.com/faq/",
+      "sentences": 168,
+      "original": 168,
+      "originality": 100,
+      "repeated_sentences": 251
+    },
+    {
+      "rel": "faq/europa/index.html",
+      "url": "https://modunera.com/faq/europa/",
+      "sentences": 66,
+      "original": 6,
+      "originality": 9.1,
+      "repeated_sentences": 76
+    },
+    {
+      "rel": "fr/index.html",
+      "url": "https://modunera.com/fr/",
+      "sentences": 23,
+      "original": 13,
+      "originality": 56.5,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "fr/actualites/index.html",
+      "url": "https://modunera.com/fr/actualites/",
+      "sentences": 7,
+      "original": 4,
+      "originality": 57.1,
+      "repeated_sentences": 3
+    },
+    {
+      "rel": "fr/actualites/niederanven-tiny-house-impression-3d/index.html",
+      "url": "https://modunera.com/fr/actualites/niederanven-tiny-house-impression-3d/",
+      "sentences": 17,
+      "original": 14,
+      "originality": 82.4,
+      "repeated_sentences": 3
+    },
+    {
+      "rel": "fr/blog/index.html",
+      "url": "https://modunera.com/fr/blog/",
+      "sentences": 66,
+      "original": 38,
+      "originality": 57.6,
+      "repeated_sentences": 28
+    },
+    {
+      "rel": "fr/blog/amenagement-et-interieur/index.html",
+      "url": "https://modunera.com/fr/blog/amenagement-et-interieur/",
+      "sentences": 47,
+      "original": 43,
+      "originality": 91.5,
+      "repeated_sentences": 6
+    },
+    {
+      "rel": "fr/blog/autorisation-et-droit/index.html",
+      "url": "https://modunera.com/fr/blog/autorisation-et-droit/",
+      "sentences": 41,
+      "original": 37,
+      "originality": 90.2,
+      "repeated_sentences": 6
+    },
+    {
+      "rel": "fr/blog/comparaison-et-alternatives/index.html",
+      "url": "https://modunera.com/fr/blog/comparaison-et-alternatives/",
+      "sentences": 39,
+      "original": 35,
+      "originality": 89.7,
+      "repeated_sentences": 6
+    },
+    {
+      "rel": "fr/blog/couts-et-financement/index.html",
+      "url": "https://modunera.com/fr/blog/couts-et-financement/",
+      "sentences": 37,
+      "original": 33,
+      "originality": 89.2,
+      "repeated_sentences": 6
+    },
+    {
+      "rel": "fr/blog/energie-et-autonomie/index.html",
+      "url": "https://modunera.com/fr/blog/energie-et-autonomie/",
+      "sentences": 42,
+      "original": 38,
+      "originality": 90.5,
+      "repeated_sentences": 6
+    },
+    {
+      "rel": "fr/blog/exploitation-et-entretien/index.html",
+      "url": "https://modunera.com/fr/blog/exploitation-et-entretien/",
+      "sentences": 35,
+      "original": 31,
+      "originality": 88.6,
+      "repeated_sentences": 6
+    },
+    {
+      "rel": "fr/blog/technique-et-construction/index.html",
+      "url": "https://modunera.com/fr/blog/technique-et-construction/",
+      "sentences": 46,
+      "original": 42,
+      "originality": 91.3,
+      "repeated_sentences": 6
+    },
+    {
+      "rel": "fr/blog/tiny-house-accessibilite/index.html",
+      "url": "https://modunera.com/fr/blog/tiny-house-accessibilite/",
+      "sentences": 35,
+      "original": 27,
+      "originality": 77.1,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "fr/blog/tiny-house-acoustique/index.html",
+      "url": "https://modunera.com/fr/blog/tiny-house-acoustique/",
+      "sentences": 38,
+      "original": 30,
+      "originality": 78.9,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "fr/blog/tiny-house-assurance/index.html",
+      "url": "https://modunera.com/fr/blog/tiny-house-assurance/",
+      "sentences": 39,
+      "original": 31,
+      "originality": 79.5,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "fr/blog/tiny-house-avec-animaux/index.html",
+      "url": "https://modunera.com/fr/blog/tiny-house-avec-animaux/",
+      "sentences": 35,
+      "original": 27,
+      "originality": 77.1,
+      "repeated_sentences": 8
+    },
+    {
+      "rel": "fr/blog/tiny-house-bardage/index.html",
+      "url": "https://modunera.com/fr/blog/tiny-house-bardage/",
+      "sentences": 39,
+      "original": 32,
+      "originality": 82.1,
+      "repeated_sentences": 9
+    },
+    {
+      "rel": "fr/blog/tiny-house-chauffage-compare/index.html",
+      "url": "https://modunera.com/fr/blog/tiny-house-chauffage-compare/",
+      "sentences": 37,
+      "original": 30,
+      "originality": 81.1,
+      "repeated_sentences": 9
+    },
+    {
+      "rel": "fr/blog/tiny-house-checklist-avant-commande/index.html",
+      "url": "https://modunera.com/fr/blog/tiny-house-checklist-avant-commande/",
+      "sentences": 38,
+      "original": 30,
+      "originality": 78.9,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "fr/blog/tiny-house-cuisine/index.html",
+      "url": "https://modunera.com/fr/blog/tiny-house-cuisine/",
+      "sentences": 37,
+      "original": 30,
+      "originality": 81.1,
+      "repeated_sentences": 9
+    },
+    {
+      "rel": "fr/blog/tiny-house-eau-et-assainissement/index.html",
+      "url": "https://modunera.com/fr/blog/tiny-house-eau-et-assainissement/",
+      "sentences": 39,
+      "original": 31,
+      "originality": 79.5,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "fr/blog/tiny-house-eclairage/index.html",
+      "url": "https://modunera.com/fr/blog/tiny-house-eclairage/",
+      "sentences": 38,
+      "original": 30,
+      "originality": 78.9,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "fr/blog/tiny-house-en-hiver/index.html",
+      "url": "https://modunera.com/fr/blog/tiny-house-en-hiver/",
+      "sentences": 38,
+      "original": 30,
+      "originality": 78.9,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "fr/blog/tiny-house-fenetres-et-vitrage/index.html",
+      "url": "https://modunera.com/fr/blog/tiny-house-fenetres-et-vitrage/",
+      "sentences": 38,
+      "original": 30,
+      "originality": 78.9,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "fr/blog/tiny-house-fondation/index.html",
+      "url": "https://modunera.com/fr/blog/tiny-house-fondation/",
+      "sentences": 40,
+      "original": 33,
+      "originality": 82.5,
+      "repeated_sentences": 9
+    },
+    {
+      "rel": "fr/blog/tiny-house-installation-electrique/index.html",
+      "url": "https://modunera.com/fr/blog/tiny-house-installation-electrique/",
+      "sentences": 38,
+      "original": 30,
+      "originality": 78.9,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "fr/blog/tiny-house-materiaux-interieurs/index.html",
+      "url": "https://modunera.com/fr/blog/tiny-house-materiaux-interieurs/",
+      "sentences": 38,
+      "original": 30,
+      "originality": 78.9,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "fr/blog/tiny-house-materiaux-isolants/index.html",
+      "url": "https://modunera.com/fr/blog/tiny-house-materiaux-isolants/",
+      "sentences": 39,
+      "original": 31,
+      "originality": 79.5,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "fr/blog/tiny-house-mezzanine-ou-plain-pied/index.html",
+      "url": "https://modunera.com/fr/blog/tiny-house-mezzanine-ou-plain-pied/",
+      "sentences": 35,
+      "original": 27,
+      "originality": 77.1,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "fr/blog/tiny-house-pour-familles/index.html",
+      "url": "https://modunera.com/fr/blog/tiny-house-pour-familles/",
+      "sentences": 35,
+      "original": 27,
+      "originality": 77.1,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "fr/blog/tiny-house-preparation-du-terrain/index.html",
+      "url": "https://modunera.com/fr/blog/tiny-house-preparation-du-terrain/",
+      "sentences": 39,
+      "original": 31,
+      "originality": 79.5,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "fr/blog/tiny-house-salle-de-bains/index.html",
+      "url": "https://modunera.com/fr/blog/tiny-house-salle-de-bains/",
+      "sentences": 41,
+      "original": 34,
+      "originality": 82.9,
+      "repeated_sentences": 9
+    },
+    {
+      "rel": "fr/blog/tiny-house-solutions-de-rangement/index.html",
+      "url": "https://modunera.com/fr/blog/tiny-house-solutions-de-rangement/",
+      "sentences": 38,
+      "original": 29,
+      "originality": 76.3,
+      "repeated_sentences": 11
+    },
+    {
+      "rel": "fr/blog/tiny-house-surchauffe-estivale/index.html",
+      "url": "https://modunera.com/fr/blog/tiny-house-surchauffe-estivale/",
+      "sentences": 39,
+      "original": 31,
+      "originality": 79.5,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "fr/blog/tiny-house-teletravail/index.html",
+      "url": "https://modunera.com/fr/blog/tiny-house-teletravail/",
+      "sentences": 36,
+      "original": 28,
+      "originality": 77.8,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "fr/blog/tiny-house-terrasse-et-exterieur/index.html",
+      "url": "https://modunera.com/fr/blog/tiny-house-terrasse-et-exterieur/",
+      "sentences": 38,
+      "original": 30,
+      "originality": 78.9,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "fr/blog/tiny-house-toiture/index.html",
+      "url": "https://modunera.com/fr/blog/tiny-house-toiture/",
+      "sentences": 38,
+      "original": 30,
+      "originality": 78.9,
+      "repeated_sentences": 8
+    },
+    {
+      "rel": "fr/blog/tiny-house-valeur-de-revente/index.html",
+      "url": "https://modunera.com/fr/blog/tiny-house-valeur-de-revente/",
+      "sentences": 36,
+      "original": 28,
+      "originality": 77.8,
+      "repeated_sentences": 8
+    },
+    {
+      "rel": "fr/blog/tiny-house-vivre-a-deux/index.html",
+      "url": "https://modunera.com/fr/blog/tiny-house-vivre-a-deux/",
+      "sentences": 38,
+      "original": 30,
+      "originality": 78.9,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "fr/blog/tiny-house-vmc-double-flux/index.html",
+      "url": "https://modunera.com/fr/blog/tiny-house-vmc-double-flux/",
+      "sentences": 41,
+      "original": 33,
+      "originality": 80.5,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "fr/blog/transport-et-import/index.html",
+      "url": "https://modunera.com/fr/blog/transport-et-import/",
+      "sentences": 38,
+      "original": 34,
+      "originality": 89.5,
+      "repeated_sentences": 6
+    },
+    {
+      "rel": "fr/blog/usage-et-modele-economique/index.html",
+      "url": "https://modunera.com/fr/blog/usage-et-modele-economique/",
+      "sentences": 34,
+      "original": 30,
+      "originality": 88.2,
+      "repeated_sentences": 6
+    },
+    {
+      "rel": "fr/faq-production/index.html",
+      "url": "https://modunera.com/fr/faq-production/",
+      "sentences": 52,
+      "original": 52,
+      "originality": 100,
+      "repeated_sentences": 0
+    },
+    {
+      "rel": "fr/guides/index.html",
+      "url": "https://modunera.com/fr/guides/",
+      "sentences": 58,
+      "original": 15,
+      "originality": 25.9,
+      "repeated_sentences": 47
+    },
+    {
+      "rel": "fr/modeles/index.html",
+      "url": "https://modunera.com/fr/modeles/",
+      "sentences": 17,
+      "original": 13,
+      "originality": 76.5,
+      "repeated_sentences": 4
+    },
+    {
+      "rel": "fr/modeles/md-1/index.html",
+      "url": "https://modunera.com/fr/modeles/md-1/",
+      "sentences": 135,
+      "original": 9,
+      "originality": 6.7,
+      "repeated_sentences": 128
+    },
+    {
+      "rel": "fr/modeles/md-2/index.html",
+      "url": "https://modunera.com/fr/modeles/md-2/",
+      "sentences": 134,
+      "original": 8,
+      "originality": 6,
+      "repeated_sentences": 128
+    },
+    {
+      "rel": "fr/modeles/md-3/index.html",
+      "url": "https://modunera.com/fr/modeles/md-3/",
+      "sentences": 135,
+      "original": 8,
+      "originality": 5.9,
+      "repeated_sentences": 129
+    },
+    {
+      "rel": "fr/modeles/md-4/index.html",
+      "url": "https://modunera.com/fr/modeles/md-4/",
+      "sentences": 135,
+      "original": 9,
+      "originality": 6.7,
+      "repeated_sentences": 128
+    },
+    {
+      "rel": "fr/modeles/md-5/index.html",
+      "url": "https://modunera.com/fr/modeles/md-5/",
+      "sentences": 135,
+      "original": 8,
+      "originality": 5.9,
+      "repeated_sentences": 129
+    },
+    {
+      "rel": "fr/modeles/md-6/index.html",
+      "url": "https://modunera.com/fr/modeles/md-6/",
+      "sentences": 135,
+      "original": 9,
+      "originality": 6.7,
+      "repeated_sentences": 128
+    },
+    {
+      "rel": "fr/modeles/md-7/index.html",
+      "url": "https://modunera.com/fr/modeles/md-7/",
+      "sentences": 135,
+      "original": 8,
+      "originality": 5.9,
+      "repeated_sentences": 129
+    },
+    {
+      "rel": "fr/modeles/md-8/index.html",
+      "url": "https://modunera.com/fr/modeles/md-8/",
+      "sentences": 133,
+      "original": 6,
+      "originality": 4.5,
+      "repeated_sentences": 129
+    },
+    {
+      "rel": "fr/pays/index.html",
+      "url": "https://modunera.com/fr/pays/",
+      "sentences": 4,
+      "original": 2,
+      "originality": 50,
+      "repeated_sentences": 2
+    },
+    {
+      "rel": "fr/pays/allemagne/index.html",
+      "url": "https://modunera.com/fr/pays/allemagne/",
+      "sentences": 58,
+      "original": 7,
+      "originality": 12.1,
+      "repeated_sentences": 52
+    },
+    {
+      "rel": "fr/pays/danemark/index.html",
+      "url": "https://modunera.com/fr/pays/danemark/",
+      "sentences": 58,
+      "original": 7,
+      "originality": 12.1,
+      "repeated_sentences": 52
+    },
+    {
+      "rel": "fr/pays/luxembourg/index.html",
+      "url": "https://modunera.com/fr/pays/luxembourg/",
+      "sentences": 58,
+      "original": 7,
+      "originality": 12.1,
+      "repeated_sentences": 52
+    },
+    {
+      "rel": "fr/pays/pays-bas/index.html",
+      "url": "https://modunera.com/fr/pays/pays-bas/",
+      "sentences": 60,
+      "original": 7,
+      "originality": 11.7,
+      "repeated_sentences": 54
+    },
+    {
+      "rel": "fr/pays/suisse/index.html",
+      "url": "https://modunera.com/fr/pays/suisse/",
+      "sentences": 59,
+      "original": 7,
+      "originality": 11.9,
+      "repeated_sentences": 53
+    },
+    {
+      "rel": "fr/questions-frequentes/index.html",
+      "url": "https://modunera.com/fr/questions-frequentes/",
+      "sentences": 23,
+      "original": 8,
+      "originality": 34.8,
+      "repeated_sentences": 15
+    },
+    {
+      "rel": "fr/questions-par-pays/index.html",
+      "url": "https://modunera.com/fr/questions-par-pays/",
+      "sentences": 15,
+      "original": 6,
+      "originality": 40,
+      "repeated_sentences": 9
+    },
+    {
+      "rel": "fr/questions-par-pays/allemagne/index.html",
+      "url": "https://modunera.com/fr/questions-par-pays/allemagne/",
+      "sentences": 51,
+      "original": 3,
+      "originality": 5.9,
+      "repeated_sentences": 48
+    },
+    {
+      "rel": "fr/questions-par-pays/danemark/index.html",
+      "url": "https://modunera.com/fr/questions-par-pays/danemark/",
+      "sentences": 51,
+      "original": 3,
+      "originality": 5.9,
+      "repeated_sentences": 48
+    },
+    {
+      "rel": "fr/questions-par-pays/luxembourg/index.html",
+      "url": "https://modunera.com/fr/questions-par-pays/luxembourg/",
+      "sentences": 51,
+      "original": 3,
+      "originality": 5.9,
+      "repeated_sentences": 48
+    },
+    {
+      "rel": "fr/questions-par-pays/pays-bas/index.html",
+      "url": "https://modunera.com/fr/questions-par-pays/pays-bas/",
+      "sentences": 53,
+      "original": 3,
+      "originality": 5.7,
+      "repeated_sentences": 50
+    },
+    {
+      "rel": "fr/questions-par-pays/suisse/index.html",
+      "url": "https://modunera.com/fr/questions-par-pays/suisse/",
+      "sentences": 52,
+      "original": 3,
+      "originality": 5.8,
+      "repeated_sentences": 49
+    },
+    {
+      "rel": "fr/services/index.html",
+      "url": "https://modunera.com/fr/services/",
+      "sentences": 4,
+      "original": 3,
+      "originality": 75,
+      "repeated_sentences": 1
+    },
+    {
+      "rel": "fr/services/bungalows/index.html",
+      "url": "https://modunera.com/fr/services/bungalows/",
+      "sentences": 45,
+      "original": 2,
+      "originality": 4.4,
+      "repeated_sentences": 47
+    },
+    {
+      "rel": "fr/services/construction-modulaire/index.html",
+      "url": "https://modunera.com/fr/services/construction-modulaire/",
+      "sentences": 45,
+      "original": 2,
+      "originality": 4.4,
+      "repeated_sentences": 47
+    },
+    {
+      "rel": "fr/services/mobilier-sur-mesure/index.html",
+      "url": "https://modunera.com/fr/services/mobilier-sur-mesure/",
+      "sentences": 3,
+      "original": 2,
+      "originality": 66.7,
+      "repeated_sentences": 1
+    },
+    {
+      "rel": "fr/services/structures-acier/index.html",
+      "url": "https://modunera.com/fr/services/structures-acier/",
+      "sentences": 3,
+      "original": 2,
+      "originality": 66.7,
+      "repeated_sentences": 1
+    },
+    {
+      "rel": "fragen/index.html",
+      "url": "https://modunera.com/fragen/",
+      "sentences": 17,
+      "original": 8,
+      "originality": 47.1,
+      "repeated_sentences": 9
+    },
+    {
+      "rel": "fragen/daenemark/index.html",
+      "url": "https://modunera.com/fragen/daenemark/",
+      "sentences": 53,
+      "original": 3,
+      "originality": 5.7,
+      "repeated_sentences": 50
+    },
+    {
+      "rel": "fragen/deutschland/index.html",
+      "url": "https://modunera.com/fragen/deutschland/",
+      "sentences": 56,
+      "original": 3,
+      "originality": 5.4,
+      "repeated_sentences": 53
+    },
+    {
+      "rel": "fragen/luxemburg/index.html",
+      "url": "https://modunera.com/fragen/luxemburg/",
+      "sentences": 54,
+      "original": 3,
+      "originality": 5.6,
+      "repeated_sentences": 51
+    },
+    {
+      "rel": "fragen/niederlande/index.html",
+      "url": "https://modunera.com/fragen/niederlande/",
+      "sentences": 54,
+      "original": 3,
+      "originality": 5.6,
+      "repeated_sentences": 51
+    },
+    {
+      "rel": "fragen/schweiz/index.html",
+      "url": "https://modunera.com/fragen/schweiz/",
+      "sentences": 52,
+      "original": 3,
+      "originality": 5.8,
+      "repeated_sentences": 49
+    },
+    {
+      "rel": "katalog/index.html",
+      "url": "https://modunera.com/katalog/",
+      "sentences": 10,
+      "original": 10,
+      "originality": 100,
+      "repeated_sentences": 0
+    },
+    {
+      "rel": "konfigurator/index.html",
+      "url": "https://modunera.com/konfigurator/",
+      "sentences": 12,
+      "original": 2,
+      "originality": 16.7,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "kontakt/index.html",
+      "url": "https://modunera.com/kontakt/",
+      "sentences": 6,
+      "original": 6,
+      "originality": 100,
+      "repeated_sentences": 0
+    },
+    {
+      "rel": "laender/index.html",
+      "url": "https://modunera.com/laender/",
+      "sentences": 3,
+      "original": 3,
+      "originality": 100,
+      "repeated_sentences": 0
+    },
+    {
+      "rel": "laender/daenemark/index.html",
+      "url": "https://modunera.com/laender/daenemark/",
+      "sentences": 80,
+      "original": 8,
+      "originality": 10,
+      "repeated_sentences": 73
+    },
+    {
+      "rel": "laender/deutschland/index.html",
+      "url": "https://modunera.com/laender/deutschland/",
+      "sentences": 83,
+      "original": 9,
+      "originality": 10.8,
+      "repeated_sentences": 75
+    },
+    {
+      "rel": "laender/luxemburg/index.html",
+      "url": "https://modunera.com/laender/luxemburg/",
+      "sentences": 81,
+      "original": 7,
+      "originality": 8.6,
+      "repeated_sentences": 75
+    },
+    {
+      "rel": "laender/niederlande/index.html",
+      "url": "https://modunera.com/laender/niederlande/",
+      "sentences": 81,
+      "original": 7,
+      "originality": 8.6,
+      "repeated_sentences": 76
+    },
+    {
+      "rel": "laender/schweiz/index.html",
+      "url": "https://modunera.com/laender/schweiz/",
+      "sentences": 80,
+      "original": 8,
+      "originality": 10,
+      "repeated_sentences": 73
+    },
+    {
+      "rel": "leistungen/index.html",
+      "url": "https://modunera.com/leistungen/",
+      "sentences": 4,
+      "original": 4,
+      "originality": 100,
+      "repeated_sentences": 0
+    },
+    {
+      "rel": "leistungen/bungalows/index.html",
+      "url": "https://modunera.com/leistungen/bungalows/",
+      "sentences": 73,
+      "original": 26,
+      "originality": 35.6,
+      "repeated_sentences": 51
+    },
+    {
+      "rel": "leistungen/modulbau/index.html",
+      "url": "https://modunera.com/leistungen/modulbau/",
+      "sentences": 76,
+      "original": 29,
+      "originality": 38.2,
+      "repeated_sentences": 51
+    },
+    {
+      "rel": "leistungen/moebel-nach-mass/index.html",
+      "url": "https://modunera.com/leistungen/moebel-nach-mass/",
+      "sentences": 32,
+      "original": 27,
+      "originality": 84.4,
+      "repeated_sentences": 5
+    },
+    {
+      "rel": "leistungen/stahlbau/index.html",
+      "url": "https://modunera.com/leistungen/stahlbau/",
+      "sentences": 34,
+      "original": 29,
+      "originality": 85.3,
+      "repeated_sentences": 5
+    },
+    {
+      "rel": "modelle/index.html",
+      "url": "https://modunera.com/modelle/",
+      "sentences": 18,
+      "original": 12,
+      "originality": 66.7,
+      "repeated_sentences": 6
+    },
+    {
+      "rel": "modelle/md-1/index.html",
+      "url": "https://modunera.com/modelle/md-1/",
+      "sentences": 133,
+      "original": 10,
+      "originality": 7.5,
+      "repeated_sentences": 125
+    },
+    {
+      "rel": "modelle/md-2/index.html",
+      "url": "https://modunera.com/modelle/md-2/",
+      "sentences": 131,
+      "original": 8,
+      "originality": 6.1,
+      "repeated_sentences": 125
+    },
+    {
+      "rel": "modelle/md-3/index.html",
+      "url": "https://modunera.com/modelle/md-3/",
+      "sentences": 133,
+      "original": 9,
+      "originality": 6.8,
+      "repeated_sentences": 126
+    },
+    {
+      "rel": "modelle/md-4/index.html",
+      "url": "https://modunera.com/modelle/md-4/",
+      "sentences": 132,
+      "original": 9,
+      "originality": 6.8,
+      "repeated_sentences": 125
+    },
+    {
+      "rel": "modelle/md-5/index.html",
+      "url": "https://modunera.com/modelle/md-5/",
+      "sentences": 132,
+      "original": 8,
+      "originality": 6.1,
+      "repeated_sentences": 126
+    },
+    {
+      "rel": "modelle/md-6/index.html",
+      "url": "https://modunera.com/modelle/md-6/",
+      "sentences": 132,
+      "original": 8,
+      "originality": 6.1,
+      "repeated_sentences": 127
+    },
+    {
+      "rel": "modelle/md-7/index.html",
+      "url": "https://modunera.com/modelle/md-7/",
+      "sentences": 132,
+      "original": 8,
+      "originality": 6.1,
+      "repeated_sentences": 126
+    },
+    {
+      "rel": "modelle/md-8/index.html",
+      "url": "https://modunera.com/modelle/md-8/",
+      "sentences": 131,
+      "original": 7,
+      "originality": 5.3,
+      "repeated_sentences": 126
+    },
+    {
+      "rel": "modellvergleich/index.html",
+      "url": "https://modunera.com/modellvergleich/",
+      "sentences": 19,
+      "original": 17,
+      "originality": 89.5,
+      "repeated_sentences": 2
+    },
+    {
+      "rel": "nachhaltigkeit/index.html",
+      "url": "https://modunera.com/nachhaltigkeit/",
+      "sentences": 16,
+      "original": 16,
+      "originality": 100,
+      "repeated_sentences": 0
+    },
+    {
+      "rel": "news/index.html",
+      "url": "https://modunera.com/news/",
+      "sentences": 10,
+      "original": 4,
+      "originality": 40,
+      "repeated_sentences": 6
+    },
+    {
+      "rel": "news/lueptitz-lossatal-tiny-house-siedlung/index.html",
+      "url": "https://modunera.com/news/lueptitz-lossatal-tiny-house-siedlung/",
+      "sentences": 22,
+      "original": 15,
+      "originality": 68.2,
+      "repeated_sentences": 7
+    },
+    {
+      "rel": "news/st-margrethen-baugesuch-tiny-house/index.html",
+      "url": "https://modunera.com/news/st-margrethen-baugesuch-tiny-house/",
+      "sentences": 16,
+      "original": 9,
+      "originality": 56.3,
+      "repeated_sentences": 7
+    },
+    {
+      "rel": "nl/index.html",
+      "url": "https://modunera.com/nl/",
+      "sentences": 23,
+      "original": 13,
+      "originality": 56.5,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "nl/blog/index.html",
+      "url": "https://modunera.com/nl/blog/",
+      "sentences": 65,
+      "original": 38,
+      "originality": 58.5,
+      "repeated_sentences": 27
+    },
+    {
+      "rel": "nl/blog/energie-en-autarkie/index.html",
+      "url": "https://modunera.com/nl/blog/energie-en-autarkie/",
+      "sentences": 42,
+      "original": 38,
+      "originality": 90.5,
+      "repeated_sentences": 6
+    },
+    {
+      "rel": "nl/blog/gebruik-en-verdienmodel/index.html",
+      "url": "https://modunera.com/nl/blog/gebruik-en-verdienmodel/",
+      "sentences": 34,
+      "original": 30,
+      "originality": 88.2,
+      "repeated_sentences": 6
+    },
+    {
+      "rel": "nl/blog/indeling-en-interieur/index.html",
+      "url": "https://modunera.com/nl/blog/indeling-en-interieur/",
+      "sentences": 45,
+      "original": 42,
+      "originality": 93.3,
+      "repeated_sentences": 3
+    },
+    {
+      "rel": "nl/blog/kosten-en-financiering/index.html",
+      "url": "https://modunera.com/nl/blog/kosten-en-financiering/",
+      "sentences": 39,
+      "original": 34,
+      "originality": 87.2,
+      "repeated_sentences": 7
+    },
+    {
+      "rel": "nl/blog/onderhoud-en-beheer/index.html",
+      "url": "https://modunera.com/nl/blog/onderhoud-en-beheer/",
+      "sentences": 35,
+      "original": 31,
+      "originality": 88.6,
+      "repeated_sentences": 6
+    },
+    {
+      "rel": "nl/blog/techniek-en-constructie/index.html",
+      "url": "https://modunera.com/nl/blog/techniek-en-constructie/",
+      "sentences": 48,
+      "original": 44,
+      "originality": 91.7,
+      "repeated_sentences": 6
+    },
+    {
+      "rel": "nl/blog/tiny-house-akoestiek/index.html",
+      "url": "https://modunera.com/nl/blog/tiny-house-akoestiek/",
+      "sentences": 38,
+      "original": 30,
+      "originality": 78.9,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "nl/blog/tiny-house-badkamer/index.html",
+      "url": "https://modunera.com/nl/blog/tiny-house-badkamer/",
+      "sentences": 40,
+      "original": 33,
+      "originality": 82.5,
+      "repeated_sentences": 9
+    },
+    {
+      "rel": "nl/blog/tiny-house-bergruimte-oplossingen/index.html",
+      "url": "https://modunera.com/nl/blog/tiny-house-bergruimte-oplossingen/",
+      "sentences": 38,
+      "original": 30,
+      "originality": 78.9,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "nl/blog/tiny-house-checklist-voor-de-bestelling/index.html",
+      "url": "https://modunera.com/nl/blog/tiny-house-checklist-voor-de-bestelling/",
+      "sentences": 39,
+      "original": 31,
+      "originality": 79.5,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "nl/blog/tiny-house-dak/index.html",
+      "url": "https://modunera.com/nl/blog/tiny-house-dak/",
+      "sentences": 37,
+      "original": 29,
+      "originality": 78.4,
+      "repeated_sentences": 8
+    },
+    {
+      "rel": "nl/blog/tiny-house-elektrische-installatie/index.html",
+      "url": "https://modunera.com/nl/blog/tiny-house-elektrische-installatie/",
+      "sentences": 38,
+      "original": 30,
+      "originality": 78.9,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "nl/blog/tiny-house-fundering/index.html",
+      "url": "https://modunera.com/nl/blog/tiny-house-fundering/",
+      "sentences": 42,
+      "original": 35,
+      "originality": 83.3,
+      "repeated_sentences": 9
+    },
+    {
+      "rel": "nl/blog/tiny-house-gevelbekleding/index.html",
+      "url": "https://modunera.com/nl/blog/tiny-house-gevelbekleding/",
+      "sentences": 42,
+      "original": 35,
+      "originality": 83.3,
+      "repeated_sentences": 9
+    },
+    {
+      "rel": "nl/blog/tiny-house-in-de-winter/index.html",
+      "url": "https://modunera.com/nl/blog/tiny-house-in-de-winter/",
+      "sentences": 37,
+      "original": 29,
+      "originality": 78.4,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "nl/blog/tiny-house-interieurmaterialen/index.html",
+      "url": "https://modunera.com/nl/blog/tiny-house-interieurmaterialen/",
+      "sentences": 37,
+      "original": 29,
+      "originality": 78.4,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "nl/blog/tiny-house-isolatiematerialen/index.html",
+      "url": "https://modunera.com/nl/blog/tiny-house-isolatiematerialen/",
+      "sentences": 39,
+      "original": 31,
+      "originality": 79.5,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "nl/blog/tiny-house-keuken/index.html",
+      "url": "https://modunera.com/nl/blog/tiny-house-keuken/",
+      "sentences": 39,
+      "original": 32,
+      "originality": 82.1,
+      "repeated_sentences": 9
+    },
+    {
+      "rel": "nl/blog/tiny-house-met-huisdieren/index.html",
+      "url": "https://modunera.com/nl/blog/tiny-house-met-huisdieren/",
+      "sentences": 35,
+      "original": 27,
+      "originality": 77.1,
+      "repeated_sentences": 8
+    },
+    {
+      "rel": "nl/blog/tiny-house-oververhitting-zomer/index.html",
+      "url": "https://modunera.com/nl/blog/tiny-house-oververhitting-zomer/",
+      "sentences": 38,
+      "original": 30,
+      "originality": 78.9,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "nl/blog/tiny-house-ramen-en-beglazing/index.html",
+      "url": "https://modunera.com/nl/blog/tiny-house-ramen-en-beglazing/",
+      "sentences": 38,
+      "original": 30,
+      "originality": 78.9,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "nl/blog/tiny-house-restwaarde/index.html",
+      "url": "https://modunera.com/nl/blog/tiny-house-restwaarde/",
+      "sentences": 35,
+      "original": 27,
+      "originality": 77.1,
+      "repeated_sentences": 8
+    },
+    {
+      "rel": "nl/blog/tiny-house-samenwonen-met-zijn-tweeen/index.html",
+      "url": "https://modunera.com/nl/blog/tiny-house-samenwonen-met-zijn-tweeen/",
+      "sentences": 36,
+      "original": 28,
+      "originality": 77.8,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "nl/blog/tiny-house-slapen-loft-of-begane-grond/index.html",
+      "url": "https://modunera.com/nl/blog/tiny-house-slapen-loft-of-begane-grond/",
+      "sentences": 37,
+      "original": 30,
+      "originality": 81.1,
+      "repeated_sentences": 9
+    },
+    {
+      "rel": "nl/blog/tiny-house-terras-en-buitenruimte/index.html",
+      "url": "https://modunera.com/nl/blog/tiny-house-terras-en-buitenruimte/",
+      "sentences": 38,
+      "original": 30,
+      "originality": 78.9,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "nl/blog/tiny-house-terreinvoorbereiding/index.html",
+      "url": "https://modunera.com/nl/blog/tiny-house-terreinvoorbereiding/",
+      "sentences": 39,
+      "original": 31,
+      "originality": 79.5,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "nl/blog/tiny-house-thuiswerken/index.html",
+      "url": "https://modunera.com/nl/blog/tiny-house-thuiswerken/",
+      "sentences": 39,
+      "original": 31,
+      "originality": 79.5,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "nl/blog/tiny-house-toegankelijkheid/index.html",
+      "url": "https://modunera.com/nl/blog/tiny-house-toegankelijkheid/",
+      "sentences": 36,
+      "original": 28,
+      "originality": 77.8,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "nl/blog/tiny-house-ventilatie-wtw/index.html",
+      "url": "https://modunera.com/nl/blog/tiny-house-ventilatie-wtw/",
+      "sentences": 39,
+      "original": 31,
+      "originality": 79.5,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "nl/blog/tiny-house-verlichting/index.html",
+      "url": "https://modunera.com/nl/blog/tiny-house-verlichting/",
+      "sentences": 36,
+      "original": 28,
+      "originality": 77.8,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "nl/blog/tiny-house-verwarming-vergeleken/index.html",
+      "url": "https://modunera.com/nl/blog/tiny-house-verwarming-vergeleken/",
+      "sentences": 37,
+      "original": 30,
+      "originality": 81.1,
+      "repeated_sentences": 9
+    },
+    {
+      "rel": "nl/blog/tiny-house-verzekering/index.html",
+      "url": "https://modunera.com/nl/blog/tiny-house-verzekering/",
+      "sentences": 39,
+      "original": 31,
+      "originality": 79.5,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "nl/blog/tiny-house-voor-gezinnen/index.html",
+      "url": "https://modunera.com/nl/blog/tiny-house-voor-gezinnen/",
+      "sentences": 37,
+      "original": 29,
+      "originality": 78.4,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "nl/blog/tiny-house-water-en-afvalwater/index.html",
+      "url": "https://modunera.com/nl/blog/tiny-house-water-en-afvalwater/",
+      "sentences": 39,
+      "original": 31,
+      "originality": 79.5,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "nl/blog/transport-en-import/index.html",
+      "url": "https://modunera.com/nl/blog/transport-en-import/",
+      "sentences": 38,
+      "original": 33,
+      "originality": 86.8,
+      "repeated_sentences": 7
+    },
+    {
+      "rel": "nl/blog/vergelijking-en-alternatieven/index.html",
+      "url": "https://modunera.com/nl/blog/vergelijking-en-alternatieven/",
+      "sentences": 38,
+      "original": 34,
+      "originality": 89.5,
+      "repeated_sentences": 6
+    },
+    {
+      "rel": "nl/blog/vergunning-en-recht/index.html",
+      "url": "https://modunera.com/nl/blog/vergunning-en-recht/",
+      "sentences": 47,
+      "original": 43,
+      "originality": 91.5,
+      "repeated_sentences": 6
+    },
+    {
+      "rel": "nl/diensten/index.html",
+      "url": "https://modunera.com/nl/diensten/",
+      "sentences": 3,
+      "original": 2,
+      "originality": 66.7,
+      "repeated_sentences": 1
+    },
+    {
+      "rel": "nl/diensten/bungalows/index.html",
+      "url": "https://modunera.com/nl/diensten/bungalows/",
+      "sentences": 45,
+      "original": 2,
+      "originality": 4.4,
+      "repeated_sentences": 47
+    },
+    {
+      "rel": "nl/diensten/meubels-op-maat/index.html",
+      "url": "https://modunera.com/nl/diensten/meubels-op-maat/",
+      "sentences": 3,
+      "original": 2,
+      "originality": 66.7,
+      "repeated_sentences": 1
+    },
+    {
+      "rel": "nl/diensten/modulaire-bouw/index.html",
+      "url": "https://modunera.com/nl/diensten/modulaire-bouw/",
+      "sentences": 45,
+      "original": 2,
+      "originality": 4.4,
+      "repeated_sentences": 47
+    },
+    {
+      "rel": "nl/diensten/staalconstructies/index.html",
+      "url": "https://modunera.com/nl/diensten/staalconstructies/",
+      "sentences": 3,
+      "original": 2,
+      "originality": 66.7,
+      "repeated_sentences": 1
+    },
+    {
+      "rel": "nl/gidsen/index.html",
+      "url": "https://modunera.com/nl/gidsen/",
+      "sentences": 58,
+      "original": 15,
+      "originality": 25.9,
+      "repeated_sentences": 47
+    },
+    {
+      "rel": "nl/landen/index.html",
+      "url": "https://modunera.com/nl/landen/",
+      "sentences": 4,
+      "original": 2,
+      "originality": 50,
+      "repeated_sentences": 2
+    },
+    {
+      "rel": "nl/landen/denemarken/index.html",
+      "url": "https://modunera.com/nl/landen/denemarken/",
+      "sentences": 58,
+      "original": 7,
+      "originality": 12.1,
+      "repeated_sentences": 52
+    },
+    {
+      "rel": "nl/landen/duitsland/index.html",
+      "url": "https://modunera.com/nl/landen/duitsland/",
+      "sentences": 59,
+      "original": 7,
+      "originality": 11.9,
+      "repeated_sentences": 53
+    },
+    {
+      "rel": "nl/landen/luxemburg/index.html",
+      "url": "https://modunera.com/nl/landen/luxemburg/",
+      "sentences": 58,
+      "original": 7,
+      "originality": 12.1,
+      "repeated_sentences": 52
+    },
+    {
+      "rel": "nl/landen/nederland/index.html",
+      "url": "https://modunera.com/nl/landen/nederland/",
+      "sentences": 59,
+      "original": 6,
+      "originality": 10.2,
+      "repeated_sentences": 54
+    },
+    {
+      "rel": "nl/landen/zwitserland/index.html",
+      "url": "https://modunera.com/nl/landen/zwitserland/",
+      "sentences": 59,
+      "original": 7,
+      "originality": 11.9,
+      "repeated_sentences": 53
+    },
+    {
+      "rel": "nl/modellen/index.html",
+      "url": "https://modunera.com/nl/modellen/",
+      "sentences": 18,
+      "original": 14,
+      "originality": 77.8,
+      "repeated_sentences": 5
+    },
+    {
+      "rel": "nl/modellen/md-1/index.html",
+      "url": "https://modunera.com/nl/modellen/md-1/",
+      "sentences": 132,
+      "original": 10,
+      "originality": 7.6,
+      "repeated_sentences": 124
+    },
+    {
+      "rel": "nl/modellen/md-2/index.html",
+      "url": "https://modunera.com/nl/modellen/md-2/",
+      "sentences": 130,
+      "original": 8,
+      "originality": 6.2,
+      "repeated_sentences": 124
+    },
+    {
+      "rel": "nl/modellen/md-3/index.html",
+      "url": "https://modunera.com/nl/modellen/md-3/",
+      "sentences": 131,
+      "original": 8,
+      "originality": 6.1,
+      "repeated_sentences": 125
+    },
+    {
+      "rel": "nl/modellen/md-4/index.html",
+      "url": "https://modunera.com/nl/modellen/md-4/",
+      "sentences": 131,
+      "original": 9,
+      "originality": 6.9,
+      "repeated_sentences": 124
+    },
+    {
+      "rel": "nl/modellen/md-5/index.html",
+      "url": "https://modunera.com/nl/modellen/md-5/",
+      "sentences": 131,
+      "original": 8,
+      "originality": 6.1,
+      "repeated_sentences": 125
+    },
+    {
+      "rel": "nl/modellen/md-6/index.html",
+      "url": "https://modunera.com/nl/modellen/md-6/",
+      "sentences": 131,
+      "original": 9,
+      "originality": 6.9,
+      "repeated_sentences": 124
+    },
+    {
+      "rel": "nl/modellen/md-7/index.html",
+      "url": "https://modunera.com/nl/modellen/md-7/",
+      "sentences": 131,
+      "original": 8,
+      "originality": 6.1,
+      "repeated_sentences": 125
+    },
+    {
+      "rel": "nl/modellen/md-8/index.html",
+      "url": "https://modunera.com/nl/modellen/md-8/",
+      "sentences": 129,
+      "original": 6,
+      "originality": 4.7,
+      "repeated_sentences": 125
+    },
+    {
+      "rel": "nl/nieuws/index.html",
+      "url": "https://modunera.com/nl/nieuws/",
+      "sentences": 11,
+      "original": 6,
+      "originality": 54.5,
+      "repeated_sentences": 5
+    },
+    {
+      "rel": "nl/nieuws/lisse-acht-tiny-houses-gemeenteproject/index.html",
+      "url": "https://modunera.com/nl/nieuws/lisse-acht-tiny-houses-gemeenteproject/",
+      "sentences": 19,
+      "original": 11,
+      "originality": 57.9,
+      "repeated_sentences": 8
+    },
+    {
+      "rel": "nl/nieuws/meppel-nieuwveense-landen-eerste-tiny-houses/index.html",
+      "url": "https://modunera.com/nl/nieuws/meppel-nieuwveense-landen-eerste-tiny-houses/",
+      "sentences": 19,
+      "original": 13,
+      "originality": 68.4,
+      "repeated_sentences": 6
+    },
+    {
+      "rel": "nl/nieuws/vlaardingen-hoofdstedenbuurt-compacte-woningen/index.html",
+      "url": "https://modunera.com/nl/nieuws/vlaardingen-hoofdstedenbuurt-compacte-woningen/",
+      "sentences": 19,
+      "original": 11,
+      "originality": 57.9,
+      "repeated_sentences": 8
+    },
+    {
+      "rel": "nl/productie-faq/index.html",
+      "url": "https://modunera.com/nl/productie-faq/",
+      "sentences": 51,
+      "original": 51,
+      "originality": 100,
+      "repeated_sentences": 0
+    },
+    {
+      "rel": "nl/veelgestelde-vragen/index.html",
+      "url": "https://modunera.com/nl/veelgestelde-vragen/",
+      "sentences": 23,
+      "original": 7,
+      "originality": 30.4,
+      "repeated_sentences": 16
+    },
+    {
+      "rel": "nl/vragen-per-land/index.html",
+      "url": "https://modunera.com/nl/vragen-per-land/",
+      "sentences": 19,
+      "original": 10,
+      "originality": 52.6,
+      "repeated_sentences": 9
+    },
+    {
+      "rel": "nl/vragen-per-land/denemarken/index.html",
+      "url": "https://modunera.com/nl/vragen-per-land/denemarken/",
+      "sentences": 51,
+      "original": 3,
+      "originality": 5.9,
+      "repeated_sentences": 48
+    },
+    {
+      "rel": "nl/vragen-per-land/duitsland/index.html",
+      "url": "https://modunera.com/nl/vragen-per-land/duitsland/",
+      "sentences": 52,
+      "original": 3,
+      "originality": 5.8,
+      "repeated_sentences": 49
+    },
+    {
+      "rel": "nl/vragen-per-land/luxemburg/index.html",
+      "url": "https://modunera.com/nl/vragen-per-land/luxemburg/",
+      "sentences": 51,
+      "original": 3,
+      "originality": 5.9,
+      "repeated_sentences": 48
+    },
+    {
+      "rel": "nl/vragen-per-land/nederland/index.html",
+      "url": "https://modunera.com/nl/vragen-per-land/nederland/",
+      "sentences": 52,
+      "original": 3,
+      "originality": 5.8,
+      "repeated_sentences": 49
+    },
+    {
+      "rel": "nl/vragen-per-land/zwitserland/index.html",
+      "url": "https://modunera.com/nl/vragen-per-land/zwitserland/",
+      "sentences": 52,
+      "original": 3,
+      "originality": 5.8,
+      "repeated_sentences": 49
+    },
+    {
+      "rel": "preisvergleich/index.html",
+      "url": "https://modunera.com/preisvergleich/",
+      "sentences": 22,
+      "original": 20,
+      "originality": 90.9,
+      "repeated_sentences": 2
+    },
+    {
+      "rel": "produktion-faq/index.html",
+      "url": "https://modunera.com/produktion-faq/",
+      "sentences": 56,
+      "original": 55,
+      "originality": 98.2,
+      "repeated_sentences": 1
+    },
+    {
+      "rel": "produktion-faq/ausstattung-moebel-garantie/index.html",
+      "url": "https://modunera.com/produktion-faq/ausstattung-moebel-garantie/",
+      "sentences": 27,
+      "original": 26,
+      "originality": 96.3,
+      "repeated_sentences": 1
+    },
+    {
+      "rel": "produktion-faq/fenster-energie-jahreszeiten/index.html",
+      "url": "https://modunera.com/produktion-faq/fenster-energie-jahreszeiten/",
+      "sentences": 20,
+      "original": 19,
+      "originality": 95,
+      "repeated_sentences": 1
+    },
+    {
+      "rel": "produktion-faq/fertigung/index.html",
+      "url": "https://modunera.com/produktion-faq/fertigung/",
+      "sentences": 18,
+      "original": 17,
+      "originality": 94.4,
+      "repeated_sentences": 1
+    },
+    {
+      "rel": "produktion-faq/genehmigung-und-unterlagen/index.html",
+      "url": "https://modunera.com/produktion-faq/genehmigung-und-unterlagen/",
+      "sentences": 18,
+      "original": 17,
+      "originality": 94.4,
+      "repeated_sentences": 1
+    },
+    {
+      "rel": "produktion-faq/gewicht-fahrgestell-zulassung/index.html",
+      "url": "https://modunera.com/produktion-faq/gewicht-fahrgestell-zulassung/",
+      "sentences": 18,
+      "original": 17,
+      "originality": 94.4,
+      "repeated_sentences": 1
+    },
+    {
+      "rel": "produktion-faq/lieferung-zoll-baustelle/index.html",
+      "url": "https://modunera.com/produktion-faq/lieferung-zoll-baustelle/",
+      "sentences": 27,
+      "original": 26,
+      "originality": 96.3,
+      "repeated_sentences": 1
+    },
+    {
+      "rel": "produktion-faq/preis-vertrag-zahlung/index.html",
+      "url": "https://modunera.com/produktion-faq/preis-vertrag-zahlung/",
+      "sentences": 22,
+      "original": 21,
+      "originality": 95.5,
+      "repeated_sentences": 1
+    },
+    {
+      "rel": "produktion-faq/strom-wasser-abwasser/index.html",
+      "url": "https://modunera.com/produktion-faq/strom-wasser-abwasser/",
+      "sentences": 20,
+      "original": 19,
+      "originality": 95,
+      "repeated_sentences": 1
+    },
+    {
+      "rel": "produktion-faq/tragwerk-und-huelle/index.html",
+      "url": "https://modunera.com/produktion-faq/tragwerk-und-huelle/",
+      "sentences": 17,
+      "original": 16,
+      "originality": 94.1,
+      "repeated_sentences": 1
+    },
+    {
+      "rel": "projects/index.html",
+      "url": "https://modunera.com/projects/",
+      "sentences": 10,
+      "original": 10,
+      "originality": 100,
+      "repeated_sentences": 0
+    },
+    {
+      "rel": "qualitaet/index.html",
+      "url": "https://modunera.com/qualitaet/",
+      "sentences": 37,
+      "original": 37,
+      "originality": 100,
+      "repeated_sentences": 0
+    },
+    {
+      "rel": "ratgeber/index.html",
+      "url": "https://modunera.com/ratgeber/",
+      "sentences": 121,
+      "original": 18,
+      "originality": 14.9,
+      "repeated_sentences": 104
+    },
+    {
+      "rel": "ratgeber/betrieb-und-wartung/index.html",
+      "url": "https://modunera.com/ratgeber/betrieb-und-wartung/",
+      "sentences": 15,
+      "original": 4,
+      "originality": 26.7,
+      "repeated_sentences": 11
+    },
+    {
+      "rel": "ratgeber/energie-und-autarkie/index.html",
+      "url": "https://modunera.com/ratgeber/energie-und-autarkie/",
+      "sentences": 26,
+      "original": 4,
+      "originality": 15.4,
+      "repeated_sentences": 22
+    },
+    {
+      "rel": "ratgeber/genehmigung-und-recht/index.html",
+      "url": "https://modunera.com/ratgeber/genehmigung-und-recht/",
+      "sentences": 60,
+      "original": 4,
+      "originality": 6.7,
+      "repeated_sentences": 62
+    },
+    {
+      "rel": "ratgeber/grundriss-und-innenraum/index.html",
+      "url": "https://modunera.com/ratgeber/grundriss-und-innenraum/",
+      "sentences": 26,
+      "original": 5,
+      "originality": 19.2,
+      "repeated_sentences": 21
+    },
+    {
+      "rel": "ratgeber/kosten-und-finanzierung/index.html",
+      "url": "https://modunera.com/ratgeber/kosten-und-finanzierung/",
+      "sentences": 59,
+      "original": 5,
+      "originality": 8.5,
+      "repeated_sentences": 61
+    },
+    {
+      "rel": "ratgeber/nutzung-und-geschaeftsmodell/index.html",
+      "url": "https://modunera.com/ratgeber/nutzung-und-geschaeftsmodell/",
+      "sentences": 66,
+      "original": 4,
+      "originality": 6.1,
+      "repeated_sentences": 68
+    },
+    {
+      "rel": "ratgeber/technik-und-konstruktion/index.html",
+      "url": "https://modunera.com/ratgeber/technik-und-konstruktion/",
+      "sentences": 29,
+      "original": 4,
+      "originality": 13.8,
+      "repeated_sentences": 25
+    },
+    {
+      "rel": "ratgeber/transport-und-import/index.html",
+      "url": "https://modunera.com/ratgeber/transport-und-import/",
+      "sentences": 57,
+      "original": 4,
+      "originality": 7,
+      "repeated_sentences": 59
+    },
+    {
+      "rel": "ratgeber/vergleich-und-alternativen/index.html",
+      "url": "https://modunera.com/ratgeber/vergleich-und-alternativen/",
+      "sentences": 13,
+      "original": 4,
+      "originality": 30.8,
+      "repeated_sentences": 9
+    },
+    {
+      "rel": "redaktion/index.html",
+      "url": "https://modunera.com/redaktion/",
+      "sentences": 15,
+      "original": 15,
+      "originality": 100,
+      "repeated_sentences": 0
+    },
+    {
+      "rel": "studio/index.html",
+      "url": "https://modunera.com/studio/",
+      "sentences": 12,
+      "original": 2,
+      "originality": 16.7,
+      "repeated_sentences": 10
+    },
+    {
+      "rel": "tiny-house-auf-raedern/index.html",
+      "url": "https://modunera.com/tiny-house-auf-raedern/",
+      "sentences": 13,
+      "original": 2,
+      "originality": 15.4,
+      "repeated_sentences": 11
+    },
+    {
+      "rel": "tiny-house-deutschland/index.html",
+      "url": "https://modunera.com/tiny-house-deutschland/",
+      "sentences": 13,
+      "original": 2,
+      "originality": 15.4,
+      "repeated_sentences": 11
+    },
+    {
+      "rel": "tiny-house-fuer-airbnb/index.html",
+      "url": "https://modunera.com/tiny-house-fuer-airbnb/",
+      "sentences": 13,
+      "original": 2,
+      "originality": 15.4,
+      "repeated_sentences": 11
+    },
+    {
+      "rel": "tiny-house-hersteller/index.html",
+      "url": "https://modunera.com/tiny-house-hersteller/",
+      "sentences": 13,
+      "original": 2,
+      "originality": 15.4,
+      "repeated_sentences": 11
+    },
+    {
+      "rel": "tiny-house-homeoffice/index.html",
+      "url": "https://modunera.com/tiny-house-homeoffice/",
+      "sentences": 13,
+      "original": 2,
+      "originality": 15.4,
+      "repeated_sentences": 11
+    },
+    {
+      "rel": "tiny-house-preise/index.html",
+      "url": "https://modunera.com/tiny-house-preise/",
+      "sentences": 13,
+      "original": 2,
+      "originality": 15.4,
+      "repeated_sentences": 11
+    },
+    {
+      "rel": "tools/index.html",
+      "url": "https://modunera.com/tools/",
+      "sentences": 12,
+      "original": 12,
+      "originality": 100,
+      "repeated_sentences": 0
+    },
+    {
+      "rel": "vorteile/index.html",
+      "url": "https://modunera.com/vorteile/",
+      "sentences": 45,
+      "original": 43,
+      "originality": 95.6,
+      "repeated_sentences": 2
+    }
+  ]
+}

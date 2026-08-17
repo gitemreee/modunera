@@ -60,6 +60,12 @@ writes new pages, which then need v2's navigation and sitemap entries. Phase two
 existing library — including the guide hubs and category pages that v2 itself
 regenerates, which is exactly why it cannot run before v2.
 
+The `--extend` phase both **adds and removes** the appendix. It used to only add,
+which meant narrowing the scope left the block on every page that already had one.
+Pages outside `data/appendix-scope.json` now have it stripped, so the scope file is
+the whole truth about where the block appears and a second run still changes
+nothing.
+
 All of them are idempotent — a second full run changes nothing.
 
 ## Languages
@@ -107,6 +113,7 @@ built out.
 | Sourced local market news | `data/news.json` |
 | Claims that may not be published yet | `data/blocked-claims.json` |
 | The five-market appendix | `APPENDIX` in `tools/build-modunera-depth.mjs` |
+| Which pages carry the appendix | `data/appendix-scope.json` |
 | Home-page model grid, five languages | `HOME_MODELS` in `tools/build-modunera-depth.mjs` |
 | Guide categories | `GUIDE_CATEGORIES` in `tools/build-modunera-v2.mjs` |
 | New market guides | `MARKET_GUIDES` in `tools/build-modunera-v2.mjs` |

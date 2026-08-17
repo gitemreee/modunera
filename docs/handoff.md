@@ -117,10 +117,13 @@ Each of these cost real time. They are listed so they cost it once.
 5. **203 over-long titles** on indexable pages. In the generators.
 6. **Production dates**, so a schedule shape can be published. Every competitor
    publishes a lead time; MODUNERA publishes none.
-7. **The five-market appendix appears on service pages where it is off-topic.**
-   Danish *sommerhusområde* permitting on the bespoke-furniture page is 40
-   duplicate sentences that page has no use for. Scope it by page type.
-8. **Italian branch for Switzerland.** Unbuilt extension point, not a fault.
+7. **Italian branch for Switzerland.** Unbuilt extension point, not a fault.
+
+Closed 2026-08-17: *the five-market appendix appears where it is off-topic*. It
+was on 221 pages and is now on 96, scoped by subject in `data/appendix-scope.json`.
+Mean originality across the 514 indexed pages went from 42.2% to 49.5%, median from
+34% to 42.9%. See `docs/seo-geo-ai-report.md` §3.35 and
+`tools/score-indexed-originality.mjs`, which is the instrument that measured it.
 
 Not started, and deliberately: Meta automation (Phase 11). The standing
 instruction is that automatic Instagram publishing stays off.
