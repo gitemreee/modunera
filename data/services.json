@@ -31,7 +31,21 @@
     "the French on serving two jurisdictions in one language — the PAG/PAP at",
     "Luxembourg and the zone à bâtir in Suisse romande. Where the engineering logic",
     "is genuinely the same in all five markets it is stated the same way, because",
-    "inventing a difference is as dishonest as inventing a figure."
+    "inventing a difference is as dishonest as inventing a figure.",
+    "",
+    "Added 2026-08-17: container. The owner states that MODUNERA builds and sells",
+    "containers including empty shells, on a steel frame with sandwich panel and a",
+    "wood-look option, that the German price is quoted delivered to the address,",
+    "and that a bulk order is produced as custom modular work. That is the owner",
+    "asserting facts about their own business and it is a valid source. Nothing",
+    "beyond it is written: no size, panel thickness, steel grade, certification,",
+    "price or lead time, because those are blocked for containers exactly as they",
+    "are for the eight models.",
+    "",
+    "The page says outright that these are not converted shipping containers. The",
+    "site already argues on five pages that a converted sea container starts from a",
+    "structure built for stacking and sea transport; saying nothing here would have",
+    "left the site arguing against its own capability."
   ],
   "reviewed_at": "2026-08-17",
   "services": {
@@ -967,6 +981,328 @@
           [
             "Un bungalow est-il accessible en fauteuil ?",
             "Le plain-pied est le point de départ, pas le résultat. Largeurs de portes, seuils, aires de rotation et aménagement de la salle d'eau doivent être conçus pour cela ; c'est arrêté au moment du choix des matériaux, pas après."
+          ]
+        ]
+      }
+    },
+    "containerbau": {
+      "lead": {
+        "de": "Ein Raumcontainer von MODUNERA wird als Einheit gefertigt: Stahlrahmen, Boden, Wände und Dach entstehen zusammen, mit Sandwichpaneel als Beplankung und Holzoptik als Variante. Er ist kein umgebauter Seecontainer — der beginnt mit einer Struktur, die für Stapelung und Seetransport ausgelegt ist. Der Unterschied zeigt sich später, an der Fensteröffnung, an der Raumhöhe und daran, wo die Dämmung überhaupt Platz hat.",
+        "en": "A MODUNERA container is built as a unit: steel frame, floor, walls and roof are made together, clad in sandwich panel, with a wood-look finish as an option. It is not a converted shipping container — that starts from a structure designed for stacking and sea transport. The difference shows up later, at the window opening, in the ceiling height, and in whether there is anywhere for the insulation to go.",
+        "nl": "Een MODUNERA-container wordt als eenheid gebouwd: stalen frame, vloer, wanden en dak ontstaan samen, beplaat met sandwichpaneel en met houtlook als variant. Het is geen omgebouwde zeecontainer — die begint met een constructie die voor stapelen en zeetransport is ontworpen. Dat verschil merkt u later: bij de raamopening, bij de vrije hoogte en bij de vraag waar de isolatie eigenlijk heen moet.",
+        "da": "En MODUNERA-container bygges som en enhed: stålramme, gulv, vægge og tag laves samlet, beklædt med sandwichpanel og med træudseende som variant. Den er ikke en ombygget skibscontainer — den begynder med en konstruktion, der er lavet til stabling og søtransport. Forskellen viser sig senere: ved vinduesåbningen, ved rumhøjden og ved, hvor isoleringen overhovedet kan være.",
+        "fr": "Un container MODUNERA est construit comme une unité : ossature acier, plancher, parois et toiture sont réalisés ensemble, bardés en panneau sandwich, avec une finition aspect bois en option. Ce n'est pas un conteneur maritime transformé — celui-ci part d'une structure conçue pour l'empilage et le transport en mer. La différence se voit plus tard : à l'ouverture de fenêtre, à la hauteur sous plafond, et à la place qui reste pour l'isolant."
+      },
+      "makes": {
+        "de": [
+          "Wohn- und Aufenthaltscontainer",
+          "Büro-, Verkaufs- und Baustellencontainer",
+          "Sanitär- und Küchencontainer",
+          "Lager- und Technikcontainer",
+          "Leercontainer als reine Hülle, ohne Innenausbau"
+        ],
+        "en": [
+          "Living and accommodation containers",
+          "Office, retail and site containers",
+          "Sanitary and kitchen containers",
+          "Storage and plant containers",
+          "Empty containers as a shell only, with no fit-out"
+        ],
+        "nl": [
+          "Woon- en verblijfscontainers",
+          "Kantoor-, verkoop- en bouwplaatscontainers",
+          "Sanitair- en keukencontainers",
+          "Opslag- en techniekcontainers",
+          "Lege containers als casco, zonder afbouw"
+        ],
+        "da": [
+          "Bolig- og opholdscontainere",
+          "Kontor-, salgs- og byggepladscontainere",
+          "Bade- og køkkencontainere",
+          "Lager- og teknikcontainere",
+          "Tomme containere som råhus, uden indretning"
+        ],
+        "fr": [
+          "Containers d'habitation et d'hébergement",
+          "Containers de bureau, de vente et de chantier",
+          "Containers sanitaires et cuisines",
+          "Containers de stockage et de technique",
+          "Containers vides livrés en coque, sans aménagement"
+        ]
+      },
+      "decides": {
+        "de": [
+          [
+            "Leer oder ausgebaut ist die erste Frage",
+            "Ein Leercontainer ist Rahmen, Beplankung und Öffnungen — alles Weitere kommt von Ihnen oder von uns. Diese Entscheidung steht am Anfang, weil sie Wandaufbau, Leitungsführung und Lage der Öffnungen festlegt. Eine Leitung nachträglich in eine geschlossene Wand zu bringen heißt, die Wand wieder zu öffnen."
+          ],
+          [
+            "Das Transportmaß, und bei mehreren Einheiten die Route",
+            "Was ohne Sondertransport fahren darf, bestimmt Breite und Höhe. Bei einer Sammelbestellung kommt eine zweite Frage dazu: wie viele Einheiten auf einen Transport gehen. Das ist dort der größte einzelne Kostenhebel und gehört an den Anfang der Planung, nicht ans Ende."
+          ],
+          [
+            "Eine tragfähige, ebene Fläche ist die Mindestbedingung",
+            "Punktlager oder Streifenfundament entscheidet der Untergrund und die vorgesehene Standzeit. Was in jedem Fall gilt: die Fläche muss eben, tragfähig und vor der Lieferung fertig sein. Ein Liefertermin ohne vorbereitete Aufstellfläche ist kein Termin."
+          ],
+          [
+            "Stehen bleiben heißt genehmigen",
+            "Ein Container, der bleibt, ist baurechtlich ein Gebäude. Die Bauweise ändert daran nichts, und die Räder oder Kufen mancher Ausführungen ändern es auch nicht. Zone, Nutzung und Dauer entscheidet die zuständige Stelle am Standort — die Länderseiten nennen für jeden Zielmarkt, wer das ist."
+          ]
+        ],
+        "en": [
+          [
+            "Shell or fitted out is the first question",
+            "An empty container is frame, cladding and openings — everything after that comes from you or from us. The decision belongs at the start, because it sets the wall build-up, the service routing and where the openings go. Adding a service to a closed wall later means opening the wall again."
+          ],
+          [
+            "The transport envelope, and for several units the route",
+            "What may travel without a special-transport permit sets width and height. A bulk order adds a second question: how many units go on one transport. That is the single largest cost lever there, and it belongs at the start of planning rather than the end."
+          ],
+          [
+            "A level, load-bearing area is the minimum condition",
+            "Pads or a strip foundation is decided by the ground and by how long the unit is meant to stand. What holds either way: the area must be level, load-bearing and finished before delivery. A delivery date without a prepared standing area is not a date."
+          ],
+          [
+            "Staying put means being permitted",
+            "A container that stays is a building in planning law. The method of construction does not change that, and neither do the wheels or skids some versions carry. Zone, use and duration are decided by the authority at the site — the country pages name who that is in each destination market."
+          ]
+        ],
+        "nl": [
+          [
+            "Casco of afgebouwd is de eerste vraag",
+            "Een lege container is frame, beplating en openingen — al het andere komt van u of van ons. Die keuze hoort aan het begin, omdat zij de wandopbouw, het leidingtracé en de plaats van de openingen vastlegt. Achteraf een leiding in een gesloten wand brengen betekent de wand weer openen."
+          ],
+          [
+            "Het transportprofiel, en bij meerdere eenheden de route",
+            "Wat zonder ontheffing mag rijden bepaalt breedte en hoogte. Bij een verzamelbestelling komt er een tweede vraag bij: hoeveel eenheden op één transport gaan. Dat is daar de grootste kostenpost waarop u nog invloed heeft, en die vraag hoort aan het begin van de planning."
+          ],
+          [
+            "Een vlakke, draagkrachtige ondergrond is de minimumeis",
+            "Poeren of een strookfundering volgt uit de bodem en uit de beoogde standtijd; op slappe grond is dat geen detail. Wat hoe dan ook geldt: de ondergrond moet vlak, draagkrachtig en vóór levering gereed zijn. Een leverdatum zonder voorbereide opstelplaats is geen datum."
+          ],
+          [
+            "Blijven staan betekent vergunnen",
+            "Een container die blijft staan is bouwrechtelijk een bouwwerk. De fabricagewijze verandert daar niets aan. Of het mag, staat in het omgevingsplan van de gemeente onder de Omgevingswet, en de aanvraag loopt via het Omgevingsloket."
+          ]
+        ],
+        "da": [
+          [
+            "Råhus eller indrettet er det første spørgsmål",
+            "En tom container er ramme, beklædning og åbninger — alt derefter kommer fra jer eller fra os. Beslutningen hører til i begyndelsen, fordi den fastlægger vægopbygning, føringsveje og åbningernes placering. At føre en installation ind i en lukket væg bagefter betyder, at væggen skal åbnes igen."
+          ],
+          [
+            "Transportmålet, og ved flere enheder ruten",
+            "Hvad der må køre uden særtransport, bestemmer bredde og højde. Ved en samlet bestilling kommer et spørgsmål mere: hvor mange enheder der kan køre på én transport. Det er dér den største enkeltpost, man stadig kan påvirke, og den hører til i begyndelsen af planlægningen."
+          ],
+          [
+            "Et plant, bæredygtigt underlag er mindstekravet",
+            "Punktfundamenter eller stribefundament afgøres af jordbunden og af, hvor længe enheden skal stå — og fundamentet skal føres til frostfri dybde. Under alle omstændigheder: underlaget skal være plant, bæredygtigt og færdigt før leveringen."
+          ],
+          [
+            "At blive stående betyder at skulle have tilladelse",
+            "En container, der bliver stående, er en bygning i byggelovens forstand. Fremstillingsmåden ændrer ikke på det. Kommunen afgør ud fra lokalplanen og zonestatus — byzone, sommerhusområde eller landzone — og zonen afgør også, hvilken anvendelse der er tilladt."
+          ]
+        ],
+        "fr": [
+          [
+            "Coque ou aménagé : c'est la première question",
+            "Un container vide, c'est l'ossature, le bardage et les ouvertures — tout le reste vient de vous ou de nous. Le choix se fait au départ, car il fixe la composition des parois, le cheminement des réseaux et l'emplacement des ouvertures. Passer un réseau dans une paroi fermée après coup, c'est rouvrir la paroi."
+          ],
+          [
+            "Le gabarit routier, et pour plusieurs unités l'itinéraire",
+            "Ce qui circule sans convoi exceptionnel fixe la largeur et la hauteur. Une commande groupée ajoute une question : combien d'unités partent sur un même transport. C'est là le principal poste sur lequel on peut encore agir, et il se traite au début de la planification."
+          ],
+          [
+            "Une aire plane et portante est la condition minimale",
+            "Plots ou semelle filante : le sol et la durée d'implantation tranchent, et la fondation se met hors gel. Dans tous les cas, l'aire doit être plane, portante et terminée avant la livraison. Une date de livraison sans aire préparée n'est pas une date."
+          ],
+          [
+            "Rester en place, c'est devoir être autorisé",
+            "Un container qui reste en place est une construction au sens du droit de l'urbanisme. Le mode de fabrication n'y change rien. Au Luxembourg, la zone du PAG et le PAP décident et la commune délivre l'autorisation ; en Suisse, la commune et le canton statuent en zone à bâtir."
+          ]
+        ]
+      },
+      "scope": {
+        "de": {
+          "in": [
+            "Stahlrahmen, Hülle und Öffnungen",
+            "Innenausbau und Haustechnik bis zur Anschlusskante, sofern beauftragt",
+            "Werksseitige Kontrolle und Dokumentation",
+            "Für Deutschland: Lieferung bis zur vereinbarten Adresse"
+          ],
+          "out": [
+            "Entladung, Kran und Rangierfläche vor Ort",
+            "Fundament, Punktlager und Erdarbeiten",
+            "Anschluss an Wasser, Abwasser und Strom",
+            "Genehmigung im Zielland"
+          ]
+        },
+        "en": {
+          "in": [
+            "Steel frame, envelope and openings",
+            "Interior fit-out and services up to the connection point, where contracted",
+            "Factory inspection and documentation",
+            "For Germany: delivery to the agreed address"
+          ],
+          "out": [
+            "Unloading, crane and manoeuvring space on site",
+            "Foundation, pads and ground works",
+            "Connection to water, wastewater and power",
+            "Permits in the destination country"
+          ]
+        },
+        "nl": {
+          "in": [
+            "Stalen frame, schil en openingen",
+            "Afbouw en installaties tot aan de aansluitgrens, indien opgedragen",
+            "Controle en documentatie vanuit de fabriek",
+            "Voor Duitsland: levering tot het afgesproken adres"
+          ],
+          "out": [
+            "Lossen, kraan en rangeerruimte op locatie",
+            "Fundering, poeren en grondwerk",
+            "Aansluiting op water, riool en elektra",
+            "Vergunning in het land van bestemming"
+          ]
+        },
+        "da": {
+          "in": [
+            "Stålramme, klimaskærm og åbninger",
+            "Indretning og installationer frem til tilslutningskanten, hvis det er aftalt",
+            "Kontrol og dokumentation fra fabrikken",
+            "For Tyskland: levering til den aftalte adresse"
+          ],
+          "out": [
+            "Aflæsning, kran og manøvreplads på stedet",
+            "Fundament, punktfundamenter og jordarbejde",
+            "Tilslutning til vand, kloak og el",
+            "Tilladelse i modtagerlandet"
+          ]
+        },
+        "fr": {
+          "in": [
+            "Ossature acier, enveloppe et ouvertures",
+            "Aménagement et techniques jusqu'au point de raccordement, si commandés",
+            "Contrôle et documentation en atelier",
+            "Pour l'Allemagne : livraison à l'adresse convenue"
+          ],
+          "out": [
+            "Déchargement, grue et aire de manœuvre sur site",
+            "Fondation, plots et terrassement",
+            "Raccordement à l'eau, aux eaux usées et à l'électricité",
+            "Autorisation dans le pays de destination"
+          ]
+        }
+      },
+      "faq": {
+        "de": [
+          [
+            "Ist das ein umgebauter Seecontainer?",
+            "Nein. Die Einheit wird als solche gefertigt — Stahlrahmen, Boden, Wände und Dach entstehen zusammen. Ein Seecontainer ist für Stapelung und Seetransport gebaut, nicht für Dämmung und Raumhöhe. Wir gehen deshalb nicht von ihm aus, und das ist der Grund, warum sich Fensteröffnungen und Wandaufbau frei planen lassen."
+          ],
+          [
+            "Kann ich einen Container ohne Innenausbau kaufen?",
+            "Ja. Ein Leercontainer wird als Hülle geliefert: Rahmen, Beplankung und Öffnungen. Was danach hineinkommt, entscheiden Sie. Sollen wir ausbauen, wird das geplant, bevor die Wände geschlossen werden — danach ist jede Änderung ungleich teurer."
+          ],
+          [
+            "Was unterscheidet den Container vom Modulbau?",
+            "Der Anspruch und die Zusammensetzung. Ein Raumcontainer ist eine einzelne, transportfertige Einheit. Modulbau fügt mehrere Module zu einem Gebäude zusammen, und die Fuge dazwischen ist dort der aufwendigste Teil. Bei größeren Sammelbestellungen planen wir Container auch als Modulbau, wenn die Nutzung das verlangt."
+          ],
+          [
+            "Ist die Lieferung im Preis enthalten?",
+            "Für Deutschland nennen wir den Preis bis zur vereinbarten Adresse. Entladung, Fundament, Anschlüsse und Genehmigung sind darin nicht enthalten — das sind die Positionen, die ein Angebot nicht abdeckt und ein Projekt trotzdem braucht. Für die übrigen Zielmärkte wird die Lieferung nach Route kalkuliert."
+          ],
+          [
+            "Lohnt sich eine Sammelbestellung?",
+            "Ab mehreren gleichen Einheiten zahlt sich Wiederholung aus: gleiche Öffnungen, gleiche Anschlüsse, gleicher Ablauf beim Aufstellen. Eine Sammelbestellung wird als eigene Planung behandelt und nicht als Vielfaches einer Einzelbestellung — bei Bedarf als Modulbau statt als Reihe einzelner Container."
+          ]
+        ],
+        "en": [
+          [
+            "Is this a converted shipping container?",
+            "No. The unit is built as one — steel frame, floor, walls and roof are made together. A shipping container is built for stacking and sea transport, not for insulation and ceiling height. We do not start from one, which is why window openings and wall build-up can be planned freely."
+          ],
+          [
+            "Can I buy a container without a fit-out?",
+            "Yes. An empty container is delivered as a shell: frame, cladding and openings. What goes in afterwards is your decision. If we are to fit it out, that is planned before the walls close — after that, any change costs disproportionately more."
+          ],
+          [
+            "What separates a container from modular construction?",
+            "Scale and assembly. A container is a single unit, finished and ready to travel. Modular construction joins several modules into one building, and the joint between them is the most demanding part of it. On larger bulk orders we plan containers as modular work where the use calls for it."
+          ],
+          [
+            "Is delivery included in the price?",
+            "For Germany we quote the price to the agreed address. Unloading, foundation, connections and permits are not included — those are the items a quotation does not cover and a project needs anyway. For the other destination markets delivery is quoted by route."
+          ],
+          [
+            "Is a bulk order worth it?",
+            "From several identical units onwards, repetition pays: same openings, same connections, same sequence when setting them down. A bulk order is planned in its own right rather than as a multiple of one order — as modular work instead of a row of separate containers where that fits better."
+          ]
+        ],
+        "nl": [
+          [
+            "Is dit een omgebouwde zeecontainer?",
+            "Nee. De eenheid wordt als zodanig gebouwd — stalen frame, vloer, wanden en dak ontstaan samen. Een zeecontainer is gemaakt voor stapelen en zeetransport, niet voor isolatie en vrije hoogte. Wij gaan daar niet van uit, en daarom zijn raamopeningen en wandopbouw vrij te plannen."
+          ],
+          [
+            "Kan ik een container zonder afbouw kopen?",
+            "Ja. Een lege container wordt als casco geleverd: frame, beplating en openingen. Wat er daarna in komt, bepaalt u. Als wij afbouwen, gebeurt dat vóór het sluiten van de wanden — daarna is elke wijziging onevenredig duurder."
+          ],
+          [
+            "Wat is het verschil met modulaire bouw?",
+            "De schaal en de samenstelling. Een container is één eenheid, afgebouwd en transportgereed. Modulaire bouw voegt meerdere modules samen tot één gebouw, en de naad daartussen is daar het lastigste deel. Bij grotere verzamelbestellingen plannen wij containers ook als modulaire bouw, als het gebruik daarom vraagt."
+          ],
+          [
+            "Is levering bij de prijs inbegrepen?",
+            "Voor Duitsland noemen wij de prijs tot het afgesproken adres. Lossen, fundering, aansluitingen en vergunning vallen daarbuiten — dat zijn de posten die een offerte niet dekt en die een project toch nodig heeft. Voor de overige markten wordt levering per route berekend."
+          ],
+          [
+            "Loont een verzamelbestelling?",
+            "Vanaf meerdere gelijke eenheden loont herhaling: dezelfde openingen, dezelfde aansluitingen, hetzelfde plaatsingsproces. Een verzamelbestelling wordt als eigen planning behandeld en niet als een veelvoud van één bestelling."
+          ]
+        ],
+        "da": [
+          [
+            "Er det en ombygget skibscontainer?",
+            "Nej. Enheden bygges som sådan — stålramme, gulv, vægge og tag laves samlet. En skibscontainer er bygget til stabling og søtransport, ikke til isolering og rumhøjde. Vi tager ikke udgangspunkt i den, og derfor kan vinduesåbninger og vægopbygning planlægges frit."
+          ],
+          [
+            "Kan jeg købe en container uden indretning?",
+            "Ja. En tom container leveres som råhus: ramme, beklædning og åbninger. Hvad der kommer i bagefter, bestemmer I. Skal vi indrette den, planlægges det, før væggene lukkes — derefter er enhver ændring uforholdsmæssigt dyrere."
+          ],
+          [
+            "Hvad adskiller containeren fra modulbyggeri?",
+            "Omfanget og sammensætningen. En container er én enhed, færdig og klar til transport. Modulbyggeri samler flere moduler til én bygning, og samlingen imellem dem er den mest krævende del. Ved større samlede bestillinger planlægger vi også containere som modulbyggeri, når anvendelsen kræver det."
+          ],
+          [
+            "Er levering med i prisen?",
+            "For Tyskland oplyser vi prisen til den aftalte adresse. Aflæsning, fundament, tilslutninger og tilladelse er ikke med — det er de poster, et tilbud ikke dækker, og som projektet alligevel har brug for. For de øvrige markeder beregnes levering efter rute."
+          ],
+          [
+            "Kan en samlet bestilling betale sig?",
+            "Fra flere ens enheder betaler gentagelse sig: samme åbninger, samme tilslutninger, samme forløb ved opstilling. En samlet bestilling planlægges for sig og ikke som et multiplum af én bestilling."
+          ]
+        ],
+        "fr": [
+          [
+            "Est-ce un conteneur maritime transformé ?",
+            "Non. L'unité est construite comme telle — ossature acier, plancher, parois et toiture sont réalisés ensemble. Un conteneur maritime est fait pour l'empilage et le transport en mer, pas pour l'isolation ni la hauteur sous plafond. Nous n'en partons pas, et c'est pourquoi les ouvertures et la composition des parois se conçoivent librement."
+          ],
+          [
+            "Puis-je acheter un container sans aménagement ?",
+            "Oui. Un container vide est livré en coque : ossature, bardage et ouvertures. Ce qui y entre ensuite vous appartient. Si nous devons l'aménager, cela se conçoit avant la fermeture des parois — après, toute modification coûte démesurément plus cher."
+          ],
+          [
+            "Qu'est-ce qui distingue le container de la construction modulaire ?",
+            "L'échelle et l'assemblage. Un container est une unité unique, finie et prête à voyager. La construction modulaire réunit plusieurs modules en un bâtiment, et le joint entre eux en est la partie la plus exigeante. Sur les commandes groupées importantes, nous concevons aussi les containers en modulaire lorsque l'usage l'exige."
+          ],
+          [
+            "La livraison est-elle comprise dans le prix ?",
+            "Pour l'Allemagne, nous annonçons le prix rendu à l'adresse convenue. Le déchargement, la fondation, les raccordements et l'autorisation n'y sont pas compris — ce sont les postes qu'une offre ne couvre pas et dont le projet a besoin malgré tout. Pour les autres marchés, la livraison est chiffrée selon l'itinéraire."
+          ],
+          [
+            "Une commande groupée est-elle intéressante ?",
+            "À partir de plusieurs unités identiques, la répétition paie : mêmes ouvertures, mêmes raccordements, même déroulé de pose. Une commande groupée se conçoit pour elle-même et non comme un multiple d'une commande unique."
           ]
         ]
       }

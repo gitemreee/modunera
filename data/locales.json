@@ -32,12 +32,14 @@
         "modular": "modulaire-bouw",
         "steel": "staalconstructies",
         "bungalow": "bungalows",
+        "container": "containerbouw",
         "furniture": "meubels-op-maat"
       },
       "serviceNames": {
         "modular": "Modulaire bouw",
         "steel": "Staalconstructies",
         "bungalow": "Bungalows",
+        "container": "Containerbouw",
         "furniture": "Meubels op maat"
       },
       "nav": {
@@ -57,7 +59,7 @@
       },
       "sections": {
         "whyTitle": "Waarom MODUNERA",
-        "whyIntro": "Tiny houses blijven onze kern. Modulaire bouw, staalconstructies, bungalows en meubels op maat verbreden wat er in één project mogelijk is.",
+        "whyIntro": "Tiny houses blijven onze kern. Modulaire bouw, staalconstructies, containerbouw, bungalows en meubels op maat verbreden wat er in één project mogelijk is.",
         "usp": [
           [
             "Acht basismodellen",
@@ -155,12 +157,14 @@
         "modular": "modulbyggeri",
         "steel": "staalkonstruktioner",
         "bungalow": "bungalower",
+        "container": "containerbyggeri",
         "furniture": "specialfremstillede-moebler"
       },
       "serviceNames": {
         "modular": "Modulbyggeri",
         "steel": "Stålkonstruktioner",
         "bungalow": "Bungalower",
+        "container": "Containerbyggeri",
         "furniture": "Specialfremstillede møbler"
       },
       "nav": {
@@ -180,7 +184,7 @@
       },
       "sections": {
         "whyTitle": "Hvorfor MODUNERA",
-        "whyIntro": "Tiny houses er kernen. Modulbyggeri, stålkonstruktioner, bungalower og møbler efter mål udvider, hvad der er muligt i ét projekt.",
+        "whyIntro": "Tiny houses er kernen. Modulbyggeri, stålkonstruktioner, containerbyggeri, bungalower og møbler efter mål udvider, hvad der er muligt i ét projekt.",
         "usp": [
           [
             "Otte grundmodeller",
@@ -278,12 +282,14 @@
         "modular": "construction-modulaire",
         "steel": "structures-acier",
         "bungalow": "bungalows",
+        "container": "containers",
         "furniture": "mobilier-sur-mesure"
       },
       "serviceNames": {
         "modular": "Construction modulaire",
         "steel": "Structures acier",
         "bungalow": "Bungalows",
+        "container": "Containers",
         "furniture": "Mobilier sur mesure"
       },
       "nav": {
@@ -303,7 +309,7 @@
       },
       "sections": {
         "whyTitle": "Pourquoi MODUNERA",
-        "whyIntro": "La tiny house reste le cœur de métier. Construction modulaire, structures acier, bungalows et mobilier sur mesure élargissent ce qui est possible dans un même projet.",
+        "whyIntro": "Les tiny houses restent notre cœur de métier. La construction modulaire, les structures acier, les containers, les bungalows et le mobilier sur mesure élargissent ce qui est possible dans un même projet.",
         "usp": [
           [
             "Huit modèles de base",

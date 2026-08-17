@@ -1,11 +1,11 @@
 {
   "status": "ok",
-  "indexed_pages": 514,
-  "pages_with_prose": 514,
-  "mean_originality_pct": 50,
+  "indexed_pages": 519,
+  "pages_with_prose": 519,
+  "mean_originality_pct": 49.9,
   "median_originality_pct": 42.9,
   "pages_below_25pct": 155,
-  "pages_below_50pct": 276,
+  "pages_below_50pct": 281,
   "worst_pages": [
     {
       "rel": "en/models/md-8/index.html",
@@ -54,64 +54,16 @@
       "original": 3,
       "originality": 5.4,
       "repeated_sentences": 53
-    },
-    {
-      "rel": "fragen/deutschland/index.html",
-      "url": "https://modunera.com/fragen/deutschland/",
-      "sentences": 56,
-      "original": 3,
-      "originality": 5.4,
-      "repeated_sentences": 53
-    },
-    {
-      "rel": "fragen/luxemburg/index.html",
-      "url": "https://modunera.com/fragen/luxemburg/",
-      "sentences": 54,
-      "original": 3,
-      "originality": 5.6,
-      "repeated_sentences": 51
-    },
-    {
-      "rel": "fragen/niederlande/index.html",
-      "url": "https://modunera.com/fragen/niederlande/",
-      "sentences": 54,
-      "original": 3,
-      "originality": 5.6,
-      "repeated_sentences": 51
-    },
-    {
-      "rel": "en/questions/denmark/index.html",
-      "url": "https://modunera.com/en/questions/denmark/",
-      "sentences": 53,
-      "original": 3,
-      "originality": 5.7,
-      "repeated_sentences": 50
-    },
-    {
-      "rel": "en/questions/luxembourg/index.html",
-      "url": "https://modunera.com/en/questions/luxembourg/",
-      "sentences": 53,
-      "original": 3,
-      "originality": 5.7,
-      "repeated_sentences": 50
-    },
-    {
-      "rel": "en/questions/netherlands/index.html",
-      "url": "https://modunera.com/en/questions/netherlands/",
-      "sentences": 53,
-      "original": 3,
-      "originality": 5.7,
-      "repeated_sentences": 50
     }
   ],
   "most_repeated_sentences": [
     {
-      "pages": 161,
+      "pages": 162,
       "words": 13,
       "sentence": "alle angaben sind unverbindliche projektorientierung und keine rechts behörden statik energie oder steuerberatung"
     },
     {
-      "pages": 161,
+      "pages": 162,
       "words": 11,
       "sentence": "preise sind indikationen ab werk verbindlich ist ausschließlich ein geprüftes angebot"
     },
@@ -126,44 +78,14 @@
       "sentence": "entschieden wird nach nutzung personenzahl und standort nicht nach dem datenblatt"
     },
     {
-      "pages": 77,
+      "pages": 78,
       "words": 16,
       "sentence": "all figures are non binding project guidance and not legal authority structural energy or tax advice"
     },
     {
-      "pages": 77,
+      "pages": 78,
       "words": 11,
       "sentence": "prices are ex works indications only a checked quotation is binding"
-    },
-    {
-      "pages": 73,
-      "words": 13,
-      "sentence": "wegen der kleinen gemeindegrößen unterscheidet sich die praxis von ort zu ort spürbar"
-    },
-    {
-      "pages": 72,
-      "words": 8,
-      "sentence": "der unterschied liegt in länge aufteilung und ausstattungstiefe"
-    },
-    {
-      "pages": 65,
-      "words": 23,
-      "sentence": "im außenbereich nach # baugb ist wohnen nur in eng begrenzten fällen privilegiert das ist der häufigste grund aus dem deutsche projekte sche"
-    },
-    {
-      "pages": 65,
-      "words": 20,
-      "sentence": "viele attraktive standorte sind als erholungs oder freizeitgebiet ausgewiesen wo permanentes wohnen nicht erlaubt ist auch wenn es faktisch "
-    },
-    {
-      "pages": 65,
-      "words": 14,
-      "sentence": "in sommerhusområder ist die ganzjährige wohnnutzung grundsätzlich beschränkt ausnahmen sind an persönliche voraussetzungen geknüpft"
-    },
-    {
-      "pages": 65,
-      "words": 21,
-      "sentence": "außerhalb der bauzone ist wohnen nur in eng begrenzten ausnahmen zulässig das ist der häufigste grund aus dem schweizer projekte scheitern"
     }
   ],
   "pages": [
@@ -1728,6 +1650,14 @@
       "repeated_sentences": 51
     },
     {
+      "rel": "da/ydelser/containerbyggeri/index.html",
+      "url": "https://modunera.com/da/ydelser/containerbyggeri/",
+      "sentences": 82,
+      "original": 35,
+      "originality": 42.7,
+      "repeated_sentences": 51
+    },
+    {
       "rel": "da/ydelser/modulbyggeri/index.html",
       "url": "https://modunera.com/da/ydelser/modulbyggeri/",
       "sentences": 76,
@@ -2568,6 +2498,14 @@
       "repeated_sentences": 54
     },
     {
+      "rel": "en/services/containers/index.html",
+      "url": "https://modunera.com/en/services/containers/",
+      "sentences": 86,
+      "original": 36,
+      "originality": 41.9,
+      "repeated_sentences": 54
+    },
+    {
       "rel": "en/services/modular-buildings/index.html",
       "url": "https://modunera.com/en/services/modular-buildings/",
       "sentences": 79,
@@ -3152,6 +3090,14 @@
       "repeated_sentences": 54
     },
     {
+      "rel": "fr/services/containers/index.html",
+      "url": "https://modunera.com/fr/services/containers/",
+      "sentences": 87,
+      "original": 37,
+      "originality": 42.5,
+      "repeated_sentences": 54
+    },
+    {
       "rel": "fr/services/mobilier-sur-mesure/index.html",
       "url": "https://modunera.com/fr/services/mobilier-sur-mesure/",
       "sentences": 36,
@@ -3301,6 +3247,14 @@
       "sentences": 73,
       "original": 26,
       "originality": 35.6,
+      "repeated_sentences": 51
+    },
+    {
+      "rel": "leistungen/containerbau/index.html",
+      "url": "https://modunera.com/leistungen/containerbau/",
+      "sentences": 84,
+      "original": 37,
+      "originality": 44,
       "repeated_sentences": 51
     },
     {
@@ -3765,6 +3719,14 @@
       "sentences": 76,
       "original": 27,
       "originality": 35.5,
+      "repeated_sentences": 53
+    },
+    {
+      "rel": "nl/diensten/containerbouw/index.html",
+      "url": "https://modunera.com/nl/diensten/containerbouw/",
+      "sentences": 86,
+      "original": 37,
+      "originality": 43,
       "repeated_sentences": 53
     },
     {

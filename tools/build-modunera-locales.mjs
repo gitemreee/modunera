@@ -7,7 +7,7 @@
    translations of "countries"), so the URLs read natively and match local search.
 
    Per locale: a home page, a countries index and five country pages, a services
-   index and four service pages, and an FAQ. Every page carries hreflang for all
+   index and five service pages, and an FAQ. Every page carries hreflang for all
    five languages, so Google can pair them.
 
    Runs after tools/build-modunera-v2.mjs and before validation. The v2 layer's
@@ -49,7 +49,7 @@ const SOURCES = {
 };
 
 const CODES = ["DE", "NL", "DK", "LU", "CH"];
-const SERVICE_KEYS = ["modular", "steel", "bungalow", "furniture"];
+const SERVICE_KEYS = ["modular", "steel", "bungalow", "container", "furniture"];
 
 /* The same per-service material German and English render, now carrying nl, da
    and fr as well. See the header comment in data/services.json for the rule the
@@ -87,18 +87,21 @@ const SERVICE_COPY = {
     modular: "Uitbreidbare ruimtemodules voor wonen, hospitality, kantoor en bedrijf — projectmatig ontworpen en transporteerbaar gebouwd.",
     steel: "Draagkrachtige stalen frames en bijzondere constructies als basis voor duurzame mobiele en modulaire gebouwen.",
     bungalow: "Gelijkvloerse, comfortabele eenheden voor particulier gebruik, vakantieverhuur, glamping en resortprojecten.",
+    container: "Woon-, kantoor-, sanitair- en opslagcontainers, als eenheid gebouwd in plaats van omgebouwd uit een zeecontainer — ook als casco zonder afbouw.",
     furniture: "Keukens, inbouwkasten, bergruimte en objectmeubilair — afgestemd op ruimte, gebruik en materiaalconcept.",
   },
   da: {
     modular: "Udvidelige rummoduler til bolig, hospitality, kontor og erhverv — projekteret efter opgaven og bygget til transport.",
     steel: "Bærende stålrammer og særkonstruktioner som grundlag for holdbare mobile og modulære bygninger.",
     bungalow: "Enplans, komfortable enheder til privat brug, ferieudlejning, glamping og resortprojekter.",
+    container: "Bolig-, kontor-, bade- og lagercontainere, bygget som en enhed frem for ombygget fra en skibscontainer — også som råhus uden indretning.",
     furniture: "Køkkener, indbyggede skabe, opbevaring samt hotel- og kontraktmøbler — tilpasset rum, anvendelse og materialekoncept.",
   },
   fr: {
     modular: "Modules extensibles pour le logement, l'hôtellerie, le bureau et l'activité — conçus par projet et fabriqués pour le transport.",
     steel: "Ossatures acier porteuses et constructions spéciales, base des bâtiments mobiles et modulaires durables.",
     bungalow: "Unités de plain-pied et confortables pour l'usage privé, la location saisonnière, le glamping et les projets de resort.",
+    container: "Containers d'habitation, de bureau, sanitaires et de stockage, construits comme une unité plutôt que transformés depuis un conteneur maritime — aussi en coque nue.",
     furniture: "Cuisines, aménagements intégrés, rangements et mobilier contract — ajustés à l'espace, à l'usage et au concept matériaux.",
   },
 };
@@ -280,7 +283,7 @@ function servicesIndex(cfg, locales) {
    entries turn on soft ground and the omgevingsplan, the Danish on zone status
    and coastal exposure, the French on serving Luxembourg's PAG/PAP and Suisse
    romande's zone à bâtir in one language. */
-const SERVICE_DATA_KEY = { modular: "modulbau", steel: "stahlbau", bungalow: "bungalows", furniture: "moebel-nach-mass" };
+const SERVICE_DATA_KEY = { modular: "modulbau", steel: "stahlbau", bungalow: "bungalows", container: "containerbau", furniture: "moebel-nach-mass" };
 const listMarkup = (items) => `<ul class="check-list">${items.map((item) => `<li>${esc(item)}</li>`).join("")}</ul>`;
 
 const SERVICE_SECTIONS = {

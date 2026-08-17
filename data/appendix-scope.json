@@ -36,7 +36,6 @@
     "node tools/score-indexed-originality.mjs."
   ],
   "reviewed_at": "2026-08-17",
-
   "categories": [
     {
       "de": "genehmigung-und-recht",
@@ -93,7 +92,6 @@
       "why": "Mostly style comparison — chalet, modern, Scandinavian. See topic_overrides for the two subjects in it that are genuinely permitting questions."
     }
   ],
-
   "topic_overrides": [
     {
       "topic": "vs-wohnwagen",
@@ -106,7 +104,6 @@
       "why": "Same distinction: what separates the two in practice is the permitting route, not the construction."
     }
   ],
-
   "trees": [
     {
       "match": "^blog/europa/",
@@ -129,12 +126,11 @@
       "why": "The Europe FAQ. The five-market question is the page."
     },
     {
-      "match": "^(leistungen/(bungalows|modulbau)|en/services/(bungalows|modular-buildings)|nl/diensten/(bungalows|modulaire-bouw)|da/ydelser/(bungalower|modulbyggeri)|fr/services/(bungalows|construction-modulaire))/index\\.html$",
+      "match": "^(leistungen/(bungalows|modulbau|containerbau)|en/services/(bungalows|modular-buildings|containers)|nl/diensten/(bungalows|modulaire-bouw|containerbouw)|da/ydelser/(bungalower|modulbyggeri|containerbyggeri)|fr/services/(bungalows|construction-modulaire|containers))/index\\.html$",
       "appendix": "keep",
-      "why": "A bungalow or a module set on a plot is a building. Where it may stand and who decides that is the reader's next question, in every one of the five markets."
+      "why": "A bungalow, a module or a container set on a plot is a building. Where it may stand and who decides that is the reader's next question, in every one of the five markets."
     }
   ],
-
   "dropped_trees": [
     {
       "match": "^(leistungen/(stahlbau|moebel-nach-mass)|en/services/(steel-structures|bespoke-furniture)|nl/diensten/(staalconstructies|meubels-op-maat)|da/ydelser/(staalkonstruktioner|specialfremstillede-moebler)|fr/services/(structures-acier|mobilier-sur-mesure))/",

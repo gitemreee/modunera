@@ -46,8 +46,8 @@ const COUNTRY_SLUG = {
   nl: LOCALES.nl.countrySlugs, da: LOCALES.da.countrySlugs, fr: LOCALES.fr.countrySlugs,
 };
 const SERVICE_SLUG = {
-  de: { modular: "modulbau", steel: "stahlbau", bungalow: "bungalows", furniture: "moebel-nach-mass" },
-  en: { modular: "modular-buildings", steel: "steel-structures", bungalow: "bungalows", furniture: "bespoke-furniture" },
+  de: { modular: "modulbau", steel: "stahlbau", bungalow: "bungalows", container: "containerbau", furniture: "moebel-nach-mass" },
+  en: { modular: "modular-buildings", steel: "steel-structures", bungalow: "bungalows", container: "containers", furniture: "bespoke-furniture" },
   nl: LOCALES.nl.serviceSlugs, da: LOCALES.da.serviceSlugs, fr: LOCALES.fr.serviceSlugs,
 };
 const SECTION = {
@@ -75,7 +75,7 @@ for (const code of ["DE", "NL", "DK", "LU", "CH"]) {
   addCluster(perLang((lang) => `${SECTION.countries[lang]}${COUNTRY_SLUG[lang][code]}/`));
   addCluster(perLang((lang) => `${SECTION.questions[lang]}${COUNTRY_SLUG[lang][code]}/`));
 }
-for (const key of ["modular", "steel", "bungalow", "furniture"]) {
+for (const key of ["modular", "steel", "bungalow", "container", "furniture"]) {
   addCluster(perLang((lang) => `${SECTION.services[lang]}${SERVICE_SLUG[lang][key]}/`));
 }
 for (let n = 1; n <= 8; n += 1) {

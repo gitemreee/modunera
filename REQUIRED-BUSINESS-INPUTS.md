@@ -91,6 +91,36 @@ site can use in all five markets. A dirty one means the delivery figures in
 `/preisvergleich/` are understated and must be revised before anyone quotes from
 them.
 
+## 6a. Containers — what the delivery price actually covers
+
+Added 2026-08-17, when container construction became the sixth capability.
+
+The owner states that the German container price is quoted **delivered to the
+address**. That is the owner asserting a commercial term of their own business
+and the site now says it. It is also the only place on the site where delivery is
+inside a price rather than beside it: `data/pricing.json` carries a separate
+delivery tariff per market for the eight tiny-house models, and every service page
+lists unloading, foundation, connections and permits as excluded.
+
+The container pages are written to that same boundary — price to the address,
+everything from the unloading onwards separate — because nothing said otherwise.
+Confirm it, or correct it:
+
+- [ ] Does "delivered to the address" include **unloading**, or does the buyer
+      provide crane and manoeuvring space? The pages currently say the buyer does.
+- [ ] Which delivery term is meant, in the words a contract would use — who
+      carries the risk in transit, and who is importer of record?
+- [ ] Does it hold for every German address, or only within some area?
+- [ ] For the Netherlands, Denmark, Luxembourg and Switzerland, is delivery
+      quoted by route as the pages now say, or is there a comparable term?
+
+Until this is answered no container price may be published at all, and the
+delivery sentence stays as written: what is in it, and what is not.
+
+Still blocked for containers, exactly as for the eight models: any size, panel
+thickness, steel grade, certification, price or lead time. Sections 2 to 5 apply
+to this product too.
+
 ## 7. The production FAQ answers its own sixty questions around these gaps
 
 `/produktion-faq/` and `/en/production-faq/` answer all sixty questions from

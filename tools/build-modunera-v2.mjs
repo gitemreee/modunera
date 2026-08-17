@@ -156,9 +156,10 @@ const MENU = {
       ]},
       { label: "Vorteile", href: "vorteile/" },
       { label: "Weitere Bauten", menu: [
-        ["leistungen/", "Übersicht", "Modul, Stahl, Bungalow, Möbel"],
+        ["leistungen/", "Übersicht", "Modul, Stahl, Container, Bungalow, Möbel"],
         ["leistungen/modulbau/", "Modulbau", "Erweiterbare Raummodule"],
         ["leistungen/stahlbau/", "Stahlbau", "Tragende Konstruktionen"],
+        ["leistungen/containerbau/", "Containerbau", "Raumcontainer, auch als Leercontainer"],
         ["leistungen/bungalows/", "Bungalows", "Ebenerdige Einheiten"],
         ["leistungen/moebel-nach-mass/", "Möbel nach Maß", "Küchen und Einbauten"],
       ]},
@@ -234,9 +235,10 @@ const MENU = {
       ]},
       { label: "Advantages", href: "en/advantages/" },
       { label: "Other structures", menu: [
-        ["en/services/", "Overview", "Modular, steel, bungalows, furniture"],
+        ["en/services/", "Overview", "Modular, steel, containers, bungalows, furniture"],
         ["en/services/modular-buildings/", "Modular buildings", "Expandable modules"],
         ["en/services/steel-structures/", "Steel structures", "Load-bearing frames"],
+        ["en/services/containers/", "Containers", "Built as a unit, shell available"],
         ["en/services/bungalows/", "Bungalows", "Single-level units"],
         ["en/services/bespoke-furniture/", "Bespoke furniture", "Kitchens and built-ins"],
       ]},
@@ -442,19 +444,19 @@ const CLOSE_MARK = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false
    translated, so the Dutch and Danish sections no longer open a German panel. */
 const DOCK_COPY = {
   de: { dialog: "WhatsApp Kontakt", reply: "Antwort meist am selben Tag", close: "Schließen", intro: "Wir fertigen nach eigener Spezifikation und liefern nach Europa:", cta: "Projekt starten", phone: "Anrufen", open: "WhatsApp öffnen",
-    services: ["Tiny Houses", "Modulbau", "Stahlbau", "Bungalows", "Möbel nach Maß"],
+    services: ["Tiny Houses", "Modulbau", "Stahlbau", "Containerbau", "Bungalows", "Möbel nach Maß"],
     message: "Hallo MODUNERA. Zielland/Ort: __. Nutzung: __. Personen: __. Budget: __. Bitte senden Sie mir eine Ersteinschätzung." },
   en: { dialog: "WhatsApp contact", reply: "Replies on working days", close: "Close", intro: "We build to our own specification and deliver across Europe:", cta: "Start your project", phone: "Call us", open: "Open WhatsApp",
-    services: ["Tiny houses", "Modular buildings", "Steel structures", "Bungalows", "Bespoke furniture"],
+    services: ["Tiny houses", "Modular buildings", "Steel structures", "Containers", "Bungalows", "Bespoke furniture"],
     message: "Hello MODUNERA. Destination/place: __. Intended use: __. People: __. Budget: __. Please send a first assessment." },
   nl: { dialog: "WhatsApp-contact", reply: "Meestal dezelfde dag antwoord", close: "Sluiten", intro: "Wij bouwen naar eigen specificatie en leveren in heel Europa:", cta: "Start uw project", phone: "Bel ons", open: "WhatsApp openen",
-    services: ["Tiny houses", "Modulaire bouw", "Staalconstructies", "Bungalows", "Meubels op maat"],
+    services: ["Tiny houses", "Modulaire bouw", "Staalconstructies", "Containerbouw", "Bungalows", "Meubels op maat"],
     message: "Hallo MODUNERA. Land/plaats: __. Gebruik: __. Personen: __. Budget: __. Graag een eerste inschatting." },
   da: { dialog: "WhatsApp-kontakt", reply: "Svarer som regel samme dag", close: "Luk", intro: "Vi bygger efter egen specifikation og leverer i hele Europa:", cta: "Start dit projekt", phone: "Ring til os", open: "Åbn WhatsApp",
-    services: ["Tiny houses", "Modulbyggeri", "Stålkonstruktioner", "Bungalower", "Specialfremstillede møbler"],
+    services: ["Tiny houses", "Modulbyggeri", "Stålkonstruktioner", "Containerbyggeri", "Bungalower", "Specialfremstillede møbler"],
     message: "Hej MODUNERA. Land/sted: __. Anvendelse: __. Personer: __. Budget: __. Send gerne en første vurdering." },
   fr: { dialog: "Contact WhatsApp", reply: "Réponse le plus souvent le jour même", close: "Fermer", intro: "Nous fabriquons selon notre propre cahier des charges et livrons partout en Europe :", cta: "Démarrer votre projet", phone: "Nous appeler", open: "Ouvrir WhatsApp",
-    services: ["Tiny houses", "Construction modulaire", "Structures acier", "Bungalows", "Mobilier sur mesure"],
+    services: ["Tiny houses", "Construction modulaire", "Structures acier", "Containers", "Bungalows", "Mobilier sur mesure"],
     message: "Bonjour MODUNERA. Pays/lieu : __. Usage : __. Personnes : __. Budget : __. Merci de m'envoyer une première estimation." },
 };
 
@@ -466,7 +468,7 @@ function whatsappDock(lang) {
 
 function footer(root, lang) {
   const de = lang === "de";
-  return `<section class="cta-band"><div class="container cta-inner"><div><h2>${de ? "Projekt in 2 Minuten starten." : "Start your project in two minutes."}</h2><p>${de ? "Zielland, Nutzung und Wunschmodell per WhatsApp senden – wir strukturieren den nächsten Schritt." : "Send your country, intended use and preferred model via WhatsApp and we will structure the next step."}</p></div><a class="btn btn-light" href="${waLink(de ? "Hallo MODUNERA, mein Zielland ist: __. Nutzung: __. Wunschgröße/Modell: __. Bitte kontaktieren Sie mich." : "Hello MODUNERA. Destination country: __. Intended use: __. Preferred size/model: __. Please contact me.")}" target="_blank" rel="noopener">${de ? "WhatsApp-Anfrage →" : "WhatsApp enquiry →"}</a></div></section><footer class="footer"><div class="container"><div class="footer-grid"><div>${brandLockup(root, root + (de ? "index.html" : "en/"), lang)}<p>${de ? "Tiny Houses als Kernprodukt. Dazu Modulbau, Stahlbau, Bungalows und maßgefertigte Möbel – direkt aus eigener Produktion für Europa." : "Tiny houses are our core product, complemented by modular buildings, steel structures, bungalows and bespoke furniture for Europe."}</p><a href="tel:${PHONE_TEL}">${PHONE_DISPLAY}</a></div><div><h4>${de ? "Länder" : "Countries"}</h4><a href="${root}${de ? "laender/deutschland/" : "en/countries/germany/"}">${de ? "Deutschland" : "Germany"}</a><a href="${root}${de ? "laender/niederlande/" : "en/countries/netherlands/"}">${de ? "Niederlande" : "Netherlands"}</a><a href="${root}${de ? "laender/daenemark/" : "en/countries/denmark/"}">${de ? "Dänemark" : "Denmark"}</a><a href="${root}${de ? "laender/luxemburg/" : "en/countries/luxembourg/"}">Luxembourg</a><a href="${root}${de ? "laender/schweiz/" : "en/countries/switzerland/"}">${de ? "Schweiz" : "Switzerland"}</a></div><div><h4>${de ? "Vergleichen" : "Compare"}</h4><a href="${root}${de ? "modellvergleich/" : "en/model-comparison/"}">${de ? "Modellvergleich" : "Model comparison"}</a><a href="${root}${de ? "preisvergleich/" : "en/price-comparison/"}">${de ? "Preisvergleich" : "Price comparison"}</a><a href="${root}${de ? "vorteile/" : "en/advantages/"}">${de ? "Vorteile" : "Advantages"}</a><a href="${root}studio/">Design Studio</a></div><div><h4>${de ? "Wissen" : "Knowledge"}</h4><a href="${root}${de ? "ratgeber/" : "en/guides/"}">${de ? "Ratgeber" : "Guides"}</a><a href="${root}${de ? "blog/europa/" : "en/guides/"}">${de ? "Europa-Guides" : "Europe guides"}</a><a href="${root}${de ? "faq/europa/" : "en/faq/"}">FAQ</a><a href="${root}kontakt/">${de ? "Kontakt" : "Contact"}</a></div></div><div class="footer-bottom"><span>© <span data-year>2026</span> MODUNERA. ${de ? "Alle Rechte vorbehalten." : "All rights reserved."}</span><span>${de ? "Hinweise ersetzen keine Behörden-, Rechts-, Steuer- oder Statikberatung." : "Guidance does not replace authority, legal, tax or structural advice."}</span></div></div></footer>${whatsappDock(lang)}<script src="${root}assets/js/main.js"></script></body></html>`;
+  return `<section class="cta-band"><div class="container cta-inner"><div><h2>${de ? "Projekt in 2 Minuten starten." : "Start your project in two minutes."}</h2><p>${de ? "Zielland, Nutzung und Wunschmodell per WhatsApp senden – wir strukturieren den nächsten Schritt." : "Send your country, intended use and preferred model via WhatsApp and we will structure the next step."}</p></div><a class="btn btn-light" href="${waLink(de ? "Hallo MODUNERA, mein Zielland ist: __. Nutzung: __. Wunschgröße/Modell: __. Bitte kontaktieren Sie mich." : "Hello MODUNERA. Destination country: __. Intended use: __. Preferred size/model: __. Please contact me.")}" target="_blank" rel="noopener">${de ? "WhatsApp-Anfrage →" : "WhatsApp enquiry →"}</a></div></section><footer class="footer"><div class="container"><div class="footer-grid"><div>${brandLockup(root, root + (de ? "index.html" : "en/"), lang)}<p>${de ? "Tiny Houses als Kernprodukt. Dazu Modulbau, Stahlbau, Containerbau, Bungalows und maßgefertigte Möbel – direkt aus eigener Produktion für Europa." : "Tiny houses are our core product, complemented by modular buildings, steel structures, containers, bungalows and bespoke furniture for Europe."}</p><a href="tel:${PHONE_TEL}">${PHONE_DISPLAY}</a></div><div><h4>${de ? "Länder" : "Countries"}</h4><a href="${root}${de ? "laender/deutschland/" : "en/countries/germany/"}">${de ? "Deutschland" : "Germany"}</a><a href="${root}${de ? "laender/niederlande/" : "en/countries/netherlands/"}">${de ? "Niederlande" : "Netherlands"}</a><a href="${root}${de ? "laender/daenemark/" : "en/countries/denmark/"}">${de ? "Dänemark" : "Denmark"}</a><a href="${root}${de ? "laender/luxemburg/" : "en/countries/luxembourg/"}">Luxembourg</a><a href="${root}${de ? "laender/schweiz/" : "en/countries/switzerland/"}">${de ? "Schweiz" : "Switzerland"}</a></div><div><h4>${de ? "Vergleichen" : "Compare"}</h4><a href="${root}${de ? "modellvergleich/" : "en/model-comparison/"}">${de ? "Modellvergleich" : "Model comparison"}</a><a href="${root}${de ? "preisvergleich/" : "en/price-comparison/"}">${de ? "Preisvergleich" : "Price comparison"}</a><a href="${root}${de ? "vorteile/" : "en/advantages/"}">${de ? "Vorteile" : "Advantages"}</a><a href="${root}studio/">Design Studio</a></div><div><h4>${de ? "Wissen" : "Knowledge"}</h4><a href="${root}${de ? "ratgeber/" : "en/guides/"}">${de ? "Ratgeber" : "Guides"}</a><a href="${root}${de ? "blog/europa/" : "en/guides/"}">${de ? "Europa-Guides" : "Europe guides"}</a><a href="${root}${de ? "faq/europa/" : "en/faq/"}">FAQ</a><a href="${root}kontakt/">${de ? "Kontakt" : "Contact"}</a></div></div><div class="footer-bottom"><span>© <span data-year>2026</span> MODUNERA. ${de ? "Alle Rechte vorbehalten." : "All rights reserved."}</span><span>${de ? "Hinweise ersetzen keine Behörden-, Rechts-, Steuer- oder Statikberatung." : "Guidance does not replace authority, legal, tax or structural advice."}</span></div></div></footer>${whatsappDock(lang)}<script src="${root}assets/js/main.js"></script></body></html>`;
 }
 
 const faqMarkup = (items) =>
