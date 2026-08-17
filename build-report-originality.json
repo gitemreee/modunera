@@ -2,43 +2,11 @@
   "status": "ok",
   "indexed_pages": 514,
   "pages_with_prose": 514,
-  "mean_originality_pct": 49.5,
+  "mean_originality_pct": 50,
   "median_originality_pct": 42.9,
-  "pages_below_25pct": 161,
+  "pages_below_25pct": 155,
   "pages_below_50pct": 276,
   "worst_pages": [
-    {
-      "rel": "fr/services/bungalows/index.html",
-      "url": "https://modunera.com/fr/services/bungalows/",
-      "sentences": 45,
-      "original": 2,
-      "originality": 4.4,
-      "repeated_sentences": 47
-    },
-    {
-      "rel": "fr/services/construction-modulaire/index.html",
-      "url": "https://modunera.com/fr/services/construction-modulaire/",
-      "sentences": 45,
-      "original": 2,
-      "originality": 4.4,
-      "repeated_sentences": 47
-    },
-    {
-      "rel": "nl/diensten/bungalows/index.html",
-      "url": "https://modunera.com/nl/diensten/bungalows/",
-      "sentences": 45,
-      "original": 2,
-      "originality": 4.4,
-      "repeated_sentences": 47
-    },
-    {
-      "rel": "nl/diensten/modulaire-bouw/index.html",
-      "url": "https://modunera.com/nl/diensten/modulaire-bouw/",
-      "sentences": 45,
-      "original": 2,
-      "originality": 4.4,
-      "repeated_sentences": 47
-    },
     {
       "rel": "en/models/md-8/index.html",
       "url": "https://modunera.com/en/models/md-8/",
@@ -62,22 +30,6 @@
       "original": 6,
       "originality": 4.7,
       "repeated_sentences": 124
-    },
-    {
-      "rel": "da/ydelser/bungalower/index.html",
-      "url": "https://modunera.com/da/ydelser/bungalower/",
-      "sentences": 43,
-      "original": 2,
-      "originality": 4.7,
-      "repeated_sentences": 45
-    },
-    {
-      "rel": "da/ydelser/modulbyggeri/index.html",
-      "url": "https://modunera.com/da/ydelser/modulbyggeri/",
-      "sentences": 43,
-      "original": 2,
-      "originality": 4.7,
-      "repeated_sentences": 45
     },
     {
       "rel": "nl/modellen/md-8/index.html",
@@ -150,22 +102,6 @@
       "original": 3,
       "originality": 5.7,
       "repeated_sentences": 50
-    },
-    {
-      "rel": "en/questions/switzerland/index.html",
-      "url": "https://modunera.com/en/questions/switzerland/",
-      "sentences": 53,
-      "original": 3,
-      "originality": 5.7,
-      "repeated_sentences": 50
-    },
-    {
-      "rel": "fr/questions-par-pays/pays-bas/index.html",
-      "url": "https://modunera.com/fr/questions-par-pays/pays-bas/",
-      "sentences": 53,
-      "original": 3,
-      "originality": 5.7,
-      "repeated_sentences": 50
     }
   ],
   "most_repeated_sentences": [
@@ -228,46 +164,6 @@
       "pages": 65,
       "words": 21,
       "sentence": "außerhalb der bauzone ist wohnen nur in eng begrenzten ausnahmen zulässig das ist der häufigste grund aus dem schweizer projekte scheitern"
-    },
-    {
-      "pages": 64,
-      "words": 9,
-      "sentence": "konfigurator öffnen weiterlesen # faq lokale seiten material qualität"
-    },
-    {
-      "pages": 63,
-      "words": 10,
-      "sentence": "dieselbe frage wird in kopenhagen anders beantwortet als in zürich"
-    },
-    {
-      "pages": 63,
-      "words": 14,
-      "sentence": "diese fünf punkte gehören in jede projektprüfung unabhängig davon welches detail sie gerade recherchieren"
-    },
-    {
-      "pages": 63,
-      "words": 11,
-      "sentence": "deutschland zuständig die untere bauaufsichtsbehörde des kreises oder der kreisfreien stadt"
-    },
-    {
-      "pages": 63,
-      "words": 12,
-      "sentence": "maßgeblicher plan der bebauungsplan ersatzweise die beurteilung nach # oder # baugb"
-    },
-    {
-      "pages": 63,
-      "words": 19,
-      "sentence": "dauerwohnen ist möglich wenn das grundstück im innenbereich liegt oder ein bebauungsplan wohnnutzung zulässt und das vorhaben genehmigt wird"
-    },
-    {
-      "pages": 63,
-      "words": 4,
-      "sentence": "lieferung ab # einfuhr"
-    },
-    {
-      "pages": 63,
-      "words": 11,
-      "sentence": "es gilt der deutsche umsatzsteuersatz von # prozent auf die einfuhr"
     }
   ],
   "pages": [
@@ -1282,9 +1178,9 @@
     {
       "rel": "da/index.html",
       "url": "https://modunera.com/da/",
-      "sentences": 22,
-      "original": 13,
-      "originality": 59.1,
+      "sentences": 21,
+      "original": 12,
+      "originality": 57.1,
       "repeated_sentences": 9
     },
     {
@@ -1826,34 +1722,34 @@
     {
       "rel": "da/ydelser/bungalower/index.html",
       "url": "https://modunera.com/da/ydelser/bungalower/",
-      "sentences": 43,
-      "original": 2,
-      "originality": 4.7,
-      "repeated_sentences": 45
+      "sentences": 74,
+      "original": 27,
+      "originality": 36.5,
+      "repeated_sentences": 51
     },
     {
       "rel": "da/ydelser/modulbyggeri/index.html",
       "url": "https://modunera.com/da/ydelser/modulbyggeri/",
-      "sentences": 43,
-      "original": 2,
-      "originality": 4.7,
-      "repeated_sentences": 45
+      "sentences": 76,
+      "original": 29,
+      "originality": 38.2,
+      "repeated_sentences": 51
     },
     {
       "rel": "da/ydelser/specialfremstillede-moebler/index.html",
       "url": "https://modunera.com/da/ydelser/specialfremstillede-moebler/",
-      "sentences": 3,
-      "original": 2,
-      "originality": 66.7,
-      "repeated_sentences": 1
+      "sentences": 35,
+      "original": 28,
+      "originality": 80,
+      "repeated_sentences": 7
     },
     {
       "rel": "da/ydelser/staalkonstruktioner/index.html",
       "url": "https://modunera.com/da/ydelser/staalkonstruktioner/",
-      "sentences": 3,
-      "original": 2,
-      "originality": 66.7,
-      "repeated_sentences": 1
+      "sentences": 36,
+      "original": 29,
+      "originality": 80.6,
+      "repeated_sentences": 7
     },
     {
       "rel": "downloads/index.html",
@@ -2714,9 +2610,9 @@
     {
       "rel": "fr/index.html",
       "url": "https://modunera.com/fr/",
-      "sentences": 23,
-      "original": 13,
-      "originality": 56.5,
+      "sentences": 22,
+      "original": 12,
+      "originality": 54.5,
       "repeated_sentences": 10
     },
     {
@@ -3242,34 +3138,34 @@
     {
       "rel": "fr/services/bungalows/index.html",
       "url": "https://modunera.com/fr/services/bungalows/",
-      "sentences": 45,
-      "original": 2,
-      "originality": 4.4,
-      "repeated_sentences": 47
+      "sentences": 78,
+      "original": 28,
+      "originality": 35.9,
+      "repeated_sentences": 54
     },
     {
       "rel": "fr/services/construction-modulaire/index.html",
       "url": "https://modunera.com/fr/services/construction-modulaire/",
-      "sentences": 45,
-      "original": 2,
-      "originality": 4.4,
-      "repeated_sentences": 47
+      "sentences": 83,
+      "original": 33,
+      "originality": 39.8,
+      "repeated_sentences": 54
     },
     {
       "rel": "fr/services/mobilier-sur-mesure/index.html",
       "url": "https://modunera.com/fr/services/mobilier-sur-mesure/",
-      "sentences": 3,
-      "original": 2,
-      "originality": 66.7,
-      "repeated_sentences": 1
+      "sentences": 36,
+      "original": 28,
+      "originality": 77.8,
+      "repeated_sentences": 8
     },
     {
       "rel": "fr/services/structures-acier/index.html",
       "url": "https://modunera.com/fr/services/structures-acier/",
-      "sentences": 3,
-      "original": 2,
-      "originality": 66.7,
-      "repeated_sentences": 1
+      "sentences": 37,
+      "original": 29,
+      "originality": 78.4,
+      "repeated_sentences": 8
     },
     {
       "rel": "fragen/index.html",
@@ -3546,9 +3442,9 @@
     {
       "rel": "nl/index.html",
       "url": "https://modunera.com/nl/",
-      "sentences": 23,
-      "original": 13,
-      "originality": 56.5,
+      "sentences": 22,
+      "original": 12,
+      "originality": 54.5,
       "repeated_sentences": 10
     },
     {
@@ -3866,34 +3762,34 @@
     {
       "rel": "nl/diensten/bungalows/index.html",
       "url": "https://modunera.com/nl/diensten/bungalows/",
-      "sentences": 45,
-      "original": 2,
-      "originality": 4.4,
-      "repeated_sentences": 47
+      "sentences": 76,
+      "original": 27,
+      "originality": 35.5,
+      "repeated_sentences": 53
     },
     {
       "rel": "nl/diensten/meubels-op-maat/index.html",
       "url": "https://modunera.com/nl/diensten/meubels-op-maat/",
-      "sentences": 3,
-      "original": 2,
-      "originality": 66.7,
-      "repeated_sentences": 1
+      "sentences": 35,
+      "original": 28,
+      "originality": 80,
+      "repeated_sentences": 7
     },
     {
       "rel": "nl/diensten/modulaire-bouw/index.html",
       "url": "https://modunera.com/nl/diensten/modulaire-bouw/",
-      "sentences": 45,
-      "original": 2,
-      "originality": 4.4,
-      "repeated_sentences": 47
+      "sentences": 81,
+      "original": 32,
+      "originality": 39.5,
+      "repeated_sentences": 53
     },
     {
       "rel": "nl/diensten/staalconstructies/index.html",
       "url": "https://modunera.com/nl/diensten/staalconstructies/",
-      "sentences": 3,
-      "original": 2,
-      "originality": 66.7,
-      "repeated_sentences": 1
+      "sentences": 37,
+      "original": 30,
+      "originality": 81.1,
+      "repeated_sentences": 7
     },
     {
       "rel": "nl/gidsen/index.html",

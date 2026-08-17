@@ -51,6 +51,11 @@ const SOURCES = {
 const CODES = ["DE", "NL", "DK", "LU", "CH"];
 const SERVICE_KEYS = ["modular", "steel", "bungalow", "furniture"];
 
+/* The same per-service material German and English render, now carrying nl, da
+   and fr as well. See the header comment in data/services.json for the rule the
+   entries are written to. */
+const SERVICE_DETAIL = JSON.parse(await readFile(join(ROOT, "data/services.json"), "utf8")).services;
+
 /* Country copy per locale. Two sentences each: what the authority is, and what
    that means for the site. Written per language rather than translated. */
 const COUNTRY_COPY = {
@@ -237,6 +242,17 @@ const SERVICES_INTRO = {
   fr: "Les savoir-faire MODUNERA à côté des tiny houses :",
 };
 
+/* The German and English hubs list the tiny house as the first capability and
+   point it at the model tree rather than giving it a thin fifth service page
+   that would compete with /modelle/ for the one term the business most needs.
+   These three hubs showed the other capabilities and left the core product off
+   the list, which reads as though it is not one. */
+const SERVICE_CORE = {
+  nl: (root, cfg) => ({ href: `${root}${cfg.code}/${cfg.paths.models}/`, name: "Tiny houses", intro: "Het hoofdbedrijf: acht modellen van MD 1 tot MD 8, op een eigen chassis, voor wonen, vakantieverhuur en werkruimte." }),
+  da: (root, cfg) => ({ href: `${root}${cfg.code}/${cfg.paths.models}/`, name: "Tiny houses", intro: "Kerneforretningen: otte modeller fra MD 1 til MD 8, på eget chassis, til bolig, ferieudlejning og arbejdsrum." }),
+  fr: (root, cfg) => ({ href: `${root}${cfg.code}/${cfg.paths.models}/`, name: "Tiny houses", intro: "Le cœur de métier : huit modèles de MD 1 à MD 8, sur châssis propre, pour l'habitat, la location saisonnière et le bureau." }),
+};
+
 function servicesIndex(cfg, locales) {
   const file = `${cfg.code}/${cfg.paths.services}/index.html`;
   const root = rootFor(file);
@@ -245,22 +261,98 @@ function servicesIndex(cfg, locales) {
       schema: [{ "@context": "https://schema.org", "@type": "CollectionPage", name: cfg.labels.services, url: canonicalFor(file) }] }) +
     chrome(root, cfg) +
     `<main id="main"><section class="page-hero"><div class="container"><div class="eyebrow">MODUNERA</div><h1>${esc(SERVICES_H1[cfg.code])}</h1><p>${esc(cfg.sections.whyIntro)}</p></div></section>` +
-    `<section class="section"><div class="container"><div class="journey-grid">${SERVICE_KEYS.map((k, i) => `<a class="journey-card" href="${root}${cfg.code}/${cfg.paths.services}/${cfg.serviceSlugs[k]}/"><div><span class="num">0${i + 1}</span><h3>${esc(cfg.serviceNames[k])}</h3><p>${esc(SERVICE_COPY[cfg.code][k])}</p></div><span class="arrow">↗</span></a>`).join("")}</div></div></section></main>` +
+    `<section class="section"><div class="container"><div class="journey-grid">${[SERVICE_CORE[cfg.code](root, cfg), ...SERVICE_KEYS.map((k) => ({ href: `${root}${cfg.code}/${cfg.paths.services}/${cfg.serviceSlugs[k]}/`, name: cfg.serviceNames[k], intro: SERVICE_COPY[cfg.code][k] }))].map((e, i) => `<a class="journey-card" href="${e.href}"><div><span class="num">${String(i + 1).padStart(2, "0")}</span><h3>${esc(e.name)}</h3><p>${esc(e.intro)}</p></div><span class="arrow">↗</span></a>`).join("")}</div></div></section></main>` +
     footer(root, cfg)
   );
 }
+
+/* The three locale service pages were a hero, a grid of the other services and a
+   legal note: 95 words, of which the only sentence written about the service
+   itself was the one-line intro. Measured on the indexed set,
+   fr/services/bungalows/ had two original sentences in forty-seven — 4% — and it
+   was not the worst thing on the page, because the other forty-five were the
+   five-market appendix, which said nothing about bespoke furniture either.
+
+   They now render the same five sections German and English have had since
+   data/services.json was written: the lead, what the capability covers, what
+   decides whether it can be done, what is in and out of scope, and the questions
+   that come before a quotation. The material is written per market — the Dutch
+   entries turn on soft ground and the omgevingsplan, the Danish on zone status
+   and coastal exposure, the French on serving Luxembourg's PAG/PAP and Suisse
+   romande's zone à bâtir in one language. */
+const SERVICE_DATA_KEY = { modular: "modulbau", steel: "stahlbau", bungalow: "bungalows", furniture: "moebel-nach-mass" };
+const listMarkup = (items) => `<ul class="check-list">${items.map((item) => `<li>${esc(item)}</li>`).join("")}</ul>`;
+
+const SERVICE_SECTIONS = {
+  nl: {
+    lead: "Kort gezegd",
+    makesEyebrow: "Wat wij maken",
+    makesH2: (n) => `Wat wij onder ${n} maken.`,
+    makesLead: "Tiny houses blijven het hoofdbedrijf. Dit vakgebied vult dat aan waar een project meer vloeroppervlak, een andere draagconstructie of een eigen levering nodig heeft.",
+    decidesEyebrow: "Haalbaarheid",
+    decidesH2: "Waar het werkelijk op wordt beslist.",
+    decidesLead: "Deze punten beslissen de meeste projecten in dit vakgebied. Vroeg uitgezocht kosten ze niets; laat uitgezocht kosten ze de planning.",
+    scopeEyebrow: "Afbakening",
+    scopeH2: "Wat inbegrepen is — en wat niet.",
+    scopeLead: "De tweede kolom is de belangrijkste. Fundering, aansluiting en vergunning zijn de posten die niet in een offerte staan en die een project toch nodig heeft.",
+    scopeIn: "Inbegrepen",
+    scopeOut: "Niet inbegrepen",
+    faqH2: "Vragen die vóór de offerte komen.",
+    others: "Overige capaciteiten",
+  },
+  da: {
+    lead: "Kort fortalt",
+    makesEyebrow: "Hvad vi bygger",
+    makesH2: (n) => `Hvad vi bygger under ${n}.`,
+    makesLead: "Tiny houses er fortsat hovedforretningen. Dette felt udvider den, hvor et projekt har brug for mere areal, en anden bærende konstruktion eller en levering for sig.",
+    decidesEyebrow: "Gennemførlighed",
+    decidesH2: "Hvad der reelt afgør det.",
+    decidesLead: "Disse punkter afgør de fleste projekter i feltet. Afklaret tidligt koster de ingenting; afklaret sent koster de terminen.",
+    scopeEyebrow: "Afgrænsning",
+    scopeH2: "Hvad der er med — og hvad der ikke er.",
+    scopeLead: "Den anden kolonne er den vigtigste. Fundament, tilslutning og tilladelse er de poster, et tilbud ikke indeholder, og som projektet alligevel har brug for.",
+    scopeIn: "Med i leverancen",
+    scopeOut: "Ikke med",
+    faqH2: "Spørgsmål, der kommer før tilbuddet.",
+    others: "Øvrige kompetencer",
+  },
+  fr: {
+    lead: "En résumé",
+    makesEyebrow: "Ce que nous fabriquons",
+    makesH2: (n) => `Ce que nous fabriquons sous ${n}.`,
+    makesLead: "Les tiny houses restent l'activité principale. Ce savoir-faire la prolonge lorsqu'un projet demande plus de surface, une autre structure porteuse ou une livraison à part.",
+    decidesEyebrow: "Faisabilité",
+    decidesH2: "Ce qui décide réellement.",
+    decidesLead: "Ces points décident la plupart des projets dans ce domaine. Réglés tôt, ils ne coûtent rien ; réglés tard, ils coûtent le calendrier.",
+    scopeEyebrow: "Périmètre",
+    scopeH2: "Ce qui est compris, et ce qui ne l'est pas.",
+    scopeLead: "La seconde colonne est la plus importante. Fondation, raccordement et autorisation sont les postes qu'une offre ne contient pas et dont le projet a besoin malgré tout.",
+    scopeIn: "Compris",
+    scopeOut: "Non compris",
+    faqH2: "Les questions qui précèdent l'offre.",
+    others: "Autres savoir-faire",
+  },
+};
 
 function servicePage(cfg, key, locales) {
   const file = `${cfg.code}/${cfg.paths.services}/${cfg.serviceSlugs[key]}/index.html`;
   const root = rootFor(file);
   const name = cfg.serviceNames[key];
   const copy = SERVICE_COPY[cfg.code][key];
+  const s = SERVICE_SECTIONS[cfg.code];
+  const detail = SERVICE_DETAIL[SERVICE_DATA_KEY[key]];
+  const faq = detail.faq[cfg.code];
   return (
     head({ file, cfg, title: `${name} | MODUNERA`, description: `${copy} ${SERVICE_NOTE[cfg.code]}`, image: "mc5-exterior.webp", pageKey: "service", args: { service: key }, locales,
-      schema: [{ "@context": "https://schema.org", "@type": "Service", name, description: copy, provider: { "@type": "Organization", name: "MODUNERA" }, areaServed: CODES }] }) +
+      schema: [{ "@context": "https://schema.org", "@type": "Service", name, description: copy, provider: { "@type": "Organization", name: "MODUNERA" }, areaServed: CODES }, faqSchema(faq)] }) +
     chrome(root, cfg) +
     `<main id="main"><section class="page-hero"><div class="container"><div class="breadcrumbs">MODUNERA · ${esc(cfg.labels.services)}</div><div class="eyebrow">${esc(cfg.labels.services)}</div><h1>${esc(name)}</h1><p>${esc(copy)}</p><div class="hero-actions"><a class="btn btn-primary" href="${waLink(cfg.wa)}" target="_blank" rel="noopener">WhatsApp</a></div></div></section>` +
-    `<section class="section"><div class="container"><div class="journey-grid">${SERVICE_KEYS.filter((k) => k !== key).map((k, i) => `<a class="journey-card" href="${root}${cfg.code}/${cfg.paths.services}/${cfg.serviceSlugs[k]}/"><div><span class="num">0${i + 1}</span><h3>${esc(cfg.serviceNames[k])}</h3><p>${esc(SERVICE_COPY[cfg.code][k])}</p></div><span class="arrow">↗</span></a>`).join("")}</div><p class="legal-note" style="margin-top:22px">${esc(cfg.sections.legalNote)}</p></div></section></main>` +
+    `<section class="section section-tight"><div class="container"><div class="answer-box"><strong>${esc(s.lead)}</strong><p>${esc(detail.lead[cfg.code])}</p></div></div></section>` +
+    `<section class="section"><div class="container"><div class="section-header"><div><div class="eyebrow">${esc(s.makesEyebrow)}</div><h2>${esc(s.makesH2(name))}</h2></div><p>${esc(s.makesLead)}</p></div>${listMarkup(detail.makes[cfg.code])}</div></section>` +
+    `<section class="section section-soft"><div class="container"><div class="section-header"><div><div class="eyebrow">${esc(s.decidesEyebrow)}</div><h2>${esc(s.decidesH2)}</h2></div><p>${esc(s.decidesLead)}</p></div><div class="benefit-grid">${detail.decides[cfg.code].map(([heading, body], i) => `<div class="benefit"><span class="benefit-number">${String(i + 1).padStart(2, "0")}</span><h3>${esc(heading)}</h3><p>${esc(body)}</p></div>`).join("")}</div></div></section>` +
+    `<section class="section"><div class="container"><div class="section-header"><div><div class="eyebrow">${esc(s.scopeEyebrow)}</div><h2>${esc(s.scopeH2)}</h2></div><p>${esc(s.scopeLead)}</p></div><div class="benefit-grid"><article class="benefit-card"><h3>${esc(s.scopeIn)}</h3>${listMarkup(detail.scope[cfg.code].in)}</article><article class="benefit-card"><h3>${esc(s.scopeOut)}</h3>${listMarkup(detail.scope[cfg.code].out)}</article></div></div></section>` +
+    `<section class="section section-soft"><div class="container"><div class="section-header"><div><div class="eyebrow">FAQ</div><h2>${esc(s.faqH2)}</h2></div></div><div class="faq-list">${faqMarkup(faq)}</div></div></section>` +
+    `<section class="section"><div class="container"><div class="section-header"><div><div class="eyebrow">${esc(cfg.labels.services)}</div><h2>${esc(s.others)}</h2></div></div><div class="journey-grid">${SERVICE_KEYS.filter((k) => k !== key).map((k, i) => `<a class="journey-card" href="${root}${cfg.code}/${cfg.paths.services}/${cfg.serviceSlugs[k]}/"><div><span class="num">0${i + 1}</span><h3>${esc(cfg.serviceNames[k])}</h3><p>${esc(SERVICE_COPY[cfg.code][k])}</p></div><span class="arrow">↗</span></a>`).join("")}</div><p class="legal-note" style="margin-top:22px">${esc(cfg.sections.legalNote)}</p></div></section></main>` +
     footer(root, cfg)
   );
 }
