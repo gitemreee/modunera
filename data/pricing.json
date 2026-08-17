@@ -106,7 +106,7 @@
     "LU": {
       "tariff": "lu",
       "eur": 7000,
-      "note_de": "Durchschnittswert – Route projektbezogen bestätigt",
+      "note_de": "Durchschnittswert – Route für das einzelne Projekt bestätigt",
       "note_en": "Average figure – route confirmed per project"
     }
   }

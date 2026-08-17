@@ -68,6 +68,37 @@ nothing.
 
 All of them are idempotent — a second full run changes nothing.
 
+## Tone
+
+`data/prose-fixes.json` replaces formulaic phrases in the built HTML, on the same
+walk and by the same mechanism as the claim register, and for the same reason:
+the phrases sit in the layer no generator owns — the home page, `/faq/`,
+`/konfigurator/`, `/studio/`, `/downloads/` and the pages baked by the retired
+`tools/generate_scale_v3.py`.
+
+The list is chosen by counting, not by taste. `tools/score-prose-style.mjs` ranks
+filler constructions across the pages in the sitemap by how many pages carry
+each. "professionell" came first — 101 occurrences on 52 pages, every one of them
+from a single f-string in the retired script — and "projektbezogen" second at 91
+on 40.
+
+**Hedges are counted separately and never touched.** "grundsätzlich", "in der
+Regel", "in eng begrenzten Fällen", "unverbindlich" and their translations are
+what let a statement on this site survive being quoted. The scorer reports them
+under `hedges_kept` so a tone pass can see them and leave them alone; the count
+before and after the pass was 1,051 and 1,054.
+
+Two things the measurement said were **not** problems, against expectation. Long
+sentences are 1% of the corpus and the longest are the five-point checklists,
+which are enumerations and read correctly. The English passive rate is high, but
+most of it is an authority granting or restricting something, where the passive
+puts the agency where it belongs.
+
+The scorer's own French list was wrong on first run and has been corrected in
+place: "professionnel" on this site is always a noun — *acheteurs professionnels*,
+*un professionnel habilité* — and "au cas par cas" is a hedge, not filler. A
+measure that flags correct writing is worse than none, because someone acts on it.
+
 ## Languages
 
 German is the root, English is `/en/`, and the three remaining target-market
@@ -114,6 +145,7 @@ built out.
 | Claims that may not be published yet | `data/blocked-claims.json` |
 | The five-market appendix | `APPENDIX` in `tools/build-modunera-depth.mjs` |
 | Which pages carry the appendix | `data/appendix-scope.json` |
+| Formulaic phrases replaced in built HTML | `data/prose-fixes.json` |
 | Home-page model grid, five languages | `HOME_MODELS` in `tools/build-modunera-depth.mjs` |
 | Guide categories | `GUIDE_CATEGORIES` in `tools/build-modunera-v2.mjs` |
 | New market guides | `MARKET_GUIDES` in `tools/build-modunera-v2.mjs` |

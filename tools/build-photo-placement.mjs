@@ -73,7 +73,7 @@ const INSERTIONS = {
       `Stauraum entstehen im selben Haus wie der Rohbau. Diese Aufnahme zeigt eine ` +
       `ausgeführte Einheit, keine Visualisierung.</p>` +
       `<p class="legal-note">Materialstärken, U-Werte und Prüfnachweise stehen im technischen ` +
-      `Datenblatt zum jeweiligen Angebot; auf dieser Seite werden keine Werte genannt, ` +
+      `Datenblatt zum Angebot; auf dieser Seite werden keine Werte genannt, ` +
       `die nicht belegt sind.</p></div></div></section>`,
   },
 };

@@ -1558,6 +1558,49 @@ function tableOfContents(found) {
     .join("")}</div>`;
 }
 
+/* The last legacy prose on the German article library.
+
+   rewriteArticles() replaces the <article> body and the table of contents. It
+   does not touch the <head> or the page-hero paragraph, so the description
+   tools/generate_scale_v3.py baked in 2025 is still what a reader sees first and
+   what Google shows in the result:
+
+     "Akustik im Tiny House professionell planen: Schallübertragung, Raumgefühl
+      und Materialkonzept. Mit Entscheidungslogik, Kostenrahmen, Technik und
+      Checkliste."
+
+   Measured across the 519 indexed pages, "professionell" was the single most
+   repeated filler word on the site — 101 occurrences on 52 pages — and every one
+   of them came from that one f-string. "Professionell planen" tells a reader
+   nothing: nobody offers to plan their house unprofessionally. "Entscheidungs-
+   logik, Kostenrahmen, Technik und Checkliste" is four nouns where a sentence
+   would do.
+
+   Both are replaced here rather than in the retired script, because the retired
+   script is not run and these pages have no other owner. The subject-specific
+   half of the line — what the article is actually about — is kept exactly as it
+   was; only the padding around it changes. Re-running finds nothing to do. */
+/* The formulaic phrases counted by tools/score-prose-style.mjs, replaced from
+   data/prose-fixes.json. Same shape as normaliseClaims(): the phrases sit in the
+   layer no generator owns — the home page, /faq/, /konfigurator/, /studio/ and
+   the pages baked by the retired tools/generate_scale_v3.py — so they are fixed
+   on the built HTML rather than by hand-editing a page.
+
+   "professionell" was the most repeated filler word on the site at 101
+   occurrences across 52 pages, and every one came from one f-string in the
+   retired script. Hedges are not in that file and are not touched. */
+const PROSE_FIXES = JSON.parse(await readFile(join(ROOT, "data/prose-fixes.json"), "utf8")).replacements
+  .map(([from, to]) => ({ from, to }))
+  .sort((a, b) => b.from.length - a.from.length);
+
+function humaniseLegacyLead(html) {
+  let out = html;
+  for (const { from, to } of PROSE_FIXES) {
+    if (out.includes(from)) out = out.split(from).join(to);
+  }
+  return out;
+}
+
 async function rewriteArticles() {
   const files = (await walk(join(ROOT, "blog"))).filter((f) => extname(f).toLowerCase() === ".html");
   // ten of the topics exist only as a standalone post, with no -leitfaden or
@@ -1576,11 +1619,21 @@ async function rewriteArticles() {
   for (const file of files) {
     const rel = relative(ROOT, file).replaceAll("\\", "/");
     const found = blogTopicOf(rel);
-    if (!found) { skipped += 1; continue; }
     const html = await readFile(file, "utf8");
+    /* The hub carries a card for all 125 articles, each with the same legacy
+       description, so it alone held 51 of the 101 "professionell" occurrences.
+       It has no topic of its own, so the body rewrite skips it — but the lead
+       pass has to reach it, which is why this runs before the topic check. */
+    if (!found) {
+      const cleaned = humaniseLegacyLead(html);
+      if (cleaned !== html) { await writeFile(file, cleaned, "utf8"); changed += 1; }
+      skipped += 1;
+      continue;
+    }
     const root = rootFor(rel);
     let next = html.replace(/<article class="article">[\s\S]*?<\/article>/, articleBody(found, root));
     next = next.replace(/<div class="toc"><strong>Inhalt<\/strong>[\s\S]*?<\/div>/, tableOfContents(found));
+    next = humaniseLegacyLead(next);
     // the FAQ now lives in the body, so the page should say so in its structured data
     // only the guide format renders the answers, so only it declares FAQPage
     const ld = bodyFormat(found) === "guide" ? jsonLd(faqLd(found.topic.faq)) : "";
@@ -1708,7 +1761,11 @@ const CLAIM_REPLACEMENTS = CLAIM_RULES
   .sort((a, b) => b.from.length - a.from.length);
 
 async function normaliseClaims() {
-  const files = (await walk(ROOT)).filter((f) => extname(f).toLowerCase() === ".html");
+  /* walkPages(), not walk(): the shared walk() skips downloads/ because it holds
+     the PDF library, which meant downloads/index.html — a normal indexed page —
+     was never reached by the claim register either. It is one page, and it is
+     exactly the kind of page a phrase hides on. */
+  const files = await walkPages(ROOT);
   let changed = 0;
   for (const file of files) {
     const original = await readFile(file, "utf8");
@@ -1716,6 +1773,10 @@ async function normaliseClaims() {
     for (const { from, to } of CLAIM_REPLACEMENTS) {
       if (html.includes(from)) html = html.split(from).join(to);
     }
+    // the formulaic phrases from data/prose-fixes.json ride the same walk: both
+    // are literal replacements over pages that no generator owns, and walking
+    // 15,000 files twice to do it separately would only be slower
+    html = humaniseLegacyLead(html);
     if (html === original) continue;
     await writeFile(file, html, "utf8");
     changed += 1;

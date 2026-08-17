@@ -34,11 +34,11 @@
     "tech": {
       "eyebrow": "Technische Basis",
       "h2": "Woraus {model} gebaut wird.",
-      "lead": "Die konkrete Ausführung wird in der Auftrags- und Produktionsspezifikation festgeschrieben. Die folgenden Punkte bilden die Basis, auf der projektbezogen ergänzt wird.",
+      "lead": "Die konkrete Ausführung wird in der Auftrags- und Produktionsspezifikation festgeschrieben. Die folgenden Punkte bilden die Basis, auf der je Projekt ergänzt wird.",
       "cards": [
         [
           "Tragende Stahlkonstruktion",
-          "Der tragende Aufbau ist Stahl, nicht Holzständerwerk. Welches Korrosionsschutzverfahren nach welcher Norm eingesetzt wird, steht modellbezogen im technischen Datenblatt zum jeweiligen Angebot – es ist eine Auftragsangabe, keine pauschale Produkteigenschaft."
+          "Der tragende Aufbau ist Stahl, nicht Holzständerwerk. Welches Korrosionsschutzverfahren nach welcher Norm eingesetzt wird, steht modellbezogen im technischen Datenblatt zum Angebot – es ist eine Auftragsangabe, keine pauschale Produkteigenschaft."
         ],
         [
           "Stahlfahrgestell",
@@ -64,7 +64,7 @@
     },
     "options": {
       "eyebrow": "Ausstattung",
-      "h2": "Was projektbezogen entschieden wird.",
+      "h2": "Was im Projekt entschieden wird.",
       "lead": "Diese Punkte werden nicht vorab festgelegt, sondern zum Projekt: Klima am Standort, Nutzungsprofil und Budget bestimmen die sinnvolle Antwort.",
       "items": [
         [
@@ -141,7 +141,7 @@
           "Energie, Wasser, Wartung, Reinigung und Rücklagen. Bei Vermietung kommen Verwaltung, Wäsche und Plattformgebühren dazu."
         ]
       ],
-      "note": "Die Lieferwerte sind projektbezogene Orientierungen und keine Frachtangebote. Route, Zufahrt, Kranbedarf und Termin bestimmen den Endbetrag."
+      "note": "Die Lieferwerte sind Orientierungswerte je Projekt und keine Frachtangebote. Route, Zufahrt, Kranbedarf und Termin bestimmen den Endbetrag."
     },
     "permits": {
       "eyebrow": "Genehmigung",
@@ -152,7 +152,7 @@
         "DE": "Zuständig ist die untere Bauaufsichtsbehörde des Kreises oder der kreisfreien Stadt. Zu klären sind Bebauungsplan beziehungsweise § 34/§ 35 BauGB, die zulässige Nutzungsart, Erschließung und ob eine Baugenehmigung oder ein Genehmigungsfreistellungsverfahren greift. Die Bauordnungen sind Landesrecht und unterscheiden sich.",
         "NL": "Anfragen laufen über das Omgevingsloket. Zu klären sind das omgevingsplan der Gemeinde, ob eine omgevingsvergunning nötig ist und ob der Standort als Wohn-, Freizeit- oder Erholungsgebiet ausgewiesen ist. Für recreatiewoningen gelten eigene Nutzungsgrenzen.",
         "DK": "Zuständig ist die kommune. Zu klären sind lokalplan, Zonenstatus und ob eine byggetilladelse nach dem Bygningsreglement erforderlich ist. In sommerhusområder ist die ganzjährige Wohnnutzung in der Regel beschränkt.",
-        "LU": "Zuständig ist die commune. Zu klären sind PAG und PAP, die Zulässigkeit im jeweiligen Gebiet und die autorisation de construire. Wegen der kleinen Gemeindegrößen unterscheidet sich die Praxis von Ort zu Ort spürbar.",
+        "LU": "Zuständig ist die commune. Zu klären sind PAG und PAP, die Zulässigkeit im Gebiet und die autorisation de construire. Wegen der kleinen Gemeindegrößen unterscheidet sich die Praxis von Ort zu Ort spürbar.",
         "CH": "Zuständig sind Gemeinde und Kanton. Zu klären sind Bauzone, Nutzungsplanung und die Baubewilligung. Außerhalb der Bauzone ist eine Bewilligung nur in eng begrenzten Ausnahmen möglich – das ist der häufigste Grund, aus dem Schweizer Projekte scheitern."
       }
     },

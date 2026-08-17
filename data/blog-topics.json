@@ -532,7 +532,7 @@
         ],
         [
           "Stahlkonstruktion und Materialwahl",
-          "Die tragende Konstruktion ist Stahl, nicht Holzständerwerk. Für die Dämmung, die Fassade und die Innenoberflächen wird die Materialwahl projektbezogen festgelegt; die Elektroinstallation wird halogenfrei ausgeführt."
+          "Die tragende Konstruktion ist Stahl, nicht Holzständerwerk. Für die Dämmung, die Fassade und die Innenoberflächen wird die Materialwahl je Projekt festgelegt; die Elektroinstallation wird halogenfrei ausgeführt."
         ],
         [
           "Wo Rauchmelder tatsächlich hingehören",
@@ -568,7 +568,7 @@
       "faq": [
         [
           "Sind Rauchmelder Pflicht?",
-          "Ja, in allen Bundesländern. Die Details zu Anzahl und Anbringung regelt die jeweilige Landesbauordnung."
+          "Ja, in allen Bundesländern. Die Details zu Anzahl und Anbringung regelt die Landesbauordnung des Bundeslandes."
         ],
         [
           "Ist ein Kaminofen im Tiny House möglich?",
@@ -576,7 +576,7 @@
         ],
         [
           "Wie sicher ist eine Stahlkonstruktion im Brandfall?",
-          "Der Aufbau wird projektbezogen spezifiziert. Entscheidend für die Personensicherheit sind aber Rettungswege und Melder, nicht das Tragwerksmaterial allein."
+          "Der Aufbau wird für das Projekt spezifiziert. Entscheidend für die Personensicherheit sind aber Rettungswege und Melder, nicht das Tragwerksmaterial allein."
         ]
       ]
     },
@@ -839,7 +839,7 @@
       "points": [
         [
           "U-Wert und solarer Eintrag zusammen betrachten",
-          "Bei Panoramaflächen ist der Wärmeverlust im Winter nur die halbe Rechnung; der solare Eintrag im Sommer ist die andere. MODUNERA verwendet wärmeisolierte, thermisch getrennte PVC-Tischlerei mit modellbezogener Isolierverglasung, projektbezogen dimensioniert."
+          "Bei Panoramaflächen ist der Wärmeverlust im Winter nur die halbe Rechnung; der solare Eintrag im Sommer ist die andere. MODUNERA verwendet wärmeisolierte, thermisch getrennte PVC-Tischlerei mit modellbezogener Isolierverglasung, für den Standort dimensioniert."
         ],
         [
           "Ausrichtung schlägt Größe",
@@ -1710,7 +1710,7 @@
         ],
         [
           "Kann ich die Einbauten selbst gestalten?",
-          "Küche, Bad, Stauraum und Treppe kommen aus eigener Möbelfertigung und werden projektbezogen gemaßt."
+          "Küche, Bad, Stauraum und Treppe kommen aus eigener Möbelfertigung und werden für den Einbauort gemaßt."
         ]
       ]
     },
@@ -1773,7 +1773,7 @@
         ],
         [
           "Kann ich das Haus vorher besichtigen?",
-          "Sprechen Sie uns über WhatsApp an — Besichtigungsmöglichkeiten und Referenzobjekte klären wir projektbezogen."
+          "Sprechen Sie uns über WhatsApp an — Besichtigungsmöglichkeiten und Referenzobjekte klären wir im Projekt."
         ]
       ]
     },
@@ -2084,7 +2084,7 @@
         ],
         [
           "Kann ich die Fassade frei wählen?",
-          "Thermowood+, Verbundplatte oder Stehfalz, projektbezogen. Die Wahl sollte Klima und Wartungsbereitschaft folgen."
+          "Thermowood+, Verbundplatte oder Stehfalz, je nach Projekt. Die Wahl sollte Klima und Wartungsbereitschaft folgen."
         ],
         [
           "Verändert sich Thermowood+ optisch?",
@@ -2147,7 +2147,7 @@
         ],
         [
           "Welche Materialien werden verwendet?",
-          "Tragende Stahlkonstruktion, Stahlfahrgestell, thermisch getrennte PVC-Tischlerei, modellbezogene Isolierverglasung. Fassade und Dämmung werden projektbezogen festgelegt."
+          "Tragende Stahlkonstruktion, Stahlfahrgestell, thermisch getrennte PVC-Tischlerei, modellbezogene Isolierverglasung. Fassade und Dämmung werden je Projekt festgelegt."
         ],
         [
           "Lässt sich ein Tiny House später recyceln?",
@@ -2907,7 +2907,7 @@
         ],
         [
           "Kann ich die Einbauten selbst gestalten?",
-          "Sie kommen aus eigener Möbelfertigung und werden projektbezogen gemaßt — nicht aus Katalogmodulen."
+          "Sie kommen aus eigener Möbelfertigung und werden für den Einbauort gemaßt — nicht aus Katalogmodulen."
         ]
       ]
     },
@@ -3277,7 +3277,7 @@
       "faq": [
         [
           "Ist ein MODUNERA Tiny House ganzjährig bewohnbar?",
-          "Ja, bei entsprechender Auslegung. Dämmung, Fensterdimensionierung, Lüftung und Heizsystem werden gemeinsam auf den Standort festgelegt."
+          "Ja, bei einer Auslegung dafür. Dämmung, Fensterdimensionierung, Lüftung und Heizsystem werden gemeinsam auf den Standort festgelegt."
         ],
         [
           "Welches Modell für harte Winter?",
@@ -3592,7 +3592,7 @@
       "faq": [
         [
           "Ist ein MODUNERA Tiny House winterfest?",
-          "Bei entsprechender Auslegung ja. Dämmung, Fensterdimensionierung, Lüftung und Heizsystem werden auf den Zielort festgelegt."
+          "Bei einer Auslegung dafür ja. Dämmung, Fensterdimensionierung, Lüftung und Heizsystem werden auf den Zielort festgelegt."
         ],
         [
           "Was passiert bei längerer Abwesenheit im Winter?",
@@ -3655,15 +3655,15 @@
       "faq": [
         [
           "Kann ich ganzjährig in einem Tiny House wohnen?",
-          "Technisch ja, mit entsprechender Auslegung. Rechtlich hängt es vom Standort und der zulässigen Nutzung ab."
+          "Technisch ja, mit einer Auslegung dafür. Rechtlich hängt es vom Standort und der zulässigen Nutzung ab."
         ],
         [
           "Was kostet die winterfeste Auslegung?",
-          "Sie ist Teil der Spezifikation und wird projektbezogen kalkuliert. Der Mehrpreis amortisiert sich über den Betrieb."
+          "Sie ist Teil der Spezifikation und wird für jedes Projekt einzeln kalkuliert. Der Mehrpreis amortisiert sich über den Betrieb."
         ],
         [
           "Welches Modell ist am besten geeignet?",
-          "MD 6 für Schnee- und Nordlagen. In milderen Lagen genügt eine entsprechend ausgelegte Variante der übrigen Modelle."
+          "MD 6 für Schnee- und Nordlagen. In milderen Lagen genügt eine dafür ausgelegte Variante der übrigen Modelle."
         ]
       ]
     }

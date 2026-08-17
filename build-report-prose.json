@@ -1,0 +1,185 @@
+{
+  "status": "ok",
+  "indexed_pages_measured": 519,
+  "long_sentence_threshold": 30,
+  "totals": {
+    "sentences": 33642,
+    "long_sentence_pct": 1,
+    "passive_pct": 5,
+    "nominal_chain_pct": 2.9,
+    "filler_hits": 36,
+    "hedges_kept": 1054
+  },
+  "languages": [
+    {
+      "lang": "de",
+      "pages": 198,
+      "sentences": 13546,
+      "mean_words_per_sentence": 10.8,
+      "long_sentences": 103,
+      "long_sentence_pct": 0.8,
+      "passive_sentences": 343,
+      "passive_pct": 2.5,
+      "nominal_chain_sentences": 445,
+      "nominal_chain_pct": 3.3,
+      "filler_hits": 20,
+      "hedges_kept": 395
+    },
+    {
+      "lang": "en",
+      "pages": 104,
+      "sentences": 6178,
+      "mean_words_per_sentence": 12.1,
+      "long_sentences": 95,
+      "long_sentence_pct": 1.5,
+      "passive_sentences": 906,
+      "passive_pct": 14.7,
+      "nominal_chain_sentences": 154,
+      "nominal_chain_pct": 2.5,
+      "filler_hits": 5,
+      "hedges_kept": 172
+    },
+    {
+      "lang": "da",
+      "pages": 73,
+      "sentences": 4561,
+      "mean_words_per_sentence": 10.6,
+      "long_sentences": 19,
+      "long_sentence_pct": 0.4,
+      "passive_sentences": 41,
+      "passive_pct": 0.9,
+      "nominal_chain_sentences": 48,
+      "nominal_chain_pct": 1.1,
+      "filler_hits": 2,
+      "hedges_kept": 162
+    },
+    {
+      "lang": "nl",
+      "pages": 73,
+      "sentences": 4645,
+      "mean_words_per_sentence": 11.3,
+      "long_sentences": 37,
+      "long_sentence_pct": 0.8,
+      "passive_sentences": 174,
+      "passive_pct": 3.7,
+      "nominal_chain_sentences": 82,
+      "nominal_chain_pct": 1.8,
+      "filler_hits": 6,
+      "hedges_kept": 135
+    },
+    {
+      "lang": "fr",
+      "pages": 71,
+      "sentences": 4712,
+      "mean_words_per_sentence": 12.6,
+      "long_sentences": 81,
+      "long_sentence_pct": 1.7,
+      "passive_sentences": 215,
+      "passive_pct": 4.6,
+      "nominal_chain_sentences": 242,
+      "nominal_chain_pct": 5.1,
+      "filler_hits": 3,
+      "hedges_kept": 190
+    }
+  ],
+  "repeated_phrases": [
+    {
+      "lang": "de",
+      "phrase": "jeweils",
+      "pages": 9,
+      "occurrences": 9
+    },
+    {
+      "lang": "de",
+      "phrase": "im Rahmen",
+      "pages": 6,
+      "occurrences": 6
+    },
+    {
+      "lang": "nl",
+      "phrase": "projectmatig",
+      "pages": 6,
+      "occurrences": 6
+    },
+    {
+      "lang": "da",
+      "phrase": "tilsvarende",
+      "pages": 2,
+      "occurrences": 2
+    },
+    {
+      "lang": "en",
+      "phrase": "accordingly",
+      "pages": 2,
+      "occurrences": 2
+    },
+    {
+      "lang": "de",
+      "phrase": "entsprechend",
+      "pages": 2,
+      "occurrences": 2
+    },
+    {
+      "lang": "de",
+      "phrase": "optimal",
+      "pages": 1,
+      "occurrences": 1
+    },
+    {
+      "lang": "en",
+      "phrase": "professional",
+      "pages": 1,
+      "occurrences": 2
+    }
+  ],
+  "longest_sentences": [
+    {
+      "lang": "fr",
+      "words": 52,
+      "rel": "fr/pays/allemagne/index.html",
+      "text": "Cinq points : une réponse écrite, délivrée par le service d'urbanisme de l'arrondissement ou de la ville-arrondissement, sur l'admissibilité ; l'accès et le point de déchargement a"
+    },
+    {
+      "lang": "fr",
+      "words": 52,
+      "rel": "fr/questions-par-pays/allemagne/index.html",
+      "text": "Cinq points : une réponse écrite, délivrée par le service d'urbanisme de l'arrondissement ou de la ville-arrondissement, sur l'admissibilité ; l'accès et le point de déchargement a"
+    },
+    {
+      "lang": "en",
+      "words": 50,
+      "rel": "en/countries/germany/index.html",
+      "text": "Five things: a written answer from the lower building authority of the district or independent city on admissibility; access and unloading point with photographs and dimensions; se"
+    },
+    {
+      "lang": "en",
+      "words": 50,
+      "rel": "en/questions/germany/index.html",
+      "text": "Five things: a written answer from the lower building authority of the district or independent city on admissibility; access and unloading point with photographs and dimensions; se"
+    },
+    {
+      "lang": "en",
+      "words": 48,
+      "rel": "en/blog/energy-and-off-grid/index.html",
+      "text": "A realistic off-grid design for year-round occupation in our destination markets combines a well-insulated envelope, a heat pump sized for the actual load, solar for the shoulder s"
+    },
+    {
+      "lang": "fr",
+      "words": 48,
+      "rel": "fr/pays/suisse/index.html",
+      "text": "Cinq points : une réponse écrite, délivrée par la commune avec le canton, sur l'admissibilité ; l'accès et le point de déchargement avec photos et cotes ; la viabilisation et la di"
+    },
+    {
+      "lang": "fr",
+      "words": 48,
+      "rel": "fr/questions-par-pays/suisse/index.html",
+      "text": "Cinq points : une réponse écrite, délivrée par la commune avec le canton, sur l'admissibilité ; l'accès et le point de déchargement avec photos et cotes ; la viabilisation et la di"
+    },
+    {
+      "lang": "fr",
+      "words": 47,
+      "rel": "fr/pays/pays-bas/index.html",
+      "text": "Cinq points : une réponse écrite, délivrée par la commune, via l'Omgevingsloket, sur l'admissibilité ; l'accès et le point de déchargement avec photos et cotes ; la viabilisation e"
+    }
+  ]
+}

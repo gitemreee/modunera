@@ -408,7 +408,7 @@
       ],
       [
         "Que faut-il avoir clarifié avant de commander ?",
-        "Cinq points : une réponse écrite de {authority} sur l'admissibilité ; l'accès et le point de déchargement avec photos et cotes ; la viabilisation et la distance au réseau ; l'usage avec le nombre de personnes ; et l'enveloppe budgétaire, postes annexes compris. Avec ces cinq éléments, une demande devient un projet planifiable."
+        "Cinq points : une réponse écrite, délivrée par {authority}, sur l'admissibilité ; l'accès et le point de déchargement avec photos et cotes ; la viabilisation et la distance au réseau ; l'usage avec le nombre de personnes ; et l'enveloppe budgétaire, postes annexes compris. Avec ces cinq éléments, une demande devient un projet planifiable."
       ]
     ]
   },
@@ -437,7 +437,7 @@
         "plan": "das omgevingsplan der Gemeinde nach der Omgevingswet",
         "permanent": "Dauerwohnen setzt eine Wohnfunktion im omgevingsplan voraus. Viele attraktive Standorte sind als Erholungs- oder Freizeitgebiet ausgewiesen, wo permanentes Wohnen nicht erlaubt ist – auch wenn es faktisch geschieht.",
         "recreation": "Für recreatiewoningen gelten eigene Nutzungsgrenzen; die ganzjährige Wohnnutzung ist regelmäßig ausgeschlossen und wird von einzelnen Gemeinden aktiv kontrolliert.",
-        "wheels": "Auch in den Niederlanden entscheidet die Dauerhaftigkeit der Aufstellung. Eine Einheit, die auf einem Grundstück verbleibt, wird als bouwwerk behandelt und braucht die entsprechende Zulässigkeit im omgevingsplan.",
+        "wheels": "Auch in den Niederlanden entscheidet die Dauerhaftigkeit der Aufstellung. Eine Einheit, die auf einem Grundstück verbleibt, wird als bouwwerk behandelt und braucht die die Zulässigkeit im omgevingsplan.",
         "deliveryNote": "Der Wert entspricht dem Niederlande-Tarif des Konfigurators.",
         "route": "Die Route führt über den Landweg; die Zufahrt in Poldergebieten und historischen Ortskernen ist häufiger die Engstelle als die Autobahn.",
         "customs": "Türkiye und die EU sind über die Zollunion verbunden. Mit A.TR-Bescheinigung fallen für Industriewaren in der Regel keine Zölle an; Einfuhrumsatzsteuer und Abwicklung bleiben bestehen.",
@@ -453,7 +453,7 @@
       "DK": {
         "authority": "die kommune",
         "plan": "der lokalplan zusammen mit dem Zonenstatus (byzone, sommerhusområde oder landzone)",
-        "permanent": "Dauerwohnen setzt einen Standort in byzone oder eine entsprechende Ausweisung voraus. In sommerhusområder ist die ganzjährige Wohnnutzung grundsätzlich beschränkt; Ausnahmen sind an persönliche Voraussetzungen geknüpft.",
+        "permanent": "Dauerwohnen setzt einen Standort in byzone oder eine eine Ausweisung dafür voraus. In sommerhusområder ist die ganzjährige Wohnnutzung grundsätzlich beschränkt; Ausnahmen sind an persönliche Voraussetzungen geknüpft.",
         "recreation": "In sommerhusområder ist die saisonale Nutzung der Normalfall. Die genauen Zeiträume und Ausnahmen regelt die Gesetzgebung zusammen mit dem lokalplan – fragen Sie die kommune direkt.",
         "wheels": "Auch hier zählt die dauerhafte Aufstellung. Eine Einheit, die stehen bleibt und bewohnt wird, fällt unter das Bygningsreglement und braucht eine byggetilladelse.",
         "deliveryNote": "Der Wert entspricht dem Skandinavien-Tarif des Konfigurators und liegt deshalb über den mitteleuropäischen Zielen.",
@@ -474,7 +474,7 @@
         "permanent": "Dauerwohnen ist möglich, wenn die Zone im PAG Wohnnutzung zulässt und die autorisation de construire erteilt wird. Wegen der kleinen Gemeindegrößen unterscheidet sich die Praxis von Ort zu Ort spürbar.",
         "recreation": "Camping- und Freizeitstandorte unterliegen eigenen Auflagen und in der Regel Aufenthaltsbeschränkungen. Klären Sie Betreiberregeln und kommunale Vorgaben gemeinsam.",
         "wheels": "Maßgeblich ist die dauerhafte Aufstellung, nicht das Fahrgestell. Eine verbleibende Einheit wird als Bauvorhaben behandelt und braucht die autorisation de construire.",
-        "deliveryNote": "Der Wert ist ein Durchschnitt; die Route wird projektbezogen bestätigt.",
+        "deliveryNote": "Der Wert ist ein Durchschnitt; die Route wird für das einzelne Projekt bestätigt.",
         "route": "Die Route führt über den Landweg. Wegen der bewegten Topografie ist die letzte Zufahrt zum Grundstück häufiger die Engstelle als die Fernstrecke.",
         "customs": "Türkiye und die EU sind über die Zollunion verbunden. Mit A.TR-Bescheinigung fallen für Industriewaren in der Regel keine Zölle an; die luxemburgische Einfuhrumsatzsteuer bleibt.",
         "vat": "Es gilt der luxemburgische Satz von 17 Prozent – der niedrigste der fünf Zielmärkte.",

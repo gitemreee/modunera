@@ -119,6 +119,12 @@ Each of these cost real time. They are listed so they cost it once.
    publishes a lead time; MODUNERA publishes none.
 7. **Italian branch for Switzerland.** Unbuilt extension point, not a fault.
 
+Closed 2026-08-17: *tone*. Filler constructions were counted across the indexed
+pages rather than hunted through 15,000: `tools/score-prose-style.mjs`. Total
+filler 283 -> 36 (-87%), German 259 -> 20 (-92%); "professionell", "projektbezogen",
+"Entscheidungslogik" and "hochwertige Materialien" now count zero across all
+15,169 pages. Hedges went 1,051 -> 1,054 — not one legal sentence was softened.
+
 Closed 2026-08-17: *the five-market appendix appears where it is off-topic*. It
 was on 221 pages and is now on 96, scoped by subject in `data/appendix-scope.json`.
 Mean originality across the 514 indexed pages went from 42.2% to 49.5%, median from

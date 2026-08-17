@@ -1,0 +1,163 @@
+{
+  "_comment": [
+    "Formulaic phrases replaced in the built HTML, the way data/blocked-claims.json",
+    "phrases are.",
+    "",
+    "WHY A PASS AND NOT A GENERATOR EDIT",
+    "",
+    "The generators were fixed at source. These are the same phrases sitting in the",
+    "layer no generator owns: the pages baked by the retired tools/generate_scale_v3.py",
+    "— the home page, /faq/, /konfigurator/, /studio/, /nachhaltigkeit/, /redaktion/",
+    "and the 7,400 location pages. Editing those pages by hand would break the rule",
+    "that content lives in a generator or a data file, so the rule they live under",
+    "is this file.",
+    "",
+    "HOW THE LIST WAS CHOSEN",
+    "",
+    "By counting, not by taste. tools/score-prose-style.mjs was run over the pages",
+    "in the sitemap and ranked every filler construction by how many pages carry it.",
+    "'professionell' came first at 101 occurrences on 52 pages, 'projektbezogen'",
+    "second at 91 on 40. Each entry below is one of those, with the compound",
+    "replaced by the thing it was standing in for — who decides, or what it depends",
+    "on.",
+    "",
+    "WHAT IS NOT IN HERE, DELIBERATELY",
+    "",
+    "Hedges. 'grundsätzlich', 'in der Regel', 'in eng begrenzten Fällen',",
+    "'unverbindlich' and their translations are counted separately by the scorer and",
+    "left alone. They are the reason a statement on this site survives being quoted;",
+    "removing them would not make the site warmer, it would make it wrong. Measured",
+    "before and after this pass: 1,051 hedges, then 1,053. Nothing was softened.",
+    "",
+    "Longest phrase first, so a longer phrase is replaced before a shorter one that",
+    "is a substring of it. Re-running finds nothing, which keeps the pipeline",
+    "idempotent."
+  ],
+  "reviewed_at": "2026-08-17",
+  "replacements": [
+    [
+      "Intelligente Grundrisse, hochwertige Materialien und projektbezogene Planung.",
+      "Durchdachte Grundrisse, benannte Materialien und eine Planung für Ihr Projekt."
+    ],
+    [
+      "Mit Entscheidungslogik, Kostenrahmen, Technik und Checkliste.",
+      "Was es entscheidet, was es kostet, was vorher geklärt sein muss."
+    ],
+    [
+      "Tiny House aus der Türkei importieren professionell planen:",
+      "Tiny House aus der Türkei importieren:"
+    ],
+    [
+      "mit Entscheidungslogik, Risiken und nächsten Schritten",
+      "mit dem, was entscheidet, den Risiken und den nächsten Schritten"
+    ],
+    [
+      "Tiny House: Thermowood Fassade professionell planen:",
+      "Thermowood-Fassade am Tiny House planen:"
+    ],
+    [
+      "erfolgt projektbezogen und wird dokumentiert",
+      "wird für den Standort gerechnet und dokumentiert"
+    ],
+    [
+      "Mit Entscheidungslogik, Kostenrahmen, Tec…",
+      "Was es entscheidet, was es kostet, was vorher geklärt sein muss."
+    ],
+    [
+      "Tiny House kaufen professionell planen:",
+      "Tiny House kaufen:"
+    ],
+    [
+      "können projektbezogen angepasst werden",
+      "können für Ihr Projekt angepasst werden"
+    ],
+    [
+      "Grenzen projektbezogen konfiguriert",
+      "Grenzen für jedes Projekt konfiguriert"
+    ],
+    [
+      "den Tiny-House-Kauf professionell.",
+      "den Tiny-House-Kauf."
+    ],
+    [
+      "modell- und projektbezogen geprüft",
+      "für Modell und Projekt geprüft"
+    ],
+    [
+      "und projektbezogene Konfiguration",
+      "und eine Konfiguration für Ihr Projekt"
+    ],
+    [
+      "projektbezogene Sonderlogistik",
+      "Sonderlogistik je Projekt"
+    ],
+    [
+      "Projektbezogene Konfiguration",
+      "Konfiguration für Ihr Projekt"
+    ],
+    [
+      "projektbezogenes Fahrgestell",
+      "auf das Projekt abgestimmtes Fahrgestell"
+    ],
+    [
+      "und projektbezogene Planung",
+      "und eine Planung für Ihr Projekt"
+    ],
+    [
+      "ergibt sich projektbezogen",
+      "ergibt sich je Projekt"
+    ],
+    [
+      "projektbezogene Prüfungen",
+      "Prüfungen am konkreten Projekt"
+    ],
+    [
+      "projektbezogen integriert",
+      "im Projekt ergänzt"
+    ],
+    [
+      "projektbezogen abgestimmt",
+      "auf das Projekt abgestimmt"
+    ],
+    [
+      "projektbezogen kalkuliert",
+      "für jedes Projekt einzeln kalkuliert"
+    ],
+    [
+      "projektbezogene Freigabe",
+      "eine Freigabe für Ihr Projekt"
+    ],
+    [
+      "projektbezogen zu klären",
+      "im Projekt zu klären"
+    ],
+    [
+      "und projektbezogen nach",
+      "und je Projekt nach"
+    ],
+    [
+      "sind projektbezogen zu ",
+      "sind im Projekt zu "
+    ],
+    [
+      "Projektbezogene Prüfung",
+      "Prüfung je Projekt"
+    ],
+    [
+      "projektbezogene Bilanz",
+      "eine Bilanz für das einzelne Projekt"
+    ],
+    [
+      "projektbezogen geprüft",
+      "für jedes Projekt geprüft"
+    ],
+    [
+      "projektbezogen geplant",
+      "für jedes Projekt geplant"
+    ],
+    [
+      " professionell planen:",
+      " planen:"
+    ]
+  ]
+}
