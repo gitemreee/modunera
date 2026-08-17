@@ -5,7 +5,9 @@
    canonicals, resolvable local references, well-formed JSON-LD. This checks the
    things the V7 audit found wrong, so that none of them can come back silently:
 
-     1  no page still carries a claim from data/blocked-claims.json
+     1  no page still carries a claim from data/blocked-claims.json — as a literal
+        phrase, and also as a case-insensitive `patterns` family, because a
+        literal cannot catch a phrase capitalised at the start of a sentence
      2  no page describes itself as a demo or a placeholder
      3  the sitemap contains no noindex URL
      4  the sitemap contains no private or demo area
@@ -57,8 +59,23 @@ const isLocation = (route) => LOCATION.some((p) => route.startsWith(p));
 
 /* --- read the site --------------------------------------------------------- */
 
-const blocked = JSON.parse(await readFile(join(ROOT, "data/blocked-claims.json"), "utf8")).rules
-  .flatMap((rule) => rule.replacements.map(([from]) => from));
+const claimRules = JSON.parse(await readFile(join(ROOT, "data/blocked-claims.json"), "utf8")).rules;
+const blocked = claimRules.flatMap((rule) => rule.replacements.map(([from]) => from));
+
+/* Literal phrases cannot catch a phrase that is capitalised because it starts a
+   sentence. That is not hypothetical: "Eigene Produktion" was published on 7,546
+   pages, 14,956 times, while this file counted zero — the register held the
+   lower-case "eigene Produktion" and nothing else. The handoff had already
+   written the lesson down after two capitalised glazing claims survived for
+   weeks, and it happened again anyway, because a rule that has to be remembered
+   at the moment someone adds a phrase is not enforcement.
+
+   A rule may therefore also declare `patterns`: regular expressions matched
+   case-insensitively over the built HTML and asserted to be zero. A family is
+   cheaper to state than every inflection of it, and a capital letter cannot walk
+   past a case-insensitive match. */
+const claimPatterns = claimRules.flatMap((rule) =>
+  (rule.patterns ?? []).map((source) => ({ id: rule.id, re: new RegExp(source, "i"), source })));
 const policy = JSON.parse(await readFile(join(ROOT, "data/location-index-policy.json"), "utf8"));
 const approved = new Set([...(policy.approved_urls ?? []),
   ...(policy.entries ?? []).filter((e) => e.status === "approved" && Number(e.quality_score ?? 0) >= Number(policy.minimum_quality_score ?? 75)).map((e) => e.url)]);
@@ -66,6 +83,7 @@ const approved = new Set([...(policy.approved_urls ?? []),
 const files = (await walk(ROOT)).filter((f) => relative(ROOT, f).replaceAll("\\", "/").endsWith("index.html"));
 const pages = new Map();
 let claimHits = 0;
+let patternHits = 0;
 let demoHits = 0;
 
 for (const file of files) {
@@ -79,6 +97,14 @@ for (const file of files) {
     if (html.includes(phrase)) {
       claimHits += 1;
       if (claimHits <= 5) fail("1 blocked claim", `${route} still contains "${phrase}"`);
+      break;
+    }
+  }
+  for (const { id, re, source } of claimPatterns) {
+    const hit = html.match(re);
+    if (hit) {
+      patternHits += 1;
+      if (patternHits <= 5) fail("1 blocked claim", `${route} matches ${id} pattern /${source}/i as "${hit[0]}"`);
       break;
     }
   }
@@ -102,6 +128,7 @@ for (const file of files) {
   });
 }
 if (claimHits > 5) fail("1 blocked claim", `and ${claimHits - 5} further page(s)`);
+if (patternHits > 5) fail("1 blocked claim", `and ${patternHits - 5} further page(s) matching a claim pattern`);
 if (demoHits > 5) fail("2 demo wording", `and ${demoHits - 5} further page(s)`);
 
 /* --- the sitemap ----------------------------------------------------------- */
@@ -194,6 +221,7 @@ const summary = {
   full_five_language_clusters: [...pages.values()].filter((p) => p.hreflang.length === 6).length,
   json_ld_blocks_checked: ldChecked,
   blocked_claim_hits: claimHits,
+  blocked_claim_pattern_hits: patternHits,
   demo_wording_hits: demoHits,
   failures: failures.length,
 };
