@@ -1,6 +1,6 @@
 {
   "_comment": "Claims that may not be published until documentary evidence exists, from READY-TO-APPLY/content-claims-register.json in the V7 SEO pack. Each entry is a literal phrase and the wording that replaces it. This runs as a pass over the built HTML because the phrases live in three places at once: the current generators, the data corpora, and about 11,000 pages baked by the retired tools/generate_scale_v3.py. The validator asserts the count of remaining blocked phrases is zero, so a claim cannot reappear through a new generator without failing the build. Delete an entry here — do not edit pages — when the business supplies the evidence listed in REQUIRED-BUSINESS-INPUTS.md. Phrases are matched against built HTML, so ampersands appear as &amp; — both forms are listed where a phrase contains one.",
-  "reviewed_at": "2026-08-14",
+  "reviewed_at": "2026-08-17",
   "rules": [
     {
       "id": "own-production",
@@ -101,6 +101,42 @@
         [
           "eigene Produktion",
           "eigene Spezifikation"
+        ],
+        [
+          "Eigen productie",
+          "Eigen specificatie"
+        ],
+        [
+          "eigen productie",
+          "eigen specificatie"
+        ],
+        [
+          "Egen produktion",
+          "Egen specifikation"
+        ],
+        [
+          "egen produktion",
+          "egen specifikation"
+        ],
+        [
+          "uit één werkplaats",
+          "naar één specificatie"
+        ],
+        [
+          "fra ét værksted",
+          "efter én specifikation"
+        ],
+        [
+          "d'un seul atelier",
+          "d'une seule spécification"
+        ],
+        [
+          "Production intégrée",
+          "Spécification unique"
+        ],
+        [
+          "production intégrée",
+          "spécification unique"
         ]
       ]
     },
