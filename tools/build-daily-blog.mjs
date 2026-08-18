@@ -56,6 +56,29 @@ const waLink = (m) => `https://wa.me/${WA}?text=${encodeURIComponent(m)}`;
 
 /* --- the queue ------------------------------------------------------------- */
 
+/* A post's `image` is looked up in data/site-photos.json first, so the series can
+   use the real photographs rather than the model renders. A render illustrates a
+   design honestly; a post about what goes wrong on a real facade wants a real
+   facade. Falling back to assets/images/gallery keeps a render usable where no
+   photograph fits the subject. */
+const PHOTOS = Object.fromEntries(
+  JSON.parse(await readFile(join(ROOT, "data/site-photos.json"), "utf8")).photos
+    .map((p) => [p.name, p]),
+);
+function imageFor(post) {
+  const photo = PHOTOS[post.image];
+  if (photo) {
+    const f = photo.files.find((x) => x.file.endsWith("-1200.webp"))
+      ?? photo.files.find((x) => x.file.endsWith("-1100.webp"));
+    if (f) {
+      const [w, h] = f.px.split("x").map(Number);
+      return { src: f.file, w, h, absolute: BASE + f.file };
+    }
+  }
+  return { src: `assets/images/gallery/${post.image}`, w: null, h: null,
+           absolute: `${BASE}assets/images/gallery/${post.image}` };
+}
+
 const files = (await readdir(join(ROOT, "data"))).filter((f) => /^blog-daily-\d+\.json$/.test(f)).sort();
 const POSTS = [];
 for (const f of files) {
@@ -91,7 +114,7 @@ function head({ rel, title, description, image, extraLd = [] }) {
     `<meta property="og:type" content="article"><meta property="og:site_name" content="MODUNERA">` +
     `<meta property="og:locale" content="de_DE"><meta property="og:title" content="${esc(title)}">` +
     `<meta property="og:description" content="${esc(description)}"><meta property="og:url" content="${canonical}">` +
-    `<meta property="og:image" content="${BASE}assets/images/gallery/${image}">` +
+    `<meta property="og:image" content="${image}">` +
     `<meta name="twitter:card" content="summary_large_image">` +
     `<link rel="icon" type="image/png" href="${root}assets/brand/modunera-mark-v1.png">` +
     `<link rel="stylesheet" href="${root}assets/css/styles.css">${extraLd.map(jsonLd).join("")}` +
@@ -113,6 +136,7 @@ const DISCLAIMER = "Alle Angaben sind unverbindliche Projektorientierung und kei
 function postPage(post, index, all) {
   const rel = `${SERIES}/${post.slug}/index.html`;
   const root = rootFor(rel);
+  const pic = imageFor(post);
   const toc = post.sections
     .map((s, i) => `<a href="#abschnitt-${i + 1}">${esc(s.h2)}</a>`)
     .join("");
@@ -146,7 +170,7 @@ function postPage(post, index, all) {
       datePublished: post.publish_on,
       dateModified: post.publish_on,
       mainEntityOfPage: BASE + rel.replace(/index\.html$/, ""),
-      image: `${BASE}assets/images/gallery/${post.image}`,
+      image: pic.absolute,
       author: { "@type": "Organization", name: "MODUNERA" },
       publisher: { "@type": "Organization", name: "MODUNERA" },
     },
@@ -161,9 +185,9 @@ function postPage(post, index, all) {
 
   const wa = `Hallo MODUNERA, ich habe Ihren Beitrag "${post.title}" gelesen. Meine Frage: __`;
 
-  return head({ rel, title: `${post.title} | MODUNERA`, description: post.description, image: post.image, extraLd: ld }) +
+  return head({ rel, title: `${post.title} | MODUNERA`, description: post.description, image: pic.absolute, extraLd: ld }) +
     `<main id="main">` +
-    `<header class="article-visual-hero"><img src="${root}assets/images/gallery/${post.image}" alt="${esc(post.imageAlt)}">` +
+    `<header class="article-visual-hero"><img src="${root}${pic.src}"${pic.w ? ` width="${pic.w}" height="${pic.h}"` : ""} alt="${esc(post.imageAlt)}">` +
     `<div class="article-visual-overlay"></div><div class="container">` +
     `<div class="breadcrumbs"><a href="${root}index.html">Startseite</a> &middot; <a href="${root}blog/">Ratgeber</a> &middot; <a href="${root}${SERIES}/">Praxis</a></div>` +
     `<div class="eyebrow">Praxis &middot; ${esc(post.publish_on)}</div><h1>${esc(post.title)}</h1><p>${esc(post.description)}</p></div></header>` +
@@ -197,7 +221,7 @@ function hubPage(all) {
   const title = "Praxis: ein Beitrag pro Tag zu Tiny House, Modulbau und Container | MODUNERA";
   const description = "Wartung, typische Schäden, Betrieb und die Fragen, die Käufer wirklich stellen. Ein Beitrag pro Tag, jeder auf sein eigenes Thema geschrieben.";
   return head({
-    rel, title, description, image: "hero-forest.webp",
+    rel, title, description, image: `${BASE}assets/images/gallery/hero-forest.webp`,
     extraLd: [{
       "@context": "https://schema.org",
       "@type": "Blog",

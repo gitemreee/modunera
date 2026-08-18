@@ -29,8 +29,8 @@
       "category": "wartung",
       "title": "Thermowood wird grau: was normal ist und was nicht",
       "description": "Die Vergrauung einer Thermoholzfassade ist ein Oberflächenvorgang, kein Schaden. Woran Sie den Unterschied erkennen, wann Sie eingreifen und wann Sie es besser lassen.",
-      "image": "mc7-exterior.webp",
-      "imageAlt": "Aussenansicht eines MODUNERA Tiny House mit Holzfassade in der Nachmittagssonne",
+      "image": "detail-wood-and-metal",
+      "imageAlt": "Fassadendetail einer fertigen Einheit: senkrechte Holzschalung trifft auf die dunkle Metallverkleidung",
       "lead": "Eine Thermoholzfassade wird grau. Das ist der Normalfall und kein Mangel: UV-Licht baut das Lignin an der Oberfläche ab, Regen wäscht es aus, zurück bleibt silbrige Zellulose. Ein Schaden sieht anders aus — er ist ungleichmässig, er ist feucht, und er sitzt fast immer dort, wo Wasser nicht wegkommt.",
       "sections": [
         {
@@ -170,8 +170,8 @@
       "category": "schaeden",
       "title": "Tauwasser in der Konstruktion: woran Sie es erkennen, bevor es teuer wird",
       "description": "Feuchte Stellen im Innenraum kommen selten von aussen. Wie Tauwasser im Wandaufbau entsteht, welche Stellen zuerst betroffen sind und welche Messung tatsächlich etwas beweist.",
-      "image": "mc5-interior.webp",
-      "imageAlt": "Innenansicht einer MODUNERA Einheit mit Blick auf Wandanschluss und Fensterlaibung",
+      "image": "interior-door-kitchen",
+      "imageAlt": "Blick durch eine geöffnete Tür in den Innenraum einer Einheit, Küchenblock und Treppe zum Loft",
       "lead": "Wenn im Innenraum eine Stelle dunkel wird, ist die erste Vermutung meistens ein Leck. In einem gut gebauten, dichten Kleingebäude ist die häufigere Ursache eine andere: warme Innenluft transportiert Feuchte in den Aufbau, kühlt dort ab und gibt sie als Wasser wieder ab. Das Wasser kommt dann nicht von aussen, sondern von Ihnen.",
       "sections": [
         {
@@ -311,6 +311,520 @@
         [
           "Was schicke ich, wenn ich Sie frage?",
           "Fotos mit Datum, die vier Messwerte über zwei Wochen, und die Angabe, ob und was in dem Bereich montiert oder gebohrt wurde. Damit lässt sich meistens vorab sagen, ob es um Betrieb, um ein Anschlussdetail oder um ein Leck geht — und wer sich das ansehen muss."
+        ]
+      ]
+    },
+    {
+      "slug": "container-oder-seecontainer-der-unterschied",
+      "publish_on": "2026-08-20",
+      "category": "container",
+      "title": "Container oder umgebauter Seecontainer: der Unterschied, der später zählt",
+      "description": "Beide heissen Container und sind zwei verschiedene Dinge. Woher die Struktur kommt, was das für Dämmung, Fenster und Raumhöhe bedeutet, und woran Sie im Angebot erkennen, was Sie kaufen.",
+      "image": "production-hall-unit",
+      "imageAlt": "Einheit auf Stützen in der Fertigungshalle, Aussenhaut montiert, Holzverkleidung teilweise angebracht",
+      "lead": "Ein gefertigter Raumcontainer und ein umgebauter Seecontainer sehen auf dem Foto ähnlich aus und beginnen an völlig verschiedenen Punkten. Der eine wird als Raum gebaut. Der andere war ein Transportbehälter für Stapelung und Seefahrt, und alles, was ihn zum Raum macht, muss ihm nachträglich abgerungen werden.",
+      "sections": [
+        {
+          "h2": "Wofür ein Seecontainer gebaut ist",
+          "p": [
+            "Ein ISO-Seecontainer ist ein Lastträger. Seine Wellblechwände sind nicht Verkleidung, sondern Tragwerk: Sie steifen die Box aus, damit sie mehrfach gestapelt und bei Seegang bewegt werden kann. Die Lasten laufen über die Eckpfosten und die Eckbeschläge, nicht über die Fläche.",
+            "Daraus folgt fast alles Weitere. Wer in eine solche Wand ein grosses Fenster schneidet, nimmt der Box einen Teil ihrer Aussteifung und muss sie an dieser Stelle mit einem eingeschweissten Rahmen zurückgeben. Das ist machbar und wird gemacht, aber es ist Reparatur an einer Struktur, die für etwas anderes ausgelegt war.",
+            "Auch die Innenmasse folgen dieser Herkunft. Ein Seecontainer hat eine feste Aussenhöhe, und was innen bleibt, ist das, was nach Boden, Dämmung und Deckenaufbau übrig ist. Diese Rechnung geht nur in eine Richtung, und sie geht zulasten der Raumhöhe."
+          ]
+        },
+        {
+          "h2": "Wofür ein gefertigter Raumcontainer gebaut ist",
+          "p": [
+            "Bei einer gefertigten Einheit ist die Reihenfolge umgekehrt. Zuerst steht, welchen Raum die Einheit ergeben soll, und daraus folgen Rahmen, Beplankung und Öffnungen. Der Rahmen wird für die Öffnungen konstruiert, statt dass die Öffnungen dem Rahmen abgetrotzt werden.",
+            "Das ist kein Qualitätsargument, sondern ein Reihenfolgenargument. Ein sorgfältig umgebauter Seecontainer kann besser sein als eine schlecht gefertigte Einheit. Aber der Umbau kämpft dauerhaft gegen die Vorgeschichte des Bauteils, und die Fertigung tut das nicht.",
+            "Sichtbar wird es an drei Stellen: an der Raumhöhe, an der Grösse und Lage der Fenster, und daran, wo die Dämmung Platz hat. Wer diese drei prüft, hat den Unterschied gefunden, egal was in der Anzeige steht."
+          ]
+        },
+        {
+          "h2": "Warum die Dämmung der eigentliche Streitpunkt ist",
+          "p": [
+            "Eine Wellblechwand kann nicht in ihrer Ebene gedämmt werden — sie ist massiv. Dämmung kommt also entweder nach innen, und dann kostet sie Grundfläche und Raumhöhe, oder nach aussen, und dann braucht sie eine zweite Hülle davor und eine neue Fassade.",
+            "Bei einer gefertigten Einheit liegt die Dämmung in der Wandebene selbst, zwischen den Rahmenprofilen. Sie kostet keine Innenfläche, weil sie dort sitzt, wo die Wand ohnehin ist. Das ist der Grund, warum bei gleichem Aussenmass innen mehr übrig bleibt.",
+            "Konkrete Werte nennen wir hier nicht, und Sie sollten sie von niemandem ohne Nachweis annehmen. Was Sie stattdessen fragen können: Wo liegt die Dämmebene, und wie dick ist der Wandaufbau von aussen nach innen? Wer darauf antworten kann, hat einen Aufbau. Wer ausweicht, hat ein Verkaufsgespräch."
+          ]
+        },
+        {
+          "h2": "Kältebrücken, die aus der Stahlbox kommen",
+          "p": [
+            "Stahl leitet Wärme sehr viel besser als Holz oder Dämmstoff. In jeder Stahlkonstruktion gibt es daher Punkte, an denen Wärme schneller nach draussen wandert als in der Fläche, und diese Punkte sind innen kälter als ihre Umgebung.",
+            "Beim umgebauten Seecontainer sind es die durchlaufenden Rippen des Wellblechs, die Eckpfosten und jeder eingeschweisste Rahmen. Wenn die Dämmung innen sitzt, laufen diese Bauteile durch die gedämmte Ebene hindurch bis in den Raum — und dort kondensiert im Winter zuerst Feuchte.",
+            "Bei einer gefertigten Einheit ist das nicht automatisch besser, aber es ist planbar: Die Konstruktion kann so gelegt werden, dass die Dämmebene möglichst wenig durchstossen wird. Fragen Sie deshalb nicht, ob es Kältebrücken gibt — die gibt es immer —, sondern wo sie liegen und was dagegen getan wurde."
+          ]
+        },
+        {
+          "h2": "Was der Boden verrät",
+          "p": [
+            "Der Originalboden eines Seecontainers ist meist eine Sperrholzplatte auf Stahlquerträgern, und er wurde für Gabelstapler und Ladung gebaut, nicht für Fussbodenaufbau. Bei gebrauchten Boxen ist er ausserdem der Bauteil mit der unklarsten Vorgeschichte: Was auf ihm transportiert wurde und womit er behandelt wurde, weiss oft niemand mehr.",
+            "Ein sauberer Umbau nimmt den Originalboden deshalb heraus oder baut vollständig darüber auf. Beides kostet wieder Höhe, und damit sind wir zurück beim selben Thema.",
+            "Bei einer gefertigten Einheit ist der Bodenaufbau von Anfang an ein Fussboden: Tragschicht, Dämmung, Aufbau, Belag, in einer Reihenfolge, die jemand entworfen hat. Das ist kein Marketingunterschied, das ist der Unterschied zwischen Konstruieren und Nachbessern."
+          ]
+        },
+        {
+          "h2": "Korrosion beginnt dort, wo geschnitten wurde",
+          "p": [
+            "Jede Stahlkonstruktion ist so korrosionsfest wie ihre Oberflächenbehandlung. Bei einem Neubauteil wird die Behandlung nach der Fertigung aufgebracht und deckt auch die Schnittkanten ab, weil die Reihenfolge das hergibt.",
+            "Bei einem Umbau ist es umgekehrt: Der Container kommt fertig beschichtet an, und jeder Schnitt für ein Fenster, eine Tür oder eine Leitungsdurchführung legt blanken Stahl frei. Diese Kanten müssen einzeln nachbehandelt werden, und sie sind später oft hinter Verkleidung nicht mehr erreichbar.",
+            "Deshalb ist die Frage nach den Schnittkanten kein Detail, sondern eine Frage nach der Lebensdauer. Sie lautet konkret: Wie wurden die Öffnungskanten behandelt, und ist die Behandlung dokumentiert?"
+          ]
+        },
+        {
+          "h2": "Der Transport ist bei beiden dieselbe Rechnung",
+          "p": [
+            "Was auf der Strasse ohne Sondertransport fahren darf, bestimmt Breite und Höhe — unabhängig davon, wie die Einheit entstanden ist. Ein Seecontainer hat hier den Vorteil genormter Masse, für die Transportlösungen eingespielt sind.",
+            "Eine gefertigte Einheit kann dieselben Masse einhalten oder bewusst darüber gehen. Über der zulässigen Breite wird der Transport zur Sondersache, mit Route, Genehmigung und Begleitung, und das ändert die Kosten deutlich.",
+            "Bei mehreren Einheiten kommt die zweite Rechnung dazu: wie viele auf einen Transport gehen. Das ist bei einer Sammelbestellung der grösste einzelne Kostenhebel und gehört an den Anfang der Planung."
+          ]
+        },
+        {
+          "h2": "Was Sie am fertigen Objekt in zwei Minuten sehen",
+          "p": [
+            "Gehen Sie an die Innenecke und schauen Sie nach oben. Bei einem umgebauten Seecontainer laufen die Eckpfosten und oft die Wellblechrippen sichtbar oder als Vorsprung durch — bei einer gefertigten Einheit ist die Ecke eine gebaute Ecke.",
+            "Stellen Sie sich unter die Decke und strecken Sie den Arm. Die lichte Höhe merkt man körperlich schneller, als man sie liest, und sie ist die Zahl, über die sich Käufer im Nachhinein am häufigsten ärgern.",
+            "Und sehen Sie sich eine Fensterlaibung an. Wie tief sitzt der Rahmen, und wie ist der Übergang zur Wand gelöst? An dieser einen Stelle wird sichtbar, ob eine Öffnung geplant oder geschnitten wurde."
+          ]
+        },
+        {
+          "h2": "Warum die Herkunft auch eine Dokumentenfrage ist",
+          "p": [
+            "Ein neu gefertigtes Bauteil hat eine Fertigungsdokumentation: welche Profile, welche Beplankung, welcher Aufbau, welche Oberflächenbehandlung. Das ist die Grundlage für jeden späteren Nachweis und für jede Reparatur in fünf Jahren.",
+            "Ein gebrauchter Seecontainer hat eine Transportgeschichte. Sie können sein Baujahr und seine Kennung ablesen, aber nicht ohne Weiteres, was er geladen hatte, wie oft er repariert wurde und womit sein Boden behandelt ist.",
+            "Für eine Lagerhalle ist das gleichgültig. Für einen Raum, in dem Menschen schlafen, ist es der Punkt, an dem man eine Antwort haben möchte — und die Antwort steht in Papieren, nicht in einer Produktbeschreibung."
+          ]
+        },
+        {
+          "h2": "Wo der Seecontainer die bessere Wahl ist",
+          "p": [
+            "Das hier ist kein Argument dafür, dass Seecontainer schlecht sind. Als das, wofür sie gebaut sind, sind sie hervorragend: stapelbar, robust, weltweit genormt, in jeder Grösse verfügbar und vergleichsweise günstig zu bekommen.",
+            "Für unbeheizte Lagerung, für einen Werkzeugraum auf der Baustelle, für einen abschliessbaren Materialcontainer ist der Umbauaufwand null und die Eignung hoch. Auch als gestalterisches Element — sichtbares Wellblech als Absicht — hat er seine Berechtigung.",
+            "Der Punkt ist enger: Sobald ein Raum dauerhaft beheizt, gedämmt und bewohnt werden soll, arbeitet man gegen die Konstruktion an, statt mit ihr. Das ist zu leisten, aber es ist Arbeit, und sie sollte im Angebot sichtbar sein."
+          ]
+        },
+        {
+          "h2": "Woran Sie es im Angebot erkennen",
+          "p": [
+            "Das erste Signal ist die Sprache. Ein Angebot für eine gefertigte Einheit beschreibt einen Wandaufbau von aussen nach innen. Ein Angebot für einen Umbau beschreibt Massnahmen: gedämmt, verkleidet, Fenster eingesetzt.",
+            "Das zweite Signal sind die Masse. Wenn nur Aussenmasse genannt werden und die lichte Innenhöhe fehlt, fehlt genau die Zahl, die beim Umbau am ehesten enttäuscht.",
+            "Das dritte ist die Herkunftsfrage selbst. Sie ist mit einem Satz zu beantworten, und wer sie nicht beantwortet, hat dafür einen Grund. Fragen Sie schriftlich und lassen Sie sich die Antwort in das Angebot schreiben, nicht ins Gespräch."
+          ]
+        },
+        {
+          "h2": "Was bei MODUNERA in dieser Frage gilt",
+          "p": [
+            "Unsere Container werden als Einheit gefertigt: Stahlrahmen, Boden, Wände und Dach entstehen zusammen, mit Sandwichpaneel als Beplankung und einer Holzoptik-Variante. Sie sind keine umgebauten Seecontainer, und das ist der Grund, warum Fensteröffnungen und Wandaufbau frei geplant werden können.",
+            "Wir liefern sie auch als Leercontainer — als reine Hülle mit Rahmen, Beplankung und Öffnungen, ohne Innenausbau. Wer den Ausbau selbst macht oder machen lässt, bekommt dann eine Struktur, in die hineingebaut werden kann, statt einer, aus der herausgeschnitten werden muss.",
+            "Masse, Paneelstärken, Güten oder Prüfzeugnisse nennen wir auf dieser Seite nicht. Sie gehören in die Unterlagen zum konkreten Angebot, und ein Wert ohne das zugehörige Dokument ist eine Behauptung, keine Angabe."
+          ]
+        },
+        {
+          "h2": "Die Frage nach dem Wiederverkauf",
+          "p": [
+            "Ein Seecontainer hat einen Zweitmarkt, weil er genormt ist: Jeder weiss, was ein 20-Fuss-Container ist, und der Preis dafür ist bekannt. Sobald er umgebaut ist, gilt das nicht mehr — er ist dann eine Sonderanfertigung auf einem genormten Träger und wird wie eine Sonderanfertigung bewertet.",
+            "Eine gefertigte Einheit ist von Anfang an eine Sonderanfertigung und wird auch so gehandelt. Was ihren Wert dann trägt, ist nicht die Norm, sondern der Zustand und die Dokumentation: Wandaufbau, verbaute Komponenten, Wartungshistorie.",
+            "Praktisch heisst das: Heben Sie die Unterlagen auf. Beim Wiederverkauf einer Einheit ohne Papiere diskutieren Sie über den Preis; mit Papieren diskutieren Sie über den Zustand. Das ist ein deutlich besseres Gespräch."
+          ]
+        },
+        {
+          "h2": "Der Aufstellort entscheidet unabhängig von beidem",
+          "p": [
+            "Ob gefertigt oder umgebaut, ändert nichts an der baurechtlichen Frage. Ein Container, der stehen bleibt, ist ein Gebäude, und die Bauweise ist dafür unerheblich. Zone, Nutzung und Dauer entscheidet die zuständige Stelle am Standort.",
+            "Es gibt hier auch keine Abkürzung über die Beweglichkeit. Räder, Kufen oder die theoretische Transportierbarkeit ändern die Einordnung nicht, wenn die Einheit tatsächlich dauerhaft an einem Ort steht und dort genutzt wird.",
+            "Die Länderseiten nennen für jeden der fünf Zielmärkte, welche Stelle entscheidet und welcher Plan gilt. Das ist der erste Anruf, nicht der letzte — und er kostet nichts ausser Zeit."
+          ]
+        },
+        {
+          "h2": "Drei Fragen, die das Gespräch abkürzen",
+          "p": [
+            "Erstens: Ist das eine neu gefertigte Einheit oder ein umgebauter Transportcontainer? Diese Frage ist mit einem Wort zu beantworten und entscheidet, worüber Sie im Folgenden reden.",
+            "Zweitens: Wie ist der Wandaufbau von aussen nach innen, und wo liegt die Dämmebene? Wer den Aufbau nennen kann, hat einen; wer stattdessen Materialnamen aufzählt, hat eine Liste.",
+            "Drittens: Welche lichte Höhe bleibt innen, und welche Fensterflächen sind ohne Zusatzkonstruktion möglich? Diese beiden Zahlen sind die, die im fertigen Raum jeden Tag spürbar sind, und genau deshalb werden sie am seltensten von selbst genannt."
+          ]
+        }
+      ],
+      "checklist": {
+        "h2": "Was Sie sich vor der Anfrage schriftlich geben lassen",
+        "items": [
+          "Herkunft der Struktur: neu gefertigt oder umgebauter Transportcontainer.",
+          "Wandaufbau von aussen nach innen, mit der Lage der Dämmebene.",
+          "Lichte Innenhöhe, nicht nur die Aussenhöhe.",
+          "Welche Fensteröffnungen ohne zusätzliche Aussteifung möglich sind.",
+          "Bodenaufbau — und bei einem Umbau, was mit dem Originalboden geschehen ist.",
+          "Welche Unterlagen mit der Einheit übergeben werden.",
+          "Ob und wie erweitert oder gekoppelt werden kann, falls das später ein Thema wird."
+        ]
+      },
+      "faq": [
+        [
+          "Ist ein umgebauter Seecontainer grundsätzlich schlechter?",
+          "Nein. Er ist für einen anderen Zweck gebaut, und für unbeheizte Nutzung ist er oft die günstigere und völlig ausreichende Lösung. Der Unterschied wird dort spürbar, wo dauerhaft geheizt und gewohnt wird — bei Dämmebene, Raumhöhe und Öffnungen."
+        ],
+        [
+          "Warum ist die Raumhöhe beim Umbau so oft das Problem?",
+          "Weil die Aussenhöhe feststeht. Alles, was für Boden, Dämmung und Decke nachträglich hineinkommt, geht von der Innenhöhe ab. Bei einer gefertigten Einheit sitzt die Dämmung in der Wandebene und nicht in der Raumhöhe."
+        ],
+        [
+          "Kann man in einen Container jedes Fenster einbauen?",
+          "Bei einer gefertigten Einheit richtet sich der Rahmen nach den Öffnungen. Bei einer Stahlbox, deren Wand aussteift, muss jede grössere Öffnung konstruktiv zurückgegeben werden — das geht, es ist nur Aufwand, und der gehört ins Angebot."
+        ],
+        [
+          "Was ist ein Leercontainer genau?",
+          "Die Hülle: Rahmen, Beplankung und Öffnungen, ohne Innenausbau. Was danach hineinkommt, entscheiden Sie. Sollen wir ausbauen, wird das geplant, bevor die Wände geschlossen werden — danach ist jede Änderung unverhältnismässig teuer."
+        ],
+        [
+          "Brauche ich für einen Container eine Baugenehmigung?",
+          "Wenn er stehen bleibt: ja. Die Bauweise ändert daran nichts, und Räder ändern es auch nicht. Zuständig ist die Stelle am Standort; welche das je Zielmarkt ist, steht auf den Länderseiten."
+        ]
+      ]
+    },
+    {
+      "slug": "erste-anfrage-was-mitschicken",
+      "publish_on": "2026-08-21",
+      "category": "kauf",
+      "title": "Die erste Anfrage: was Sie mitschicken sollten, damit die Antwort etwas wert ist",
+      "description": "Eine Anfrage mit fünf Angaben bekommt eine Antwort mit Zahlen. Eine ohne bekommt eine Gegenfrage. Was in die erste Nachricht gehört, warum jede Angabe etwas entscheidet, und was Sie noch nicht wissen müssen.",
+      "image": "unit-exhibition-terrace",
+      "imageAlt": "Einheit mit Holz- und Metallfassade, davor eine Terrasse mit Tisch, Stühlen und Hängesessel",
+      "lead": "Die meisten ersten Anfragen lauten sinngemäss: Was kostet ein Tiny House? Darauf gibt es keine ehrliche Antwort, sondern nur eine Spanne, die niemandem hilft. Mit fünf Angaben wird aus derselben Frage eine, die sich mit Zahlen beantworten lässt — und keine davon verlangt, dass Sie sich schon entschieden haben.",
+      "sections": [
+        {
+          "h2": "Warum die Preisfrage allein nicht beantwortbar ist",
+          "p": [
+            "Der Werkspreis einer Einheit ist der kleinere Teil dessen, was ein Projekt kostet. Dazu kommen Transport zum Zielort, Entladung, Fundament, Anschlüsse an Wasser, Abwasser und Strom, Gebühren und je nach Land Einfuhrumsatzsteuer. Diese Posten hängen nicht vom Modell ab, sondern vom Grundstück.",
+            "Deshalb ist eine Zahl ohne Standort keine Auskunft, sondern eine Werbeaussage. Zwei identische Einheiten an zwei Adressen können sich im Gesamtpreis deutlich unterscheiden, ohne dass am Haus irgendetwas anders wäre.",
+            "Ein Anbieter, der auf die blosse Frage nach dem Preis sofort eine feste Zahl nennt, nennt entweder nur den Werkspreis oder rechnet mit Annahmen, die er Ihnen nicht sagt. Beides erfahren Sie später, und später ist es teurer."
+          ]
+        },
+        {
+          "h2": "Erstens: Wo soll die Einheit stehen",
+          "p": [
+            "Land und Ort, so genau wie möglich. Nicht weil wir daraus die Genehmigung ableiten könnten — das kann nur die zuständige Stelle vor Ort —, sondern weil Standort drei Dinge gleichzeitig festlegt: die Transportstrecke, die einfuhr- und steuerliche Behandlung und die klimatischen Auslegungsfragen.",
+            "Innerhalb Deutschlands macht die Postleitzahl einen realen Unterschied für die Lieferung. Zwischen Deutschland und Dänemark ändert sich zusätzlich die Mehrwertsteuersituation und die Behörde, mit der Sie es zu tun haben.",
+            "Wenn Sie das Grundstück noch nicht haben, schreiben Sie das genauso: Region, in der Sie suchen. Das ist eine brauchbare Angabe. Kein Grundstück zu nennen, weil man noch keins hat, wirft die Anfrage dagegen um eine Stufe zurück."
+          ]
+        },
+        {
+          "h2": "Zweitens: Wie soll sie genutzt werden",
+          "p": [
+            "Dauerwohnen, Ferienvermietung, Gästehaus, Büro oder Werkstatt sind fünf verschiedene Projekte, auch wenn das Haus gleich aussieht. Die Nutzung entscheidet über die baurechtliche Einordnung, über die Anforderungen an Heizung und Lüftung und darüber, was sich später überhaupt rechnet.",
+            "In mehreren unserer Zielmärkte ist das ausserdem die Frage, an der Projekte scheitern: In Ferien- und Erholungsgebieten ist dauerhaftes Wohnen grundsätzlich beschränkt, auch wo attraktive Grundstücke liegen. Wer dort dauerhaft wohnen will, muss das vorher wissen und nicht nachher.",
+            "Schreiben Sie auch, wenn die Nutzung wechseln soll — zuerst Ferienvermietung, später Dauerwohnen. Das ist eine völlig legitime Absicht und ändert die Auslegung von Anfang an."
+          ]
+        },
+        {
+          "h2": "Drittens: Wie viele Menschen, wie oft",
+          "p": [
+            "Zwei Personen dauerhaft, vier Personen an Wochenenden und sechs Personen in den Ferien sind drei verschiedene Anforderungen an Bad, Küche, Stauraum und Lüftung. Die Personenzahl ist die Angabe, aus der sich der Grundriss ableitet, nicht die Quadratmeterzahl.",
+            "Bei kleiner Fläche wirkt sich Belegungsdichte ausserdem direkt auf die Feuchtelast aus. Ein Haus, das für zwei Personen ausgelegt wurde und regelmässig von fünf genutzt wird, hat ein Lüftungsproblem, das nichts mit der Bauqualität zu tun hat.",
+            "Nennen Sie ruhig beides: den Normalfall und den Spitzenfall. Der Normalfall bestimmt die Auslegung, der Spitzenfall die Reserve."
+          ]
+        },
+        {
+          "h2": "Viertens: Wie kommt man auf das Grundstück",
+          "p": [
+            "Die letzten hundert Meter sind in der Praxis öfter das Problem als die Fernstrecke. Eine schmale Zufahrt, ein enger Wendekreis, ein Tor, ein tiefhängendes Kabel, ein weicher Untergrund nach Regen — jedes davon kann entscheiden, ob eine Einheit in einem Stück ankommt oder in Abschnitten kommen muss.",
+            "Deshalb sind zwei Handyfotos hier mehr wert als jede Beschreibung: eines von der Zufahrt aus Richtung Strasse, eines von der geplanten Aufstellfläche. Dazu die ungefähre Breite der Zufahrt an der engsten Stelle.",
+            "Auch der Kran gehört in diese Frage. Wenn die Einheit nicht direkt an ihre Position gefahren werden kann, muss sie gehoben werden, und ein Kran braucht Standfläche und freien Schwenkbereich. Das ist billiger zu klären als zu improvisieren."
+          ]
+        },
+        {
+          "h2": "Fünftens: Welcher Rahmen, ehrlich gesagt",
+          "p": [
+            "Ein Budgetrahmen ist keine Verhandlungsposition, sondern ein Filter. Er entscheidet, ob wir Ihnen von einem Basismodell mit späterem Ausbau erzählen oder von einer Einheit mit vollem Innenausbau, und er verhindert, dass Sie drei Wochen über etwas sprechen, das nicht in Frage kommt.",
+            "Wichtig ist, dass es der Gesamtrahmen ist und nicht der Werkspreis. Wer 60.000 Euro für die Einheit einplant und die Nebenkosten vergisst, hat kein Budgetproblem, sondern ein Rechenproblem — und es fällt erst auf, wenn die Einheit schon bestellt ist.",
+            "Wenn Sie den Rahmen noch nicht kennen, schreiben Sie das. Dann ist die erste Antwort eine Aufstellung der Posten statt einer Zahl, und die ist an dieser Stelle ohnehin nützlicher."
+          ]
+        },
+        {
+          "h2": "Die Angabe, die am häufigsten fehlt: der Untergrund",
+          "p": [
+            "Fast jede Anfrage nennt die Adresse und fast keine den Boden. Dabei entscheidet der Untergrund, ob Punktlager reichen oder ob ein Streifenfundament nötig wird, und in weichem oder wassernahem Baugrund kann das der grösste einzelne Nebenposten des ganzen Projekts sein.",
+            "Sie müssen dafür kein Bodengutachten haben. Es reicht zu wissen, ob auf dem Grundstück oder in der Nachbarschaft schon gebaut wurde und was dabei gemacht wurde — Nachbarn wissen so etwas oft genauer als jedes Amt, und die Auskunft kostet ein Gespräch über den Zaun.",
+            "Wichtig ist ausserdem das Gefälle. Ein Grundstück, das leicht abfällt, ist völlig unproblematisch, aber es verändert die Fundamentierung und den Zugang für den Transport. Ein Satz dazu in der ersten Nachricht erspart eine Rückfrage."
+          ]
+        },
+        {
+          "h2": "Wie weit sind Strom, Wasser und Kanal entfernt",
+          "p": [
+            "Diese eine Entfernung bestimmt einen der grössten Nebenposten, und sie ist mit einem Massband oder einer Kartenmessung in fünf Minuten geschätzt. Zwanzig Meter zum nächsten Anschluss und hundertzwanzig Meter sind zwei verschiedene Projekte, auch wenn dasselbe Haus daraufsteht.",
+            "Wenn kein Anschluss in Reichweite ist, ist das kein Ausschlusskriterium, sondern eine andere Planung: Tank, Kleinkläranlage, Inselanlage oder eine Kombination. Diese Varianten haben sehr unterschiedliche Kosten und sehr unterschiedliche Genehmigungswege.",
+            "Schreiben Sie deshalb ruhig, dass Sie es nicht genau wissen, aber schätzen Sie. Eine Schätzung mit Fehlerbalken ist brauchbar; eine fehlende Angabe führt dazu, dass dieser Posten in der Auskunft komplett fehlt und das Bild verzerrt."
+          ]
+        },
+        {
+          "h2": "Der Zeitpunkt, an dem Sie fragen, verändert die Antwort",
+          "p": [
+            "Eine Anfrage in der Grundstückssuche bekommt eine andere Antwort als eine mit unterschriebenem Kaufvertrag. In der Suchphase ist die nützlichste Auskunft eine Liste von Prüfpunkten, die Sie bei jedem Objekt abarbeiten — Zone, Zufahrt, Anschlüsse, Nachbarschaft.",
+            "Mit vorhandenem Grundstück verschiebt sich das Gespräch auf Machbarkeit und Kosten. Und mit vorliegender Auskunft der Behörde verschiebt es sich auf Ausstattung und Termin. Drei verschiedene Gespräche, dieselbe Firma.",
+            "Sagen Sie deshalb in einem Halbsatz, wo Sie stehen. Das ist die Angabe, die am meisten Zeit spart, und sie kostet Sie keine Vorbereitung."
+          ]
+        },
+        {
+          "h2": "Was Sie noch nicht wissen müssen",
+          "p": [
+            "Sie müssen kein Modell ausgewählt haben. Die acht Grundrisse sind ein Ausgangspunkt, und welcher passt, ergibt sich aus Nutzung und Personenzahl — nicht umgekehrt.",
+            "Sie müssen keine Masse festlegen. Länge und Aufteilung folgen aus dem, was drin passieren soll, und aus dem, was auf Ihre Zufahrt passt.",
+            "Und Sie brauchen keine Baugenehmigung, bevor Sie fragen. Sie brauchen sie, bevor Sie bestellen — das ist ein wichtiger Unterschied und der Grund, warum wir zur ersten Anfrage immer sagen, mit welcher Stelle Sie sprechen sollten."
+          ]
+        },
+        {
+          "h2": "Was eine gute Antwort enthalten muss",
+          "p": [
+            "Eine brauchbare erste Antwort trennt die Posten. Werkspreis, Transport, und dann getrennt die Positionen, die nicht im Angebot stehen können, weil sie vom Grundstück abhängen: Fundament, Anschlüsse, Entladung, Gebühren.",
+            "Sie sollte ausserdem sagen, was noch offen ist und wovon es abhängt. Eine Antwort ohne offene Punkte ist bei einem Bauprojekt mit fünf Angaben kein Zeichen von Kompetenz, sondern von Ungenauigkeit.",
+            "Und sie sollte die Behördenfrage nennen, statt sie zu umgehen. Wer Ihnen sagt, das sei alles kein Problem, hat entweder Ihr Grundstück nicht gesehen oder die Frage nicht verstanden."
+          ]
+        },
+        {
+          "h2": "Warum WhatsApp für den ersten Schritt funktioniert",
+          "p": [
+            "Der Grund ist unromantisch: Fotos. Zufahrt, Aufstellfläche, Grundstücksgrenze — diese drei Bilder sagen mehr als eine Seite Beschreibung, und sie sind über WhatsApp in dreissig Sekunden verschickt statt in einer E-Mail mit Anhang.",
+            "Der zweite Grund ist der Rückkanal. Nach den ersten Angaben kommen fast immer zwei oder drei Rückfragen, und die in einem laufenden Gespräch zu klären dauert Minuten statt Tage.",
+            "Für alles, was verbindlich wird, wechselt das Gespräch danach in Schriftform. Ein Chatverlauf ist kein Angebot, und niemand sollte ihn dafür halten — auch wir nicht."
+          ]
+        },
+        {
+          "h2": "Der Unterschied zwischen Auskunft und Angebot",
+          "p": [
+            "Eine Auskunft ist eine Einschätzung auf Basis dessen, was Sie geschrieben haben. Sie ist unverbindlich, sie kann sich ändern, und sie dient dazu, dass Sie entscheiden können, ob es weitergeht.",
+            "Ein Angebot ist geprüft: Route betrachtet, Aufstellsituation bewertet, Ausstattung festgelegt, Posten aufgelistet. Es entsteht nicht aus einer ersten Nachricht, sondern nach ein bis zwei Runden.",
+            "Verbindlich wird ausschliesslich ein geprüftes Angebot. Zahlen aus einer Auskunft in einen Businessplan zu übernehmen, ist der häufigste Fehler in dieser Phase — und der leiseste, weil er erst Monate später auffällt."
+          ]
+        },
+        {
+          "h2": "Was mehrere Einheiten ändern",
+          "p": [
+            "Wenn Sie mehrere gleiche Einheiten planen — für einen Ferienpark, ein Resort, eine Anlage —, ist die erste Anfrage eine andere. Dann zählt nicht der Einzelpreis, sondern wie viele Einheiten auf einen Transport gehen und wie oft sich derselbe Aufstellvorgang wiederholt.",
+            "Wiederholung zahlt sich dort aus: gleiche Einheit, gleiche Anschlüsse, gleicher Ablauf. Abweichungen je Einheit kosten in der Regel mehr, als sie dem Gast bringen.",
+            "Nennen Sie in diesem Fall die Stückzahl und den ungefähren Zeitraum. Beides verändert die Planung so grundlegend, dass eine Sammelbestellung nicht als Vielfaches einer Einzelbestellung gerechnet wird."
+          ]
+        },
+        {
+          "h2": "Eine Vorlage, die Sie kopieren können",
+          "p": [
+            "Land und Ort: __. Nutzung: __. Personen im Normalfall und im Spitzenfall: __. Zufahrt: Breite an der engsten Stelle, zwei Fotos angehängt. Budgetrahmen gesamt: __.",
+            "Dazu ein Satz zu dem, was Sie noch nicht wissen. Genau dieser Satz sorgt dafür, dass die Antwort dort ansetzt, wo Sie gerade stehen, statt bei einem Modellvergleich, den Sie noch nicht brauchen.",
+            "Mehr ist für den ersten Schritt nicht nötig. Alles Weitere — Ausstattung, Fassade, Heiztechnik, Termine — entsteht danach, in der Reihenfolge, in der es entschieden werden muss."
+          ]
+        },
+        {
+          "h2": "Was danach passiert",
+          "p": [
+            "Aus den Angaben entsteht eine erste Einschätzung mit getrennten Posten und einer Liste dessen, was noch zu klären ist. Wenn das für Sie passt, folgt die Bemusterung: Ausstattung, Materialien, Fassade, Technik.",
+            "Erst nach der Bemusterung wird über Termine gesprochen. Ein Liefertermin vor der Bemusterung wäre geraten, weil noch nicht feststeht, was gebaut wird — und ein geratener Termin ist ein Termin, der reisst.",
+            "Parallel dazu läuft Ihr Teil: die schriftliche Auskunft der zuständigen Stelle zur Zulässigkeit am konkreten Grundstück. Das ist der Punkt, an dem die meisten Projekte Zeit verlieren, und der einzige, den wir Ihnen nicht abnehmen können."
+          ]
+        }
+      ],
+      "checklist": {
+        "h2": "Die erste Nachricht in fünf Zeilen",
+        "items": [
+          "Land und Ort — oder die Region, in der Sie suchen.",
+          "Nutzung: Dauerwohnen, Ferienvermietung, Gästehaus, Büro, gewerblich.",
+          "Personen im Normalfall und im Spitzenfall.",
+          "Zufahrt: Breite an der engsten Stelle, plus ein Foto der Zufahrt und eines der Aufstellfläche.",
+          "Budgetrahmen gesamt — inklusive Fundament, Anschlüssen und Lieferung, nicht nur Werkspreis.",
+          "Ein Satz dazu, was Sie noch nicht wissen. Der spart die meiste Zeit.",
+          "Bei mehreren Einheiten: Stückzahl und ungefährer Zeitraum."
+        ]
+      },
+      "faq": [
+        [
+          "Bekomme ich ohne diese Angaben gar keine Antwort?",
+          "Doch, aber eine allgemeine. Ohne Standort und Nutzung lässt sich nur der Werkspreis nennen, und der ist der kleinere Teil dessen, was ein Projekt kostet. Die fünf Angaben sind der Unterschied zwischen einer Spanne und einer Rechnung."
+        ],
+        [
+          "Ich habe noch kein Grundstück. Ist die Anfrage sinnlos?",
+          "Nein, und es ist sogar ein guter Zeitpunkt. Dann ist die Antwort eine Liste dessen, worauf Sie bei der Grundstückssuche achten sollten — Zone, Zufahrt, Entfernung zu den Anschlüssen. Das ist beim Kauf mehr wert als beim Bauen."
+        ],
+        [
+          "Warum wollen Sie mein Budget wissen?",
+          "Um Ihnen Zeit zu sparen. Der Rahmen entscheidet, ob wir über ein Basismodell mit späterem Ausbau sprechen oder über eine voll ausgebaute Einheit. Ohne ihn beraten wir an Ihrem Projekt vorbei, und das merken beide Seiten erst spät."
+        ],
+        [
+          "Ist die erste Auskunft verbindlich?",
+          "Nein. Verbindlich ist ausschliesslich ein geprüftes Angebot. Die erste Auskunft ist eine Einschätzung auf Basis Ihrer Angaben und dient dazu, dass Sie entscheiden können, ob es weitergeht."
+        ],
+        [
+          "Wann kann ich mit einem Termin rechnen?",
+          "Nach der Bemusterung, nicht davor. Solange nicht feststeht, was gebaut wird, wäre jeder Termin geraten. Wir nennen deshalb erst dann einen, und das ist kein Ausweichen, sondern der Grund, warum er anschliessend hält."
+        ]
+      ]
+    },
+    {
+      "slug": "der-erste-winter-im-tiny-house",
+      "publish_on": "2026-08-22",
+      "category": "wohnen",
+      "title": "Der erste Winter im Tiny House: was wirklich anders ist",
+      "description": "Nicht die Kälte ist die Umstellung, sondern die Feuchte, das Licht und die Frage, wo nasse Sachen hin sollen. Was im ersten Winter auffällt, was sich einspielt und was Sie besser vorher regeln.",
+      "image": "interior-living-tv",
+      "imageAlt": "Wohnbereich mit Ecksofa, Wandfernseher, Pendelleuchten und weiss profilierter Wand- und Deckenverkleidung",
+      "lead": "Wer zum ersten Mal in einer kleinen Einheit überwintert, rechnet mit Kälte. Kälte ist selten das Thema — ein gut gedämmter Raum von dreissig Quadratmetern wird schnell warm und bleibt es. Was tatsächlich auffällt, ist die Feuchte, das Licht und die Frage, wohin mit nassen Jacken, Stiefeln und Wäsche.",
+      "sections": [
+        {
+          "h2": "Warum ein kleiner Raum schnell warm wird",
+          "p": [
+            "Heizlast hängt an der Hüllfläche, nicht am Gefühl. Eine kleine, gut gedämmte Einheit hat wenig Fläche, über die Wärme verloren geht, und wenig Luftvolumen, das aufgeheizt werden muss. Die Folge ist eine kurze Aufheizzeit und ein Raum, der auf eine Änderung an der Heizung innerhalb von Minuten reagiert statt innerhalb von Stunden.",
+            "Das ist angenehm und hat eine Kehrseite: Dieselbe Reaktionsfreude gilt beim Überheizen. Eine Heizung, die für ein Einfamilienhaus dimensioniert wäre, würde hier ständig zwischen zu warm und aus pendeln, und genau dieses Takten ist es, was Bewohner als unbehaglich empfinden.",
+            "Deshalb ist die richtige Frage im ersten Winter nicht, ob die Heizung stark genug ist, sondern ob sie fein genug regelt. Fast alle Klagen über das Raumklima im ersten Winter sind Regelungsklagen, keine Leistungsklagen."
+          ]
+        },
+        {
+          "h2": "Die Feuchte ist der eigentliche Unterschied",
+          "p": [
+            "Menschen, Duschen, Kochen und Wäsche geben in einer kleinen Einheit dieselbe Menge Wasser ab wie in einer grossen — nur verteilt sie sich auf ein Bruchteil des Luftvolumens. Die relative Luftfeuchte steigt dadurch schneller und fällt langsamer, und das ist der einzige Unterschied, der im Winter wirklich zählt.",
+            "Sichtbar wird es zuerst an der kältesten Fläche im Raum. Das ist fast nie die Wandmitte, sondern eine Ecke, eine Fensterlaibung oder die Fläche hinter einem Möbel, das an einer Aussenwand steht.",
+            "Wer diese Zusammenhänge im November einmal verstanden hat, verbringt den Rest des Winters entspannt. Wer sie im Februar zum ersten Mal an einem dunklen Fleck bemerkt, hat schon Arbeit."
+          ]
+        },
+        {
+          "h2": "Wäsche trocknen ist die grösste einzelne Quelle",
+          "p": [
+            "Eine Maschinenladung gibt ihr gesamtes Restwasser an die Raumluft ab, über Stunden. In einem Haus mit zweihundert Kubikmetern Luft fällt das kaum auf. In einer Einheit mit sechzig fällt es sofort auf, und zwar dort, wo es am wenigsten erwünscht ist.",
+            "Die praktikablen Antworten sind bekannt und unspektakulär: draussen trocknen, wo es geht; ein Wärmepumpentrockner, wo Platz und Anschluss vorhanden sind; und wenn drinnen getrocknet wird, dann in einem Raum mit wirksamer Abluft und geschlossener Tür.",
+            "Was nicht funktioniert, ist der Wäscheständer im Wohnbereich neben der Heizung. Er trocknet zwar schnell, weil warme Luft mehr Wasser aufnimmt — aber genau dieses Wasser sucht sich anschliessend den kältesten Punkt im Raum."
+          ]
+        },
+        {
+          "h2": "Lüften im Winter, ohne die Wärme wegzuwerfen",
+          "p": [
+            "Kalte Aussenluft enthält absolut sehr wenig Wasser. Sobald sie im Raum erwärmt ist, kann sie sehr viel mehr aufnehmen — deshalb ist Winterlüften das wirksamste Entfeuchtungsverfahren, das es gibt, und es ist kostenlos.",
+            "Wirksam ist kurzes Querlüften: alle Fenster für wenige Minuten weit auf, Durchzug, wieder zu. Die Luft wird getauscht, die Bauteile bleiben warm, und der Wärmeverlust ist gering, weil Wände und Möbel in dieser Zeit nicht auskühlen.",
+            "Ein dauerhaft gekipptes Fenster macht das Gegenteil: Es tauscht wenig Luft und kühlt dabei die Laibung ringsum stark ab. Es erzeugt also genau die kalte Oberfläche, an der Kondensat beginnt, und spart dabei nicht einmal Energie."
+          ]
+        },
+        {
+          "h2": "Wenn eine Lüftungsanlage vorhanden ist",
+          "p": [
+            "Eine mechanische Lüftung mit Wärmerückgewinnung nimmt Ihnen die Entscheidung ab, wann gelüftet wird — sie tut es kontinuierlich und holt einen grossen Teil der Wärme aus der Abluft zurück. Im ersten Winter ist sie deshalb spürbar angenehmer als Fensterlüftung.",
+            "Sie hat dafür eine Bedingung: Filter. Ein zugesetzter Filter senkt den Volumenstrom, und ab einem gewissen Punkt lüftet die Anlage nur noch nominell. Das merkt man nicht am Geräusch, sondern erst an beschlagenen Scheiben.",
+            "Notieren Sie deshalb das Datum des Filterwechsels irgendwo, wo Sie es wiederfinden. Es ist die einzige regelmässige Aufgabe, die diese Anlagen haben, und die einzige, deren Versäumnis sie unwirksam macht."
+          ]
+        },
+        {
+          "h2": "Nasse Sachen brauchen einen eigenen Ort",
+          "p": [
+            "Das ist der praktische Punkt, den fast niemand vorher bedenkt. Jacken, Stiefel, Hundeleinen, Schneehosen: Im Winter kommt jeden Tag Wasser an Kleidung ins Haus, und es verdunstet dort, wo die Sachen liegen.",
+            "In einer kleinen Einheit gibt es dafür selten einen ungenutzten Raum. Was funktioniert, ist eine definierte Zone direkt am Eingang mit abwaschbarem Boden, Haken statt Schrank, und wenn möglich einer eigenen Abluftöffnung.",
+            "Wer das im Grundriss nicht vorgesehen hat, improvisiert es im Dezember — meistens im Bad, was dort die Feuchtelast noch einmal erhöht. Es lohnt sich, diesen Quadratmeter bei der Planung bewusst zu vergeben."
+          ]
+        },
+        {
+          "h2": "Das Licht ist die zweite Umstellung",
+          "p": [
+            "Grosse Fensterflächen sind im Sommer der Grund, warum man sich für so ein Haus entscheidet. Im Winter bedeuten sie am Nachmittag früh Dunkelheit und viel Glasfläche, hinter der es kalt ist.",
+            "Was hilft, ist nicht mehr Licht, sondern mehrere Lichtquellen auf verschiedenen Höhen. Eine einzelne Deckenleuchte macht einen kleinen Raum im Winter unangenehm; zwei bis drei warme Lichtpunkte auf Steh- und Tischhöhe machen ihn wohnlich.",
+            "Das ist eine Elektroplanungsfrage und keine Möbelfrage. Steckdosen an den Stellen, an denen später eine Leuchte stehen soll, kosten während des Baus fast nichts und lassen sich hinterher nur mit sichtbarem Kabel nachrüsten."
+          ]
+        },
+        {
+          "h2": "Vorhänge: nützlich, mit einer Bedingung",
+          "p": [
+            "Ein Vorhang vor einer grossen Glasfläche senkt nachts den Wärmeverlust spürbar und macht den Raum behaglicher, weil die kalte Scheibe nicht mehr direkt in den Raum strahlt.",
+            "Die Bedingung ist Luftbewegung. Ein bodenlanger, dicht schliessender Vorhang schneidet die Laibung von der Raumwärme ab und macht sie kälter, als sie ohne ihn wäre — und dann kondensiert dahinter Feuchte, unbemerkt bis zum Frühjahr.",
+            "Die einfache Lösung ist ein Vorhang, der oben oder unten Luft durchlässt, oder das Zurückziehen am Morgen. Wer beides vergisst, findet im März den einzigen Schimmelfleck des Winters genau dort."
+          ]
+        },
+        {
+          "h2": "Die Wasserleitungen sind der Punkt mit echtem Schadenspotenzial",
+          "p": [
+            "Alles bisher Genannte ist Komfort. Frost in einer Wasserleitung ist Sachschaden. Gefährdet sind die Stellen, die aussen liegen oder in unbeheizten Bereichen verlaufen: Zuleitung, Aussenhahn, ein Rohr unter dem Boden, ein Abwasseranschluss im Freien.",
+            "Wer die Einheit im Winter dauerhaft bewohnt und heizt, hat damit selten ein Problem. Kritisch sind Leerstandsphasen: eine Woche Urlaub im Januar bei abgeschalteter Heizung ist die klassische Konstellation.",
+            "Deshalb gehört zu jeder Einheit die Frage, wie sie winterfest gemacht wird — Absperrung, Entleerung, Begleitheizung oder eine Kombination. Das ist keine Sonderausstattung, das ist Betriebswissen, und es sollte in den Unterlagen stehen."
+          ]
+        },
+        {
+          "h2": "Schnee auf dem Dach und vor der Tür",
+          "p": [
+            "Schnee auf dem Dach ist eine Lastfrage, und sie wird bei der Auslegung für den Zielort beantwortet — nicht vom Bewohner im Januar. Was Bewohner tatsächlich betrifft, ist Schnee, der abrutscht: Er landet dort, wo das Dach ihn hinschickt, und das ist oft der Eingang oder die Terrasse.",
+            "Die zweite praktische Frage ist der Schnee, der am Fassadenfuss liegen bleibt. Eine Schneeauflage direkt an der Holzfassade liefert beim Tauen tagelang Wasser nach, und zwar an der empfindlichsten Zone der ganzen Fassade.",
+            "Beides ist mit Räumen erledigt und mit einem Blick beim Entwurf vermeidbar: Wo rutscht der Schnee hin, und wie viel Abstand hat die Fassade zum Terrain? Zwei Fragen, die im August niemand stellt."
+          ]
+        },
+        {
+          "h2": "Was sich im zweiten Winter von selbst erledigt",
+          "p": [
+            "Die meisten Umstellungen sind einmalig. Nach einer Saison weiss man, wann gelüftet wird, wo nasse Sachen hingehören, wie die Heizung reagiert und welche Ecke ein Auge braucht. Das ist Betriebswissen, und es entsteht durch Wohnen, nicht durch Lesen.",
+            "Was nicht von selbst besser wird, sind konstruktive Punkte: eine Wärmebrücke bleibt eine Wärmebrücke, ein zu kleiner Lüftungsquerschnitt bleibt zu klein. Wenn ein Problem im zweiten Winter identisch wiederkommt, ist es keine Gewöhnungsfrage.",
+            "Die nützliche Trennlinie lautet deshalb: Was sich durch geändertes Verhalten bessert, war Betrieb. Was sich nicht bessert, gehört angesehen — und zwar bevor es der dritte Winter wird."
+          ]
+        },
+        {
+          "h2": "Die Messwerte, die den Winter über genügen",
+          "p": [
+            "Ein Thermo-Hygrometer im Wohnbereich und eines im Schlafbereich reichen aus. Beide zusammen kosten wenig und liefern die einzige Information, die im Winter wirklich handlungsleitend ist: wie die relative Luftfeuchte auf Ihr Verhalten reagiert.",
+            "Wer zusätzlich ein Infrarot-Thermometer hat, kann an einem kalten Morgen in fünf Minuten alle verdächtigen Flächen abgehen und die kälteste finden. Diese eine Messung ersetzt eine Menge Vermutung.",
+            "Notieren Sie an zwei, drei kalten Tagen die Werte morgens und abends. Nicht dauerhaft — nur lange genug, um ein Gefühl für die Spanne zu bekommen, in der Ihr Haus sich bewegt."
+          ]
+        },
+        {
+          "h2": "Was Sie vor dem ersten Winter erledigen sollten",
+          "p": [
+            "Erstens: klären, wie die Wasserführung winterfest gemacht wird, und es einmal durchspielen, solange es noch mild ist. Im ersten Frost will man das nicht zum ersten Mal lesen.",
+            "Zweitens: den Filterwechsel der Lüftung einplanen und das Werkzeug dafür an einen Ort legen, an dem es im Januar noch ist.",
+            "Drittens: die Möbelstellung an Aussenwänden prüfen und dort, wo es geht, ein paar Zentimeter Abstand schaffen. Das ist die billigste Massnahme mit dem grössten Effekt, und sie dauert eine halbe Stunde."
+          ]
+        },
+        {
+          "h2": "Was das Haus nicht leisten kann",
+          "p": [
+            "Ein kleines Haus ersetzt keine Trockenkammer und keinen Keller. Wer regelmässig Ausrüstung, Sportgeräte oder Saisonales unterbringen muss, braucht dafür eine Lösung ausserhalb — ein Schuppen, eine abschliessbare Kiste, ein Carport mit Wand.",
+            "Das ist kein Mangel, sondern eine Konsequenz der Fläche, und es wird deutlich besser, wenn man es einplant statt es zu erleiden. Der häufigste Ärger im ersten Winter ist ein Haus, das voll ist, weil ihm ein Nebenraum fehlt.",
+            "Rechnen Sie diese Nebenlösung ins Budget. Sie ist billig gegenüber allem anderen im Projekt und entscheidet überproportional darüber, ob sich der Winter eng anfühlt."
+          ]
+        },
+        {
+          "h2": "Wann Sie uns schreiben sollten",
+          "p": [
+            "Bei allem, was nach zwei trockenen, geheizten Tagen noch feucht ist. Das ist die Grenze zwischen Raumluft und Bauteil, und ab dort hilft Lüften nicht mehr.",
+            "Bei jedem Geräusch, das neu ist und sich mit der Temperatur ändert — Knacken beim Aufheizen ist normal, ein Geräusch, das lauter wird, ist es nicht.",
+            "Und bei allem an der Wasserführung. Dort ist ein Fehlalarm billig und ein zu später Anruf teuer, und das ist eine Asymmetrie, bei der man sich ruhig auf die vorsichtige Seite schlagen darf."
+          ]
+        },
+        {
+          "h2": "Der Satz, der für den ganzen Winter gilt",
+          "p": [
+            "Warme Luft transportiert Wasser, kalte Flächen geben es ab. Fast jedes Winterproblem in einer kleinen Einheit lässt sich mit diesem einen Satz erklären — und meistens auch lösen, indem man entweder die Feuchte senkt oder die kalte Fläche wärmer macht.",
+            "Alles andere in diesem Text sind Anwendungen davon: Wäsche, Lüften, Vorhänge, Möbelabstand, Filter. Wer den Satz behält, braucht die Liste nicht auswendig.",
+            "Und wenn beides nicht reicht, liegt es an der Konstruktion und nicht am Wohnen. Dann ist es unsere Aufgabe und nicht Ihre."
+          ]
+        }
+      ],
+      "checklist": {
+        "h2": "Vor dem ersten Frost, einmal durchgehen",
+        "items": [
+          "Wie wird die Wasserführung winterfest gemacht? Einmal durchspielen, solange es mild ist.",
+          "Filter der Lüftung geprüft, Wechseldatum notiert, Werkzeug griffbereit.",
+          "Möbel an Aussenwänden ein Stück abgerückt, oben und unten Luft.",
+          "Eine Zone für nasse Kleidung festgelegt — abwaschbarer Boden, Haken, möglichst Abluft.",
+          "Zwei Thermo-Hygrometer aufgestellt: Wohnbereich und Schlafbereich.",
+          "Geklärt, wohin der Schnee vom Dach rutscht und ob dort ein Eingang liegt.",
+          "Zweite und dritte Lichtquelle organisiert, bevor es um vier Uhr dunkel wird."
+        ]
+      },
+      "faq": [
+        [
+          "Wird eine kleine Einheit im Winter überhaupt richtig warm?",
+          "In der Regel schneller als ein grosses Haus, weil wenig Luftvolumen und wenig Hüllfläche zusammenkommen. Das häufigere Problem ist eine Heizung, die zu grob regelt und zwischen zu warm und aus pendelt — das ist eine Regelungsfrage, keine Leistungsfrage."
+        ],
+        [
+          "Beschlagene Scheiben im Winter — ist das ein Mangel?",
+          "Nicht automatisch. Kondensat an der kältesten Fläche im Raum ist Physik. Zum Hinweis wird es, wenn es trotz regelmässigem Querlüften und normaler Feuchtelast bleibt, oder wenn es nicht an der Scheibe, sondern an einer Wandfläche auftritt."
+        ],
+        [
+          "Reicht Fensterlüften, oder brauche ich eine Anlage?",
+          "Fensterlüften reicht, wenn es tatsächlich stattfindet — kurz, quer, mehrmals täglich, auch an Arbeitstagen. Eine Anlage nimmt Ihnen die Disziplin ab und holt Wärme zurück; dafür braucht sie regelmässigen Filterwechsel."
+        ],
+        [
+          "Was mache ich im Winterurlaub mit den Leitungen?",
+          "Das hängt von der Ausführung ab und gehört in die Unterlagen zu Ihrer Einheit: absperren, entleeren, Begleitheizung, oder Heizung auf Frostschutz. Was hier nicht steht, ist eine allgemeine Empfehlung, weil eine falsche mehr kostet als keine."
+        ],
+        [
+          "Ab wann sollte ich jemanden holen?",
+          "Wenn eine Stelle nach zwei trockenen, geheizten Tagen feucht bleibt, wenn ein Fleck im zweiten Winter identisch wiederkommt, oder bei allem, was mit Wasserführung zu tun hat. Bei den ersten beiden geht es um ein Bauteil, beim dritten um Schadensbegrenzung."
         ]
       ]
     }
