@@ -165,6 +165,7 @@ const MENU = {
       ]},
       { label: "Ratgeber", menu: [
         ["ratgeber/", "Ratgeber-Hub", "Alle Beiträge in 9 Kategorien"],
+        ["blog/praxis/", "Praxis (täglich)", "Wartung, Schäden, Betrieb — ein Beitrag pro Tag"],
         ["ratgeber/genehmigung-und-recht/", "Genehmigung & Recht", "Bauantrag, Stellplatz, Versicherung"],
         ["ratgeber/kosten-und-finanzierung/", "Kosten & Finanzierung", "Preise, Kauf, Rendite"],
         ["ratgeber/technik-und-konstruktion/", "Technik & Konstruktion", "Rahmen, Dämmung, Haustechnik"],

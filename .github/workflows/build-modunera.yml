@@ -1,5 +1,13 @@
 name: Build and validate MODUNERA
 
+# 2026-08-18: this workflow ran fourteen of the seventeen steps in
+# README-build.md. build-quality-spec.mjs, build-de-source-block.mjs and
+# build-shell-v3.mjs were missing, so the "committed HTML must match a fresh
+# build" gate compared the committed site against an incomplete one and differed
+# on 7,607 pages. The gate that exists to catch a partial pipeline was itself
+# running a partial pipeline. All seventeen steps now run, in the documented
+# order, in both the build and the idempotency pass.
+#
 # The previous version of this file ran three of the twelve pipeline steps and
 # asserted two brand files the rebrand step had retired, on a branch that no
 # longer exists and only when the workflow file itself changed. It was a check
@@ -48,14 +56,18 @@ jobs:
           node tools/build-modunera-depth.mjs
           node tools/build-news-v7.mjs
           node tools/build-production-faq-v7.mjs
+          node tools/build-daily-blog.mjs
           node tools/build-modunera-v2.mjs
           node tools/build-modunera-depth.mjs --extend
+          node tools/build-quality-spec.mjs
           node tools/build-hreflang-v7.mjs
           node tools/build-photo-placement.mjs
           node tools/build-image-attrs.mjs
           node tools/build-nordic-redirects.mjs
           node tools/build-content-lastmod.mjs
           node tools/build-seo-governance-v7.mjs
+          node tools/build-de-source-block.mjs
+          node tools/build-shell-v3.mjs
 
       - name: Gate — canonicals, JSON-LD, links, brand, colours
         run: node tools/validate-modunera.mjs
@@ -88,14 +100,18 @@ jobs:
           node tools/build-modunera-depth.mjs
           node tools/build-news-v7.mjs
           node tools/build-production-faq-v7.mjs
+          node tools/build-daily-blog.mjs
           node tools/build-modunera-v2.mjs
           node tools/build-modunera-depth.mjs --extend
+          node tools/build-quality-spec.mjs
           node tools/build-hreflang-v7.mjs
           node tools/build-photo-placement.mjs
           node tools/build-image-attrs.mjs
           node tools/build-nordic-redirects.mjs
           node tools/build-content-lastmod.mjs
           node tools/build-seo-governance-v7.mjs
+          node tools/build-de-source-block.mjs
+          node tools/build-shell-v3.mjs
           find . -name '*.html' -not -path './.git/*' -print0 \
             | sort -z | xargs -0 sha1sum > /tmp/second.sha
           diff -q /tmp/rebuilt.sha /tmp/second.sha \

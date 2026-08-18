@@ -13,6 +13,7 @@ node tools/build-modunera-locales.mjs     # Dutch, Danish and French sections
 node tools/build-modunera-depth.mjs       # MD 1–MD 8 in five languages, country questions, blogs
 node tools/build-news-v7.mjs              # sourced local news, five market hubs
 node tools/build-production-faq-v7.mjs    # production, quality, delivery and buying FAQ
+node tools/build-daily-blog.mjs           # the daily practice series at /blog/praxis/
 node tools/build-modunera-v2.mjs          # navigation, comparison pages, guide hubs, cookie notice
 node tools/build-modunera-depth.mjs --extend   # appendix, product word, blocked-claim removal
 node tools/build-quality-spec.mjs         # the twelve component cards on /qualitaet/
@@ -437,6 +438,31 @@ reads to a search engine as one page repeated. Where that stands now:
 | Country question page | did not exist | 1,000–1,420 |
 | English subject page | did not exist | 1,100–1,800 |
 | Blog post / guide | 605–740 | 1,650–1,900 |
+
+## The daily series
+
+`/blog/praxis/` is one post per day, separate from the 125 posts under `/blog/`,
+which are not touched by it. `tools/build-daily-blog.mjs` reads every
+`data/blog-daily-*.json`, and writes only the posts whose `publish_on` date has
+arrived. A post with a future date is not written to disk at all — it is not
+hidden behind `noindex`, it does not exist yet, so there is nothing to find early.
+
+There is no server, so "one per day" is a scheduled build:
+`.github/workflows/daily-post.yml` runs the full pipeline every morning, runs
+both gates, and commits only if the output changed. If a gate fails nothing is
+pushed, because a date arriving is not a reason to publish a broken site.
+
+**Two things the generator refuses to build.** A post under 1,800 words, and any
+pair of published posts whose 6-gram Jaccard overlap exceeds 30%. The second one
+is the whole point: a daily series is the easiest possible way to recreate the
+problem the *Duplication* section below describes, and length is not a defence —
+two 2,000-word posts that say the same thing are one post. The check runs on the
+rendered body, not on the source.
+
+Writing a genuine 2,000-word post takes roughly twelve sections. There is no
+mechanism here that invents one, and there should not be: the queue is refilled
+by writing, and when it runs dry the site simply stops gaining posts until it is
+refilled. That is the correct failure mode.
 
 ## Duplication
 

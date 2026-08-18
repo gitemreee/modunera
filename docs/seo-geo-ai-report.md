@@ -269,7 +269,14 @@ taken for other reasons.
 
 - **Rankings.** No rank tracking exists for this site, so nothing here says how it
   performs on any query. Everything above is about whether the pages deserve to.
-- **Search Console data.** Not connected to this environment.
+- **Search Console data.** Not connected to this environment. The owner reported
+  the first figure on 2026-08-18: **10 clicks from Germany in 24 hours**. That is
+  the first traffic signal this project has had, and it is a baseline rather than
+  a result — the site is weeks old and 519 of its 15,171 pages are offered to
+  search. It is recorded here because everything else in this report is a
+  statement about whether pages deserve traffic, and this is the first sentence
+  about whether they get any. Anyone reading later: compare against the daily
+  series, which began the same day.
 - **Conversion.** Now measurable but not yet measured — the event layer shipped
   today and `assets/js/integration-config.json` is still empty by design. See
   `docs/conversion-events.md`.

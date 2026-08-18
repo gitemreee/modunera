@@ -1,0 +1,168 @@
+{
+  "_comment": [
+    "The daily practice series rendered by tools/build-daily-blog.mjs at /blog/praxis/.",
+    "",
+    "One post per day. A post appears when the pipeline runs on or after its",
+    "publish_on date; before that it is not written to disk at all.",
+    "",
+    "THE RULE EVERY ENTRY IS WRITTEN TO",
+    "",
+    "Each post is written on its own subject and its own failure mode. Nothing is",
+    "shared between them but the disclaimer the generator adds. The 125 posts under",
+    "/blog/ were once produced from a single skeleton with a keyword swapped in, and",
+    "undoing that took real work; the generator therefore measures 6-gram overlap",
+    "between every pair of published posts and refuses to build above 30%.",
+    "",
+    "No invented figures. No U-value, no panel thickness, no load rating, no weight,",
+    "no lead time, no price. Those are publish blockers in REQUIRED-BUSINESS-INPUTS.md",
+    "and they are blocked here too. What these posts carry is the engineering logic",
+    "of the trade and the questions a buyer should ask, which is true regardless of",
+    "which documents arrive.",
+    "",
+    "Where a legal or authority statement appears it keeps its hedge and names the",
+    "competent body, exactly as the rest of the site does."
+  ],
+  "posts": [
+    {
+      "slug": "thermowood-vergraut-was-normal-ist",
+      "publish_on": "2026-08-18",
+      "category": "wartung",
+      "title": "Thermowood wird grau: was normal ist und was nicht",
+      "description": "Die Vergrauung einer Thermoholzfassade ist ein Oberflächenvorgang, kein Schaden. Woran Sie den Unterschied erkennen, wann Sie eingreifen und wann Sie es besser lassen.",
+      "image": "mc7-exterior.webp",
+      "imageAlt": "Aussenansicht eines MODUNERA Tiny House mit Holzfassade in der Nachmittagssonne",
+      "lead": "Eine Thermoholzfassade wird grau. Das ist der Normalfall und kein Mangel: UV-Licht baut das Lignin an der Oberfläche ab, Regen wäscht es aus, zurück bleibt silbrige Zellulose. Ein Schaden sieht anders aus — er ist ungleichmässig, er ist feucht, und er sitzt fast immer dort, wo Wasser nicht wegkommt.",
+      "sections": [
+        {
+          "h2": "Warum Holz überhaupt grau wird",
+          "p": [
+            "Holz besteht vereinfacht aus Zellulose, Hemizellulose und Lignin. Lignin ist der Anteil, der dem Holz seine warme Farbe gibt, und es ist gleichzeitig der Anteil, den UV-Strahlung als Erstes zerlegt. Die Bruchstücke sind wasserlöslich, der nächste Regen spült sie ab, und was an der Oberfläche zurückbleibt, ist überwiegend Zellulose. Zellulose streut Licht diffus — deshalb wirkt die Fläche silbergrau statt braun.",
+            "Dieser Vorgang betrifft eine sehr dünne Schicht. Er läuft an der Oberfläche ab und dringt nicht in den Querschnitt ein. Deshalb ist eine vergraute Fassade nach mehreren Jahren an der Oberfläche verändert und im Inneren unverändert, solange die Konstruktion trocken bleibt.",
+            "Thermisch modifiziertes Holz verändert daran nichts grundsätzlich. Die Behandlung verändert das Verhalten gegenüber Feuchte und biologischem Abbau, nicht die Reaktion des Lignins auf UV. Ein Thermoholz vergraut also ebenso — es tut es nur auf einem Untergrund, der Feuchtewechsel besser verträgt."
+          ]
+        },
+        {
+          "h2": "Warum die Vergrauung fast nie gleichmässig ist",
+          "p": [
+            "Die Nordseite bekommt weniger direkte Strahlung als die Südseite, also vergraut sie langsamer. Unter einem Dachüberstand liegt eine Zone, die weder viel UV noch viel Regen abbekommt; dort bleibt das Holz oft jahrelang dunkler und wirkt dann wie ein Streifen, der nicht dazugehört. Das ist kein Fehler in der Fassade, sondern die Geometrie des Gebäudes, die sich abzeichnet.",
+            "Genauso zeichnen sich Bauteile ab, die Wasser führen. Unter einem Fensterbrett, hinter einem Abflussrohr, an der Traufkante: überall dort läuft konzentriert Wasser über eine schmale Fläche und wäscht schneller aus. Ein senkrechter dunkler oder heller Streifen unter einem Bauteil ist deshalb zuerst ein Hinweis auf den Wasserweg, nicht auf einen Materialfehler.",
+            "Wer eine gleichmässig graue Fassade will, muss das im Entwurf entscheiden und nicht in der Pflege. Ein umlaufend gleicher Dachüberstand, gleiche Abstände zum Boden und Fensterbänke mit ausreichender Tropfkante sorgen dafür, dass alle Flächen ungefähr dieselbe Menge Sonne und Regen sehen."
+          ]
+        },
+        {
+          "h2": "Der Unterschied zwischen Patina und Schaden",
+          "p": [
+            "Patina ist trocken, flächig und folgt der Himmelsrichtung. Sie fühlt sich an wie Holz, sie ist matt, und sie wird von Jahr zu Jahr langsam gleichmässiger. Wenn Sie mit dem Fingernagel darüber gehen, passiert nichts — die Oberfläche ist fest.",
+            "Ein Schaden ist punktuell, dunkel und meist feucht. Er sitzt an Stellen, an denen Wasser stehen bleibt: auf waagerechten Flächen ohne Gefälle, in einer offenen Hirnholzkante, hinter einer Fuge, die sich zugesetzt hat. Die Farbe geht ins Schwarze oder ins Grünliche, die Oberfläche wird weich, und der Fingernagel hinterlässt eine Spur.",
+            "Der zuverlässigste Test ist deshalb nicht die Farbe, sondern die Festigkeit und die Feuchte. Eine Fläche, die nach zwei trockenen Tagen immer noch dunkel und kühl ist, gibt Feuchte aus dem Aufbau ab und nicht aus dem letzten Regen. Das ist der Moment, in dem man dahinterschaut, statt zu streichen."
+          ]
+        },
+        {
+          "h2": "Wo Sie zuerst hinsehen sollten",
+          "p": [
+            "Hirnholz ist die verletzlichste Stelle jeder Holzfassade. An der Stirnseite eines Brettes liegen die Kapillaren offen, und Wasser wird dort um ein Vielfaches schneller aufgenommen als an der Längsfläche. Jeder Zuschnitt vor Ort erzeugt eine solche Stelle — auch der, den jemand gemacht hat, um eine Leitung durchzuführen.",
+            "Die zweite Stelle ist der Spritzwasserbereich am Fuss der Fassade. Regen, der vom Boden zurückspritzt, trifft immer dieselbe schmale Zone und trägt Schmutz mit. Ist der Abstand zum Terrain zu klein oder liegt dort eine Kiesreihe, die zugewachsen ist, bleibt diese Zone länger feucht als der Rest.",
+            "Die dritte ist jeder waagerechte Absatz. Eine Fensterbank ohne Gefälle, eine Attika ohne Abdeckung, eine Leiste, die jemand später angebracht hat: Wasser, das nicht abläuft, steht. Es ist selten das Material, das versagt, und fast immer eine Fläche, auf der Wasser eine Chance bekommt."
+          ]
+        },
+        {
+          "h2": "Was Sie tun können, wenn Ihnen die Farbe nicht gefällt",
+          "p": [
+            "Die ehrlichste Antwort ist: Sie können die Vergrauung verlangsamen, aber nicht dauerhaft verhindern. Pigmentierte Öle halten UV von der Oberfläche fern, solange das Pigment da ist. Es baut sich ab, also wird nachgeölt — auf der Wetterseite häufiger als auf der Nordseite. Wer das nicht dauerhaft leisten will, fährt mit der Vergrauung besser, weil sie sich selbst überlässt und nicht gepflegt werden muss.",
+            "Vergrauungslasuren gehen den anderen Weg: Sie nehmen den Grauton vorweg, damit die Fläche von Anfang an so aussieht, wie sie später ohnehin aussehen würde. Das löst nicht das Problem der ungleichmässigen Bewitterung, aber es verkürzt die Phase, in der die Unterschiede am stärksten auffallen.",
+            "Was Sie nicht tun sollten, ist eine dicht filmbildende Beschichtung auf eine Aussenfassade zu bringen, die von hinten Feuchte abgeben können muss. Ein geschlossener Film hält Wasser nicht nur draussen, er hält es auch drinnen. Das ist der Mechanismus, mit dem aus einem kosmetischen Wunsch ein bauphysikalisches Problem wird."
+          ]
+        },
+        {
+          "h2": "Reinigen, ohne die Oberfläche zu ruinieren",
+          "p": [
+            "Der häufigste vermeidbare Schaden an einer Holzfassade entsteht mit einem Hochdruckreiniger. Der Strahl trägt nicht nur den Schmutz ab, sondern auch die weicheren Frühholzanteile, und er drückt Wasser in Fugen und hinter Bretter. Was danach übrig bleibt, ist eine aufgeraute Oberfläche, die künftig schneller verschmutzt, und ein Aufbau, der Wasser dort hat, wo keins hingehört.",
+            "Weiche Bürste, Wasser und Geduld reichen für fast alles. Wer zusätzlich etwas braucht, nimmt ein Mittel, das für Holz im Aussenbereich vorgesehen ist, und probiert es an einer Stelle aus, die nicht im Blickfeld liegt. Anschliessend gründlich mit klarem Wasser nachspülen, damit keine Rückstände auf der Fläche bleiben.",
+            "Der beste Zeitpunkt ist ein bedeckter, trockener Tag. In der prallen Sonne trocknet Reinigungsmittel an, bevor es wirkt, und hinterlässt Ränder — und die sieht man auf einer teilweise vergrauten Fassade besonders deutlich."
+          ]
+        },
+        {
+          "h2": "Was sich nicht mit Pflege lösen lässt",
+          "p": [
+            "Wenn Wasser konstruktiv nicht wegkommt, hilft kein Öl und keine Bürste. Eine Fensterbank ohne Gefälle bleibt eine Fensterbank ohne Gefälle, und sie wird jedes Jahr denselben Streifen erzeugen. Solche Punkte werden geändert, nicht gepflegt: Tropfkante ergänzen, Gefälle herstellen, Abstand zum Terrain vergrössern, Hirnholz abdecken.",
+            "Dasselbe gilt für eine hinterlüftete Ebene, die zugesetzt ist. Eine Holzfassade vor einem Aufbau funktioniert, weil hinter ihr Luft strömt und Feuchte abführt. Ist der Lüftungsspalt unten oder oben verstopft — durch Laub, durch ein nachträglich angebrachtes Blech, durch ein Insektengitter, das sich zugesetzt hat — steht die Luft, und dann steht auch die Feuchte.",
+            "Diese beiden Fälle sind der Grund, warum eine Fassadeninspektion immer auch ein Blick auf Wasserwege und Lüftungsöffnungen ist und nicht nur auf die Farbe."
+          ]
+        },
+        {
+          "h2": "Was wir dokumentieren und was Sie verlangen sollten",
+          "p": [
+            "Zu jeder ausgelieferten Einheit gehört die Angabe, welches Fassadenmaterial verbaut ist, wie es behandelt wurde und welche Pflege dazu vorgesehen ist. Das ist die Grundlage dafür, dass Sie in fünf Jahren wissen, womit Sie nachölen können, ohne die vorhandene Behandlung zu stören.",
+            "Verlangen Sie dieselbe Angabe von jedem Anbieter, den Sie vergleichen. Eine Fassade ist der Bauteil, den Sie am häufigsten sehen und am ehesten selbst pflegen; ein Hersteller, der Ihnen nicht sagen kann, was auf dem Holz ist, sagt Ihnen auch nicht, was Sie darauf tun dürfen.",
+            "Verbindliche Zahlen zu Dauerhaftigkeit oder Wartungsintervall nennen wir hier bewusst nicht. Sie hängen von Standort, Ausrichtung, Dachüberstand und Abstand zum Terrain ab, und eine Zahl ohne diese Angaben wäre geraten. Was am konkreten Objekt gilt, gehört in die Projektunterlagen und nicht in einen allgemeinen Beitrag."
+          ]
+        },
+        {
+          "h2": "Was der erste Winter mit der Fassade macht",
+          "p": [
+            "Im ersten Winter passiert an einer neuen Holzfassade mehr als in den zwei Sommern danach. Das Holz kommt mit einer Ausgleichsfeuchte aus der Halle, es steht dann zum ersten Mal in Dauerregen, Frost und Wechseltemperaturen, und es arbeitet. Bretter ziehen sich quer zur Faser zusammen und dehnen sich wieder, Fugenbilder verändern sich um wenige Millimeter, und einzelne Schrauben können sich minimal setzen.",
+            "Das ist erwartbar und kein Grund, im Januar etwas zu unternehmen. Was Sie im ersten Winter tun sollten, ist beobachten und fotografieren: dieselben drei oder vier Stellen, jeweils aus derselben Position. Diese Bilder sind später die einzige verlässliche Referenz dafür, ob sich etwas verändert hat oder ob Sie es nur zum ersten Mal bewusst ansehen.",
+            "Im ersten Frühjahr wird dann nachgesehen, ob sich irgendwo eine Schraube gelöst, ein Brett verzogen oder eine Fuge unzulässig geöffnet hat. Das ist der richtige Zeitpunkt für die erste echte Kontrolle — nicht der Herbst davor."
+          ]
+        },
+        {
+          "h2": "Warum die Himmelsrichtung mehr entscheidet als das Produkt",
+          "p": [
+            "Zwei identische Fassaden an zwei Seiten desselben Hauses altern unterschiedlich schnell, und der Unterschied ist grösser als der zwischen zwei Holzarten. Die Südwestseite bekommt in Mitteleuropa die Kombination aus der meisten Strahlung und dem meisten Schlagregen; sie ist fast immer die Fläche, die zuerst nachbehandelt werden muss.",
+            "Die Nordseite hat das umgekehrte Problem. Sie bekommt wenig Strahlung, trocknet nach einem Regen langsamer ab und bleibt in kühlen Monaten länger feucht. Dort ist nicht die Vergrauung das Thema, sondern Algen- und Moosbewuchs, der als grünlicher Belag beginnt und mit einer weichen Bürste abgeht, solange man ihn früh erwischt.",
+            "Wer also einen Pflegeplan für das ganze Haus macht, macht keinen — er macht mindestens zwei. Wetterseite und Schattenseite haben verschiedene Aufgaben und verschiedene Intervalle, und wer sie gleich behandelt, tut auf der einen Seite zu viel und auf der anderen zu wenig."
+          ]
+        },
+        {
+          "h2": "Der Übergang zum Boden, den fast alle unterschätzen",
+          "p": [
+            "Der Fusspunkt einer Holzfassade entscheidet mehr über ihre Lebensdauer als das Material darüber. Dort treffen drei Dinge zusammen: zurückspritzendes Regenwasser, Schmutz, der sich absetzt, und im Winter eine Schneeauflage, die tagelang direkt am Holz liegt und beim Tauen Wasser nachliefert.",
+            "Die üblichen Gegenmassnahmen sind einfach und werden trotzdem oft aufgehoben. Ein ausreichender Abstand zwischen Fassadenunterkante und Terrain wird durch eine später angelegte Terrasse aufgehoben. Ein Kiesstreifen, der Spritzwasser bremsen soll, wächst in drei Jahren zu und wirkt dann wie ein Blumenbeet. Ein Lüftungsgitter am Fuss setzt sich mit Laub zu und macht aus der hinterlüfteten Ebene eine geschlossene.",
+            "Deshalb gehört der Fusspunkt in jede Kontrolle, und deshalb ist die richtige Frage bei jeder Veränderung am Grundstück: Was macht das mit dem Abstand, mit dem Wasser und mit der Luft am unteren Rand der Fassade?"
+          ]
+        },
+        {
+          "h2": "Wann ein Fachbetrieb dazukommt",
+          "p": [
+            "Für die Vergrauung selbst brauchen Sie niemanden. Für drei Situationen schon. Die erste ist eine Fläche, die trotz mehrerer trockener Tage feucht bleibt: Da geht es nicht mehr um die Oberfläche, sondern um Wasser im Aufbau, und die Ursache liegt fast immer hinter der sichtbaren Ebene.",
+            "Die zweite ist jede Verformung, die sich über eine Saison verstärkt — ein Brett, das sich zunehmend schüsselt, eine Fuge, die von Jahr zu Jahr weiter aufgeht, eine Bewegung an einem Anschluss. Das sind Hinweise auf Feuchtewechsel oder auf eine Befestigung, die nicht mehr hält, und beides wird schlimmer, nicht besser.",
+            "Die dritte ist alles, was mit der Konstruktion darunter zu tun hat: Anschlüsse an Fenster, Durchdringungen für Leitungen, der Übergang zum Dach. Dort entscheidet nicht die Fassade, sondern die Abdichtung dahinter, und die sieht man von aussen nicht. Für den Zielmarkt gilt dabei dasselbe wie überall auf dieser Seite: Wer die Arbeit ausführt und welche Nachweise verlangt werden, entscheidet die zuständige Stelle am Standort, nicht wir."
+          ]
+        }
+      ],
+      "checklist": {
+        "h2": "Der Rundgang, den Sie zweimal im Jahr machen sollten",
+        "items": [
+          "Hirnholzkanten und alle vor Ort gemachten Zuschnitte ansehen — sind sie noch geschlossen?",
+          "Spritzwasserzone am Fassadenfuss: Ist der Abstand zum Terrain frei, oder ist etwas zugewachsen?",
+          "Lüftungsspalt unten und oben abtasten: Kommt Luft durch, oder sitzt Laub oder ein Gitter zu?",
+          "Waagerechte Flächen prüfen: Läuft Wasser ab, oder steht es auf Fensterbank, Leiste oder Absatz?",
+          "Dunkle Stellen zwei trockene Tage später erneut anfassen. Immer noch kühl und feucht heisst: dahinterschauen.",
+          "Nach jedem Sturm einmal ganz herumgehen — angeschlagene Bretter fallen sonst erst im nächsten Winter auf."
+        ]
+      },
+      "faq": [
+        [
+          "Ist eine vergraute Fassade ein Reklamationsgrund?",
+          "In aller Regel nicht. Die Vergrauung ist eine vorhersehbare Eigenschaft von unbehandeltem und geöltem Holz im Freien und kein Mangel. Ein Reklamationsgrund entsteht dort, wo Wasser konstruktiv nicht abgeführt wird oder ein Bauteil weich, offen oder verformt ist — also am Aufbau und nicht an der Farbe."
+        ],
+        [
+          "Kann ich die ursprüngliche Farbe zurückholen?",
+          "Mechanisch ja, dauerhaft nein. Anschleifen legt unvergrautes Holz frei, das anschliessend erneut vergraut. Wer die warme Farbe halten will, entscheidet sich für regelmässiges Nachölen mit Pigment und für die Wetterseite häufiger als für die Nordseite."
+        ],
+        [
+          "Muss ich jedes Jahr etwas tun?",
+          "Sehen ja, streichen nein. Der zweimalige Rundgang oben kostet eine halbe Stunde und findet die Dinge, die teuer werden, solange sie noch billig sind. Ob und wann nachgeölt wird, hängt vom gewählten System und von der Ausrichtung ab und nicht vom Kalender."
+        ],
+        [
+          "Ist Thermoholz wartungsfrei?",
+          "Nein, und niemand sollte das versprechen. Die thermische Behandlung verändert das Verhalten gegenüber Feuchte und biologischem Abbau. Sie hebt weder die Notwendigkeit auf, Wasserwege frei zu halten, noch die, mechanische Beschädigungen zu reparieren."
+        ],
+        [
+          "Wer entscheidet, ob ein Schaden vorliegt?",
+          "Am Objekt entscheidet das eine Begutachtung vor Ort, nicht ein Foto. Schicken Sie uns die Aufnahmen trotzdem: Sie zeigen meistens schon, ob es um den Wasserweg, um eine Fuge oder um die Oberfläche geht, und das entscheidet, wer sich das ansehen muss."
+        ]
+      ]
+    }
+  ]
+}
