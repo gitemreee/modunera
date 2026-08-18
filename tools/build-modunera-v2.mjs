@@ -1316,9 +1316,14 @@ async function rewriteWhatsapp() {
    what they would be buying, complete. Four frames rather than five, because
    there are four worth showing and padding it with a weaker one costs more than
    the extra slide is worth. */
+/* Kept in step with HERO_NAMES in tools/social/ingest_site_photos.py: only a
+   name listed there gets the -portrait and -1100 derivatives this markup asks
+   for, so adding a slide here without adding it there produces a 404 on phones. */
 const HERO_SLIDES = [
   "aframe-olive-grove",
+  "unit-angular-dark",
   "aframe-lawn",
+  "unit-trailer-gable",
   "aframe-night",
   "aframe-deck-olive",
 ];

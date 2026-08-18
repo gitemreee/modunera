@@ -10,17 +10,17 @@
         {
           "file": "assets/images/photos/aframe-deck-olive-1100.webp",
           "px": "1100x619",
-          "kb": 247
+          "kb": 258
         },
         {
           "file": "assets/images/photos/aframe-deck-olive-760.webp",
           "px": "760x428",
-          "kb": 121
+          "kb": 127
         },
         {
           "file": "assets/images/photos/aframe-deck-olive-portrait.webp",
           "px": "780x680",
-          "kb": 194
+          "kb": 209
         }
       ]
     },
@@ -33,17 +33,17 @@
         {
           "file": "assets/images/photos/aframe-lawn-1100.webp",
           "px": "1100x619",
-          "kb": 240
+          "kb": 241
         },
         {
           "file": "assets/images/photos/aframe-lawn-760.webp",
           "px": "760x428",
-          "kb": 125
+          "kb": 126
         },
         {
           "file": "assets/images/photos/aframe-lawn-portrait.webp",
           "px": "780x680",
-          "kb": 223
+          "kb": 225
         }
       ]
     },
@@ -79,17 +79,17 @@
         {
           "file": "assets/images/photos/aframe-olive-grove-1100.webp",
           "px": "1100x619",
-          "kb": 297
+          "kb": 317
         },
         {
           "file": "assets/images/photos/aframe-olive-grove-760.webp",
           "px": "760x428",
-          "kb": 144
+          "kb": 153
         },
         {
           "file": "assets/images/photos/aframe-olive-grove-portrait.webp",
           "px": "780x680",
-          "kb": 217
+          "kb": 231
         }
       ]
     },
@@ -102,7 +102,7 @@
         {
           "file": "assets/images/photos/interior-kitchen-desk-1200.webp",
           "px": "1200x800",
-          "kb": 130
+          "kb": 129
         },
         {
           "file": "assets/images/photos/interior-kitchen-desk-760.webp",
@@ -221,6 +221,250 @@
           "file": "assets/images/photos/delivery-trailer-760.webp",
           "px": "760x507",
           "kb": 73
+        }
+      ]
+    },
+    {
+      "name": "detail-wood-and-metal",
+      "category": "finished",
+      "source": "IMG_0369.JPG",
+      "alt_de": "Fassadendetail einer fertigen Einheit: senkrechte Holzschalung trifft auf die dunkle Metallverkleidung der Stirnseite",
+      "files": [
+        {
+          "file": "assets/images/photos/detail-wood-and-metal-1200.webp",
+          "px": "1200x800",
+          "kb": 187
+        },
+        {
+          "file": "assets/images/photos/detail-wood-and-metal-760.webp",
+          "px": "760x507",
+          "kb": 92
+        }
+      ]
+    },
+    {
+      "name": "unit-angular-dark",
+      "category": "finished",
+      "source": "IMG_2880.HEIC",
+      "alt_de": "Tiny House mit auskragendem, spitz zulaufendem Dach und dunkler Profilblechfassade, Ecke mit Holzverkleidung",
+      "files": [
+        {
+          "file": "assets/images/photos/unit-angular-dark-1100.webp",
+          "px": "1100x619",
+          "kb": 129
+        },
+        {
+          "file": "assets/images/photos/unit-angular-dark-760.webp",
+          "px": "760x428",
+          "kb": 68
+        },
+        {
+          "file": "assets/images/photos/unit-angular-dark-portrait.webp",
+          "px": "780x680",
+          "kb": 118
+        }
+      ]
+    },
+    {
+      "name": "unit-standing-seam",
+      "category": "finished",
+      "source": "IMG_2881.HEIC",
+      "alt_de": "Längsseite eines Tiny House mit dunkler Stehfalzfassade und Holzsockel, aufgenommen gegen den Himmel",
+      "files": [
+        {
+          "file": "assets/images/photos/unit-standing-seam-1200.webp",
+          "px": "1200x800",
+          "kb": 115
+        },
+        {
+          "file": "assets/images/photos/unit-standing-seam-760.webp",
+          "px": "760x507",
+          "kb": 57
+        }
+      ]
+    },
+    {
+      "name": "unit-terrace-event",
+      "category": "finished",
+      "source": "IMG_6225.HEIC",
+      "alt_de": "Dunkel verkleidete Einheit mit vorgelagerter Holzterrasse, Sitzmöbeln und Sonnenschirmen auf einem Ausstellungsgelände",
+      "files": [
+        {
+          "file": "assets/images/photos/unit-terrace-event-1200.webp",
+          "px": "1200x800",
+          "kb": 222
+        },
+        {
+          "file": "assets/images/photos/unit-terrace-event-760.webp",
+          "px": "760x507",
+          "kb": 96
+        }
+      ]
+    },
+    {
+      "name": "unit-exhibition-terrace",
+      "category": "finished",
+      "source": "IMG_6206.HEIC",
+      "alt_de": "Einheit mit Holz- und Metallfassade, davor eine Terrasse mit Tisch, Stühlen und Hängesessel",
+      "files": [
+        {
+          "file": "assets/images/photos/unit-exhibition-terrace-1200.webp",
+          "px": "1200x800",
+          "kb": 129
+        },
+        {
+          "file": "assets/images/photos/unit-exhibition-terrace-760.webp",
+          "px": "760x507",
+          "kb": 61
+        }
+      ]
+    },
+    {
+      "name": "unit-trailer-gable",
+      "category": "delivery",
+      "source": "f1b98089-4ffb-4c23-a654-d831609455ac.JPG",
+      "alt_de": "Tiny House mit Satteldach und Holzfassade auf einem zweiachsigen Fahrgestell, transportbereit auf dem Hof",
+      "files": [
+        {
+          "file": "assets/images/photos/unit-trailer-gable-1100.webp",
+          "px": "1100x619",
+          "kb": 72
+        },
+        {
+          "file": "assets/images/photos/unit-trailer-gable-760.webp",
+          "px": "760x428",
+          "kb": 53
+        },
+        {
+          "file": "assets/images/photos/unit-trailer-gable-portrait.webp",
+          "px": "780x680",
+          "kb": 69
+        }
+      ]
+    },
+    {
+      "name": "interior-stair-sofa",
+      "category": "interior",
+      "source": "IMG_0372.JPG",
+      "alt_de": "Innenraum mit offener Treppe zum Loft, heller Wandverkleidung und Sofa vor der Fensterfront",
+      "files": [
+        {
+          "file": "assets/images/photos/interior-stair-sofa-1200.webp",
+          "px": "1200x800",
+          "kb": 152
+        },
+        {
+          "file": "assets/images/photos/interior-stair-sofa-760.webp",
+          "px": "760x507",
+          "kb": 74
+        }
+      ]
+    },
+    {
+      "name": "interior-kitchen-oven",
+      "category": "interior",
+      "source": "IMG_3212.JPG",
+      "alt_de": "Küchenzeile mit Einbaubackofen, Holzarbeitsplatte und weissen Fronten unter einer Holzdecke",
+      "files": [
+        {
+          "file": "assets/images/photos/interior-kitchen-oven-1200.webp",
+          "px": "1200x800",
+          "kb": 30
+        },
+        {
+          "file": "assets/images/photos/interior-kitchen-oven-760.webp",
+          "px": "760x507",
+          "kb": 19
+        }
+      ]
+    },
+    {
+      "name": "interior-living-tv",
+      "category": "interior",
+      "source": "IMG_9993.HEIC",
+      "alt_de": "Wohnbereich mit Ecksofa, Wandfernseher, Pendelleuchten und weiss profilierter Wand- und Deckenverkleidung",
+      "files": [
+        {
+          "file": "assets/images/photos/interior-living-tv-1200.webp",
+          "px": "1200x800",
+          "kb": 108
+        },
+        {
+          "file": "assets/images/photos/interior-living-tv-760.webp",
+          "px": "760x507",
+          "kb": 40
+        }
+      ]
+    },
+    {
+      "name": "interior-loft-ladder",
+      "category": "interior",
+      "source": "IMG_4217.HEIC",
+      "alt_de": "Blick in eine Einheit mit Holzleiter zum Loft, Küchenzeile mit Kochfeld und Sofa an der Fensterseite",
+      "files": [
+        {
+          "file": "assets/images/photos/interior-loft-ladder-1200.webp",
+          "px": "1200x800",
+          "kb": 185
+        },
+        {
+          "file": "assets/images/photos/interior-loft-ladder-760.webp",
+          "px": "760x507",
+          "kb": 83
+        }
+      ]
+    },
+    {
+      "name": "interior-door-kitchen",
+      "category": "interior",
+      "source": "IMG_6838.HEIC",
+      "alt_de": "Durch die geöffnete Tür fotografierter Innenraum mit Küchenblock und Treppenstufen zum Schlafloft",
+      "files": [
+        {
+          "file": "assets/images/photos/interior-door-kitchen-1200.webp",
+          "px": "1200x800",
+          "kb": 106
+        },
+        {
+          "file": "assets/images/photos/interior-door-kitchen-760.webp",
+          "px": "760x507",
+          "kb": 45
+        }
+      ]
+    },
+    {
+      "name": "production-hall-unit",
+      "category": "production",
+      "source": "IMG_4318.HEIC",
+      "alt_de": "Einheit auf Stützen in der Fertigungshalle, Aussenhaut montiert, Holzverkleidung teilweise angebracht",
+      "files": [
+        {
+          "file": "assets/images/photos/production-hall-unit-1200.webp",
+          "px": "1200x800",
+          "kb": 129
+        },
+        {
+          "file": "assets/images/photos/production-hall-unit-760.webp",
+          "px": "760x507",
+          "kb": 59
+        }
+      ]
+    },
+    {
+      "name": "production-interior-fitout",
+      "category": "production",
+      "source": "IMG_4323.HEIC",
+      "alt_de": "Innenausbau im Rohzustand: Giebeldecke verkleidet, Einbauten gestellt, Verpackungsmaterial noch am Boden",
+      "files": [
+        {
+          "file": "assets/images/photos/production-interior-fitout-1200.webp",
+          "px": "1200x800",
+          "kb": 134
+        },
+        {
+          "file": "assets/images/photos/production-interior-fitout-760.webp",
+          "px": "760x507",
+          "kb": 54
         }
       ]
     }

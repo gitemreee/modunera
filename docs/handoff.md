@@ -119,6 +119,20 @@ Each of these cost real time. They are listed so they cost it once.
    publishes a lead time; MODUNERA publishes none.
 7. **Italian branch for Switzerland.** Unbuilt extension point, not a fault.
 
+Closed 2026-08-18: *the Drive photographs*. Thirteen photographs from the owner's
+Drive folder are ingested, graded and placed: /factory/ gains two production
+frames, /projects/ six finished units, /modelle/ five interiors, and two join the
+hero rotation. Sources kept in `social/instagram/16-drive-2026-08/`.
+
+**Five files in that folder are CGI renders** — four aerial resort visualisations
+and one 3D floor-plan cutaway — and one is a photograph of a supermarket shelf.
+None of them is on the site. `tools/build-photo-placement.mjs` exists because
+/factory/ and /projects/ were once illustrated with renders; putting a
+forty-unit resort visualisation on a projects page would claim MODUNERA has
+delivered one. If those renders are MODUNERA's own designs they can be published
+as designs, labelled as such, on a page that says so — an owner decision, not an
+image swap. See the README in the source folder.
+
 Closed 2026-08-17: *tone*. Filler constructions were counted across the indexed
 pages rather than hunted through 15,000: `tools/score-prose-style.mjs`. Total
 filler 283 -> 36 (-87%), German 259 -> 20 (-92%); "professionell", "projektbezogen",

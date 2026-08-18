@@ -78,6 +78,50 @@ const INSERTIONS = {
   },
 };
 
+/* --- galleries added from the 2026-08 Drive batch --------------------------
+
+   The swap table above has nothing left to do on these pages: the earlier pass
+   already replaced every render on /factory/ and /projects/ with a photograph.
+   Thirteen more photographs arrived, so what these pages need now is more room,
+   not another substitution — hence a gallery section rather than a swap.
+
+   One thing deliberately NOT done: none of these is placed on an individual model
+   page. A photograph on /modelle/md-3/ says "this is an MD 3", and nobody has
+   told us which model is in which frame. They go on the model index instead,
+   where the claim is only that these are units MODUNERA has built. Guessing the
+   model would be inventing product data to fill a layout.
+
+   Idempotent by marker, like INSERTIONS. */
+const GALLERIES = {
+  "factory/index.html": {
+    marker: 'data-photo-gallery="production"',
+    // /factory/ has no section-soft; the gallery goes in front of the dark band
+    anchor: '<section class="section section-dark">',
+    eyebrow: "Aus der Fertigung",
+    h2: "Zwei Einheiten im Bau.",
+    lead: "Aufnahmen aus der Halle, nicht aus dem Katalog. Die erste zeigt eine Einheit auf Stützen mit montierter Aussenhaut, die zweite den Innenausbau, bevor die Wände geschlossen sind.",
+    photos: ["production-hall-unit", "production-interior-fitout"],
+  },
+  "projects/index.html": {
+    marker: 'data-photo-gallery="delivered"',
+    anchor: '<section class="section section-soft">',
+    eyebrow: "Gebaute Einheiten",
+    h2: "Sechs Aufnahmen von ausgeführten Einheiten.",
+    lead: "Fassaden, Terrassen und ein Fassadendetail — fotografiert auf dem Hof, auf dem Aufstellplatz und auf Messen. Keine Visualisierung, keine Renderansicht.",
+    photos: ["unit-angular-dark", "unit-standing-seam", "unit-terrace-event",
+             "unit-exhibition-terrace", "detail-wood-and-metal", "unit-trailer-gable"],
+  },
+  "modelle/index.html": {
+    marker: 'data-photo-gallery="built"',
+    anchor: '<section class="section section-soft">',
+    eyebrow: "Gebaut, nicht gerendert",
+    h2: "So sehen ausgeführte Innenräume aus.",
+    lead: "Die Grundrisse oben sind Zeichnungen der acht Modelle. Diese fünf Aufnahmen sind Innenräume gebauter Einheiten. Welche Aufnahme zu welchem Modell gehört, steht bewusst nicht dabei: das wäre eine Zuordnung, die wir hier nicht belegen können.",
+    photos: ["interior-stair-sofa", "interior-kitchen-oven", "interior-living-tv",
+             "interior-loft-ladder", "interior-door-kitchen"],
+  },
+};
+
 /* The gallery derivative each placement should point at, and its real size. */
 function derivative(name) {
   const photo = byName[name];
@@ -177,6 +221,32 @@ for (const [page, name] of Object.entries(SHARE_CARDS)) {
 }
 
 let sectionsAdded = 0;
+let galleriesAdded = 0;
+for (const [page, spec] of Object.entries(GALLERIES)) {
+  const file = join(ROOT, page);
+  if (!existsSync(file)) { missing.push(page); continue; }
+  const html = await readFile(file, "utf8");
+  if (html.includes(spec.marker)) continue;          // already inserted
+  if (!html.includes(spec.anchor)) { missing.push(`${page}: gallery anchor not found`); continue; }
+
+  const cards = spec.photos.map((name) => {
+    const t = derivative(name);
+    if (!t) { missing.push(`${page}: ${name}`); return ""; }
+    return `<figure class="gallery-item"><img loading="lazy" decoding="async"` +
+      ` width="${t.w}" height="${t.h}" src="../${t.file}" alt="${esc(t.alt)}"></figure>`;
+  }).join("");
+  if (!cards) { missing.push(`${page}: no usable photograph`); continue; }
+
+  const block = `<section class="section" ${spec.marker}><div class="container">` +
+    `<div class="section-header"><div><div class="eyebrow">${esc(spec.eyebrow)}</div>` +
+    `<h2>${esc(spec.h2)}</h2></div><p>${esc(spec.lead)}</p></div>` +
+    `<div class="gallery-grid">${cards}</div></div></section>`;
+
+  await writeFile(file, html.replace(spec.anchor, block + spec.anchor), "utf8");
+  galleriesAdded += 1;
+  pagesChanged += 1;
+}
+
 for (const [page, spec] of Object.entries(INSERTIONS)) {
   const file = join(ROOT, page);
   if (!existsSync(file)) { missing.push(page); continue; }
@@ -196,6 +266,7 @@ console.log(JSON.stringify({
   pages_changed: pagesChanged,
   images_replaced: swaps,
   sections_added: sectionsAdded,
+  galleries_added: galleriesAdded,
   share_cards_repointed: cardsChanged,
   unresolved: missing,
 }));

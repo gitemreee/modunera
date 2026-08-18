@@ -27,13 +27,20 @@ from pathlib import Path
 
 from PIL import Image
 
+# The 2026-08 Drive batch arrived as iPhone HEIC. Registering the opener here
+# means the repository can keep the camera's own file as the source rather than
+# a JPEG someone re-encoded on the way in.
+import pillow_heif
+pillow_heif.register_heif_opener()
+
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build_instagram_grid import (  # noqa: E402  reuse, do not re-implement
     cover, grade, sharpen, strip_camera_watermark,
 )
 
 ROOT = Path(__file__).resolve().parents[2]
-SRC = [ROOT / "social/instagram/01-selected", ROOT / "social/instagram/00-candidates"]
+SRC = [ROOT / "social/instagram/01-selected", ROOT / "social/instagram/00-candidates",
+       ROOT / "social/instagram/16-drive-2026-08"]
 OUT = ROOT / "assets/images/photos"
 
 L_EXT = dict(warmth=1.02, lift=0.03, contrast=1.16, saturation=0.94)
@@ -77,6 +84,50 @@ PLAN = {
     "delivery-trailer": (
         "IMG_20250913_104632.jpg", "delivery", L_EXT, 0.52,
         "Tiny House auf dem Tieflader vor der Fertigung, bereit für den Transport"),
+
+    # --- Drive batch, 2026-08 ------------------------------------------------
+    # Thirteen photographs from the owner's Drive folder, downloaded 2026-08-18.
+    # Alt text written per photograph, from looking at it: what is in the frame,
+    # not what we would like to be in it.
+    "detail-wood-and-metal": (
+        "IMG_0369.JPG", "finished", L_EXT, 0.42,
+        "Fassadendetail einer fertigen Einheit: senkrechte Holzschalung trifft auf die dunkle Metallverkleidung der Stirnseite"),
+    "unit-angular-dark": (
+        "IMG_2880.HEIC", "finished", L_EXT, 0.5,
+        "Tiny House mit auskragendem, spitz zulaufendem Dach und dunkler Profilblechfassade, Ecke mit Holzverkleidung"),
+    "unit-standing-seam": (
+        "IMG_2881.HEIC", "finished", L_EXT, 0.45,
+        "Längsseite eines Tiny House mit dunkler Stehfalzfassade und Holzsockel, aufgenommen gegen den Himmel"),
+    "unit-terrace-event": (
+        "IMG_6225.HEIC", "finished", L_EXT, 0.5,
+        "Dunkel verkleidete Einheit mit vorgelagerter Holzterrasse, Sitzmöbeln und Sonnenschirmen auf einem Ausstellungsgelände"),
+    "unit-exhibition-terrace": (
+        "IMG_6206.HEIC", "finished", L_EXT, 0.5,
+        "Einheit mit Holz- und Metallfassade, davor eine Terrasse mit Tisch, Stühlen und Hängesessel"),
+    "unit-trailer-gable": (
+        "f1b98089-4ffb-4c23-a654-d831609455ac.JPG", "delivery", L_EXT, 0.5,
+        "Tiny House mit Satteldach und Holzfassade auf einem zweiachsigen Fahrgestell, transportbereit auf dem Hof"),
+    "interior-stair-sofa": (
+        "IMG_0372.JPG", "interior", L_INT, 0.5,
+        "Innenraum mit offener Treppe zum Loft, heller Wandverkleidung und Sofa vor der Fensterfront"),
+    "interior-kitchen-oven": (
+        "IMG_3212.JPG", "interior", L_INT, 0.62,
+        "Küchenzeile mit Einbaubackofen, Holzarbeitsplatte und weissen Fronten unter einer Holzdecke"),
+    "interior-living-tv": (
+        "IMG_9993.HEIC", "interior", L_INT, 0.5,
+        "Wohnbereich mit Ecksofa, Wandfernseher, Pendelleuchten und weiss profilierter Wand- und Deckenverkleidung"),
+    "interior-loft-ladder": (
+        "IMG_4217.HEIC", "interior", L_INT, 0.5,
+        "Blick in eine Einheit mit Holzleiter zum Loft, Küchenzeile mit Kochfeld und Sofa an der Fensterseite"),
+    "interior-door-kitchen": (
+        "IMG_6838.HEIC", "interior", L_INT, 0.5,
+        "Durch die geöffnete Tür fotografierter Innenraum mit Küchenblock und Treppenstufen zum Schlafloft"),
+    "production-hall-unit": (
+        "IMG_4318.HEIC", "production", L_INT, 0.5,
+        "Einheit auf Stützen in der Fertigungshalle, Aussenhaut montiert, Holzverkleidung teilweise angebracht"),
+    "production-interior-fitout": (
+        "IMG_4323.HEIC", "production", L_INT, 0.58,
+        "Innenausbau im Rohzustand: Giebeldecke verkleidet, Einbauten gestellt, Verpackungsmaterial noch am Boden"),
 }
 
 # The sizes the site's templates ask for. Hero stills carry a portrait crop as
@@ -100,7 +151,10 @@ QUALITY = 76
 
 # Kept in step with HERO_SLIDES in tools/build-modunera-v2.mjs.
 HERO_NAMES = {"aframe-deck-olive", "aframe-lawn", "aframe-olive-grove",
-              "production-frame-and-finish", "aframe-night"}
+              "production-frame-and-finish", "aframe-night",
+              # 2026-08: two from the Drive batch join the rotation. They need the
+              # portrait crop, which is what hero membership buys.
+              "unit-angular-dark", "unit-trailer-gable"}
 
 
 def find(name: str) -> Path:
