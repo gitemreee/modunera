@@ -45,7 +45,7 @@ const BASE = "https://modunera.com/";
 const WA = "905535435342";
 const SERIES = "blog/praxis";
 const MAX_OVERLAP = 0.30;
-const MIN_WORDS = 1800;
+const MIN_WORDS = 2000;
 
 const TODAY = (process.env.MODUNERA_TODAY ?? new Date().toISOString().slice(0, 10));
 
@@ -250,7 +250,11 @@ function jaccard(a, b) {
   return union === 0 ? 0 : inter / union;
 }
 
-const texts = live.map((p) => ({ slug: p.slug, words: bodyText(p).split(/\s+/).filter(Boolean).length, sh: shingles(bodyText(p)) }));
+/* Checked across the WHOLE queue, not only what is live today. A post that is
+   200 words short or too close to another one must fail the moment it is added,
+   not on the morning it was due to publish — by then the daily workflow is the
+   thing that breaks, and it breaks with nothing to show for it. */
+const texts = POSTS.map((p) => ({ slug: p.slug, words: bodyText(p).split(/\s+/).filter(Boolean).length, sh: shingles(bodyText(p)) }));
 let worst = { pair: null, score: 0 };
 for (let i = 0; i < texts.length; i += 1) {
   for (let j = i + 1; j < texts.length; j += 1) {

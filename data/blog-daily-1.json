@@ -163,6 +163,156 @@
           "Am Objekt entscheidet das eine Begutachtung vor Ort, nicht ein Foto. Schicken Sie uns die Aufnahmen trotzdem: Sie zeigen meistens schon, ob es um den Wasserweg, um eine Fuge oder um die Oberfläche geht, und das entscheidet, wer sich das ansehen muss."
         ]
       ]
+    },
+    {
+      "slug": "tauwasser-in-der-konstruktion-erkennen",
+      "publish_on": "2026-08-19",
+      "category": "schaeden",
+      "title": "Tauwasser in der Konstruktion: woran Sie es erkennen, bevor es teuer wird",
+      "description": "Feuchte Stellen im Innenraum kommen selten von aussen. Wie Tauwasser im Wandaufbau entsteht, welche Stellen zuerst betroffen sind und welche Messung tatsächlich etwas beweist.",
+      "image": "mc5-interior.webp",
+      "imageAlt": "Innenansicht einer MODUNERA Einheit mit Blick auf Wandanschluss und Fensterlaibung",
+      "lead": "Wenn im Innenraum eine Stelle dunkel wird, ist die erste Vermutung meistens ein Leck. In einem gut gebauten, dichten Kleingebäude ist die häufigere Ursache eine andere: warme Innenluft transportiert Feuchte in den Aufbau, kühlt dort ab und gibt sie als Wasser wieder ab. Das Wasser kommt dann nicht von aussen, sondern von Ihnen.",
+      "sections": [
+        {
+          "h2": "Warum Luft Wasser transportiert und wo sie es verliert",
+          "p": [
+            "Warme Luft kann mehr Wasserdampf halten als kalte. Diese Aussage steht hinter fast jedem Feuchteschaden in einem kleinen, gut gedämmten Gebäude. Wenn Innenluft mit ihrer Feuchtelast an eine Fläche kommt, die kälter ist als der Taupunkt dieser Luft, gibt sie den Überschuss als flüssiges Wasser ab. Das passiert an der Scheibe sichtbar und im Wandaufbau unsichtbar.",
+            "Der Unterschied zwischen beiden ist nur der Ort. An der Scheibe sehen Sie das Ergebnis sofort und wischen es weg. Im Aufbau sehen Sie nichts, das Wasser bleibt im Material, und ob es wieder heraustrocknet, hängt davon ab, ob der Aufbau nach aussen oder nach innen austrocknen kann.",
+            "Deshalb ist die richtige erste Frage bei einer feuchten Stelle nicht Woher kommt das Wasser, sondern Welche Fläche ist hier kälter als ihre Umgebung und warum. Die Antwort führt fast immer direkt zur Ursache."
+          ]
+        },
+        {
+          "h2": "Wo Innenluft in den Aufbau gelangt",
+          "p": [
+            "Diffusion durch ein geschlossenes Bauteil transportiert wenig Feuchte. Der grosse Transportweg ist Konvektion: Luft, die durch eine Undichtigkeit strömt, nimmt ein Vielfaches der Feuchtemenge mit. Eine schmale, durchgehende Fuge in der luftdichten Ebene bringt daher mehr Wasser in einen Aufbau als die gesamte Wandfläche durch Diffusion.",
+            "Diese Fugen sitzen selten in der Fläche. Sie sitzen an Übergängen: Wand zu Decke, Wand zu Boden, um Fenster und Türen herum, und an jeder Durchdringung — Steckdose, Leerrohr, Lüftungsstutzen, Kaminrohr, Kabel für die Aussenleuchte. Jede dieser Stellen ist ein handwerklich ausgeführtes Detail und damit eine Stelle, die richtig oder falsch ausgeführt sein kann.",
+            "Das erklärt auch, warum Schäden sich häufen, nachdem jemand nachträglich etwas montiert hat. Eine später gesetzte Steckdose in einer Aussenwand, eine Halterung für einen Fernseher, ein Durchbruch für eine Klimaanlage: Jeder davon durchstösst eine Ebene, deren Funktion man nicht sieht."
+          ]
+        },
+        {
+          "h2": "Die Wärmebrücke, die den Ort bestimmt",
+          "p": [
+            "Feuchte fällt nicht überall gleichmässig aus, sondern zuerst an der kältesten Oberfläche. Das sind Wärmebrücken: Stellen, an denen der Aufbau lokal schlechter dämmt oder an denen Geometrie Wärme schneller abführt. In einer Gebäudeecke trifft eine kleine Innenfläche auf eine grosse Aussenfläche, deshalb ist die Ecke innen kälter als die Wandmitte daneben.",
+            "Konstruktiv kommen Wärmebrücken dort vor, wo ein Bauteil den gedämmten Bereich durchdringt. Ein Befestigungspunkt, ein durchlaufendes Profil, ein Anschluss, an dem die Dämmebene unterbrochen ist — dort ist die Innenoberfläche kälter, und dort schlägt sich Feuchte zuerst nieder.",
+            "Für die Fehlersuche ist das nützlich, weil es die Suche eingrenzt. Ein Fleck genau in einer Raumecke, genau hinter einem Möbelstück oder genau über einem Anschluss ist ein anderer Hinweis als ein Fleck mitten in einer freien Wandfläche."
+          ]
+        },
+        {
+          "h2": "Warum Möbel an der Aussenwand so oft im Schadensbild auftauchen",
+          "p": [
+            "Ein Schrank, der bündig an einer Aussenwand steht, tut zwei Dinge gleichzeitig. Er hält die warme Raumluft von der Wandoberfläche fern, sodass diese Oberfläche kälter wird, und er verhindert, dass die dort entstehende Feuchte durch Luftbewegung wieder abgeführt wird. Das Ergebnis ist eine kalte, stehende Zone hinter dem Möbel.",
+            "In einem grossen Haus ist das oft folgenlos, weil die Wand ohnehin warm genug bleibt. Auf kleiner Fläche mit hoher Belegungsdichte ist die Feuchtelast pro Kubikmeter Raumluft deutlich höher, und dann reicht dieser Effekt aus, um genau hinter dem Möbel einen Bewuchs zu starten.",
+            "Die Gegenmassnahme ist banal und wirkt: Abstand halten, unten und oben Luft durchlassen, und schwere Möbel bevorzugt an Innenwände stellen. Wer das im Einrichtungsplan berücksichtigt, spart sich eine ganze Klasse von Problemen."
+          ]
+        },
+        {
+          "h2": "Die Feuchtequellen, die Bewohner unterschätzen",
+          "p": [
+            "Menschen geben Feuchte ab, im Schlaf ebenso wie am Tag. Dazu kommt Kochen, Duschen, Wäschetrocknen, Pflanzen und ein Aquarium, falls vorhanden. In einem Gebäude mit kleinem Luftvolumen schlägt jede dieser Quellen stärker auf die relative Luftfeuchte durch als in einem grossen.",
+            "Wäschetrocknen im Innenraum ist der grösste einzelne Posten, den man selbst steuern kann. Eine Maschinenladung gibt ihr gesamtes Restwasser an die Raumluft ab, und zwar über Stunden. Wenn dieselbe Wäsche in einem Raum ohne wirksame Abluft trocknet, findet dieses Wasser den kältesten Punkt im Raum, und der liegt selten dort, wo die Wäsche hängt.",
+            "Das ist kein Aufruf, weniger zu wohnen. Es ist der Grund, warum Lüftung in einem kleinen Gebäude kein Komfortthema ist, sondern ein konstruktives. Die Feuchte muss einen geplanten Weg nach draussen haben, sonst nimmt sie einen ungeplanten."
+          ]
+        },
+        {
+          "h2": "Was ein Hygrometer Ihnen sagt und was nicht",
+          "p": [
+            "Ein einfaches Hygrometer misst die relative Luftfeuchte in der Raumluft. Das ist nützlich als Trend und als Alarm, aber es sagt Ihnen nicht, ob an einer bestimmten Oberfläche Tauwasser ausfällt. Dafür brauchen Sie zwei Werte: die Raumluft mit ihrer Feuchte und die Temperatur der verdächtigen Oberfläche.",
+            "Ein Infrarot-Thermometer liefert den zweiten Wert für wenig Geld. Sie messen die Wandmitte und dann die verdächtige Stelle. Ist die verdächtige Stelle deutlich kälter, haben Sie die Wärmebrücke gefunden, und die Kombination aus beiden Werten sagt Ihnen, ob dort Kondensat zu erwarten ist.",
+            "Was diese Messungen nicht leisten, ist eine Aussage über Feuchte im Material. Dafür gibt es Messverfahren, die in die Konstruktion gehen, und die gehören in fachkundige Hände — auch weil jedes Bohrloch in einer luftdichten Ebene selbst eine neue Undichtigkeit ist."
+          ]
+        },
+        {
+          "h2": "Der Fensteranschluss, an dem es am häufigsten anfängt",
+          "p": [
+            "Kein Bauteil verbindet so viele Ebenen auf so wenig Länge wie ein Fenster. Rahmen, Laibung, Dämmebene, luftdichte Ebene innen und wetterführende Ebene aussen treffen dort auf wenigen Zentimetern aufeinander, und jede dieser Ebenen muss um den Rahmen herum weitergeführt werden. Genau deshalb ist die Fensterlaibung die Stelle, an der Kondensatschäden am häufigsten beginnen.",
+            "Dazu kommt, dass die Laibung geometrisch benachteiligt ist. Sie liegt tiefer als die Wandfläche, sie bekommt weniger Luftbewegung ab, und wenn ein Vorhang oder eine Jalousie davor hängt, wird sie zusätzlich von der Raumwärme abgeschnitten. Ein zugezogener Vorhang über einer kalten Laibung erzeugt in einer Winternacht zuverlässig genau die Bedingungen, unter denen Wasser ausfällt.",
+            "Ein einfacher Test kostet nichts: Messen Sie an einem kalten Morgen die Temperatur in der Laibungsecke und vergleichen Sie sie mit der Wandfläche einen halben Meter daneben. Ist der Unterschied deutlich, wissen Sie, wo Sie im Winter zuerst nachsehen — und Sie wissen auch, dass der Vorhang nachts besser einen Spalt Luft lässt."
+          ]
+        },
+        {
+          "h2": "Der Unterschied zwischen einem Leck und einem Kondensatschaden",
+          "p": [
+            "Ein Leck ist wetterabhängig. Es wird nach Regen schlimmer, es folgt der Schlagregenrichtung, und es hat oben einen Anfang und unten ein Ende, weil Wasser der Schwerkraft folgt. Ein typisches Leckbild ist eine Bahn, kein Fleck.",
+            "Ein Kondensatschaden ist temperaturabhängig. Er wird bei Kälte schlimmer, er tritt in der Heizperiode auf und verschwindet im Sommer scheinbar, er sitzt an der kältesten Stelle und nicht an der höchstgelegenen, und er ist oft flächig begrenzt statt bahnförmig.",
+            "Wer diese beiden Muster einmal auseinanderhalten kann, spart sich die häufigste Fehlreparatur überhaupt: die Fassade abzudichten, obwohl das Wasser von innen kam. Danach ist die Konstruktion dichter, trocknet schlechter aus, und der Schaden wird schneller schlimmer als vorher."
+          ]
+        },
+        {
+          "h2": "Was Sie sofort tun können und was Sie besser lassen",
+          "p": [
+            "Sofort sinnvoll: Möbel von der Wand rücken, betroffene Stelle freilegen und trocknen lassen, Feuchtequellen im Raum reduzieren, und regelmässig quer lüften statt Fenster dauerhaft zu kippen. Ein gekipptes Fenster kühlt die Laibung stark ab und tauscht dabei wenig Luft — es erzeugt genau die kalte Oberfläche, die man vermeiden will.",
+            "Sinnvoll dokumentieren: Fotos mit Datum, Aussentemperatur, Innentemperatur und Luftfeuchte. Diese vier Angaben über zwei Wochen sind mehr wert als eine einzelne Momentaufnahme, weil sie den Zusammenhang mit dem Wetter sichtbar machen — und genau der unterscheidet Kondensat von Leck.",
+            "Besser lassen: überstreichen. Farbe verdeckt das Bild, entfernt die Ursache nicht und macht die Diagnose danach schwerer. Ebenso wenig sinnvoll ist ein Entfeuchter als Dauerlösung; er behandelt das Symptom und verdeckt, dass Lüftung oder Aufbau nicht stimmen."
+          ]
+        },
+        {
+          "h2": "Warum ein kleines Gebäude empfindlicher ist als ein grosses",
+          "p": [
+            "Alle beschriebenen Vorgänge gibt es in jedem Haus. In einem kleinen Gebäude wirken sie stärker, weil das Verhältnis zwischen Hüllfläche und Volumen ungünstiger ist: viel Aussenwand, wenig Luft dahinter. Dieselbe Menge Feuchte hebt die relative Luftfeuchte deutlich schneller an.",
+            "Dazu kommt, dass Wärmebrücken relativ stärker ins Gewicht fallen. Ein Anschlussdetail, das sich in einem grossen Haus in einer riesigen Fläche verliert, ist hier ein nennenswerter Anteil an der gesamten Hülle.",
+            "Das ist kein Argument gegen kleine Gebäude, sondern eines für sorgfältige Anschlüsse und geplante Lüftung. Beides ist Entwurfsarbeit, keine Nachrüstung — was ein weiterer Grund ist, Durchdringungen früh zu planen und nicht später zu bohren."
+          ]
+        },
+        {
+          "h2": "Was die Jahreszeit über die Ursache verrät",
+          "p": [
+            "Ein Schadensbild, das im November beginnt und im März nachlässt, ist ein Kondensatbild. Die Heizperiode erzeugt genau die Kombination aus warmer, feuchter Innenluft und kalten Oberflächen, die dafür nötig ist.",
+            "Ein Bild, das im Sommer bei Starkregen auftritt, ist ein Eintrittsbild. Dann geht es um Schlagregen, um Anschlüsse, um Abdichtung und um Wasser, das seinen Weg nach innen findet.",
+            "Ein Bild, das ganzjährig konstant bleibt, hat oft eine dritte Ursache: eine dauerhafte Wasserquelle im Gebäude selbst — eine undichte Verschraubung, ein Siphon, ein Anschluss unter einer Duschtasse. Dass die Jahreszeit keinen Unterschied macht, ist in diesem Fall die Information."
+          ]
+        },
+        {
+          "h2": "Was in die Dokumentation gehört",
+          "p": [
+            "Zu jeder Einheit gehört, welcher Wandaufbau verbaut ist und wo die luftdichte Ebene liegt. Ohne diese Angabe kann niemand beurteilen, was eine Durchdringung anrichtet, und niemand kann eine spätere Montage richtig ausführen.",
+            "Ebenso gehört dazu, welches Lüftungskonzept vorgesehen ist. Ein Gebäude, das auf mechanische Lüftung ausgelegt ist, verhält sich anders als eines, das auf Fensterlüftung ausgelegt ist, und ein Bewohner, der das nicht weiss, kann es nicht richtig betreiben.",
+            "Konkrete Zahlen zu Aufbau und Bauteilverhalten nennen wir hier bewusst nicht. Sie hängen vom ausgeführten Aufbau ab und gehören in die Projektunterlagen der jeweiligen Einheit, nicht in einen allgemeinen Beitrag — siehe dazu die offenen Punkte in REQUIRED-BUSINESS-INPUTS."
+          ]
+        },
+        {
+          "h2": "Wann jemand kommen muss",
+          "p": [
+            "Sobald eine Stelle nach mehreren trockenen, geheizten Tagen feucht bleibt, ist die Feuchte im Material und nicht in der Luft. Das ist die Grenze, ab der Lüften und Möbelrücken nicht mehr reichen.",
+            "Ebenso, wenn sich Bewuchs trotz Reinigung innerhalb weniger Wochen wieder bildet. Das bedeutet, dass die Bedingungen unverändert sind, und die Bedingungen liegen im Aufbau oder im Betrieb, nicht auf der Oberfläche.",
+            "Und in jedem Fall, wenn der Verdacht auf ein Leck an einem Anschluss besteht. Wasser, das von aussen kommt, wandert innerhalb der Konstruktion und tritt oft weit von seiner Eintrittsstelle aus — das ist nichts, was man von innen mit dem blossen Auge zurückverfolgt."
+          ]
+        }
+      ],
+      "checklist": {
+        "h2": "Die Zehn-Minuten-Diagnose, bevor Sie jemanden rufen",
+        "items": [
+          "Wann tritt es auf? Nach Regen deutet auf Eintritt, bei Kälte auf Kondensat, ganzjährig auf eine Wasserquelle im Haus.",
+          "Wo genau? Raumecke, hinter Möbeln, an einer Durchdringung — oder in freier Wandfläche?",
+          "Oberflächentemperatur der Stelle mit einem Infrarot-Thermometer gegen die Wandmitte vergleichen.",
+          "Raumtemperatur und relative Luftfeuchte notieren, dazu die Aussentemperatur.",
+          "Wurde in den letzten Monaten etwas an dieser Wand montiert, gebohrt oder durchgeführt?",
+          "Wo trocknet Wäsche, und läuft beim Duschen und Kochen eine wirksame Abluft?",
+          "Zwei Wochen lang täglich dieselben vier Werte aufschreiben — der Verlauf beweist mehr als jede einzelne Messung."
+        ]
+      },
+      "faq": [
+        [
+          "Reicht es, öfter zu lüften?",
+          "Oft ja, wenn die Ursache eine hohe Feuchtelast bei ausreichend warmen Oberflächen ist. Nein, wenn eine Wärmebrücke oder eine Undichtigkeit die Stelle dauerhaft kalt hält: dann senkt Lüften die Raumfeuchte, aber die kritische Oberfläche bleibt kritisch."
+        ],
+        [
+          "Hilft ein Luftentfeuchter?",
+          "Als Sofortmassnahme nach einem Wasserschaden ja. Als Dauerbetrieb ist er ein Symptomgerät: Er verbraucht Strom, um ein Problem unsichtbar zu machen, dessen Ursache im Aufbau oder im Lüftungskonzept liegt."
+        ],
+        [
+          "Ist ein gekipptes Fenster gut oder schlecht?",
+          "Für den Luftwechsel schlecht, für die Laibung schlecht. Es tauscht wenig Luft und kühlt gleichzeitig die Fensterlaibung stark ab — also genau die Fläche, an der Kondensat gern beginnt. Kurz und quer lüften wirkt besser."
+        ],
+        [
+          "Kann ein Fleck an der Decke von aussen kommen?",
+          "Ja, aber nicht unbedingt dort, wo er sichtbar wird. Eingedrungenes Wasser läuft auf der ersten wasserführenden Ebene, die es findet, und tritt am tiefsten Punkt aus. Die sichtbare Stelle ist deshalb ein Ausgang, nicht der Eingang."
+        ],
+        [
+          "Was schicke ich, wenn ich Sie frage?",
+          "Fotos mit Datum, die vier Messwerte über zwei Wochen, und die Angabe, ob und was in dem Bereich montiert oder gebohrt wurde. Damit lässt sich meistens vorab sagen, ob es um Betrieb, um ein Anschlussdetail oder um ein Leck geht — und wer sich das ansehen muss."
+        ]
+      ]
     }
   ]
 }
