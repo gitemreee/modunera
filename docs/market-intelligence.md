@@ -150,8 +150,10 @@ the site's dark photographic body background with dark text on it, unreadable.
 
 ## 7. The nineteen tests
 
-`node tools/test-market-intelligence.mjs` — 21/21 passing (the nineteen the
-brief names, plus two for the Search Console reader). They run against the
+`node tools/test-market-intelligence.mjs` — 26/26 passing: the nineteen the
+brief names, three for the provider adapter against a local stub, two for the
+Search Console reader, and two for the publication gates the first live scan
+exposed. They run against the
 real engine and the real repository, with the store and inbox pointed at scratch
 files so a test never mutates what it protects.
 
@@ -166,15 +168,86 @@ this work added. The new article has its de/en hreflang pair and valid JSON-LD;
 ## 8. What is not built, and why
 
 - **A live admin panel with authentication.** No server. See §1.
-- **A search-provider adapter.** Writing one against a specific vendor without the
-  key would be untested code that looks finished. The abstraction is there; adding
-  a provider is one function and one environment variable, and nothing else in the
-  engine changes.
+- **A second search provider.** Brave is implemented and running (§2a). Adding
+  another vendor is one object in `ADAPTERS` and one line; nothing else changes.
 - **A *live* Search Console connection.** OAuth or a service-account key cannot
   live in a repository. What is built instead is section 8a below, and it needs
   no key at all.
 - **Automatic publication.** Section 65's switches exist and default to false. The
   workflow does not set them. This is a deliberate choice, not an omission.
+
+---
+
+## 2a. The search provider: Brave
+
+**Plan: "Search".** $5 per 1,000 requests, with $5 of credit applied monthly. The
+scan makes **28 requests a day**, about 850 a month, so the monthly credit covers
+essentially the whole bill. The **"Answers"** plan is deliberately not used: it
+returns a written summary, and a summary is not a source you can open and read.
+
+Twenty-eight, not thirty-three. Switzerland's five queries are three German and
+two French, and the loop used to run every query in both languages — ten requests
+to learn what five could, two of them French text submitted as German. Queries can
+now name their own language.
+
+**The key is never in the repository.** `MODUNERA_SEARCH_KEY` comes from the
+environment; in CI it is a GitHub Actions repository secret. Section 74.
+
+```
+Settings → Secrets and variables → Actions → New repository secret
+  MODUNERA_SEARCH_PROVIDER = brave
+  MODUNERA_SEARCH_KEY      = <the key>
+```
+
+`.github/workflows/market-intelligence.yml` already reads both. Nothing else has
+to change; the run stops saying `not-configured` the next morning.
+
+### What the first live scan changed
+
+Running it against the real API immediately found four things that a stub never
+would have. All four are fixed, and each has a test.
+
+1. **215 signals, 208 of them junk.** Classified ads, auction listings, holiday-park
+   directories. The store would have grown by roughly two hundred rows a day and
+   buried the handful worth reading. Rejections are now counted, not kept — with
+   their reasons: today, `268 × not an authority (tier 3)`, `2 × blocked as a
+   primary source`, `2 × below the score threshold`.
+2. **It wanted to publish a newspaper.** NDR reporting that a Schleswig-Holstein
+   Baugebiet had drawn national interest scored 78 and came back `CREATE_NEWS`.
+   Section 14 says official source first: a media report is a *lead*. Tier 2 above
+   the threshold now gets `FIND_OFFICIAL_SOURCE` and can never be published as-is.
+3. **It wanted to publish a tender index page.** `kreis-eic.de`'s
+   "Ausschreibungen und Bekanntmachungen" listing is a genuine tier 1 source and
+   scored 76 — but it is an index, not a project. The deeper problem: a search
+   result is a title, a URL and a snippet, which is not enough to write anything
+   from. So **nothing the scan finds is published directly.** At best it becomes
+   `VERIFY_ON_SOURCE`: a person opens the page and, if there is a real project on
+   it, writes it into `data/verified-signals-inbox.json`. Only what comes through
+   that inbox — that a person has actually read — can reach `CREATE_NEWS`.
+4. **One story, two newspapers.** The same Niedersachsen article came back from
+   `az-online.de` and `leinetal24.de` under an identical headline. Deduplication
+   matched on place and title, and a search result carries no place, so both were
+   stored. It now also matches on the normalised title within a market.
+
+A fifth was found by the test suite rather than the API: a rejected key was being
+retried three times per query — 84 pointless requests against a metered service.
+401 and 403 are not transient, so they now stop the scan once and say why.
+
+### What it actually returns
+
+28 queries, 278 results read, 272 rejected with reasons, **4 new signals**, in 23
+seconds. Today's:
+
+| Score | Tier | Action | What it is |
+|---|---|---|---|
+| 87 | 1 | `CREATE_NEWS` | Menden (Sauerland) — read on the source, published |
+| 78 | 2 | `FIND_OFFICIAL_SOURCE` | NDR: national interest in a northern Baugebiet |
+| 76 | 1 | `VERIFY_ON_SOURCE` | Kreis Eichsfeld tender and notices index |
+| 65 | 2 | `FIND_OFFICIAL_SOURCE` | Denmark: a summer-house area moving after seven years |
+| 64 | 2 | `FIND_OFFICIAL_SOURCE` | Hannover firm directory — a competitor listing |
+
+Four leads a day, each naming the page to open. That is the shape of the thing:
+not a post a day, a short list a person can act on.
 
 ---
 
@@ -221,9 +294,9 @@ folder where the decision is actually made.
 
 ## 9. What the business has to decide
 
-1. **Whether to fund a search provider.** Without one the daily scan is a
-   scheduled `NO_PUBLISH` and every finding has to be located by a person and put
-   in the inbox. The engine works either way; only the volume changes.
+1. **Add the Brave key as a repository secret** (§2a). The adapter is written and
+   has been run against the live API; the scheduled job cannot see the key until
+   it is a secret, and no key may be committed.
 2. **Whether the Search Console export may live in this repository.** The reader
    is built and needs no credentials; it needs the file. If the repository is
    public, putting the export in it publishes the query list. That is a decision

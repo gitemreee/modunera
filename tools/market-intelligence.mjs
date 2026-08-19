@@ -104,17 +104,124 @@ async function loadInbox() {
    today and it is "not configured", which is the truthful state of this
    environment. Adding a provider means adding a function here and setting
    MODUNERA_SEARCH_PROVIDER; nothing else in the engine changes. */
+const PROVIDER_CONFIG = CONFIG.provider ?? {};
+
+/* --- Brave -----------------------------------------------------------------
+
+   The "Search" plan, not "Answers". Answers returns a written summary, and a
+   summary is not a source: this engine has to open the page an authority
+   published and read what it says, so it needs URLs, not prose about them.
+
+   Endpoint and parameters are in data/market-scan-config.json under
+   provider.brave, so changing the freshness window or the result count is an
+   edit to a data file. The key is never there — MODUNERA_SEARCH_KEY, from the
+   environment, as a repository secret in CI (section 74).
+
+   Brave's documentation does not list which country codes it accepts. Rather
+   than guess, a request rejected with the country parameter is retried once
+   without it, and the market says so in the run rather than vanishing. */
+const BraveProvider = {
+  cfg: PROVIDER_CONFIG.brave ?? {},
+  key() { return process.env.MODUNERA_SEARCH_KEY ?? ""; },
+  configured() { return Boolean(this.key()); },
+
+  async request(params) {
+    /* Overridable so tools/test-market-intelligence.mjs can point the adapter at
+       a local stub and actually exercise the parsing, the country retry and the
+       failure paths, instead of shipping network code nobody has run. */
+    const url = new URL(process.env.MODUNERA_MI_BRAVE_ENDPOINT ?? this.cfg.endpoint ?? "https://api.search.brave.com/res/v1/web/search");
+    for (const [k, v] of Object.entries(params)) if (v !== null && v !== undefined && v !== "") url.searchParams.set(k, String(v));
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), this.cfg.timeout_ms ?? 15000);
+    try {
+      const res = await fetch(url, {
+        headers: { Accept: "application/json", "Accept-Encoding": "gzip", "X-Subscription-Token": this.key() },
+        signal: controller.signal,
+      });
+      const text = await res.text();
+      if (!res.ok) return { ok: false, status: res.status, body: text.slice(0, 300) };
+      return { ok: true, status: res.status, json: JSON.parse(text) };
+    } catch (e) {
+      return { ok: false, status: 0, body: String(e.name === "AbortError" ? `timed out after ${this.cfg.timeout_ms ?? 15000}ms` : (e.message ?? e)) };
+    } finally {
+      clearTimeout(timer);
+    }
+  },
+
+  async search(query, lang, market) {
+    if (!this.configured()) return { ok: false, reason: "provider not configured", results: [] };
+    const base = {
+      q: query,
+      search_lang: lang,
+      count: this.cfg.results_per_query ?? 10,
+      freshness: this.cfg.freshness ?? "pm",
+      safesearch: this.cfg.safesearch ?? "off",
+    };
+    const withCountry = { ...base, country: market?.brave_country ?? null };
+
+    let res = await this.request(withCountry);
+    let droppedCountry = false;
+    if (!res.ok && (res.status === 400 || res.status === 422) && withCountry.country &&
+        (this.cfg.retry_without_country_on_reject ?? true)) {
+      res = await this.request(base);
+      droppedCountry = res.ok;
+    }
+    if (!res.ok) {
+      /* 401 and 403 are not transient. Retrying a rejected key three times per
+         query is 84 pointless requests against a metered API, and the test suite
+         found it by taking two minutes to fail. A bad key fails every market
+         identically, so it stops the scan once and says why. */
+      const fatal = res.status === 401 || res.status === 403;
+      return { ok: false, fatal, reason: `Brave HTTP ${res.status}${res.body ? `: ${res.body}` : ""}`, results: [] };
+    }
+
+    /* Brave returns web.results[]. Anything without a URL and a title is not a
+       candidate, and a candidate is never invented from a partial result. */
+    const raw = res.json?.web?.results ?? [];
+    const results = raw
+      .filter((r) => r?.url && r?.title)
+      .map((r) => ({
+        title: r.title,
+        url: r.url,
+        snippet: r.description ?? null,
+        publishedAt: normaliseBraveDate(r.page_age ?? r.age ?? null),
+        publisher: r.profile?.name ?? r.meta_url?.hostname ?? null,
+        place: null,
+      }));
+    return { ok: true, results, droppedCountry, total: raw.length };
+  },
+};
+
+/* Brave dates come back as "2025-08-15T10:00:00" or as "3 days ago". Only the
+   first is a date; the second is a relative phrase and is left null rather than
+   converted into a date the source never carried. */
+function normaliseBraveDate(value) {
+  if (!value) return null;
+  const m = /^(\d{4}-\d{2}-\d{2})/.exec(String(value));
+  return m ? m[1] : null;
+}
+
+/* --- the provider the run actually uses ------------------------------------
+
+   One name, one adapter, one honest answer when neither is set. Adding another
+   vendor means adding an object above and a line here; nothing else changes. */
+const ADAPTERS = { brave: BraveProvider };
+
 const SearchProvider = {
   name: process.env.MODUNERA_SEARCH_PROVIDER ?? "not-configured",
+  adapter() { return ADAPTERS[this.name.toLowerCase()] ?? null; },
   configured() {
-    return this.name !== "not-configured" && Boolean(process.env.MODUNERA_SEARCH_KEY);
+    const a = this.adapter();
+    return Boolean(a && a.configured());
   },
-  async search(_query, _lang) {
-    if (!this.configured()) return { ok: false, reason: "provider not configured", results: [] };
-    // A real provider returns [{title, url, snippet, publishedAt, publisher}].
-    // Deliberately not implemented against a specific vendor: the key is not in
-    // this repository and inventing results would defeat the entire engine.
-    return { ok: false, reason: `provider "${this.name}" has no adapter in this build`, results: [] };
+  reason() {
+    if (this.name === "not-configured") return "MODUNERA_SEARCH_PROVIDER is not set";
+    if (!this.adapter()) return `no adapter in this build for provider "${this.name}" (known: ${Object.keys(ADAPTERS).join(", ")})`;
+    return "MODUNERA_SEARCH_KEY is not set";
+  },
+  async search(query, lang, market) {
+    if (!this.configured()) return { ok: false, reason: this.reason(), results: [] };
+    return this.adapter().search(query, lang, market);
   },
 };
 
@@ -425,12 +532,19 @@ function scoreSignal(sig) {
 const normalise = (s) => (s ?? "").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
 
 function findExistingSignal(candidate) {
+  const title = normalise(candidate.title);
   return store.signals.find((s) =>
     s.sourceUrl === candidate.sourceUrl ||
+    /* One story, syndicated. The first live scan returned the same Niedersachsen
+       article from az-online.de and leinetal24.de under an identical headline;
+       two URLs, one project. Matching on the normalised title catches it, and
+       the earlier place-and-title rule could not, because a search result
+       carries no place. */
+    (s.country === candidate.country && title && normalise(s.title) === title) ||
     (s.country === candidate.country &&
      normalise(s.place) &&
      normalise(s.place) === normalise(candidate.place) &&
-     normalise(s.title).slice(0, 40) === normalise(candidate.title).slice(0, 40)));
+     normalise(s.title).slice(0, 40) === title.slice(0, 40)));
 }
 
 /* --- cannibalisation, section 39 ------------------------------------------- */
@@ -458,7 +572,15 @@ function cannibalises(candidate, index) {
   const candidatePlace = normalise(candidate.place);
   for (const page of index) {
     const pagePlace = normalise(page.place);
-    if (candidatePlace && pagePlace && candidatePlace !== pagePlace) continue;
+    /* A page that names a place can only be cannibalised by a candidate about
+       that same place. The first version of this gate compared the two places
+       and skipped when they differed, which quietly did nothing for a scraped
+       candidate: a search result carries no place, so the gate never engaged and
+       a Menden result was routed to UPDATE the Lüptitz article on the strength
+       of "tiny", "house" and "Siedlung". A candidate with no place cannot claim
+       one. It becomes a candidate for a person to look at, which is the right
+       outcome — merging it into an unrelated town's article is not. */
+    if (pagePlace && candidatePlace !== pagePlace) continue;
     const overlap = titleOverlap(candidate.title, page.title);
     if (overlap >= CONFIG.decision.cannibalisation_threshold) return page;
   }
@@ -467,17 +589,37 @@ function cannibalises(candidate, index) {
 
 /* --- the decision engine, section 18 --------------------------------------- */
 
-function decide({ scored, candidate, existing, collision }) {
+function decide({ scored, candidate, existing, collision, origin, published }) {
+  /* An article already citing this source is the strongest fact available, and
+     it does not depend on the store. A fresh store made the engine recommend
+     CREATE_NEWS for the Menden procedure that was already published, because the
+     "already seen" check only looked at signals it had written itself. */
+  if (published) return { action: "UPDATE_EXISTING_ARTICLE", target: published.id, why: `already published as ${published.id}; a second URL would split the project in two` };
   /* "Already in the store" and "already published" are different states and were
      briefly conflated here. A signal seen yesterday and not yet acted on is still
      waiting for a person; saying it is published would quietly retire it. */
   if (existing?.published) return { action: "UPDATE_EXISTING_ARTICLE", target: existing.id, why: "the same project is already published; a new URL would split it in two" };
   if (existing) return { action: existing.recommendedAction ?? "NO_PUBLISH", target: existing.id, why: `already a candidate since ${existing.firstSeenAt}, re-checked today, still waiting for a decision` };
   if (collision) return { action: "UPDATE_EXISTING_ARTICLE", target: collision.id, why: `title overlaps "${collision.title}" above the cannibalisation threshold` };
-  if (blockedAsPrimary(candidate.sourceUrl)) return { action: "NO_PUBLISH", why: "only a non-official source found; an official one has to be located first" };
-  if (scored.tier > 2) return { action: "NO_PUBLISH", why: "source is not an authority or reputable publication" };
-  if (scored.total < CONFIG.scoring.publish_threshold) return { action: "NO_PUBLISH", why: `score ${scored.total} is below the ${CONFIG.scoring.publish_threshold} threshold` };
-  return { action: "CREATE_NEWS", why: `score ${scored.total}, tier ${scored.tier} source, no existing page covers it` };
+  if (blockedAsPrimary(candidate.sourceUrl)) return { action: "NO_PUBLISH", code: "blocked as a primary source", why: "only a non-official source found; an official one has to be located first" };
+  if (scored.tier > 2) return { action: "NO_PUBLISH", code: "not an authority (tier 3)", why: "source is not an authority or reputable publication" };
+  if (scored.total < CONFIG.scoring.publish_threshold) return { action: "NO_PUBLISH", code: "below the score threshold", why: `score ${scored.total} is below the ${CONFIG.scoring.publish_threshold} threshold` };
+  /* Section 14. A newspaper saying a municipality is planning something is a
+     lead, not the source. The first live scan wanted to publish an NDR report on
+     a Schleswig-Holstein Baugebiet; what it should do is hand a person the lead
+     so the municipality's own page gets found and cited instead. */
+  if (scored.tier === 2) return { action: "FIND_OFFICIAL_SOURCE", why: `score ${scored.total}, but a tier 2 publication is a lead — the authority's own page has to be found before anything is published` };
+  /* Section 56. A search result is a title, a URL and a snippet, and that is not
+     enough to write an article from. The first live scan wanted to publish a
+     district's tender INDEX page as though it were a project, because tier 1 and
+     a score of 76 was all the gate asked for. So nothing the scan found is
+     published directly: a person opens the page and, if there is a real project
+     on it, writes it into the verified inbox. Only what came through that inbox
+     can reach CREATE_NEWS. */
+  if (origin !== "verified-inbox") {
+    return { action: "VERIFY_ON_SOURCE", why: `score ${scored.total}, tier 1 source — but a snippet is not evidence; the page has to be read before anything is written` };
+  }
+  return { action: "CREATE_NEWS", why: `score ${scored.total}, tier ${scored.tier} source, read on the source, no existing page covers it` };
 }
 
 /* --- items due for re-check, sections 24 and 61 ---------------------------- */
@@ -558,43 +700,71 @@ if (REVIEW_ONLY) {
     const scored = scoreSignal(candidate);
     const existing = findExistingSignal(candidate);
     const collision = cannibalises(candidate, index);
-    const d = decide({ scored, candidate, existing, collision });
-    const entry = { candidate, scored, d, origin };
+    const published = index.find((i) => i.sourceUrl === candidate.sourceUrl) ?? null;
+    const d = decide({ scored, candidate, existing, collision, origin, published });
+    const entry = { candidate, scored, d, origin, published };
     decisions.push(entry);
     if (d.action.startsWith("UPDATE")) run.existingProjectsUpdated += 1;
-    else if (!existing) run.projectsDiscovered += 1;
     return entry;
   }
 
+  /* A query is either a string, which runs in the market's first language, or
+     {q, lang}, which runs in the language it names. Switzerland is the reason:
+     its five queries are three German and two French, and running all five in
+     both languages was ten requests to learn what five could — a real cost once
+     a provider is billing per request, and two of them were French text
+     submitted as German. */
+  const plannedQueries = (market) => market.queries.map((entry) =>
+    typeof entry === "string"
+      ? { q: entry, lang: market.languages[0] }
+      : { q: entry.q, lang: entry.lang ?? market.languages[0] });
+
+  const sleep = (ms) => (ms > 0 ? new Promise((r) => setTimeout(r, ms)) : Promise.resolve());
+  const pause = PROVIDER_CONFIG.brave?.delay_between_requests_ms ?? 0;
+  let providerFatal = null;
+
   for (const market of CONFIG.markets) {
-    const m = { queries: market.queries.length, checked: 0, accepted: 0, rejected: 0, signals: 0, error: null };
-    run.queriesPlanned += market.queries.length;
-    for (const lang of market.languages) {
-      for (const query of market.queries) {
-        let attempt = 0;
-        let res = null;
-        while (attempt < CONFIG.run.max_retries_per_market) {
-          attempt += 1;
-          try { res = await SearchProvider.search(query, lang); break; }
-          catch (e) { if (attempt >= CONFIG.run.max_retries_per_market) m.error = String(e.message ?? e); }
+    const planned = plannedQueries(market);
+    const m = { queries: planned.length, checked: 0, accepted: 0, rejected: 0, signals: 0, error: null, countryDropped: false };
+    run.queriesPlanned += planned.length;
+    for (const { q, lang } of planned) {
+      if (providerFatal) { m.error = providerFatal; break; }
+      let attempt = 0;
+      let res = null;
+      while (attempt < CONFIG.run.max_retries_per_market) {
+        attempt += 1;
+        try {
+          res = await SearchProvider.search(q, lang, market);
+          if (res.ok) break;
+          /* A misconfiguration does not get three attempts; only a transport
+             failure does. Retrying an unset or rejected key teaches nothing and
+             costs money. */
+          if (!SearchProvider.configured() || res.fatal) break;
+          if (attempt < CONFIG.run.max_retries_per_market) await sleep(pause * attempt * 4);
+        } catch (e) {
+          res = { ok: false, reason: String(e.message ?? e), results: [] };
         }
-        if (!res || !res.ok) { if (!m.error) m.error = res?.reason ?? "no result"; continue; }
-        for (const r of res.results) {
-          m.checked += 1;
-          run.sourcesChecked += 1;
-          if (!r.url || !r.title) { m.rejected += 1; run.sourcesRejected += 1; continue; }
-          const candidate = {
-            country: market.code, place: r.place ?? null, title: r.title,
-            summary: r.snippet ?? null, sourceUrl: r.url, publisher: r.publisher ?? hostOf(r.url),
-            sourceDate: r.publishedAt ?? null, status: "UNKNOWN",
-          };
-          if (!consider(candidate, "scan")) { m.rejected += 1; run.sourcesRejected += 1; continue; }
-          m.accepted += 1; run.sourcesAccepted += 1; m.signals += 1; run.candidates += 1;
-        }
+      }
+      if (res && res.fatal) providerFatal = res.reason;
+      if (SearchProvider.configured()) await sleep(pause);
+      if (!res || !res.ok) { if (!m.error) m.error = res?.reason ?? "no result"; continue; }
+      if (res.droppedCountry) m.countryDropped = true;
+      for (const r of res.results) {
+        m.checked += 1;
+        run.sourcesChecked += 1;
+        if (!r.url || !r.title) { m.rejected += 1; run.sourcesRejected += 1; continue; }
+        const candidate = {
+          country: market.code, place: r.place ?? null, title: r.title,
+          summary: r.snippet ?? null, sourceUrl: r.url, publisher: r.publisher ?? hostOf(r.url),
+          sourceDate: r.publishedAt ?? null, status: "UNKNOWN",
+        };
+        if (!consider(candidate, "scan")) { m.rejected += 1; run.sourcesRejected += 1; continue; }
+        m.accepted += 1; run.sourcesAccepted += 1; m.signals += 1; run.candidates += 1;
       }
     }
     run.markets[market.code] = m;
     if (m.error) run.errors.push(`${market.code}: ${m.error}`);
+    if (m.countryDropped) run.errors.push(`${market.code}: Brave rejected country=${market.brave_country}; retried without it`);
   }
 
   /* The verified inbox, after the scan, so a hand-read finding never masks a
@@ -620,9 +790,25 @@ if (REVIEW_ONLY) {
   const reviewDays = CONFIG.status_taxonomy.review_days;
   const addDays = (iso, n) => new Date(Date.parse(iso) + n * 86400000).toISOString().slice(0, 10);
 
-  for (const { candidate, scored, d, origin } of decisions) {
+  run.newSignals = 0;
+  run.rejectedNotStored = 0;
+  /* Why 272 results were dropped is more useful than the number 272. */
+  run.rejectionReasons = {};
+  for (const { candidate, scored, d, origin, published } of decisions) {
     const existing = findExistingSignal(candidate);
     if (existing) { existing.lastCheckedAt = TODAY; continue; }
+    /* What the engine rejected is counted, not kept. The first live scan against
+       Brave produced 215 signals, 208 of them classified ads, auction listings
+       and holiday-park directories. Writing those to the store would add about
+       two hundred rows every day and bury the handful that are worth reading. */
+    if (d.action === "NO_PUBLISH") {
+      run.rejectedNotStored += 1;
+      const code = d.code ?? "other";
+      run.rejectionReasons[code] = (run.rejectionReasons[code] ?? 0) + 1;
+      continue;
+    }
+    run.newSignals += 1;
+    run.projectsDiscovered += 1;
     const status = CONFIG.status_taxonomy.values.includes(candidate.status) ? candidate.status : "UNKNOWN";
     /* Section 71, MarketSignal. A field the source did not state is null. */
     store.signals.push({
@@ -655,8 +841,12 @@ if (REVIEW_ONLY) {
       recommendedAction: d.action,
       recommendedWhy: d.why,
       origin,
-      published: false,
-      publishedUrls: [],
+      /* Taken from the article that cites this source, not defaulted to false and
+         corrected on some later run: a signal written as unpublished when an
+         article already exists is wrong from the moment it is written. */
+      published: Boolean(published),
+      publishedAs: published ? published.id : null,
+      publishedUrls: published ? published.urls : [],
     });
   }
 
@@ -715,9 +905,9 @@ lines.push(`Run ID: ${runId}`);
 lines.push(`Search provider: ${run.provider}${run.providerConfigured ? "" : "  (NOT CONFIGURED — no scan performed)"}`);
 lines.push(`Search Console:  ${run.gsc}`, "", "MARKET SCAN", "");
 for (const m of CONFIG.markets) {
-  const r = run.markets[m.code] ?? { queries: 0, checked: 0, signals: 0, error: "not run" };
+  const r = run.markets[m.code] ?? { queries: 0, checked: 0, accepted: 0, rejected: 0, error: "not run" };
   lines.push(`${m.name} (${m.code})`);
-  lines.push(`  queries planned: ${r.queries}   sources checked: ${r.checked}   signals: ${r.signals}`);
+  lines.push(`  queries planned: ${r.queries}   results read: ${r.checked}   kept: ${r.accepted}   discarded: ${r.rejected}`);
   if (r.error) lines.push(`  note: ${r.error}`);
 }
 lines.push("", "SEARCH CONSOLE (sections 37 and 38)", "");
@@ -754,6 +944,8 @@ for (const [k, v] of [
   ["sources visited", run.sourcesChecked],
   ["sources accepted", run.sourcesAccepted],
   ["sources rejected", run.sourcesRejected],
+  ["distinct new signals", run.newSignals ?? 0],
+  ["rejected, not stored", run.rejectedNotStored ?? 0],
   ["projects discovered", run.projectsDiscovered],
   ["existing projects updated", run.existingProjectsUpdated],
   ["tender opportunities", run.tenderOpportunities],
@@ -762,6 +954,9 @@ for (const [k, v] of [
   ["content generated", run.contentGenerated],
   ["content updated", run.contentUpdated],
 ]) lines.push(`  ${k.padEnd(28)}${v}`);
+for (const [code, n] of Object.entries(run.rejectionReasons ?? {})) {
+  lines.push(`      ${String(n).padStart(4)} × ${code}`);
+}
 lines.push("");
 lines.push("REVIEW QUEUE", "");
 if (!run.dueForReview.length) lines.push("  nothing due today");

@@ -2,26 +2,21 @@ MODUNERA DAILY INTELLIGENCE REPORT
 
 Date:   2026-08-19
 Run ID: run-2026-08-19-002
-Search provider: not-configured  (NOT CONFIGURED — no scan performed)
+Search provider: brave
 Search Console:  not connected
 
 MARKET SCAN
 
 Deutschland (DE)
-  queries planned: 7   sources checked: 0   signals: 1
-  note: provider not configured
+  queries planned: 7   results read: 70   kept: 70   discarded: 0
 Nederland (NL)
-  queries planned: 6   sources checked: 0   signals: 0
-  note: provider not configured
+  queries planned: 6   results read: 58   kept: 58   discarded: 0
 Danmark (DK)
-  queries planned: 6   sources checked: 0   signals: 0
-  note: provider not configured
+  queries planned: 6   results read: 60   kept: 60   discarded: 0
 Luxembourg (LU)
-  queries planned: 4   sources checked: 0   signals: 0
-  note: provider not configured
+  queries planned: 4   results read: 40   kept: 40   discarded: 0
 Schweiz / Suisse (CH)
-  queries planned: 5   sources checked: 0   signals: 0
-  note: provider not configured
+  queries planned: 5   results read: 50   kept: 50   discarded: 0
 
 SEARCH CONSOLE (sections 37 and 38)
 
@@ -34,23 +29,28 @@ VERIFIED INBOX
 DECISION
 
   UPDATE_EXISTING_ARTICLE
-  Tiny-House-Siedlung Sauerlandstraße (DE) — the same project is already published; a new URL would split it in two
+  Tiny-House-Siedlung Sauerlandstraße (DE) — already published as de-menden-sauerlandstrasse; a second URL would split the project in two
   source: https://beteiligung.nrw.de/portal/men/beteiligung/themen/1016912
   auto-publish news: off  — waiting for a person
 
 RUN COUNTERS (section 72)
 
   queries planned             28
-  sources visited             0
-  sources accepted            0
+  sources visited             278
+  sources accepted            278
   sources rejected            0
-  projects discovered         0
+  distinct new signals        4
+  rejected, not stored        272
+  projects discovered         4
   existing projects updated   1
   tender opportunities        0
   business leads              0
   GSC opportunities           0
   content generated           0
   content updated             0
+       268 × not an authority (tier 3)
+         2 × blocked as a primary source
+         2 × below the score threshold
 
 REVIEW QUEUE
 
@@ -58,16 +58,28 @@ REVIEW QUEUE
 
 STORE
 
-  signals: 1   opportunities: 0   tenders: 0
+  signals: 5   opportunities: 0   tenders: 0
   DE  Tiny-House-Siedlung Sauerlandstraße
       Menden (Sauerland) · PUBLIC_CONSULTATION · score 87 · tier 1 · CREATE_NEWS
       units: not stated by the source   next review 2026-09-17
       https://beteiligung.nrw.de/portal/men/beteiligung/themen/1016912
+  DE  Tiny House: Bundesweites Interesse an Baugebiet im Norden
+      — · UNKNOWN · score 78 · tier 2 · FIND_OFFICIAL_SOURCE
+      units: not stated by the source   next review 2026-09-18
+      https://www.ndr.de/nachrichten/schleswig-holstein/flensburg_nordfriesland_schleswig-flensburg/bundesweites-interesse-an-baugebiet-fuer-tiny-haeuser-in-satrup,regionflensburgnews-3106.html
+  DE  Modulhaus kaufen, Mobilheim kaufen, Modulhaus Hersteller - Hannover.de
+      — · UNKNOWN · score 64 · tier 2 · FIND_OFFICIAL_SOURCE
+      units: not stated by the source   next review 2026-09-18
+      https://www.hannover.de/Service/Werbung-Firmenverzeichnis/Immobilien/Architekten/Loft.Heim-Mobilheime-GmbH
+  DE  Ausschreibungen Bau-, Liefer- und Dienstleistungen - www.kreis-eic.de
+      — · UNKNOWN · score 76 · tier 1 · VERIFY_ON_SOURCE
+      units: not stated by the source   next review 2026-09-18
+      https://www.kreis-eic.de/aktuelles/ausschreibungen-und-bekanntmachungen/ausschreibungen-bau-liefer-und-dienstleistungen
+  DK  Efter syv år sker der noget: Nu er nyt sommerhusområde på vej
+      — · UNKNOWN · score 65 · tier 2 · FIND_OFFICIAL_SOURCE
+      units: not stated by the source   next review 2026-09-18
+      https://dinavis.dk/samfund/ECE19543648/kommunen-trykker-paa-startknappen-til-nye-sommerhuse/
 
 ERRORS
 
-  DE: provider not configured
-  NL: provider not configured
-  DK: provider not configured
-  LU: provider not configured
-  CH: provider not configured
+  LU: Brave rejected country=LU; retried without it

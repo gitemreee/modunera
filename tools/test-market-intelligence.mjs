@@ -18,7 +18,7 @@
 */
 import { readFile, writeFile, mkdtemp, rm } from "node:fs/promises";
 import { existsSync, readFileSync } from "node:fs";
-import { execFileSync } from "node:child_process";
+import { execFileSync, spawn } from "node:child_process";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -28,15 +28,25 @@ const ENGINE = join(ROOT, "tools/market-intelligence.mjs");
 const TODAY = "2026-08-18";
 
 const results = [];
+const registered = [];
 let failures = 0;
 
-function test(name, fn) {
-  try {
-    const note = fn();
-    results.push({ name, ok: true, note: note ?? "" });
-  } catch (e) {
-    failures += 1;
-    results.push({ name, ok: false, note: e.message });
+/* Tests are registered here and run in order at the foot of the file. They were
+   originally called inline, which is fine until one of them needs to start a
+   server: a synchronous wait for a listening socket blocks the event loop that
+   would have opened it, and all three provider tests failed with "stub did not
+   start" while the code they were testing was correct. */
+function test(name, fn) { registered.push({ name, fn }); }
+
+async function runAll() {
+  for (const { name, fn } of registered) {
+    try {
+      const note = await fn();
+      results.push({ name, ok: true, note: note ?? "" });
+    } catch (e) {
+      failures += 1;
+      results.push({ name, ok: false, note: e.message });
+    }
   }
 }
 const assert = (cond, message) => { if (!cond) throw new Error(message); };
@@ -50,11 +60,13 @@ const STORE = join(scratch, "store.json");
 const INBOX = join(scratch, "inbox.json");
 const REPORT = join(scratch, "report.txt");
 
-function runEngine(inboxCandidates, { store = null, today = TODAY, args = [], gscDir = null } = {}) {
+function runEngine(inboxCandidates, { store = null, today = TODAY, args = [], gscDir = null, provider = null } = {}) {
   writeFileSyncJson(INBOX, { candidates: inboxCandidates });
   if (store === null) { if (existsSync(STORE)) rmSync(STORE); }
   else writeFileSyncJson(STORE, store);
   const env = { ...process.env, MODUNERA_TODAY: today, MODUNERA_MI_STORE: STORE, MODUNERA_MI_INBOX: INBOX, MODUNERA_MI_REPORT: REPORT };
+  delete env.MODUNERA_SEARCH_PROVIDER; delete env.MODUNERA_SEARCH_KEY; delete env.MODUNERA_MI_BRAVE_ENDPOINT;
+  if (provider) Object.assign(env, provider);
   /* Always pinned, so a test never reads whatever happens to sit in data/gsc/
      and never depends on it being empty. */
   env.MODUNERA_MI_GSC_DIR = gscDir ?? join(scratch, "no-gsc");
@@ -256,6 +268,142 @@ test("GSC fallback", () => {
   return "reports not connected rather than inventing rows";
 });
 
+/* ---- 4a the provider adapter, against a stub -------------------------------
+
+   The adapter talks to a network service, so it is exercised against a local
+   stub shaped like Brave's response rather than shipped unrun. Three things are
+   worth proving: that a well-formed answer becomes candidates, that a rejected
+   key produces an error and no candidates, and that a country code Brave will
+   not accept costs the market its results.
+
+   Brave's own endpoint is never called by a test. There is no key here. */
+
+/* The stub runs as its OWN PROCESS, and that is the whole point of this comment.
+
+   The first version created the server inside this file. It deadlocked: the
+   engine is spawned with execFileSync, which blocks this process's event loop,
+   so the server that was supposed to answer the child's request could not run
+   until the child had finished — and the child was waiting on the server. The
+   suite sat there until every request timed out. Nothing was wrong with the
+   adapter; the harness could not answer its own call. */
+const STUB_SOURCE = `
+import { createServer } from "node:http";
+const mode = process.argv[2];
+const server = createServer((req, res) => {
+  const url = new URL(req.url, "http://x");
+  const send = (code, body) => { res.writeHead(code, { "content-type": "application/json" }); res.end(body); };
+  if (mode === "auth") return send(401, JSON.stringify({ error: "invalid subscription token" }));
+  if (mode === "country" && url.searchParams.get("country")) return send(422, JSON.stringify({ error: "country not supported" }));
+  send(200, JSON.stringify({ web: { results: [
+    { title: "Tiny-House-Siedlung Sauerlandstra\u00dfe",
+      url: "https://beteiligung.nrw.de/portal/xyz/beteiligung/themen/9999001",
+      description: "Verfahren einer Stadt.", page_age: "2025-08-15T10:00:00",
+      profile: { name: "Beteiligung NRW" } },
+    { title: "Ein Beitrag mit relativem Datum", url: "https://www.gemeinde-example.de/tiny-house",
+      description: "x", age: "3 days ago", meta_url: { hostname: "www.gemeinde-example.de" } },
+    { title: "Kein Link", description: "muss verworfen werden" },
+  ] } }));
+});
+server.listen(0, "127.0.0.1", () => process.stdout.write("PORT " + server.address().port + "\\n"));
+`;
+
+const STUB_FILE = join(scratch, "brave-stub.mjs");
+fsSync.writeFileSync(STUB_FILE, STUB_SOURCE, "utf8");
+
+async function startStub(mode) {
+  const child = spawn("node", [STUB_FILE, mode], { stdio: ["ignore", "pipe", "ignore"] });
+  const port = await new Promise((resolve, reject) => {
+    const timer = setTimeout(() => reject(new Error("stub did not report a port within 5s")), 5000);
+    let buf = "";
+    child.stdout.on("data", (d) => {
+      buf += d;
+      const m = /PORT (\d+)/.exec(buf);
+      if (m) { clearTimeout(timer); resolve(Number(m[1])); }
+    });
+    child.once("error", (e) => { clearTimeout(timer); reject(e); });
+  });
+  return { close: () => child.kill(), url: `http://127.0.0.1:${port}/res/v1/web/search` };
+}
+
+const braveEnv = (url) => ({ MODUNERA_SEARCH_PROVIDER: "brave", MODUNERA_SEARCH_KEY: "test-key", MODUNERA_MI_BRAVE_ENDPOINT: url });
+
+test("provider adapter parses a real response shape", async () => {
+  const stub = await startStub("ok");
+  try {
+    const s = runEngine([], { provider: braveEnv(stub.url) });
+    const run = s.runs[0];
+    assert(run.provider === "brave", `run reports provider ${run.provider}`);
+    /* 28 planned queries x 2 usable results; the third result has no URL. */
+    assert(run.sourcesChecked === 56, `read ${run.sourcesChecked} results, expected 56`);
+    /* One stored, not two: the second result is a tier 3 host and the engine
+       counts rejections rather than keeping them. */
+    assert(s.signals.length === 1, `${s.signals.length} signals stored, expected 1`);
+    assert(run.rejectedNotStored > 0, "the tier 3 result was stored instead of counted");
+    const sig = s.signals[0];
+    assert(sig.sourceUrl.includes("beteiligung.nrw.de"), "the tier 1 result did not become the signal");
+    assert(sig.publishedAt === "2025-08-15", `ISO date read as ${sig.publishedAt}`);
+    assert(sig.publisher === "Beteiligung NRW", `publisher read as ${sig.publisher}`);
+    /* Nothing the scan found is publishable on the strength of a snippet. */
+    assert(sig.recommendedAction === "VERIFY_ON_SOURCE",
+      `a scraped candidate was recommended for ${sig.recommendedAction}, not VERIFY_ON_SOURCE`);
+    return "56 read, 1 kept, tier 3 counted not stored, ISO date kept, scan result needs verifying";
+  } finally { stub.close(); }
+});
+
+test("provider rejects the key", async () => {
+  const stub = await startStub("auth");
+  try {
+    const s = runEngine([], { provider: braveEnv(stub.url) });
+    const run = s.runs[0];
+    assert(s.signals.length === 0, "candidates appeared from a run the provider refused");
+    assert(run.sourcesChecked === 0, `${run.sourcesChecked} results counted from a 401`);
+    assert(run.errors.some((e) => /401/.test(e)), `the 401 was not reported: ${JSON.stringify(run.errors)}`);
+    assert(run.decision === "NO_PUBLISH", `a failed scan decided ${run.decision}`);
+    return "401 reported per market, nothing invented";
+  } finally { stub.close(); }
+});
+
+test("provider rejects the country code", async () => {
+  const stub = await startStub("country");
+  try {
+    const s = runEngine([], { provider: braveEnv(stub.url) });
+    const run = s.runs[0];
+    assert(run.sourcesChecked === 56, `country retry lost results: ${run.sourcesChecked} read`);
+    assert(Object.values(run.markets).every((m) => m.countryDropped), "the retry without country was not recorded");
+    assert(run.errors.some((e) => /retried without it/.test(e)), "the dropped country was not reported");
+    return "422 on country retried once without it, results kept, retry recorded";
+  } finally { stub.close(); }
+});
+
+/* ---- 4b only a human-read candidate may be published ---------------------- */
+test("a scan result is never published unread", () => {
+  const store = { runs: [], signals: [], opportunities: [], tenders: [] };
+  /* Same facts, two origins. The inbox one has been read on the source; the
+     scanned one is a snippet. Only the first may reach CREATE_NEWS. */
+  const fresh = { ...MENDEN, sourceUrl: "https://beteiligung.nrw.de/portal/zzz/beteiligung/themen/9999002" };
+  const s = runEngine([fresh], { store });
+  const sig = s.signals[0];
+  assert(sig, "the verified candidate did not become a signal");
+  assert(sig.recommendedAction === "CREATE_NEWS",
+    `a candidate read on the source was recommended for ${sig.recommendedAction}`);
+  assert(sig.origin === "verified-inbox", `origin recorded as ${sig.origin}`);
+  return "inbox -> CREATE_NEWS, scan -> VERIFY_ON_SOURCE";
+});
+
+/* ---- 4c an already published project is updated, not duplicated ------------ */
+test("already published project is not duplicated", () => {
+  /* data/news.json cites the Menden source. Even with an empty store — a fresh
+     clone, a first run in CI — the engine must see that and route to UPDATE.
+     It did not: the "already seen" check only looked at signals it had written
+     itself, so a fresh store recommended creating the article a second time. */
+  const s = runEngine([MENDEN], { store: { runs: [], signals: [], opportunities: [], tenders: [] } });
+  const sig = s.signals[0];
+  assert(sig.recommendedAction === "UPDATE_EXISTING_ARTICLE",
+    `an already published project was recommended for ${sig.recommendedAction}`);
+  assert(sig.published === true, "the signal was not reconciled against data/news.json");
+  return "empty store, published article still found";
+});
+
 /* ---- 15a GSC export parsing ----------------------------------------------- */
 test("GSC export parsing", () => {
   const dir = writeGscFixture(join(scratch, "gsc-a"), 10);
@@ -324,10 +472,16 @@ test("quality threshold", () => {
     sourceUrl: "https://beteiligung.nrw.de/portal/men/beteiligung/themen/999999",
     publisher: "Beteiligung NRW", sourceDate: "2019-01-01", status: "UNKNOWN",
   }]);
-  const score = weak.signals[0]?.score ?? 0;
-  assert(score < threshold, `a weak candidate scored ${score}, at or above the ${threshold} threshold`);
-  assert(weak.runs[0].decision === "NO_PUBLISH", `a candidate scoring ${score} was not refused`);
-  return `below ${threshold} is refused (this one scored ${score})`;
+  /* Read the reason, not the stored signal: a refused candidate is no longer
+     written to the store at all, so `signals[0].score` would be undefined and
+     the assertion would pass without testing anything. */
+  const run = weak.runs[0];
+  assert(run.decision === "NO_PUBLISH", `a weak candidate was not refused: ${run.decision}`);
+  assert(weak.signals.length === 0, "a refused candidate was stored anyway");
+  assert(run.rejectedNotStored === 1, `${run.rejectedNotStored} rejections counted, expected 1`);
+  assert(run.rejectionReasons["below the score threshold"] === 1,
+    `the refusal was recorded as ${JSON.stringify(run.rejectionReasons)}, not as a threshold failure`);
+  return `refused on the ${threshold} threshold, counted, not stored`;
 });
 
 /* ---- 19 NO_PUBLISH -------------------------------------------------------- */
@@ -340,6 +494,7 @@ test("NO_PUBLISH", () => {
 });
 
 /* ---- report --------------------------------------------------------------- */
+await runAll();
 await rm(scratch, { recursive: true, force: true });
 
 const width = Math.max(...results.map((r) => r.name.length));
