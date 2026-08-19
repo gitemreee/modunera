@@ -139,6 +139,47 @@ const opportunityRows = store.opportunities.length
       `<td>${esc(o.score)}</td><td>${esc(o.lastCheckedAt)}</td></tr>`).join("")
   : `<tr><td colspan="10" class="muted">Keine erfassten Geschäftsgelegenheiten.</td></tr>`;
 
+/* --- sections 37 and 38, Search Console ------------------------------------ */
+
+/* The queries themselves are only rendered when the config says so. This page is
+   unlisted, not secret, and the list of what a site ranks for and nearly ranks
+   for is exactly what a competitor would like. Counts are safe; the list is a
+   decision, and its default is no. */
+const gscOpps = store.gscOpportunities ?? [];
+const showQueries = config?.gsc?.render_on_dashboard === true;
+const KIND_LABEL = {
+  HIGH_IMPRESSION_LOW_CTR: ["Viele Impressionen, kaum Klicks", "Titel und Description sind der Test — die Seite rankt bereits."],
+  NEAR_PAGE_ONE: ["Knapp vor Seite eins (Position 8–20)", "Die vorhandene Seite stärken, keine zweite anlegen."],
+  MISSING_CONTENT: ["Impressionen ohne passende Seite", "Eine neue Seite ist einen Gedanken wert."],
+  COUNTRY_GROWTH: ["Wachsender Markt", "Der Cluster für diesen Markt wirkt; ihn stärken."],
+};
+const gscCounts = {};
+for (const o of gscOpps) gscCounts[o.kind] = (gscCounts[o.kind] ?? 0) + 1;
+
+const gscSection = `<section class="section"><div class="container">` +
+  `<h2>Search Console</h2>` +
+  (gscOpps.length
+    ? `<p>${esc(lastRun?.gsc ?? "")} — vier Kategorien nach Abschnitt 38.</p>` +
+      `<div class="compare"><table><thead><tr><th>Kategorie</th><th>Anzahl</th><th>Was daraus folgt</th>` +
+      (showQueries ? `<th>Suchanfrage</th><th>Klicks</th><th>Impressionen</th><th>Position</th>` : "") +
+      `</tr></thead><tbody>` +
+      Object.keys(KIND_LABEL).filter((k) => gscCounts[k]).map((k) => {
+        const [label, follows] = KIND_LABEL[k];
+        const rows = gscOpps.filter((o) => o.kind === k);
+        if (!showQueries) {
+          return `<tr><td>${esc(label)}</td><td>${gscCounts[k]}</td><td>${esc(follows)}</td></tr>`;
+        }
+        return rows.map((o, i) =>
+          `<tr>` +
+          (i === 0 ? `<td rowspan="${rows.length}">${esc(label)}</td><td rowspan="${rows.length}">${gscCounts[k]}</td><td rowspan="${rows.length}">${esc(follows)}</td>` : "") +
+          `<td>${esc(o.subject)}</td><td>${esc(o.clicks)}</td><td>${esc(o.impressions)}</td>` +
+          `<td>${o.position === null ? stated(null) : esc(o.position)}</td></tr>`).join("");
+      }).join("") +
+      `</tbody></table></div>` +
+      (showQueries ? "" : `<p class="legal-note">Die Suchanfragen selbst stehen nicht auf dieser Seite. Sie stehen in <code>build-report-market-intelligence.txt</code>. Diese Seite ist unverlinkt, aber nicht geheim.</p>`)
+    : `<p class="muted">${esc(lastRun?.gsc ?? "not connected")}. Ein Export aus der Search Console gehört nach <code>data/gsc/</code> — siehe die README dort.</p>`) +
+  `</div></section>`;
+
 /* --- errors --------------------------------------------------------------- */
 
 const errorList = lastRun?.errors?.length
@@ -182,6 +223,8 @@ const main = `<main id="main"><header class="page-hero"><div class="container">`
   `<th>Status</th><th>Kontakt</th><th>Score</th><th>Zuletzt geprüft</th>` +
   `</tr></thead><tbody>${opportunityRows}</tbody></table></div>` +
   `</div></section>` +
+
+  gscSection +
 
   `<section class="section section-soft"><div class="container">` +
   `<h2>Letzter Lauf</h2>` +

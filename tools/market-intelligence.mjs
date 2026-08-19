@@ -43,7 +43,7 @@
      node tools/market-intelligence.mjs --review        # only re-check due items
 */
 import { readFile, writeFile } from "node:fs/promises";
-import { existsSync } from "node:fs";
+import { existsSync, readdirSync } from "node:fs";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -118,17 +118,210 @@ const SearchProvider = {
   },
 };
 
-/* Search Console. No credentials exist here either, so this reads an export if
-   someone drops one in, and reports honestly when they have not. */
+/* Search Console, sections 37 and 38.
+
+   There is no live connection and there cannot be one from a public repository:
+   an OAuth refresh token or a service-account key committed here is a credential
+   published to the world. So the engine reads an export instead, which costs
+   nothing and needs no key:
+
+     data/gsc-export.json     the API shape, {rows:[{keys:[...], clicks, ...}]}
+     data/gsc/*.csv           the files the Search Console UI's own Export button
+                              produces, unzipped into that folder
+
+   Column headings come out in the interface language of whoever downloaded the
+   file, so both English and Turkish headings are recognised. A heading that is
+   neither is reported by name rather than silently skipped — a column read as
+   the wrong field is worse than a column not read at all. */
+
+const GSC = CONFIG.gsc ?? {};
+
+const GSC_FIELDS = {
+  query:       ["query", "queries", "top queries", "sorgu", "sorgular", "en cok kullanilan sorgular", "en çok kullanılan sorgular"],
+  page:        ["page", "pages", "top pages", "sayfa", "sayfalar", "en cok kullanilan sayfalar", "en çok kullanılan sayfalar"],
+  country:     ["country", "countries", "ulke", "ülke", "ulkeler", "ülkeler"],
+  device:      ["device", "cihaz"],
+  date:        ["date", "tarih"],
+  clicks:      ["clicks", "tiklamalar", "tıklamalar"],
+  impressions: ["impressions", "gosterimler", "gösterimler"],
+  ctr:         ["ctr", "average ctr", "ortalama ctr"],
+  position:    ["position", "average position", "ortalama konum", "konum"],
+};
+
+const foldHeading = (h) => String(h ?? "")
+  .replace(/^\uFEFF/, "").trim().toLowerCase()
+  .replaceAll("ı", "i").replaceAll("ö", "o").replaceAll("ü", "u")
+  .replaceAll("ş", "s").replaceAll("ç", "c").replaceAll("ğ", "g");
+
+function fieldFor(heading) {
+  const h = foldHeading(heading);
+  for (const [field, names] of Object.entries(GSC_FIELDS)) {
+    if (names.some((n) => foldHeading(n) === h)) return field;
+  }
+  return null;
+}
+
+/* A percentage in an export is "3,2%" or "3.2%" depending on the locale, and a
+   position is "12,4" or "12.4" for the same reason. Both have to survive. */
+function num(value) {
+  if (value === null || value === undefined) return null;
+  let t = String(value).trim();
+  if (!t) return null;
+  const pct = t.endsWith("%");
+  t = t.replace("%", "").trim();
+  if (/,\d{1,2}$/.test(t) && !/\.\d/.test(t)) t = t.replace(/\./g, "").replace(",", ".");
+  else t = t.replace(/,/g, "");
+  const n = Number(t);
+  if (!Number.isFinite(n)) return null;
+  return pct ? n / 100 : n;
+}
+
+/* A CSV line, respecting quotes. Query strings contain commas. */
+function csvLine(line) {
+  const out = []; let cur = ""; let quoted = false;
+  for (let i = 0; i < line.length; i += 1) {
+    const c = line[i];
+    if (quoted) {
+      if (c === '"' && line[i + 1] === '"') { cur += '"'; i += 1; }
+      else if (c === '"') quoted = false;
+      else cur += c;
+    } else if (c === '"') quoted = true;
+    else if (c === ",") { out.push(cur); cur = ""; }
+    else cur += c;
+  }
+  out.push(cur);
+  return out;
+}
+
 const SearchConsoleProvider = {
-  path: join(ROOT, "data/gsc-export.json"),
-  available() { return existsSync(this.path); },
+  jsonPath: process.env.MODUNERA_MI_GSC_DIR ? join(process.env.MODUNERA_MI_GSC_DIR, "gsc-export.json") : join(ROOT, GSC.export_file ?? "data/gsc-export.json"),
+  dirs: process.env.MODUNERA_MI_GSC_DIR ? [process.env.MODUNERA_MI_GSC_DIR] : (GSC.search_dirs ?? ["data/gsc"]).map((d) => join(ROOT, d)),
+  files() {
+    const found = [];
+    if (existsSync(this.jsonPath)) found.push(this.jsonPath);
+    for (const dir of this.dirs) {
+      if (!existsSync(dir)) continue;
+      for (const f of readdirSync(dir)) if (/\.csv$/i.test(f)) found.push(join(dir, f));
+    }
+    return found;
+  },
+  available() { return this.files().length > 0; },
   async load() {
-    if (!this.available()) return { ok: false, reason: "no data/gsc-export.json present", rows: [] };
-    const raw = JSON.parse(await readFile(this.path, "utf8"));
-    return { ok: true, rows: raw.rows ?? [] };
+    const files = this.files();
+    if (!files.length) {
+      return { ok: false, reason: `no export found (looked for ${GSC.export_file ?? "data/gsc-export.json"} and ${(GSC.search_dirs ?? []).join(", ")}/*.csv)`, rows: [], warnings: [] };
+    }
+    const rows = [];
+    const warnings = [];
+    for (const file of files) {
+      const text = await readFile(file, "utf8");
+      const label = file.slice(ROOT.length);
+      if (file.endsWith(".json")) {
+        const raw = JSON.parse(text);
+        for (const r of raw.rows ?? []) {
+          rows.push({
+            source: label,
+            query: r.query ?? r.keys?.[0] ?? null,
+            page: r.page ?? null, country: r.country ?? null, device: r.device ?? null,
+            clicks: num(r.clicks), impressions: num(r.impressions),
+            ctr: num(r.ctr), position: num(r.position),
+          });
+        }
+        continue;
+      }
+      const lines = text.split(/\r?\n/).filter((l) => l.trim());
+      if (lines.length < 2) { warnings.push(`${label}: no data rows`); continue; }
+      const headings = csvLine(lines[0]);
+      const fields = headings.map(fieldFor);
+      const unknown = headings.filter((h, i) => !fields[i] && h.trim());
+      if (unknown.length) warnings.push(`${label}: column(s) not recognised and ignored: ${unknown.join(", ")}`);
+      if (!fields.includes("impressions")) { warnings.push(`${label}: no impressions column, skipped`); continue; }
+      for (const line of lines.slice(1)) {
+        const cells = csvLine(line);
+        const row = { source: label, query: null, page: null, country: null, device: null, clicks: null, impressions: null, ctr: null, position: null };
+        fields.forEach((f, i) => {
+          if (!f) return;
+          row[f] = ["clicks", "impressions", "ctr", "position"].includes(f) ? num(cells[i]) : (cells[i] ?? null);
+        });
+        rows.push(row);
+      }
+    }
+    return { ok: true, rows, warnings, files: files.map((f) => f.slice(ROOT.length)) };
   },
 };
+
+/* Section 38. Four buckets, each with the action it implies. A row lands in the
+   first bucket it qualifies for, so one row never inflates the count four times. */
+function gscOpportunities(rows) {
+  const t = GSC;
+  const out = [];
+  const seen = new Set();
+  for (const r of rows) {
+    const imp = r.impressions ?? 0;
+    if (imp < (t.min_impressions ?? 50)) continue;
+    const pos = r.position;
+    const ctr = r.ctr ?? (imp ? (r.clicks ?? 0) / imp : 0);
+    /* A country row has no landing page to strengthen and no title to rewrite,
+       so it must not fall into the query and page buckets. The first test run
+       reported "NEAR_PAGE_ONE: Almanya", which is not an action anyone can take.
+       Country rows go to the growth comparison below and nowhere else. */
+    const subject = r.query ?? r.page ?? null;
+    if (!subject) continue;
+    let kind = null;
+    if (t.high_impression_low_ctr && imp >= t.high_impression_low_ctr.min_impressions &&
+        pos !== null && pos <= t.high_impression_low_ctr.max_position && ctr <= t.high_impression_low_ctr.max_ctr) {
+      kind = "HIGH_IMPRESSION_LOW_CTR";
+    } else if (t.near_page_one && pos !== null &&
+        pos >= t.near_page_one.min_position && pos <= t.near_page_one.max_position) {
+      kind = "NEAR_PAGE_ONE";
+    } else if (t.missing_content && imp >= t.missing_content.min_impressions &&
+        pos !== null && pos > t.missing_content.min_position) {
+      kind = "MISSING_CONTENT";
+    }
+    /* COUNTRY_GROWTH is deliberately not decided here. "Search from a country is
+       rising" is a comparison against an earlier export, and a single file has
+       nothing to compare with. It is computed below, from the baseline the last
+       run stored, and is simply absent on the first export rather than being
+       faked out of one number. */
+    if (!kind) continue;
+    const key = `${kind}|${subject}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push({
+      kind, subject, page: r.page ?? null, country: r.country ?? null,
+      clicks: r.clicks ?? 0, impressions: imp,
+      ctr: ctr === null ? null : Math.round(ctr * 10000) / 10000,
+      position: pos === null ? null : Math.round(pos * 10) / 10,
+      action: (t[kind.toLowerCase()] ?? {}).action ?? null,
+      source: r.source,
+    });
+  }
+  /* Biggest missed audience first: impressions you are not converting. */
+  return out.sort((a, b) => (b.impressions - b.clicks) - (a.impressions - a.clicks));
+}
+
+/* Country growth, against the previous export rather than against a threshold. */
+function countryGrowth(rows, baseline) {
+  const now = {};
+  for (const r of rows) {
+    if (!r.country) continue;
+    now[r.country] = (now[r.country] ?? 0) + (r.clicks ?? 0);
+  }
+  const min = GSC.country_growth?.min_clicks ?? 5;
+  const found = [];
+  for (const [country, clicks] of Object.entries(now)) {
+    const before = baseline?.[country];
+    if (before === undefined) continue;
+    if (clicks <= before || clicks < min) continue;
+    found.push({
+      kind: "COUNTRY_GROWTH", subject: country, page: null, country,
+      clicks, impressions: 0, ctr: null, position: null,
+      was: before, growth: clicks - before,
+      action: GSC.country_growth?.action ?? null, source: "baseline comparison",
+    });
+  }
+  return { opportunities: found.sort((a, b) => b.growth - a.growth), baseline: now };
+}
 
 /* --- what is already published, so the engine can prefer updating ---------- */
 
@@ -304,7 +497,7 @@ const run = {
   startedAt: new Date().toISOString(),
   provider: SearchProvider.name,
   providerConfigured: SearchProvider.configured(),
-  gsc: SearchConsoleProvider.available() ? "export present" : "not connected",
+  gsc: "not connected",
   markets: {},
   /* Section 72. Every one of these is a count of something that happened, not a
      field that gets a plausible number when nothing did. */
@@ -329,6 +522,27 @@ const run = {
 
 const index = await existingContentIndex();
 run.signalsPublished = reconcilePublished(index);
+
+/* Sections 37 and 38. Runs whether or not a search provider is configured: the
+   two are independent, and the export is the part that costs nothing. */
+const gsc = await SearchConsoleProvider.load();
+let gscFound = [];
+if (gsc.ok) {
+  gscFound = gscOpportunities(gsc.rows);
+  const growth = countryGrowth(gsc.rows, store.gscBaseline);
+  gscFound = [...gscFound, ...growth.opportunities];
+  store.gscBaseline = growth.baseline;
+  store.gscOpportunities = gscFound;
+  run.gsc = `${gsc.rows.length} row(s) from ${gsc.files.length} file(s)`;
+  run.gscRows = gsc.rows.length;
+  run.gscOpportunities = gscFound.length;
+  for (const w of gsc.warnings ?? []) run.errors.push(`GSC: ${w}`);
+} else {
+  run.gsc = "not connected";
+  run.gscRows = 0;
+  run.gscOpportunities = 0;
+  store.gscOpportunities = store.gscOpportunities ?? [];
+}
 run.dueForReview = dueForReview(index).map((i) => ({ id: i.id, status: i.status, nextReviewAt: i.nextReviewAt }));
 
 if (REVIEW_ONLY) {
@@ -506,6 +720,26 @@ for (const m of CONFIG.markets) {
   lines.push(`  queries planned: ${r.queries}   sources checked: ${r.checked}   signals: ${r.signals}`);
   if (r.error) lines.push(`  note: ${r.error}`);
 }
+lines.push("", "SEARCH CONSOLE (sections 37 and 38)", "");
+lines.push(`  ${run.gsc}`);
+if (gscFound.length) {
+  const byKind = {};
+  for (const o of gscFound) byKind[o.kind] = (byKind[o.kind] ?? 0) + 1;
+  for (const [k, n] of Object.entries(byKind)) lines.push(`  ${k.padEnd(26)}${n}`);
+  lines.push("");
+  for (const o of gscFound.slice(0, 15)) {
+    lines.push(`  ${o.kind}  ${o.subject}`);
+    lines.push(`      clicks ${o.clicks}  impressions ${o.impressions}` +
+      (o.position === null ? "" : `  position ${o.position}`) +
+      (o.ctr === null ? "" : `  CTR ${(o.ctr * 100).toFixed(2)}%`) +
+      (o.growth === undefined ? "" : `  was ${o.was}, now ${o.clicks}`));
+    if (o.action) lines.push(`      -> ${o.action}`);
+  }
+  if (gscFound.length > 15) lines.push(`  ... and ${gscFound.length - 15} more, all in data/market-signals.json`);
+} else if (run.gscRows) {
+  lines.push("  rows read, nothing crossed a threshold");
+}
+
 lines.push("", "VERIFIED INBOX", "");
 lines.push(`  hand-verified candidates considered: ${run.verifiedInboxCandidates}`);
 lines.push("", "DECISION", "", `  ${run.decision}`, `  ${run.decisionWhy}`);

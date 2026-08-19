@@ -174,6 +174,52 @@
     }
   },
 
+  "gsc": {
+    "_note": [
+      "Sections 37 and 38. There is no live Search Console connection and there",
+      "cannot be one from a public repository, so the engine reads an export the",
+      "owner drops in: data/gsc-export.json (API shape, {rows:[...]}), or the CSV",
+      "files from the Search Console UI's own Export button, unzipped into",
+      "data/gsc/. Column headings are matched in English and Turkish, because the",
+      "export carries the interface language of whoever downloaded it.",
+      "",
+      "The thresholds below are policy, not physics. They are here so changing",
+      "them is an edit to a data file and not to the engine."
+    ],
+    "render_on_dashboard": false,
+    "render_note": [
+      "/intelligence/ is unlisted, not secret: anyone who types the URL sees it.",
+      "Your Search Console queries are the list of what you rank for and what you",
+      "nearly rank for, which is exactly what a competitor would like. So the page",
+      "shows only how many opportunities were found in each bucket, and the",
+      "queries themselves stay in build-report-market-intelligence.txt and",
+      "data/market-signals.json. Set this to true only if you have decided that",
+      "publishing the query list is acceptable."
+    ],
+    "search_dirs": ["data/gsc"],
+    "export_file": "data/gsc-export.json",
+    "min_impressions": 50,
+    "high_impression_low_ctr": {
+      "min_impressions": 100,
+      "max_position": 10,
+      "max_ctr": 0.02,
+      "action": "title and meta description are the test; the page already ranks"
+    },
+    "near_page_one": {
+      "min_position": 8,
+      "max_position": 20,
+      "action": "strengthen the page that already ranks, do not mint a second one"
+    },
+    "missing_content": {
+      "min_impressions": 100,
+      "min_position": 20,
+      "action": "impressions exist and no page answers the query; a new page is worth considering"
+    },
+    "country_growth": {
+      "min_clicks": 5,
+      "action": "the cluster for that market is working; strengthen it"
+    }
+  },
   "decision": {
     "note": "Section 18. Creating a new URL is deliberately the last option, not the default.",
     "order": ["UPDATE_EXISTING_ARTICLE", "UPDATE_GUIDE", "UPDATE_COUNTRY_PAGE", "UPDATE_FAQ", "CREATE_NEWS", "CREATE_BLOG", "NO_PUBLISH"],

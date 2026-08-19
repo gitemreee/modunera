@@ -2,7 +2,7 @@ MODUNERA DAILY INTELLIGENCE REPORT
 
 Date:   2026-08-19
 Run ID: run-2026-08-19-002
-Search provider:   (NOT CONFIGURED — no scan performed)
+Search provider: not-configured  (NOT CONFIGURED — no scan performed)
 Search Console:  not connected
 
 MARKET SCAN
@@ -22,6 +22,10 @@ Luxembourg (LU)
 Schweiz / Suisse (CH)
   queries planned: 5   sources checked: 0   signals: 0
   note: provider not configured
+
+SEARCH CONSOLE (sections 37 and 38)
+
+  not connected
 
 VERIFIED INBOX
 

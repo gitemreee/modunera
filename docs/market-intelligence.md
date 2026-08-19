@@ -150,7 +150,8 @@ the site's dark photographic body background with dark text on it, unreadable.
 
 ## 7. The nineteen tests
 
-`node tools/test-market-intelligence.mjs` — 19/19 passing. They run against the
+`node tools/test-market-intelligence.mjs` — 21/21 passing (the nineteen the
+brief names, plus two for the Search Console reader). They run against the
 real engine and the real repository, with the store and inbox pointed at scratch
 files so a test never mutates what it protects.
 
@@ -169,11 +170,52 @@ this work added. The new article has its de/en hreflang pair and valid JSON-LD;
   key would be untested code that looks finished. The abstraction is there; adding
   a provider is one function and one environment variable, and nothing else in the
   engine changes.
-- **Google Search Console integration.** Sections 37, 38 and 59. The engine reads
-  `data/gsc-export.json` if someone puts one there and reports "not connected"
-  when they have not. Live OAuth needs credentials that cannot live here.
+- **A *live* Search Console connection.** OAuth or a service-account key cannot
+  live in a repository. What is built instead is section 8a below, and it needs
+  no key at all.
 - **Automatic publication.** Section 65's switches exist and default to false. The
   workflow does not set them. This is a deliberate choice, not an omission.
+
+---
+
+## 8a. Search Console, sections 37 and 38
+
+Built, and it costs nothing. The engine reads an export rather than logging in:
+
+- `data/gsc/*.csv` — the files the Search Console **Export** button produces,
+  unzipped into that folder. Headings are recognised in English and in Turkish,
+  because the export carries the interface language of whoever downloaded it, and
+  so are comma decimals (`9,4`), percent signs, and queries containing a comma
+  inside quotes. A heading that is neither language is reported by name in the
+  daily run instead of being misread as a different column.
+- `data/gsc-export.json` — the API shape, if a connection is ever added.
+
+It sorts what it finds into section 38's four buckets, biggest missed audience
+first — impressions you are not converting:
+
+| Bucket | What to do |
+|---|---|
+| `HIGH_IMPRESSION_LOW_CTR` | The page ranks and nobody clicks. Rewrite title and description. |
+| `NEAR_PAGE_ONE` | Position 8–20. Strengthen the page that ranks; do not create a second one. |
+| `MISSING_CONTENT` | Impressions with no page that answers them. A new page is worth considering. |
+| `COUNTRY_GROWTH` | Clicks from a market rose **against the previous export**. |
+
+Two things it deliberately does not do. **Country growth needs two exports**; on
+the first one it is absent, because "rising" is a comparison and a single file
+has nothing to compare with — it is not manufactured out of one number. And a
+**country row never lands in a page bucket**: the first test run reported
+"NEAR_PAGE_ONE: Almanya", which is not an action anyone can take, so country rows
+now feed only the growth comparison.
+
+**A warning that belongs to the owner, not to the code.** Whatever goes into
+`data/gsc/` is in the repository, and the derived opportunities go into
+`data/market-signals.json`. A list of the queries a site ranks for and nearly
+ranks for is precisely what a competitor would like. So `/intelligence/` shows
+only the count per bucket; the queries stay in
+`build-report-market-intelligence.txt`. Setting `gsc.render_on_dashboard` to
+`true` puts them on the page, and the default is `false` because that page is
+unlisted rather than secret. `data/gsc/README.md` says all of this next to the
+folder where the decision is actually made.
 
 ---
 
@@ -182,9 +224,10 @@ this work added. The new article has its de/en hreflang pair and valid JSON-LD;
 1. **Whether to fund a search provider.** Without one the daily scan is a
    scheduled `NO_PUBLISH` and every finding has to be located by a person and put
    in the inbox. The engine works either way; only the volume changes.
-2. **Whether to connect Search Console.** Sections 37 and 38 are the highest-value
-   unbuilt part: the site now has impressions to learn from, and nothing is
-   reading them.
+2. **Whether the Search Console export may live in this repository.** The reader
+   is built and needs no credentials; it needs the file. If the repository is
+   public, putting the export in it publishes the query list. That is a decision
+   about the business's own data, not a setting. See §8a.
 3. **Whether `/intelligence/` should stay reachable at all.** Unlisted is not
    private. If it should be private, it needs a host that can authenticate, which
    Netlify's free tier does not.

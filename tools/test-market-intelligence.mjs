@@ -50,16 +50,32 @@ const STORE = join(scratch, "store.json");
 const INBOX = join(scratch, "inbox.json");
 const REPORT = join(scratch, "report.txt");
 
-function runEngine(inboxCandidates, { store = null, today = TODAY, args = [] } = {}) {
+function runEngine(inboxCandidates, { store = null, today = TODAY, args = [], gscDir = null } = {}) {
   writeFileSyncJson(INBOX, { candidates: inboxCandidates });
   if (store === null) { if (existsSync(STORE)) rmSync(STORE); }
   else writeFileSyncJson(STORE, store);
-  execFileSync("node", [ENGINE, ...args], {
-    cwd: ROOT,
-    env: { ...process.env, MODUNERA_TODAY: today, MODUNERA_MI_STORE: STORE, MODUNERA_MI_INBOX: INBOX, MODUNERA_MI_REPORT: REPORT },
-    stdio: "pipe",
-  });
+  const env = { ...process.env, MODUNERA_TODAY: today, MODUNERA_MI_STORE: STORE, MODUNERA_MI_INBOX: INBOX, MODUNERA_MI_REPORT: REPORT };
+  /* Always pinned, so a test never reads whatever happens to sit in data/gsc/
+     and never depends on it being empty. */
+  env.MODUNERA_MI_GSC_DIR = gscDir ?? join(scratch, "no-gsc");
+  execFileSync("node", [ENGINE, ...args], { cwd: ROOT, env, stdio: "pipe" });
   return JSON.parse(readFileSync(STORE, "utf8"));
+}
+
+/* A Search Console export as the Turkish interface writes it: Turkish headings,
+   comma decimal separators, a percent sign on the CTR, and a query containing a
+   comma inside quotes. Every one of those broke a naive reader. */
+function writeGscFixture(dir, germanyClicks) {
+  fsSync.mkdirSync(dir, { recursive: true });
+  fsSync.writeFileSync(join(dir, "Sorgular.csv"),
+    "En çok kullanılan sorgular,Tıklamalar,Gösterimler,Ortalama CTR,Ortalama konum\n" +
+    'tiny house kaufen deutschland,3,1420,"0,21%","9,4"\n' +
+    'tiny house preise,0,860,"0%","14,2"\n' +
+    '"modulhaus, schlüsselfertig",1,240,"0,42%","23,8"\n', "utf8");
+  fsSync.writeFileSync(join(dir, "Ulkeler.csv"),
+    "Ülke,Tıklamalar,Gösterimler,Ortalama CTR,Ortalama konum\n" +
+    `Almanya,${germanyClicks},4200,"0,24%","12,1"\n`, "utf8");
+  return dir;
 }
 function writeFileSyncJson(p, v) { require_fs().writeFileSync(p, JSON.stringify(v, null, 2), "utf8"); }
 function rmSync(p) { require_fs().rmSync(p, { force: true }); }
@@ -234,11 +250,45 @@ test("structured data", () => {
 
 /* ---- 15 GSC fallback ------------------------------------------------------ */
 test("GSC fallback", () => {
-  assert(!existsSync(join(ROOT, "data/gsc-export.json")), "a GSC export is present; this test asserts the fallback path");
   const s = runEngine([MENDEN]);
   assert(s.runs[0].gsc === "not connected", `the run claims GSC state "${s.runs[0].gsc}"`);
   assert(s.runs[0].gscOpportunities === 0, "GSC opportunities were counted without a connection");
   return "reports not connected rather than inventing rows";
+});
+
+/* ---- 15a GSC export parsing ----------------------------------------------- */
+test("GSC export parsing", () => {
+  const dir = writeGscFixture(join(scratch, "gsc-a"), 10);
+  const s = runEngine([], { gscDir: dir });
+  const run = s.runs[0];
+  assert(run.gscRows === 4, `read ${run.gscRows} rows, expected 4`);
+  const opps = s.gscOpportunities ?? [];
+  const kinds = Object.fromEntries(opps.map((o) => [o.kind, o]));
+  assert(kinds.HIGH_IMPRESSION_LOW_CTR?.subject === "tiny house kaufen deutschland",
+    "the high-impression/low-CTR query was not identified");
+  assert(kinds.HIGH_IMPRESSION_LOW_CTR.position === 9.4, `comma decimal misread as ${kinds.HIGH_IMPRESSION_LOW_CTR.position}`);
+  assert(kinds.NEAR_PAGE_ONE?.subject === "tiny house preise", "the near-page-one query was not identified");
+  assert(kinds.MISSING_CONTENT?.subject === "modulhaus, schlüsselfertig",
+    "a quoted query containing a comma was split");
+  /* A country row has no page to strengthen; it must not land in a page bucket. */
+  assert(!opps.some((o) => o.subject === "Almanya" && o.kind !== "COUNTRY_GROWTH"),
+    "a country row was classified as a page opportunity");
+  return "Turkish headings, comma decimals, quoted commas, 3 buckets";
+});
+
+/* ---- 15b GSC country growth needs a baseline ------------------------------ */
+test("GSC country growth", () => {
+  const dir = join(scratch, "gsc-b");
+  writeGscFixture(dir, 10);
+  const first = runEngine([], { gscDir: dir });
+  assert(!(first.gscOpportunities ?? []).some((o) => o.kind === "COUNTRY_GROWTH"),
+    "growth was claimed from a single export, with nothing to compare against");
+  writeGscFixture(dir, 17);
+  const second = runEngine([], { store: first, gscDir: dir, today: "2026-08-20" });
+  const growth = (second.gscOpportunities ?? []).find((o) => o.kind === "COUNTRY_GROWTH");
+  assert(growth, "growth was not detected against the stored baseline");
+  assert(growth.was === 10 && growth.clicks === 17, `growth reported ${growth.was} -> ${growth.clicks}`);
+  return "absent on the first export, 10 -> 17 on the second";
 });
 
 /* ---- 16 business lead extraction ------------------------------------------ */

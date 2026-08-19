@@ -96,8 +96,8 @@
     {
       "runId": "run-2026-08-19-001",
       "date": "2026-08-19",
-      "startedAt": "2026-08-19T05:06:38.614Z",
-      "provider": "",
+      "startedAt": "2026-08-19T07:49:36.112Z",
+      "provider": "not-configured",
       "providerConfigured": false,
       "gsc": "not connected",
       "markets": {
@@ -166,6 +166,7 @@
         "CH: provider not configured"
       ],
       "signalsPublished": 1,
+      "gscRows": 0,
       "decisionSignal": "https://beteiligung.nrw.de/portal/men/beteiligung/themen/1016912",
       "autoPublish": {
         "news": false,
@@ -173,7 +174,7 @@
         "guides": false
       },
       "awaitingHumanDecision": true,
-      "finishedAt": "2026-08-19T05:06:38.617Z"
+      "finishedAt": "2026-08-19T07:49:36.118Z"
     }
   ],
   "signals": [
@@ -238,5 +239,6 @@
     }
   ],
   "opportunities": [],
-  "tenders": []
+  "tenders": [],
+  "gscOpportunities": []
 }
