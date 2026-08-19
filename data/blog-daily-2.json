@@ -1,0 +1,455 @@
+{
+  "_comment": [
+    "Zweiter Block der täglichen Praxis-Serie; der erste steht in data/blog-daily-1.json.",
+    "Jeder Beitrag steht für sich, nennt keine Preise und keine Firmenangaben und erscheint",
+    "erst an seinem publish_on-Datum. tools/build-daily-blog.mjs prüft Länge und Überschneidung."
+  ],
+  "posts": [
+    {
+      "slug": "dachentwaesserung-im-herbst",
+      "publish_on": "2026-08-23",
+      "category": "wartung",
+      "title": "Die Dachentwässerung im Herbst: was wirklich verstopft",
+      "description": "Nicht die Rinne läuft zuerst über, sondern der Ablauf. Woran Sie eine Verstopfung vom Boden aus erkennen und was ein übergelaufener Herbst an der Fassade anrichtet.",
+      "image": "unit-standing-seam",
+      "imageAlt": "Aussenansicht einer fertigen Einheit mit Stehfalzdach und sichtbarer Dachkante",
+      "lead": "Im Oktober fällt an einem einzigen Tag mehr Laub auf ein Dach als im ganzen Sommer. Bei einem Haus mit fünfzehn Quadratmetern Dachfläche und einer Rinne von sechs Metern ist das kein Randthema: Die Fläche ist klein, der Querschnitt der Entwässerung ist es auch, und beide sind so bemessen, dass sie frei sind. Sind sie es nicht, steht das Wasser innerhalb von Minuten dort, wo es nicht stehen soll — und das ist fast nie die Rinne selbst.",
+      "sections": [
+        {
+          "h2": "Der Ablauf verstopft, nicht die Rinne",
+          "p": [
+            "Eine Dachrinne fasst deutlich mehr, als die meisten annehmen. Was zuerst dicht geht, ist der Übergang von der Rinne in das Fallrohr — der Punkt, an dem sich der Querschnitt von mehreren Zentimetern Breite auf ein rundes Rohr verengt. Ein einzelnes nasses Ahornblatt legt sich dort quer, das nächste hängt sich daran, und nach drei Regentagen sitzt ein Pfropfen aus Laub, Samen und Feinstaub, der Wasser nur noch tropfenweise durchlässt.",
+            "Das ist der Grund, warum eine Sichtprüfung von unten in die Rinne wenig aussagt. Sie sehen dann eine Rinne, in der Laub liegt, und schliessen daraus auf ein Problem — dabei ist Laub in der Rinne der Normalzustand im Herbst und für sich genommen harmlos. Umgekehrt kann eine Rinne fast sauber aussehen, während der Einlauf bereits vollständig zu ist. Entscheidend ist die Stelle, die man von unten am schlechtesten sieht.",
+            "Bei kleinen Dächern kommt hinzu, dass die Fallrohre entsprechend schmal ausgeführt sind. Ein Rohr mit einem Innendurchmesser von rund sechzig Millimetern verträgt sehr viel weniger Verstopfung als eines mit hundert. Was an einem Einfamilienhaus noch durchrutscht, bleibt hier hängen."
+          ]
+        },
+        {
+          "h2": "Woran Sie eine Verstopfung erkennen, ohne aufs Dach zu steigen",
+          "p": [
+            "Der zuverlässigste Hinweis ist ein Geräusch, das fehlt. Bei freiem Ablauf hören Sie während eines kräftigen Regens ein gleichmässiges Rauschen im Fallrohr. Bleibt das aus und stattdessen hören Sie ein Plätschern von der Rinnenkante, läuft das Wasser bereits über.",
+            "Der zweite Hinweis steht an der Wand. Eine Rinne, die regelmässig überläuft, hinterlässt unterhalb der Überlaufstelle eine senkrechte Spur: dunkler als die Umgebung, oft mit einem feinen grünen Belag, weil die Stelle nie richtig abtrocknet. Diese Spur ist der beste Detektiv, den Sie haben — sie zeigt Ihnen genau, wo und wie oft es passiert ist, auch wenn Sie nie dabei waren.",
+            "Der dritte Hinweis ist der Boden. Wo ein Fallrohr sein Wasser regulär abgibt, ist der Untergrund gleichmässig feucht. Wo eine Rinne überläuft, entsteht eine Auswaschung: eine Mulde im Kies, eine freigelegte Kante am Fundament, ein Streifen im Rasen, der anders wächst als der Rest.",
+            "Alle drei lassen sich vom Boden aus prüfen, in fünf Minuten, ohne Leiter. Das ist wichtig, weil die Prüfung sonst aufgeschoben wird — und aufgeschobene Prüfungen finden im November nicht mehr statt."
+          ]
+        },
+        {
+          "h2": "Was ein übergelaufener Herbst an der Fassade anrichtet",
+          "p": [
+            "Wasser, das über die Rinnenkante läuft, fällt nicht senkrecht. Es folgt der Unterkante, läuft an der Stirnseite zurück und trifft die Fassade oberhalb der Stelle, an der die Konstruktion darauf ausgelegt ist. Bei einer hinterlüfteten Holzschalung bedeutet das: Wasser gelangt hinter die Schalung, aber nicht dort, wo die Hinterlüftung es wieder herausführen kann.",
+            "Für die Schalung selbst ist das über wenige Tage kein Problem — Holz nimmt Wasser auf und gibt es wieder ab, das ist seine Natur. Kritisch wird die Dauer. Bleibt eine Stelle über Wochen feucht, weil sie bei jedem Regen erneut nass wird und dazwischen nicht durchtrocknet, verschiebt sich das Gleichgewicht. Die Holzfeuchte an dieser Stelle steigt über den Wert, bei dem holzzerstörende Pilze arbeiten können.",
+            "Der zweite Schaden ist unauffälliger. Wo Wasser dauerhaft an derselben Stelle über eine Kante läuft, wäscht es die Oberfläche aus. Bei geölten Fassaden verschwindet der Ölanteil dort zuerst, und der Streifen vergraut schneller als die Fläche daneben. Das ist optisch, nicht statisch — aber es ist der Punkt, an dem viele Eigentümer zum ersten Mal merken, dass etwas nicht stimmt, und dann ist die Ursache schon zwei Jahre alt."
+          ]
+        },
+        {
+          "h2": "Der Fusspunkt: wohin das Wasser danach geht",
+          "p": [
+            "Eine funktionierende Rinne ist die halbe Aufgabe. Die andere Hälfte beginnt dort, wo das Fallrohr endet. Bei einer Einheit auf Punktfundamenten oder auf einem Trailer fällt das Wasser oft einfach auf den Boden neben der Aufstellfläche — und wenn dieser Boden verdichtet ist, staut es sich genau dort.",
+            "Wasser, das sich unter oder direkt neben einer Einheit sammelt, hat zwei Wege. Es versickert, oder es verdunstet. Verdunstet es, steigt es als Feuchte in den Raum unter dem Boden auf. Bei einer belüfteten Unterkonstruktion ist das beherrschbar, weil die Luft die Feuchte abführt. Bei einer geschlossenen, in der die Luft steht, ist es der Anfang eines Problems, das erst im nächsten Frühjahr sichtbar wird.",
+            "Ein Kiesbett von rund vierzig Zentimetern im Quadrat unter dem Auslauf, mindestens zwanzig Zentimeter tief, löst das in den meisten Fällen. Es ist keine Entwässerung im technischen Sinn, aber es verteilt den Aufschlag und verhindert die Mulde, in der sich das Wasser sammelt. Wo der Untergrund lehmig ist und Wasser über Stunden stehen bleibt, reicht Kies nicht, dann braucht es eine Ableitung weg vom Gebäude."
+          ]
+        },
+        {
+          "h2": "Laubschutz: was hilft und was nur verlagert",
+          "p": [
+            "Gitter und Bürsten in der Rinne haben denselben Grundgedanken: Laub soll gar nicht erst hineinfallen. Beide funktionieren, solange sie sauber sind, und beide verlagern das Problem, sobald sie es nicht mehr sind.",
+            "Ein Gitter, auf dem eine Laubschicht liegt, ist eine Fläche, über die Wasser hinwegläuft, statt hindurch. Bei starkem Regen schiesst das Wasser dann über die Rinne hinaus — dieselbe Wirkung wie bei einer verstopften Rinne, nur ohne dass in der Rinne etwas zu sehen wäre. Wer ein Gitter einbaut, tauscht die Aufgabe, die Rinne zu reinigen, gegen die Aufgabe, das Gitter abzufegen, und die zweite ist nur dann leichter, wenn sie auch gemacht wird.",
+            "Bürsten in der Rinne halten grobes Laub zurück und lassen Wasser durch. Ihr Schwachpunkt sind Nadeln und Samen: Beides setzt sich in den Borsten fest und lässt sich schlecht wieder herausbekommen. Unter einer Birke oder einer Kiefer ist eine Bürste nach zwei Jahren ein Filz.",
+            "Die ehrliche Rechnung: Laubschutz lohnt sich, wenn das Dach schwer zugänglich ist und die Reinigung sonst gar nicht stattfindet. Ist die Rinne mit einer kurzen Leiter erreichbar, ist zweimal jährlich ausräumen der geringere Aufwand."
+          ]
+        },
+        {
+          "h2": "Warum die Neigung wichtiger ist als die Sauberkeit",
+          "p": [
+            "Eine Rinne muss zum Ablauf hin fallen. Das klingt selbstverständlich, ist es in der Praxis aber nicht — besonders bei Einheiten, die bewegt wurden. Ein Transport, ein Absenken auf ungleichmässig gesetzte Fundamente, ein Winter, in dem sich der Boden auf einer Seite mehr gehoben hat als auf der anderen: All das verändert die Neigung um wenige Millimeter, und wenige Millimeter genügen.",
+            "Erkennbar ist es nach Regen. Bleibt in der Rinne stehendes Wasser zurück, während der Rest leer ist, liegt an dieser Stelle ein Tiefpunkt, der nicht dorthin gehört. Stehendes Wasser ist der Ort, an dem sich Sediment absetzt, an dem Moos wächst und an dem im Winter Eis entsteht, das die Rinne weiter aufdrückt.",
+            "Bei einer Einheit, die auf verstellbaren Füssen steht, ist das nachjustierbar. Bei einer auf einem Trailer hängt es an dessen Ausrichtung — und die zu prüfen ist ohnehin sinnvoll, weil sie auch für Türen, Fenster und den Ablauf im Bad gilt."
+          ]
+        },
+        {
+          "h2": "Der Zusammenhang mit dem Dach selbst",
+          "p": [
+            "Bei einem Stehfalzdach ist die Rinne der letzte Teil eines Systems, das oben beginnt. Wasser läuft in den Vertiefungen zwischen den Falzen zur Traufe, tritt dort gebündelt aus und trifft die Rinne in Strahlen statt flächig. Das ist gewollt, verlangt aber, dass die Rinne unter der Traufkante sitzt und nicht davor.",
+            "Verschiebt sich das Verhältnis — weil sich die Rinnenhalter über Jahre nach unten gebogen haben, was bei Schneelast vorkommt —, springt das Wasser über die vordere Kante. Sie erkennen das an einer Rinne, die innen trocken bleibt, während unter der Traufe eine Tropfspur entsteht.",
+            "Die Halter lassen sich nachbiegen, das ist eine Aufgabe von zwanzig Minuten. Wichtiger ist, sie überhaupt zu prüfen, weil sie sich langsam verformen und niemand einen Zustand bemerkt, der sich über fünf Winter eingestellt hat."
+          ]
+        },
+        {
+          "h2": "Zwei Zeitpunkte, nicht einer",
+          "p": [
+            "Die verbreitete Empfehlung, die Rinne einmal im Jahr zu reinigen, geht am Problem vorbei. Der Herbst hat zwei Phasen mit unterschiedlichem Material.",
+            "Die erste liegt im Oktober und bringt Blätter. Blätter sind gross, verstopfen den Einlauf schnell und lassen sich mit der Hand entfernen. Die zweite liegt im späten November und bringt das, was danach kommt: Reste, Samen, Nadeln, die feine schwarze Masse aus zersetztem Material. Diese Masse verstopft nicht, sie verklebt — und wer im Oktober gereinigt hat und dann bis zum Frühjahr wartet, geht mit einer verklebten Rinne in den Winter.",
+            "Zwei kurze Durchgänge sind deshalb wirksamer als einer gründlicher. Der erste, wenn der Hauptfall vorbei ist. Der zweite, wenn die Bäume leer sind. Beide dauern zusammen weniger als eine gründliche Reinigung im März, bei der Sie zuerst Eis und dann eine Schicht aus vier Monaten herausholen."
+          ]
+        },
+        {
+          "h2": "Der Winterfall: warum Eis am Ablauf entsteht",
+          "p": [
+            "Eiszapfen an einer Rinne sind kein Kältephänomen, sondern ein Wärmephänomen. Sie entstehen, wenn Schnee auf dem Dach von unten antaut, das Schmelzwasser zur kalten Traufe läuft und dort wieder gefriert. Ist die Rinne frei, läuft das Wasser vorher ab. Ist sie voll, gefriert es in ihr.",
+            "Bei einem gut gedämmten Dach passiert das seltener, weil weniger Wärme nach oben entweicht und der Schnee liegen bleibt, statt anzutauen. Genau deshalb ist ein Dach, an dem im Winter regelmässig grosse Eiszapfen hängen, ein Hinweis, der über die Rinne hinausgeht: Irgendwo geht mehr Wärme durch die Dachfläche, als vorgesehen war.",
+            "Der häufigste Ort dafür ist nicht die Fläche, sondern eine Durchdringung — ein Rohr, ein Kabel, ein Lüftungsauslass. Wo die Dämmung um etwas herumgeführt wurde, bleibt oft eine Lücke, und diese Lücke zeichnet sich im Schnee ab, lange bevor sie sich in der Heizkostenabrechnung zeigt. Ein Blick auf das verschneite Dach nach dem ersten Frost ist deshalb eine der aussagekräftigsten Prüfungen, die nichts kostet."
+          ]
+        },
+        {
+          "h2": "Was Sie selbst machen können und wo es aufhört",
+          "p": [
+            "Ausräumen, spülen, den Ablauf freimachen und die Halter prüfen sind Arbeiten, für die es kein Fachwissen braucht, sondern einen sicheren Stand. Bei einer Traufhöhe von rund drei Metern genügt eine kurze Leiter auf festem Untergrund.",
+            "Was Sie nicht selbst machen sollten, ist alles, wofür Sie auf die Dachfläche müssten. Ein Stehfalzdach ist begehbar, aber nicht trittsicher — die Falze sind schmal, das Blech ist bei Feuchte glatt, und ein Ausrutschen auf einer Fläche ohne Absturzsicherung endet drei Meter tiefer. Hinzu kommt, dass Punktlasten das Blech verformen können.",
+            "Die Grenze verläuft also nicht bei der Schwierigkeit der Arbeit, sondern bei der Frage, ob Sie sie vom Boden oder von einer Leiter aus erreichen. Alles darüber gehört zu jemandem mit Ausrüstung."
+          ]
+        },
+        {
+          "h2": "Was Sie bei der Planung schon entscheiden",
+          "p": [
+            "Ein Teil des Aufwands entscheidet sich, bevor gebaut wird. Ein Dachüberstand von dreissig statt zehn Zentimetern hält bei Schlagregen einen erheblichen Teil des Wassers von der Fassade fern und macht ein gelegentliches Überlaufen weniger folgenreich.",
+            "Ebenso die Zahl der Abläufe. Zwei Fallrohre an einer sechs Meter langen Rinne sind mehr Aufwand in der Montage und deutlich weniger im Betrieb: Ist eines dicht, läuft das Wasser zum anderen, statt über die Kante. Bei einem einzigen Ablauf ist jede Verstopfung sofort ein Überlauf.",
+            "Und die Zugänglichkeit. Eine Rinne, die über einer Terrasse liegt, wird geprüft. Eine, die über einer Böschung liegt, an die man nur mit angelegter Leiter kommt, wird es nicht. Wer beim Aufstellen darauf achtet, auf welcher Seite die Entwässerung liegt, entscheidet damit, ob die Wartung in den nächsten zehn Jahren stattfindet."
+          ]
+        },
+        {
+          "h2": "Die Reihenfolge, wenn es schon passiert ist",
+          "p": [
+            "Finden Sie im Frühjahr eine dunkle Spur an der Fassade, ist die Reihenfolge: erst Ursache, dann Trocknung, dann Oberfläche. In dieser Reihenfolge, nicht in einer anderen.",
+            "Zuerst die Rinne freimachen und die Neigung prüfen — sonst wiederholt sich alles im nächsten Herbst. Dann die Stelle trocknen lassen; bei einer hinterlüfteten Schalung geschieht das von allein, sobald der Wassernachschub aufhört, und dauert je nach Jahreszeit zwei bis sechs Wochen. Erst danach über die Oberfläche entscheiden.",
+            "Der Fehler, der am häufigsten gemacht wird, ist die umgekehrte Reihenfolge: die Stelle nachölen, solange sie noch feucht ist. Das schliesst die Feuchte ein, statt sie herauszulassen, und aus einem optischen Problem wird ein konstruktives."
+          ]
+        }
+      ],
+      "checklist": {
+        "h2": "Der Herbstdurchgang in zehn Minuten",
+        "items": [
+          "Bei Regen einmal am Fallrohr horchen: rauscht es gleichmässig oder tropft es nur?",
+          "Fassade unterhalb der Rinnenkante auf senkrechte dunkle Spuren absuchen.",
+          "Boden unter jedem Fallrohrauslauf ansehen: Mulde, freigelegte Fundamentkante, ausgewaschener Kies?",
+          "Nach dem Regen prüfen, ob in der Rinne stehendes Wasser zurückbleibt — das ist ein Tiefpunkt, der dort nicht hingehört.",
+          "Rinnenhalter von der Leiter aus ansehen: sitzt die Rinne noch unter der Traufkante oder davor?",
+          "Einlauf in das Fallrohr mit der Hand freimachen, nicht nur die Rinne ausräumen.",
+          "Mit einem Eimer Wasser spülen und unten kontrollieren, ob es zügig ankommt.",
+          "Den Durchgang zweimal machen: einmal nach dem Hauptlaubfall, einmal wenn die Bäume leer sind.",
+          "Nach dem ersten Frost das verschneite Dach ansehen: Stellen, an denen der Schnee früher wegtaut, zeigen Wärmeverluste an.",
+          "Alles, wofür Sie auf die Dachfläche müssten, aufschreiben statt selbst machen."
+        ]
+      },
+      "faq": [
+        [
+          "Wie oft muss die Rinne bei einem so kleinen Dach wirklich gereinigt werden?",
+          "Die Fläche ist klein, der Querschnitt der Entwässerung aber auch, und das hebt sich gegenseitig auf. Unter Bäumen sind zwei Durchgänge im Herbst realistisch, freistehend auf offener Fläche genügt einer. Der Massstab ist nicht die Dachgrösse, sondern was über dem Dach wächst."
+        ],
+        [
+          "Ist Laub in der Rinne schon ein Problem?",
+          "Für sich genommen nicht. Laub in der Rinne ist im Oktober der Normalzustand. Zum Problem wird es dort, wo die Rinne in das Fallrohr übergeht: Dort verengt sich der Querschnitt, und dort setzt es sich fest. Diese Stelle sehen Sie von unten am schlechtesten und sollten sie deshalb zuerst prüfen."
+        ],
+        [
+          "Meine Fassade hat einen dunklen senkrechten Streifen. Muss ich sie streichen?",
+          "Nicht als Erstes. Ein Streifen dieser Art entsteht durch Wasser, das immer an derselben Stelle über die Kante läuft. Solange die Ursache besteht, kommt der Streifen nach jedem Anstrich wieder. Zuerst die Entwässerung in Ordnung bringen, dann die Stelle über einige Wochen abtrocknen lassen, und erst danach über die Oberfläche entscheiden."
+        ],
+        [
+          "Lohnt sich ein Laubschutzgitter?",
+          "Wenn die Rinne schwer erreichbar ist und sonst gar nicht gereinigt würde, ja. Ist sie mit einer kurzen Leiter zugänglich, meist nicht: Ein Gitter, auf dem Laub liegt, lässt Wasser über die Rinne hinwegschiessen, ohne dass in der Rinne etwas zu sehen wäre. Sie tauschen eine Aufgabe gegen eine andere, nicht gegen keine."
+        ],
+        [
+          "Was bedeuten grosse Eiszapfen an der Traufe?",
+          "Sie entstehen, wenn Schnee von unten antaut und das Schmelzwasser an der kalten Traufe wieder gefriert. Angetaut wird der Schnee durch Wärme, die durch das Dach entweicht. Regelmässig grosse Eiszapfen sind deshalb kein Rinnenthema, sondern ein Hinweis auf eine Schwachstelle in der Dämmung — meist an einer Durchdringung, nicht in der Fläche."
+        ]
+      ]
+    },
+    {
+      "slug": "feuchte-ecke-im-schlafbereich",
+      "publish_on": "2026-08-24",
+      "category": "schaeden",
+      "title": "Die feuchte Ecke im Schlafbereich: Kondensat, Wärmebrücke oder Leck?",
+      "description": "Drei Ursachen sehen am Anfang gleich aus und verlangen entgegengesetzte Massnahmen. Wie Sie sie mit einem Thermometer, einem Blatt Papier und zwei Wochen Geduld auseinanderhalten.",
+      "image": "interior-loft-ladder",
+      "imageAlt": "Blick in den Schlafbereich unter dem Dach, mit Leiter und Dachschräge",
+      "lead": "Eine dunkle Stelle in der Ecke über dem Bett ist der häufigste Schaden, den Bewohner eines kleinen Hauses melden — und der am häufigsten falsch behandelt wird. Drei Ursachen sehen im ersten Winter identisch aus: Kondensat aus der Raumluft, eine Wärmebrücke in der Konstruktion, ein Leck von aussen. Sie sehen gleich aus, sie riechen gleich, und sie verlangen genau entgegengesetzte Massnahmen. Wer die falsche wählt, macht es schlimmer.",
+      "sections": [
+        {
+          "h2": "Warum ausgerechnet die Ecke über dem Bett",
+          "p": [
+            "Der Schlafbereich vereint drei Umstände, die sonst getrennt auftreten. Er liegt oben, wo die wärmste und feuchteste Luft ankommt. Er wird nachts von zwei Menschen benutzt, die zusammen in acht Stunden rund einen halben Liter Wasser an die Luft abgeben. Und er ist der Raum, in dem am seltensten gelüftet wird, weil man dort schläft statt sich aufzuhalten.",
+            "Dazu kommt die Geometrie. Eine Ecke ist die Stelle, an der zwei oder drei Bauteile aufeinandertreffen und an der die Fläche, über die Wärme nach aussen abfliesst, grösser ist als die Fläche, über die von innen Wärme nachkommt. Das gilt geometrisch immer, unabhängig von der Ausführung — eine Ecke ist grundsätzlich kälter als die Fläche daneben.",
+            "In einem Haus mit fünfzig Quadratmetern Wohnfläche fällt das stärker ins Gewicht als in einem mit hundertfünfzig. Das Verhältnis von Hüllfläche zu Volumen ist ungünstiger, die Feuchtequelle pro Kubikmeter Raumluft grösser, und ein Bett steht meistens dort, wo es hinpasst, nicht dort, wo es bauphysikalisch günstig wäre — oft an der Aussenwand und häufig mit der Kopfseite in der Ecke."
+          ]
+        },
+        {
+          "h2": "Die erste Frage: ist die Stelle kalt oder nur nass?",
+          "p": [
+            "Das ist der Test, der die Richtung vorgibt, und er braucht nur ein Infrarot-Thermometer. Messen Sie an einem kalten Tag drei Punkte: die betroffene Ecke, die Wandfläche einen Meter daneben, und die Raumluft in der Mitte.",
+            "Ist die Ecke deutlich kälter als die Fläche daneben — als Anhaltspunkt mehr als drei Kelvin —, dann arbeitet dort eine Wärmebrücke, und das Kondensat ist ihre Folge, nicht die Ursache. Liegt die Ecke im gleichen Bereich wie die Fläche und ist trotzdem feucht, ist die Ursache eher die Raumluft selbst oder Wasser, das von aussen kommt.",
+            "Diese eine Messung sortiert die drei Möglichkeiten schon zur Hälfte. Sie kostet fünf Minuten, muss aber bei kaltem Wetter gemacht werden — an einem milden Novembertag mit zehn Grad aussen zeigt sie fast nichts. Der brauchbare Zeitpunkt ist ein Morgen mit Frost, bevor die Sonne auf die Fassade fällt."
+          ]
+        },
+        {
+          "h2": "Kondensat: das Wasser war schon im Raum",
+          "p": [
+            "Kondensat entsteht, wenn warme Luft auf eine Oberfläche trifft, die kälter ist als der Taupunkt dieser Luft. Bei zwanzig Grad Raumluft und sechzig Prozent relativer Feuchte liegt der Taupunkt bei rund zwölf Grad. Jede Oberfläche, die kälter als zwölf Grad ist, wird nass — nicht weil sie undicht wäre, sondern weil die Luft ihr Wasser dort abgibt.",
+            "Der Nachweis ist einfach und dauert eine Nacht. Kleben Sie ein Stück Alufolie oder eine Klarsichthülle luftdicht auf die trockene Stelle, ringsum abgeklebt, und sehen Sie am nächsten Morgen nach. Ist die Folie auf der Raumseite beschlagen, kommt das Wasser aus der Raumluft. Ist die Wandseite unter der Folie feucht, kommt es aus der Konstruktion.",
+            "Bei Kondensat ist die Massnahme das Gegenteil von dem, was viele tun. Die Stelle abdichten, überstreichen oder ein Möbel davor stellen verschlimmert es, weil die Oberfläche dann noch kälter wird und die Luft dort noch weniger zirkuliert. Was hilft, ist mehr Luftwechsel, mehr Wärme an dieser Fläche und weniger Feuchteeintrag — in dieser Reihenfolge und meistens alle drei zusammen."
+          ]
+        },
+        {
+          "h2": "Wärmebrücke: die Konstruktion hat eine kalte Stelle",
+          "p": [
+            "Eine Wärmebrücke ist eine Stelle, an der die Dämmschicht unterbrochen ist oder dünner wird. In einem Holzrahmenbau sind das typischerweise die Stellen, an denen sich Bauteile treffen: Wand auf Dach, Wand auf Boden, und die senkrechte Ecke zwischen zwei Wänden, wo oft zwei oder drei Ständer nebeneinanderstehen und das Holz die Dämmung verdrängt.",
+            "Holz dämmt schlechter als Dämmstoff, aber deutlich besser als Metall. Kritischer sind Verbindungen aus Stahl, die von innen nach aussen durchgehen — Winkel, Anker, Befestigungen für eine Terrasse oder ein Vordach. Ein Stahlteil, das die Dämmebene durchstösst, ist auf der Innenseite messbar kälter als alles um es herum, und im Winter zeichnet es sich manchmal als Punkt oder als Linie im Staub an der Wand ab.",
+            "Erkennbar wird eine Wärmebrücke am Muster. Kondensat aus der Raumluft verteilt sich flächig und beginnt am kältesten Punkt, meist gleichmässig über die ganze Ecke. Eine Wärmebrücke zeichnet die Konstruktion nach: eine gerade Linie dort, wo ein Balken liegt, ein Punktraster dort, wo Schrauben sitzen. Wenn die feuchte Stelle eine Form hat, die zur Konstruktion passt, ist die Konstruktion die Ursache."
+          ]
+        },
+        {
+          "h2": "Leck: das Wasser kommt von aussen",
+          "p": [
+            "Das dritte Muster hat einen anderen Rhythmus. Kondensat folgt dem Wetter innen: Es ist morgens am stärksten, nach kalten Nächten, und verschwindet an milden Tagen. Ein Leck folgt dem Wetter aussen: Es wird nach Regen schlimmer, besonders nach Regen aus einer bestimmten Richtung, und ist bei trockener Kälte unauffällig.",
+            "Deshalb ist ein Datumsprotokoll die beste Diagnose, die es gibt. Notieren Sie zwei Wochen lang jeden Morgen zwei Zeilen: wie die Stelle aussieht, und wie das Wetter am Vortag war. Nach zwei Wochen ist das Muster meistens eindeutig, und Sie haben die Frage beantwortet, an der sonst ein Gutachter eine Stunde sitzt.",
+            "Der häufigste Ort für ein Leck in diesem Bereich ist nicht die Fläche, sondern ein Anschluss: das Dachfenster, die Durchführung für ein Lüftungsrohr, die Stelle, an der die Dachhaut auf die Wand trifft. Wasser wandert dabei oft weit, bevor es sichtbar wird — es läuft auf der Innenseite der Abdichtung entlang, bis es an einer Kante abtropft. Die nasse Stelle liegt deshalb selten unter dem Loch."
+          ]
+        },
+        {
+          "h2": "Die Rolle des Bettes selbst",
+          "p": [
+            "Ein Bett, das mit dem Kopfende in einer Aussenecke steht, macht aus einem beherrschbaren Zustand einen Schaden. Es unterbricht die Luftbewegung an genau der Stelle, die ohnehin die kälteste ist, und es gibt gleichzeitig die Feuchte ab, die dort kondensiert.",
+            "Zehn Zentimeter Abstand zur Wand ändern messbar etwas — sie erlauben der Raumluft, an der Wandfläche entlangzustreichen, statt in einer stehenden Schicht zu verharren. Das ist keine Bauteillösung, aber es ist die einzige Massnahme in diesem ganzen Beitrag, die Sie in fünf Minuten und ohne Werkzeug umsetzen können.",
+            "Dasselbe gilt für Matratze und Lattenrost. Eine Matratze, die auf einer geschlossenen Platte liegt, gibt ihre Nachtfeuchte nach unten ab, wo sie nicht weg kann. Ein Lattenrost mit Abstand zum Boden ist an dieser Stelle kein Komfortthema, sondern ein Feuchtethema."
+          ]
+        },
+        {
+          "h2": "Warum Lüften im Winter funktioniert, obwohl es sich falsch anfühlt",
+          "p": [
+            "Der häufigste Einwand lautet: Draussen ist es feucht, wenn ich lüfte, hole ich die Feuchte herein. Das stimmt für die relative Feuchte und ist für die absolute falsch, und nur die absolute zählt.",
+            "Kalte Luft kann sehr wenig Wasser tragen. Aussenluft bei null Grad und neunzig Prozent relativer Feuchte enthält rund vier Gramm Wasser je Kubikmeter. Wird dieselbe Luft im Raum auf zwanzig Grad erwärmt, sinkt ihre relative Feuchte auf etwa fünfundzwanzig Prozent — sie ist dann sehr trocken und kann Feuchte aufnehmen. Genau das ist der Zweck des Lüftens im Winter.",
+            "Wirksam ist kurz und quer: alle Fenster für fünf Minuten weit auf, statt eines auf Kipp über Stunden. Ein gekipptes Fenster tauscht wenig Luft und kühlt dabei die Laibung so stark aus, dass dort eine neue kalte Stelle entsteht. In einem kleinen Haus mit kurzen Wegen ist der vollständige Luftwechsel in drei bis fünf Minuten erledigt."
+          ]
+        },
+        {
+          "h2": "Was Sie nicht tun sollten, auch wenn es naheliegt",
+          "p": [
+            "Antischimmelfarbe auf eine feuchte Stelle ist die häufigste falsche Massnahme. Sie tötet den sichtbaren Bewuchs und ändert nichts an der Ursache; die Stelle kommt wieder, meistens im nächsten Winter, und dann unter einer Schicht, die die Feuchte zusätzlich einsperrt.",
+            "Eine dampfdichte Folie oder eine dichte Tapete auf der Innenseite ist die zweite. Sie verlagert den Punkt, an dem das Wasser ausfällt, von der sichtbaren Oberfläche in die Konstruktion. Der Fleck verschwindet, das Problem wandert nach innen und wird erst bemerkt, wenn das Holz darunter Schaden genommen hat.",
+            "Und eine Dämmplatte, die innen vor die kalte Ecke geklebt wird, ohne dass jemand nachgerechnet hat, verschiebt den Taupunkt in die Fuge zwischen Platte und Wand. Innendämmung ist möglich, aber sie ist der Fall, in dem eine Berechnung nicht optional ist."
+          ]
+        },
+        {
+          "h2": "Die Reihenfolge, die funktioniert",
+          "p": [
+            "Zuerst messen: Oberflächentemperatur der Ecke, der Fläche daneben, und die Raumluftfeuchte. Ein Hygrometer für wenige Euro genügt, es muss nicht geeicht sein, nur konstant.",
+            "Dann zwei Wochen protokollieren, ohne etwas zu verändern. Das ist der Teil, den fast niemand macht, und der Teil, der die Antwort liefert. Wer sofort handelt, verliert die Information darüber, wovon der Zustand abhängt.",
+            "Dann die billigsten Massnahmen zuerst: Bett abrücken, zweimal täglich quer lüften, Raumluftfeuchte unter sechzig Prozent halten. In vielen Fällen ist der Fall damit erledigt, und man erfährt es, weil das Protokoll weiterläuft.",
+            "Erst wenn das nicht reicht, geht es an die Konstruktion — und dann mit der Messung in der Hand, nicht mit einer Vermutung."
+          ]
+        },
+        {
+          "h2": "Wann es kein Selbstbaufall mehr ist",
+          "p": [
+            "Drei Zeichen verlassen den Bereich, in dem Lüften und Möbelrücken helfen. Erstens: Die Stelle ist nach zwei trockenen Wochen bei laufender Heizung immer noch feucht. Dann kommt Wasser nach, und es kommt nicht aus der Luft.",
+            "Zweitens: Das Holz gibt nach. Eine Fläche, die sich unter Druck weich anfühlt oder in die sich ein Schraubendreher ohne Kraft eindrücken lässt, ist kein Feuchtefleck mehr, sondern ein Substanzschaden.",
+            "Drittens: Der Bewuchs kommt nach der Reinigung innerhalb von Wochen wieder, an derselben Stelle, in derselben Form. Das ist der Hinweis darauf, dass die Bedingung, die ihn ermöglicht, unverändert besteht.",
+            "In allen drei Fällen ist die nächste Handlung eine Messung der Holzfeuchte in der Konstruktion, und dafür braucht es ein Gerät mit Einstechelektroden und jemanden, der weiss, wo er es ansetzt."
+          ]
+        },
+        {
+          "h2": "Was der Sommer damit zu tun hat",
+          "p": [
+            "Ein Zustand, der im Januar entsteht, wird oft erst im Juli entdeckt — und dann falsch eingeordnet, weil im Juli niemand an Kondensat denkt. Die Reihenfolge ist aber häufig: Über den Winter sammelt sich Feuchte in einer Ecke an, im Frühjahr trocknet sie nicht vollständig aus, weil dort keine Luft hinkommt, und im Sommer wächst auf dem, was zurückgeblieben ist.",
+            "Deshalb ist der Sommer der richtige Zeitpunkt für die Massnahmen, nicht die Diagnose. Diagnostiziert wird bei Frost, weil nur dann die Temperaturunterschiede messbar sind. Repariert wird im Sommer, weil dann getrocknet werden kann.",
+            "Wer im Januar einen Fleck entdeckt, sollte messen und protokollieren und die Reparatur auf Mai legen. Wer im Juli einen Fleck entdeckt, sollte reinigen, trocknen — und sich für November eine Erinnerung setzen, um zu messen, bevor es wieder anfängt."
+          ]
+        },
+        {
+          "h2": "Was in der Planung darüber entscheidet",
+          "p": [
+            "Die Lage des Bettes gehört in den Grundriss, nicht in die Möblierung. Ein Schlafbereich, der so geschnitten ist, dass das Bett mit der Längsseite an einer Innenwand stehen kann, hat dieses Problem in aller Regel nicht.",
+            "Ebenso ein Lüftungsauslass in der Nähe des Schlafbereichs. Ohne kontrollierte Lüftung hängt alles am Verhalten der Bewohner, und Verhalten ist im dritten Winter ein anderes als im ersten. Mit einer einfachen Abluftführung aus dem Schlafbereich wird die Feuchte dort abgeführt, wo sie entsteht.",
+            "Und Fensterlaibungen, die breit genug sind, dass ein Vorhang nicht direkt auf dem Glas liegt. Ein Vorhang vor einem kalten Fenster erzeugt genau denselben Effekt wie ein Bett vor einer kalten Ecke: eine stehende Luftschicht auf der kältesten Fläche im Raum."
+          ]
+        }
+      ],
+      "checklist": {
+        "h2": "Zwei Wochen, ohne etwas zu verändern",
+        "items": [
+          "Infrarot-Thermometer an einem Frostmorgen: Ecke, Fläche einen Meter daneben, Raumluft — Differenz notieren.",
+          "Hygrometer im Schlafbereich aufstellen und morgens ablesen, nicht abends.",
+          "Alufolie oder Klarsichthülle rundum abgeklebt auf die Stelle: beschlägt sie raumseitig oder wandseitig?",
+          "Vierzehn Tage lang morgens zwei Zeilen notieren: Zustand der Stelle, Wetter am Vortag.",
+          "Auf das Muster achten: flächig und morgens (Raumluft), linien- oder punktförmig (Konstruktion), nach Regen (Leck).",
+          "Bett zehn Zentimeter von der Wand abrücken und den Abstand halten.",
+          "Zweimal täglich fünf Minuten quer lüften, nicht dauerhaft kippen.",
+          "Prüfen, ob die Matratze auf einer geschlossenen Platte liegt.",
+          "Nichts überstreichen und nichts abdichten, solange das Protokoll läuft.",
+          "Bleibt die Stelle nach zwei trockenen Wochen feucht, ist der nächste Schritt eine Holzfeuchtemessung."
+        ]
+      },
+      "faq": [
+        [
+          "Ich lüfte viel und habe trotzdem eine feuchte Ecke. Was nun?",
+          "Dann ist die Raumluft wahrscheinlich nicht die Hauptursache. Messen Sie an einem kalten Morgen die Oberflächentemperatur der Ecke und der Wand einen Meter daneben. Sind es mehr als etwa drei Kelvin Unterschied, arbeitet dort eine Wärmebrücke, und die lässt sich durch Lüften nicht beheben — nur abmildern."
+        ],
+        [
+          "Hole ich beim Lüften im Winter nicht Feuchte herein?",
+          "Nein. Kalte Luft trägt sehr wenig Wasser. Aussenluft bei null Grad und neunzig Prozent relativer Feuchte enthält rund vier Gramm je Kubikmeter; im Raum auf zwanzig Grad erwärmt hat dieselbe Luft nur noch etwa fünfundzwanzig Prozent relative Feuchte und nimmt Feuchte auf. Wirksam ist kurz und quer, nicht dauerhaft gekippt."
+        ],
+        [
+          "Hilft Antischimmelfarbe?",
+          "Sie entfernt den sichtbaren Bewuchs und ändert nichts an der Bedingung, die ihn ermöglicht hat. Die Stelle kommt im nächsten Winter wieder, dann unter einer Schicht, die die Feuchte zusätzlich einschliesst. Reinigen ja, überstreichen erst, wenn die Ursache beseitigt und die Stelle trocken ist."
+        ],
+        [
+          "Woran erkenne ich, dass es ein Leck ist und kein Kondensat?",
+          "Am Rhythmus. Kondensat ist morgens am stärksten, nach kalten Nächten, und verschwindet an milden Tagen. Ein Leck wird nach Regen schlimmer, oft nach Regen aus einer bestimmten Richtung, und ist bei trockener Kälte unauffällig. Vierzehn Tage Protokoll machen den Unterschied sichtbar."
+        ],
+        [
+          "Kann ich die Ecke von innen dämmen?",
+          "Möglich ja, aber nicht ohne Berechnung. Eine Dämmplatte auf der Innenseite verschiebt den Punkt, an dem Wasser ausfällt, in die Fuge zwischen Platte und Wand. Der Fleck verschwindet, das Problem wandert in die Konstruktion und wird erst bemerkt, wenn das Holz Schaden genommen hat. Innendämmung ist der Fall, in dem eine Berechnung nicht optional ist."
+        ]
+      ]
+    },
+    {
+      "slug": "warmwasser-drei-wege",
+      "publish_on": "2026-08-25",
+      "category": "technik",
+      "title": "Warmwasser im kleinen Haus: drei Wege und was sie im Betrieb bedeuten",
+      "description": "Durchlauferhitzer, Speicher oder Warmwasser-Wärmepumpe. Der Unterschied zeigt sich nicht am Wasserhahn, sondern an der Anschlussleistung, am Platzbedarf und daran, wie oft Sie duschen können.",
+      "image": "interior-kitchen-oven",
+      "imageAlt": "Küchenzeile mit Backofen und Arbeitsfläche in einer fertigen Einheit",
+      "lead": "Warmwasser ist der Punkt, an dem viele Planungen für ein kleines Haus kippen. Nicht weil es schwierig wäre, warmes Wasser zu erzeugen, sondern weil jede der drei üblichen Lösungen etwas kostet, das in einem kleinen Haus knapp ist: Strom, Platz oder Zeit. Wer sich früh entscheidet, plant um diese Knappheit herum. Wer spät entscheidet, baut sie ein.",
+      "sections": [
+        {
+          "h2": "Warum die Frage im kleinen Haus anders steht",
+          "p": [
+            "In einem normalen Haus ist Warmwasser eine Nebenfrage, weil alle drei Ressourcen reichlich vorhanden sind: ein Hausanschluss mit dreissig Ampere und mehr, ein Technikraum, und ein Speicher, den niemand sieht. Keine dieser drei Voraussetzungen ist bei einem Haus mit fünfzig Quadratmetern selbstverständlich.",
+            "Der Anschluss ist die härteste Grenze. Ein Stellplatz auf einem Campingplatz oder in einer Siedlung wird oft mit sechzehn Ampere abgesichert, in manchen Fällen mit zehn. Sechzehn Ampere bei zweihundertdreissig Volt sind rund dreieinhalb Kilowatt für das gesamte Haus — Kühlschrank, Licht, Kochfeld, Heizung und Warmwasser zusammen. Ein elektrischer Durchlauferhitzer, der eine Dusche versorgen soll, braucht allein zwischen achtzehn und einundzwanzig Kilowatt.",
+            "Der Platz ist die zweite Grenze und die, die am spätesten auffällt. Ein Speicher mit hundertfünfzig Litern hat einen Durchmesser von rund fünfzig Zentimetern und eine Höhe von über einem Meter. Er passt in ein kleines Haus, aber nur, wenn er von Anfang an einen Platz hat — nachträglich wird er zu einem Möbel, das im Weg steht.",
+            "Die dritte Grenze ist Zeit, und die merkt man erst im Betrieb: wie lange es dauert, bis nach einer Dusche wieder warmes Wasser da ist."
+          ]
+        },
+        {
+          "h2": "Weg eins: der elektrische Durchlauferhitzer",
+          "p": [
+            "Er erwärmt das Wasser in dem Moment, in dem es fliesst. Kein Speicher, kein Bereitschaftsverlust, kein Platzbedarf jenseits eines Geräts von der Grösse eines kleinen Koffers. Für ein Waschbecken ist er die einfachste Lösung, die es gibt.",
+            "Für eine Dusche stellt sich die Anschlussfrage sofort. Um eine übliche Duschmenge von etwa acht Litern pro Minute von zehn auf achtunddreissig Grad zu bringen, braucht es rein rechnerisch rund sechzehn Kilowatt Dauerleistung. Geräte dieser Klasse werden dreiphasig angeschlossen und wollen eine Absicherung, die auf vielen Stellplätzen schlicht nicht vorhanden ist.",
+            "Es gibt einphasige Kleindurchlauferhitzer mit drei bis sechs Kilowatt. Sie funktionieren, aber sie liefern bei sechs Kilowatt etwa drei Liter pro Minute auf Duschtemperatur. Das ist eine Dusche, die man sparsam nennen muss, und mit einem Sparkopf ist sie brauchbar — aber es ist eine Entscheidung über den Komfort, nicht nur über die Technik, und sie sollte bewusst getroffen werden.",
+            "Der zweite Punkt ist die Gleichzeitigkeit. Läuft der Durchlauferhitzer mit sechs Kilowatt und der Rest des Hauses mit anderthalb, sind bei sechzehn Ampere die Grenzen erreicht. Wer duscht, während der Backofen heizt, löst die Sicherung aus. Das ist beherrschbar über eine Lastabwurfschaltung, muss aber vorgesehen sein."
+          ]
+        },
+        {
+          "h2": "Weg zwei: der Speicher",
+          "p": [
+            "Ein Speicher erwärmt eine Wassermenge über längere Zeit mit kleiner Leistung und hält sie warm. Zwei Kilowatt genügen, um hundert Liter in etwa zweieinhalb Stunden von zehn auf sechzig Grad zu bringen. Das ist die Lösung, die mit einem schwachen Anschluss zusammenarbeitet, weil sie die Leistung über die Zeit streckt.",
+            "Der Preis dafür ist Platz und Bereitschaftsverlust. Ein Speicher gibt permanent Wärme an seine Umgebung ab, auch wenn niemand Wasser braucht. Bei einem gut gedämmten Gerät sind das je nach Grösse etwa ein bis anderthalb Kilowattstunden am Tag. Im Winter ist dieser Verlust kein reiner Verlust, weil die Wärme im Haus bleibt und dort ohnehin gebraucht wird. Im Sommer ist er es sehr wohl, und er heizt genau den Raum auf, den man kühl haben möchte.",
+            "Die zweite Frage ist die Menge. Eine Dusche von fünf Minuten verbraucht rund vierzig Liter Warmwasser. Ein Speicher mit achtzig Litern reicht damit für zwei Duschen hintereinander, danach dauert es je nach Leistung ein bis zwei Stunden bis zur nächsten. Für zwei Personen ist das meistens ausreichend, für vier an einem Sonntagmorgen nicht.",
+            "Der dritte Punkt ist Hygiene. Wasser, das dauerhaft zwischen dreissig und fünfundvierzig Grad steht, ist der Temperaturbereich, in dem Legionellen sich vermehren. Deshalb wird ein Speicher regelmässig auf sechzig Grad gebracht — bei den meisten Geräten automatisch, aber es ist eine Funktion, nach der man beim Kauf fragen sollte, statt sie vorauszusetzen."
+          ]
+        },
+        {
+          "h2": "Weg drei: die Warmwasser-Wärmepumpe",
+          "p": [
+            "Sie ist ein Speicher mit einer kleinen Wärmepumpe obendrauf. Statt Strom direkt in Wärme umzusetzen, zieht sie Wärme aus der Umgebungsluft und braucht dafür etwa ein Drittel bis ein Viertel des Stroms, den ein Heizstab bräuchte. Aus einer Kilowattstunde Strom werden drei bis vier Kilowattstunden Wärme.",
+            "In einem kleinen Haus hat das eine Nebenwirkung, die je nach Jahreszeit erwünscht oder störend ist: Das Gerät kühlt die Luft, aus der es die Wärme zieht, und es entfeuchtet sie. Im Sommer ist beides angenehm. Im Winter entzieht es dem Raum Wärme, die die Heizung wieder hineinbringen muss — dann wird ein Teil des Vorteils zurückgegeben.",
+            "Deshalb werden diese Geräte üblicherweise so aufgestellt, dass sie Aussenluft oder die Luft eines Raums nutzen, der ohnehin nicht beheizt wird. In einem Haus ohne solchen Raum bedeutet das zwei Kanäle nach draussen, mit allem, was Durchdringungen in der Hülle mit sich bringen.",
+            "Der zweite Punkt ist Grösse und Geräusch. Diese Geräte sind höher als ein reiner Speicher und sie haben einen Verdichter, der hörbar ist. In einem Haus, in dem der Technikbereich einen Meter vom Bett entfernt liegt, ist das ein Kriterium und keine Fussnote."
+          ]
+        },
+        {
+          "h2": "Die Rechnung, die zuerst gemacht werden muss",
+          "p": [
+            "Bevor man sich für einen Weg entscheidet, sollten zwei Zahlen feststehen: die verfügbare Anschlussleistung und die Zahl der Menschen, die an einem Morgen hintereinander duschen.",
+            "Die Anschlussleistung erfährt man beim Betreiber des Stellplatzes oder beim Netzbetreiber; sie steht nicht in der Hausplanung, sondern am Anschluss. Bei einem Grundstück mit regulärem Hausanschluss ist die Frage meistens entspannt, bei einem Stellplatz fast nie.",
+            "Die zweite Zahl entscheidet über die Speichergrösse. Vierzig Liter pro Dusche ist ein brauchbarer Ansatz. Zwei Personen morgens hintereinander heisst achtzig Liter innerhalb einer halben Stunde, und das bedeutet einen Speicher von mindestens hundert Litern oder eine Erwärmungsleistung, die nachkommt.",
+            "Erst mit diesen beiden Zahlen ist die Frage entscheidbar. Ohne sie ist jede Empfehlung ein Ratschlag über ein Haus, das jemand anderes bewohnt."
+          ]
+        },
+        {
+          "h2": "Was die Leitungen dazwischen ausmachen",
+          "p": [
+            "Zwischen Erzeuger und Hahn liegt ein Rohr, und dieses Rohr ist voll Wasser, das nach jeder Nutzung abkühlt. Bei acht Metern Leitung mit sechzehn Millimetern Innendurchmesser stehen etwa anderthalb Liter im Rohr — anderthalb Liter, die beim nächsten Öffnen kalt herauslaufen, bevor Warmwasser kommt.",
+            "In einem kleinen Haus ist das eine der wenigen Stellen, an denen die geringe Grösse ein echter Vorteil ist: kurze Wege sind automatisch da, wenn man sie beim Grundriss berücksichtigt. Bad und Küche an derselben Installationswand halten die Leitungen unter drei Metern und die Wartezeit unter fünf Sekunden.",
+            "Wo das nicht geht, ist Dämmung der Leitung die Massnahme, die am meisten für ihren Aufwand bringt — nicht wegen des Wärmeverlusts während des Betriebs, sondern weil das stehende Wasser länger warm bleibt und der zweite Griff zum Hahn innerhalb einer Stunde kein kaltes Wasser mehr liefert."
+          ]
+        },
+        {
+          "h2": "Der Fall ohne Netzanschluss",
+          "p": [
+            "Bei einer Einheit, die autark oder überwiegend autark betrieben wird, verschiebt sich die Rechnung vollständig. Warmwasser aus Strom ist dann die teuerste Anwendung, die es gibt, weil die Kilowattstunde aus Photovoltaik und Speicher ein Vielfaches dessen kostet, was sie aus dem Netz kostet.",
+            "In diesem Fall ist ein Speicher mit Solarthermie oder eine Kombination aus beidem die Lösung, die üblicherweise geprüft wird: Solarthermie erzeugt Wärme direkt und braucht dafür keinen Umweg über Strom. Der Nachteil ist ein zweiter Kreislauf mit Frostschutz, Ausdehnungsgefäss und Pumpe — deutlich mehr Technik in einem Haus, in dem Technik Platz braucht.",
+            "Die pragmatische Variante, die viele wählen: ein Speicher mit Heizstab, der über einen Überschussregler nur dann läuft, wenn die Photovoltaik mehr liefert, als sonst gebraucht wird. Der Speicher wird damit zum Puffer für Strom, der sonst nicht genutzt würde. Das funktioniert von Frühjahr bis Herbst gut und im Dezember gar nicht — und für den Dezember braucht es dann eine zweite Antwort."
+          ]
+        },
+        {
+          "h2": "Was der Anschluss ans Abwasser damit zu tun hat",
+          "p": [
+            "Warmwasser wird zu Abwasser, und das ist bei kleinen Häusern häufiger ein Engpass als die Erzeugung. Eine Dusche liefert acht Liter pro Minute in einen Ablauf, der bei mobilen Einheiten oft mit einem Schlauch von vierzig Millimetern und wenig Gefälle ausgeführt ist.",
+            "Reicht das Gefälle nicht, staut sich das Wasser in der Duschtasse, und der Geruchsverschluss wird bei jedem Duschen leergesogen — das ist die häufigste Ursache für Geruch im Bad einer kleinen Einheit. Zwei Prozent Gefälle sind der Anhaltswert, und zwei Prozent auf sechs Meter sind zwölf Zentimeter, die im Bodenaufbau vorhanden sein müssen.",
+            "Wer den Warmwasserweg plant, sollte den Abwasserweg im selben Zug planen. Die beiden gehören zusammen, und der zweite wird regelmässig vergessen, bis die Einheit steht."
+          ]
+        },
+        {
+          "h2": "Drei typische Konstellationen",
+          "p": [
+            "Stellplatz mit sechzehn Ampere, zwei Personen: Speicher mit achtzig bis hundert Litern und zwei Kilowatt Heizleistung. Der schwache Anschluss verträgt keine Spitzenlast, der Speicher streckt sie über die Nacht. Bereitschaftsverlust in Kauf nehmen, im Winter kommt er dem Haus zugute.",
+            "Grundstück mit regulärem Hausanschluss, zwei bis vier Personen, dauerhaftes Wohnen: Warmwasser-Wärmepumpe, wenn ein Aufstellort gefunden wird, an dem sie weder das Wohnzimmer kühlt noch neben dem Bett steht. Der Stromverbrauch für Warmwasser sinkt dabei auf etwa ein Drittel.",
+            "Ferienhaus, unregelmässig genutzt: Durchlauferhitzer, wenn der Anschluss es hergibt. Ein Speicher, der drei Wochen lang niemanden versorgt und trotzdem Wärme abgibt, ist in dieser Nutzung die schlechteste Wahl — und ein Speicher, der über den Winter kalt steht, ist ausserdem ein Hygienethema.",
+            "Diese drei sind Ausgangspunkte für ein Gespräch, keine Vorgaben. Was am Ende eingebaut wird, hängt am Anschluss, am Grundriss und daran, wie das Haus tatsächlich benutzt wird."
+          ]
+        },
+        {
+          "h2": "Was Sie beim Angebot fragen sollten",
+          "p": [
+            "Welche Anschlussleistung setzt die vorgeschlagene Lösung voraus, in Ampere und in Phasen? Diese eine Frage klärt mehr als jede andere, und die Antwort muss zu dem passen, was am Aufstellort tatsächlich anliegt.",
+            "Wie viele Liter Warmwasser stehen bei welcher Temperatur zur Verfügung, und wie lange dauert die Wiedererwärmung? Nicht die Speichergrösse allein, sondern beides zusammen beschreibt, was Sie im Betrieb haben.",
+            "Wo steht das Gerät, wie gross ist es, und was ist davor, um daran zu kommen? Ein Speicher, an den man nur durch einen ausgebauten Schrank kommt, wird bei der ersten Wartung zum Problem.",
+            "Und: Ist eine Lastabwurfschaltung vorgesehen, wenn Warmwasser und Kochfeld gleichzeitig laufen können? Bei sechzehn Ampere ist das keine Sonderausstattung, sondern die Voraussetzung dafür, dass die Sicherung hält."
+          ]
+        },
+        {
+          "h2": "Der Fehler, der am häufigsten gemacht wird",
+          "p": [
+            "Er besteht darin, die Warmwasserfrage zu vertagen, weil sie technisch wirkt und nicht dringend. Sie wird dann am Ende entschieden, wenn Grundriss, Installationswand und Anschluss schon feststehen — und an diesem Punkt bleibt oft nur noch die Lösung übrig, die in die verbliebene Lücke passt.",
+            "Der Reihenfolge nach gehört sie an den Anfang, gleich hinter die Frage, wo das Haus stehen soll. Denn sie hängt vom Anschluss ab, der Anschluss hängt vom Standort ab, und der Standort ist ohnehin die erste Entscheidung.",
+            "Wer das umdreht, baut ein Haus, das an seinem Stellplatz nicht duschen kann, und merkt es an dem Tag, an dem es dort steht."
+          ]
+        },
+        {
+          "h2": "Was sich später noch ändern lässt",
+          "p": [
+            "Ein Durchlauferhitzer lässt sich gegen einen zweiten tauschen, solange der Anschluss gleich bleibt. Ein Speicher lässt sich gegen einen grösseren tauschen, wenn der Platz da ist. Beides sind Arbeiten von einem halben Tag.",
+            "Was sich nicht ohne Weiteres ändern lässt, sind drei Dinge: die Anschlussleistung am Stellplatz, die Lage der Installationswand und der Platz, an dem ein Speicher stehen könnte. Diese drei entscheiden, welche Optionen später überhaupt noch offen sind.",
+            "Deshalb lohnt es sich, in der Planung eine Fläche von etwa sechzig mal sechzig Zentimetern mit Anschluss vorzusehen, auch wenn zunächst ein Durchlauferhitzer eingebaut wird. Diese Fläche kostet in der Planung fast nichts und ist der Unterschied zwischen einer späteren Umrüstung und einem Umbau."
+          ]
+        }
+      ],
+      "checklist": {
+        "h2": "Vor der Entscheidung zu klären",
+        "items": [
+          "Anschlussleistung am Aufstellort in Ampere und Phasen erfragen — beim Betreiber, nicht beim Hersteller.",
+          "Zahl der Personen, die morgens hintereinander duschen, festhalten.",
+          "Vierzig Liter je Dusche ansetzen und daraus die benötigte Menge in dreissig Minuten rechnen.",
+          "Prüfen, ob Bad und Küche an derselben Installationswand liegen können.",
+          "Leitungslänge zum entferntesten Hahn abschätzen; über drei Meter dämmen.",
+          "Aufstellort für einen möglichen Speicher festlegen, auch wenn zunächst keiner eingebaut wird.",
+          "Bei Wärmepumpe klären, aus welcher Luft sie die Wärme zieht und wie laut sie am Schlafplatz ist.",
+          "Nach der automatischen Aufheizung auf sechzig Grad fragen, nicht voraussetzen.",
+          "Lastabwurfschaltung erfragen, wenn der Anschluss bei sechzehn Ampere oder darunter liegt.",
+          "Abwassergefälle im selben Zug planen: zwei Prozent, und prüfen, ob sie im Bodenaufbau Platz haben."
+        ]
+      },
+      "faq": [
+        [
+          "Reicht ein Durchlauferhitzer für eine Dusche?",
+          "Nur wenn der Anschluss es hergibt. Acht Liter pro Minute von zehn auf achtunddreissig Grad brauchen rechnerisch rund sechzehn Kilowatt, und solche Geräte werden dreiphasig angeschlossen. Einphasige Geräte mit sechs Kilowatt liefern etwa drei Liter pro Minute auf Duschtemperatur — mit Sparkopf brauchbar, aber eine bewusste Entscheidung über den Komfort."
+        ],
+        [
+          "Wie gross muss der Speicher sein?",
+          "Rechnen Sie vierzig Liter je Dusche und überlegen Sie, wie viele davon innerhalb einer halben Stunde nötig sind. Zwei Personen morgens hintereinander heisst achtzig Liter, also ein Speicher ab etwa hundert Litern. Die Speichergrösse allein sagt wenig; entscheidend ist sie zusammen mit der Wiedererwärmungszeit."
+        ],
+        [
+          "Lohnt sich eine Warmwasser-Wärmepumpe in einem so kleinen Haus?",
+          "Beim Stromverbrauch ja — sie braucht etwa ein Drittel dessen, was ein Heizstab braucht. Die Frage ist der Aufstellort. Sie kühlt und entfeuchtet die Luft, aus der sie die Wärme zieht: im Sommer angenehm, im Winter gibt sie einen Teil des Vorteils an die Heizung zurück. Ohne unbeheizten Nebenraum bedeutet das zwei Luftkanäle nach draussen."
+        ],
+        [
+          "Warum riecht es im Bad, obwohl alles neu ist?",
+          "Meistens wird der Geruchsverschluss beim Duschen leergesogen, weil das Abwasser nicht schnell genug abläuft. Ursache ist fast immer zu wenig Gefälle. Zwei Prozent sind der Anhaltswert — auf sechs Meter sind das zwölf Zentimeter, die im Bodenaufbau vorhanden sein müssen."
+        ],
+        [
+          "Wir wollen autark betreiben. Was ändert sich?",
+          "Warmwasser aus Strom wird dann die teuerste Anwendung im Haus. Üblich sind ein Speicher mit Heizstab, der über einen Überschussregler nur bei Photovoltaik-Überschuss läuft, oder Solarthermie mit eigenem Kreislauf. Beides trägt von Frühjahr bis Herbst; für Dezember und Januar braucht es eine zweite Antwort."
+        ]
+      ]
+    }
+  ]
+}
