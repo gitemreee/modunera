@@ -60,8 +60,8 @@ const STORE = join(scratch, "store.json");
 const INBOX = join(scratch, "inbox.json");
 const REPORT = join(scratch, "report.txt");
 
-function runEngine(inboxCandidates, { store = null, today = TODAY, args = [], gscDir = null, provider = null } = {}) {
-  writeFileSyncJson(INBOX, { candidates: inboxCandidates });
+function runEngine(inboxCandidates, { store = null, today = TODAY, args = [], gscDir = null, provider = null, resolutions = [] } = {}) {
+  writeFileSyncJson(INBOX, { candidates: inboxCandidates, resolutions });
   if (store === null) { if (existsSync(STORE)) rmSync(STORE); }
   else writeFileSyncJson(STORE, store);
   const env = { ...process.env, MODUNERA_TODAY: today, MODUNERA_MI_STORE: STORE, MODUNERA_MI_INBOX: INBOX, MODUNERA_MI_REPORT: REPORT };
@@ -402,6 +402,59 @@ test("already published project is not duplicated", () => {
     `an already published project was recommended for ${sig.recommendedAction}`);
   assert(sig.published === true, "the signal was not reconciled against data/news.json");
   return "empty store, published article still found";
+});
+
+/* ---- 4d a lead chased to a conclusion does not come back ------------------ */
+test("a resolved lead stops recurring", () => {
+  const url = "https://www.ndr.de/nachrichten/example-baugebiet";
+  /* Shaped like the real one that started this: a tier 2 broadcaster reporting a
+     municipal tiny-house Baugebiet, scoring well above the threshold. */
+  const lead = { ...MENDEN, sourceUrl: url, place: null, publisher: "NDR",
+                 title: "Tiny House: Bundesweites Interesse an Baugebiet im Norden",
+                 summary: "94 Bauplätze sind geplant, auch für massiv gebaute Tiny-Häuser. Die Gemeinde hat den Bebauungsplan auf den Weg gebracht." };
+  const first = runEngine([lead], { store: { runs: [], signals: [], opportunities: [], tenders: [] } });
+  assert(first.signals.some((x) => x.sourceUrl === url), "the lead did not become a signal");
+
+  /* Somebody went looking for the authority's own page and it was not there.
+     Without this the story would be the top recommendation every morning. */
+  const second = runEngine([lead], {
+    store: first,
+    today: "2026-08-20",
+    resolutions: [{ sourceUrl: url, outcome: "NO_OFFICIAL_SOURCE_FOUND", checkedOn: "2026-08-19",
+                    checked: ["https://www.amt-example.de/bauleitplaene"], note: "not supported by the authority" }],
+  });
+  const sig = second.signals.find((x) => x.sourceUrl === url);
+  assert(sig.recommendedAction === "RESOLVED", `a chased lead still recommends ${sig.recommendedAction}`);
+  assert(sig.resolution.outcome === "NO_OFFICIAL_SOURCE_FOUND", "the outcome was not attached");
+  assert(sig.resolution.checked.length === 1, "the pages that were opened were not recorded");
+  assert(!second.runs.at(-1).decisionSignal || second.runs.at(-1).decisionSignal !== url,
+    "a resolved lead was still today's decision");
+  return "chased, concluded, not raised again";
+});
+
+/* ---- 4e a real project the authority has not published yet ----------------- */
+test("pending official comes back on its recheck date", () => {
+  const url = "https://dinavis.dk/example-lokalplan";
+  const lead = { ...MENDEN, country: "DK", sourceUrl: url, place: null, publisher: "dinavis.dk",
+                 title: "Nyt sommerhusområde med tiny house-grunde på vej",
+                 summary: "Erhvervs- og Planudvalget godkendte at sætte arbejdet med en lokalplan i gang for et nyt sommerhusområde." };
+  const first = runEngine([lead], { store: { runs: [], signals: [], opportunities: [], tenders: [] } });
+
+  /* Not due yet: real, but the municipality has not published it. It waits. */
+  const waiting = runEngine([lead], { store: first, today: "2026-08-20",
+    resolutions: [{ sourceUrl: url, outcome: "PENDING_OFFICIAL", checkedOn: "2026-08-19", recheckOn: "2026-10-01" }] });
+  let sig = waiting.signals.find((x) => x.sourceUrl === url);
+  assert(sig.recommendedAction !== "RECHECK_OFFICIAL_SOURCE", "a recheck was raised before its date");
+  assert(waiting.runs.at(-1).rechecksDue.length === 0, "a recheck was listed before its date");
+
+  /* Due: the date has arrived, so it is put back in front of a person rather
+     than being quietly forgotten or filled in from the newspaper. */
+  const due = runEngine([lead], { store: waiting, today: "2026-10-02",
+    resolutions: [{ sourceUrl: url, outcome: "PENDING_OFFICIAL", checkedOn: "2026-08-19", recheckOn: "2026-10-01" }] });
+  sig = due.signals.find((x) => x.sourceUrl === url);
+  assert(sig.recommendedAction === "RECHECK_OFFICIAL_SOURCE", `on its date the signal says ${sig.recommendedAction}`);
+  assert(due.runs.at(-1).rechecksDue.some((d) => d.sourceUrl === url), "the due recheck was not reported");
+  return "waits until 2026-10-01, then comes back";
 });
 
 /* ---- 15a GSC export parsing ----------------------------------------------- */

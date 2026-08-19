@@ -93,9 +93,43 @@ const store = existsSync(STORE_PATH)
    sourceUrl is rejected exactly like a scraped one with no sourceUrl. */
 const INBOX_PATH = process.env.MODUNERA_MI_INBOX ?? join(ROOT, "data/verified-signals-inbox.json");
 async function loadInbox() {
-  if (!existsSync(INBOX_PATH)) return [];
+  if (!existsSync(INBOX_PATH)) return { candidates: [], resolutions: [] };
   const raw = JSON.parse(await readFile(INBOX_PATH, "utf8"));
-  return raw.candidates ?? [];
+  return { candidates: raw.candidates ?? [], resolutions: raw.resolutions ?? [] };
+}
+
+/* The other half of the loop. A lead the scan surfaced gets chased; what came
+   back has to be written down, or tomorrow's scan surfaces it again and the same
+   hour is spent twice. A resolution is attached to the signal by source URL.
+
+   Terminal outcomes stop the signal being recommended. PENDING_OFFICIAL is not
+   terminal: it is a diary entry. A lokalplan a committee started on 12 August
+   and expects to put to political process at the end of the year IS going to be
+   published — just not yet — so the signal comes back on its recheck date rather
+   than being forgotten or invented in the meantime. */
+const TERMINAL_OUTCOMES = new Set(["PUBLISHED", "NO_OFFICIAL_SOURCE_FOUND", "NOT_RELEVANT"]);
+
+function applyResolutions(resolutions) {
+  let applied = 0;
+  let due = [];
+  for (const r of resolutions) {
+    const sig = store.signals.find((x) => x.sourceUrl === r.sourceUrl);
+    if (!sig) continue;
+    sig.resolution = {
+      outcome: r.outcome,
+      checkedOn: r.checkedOn ?? null,
+      checked: r.checked ?? [],
+      note: r.note ?? null,
+      recheckOn: r.recheckOn ?? null,
+    };
+    sig.recommendedAction = TERMINAL_OUTCOMES.has(r.outcome) ? "RESOLVED" : sig.recommendedAction;
+    applied += 1;
+    if (r.recheckOn && r.recheckOn <= TODAY && !TERMINAL_OUTCOMES.has(r.outcome)) {
+      due.push({ id: sig.id, sourceUrl: sig.sourceUrl, outcome: r.outcome, recheckOn: r.recheckOn });
+      sig.recommendedAction = "RECHECK_OFFICIAL_SOURCE";
+    }
+  }
+  return { applied, due };
 }
 
 /* --- providers ------------------------------------------------------------- */
@@ -769,7 +803,8 @@ if (REVIEW_ONLY) {
 
   /* The verified inbox, after the scan, so a hand-read finding never masks a
      provider failure: the market rows above still say the scan found nothing. */
-  for (const c of await loadInbox()) {
+  const inbox = await loadInbox();
+  for (const c of inbox.candidates) {
     const market = CONFIG.markets.find((mm) => mm.code === c.country);
     if (!market) { run.errors.push(`inbox: ${c.title} names country ${c.country}, which is not a target market`); continue; }
     const entry = consider(c, "verified-inbox");
@@ -780,9 +815,18 @@ if (REVIEW_ONLY) {
     if (row) row.signals += 1;
   }
 
+  const resolvedUrls = new Set(inbox.resolutions.filter((r) => TERMINAL_OUTCOMES.has(r.outcome)).map((r) => r.sourceUrl));
   const publishable = decisions
     .filter((x) => x.d.action !== "NO_PUBLISH")
+    /* A lead already chased to a conclusion is not today's news. Without this the
+       Satrup story — looked for, no official source, not published — would be the
+       engine's top recommendation every morning for ever. */
+    .filter((x) => !resolvedUrls.has(x.candidate.sourceUrl))
     .sort((a, b) => b.scored.total - a.scored.total);
+
+  const resolved = applyResolutions(inbox.resolutions);
+  run.resolutionsApplied = resolved.applied;
+  run.rechecksDue = resolved.due;
 
   /* Every considered candidate is recorded, because a signal is a candidate and
      not a published page. Only ONE of them becomes today's decision. Section 17:
@@ -932,6 +976,11 @@ if (gscFound.length) {
 
 lines.push("", "VERIFIED INBOX", "");
 lines.push(`  hand-verified candidates considered: ${run.verifiedInboxCandidates}`);
+lines.push(`  leads chased to a conclusion:        ${run.resolutionsApplied ?? 0}`);
+if (run.rechecksDue?.length) {
+  lines.push("", "  DUE FOR A RE-CHECK");
+  for (const d of run.rechecksDue) lines.push(`    ${d.outcome} since ${d.recheckOn} — ${d.sourceUrl}`);
+}
 lines.push("", "DECISION", "", `  ${run.decision}`, `  ${run.decisionWhy}`);
 if (run.decision !== "NO_PUBLISH") {
   lines.push(`  source: ${run.decisionSignal}`);

@@ -23,9 +23,28 @@
     "   the site is section 47 and is not allowed.",
     "5. Named contact details of individual municipal officers are NOT copied here.",
     "   They are on the source page, which is one click away in `sourceUrl`. This",
-    "   repository is public; a person's direct line does not belong in it."
+    "   repository is public; a person's direct line does not belong in it.",
+    "",
+    "RESOLUTIONS",
+    "",
+    "The other half of the loop. A lead the scan surfaced gets chased: a person",
+    "goes looking for the authority's own page. Three things can come back — it is",
+    "there and the item can be written, it is not there yet, or it is not there at",
+    "all. Without somewhere to record which, tomorrow's scan surfaces the same lead",
+    "again and the same hour is spent twice.",
+    "",
+    "`outcome` is one of:",
+    "  PUBLISHED               written into data/news.json, citing the authority",
+    "  PENDING_OFFICIAL        real, but the authority has not published it yet;",
+    "                          `recheckOn` says when to look again",
+    "  NO_OFFICIAL_SOURCE_FOUND  looked, and the authority's own pages do not",
+    "                          support the claim. Section 14: it is not published.",
+    "  NOT_RELEVANT            not a project, or not our market",
+    "",
+    "`checked` lists the pages that were actually opened, so the next person can",
+    "see where the search already went instead of repeating it."
   ],
-  "updated_at": "2026-08-18",
+  "updated_at": "2026-08-19",
   "candidates": [
     {
       "country": "DE",
@@ -61,6 +80,46 @@
         "Zeitplan der Umsetzung",
         "Vergabeform"
       ]
+    }
+  ],
+  "resolutions": [
+    {
+      "sourceUrl": "https://www.ndr.de/nachrichten/schleswig-holstein/flensburg_nordfriesland_schleswig-flensburg/bundesweites-interesse-an-baugebiet-fuer-tiny-haeuser-in-satrup,regionflensburgnews-3106.html",
+      "outcome": "NO_OFFICIAL_SOURCE_FOUND",
+      "checkedOn": "2026-08-19",
+      "checked": [
+        "https://www.amt-mittelangeln.de/seite/323884/bauleitpl%C3%A4ne-im-verfahren.html",
+        "https://www.gemeinde-mittelangeln.de/seite/352707/bauen-wohnen.html"
+      ],
+      "note": "Der NDR-Beitrag nennt 94 Bauplätze in Satrup, auch für massiv gebaute Tiny-Häuser. Die Bauleitplanung des Amtes Mittelangeln führt zehn laufende und abgeschlossene Verfahren; keines nennt Tiny-Häuser und keines nennt 94 Plätze. Das im Ort beworbene Baugebiet \"Zum Reiterhof\" wird von einem privaten Investor entwickelt und ist mit 32 Grundstücken im zweiten Abschnitt ausgeschrieben. Ein privater Anbieter ist keine Quelle für einen Projektstand. Nach Abschnitt 14 wird nichts veröffentlicht.",
+      "recheckOn": "2026-11-17"
+    },
+    {
+      "sourceUrl": "https://dinavis.dk/samfund/ECE19543648/kommunen-trykker-paa-startknappen-til-nye-sommerhuse/",
+      "outcome": "PENDING_OFFICIAL",
+      "checkedOn": "2026-08-19",
+      "checked": [
+        "https://www.syddjurs.dk/politik/kommuneplan-lokalplan-og-udvikling/lokalplaner/lokalplaner-under-udarbejdelse",
+        "https://www.syddjurs.dk/politik/politiske-udvalg/erhvervs-og-planudvalget"
+      ],
+      "note": "Erhvervs- og Planudvalget i Syddjurs Kommune besluttede den 12.08. at sætte arbejdet med en lokalplan i gang ved Holme Strand. Kommunens egen oversigt over lokalplaner under udarbejdelse har den endnu ikke, og forslaget ventes først til politisk behandling sidst i 2026. Referatet ligger på aabendagsorden.syddjurs.dk, som er en JavaScript-applikation og ikke kunne hentes her. Sagen er reel, men den officielle kilde findes endnu ikke offentligt - derfor ikke publiceret.",
+      "recheckOn": "2026-10-01"
+    },
+    {
+      "sourceUrl": "https://www.hannover.de/Service/Werbung-Firmenverzeichnis/Immobilien/Architekten/Loft.Heim-Mobilheime-GmbH",
+      "outcome": "NOT_RELEVANT",
+      "checkedOn": "2026-08-19",
+      "checked": [],
+      "note": "Ein Firmeneintrag im Branchenverzeichnis der Stadt Hannover, kein Projekt. Als Wettbewerbsbeobachtung interessant, als Nachricht nicht.",
+      "recheckOn": null
+    },
+    {
+      "sourceUrl": "https://www.kreis-eic.de/aktuelles/ausschreibungen-und-bekanntmachungen/ausschreibungen-bau-liefer-und-dienstleistungen",
+      "outcome": "NOT_RELEVANT",
+      "checkedOn": "2026-08-19",
+      "checked": [],
+      "note": "Die Übersichtsseite für Ausschreibungen und Bekanntmachungen des Landkreises Eichsfeld, kein einzelnes Vorhaben. Als wiederkehrende Quelle für den Ausschreibungs-Monitor nach Abschnitt 30 vorgemerkt, nicht als Nachricht.",
+      "recheckOn": null
     }
   ]
 }

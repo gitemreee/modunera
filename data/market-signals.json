@@ -96,64 +96,64 @@
     {
       "runId": "run-2026-08-19-001",
       "date": "2026-08-19",
-      "startedAt": "2026-08-19T10:38:01.931Z",
-      "provider": "brave",
-      "providerConfigured": true,
+      "startedAt": "2026-08-19T10:46:46.102Z",
+      "provider": "not-configured",
+      "providerConfigured": false,
       "gsc": "not connected",
       "markets": {
         "DE": {
           "queries": 7,
-          "checked": 70,
-          "accepted": 70,
+          "checked": 0,
+          "accepted": 0,
           "rejected": 0,
-          "signals": 71,
-          "error": null,
+          "signals": 1,
+          "error": "MODUNERA_SEARCH_PROVIDER is not set",
           "countryDropped": false
         },
         "NL": {
           "queries": 6,
-          "checked": 58,
-          "accepted": 58,
+          "checked": 0,
+          "accepted": 0,
           "rejected": 0,
-          "signals": 58,
-          "error": null,
+          "signals": 0,
+          "error": "MODUNERA_SEARCH_PROVIDER is not set",
           "countryDropped": false
         },
         "DK": {
           "queries": 6,
-          "checked": 60,
-          "accepted": 60,
+          "checked": 0,
+          "accepted": 0,
           "rejected": 0,
-          "signals": 60,
-          "error": null,
+          "signals": 0,
+          "error": "MODUNERA_SEARCH_PROVIDER is not set",
           "countryDropped": false
         },
         "LU": {
           "queries": 4,
-          "checked": 40,
-          "accepted": 40,
+          "checked": 0,
+          "accepted": 0,
           "rejected": 0,
-          "signals": 40,
-          "error": null,
-          "countryDropped": true
+          "signals": 0,
+          "error": "MODUNERA_SEARCH_PROVIDER is not set",
+          "countryDropped": false
         },
         "CH": {
           "queries": 5,
-          "checked": 50,
-          "accepted": 50,
+          "checked": 0,
+          "accepted": 0,
           "rejected": 0,
-          "signals": 50,
-          "error": null,
+          "signals": 0,
+          "error": "MODUNERA_SEARCH_PROVIDER is not set",
           "countryDropped": false
         }
       },
       "queriesPlanned": 28,
-      "sourcesChecked": 278,
-      "sourcesAccepted": 278,
+      "sourcesChecked": 0,
+      "sourcesAccepted": 0,
       "sourcesRejected": 0,
-      "candidates": 279,
+      "candidates": 1,
       "verifiedInboxCandidates": 1,
-      "projectsDiscovered": 4,
+      "projectsDiscovered": 0,
       "existingProjectsUpdated": 1,
       "tenderOpportunities": 0,
       "businessLeads": 0,
@@ -164,17 +164,19 @@
       "decisionWhy": "Tiny-House-Siedlung Sauerlandstraße (DE) — already published as de-menden-sauerlandstrasse; a second URL would split the project in two",
       "dueForReview": [],
       "errors": [
-        "LU: Brave rejected country=LU; retried without it"
+        "DE: MODUNERA_SEARCH_PROVIDER is not set",
+        "NL: MODUNERA_SEARCH_PROVIDER is not set",
+        "DK: MODUNERA_SEARCH_PROVIDER is not set",
+        "LU: MODUNERA_SEARCH_PROVIDER is not set",
+        "CH: MODUNERA_SEARCH_PROVIDER is not set"
       ],
       "signalsPublished": 1,
       "gscRows": 0,
-      "newSignals": 4,
-      "rejectedNotStored": 272,
-      "rejectionReasons": {
-        "not an authority (tier 3)": 268,
-        "blocked as a primary source": 2,
-        "below the score threshold": 2
-      },
+      "resolutionsApplied": 4,
+      "rechecksDue": [],
+      "newSignals": 0,
+      "rejectedNotStored": 0,
+      "rejectionReasons": {},
       "decisionSignal": "https://beteiligung.nrw.de/portal/men/beteiligung/themen/1016912",
       "autoPublish": {
         "news": false,
@@ -182,7 +184,7 @@
         "guides": false
       },
       "awaitingHumanDecision": true,
-      "finishedAt": "2026-08-19T10:38:16.515Z"
+      "finishedAt": "2026-08-19T10:46:46.106Z"
     }
   ],
   "signals": [
@@ -282,12 +284,22 @@
         "product_relevance": 5,
         "internal_link_opportunity": 5
       },
-      "recommendedAction": "FIND_OFFICIAL_SOURCE",
+      "recommendedAction": "RESOLVED",
       "recommendedWhy": "score 78, but a tier 2 publication is a lead — the authority's own page has to be found before anything is published",
       "origin": "scan",
       "published": false,
       "publishedAs": null,
-      "publishedUrls": []
+      "publishedUrls": [],
+      "resolution": {
+        "outcome": "NO_OFFICIAL_SOURCE_FOUND",
+        "checkedOn": "2026-08-19",
+        "checked": [
+          "https://www.amt-mittelangeln.de/seite/323884/bauleitpl%C3%A4ne-im-verfahren.html",
+          "https://www.gemeinde-mittelangeln.de/seite/352707/bauen-wohnen.html"
+        ],
+        "note": "Der NDR-Beitrag nennt 94 Bauplätze in Satrup, auch für massiv gebaute Tiny-Häuser. Die Bauleitplanung des Amtes Mittelangeln führt zehn laufende und abgeschlossene Verfahren; keines nennt Tiny-Häuser und keines nennt 94 Plätze. Das im Ort beworbene Baugebiet \"Zum Reiterhof\" wird von einem privaten Investor entwickelt und ist mit 32 Grundstücken im zweiten Abschnitt ausgeschrieben. Ein privater Anbieter ist keine Quelle für einen Projektstand. Nach Abschnitt 14 wird nichts veröffentlicht.",
+        "recheckOn": "2026-11-17"
+      }
     },
     {
       "id": "de-modulhaus-kaufen-mobilheim-kaufen",
@@ -326,12 +338,19 @@
         "product_relevance": 5,
         "internal_link_opportunity": 5
       },
-      "recommendedAction": "FIND_OFFICIAL_SOURCE",
+      "recommendedAction": "RESOLVED",
       "recommendedWhy": "score 64, but a tier 2 publication is a lead — the authority's own page has to be found before anything is published",
       "origin": "scan",
       "published": false,
       "publishedAs": null,
-      "publishedUrls": []
+      "publishedUrls": [],
+      "resolution": {
+        "outcome": "NOT_RELEVANT",
+        "checkedOn": "2026-08-19",
+        "checked": [],
+        "note": "Ein Firmeneintrag im Branchenverzeichnis der Stadt Hannover, kein Projekt. Als Wettbewerbsbeobachtung interessant, als Nachricht nicht.",
+        "recheckOn": null
+      }
     },
     {
       "id": "de-ausschreibungen-bau-liefer-und",
@@ -370,12 +389,19 @@
         "product_relevance": 0,
         "internal_link_opportunity": 5
       },
-      "recommendedAction": "VERIFY_ON_SOURCE",
+      "recommendedAction": "RESOLVED",
       "recommendedWhy": "score 76, tier 1 source — but a snippet is not evidence; the page has to be read before anything is written",
       "origin": "scan",
       "published": false,
       "publishedAs": null,
-      "publishedUrls": []
+      "publishedUrls": [],
+      "resolution": {
+        "outcome": "NOT_RELEVANT",
+        "checkedOn": "2026-08-19",
+        "checked": [],
+        "note": "Die Übersichtsseite für Ausschreibungen und Bekanntmachungen des Landkreises Eichsfeld, kein einzelnes Vorhaben. Als wiederkehrende Quelle für den Ausschreibungs-Monitor nach Abschnitt 30 vorgemerkt, nicht als Nachricht.",
+        "recheckOn": null
+      }
     },
     {
       "id": "dk-efter-syv-år-sker",
@@ -419,7 +445,17 @@
       "origin": "scan",
       "published": false,
       "publishedAs": null,
-      "publishedUrls": []
+      "publishedUrls": [],
+      "resolution": {
+        "outcome": "PENDING_OFFICIAL",
+        "checkedOn": "2026-08-19",
+        "checked": [
+          "https://www.syddjurs.dk/politik/kommuneplan-lokalplan-og-udvikling/lokalplaner/lokalplaner-under-udarbejdelse",
+          "https://www.syddjurs.dk/politik/politiske-udvalg/erhvervs-og-planudvalget"
+        ],
+        "note": "Erhvervs- og Planudvalget i Syddjurs Kommune besluttede den 12.08. at sætte arbejdet med en lokalplan i gang ved Holme Strand. Kommunens egen oversigt over lokalplaner under udarbejdelse har den endnu ikke, og forslaget ventes først til politisk behandling sidst i 2026. Referatet ligger på aabendagsorden.syddjurs.dk, som er en JavaScript-applikation og ikke kunne hentes her. Sagen er reel, men den officielle kilde findes endnu ikke offentligt - derfor ikke publiceret.",
+        "recheckOn": "2026-10-01"
+      }
     }
   ],
   "opportunities": [],

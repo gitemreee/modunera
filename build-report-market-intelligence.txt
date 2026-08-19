@@ -2,21 +2,26 @@ MODUNERA DAILY INTELLIGENCE REPORT
 
 Date:   2026-08-19
 Run ID: run-2026-08-19-002
-Search provider: brave
+Search provider: not-configured  (NOT CONFIGURED — no scan performed)
 Search Console:  not connected
 
 MARKET SCAN
 
 Deutschland (DE)
-  queries planned: 7   results read: 70   kept: 70   discarded: 0
+  queries planned: 7   results read: 0   kept: 0   discarded: 0
+  note: MODUNERA_SEARCH_PROVIDER is not set
 Nederland (NL)
-  queries planned: 6   results read: 58   kept: 58   discarded: 0
+  queries planned: 6   results read: 0   kept: 0   discarded: 0
+  note: MODUNERA_SEARCH_PROVIDER is not set
 Danmark (DK)
-  queries planned: 6   results read: 60   kept: 60   discarded: 0
+  queries planned: 6   results read: 0   kept: 0   discarded: 0
+  note: MODUNERA_SEARCH_PROVIDER is not set
 Luxembourg (LU)
-  queries planned: 4   results read: 40   kept: 40   discarded: 0
+  queries planned: 4   results read: 0   kept: 0   discarded: 0
+  note: MODUNERA_SEARCH_PROVIDER is not set
 Schweiz / Suisse (CH)
-  queries planned: 5   results read: 50   kept: 50   discarded: 0
+  queries planned: 5   results read: 0   kept: 0   discarded: 0
+  note: MODUNERA_SEARCH_PROVIDER is not set
 
 SEARCH CONSOLE (sections 37 and 38)
 
@@ -25,6 +30,7 @@ SEARCH CONSOLE (sections 37 and 38)
 VERIFIED INBOX
 
   hand-verified candidates considered: 1
+  leads chased to a conclusion:        4
 
 DECISION
 
@@ -36,21 +42,18 @@ DECISION
 RUN COUNTERS (section 72)
 
   queries planned             28
-  sources visited             278
-  sources accepted            278
+  sources visited             0
+  sources accepted            0
   sources rejected            0
-  distinct new signals        4
-  rejected, not stored        272
-  projects discovered         4
+  distinct new signals        0
+  rejected, not stored        0
+  projects discovered         0
   existing projects updated   1
   tender opportunities        0
   business leads              0
   GSC opportunities           0
   content generated           0
   content updated             0
-       268 × not an authority (tier 3)
-         2 × blocked as a primary source
-         2 × below the score threshold
 
 REVIEW QUEUE
 
@@ -64,15 +67,15 @@ STORE
       units: not stated by the source   next review 2026-09-17
       https://beteiligung.nrw.de/portal/men/beteiligung/themen/1016912
   DE  Tiny House: Bundesweites Interesse an Baugebiet im Norden
-      — · UNKNOWN · score 78 · tier 2 · FIND_OFFICIAL_SOURCE
+      — · UNKNOWN · score 78 · tier 2 · RESOLVED
       units: not stated by the source   next review 2026-09-18
       https://www.ndr.de/nachrichten/schleswig-holstein/flensburg_nordfriesland_schleswig-flensburg/bundesweites-interesse-an-baugebiet-fuer-tiny-haeuser-in-satrup,regionflensburgnews-3106.html
   DE  Modulhaus kaufen, Mobilheim kaufen, Modulhaus Hersteller - Hannover.de
-      — · UNKNOWN · score 64 · tier 2 · FIND_OFFICIAL_SOURCE
+      — · UNKNOWN · score 64 · tier 2 · RESOLVED
       units: not stated by the source   next review 2026-09-18
       https://www.hannover.de/Service/Werbung-Firmenverzeichnis/Immobilien/Architekten/Loft.Heim-Mobilheime-GmbH
   DE  Ausschreibungen Bau-, Liefer- und Dienstleistungen - www.kreis-eic.de
-      — · UNKNOWN · score 76 · tier 1 · VERIFY_ON_SOURCE
+      — · UNKNOWN · score 76 · tier 1 · RESOLVED
       units: not stated by the source   next review 2026-09-18
       https://www.kreis-eic.de/aktuelles/ausschreibungen-und-bekanntmachungen/ausschreibungen-bau-liefer-und-dienstleistungen
   DK  Efter syv år sker der noget: Nu er nyt sommerhusområde på vej
@@ -82,4 +85,8 @@ STORE
 
 ERRORS
 
-  LU: Brave rejected country=LU; retried without it
+  DE: MODUNERA_SEARCH_PROVIDER is not set
+  NL: MODUNERA_SEARCH_PROVIDER is not set
+  DK: MODUNERA_SEARCH_PROVIDER is not set
+  LU: MODUNERA_SEARCH_PROVIDER is not set
+  CH: MODUNERA_SEARCH_PROVIDER is not set
