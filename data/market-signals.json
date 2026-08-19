@@ -96,8 +96,8 @@
     {
       "runId": "run-2026-08-19-001",
       "date": "2026-08-19",
-      "startedAt": "2026-08-19T00:07:42.659Z",
-      "provider": "not-configured",
+      "startedAt": "2026-08-19T05:06:38.614Z",
+      "provider": "",
       "providerConfigured": false,
       "gsc": "not connected",
       "markets": {
@@ -173,7 +173,7 @@
         "guides": false
       },
       "awaitingHumanDecision": true,
-      "finishedAt": "2026-08-19T00:07:42.664Z"
+      "finishedAt": "2026-08-19T05:06:38.617Z"
     }
   ],
   "signals": [
