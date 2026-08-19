@@ -25,19 +25,51 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const TREES = ["standorte/daenemark", "en/locations/denmark"];
 
 /* Every way the previous slugify could have rendered this name. A Nordic letter
-   inside the word became "-", one at the start vanished with the leading hyphen. */
+   inside the word became "-", one at the start vanished with the leading hyphen.
+
+   TWO CASES THIS MISSED, BOTH FOUND IN SEARCH CONSOLE AS LIVE 404s
+
+   The first version replaced one occurrence at a time, so a name with two Nordic
+   letters never got the form where both were replaced. Skælskør has an æ and an
+   ø: the old slugify wrote "sk-lsk-r", and the rules covered only "sk-lskoer"
+   and "skaelsk-r". Google still has "sk-lsk-r" and it 404s. Every subset of the
+   occurrences is now generated, not one at a time.
+
+   The second: two Nordic letters landing next to a word break produced two
+   hyphens, and a slugify that collapses runs wrote one. Thurø By became
+   "thur--by" here and "thur-by" in the index. Both forms are emitted now.
+
+   The subsets are capped: a Danish place slug has at most a handful of these,
+   and 2^n on an unexpected input is not a risk worth taking for a redirect file. */
+const MAX_SUBSTITUTIONS = 6;
+
 function previousForms(slug) {
+  /* Where each replaceable pair sits, left to right, non-overlapping. */
+  const spots = [];
+  for (let i = 0; i < slug.length && spots.length < MAX_SUBSTITUTIONS; ) {
+    const pair = ["ae", "oe", "aa"].find((p) => slug.startsWith(p, i));
+    if (pair) { spots.push({ index: i, length: pair.length }); i += pair.length; }
+    else i += 1;
+  }
   const forms = new Set();
-  for (const pair of ["ae", "oe", "aa"]) {
-    let index = slug.indexOf(pair);
-    while (index !== -1) {
-      if (index === 0) forms.add(slug.slice(pair.length));
-      else forms.add(`${slug.slice(0, index)}-${slug.slice(index + pair.length)}`);
-      index = slug.indexOf(pair, index + 1);
-    }
+  for (let mask = 1; mask < (1 << spots.length); mask += 1) {
+    let out = "";
+    let cursor = 0;
+    spots.forEach((spot, n) => {
+      if (!(mask & (1 << n))) return;
+      out += slug.slice(cursor, spot.index);
+      out += out.length === 0 ? "" : "-";
+      cursor = spot.index + spot.length;
+    });
+    out += slug.slice(cursor);
+    forms.add(out);
+    /* and the same with hyphen runs collapsed */
+    forms.add(out.replace(/-{2,}/g, "-"));
   }
   forms.delete(slug);
-  return [...forms].filter((form) => form && !form.startsWith("-") && !form.endsWith("-"));
+  return [...forms]
+    .map((form) => form.replace(/^-+/, "").replace(/-+$/, ""))
+    .filter((form) => form && form !== slug);
 }
 
 async function directories(path) {

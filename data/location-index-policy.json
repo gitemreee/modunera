@@ -1,9 +1,6464 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "1.1",
+  "_comment": [
+    "WHY THIS FILE WAS EMPTY, AND WHY IT IS NOT ANY MORE",
+    "",
+    "14,641 programmatic location pages were built and every one was held at",
+    "noindex by an allow-list that was never populated. The gate, the scorer and",
+    "the threshold were all written; the list was left empty, so nothing ever",
+    "opened - including the 1,049 pages that pass the site's own quality bar.",
+    "",
+    "Search Console for the three months to 2026-08-19 says what that cost:",
+    "22 of the site's 26 clicks and 329 of its 565 impressions come from location",
+    "pages, and all of them are noindex. Google is still ranking them - position",
+    "1.0 at Wiedlisbach, 1.3 at Adliswil Stadtkern, 2.2 at Huendli-Zopf, 7.0 at",
+    "Bad Abbach - because it indexed them before the gate closed. It will drop",
+    "them as it recrawls. The site was about to lose 85% of its clicks to a list",
+    "nobody filled in.",
+    "",
+    "TWO KINDS OF EVIDENCE, KEPT APART ON PURPOSE",
+    "",
+    "approved_urls holds pages approved on SEARCH EVIDENCE: they already rank in",
+    "the top fifteen for a real query. They are listed here rather than in entries",
+    "because most of them do not pass the quality score, and that disagreement is",
+    "the point. The scorer measures how much of the prose is unique to the page.",
+    "Google is measuring whether the page answers 'tiny house bad abbach'. Only 23",
+    "of the 157 satisfy both. A page sitting at position 1 is demonstrably useful",
+    "to the person who searched, whatever its originality score says, and the",
+    "honest response is to record which test it passed rather than to bend either",
+    "test until they agree.",
+    "",
+    "entries holds pages approved on the QUALITY SCORE, at or above",
+    "minimum_quality_score. build-seo-governance-v7.mjs re-checks that number, so",
+    "an entry cannot be promoted by editing status alone.",
+    "",
+    "WHAT IS STILL CLOSED",
+    "",
+    "13,458 pages. That is deliberate. Opening all 14,641 would put a corpus with a",
+    "mean originality of 63 into the index at once, which is the risk the gate was",
+    "built for in the first place. This opens 1,183 - the ones with evidence - and",
+    "leaves the rest for the next measurement.",
+    "",
+    "TO REVIEW THIS LATER",
+    "",
+    "  node tools/score-location-pages.mjs      the quality side",
+    "  node tools/score-indexed-originality.mjs the indexed set as a whole",
+    "  data/gsc/                                the search side, once exports are in",
+    "",
+    "A page that stops ranking is not automatically removed. Removing it is a",
+    "decision with the same evidence in front of you, not a side effect."
+  ],
   "default_status": "noindex",
   "minimum_quality_score": 75,
-  "approved_urls": [],
-  "entries": [],
-  "note": "Populate only after the local-page quality gate is met. An empty allow-list intentionally keeps every programmatic location page out of the sitemap."
+  "reviewed_at": "2026-08-19",
+  "evidence_window": "Search Console, three months to 2026-08-19",
+  "counts": {
+    "location_pages_total": 14641,
+    "approved_on_search_evidence": 157,
+    "approved_on_quality_score": 1026,
+    "approved_total": 1183,
+    "still_noindex": 13458
+  },
+  "search_evidence_rule": "position <= 15 in the Search Console export, on a page that exists (URLs Google still holds under a corrected Danish slug are resolved through _redirects first)",
+  "approved_urls": [
+    "/standorte/schweiz/zuerich/adliswil-huendli-zopf/",
+    "/standorte/bayern/bad-abbach/",
+    "/standorte/bayern/neu-ulm/",
+    "/standorte/nordrhein-westfalen/moers/",
+    "/en/locations/switzerland/zuerich/kloten-hostrass/",
+    "/standorte/baden-wuerttemberg/bad-duerrheim/",
+    "/standorte/schweiz/zuerich/wetzikon-ober-wetzikon/",
+    "/standorte/bayern/tegernsee/",
+    "/standorte/schweiz/bern/wiedlisbach/",
+    "/en/locations/netherlands/utrecht/everdingen/",
+    "/en/locations/switzerland/zuerich/adliswil-adliswil-stadtkern/",
+    "/standorte/bayern/kirchdorf-im-wald/",
+    "/standorte/hessen/lollar/",
+    "/standorte/nordrhein-westfalen/rietberg/",
+    "/en/locations/netherlands/noord-brabant/sint-oedenrode/",
+    "/standorte/bayern/bad-neustadt-an-der-saale/",
+    "/standorte/sachsen/moritzburg/",
+    "/standorte/nordrhein-westfalen/herford/",
+    "/en/locations/netherlands/limburg/panningen/",
+    "/standorte/baden-wuerttemberg/goeppingen/",
+    "/standorte/baden-wuerttemberg/muehlhausen-081/",
+    "/en/locations/luxembourg/esch-sur-alzette/dudelange/",
+    "/en/locations/netherlands/limburg/blitterswijck/",
+    "/standorte/daenemark/midtjylland/hvide-sande/",
+    "/en/locations/netherlands/zuid-holland/zwijndrecht/",
+    "/standorte/baden-wuerttemberg/heiligenberg/",
+    "/standorte/bayern/neukirchen-beim-heiligen-blut/",
+    "/standorte/bayern/schondorf-am-ammersee/",
+    "/standorte/nordrhein-westfalen/gevelsberg/",
+    "/en/locations/netherlands/gelderland/bruchem/",
+    "/en/locations/netherlands/gelderland/duiven/",
+    "/standorte/rheinland-pfalz/esthal/",
+    "/standorte/rheinland-pfalz/sinzig/",
+    "/en/locations/netherlands/groningen/nieuwe-pekela/",
+    "/standorte/hessen/obertshausen/",
+    "/standorte/baden-wuerttemberg/muellheim-feldberg/",
+    "/standorte/bayern/schwarzenbach-an-der-saale/",
+    "/standorte/luxemburg/remich/canach/",
+    "/standorte/nordrhein-westfalen/kamp-lintfort/",
+    "/en/locations/netherlands/gelderland/didam/",
+    "/standorte/nordrhein-westfalen/rheda-wiedenbrueck/",
+    "/standorte/baden-wuerttemberg/ludwigsburg/",
+    "/standorte/bayern/bischofsheim-in-der-rhoen/",
+    "/standorte/rheinland-pfalz/hauptstuhl/",
+    "/standorte/bayern/bad-griesbach/",
+    "/en/locations/netherlands/friesland/appelscha/",
+    "/en/locations/netherlands/limburg/keent/",
+    "/standorte/bayern/weigendorf/",
+    "/standorte/schweiz/st-gallen/moerschwil/",
+    "/en/locations/netherlands/friesland/opeinde/",
+    "/standorte/baden-wuerttemberg/oberteuringen/",
+    "/standorte/hessen/burgsolms/",
+    "/standorte/nordrhein-westfalen/nettetal/",
+    "/standorte/schweiz/zuerich/erlenbach-rechts-des-dorfbachs-oberhalb-bahnlinie/",
+    "/en/locations/netherlands/zuid-holland/nieuwerkerk-aan-den-ijssel/",
+    "/standorte/sachsen-anhalt/genthin/",
+    "/standorte/schweiz/zuerich/neftenbach-dorf-neftenbach/",
+    "/standorte/schweiz/zuerich/niederhasli/",
+    "/en/locations/netherlands/gelderland/corlaer/",
+    "/en/locations/netherlands/zuid-holland/hoogmade/",
+    "/standorte/baden-wuerttemberg/rosenberg/",
+    "/standorte/bayern/bockhorn/",
+    "/standorte/hessen/felsberg/",
+    "/standorte/rheinland-pfalz/bad-duerkheim/",
+    "/standorte/schweiz/zuerich/horgen-allmend/",
+    "/standorte/baden-wuerttemberg/meissenheim/",
+    "/en/locations/denmark/midtjylland/skjern/",
+    "/en/locations/netherlands/gelderland/hunnerberg/",
+    "/en/locations/switzerland/bern/muenchenbuchsee/",
+    "/standorte/bayern/bad-windsheim/",
+    "/standorte/bayern/finningen/",
+    "/standorte/bayern/guenzburg/",
+    "/standorte/bayern/winterhausen/",
+    "/standorte/hessen/kuenzell/",
+    "/standorte/schweiz/zuerich/adliswil-oberleimbach/",
+    "/standorte/niedersachsen/walsrode/",
+    "/en/locations/netherlands/gelderland/renkum/",
+    "/en/locations/netherlands/limburg/nieuw-bergen/",
+    "/standorte/bayern/baunach/",
+    "/standorte/bayern/weissenhorn/",
+    "/standorte/hessen/moerfelden-walldorf/",
+    "/standorte/mecklenburg-vorpommern/moenchhagen/",
+    "/standorte/nordrhein-westfalen/bad-sassendorf/",
+    "/standorte/rheinland-pfalz/weingarten/",
+    "/standorte/rheinland-pfalz/winningen/",
+    "/standorte/sachsen-anhalt/kloetze/",
+    "/en/locations/luxembourg/remich/schengen/",
+    "/en/locations/netherlands/drenthe/zuidlaren/",
+    "/en/locations/netherlands/limburg/maastricht/",
+    "/en/locations/netherlands/noord-brabant/cranendonck/",
+    "/en/locations/netherlands/noord-brabant/gerwen/",
+    "/en/locations/netherlands/noord-holland/broek-in-waterland/",
+    "/en/locations/netherlands/overijssel/dalfsen/",
+    "/en/locations/netherlands/overijssel/heino/",
+    "/en/locations/switzerland/zuerich/wettswil-wettswil-dorf/",
+    "/standorte/bayern/westendorf-097/",
+    "/standorte/daenemark/midtjylland/struer/",
+    "/standorte/niederlande/friesland/balk/",
+    "/standorte/schweiz/zuerich/kloten-hostrass/",
+    "/en/locations/netherlands/utrecht/schoonrewoerd/",
+    "/en/locations/switzerland/solothurn/zuchwil/",
+    "/en/locations/switzerland/st-gallen/niederhelfenschwil/",
+    "/en/locations/switzerland/vaud/la-chaux/",
+    "/standorte/baden-wuerttemberg/buchenbach/",
+    "/standorte/baden-wuerttemberg/laupheim/",
+    "/standorte/schleswig-holstein/kayhude/",
+    "/en/locations/denmark/hovedstaden/lilleroed/",
+    "/en/locations/netherlands/gelderland/heerde/",
+    "/en/locations/netherlands/noord-brabant/oud-gastel/",
+    "/en/locations/netherlands/noord-holland/den-burg/",
+    "/en/locations/switzerland/zuerich/veltheim-kreis-5-rosenberg/",
+    "/standorte/bayern/dietfurt/",
+    "/standorte/niederlande/noord-brabant/steenbergen/",
+    "/standorte/niederlande/zuid-holland/",
+    "/standorte/niedersachsen/bovenden/",
+    "/standorte/schweiz/zuerich/wetzikon/",
+    "/en/locations/denmark/sjaelland/nykoebing-falster/",
+    "/en/locations/netherlands/flevoland/lelystad/",
+    "/en/locations/netherlands/gelderland/aalst/",
+    "/en/locations/netherlands/noord-brabant/raamsdonksveer/",
+    "/standorte/baden-wuerttemberg/empfingen/",
+    "/standorte/bayern/coburg/",
+    "/standorte/bayern/essenbach/",
+    "/standorte/thueringen/weimar/",
+    "/en/locations/denmark/sjaelland/noerre-alslev/",
+    "/standorte/schweiz/zuerich/seuzach-dorf-breite-weid/",
+    "/en/locations/luxembourg/grevenmacher/betzdorf/",
+    "/en/locations/netherlands/noord-brabant/naastenbest/",
+    "/en/locations/netherlands/zeeland/vlissingen/",
+    "/en/locations/switzerland/solothurn/kleinluetzel/",
+    "/standorte/brandenburg/beelitz/",
+    "/standorte/nordrhein-westfalen/bedburg/",
+    "/standorte/schweiz/zuerich/greifensee-muellerwis-seilerwis/",
+    "/standorte/schweiz/zuerich/wetzikon-kempten/",
+    "/en/locations/netherlands/limburg/elsloo/",
+    "/en/locations/netherlands/noord-brabant/genderen/",
+    "/standorte/bayern/burgsinn/",
+    "/standorte/bayern/priesendorf/",
+    "/standorte/sachsen/grimma/",
+    "/standorte/schweiz/zuerich/kloten-freienberg-chanzler-chlini-chaseren/",
+    "/standorte/niederlande/gelderland/nijkerk/",
+    "/en/locations/netherlands/friesland/twijzel/",
+    "/en/locations/netherlands/gelderland/rheden/",
+    "/en/locations/netherlands/limburg/malberg/",
+    "/en/locations/netherlands/noord-holland/hilversum/",
+    "/standorte/bayern/fuchsmuehl/",
+    "/standorte/schweiz/graubuenden/thusis/",
+    "/en/locations/netherlands/gelderland/doornspijk/",
+    "/en/locations/netherlands/gelderland/elburg/",
+    "/en/locations/netherlands/noord-holland/amstelveen/",
+    "/standorte/bayern/heidenheim/",
+    "/standorte/bayern/schweinfurt/",
+    "/standorte/niederlande/noord-holland/limmen/",
+    "/en/locations/netherlands/noord-holland/heiloo/",
+    "/en/locations/switzerland/neuchatel/auvernier/",
+    "/standorte/bayern/grossenseebach/",
+    "/en/locations/netherlands/gelderland/heerewaarden/"
+  ],
+  "search_evidence": [
+    {
+      "url": "/standorte/schweiz/zuerich/adliswil-huendli-zopf/",
+      "clicks": 2,
+      "impressions": 6,
+      "position": 2.2,
+      "quality_score": 58
+    },
+    {
+      "url": "/standorte/bayern/bad-abbach/",
+      "clicks": 1,
+      "impressions": 6,
+      "position": 7.0,
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/neu-ulm/",
+      "clicks": 0,
+      "impressions": 6,
+      "position": 10.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/moers/",
+      "clicks": 0,
+      "impressions": 5,
+      "position": 10.6,
+      "quality_score": 64
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/kloten-hostrass/",
+      "clicks": 0,
+      "impressions": 4,
+      "position": 4.5,
+      "quality_score": 59
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/bad-duerrheim/",
+      "clicks": 0,
+      "impressions": 4,
+      "position": 7.0,
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/wetzikon-ober-wetzikon/",
+      "clicks": 0,
+      "impressions": 4,
+      "position": 7.8,
+      "quality_score": 58
+    },
+    {
+      "url": "/standorte/bayern/tegernsee/",
+      "clicks": 1,
+      "impressions": 4,
+      "position": 9.2,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/schweiz/bern/wiedlisbach/",
+      "clicks": 1,
+      "impressions": 3,
+      "position": 1.0,
+      "quality_score": 58
+    },
+    {
+      "url": "/en/locations/netherlands/utrecht/everdingen/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 1.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/adliswil-adliswil-stadtkern/",
+      "clicks": 1,
+      "impressions": 3,
+      "position": 1.3,
+      "quality_score": 89
+    },
+    {
+      "url": "/standorte/bayern/kirchdorf-im-wald/",
+      "clicks": 1,
+      "impressions": 3,
+      "position": 4.3,
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/hessen/lollar/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 5.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/rietberg/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 6.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/sint-oedenrode/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 7.7,
+      "quality_score": 59
+    },
+    {
+      "url": "/standorte/bayern/bad-neustadt-an-der-saale/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 9.3,
+      "quality_score": 95
+    },
+    {
+      "url": "/standorte/sachsen/moritzburg/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 9.3,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/herford/",
+      "clicks": 1,
+      "impressions": 3,
+      "position": 9.7,
+      "quality_score": 64
+    },
+    {
+      "url": "/en/locations/netherlands/limburg/panningen/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 10.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/goeppingen/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 10.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/muehlhausen-081/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 10.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/en/locations/luxembourg/esch-sur-alzette/dudelange/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 10.7,
+      "quality_score": 58
+    },
+    {
+      "url": "/en/locations/netherlands/limburg/blitterswijck/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 10.7,
+      "quality_score": 59
+    },
+    {
+      "url": "/standorte/daenemark/midtjylland/hvide-sande/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 11.0,
+      "quality_score": 58
+    },
+    {
+      "url": "/en/locations/netherlands/zuid-holland/zwijndrecht/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 13.3,
+      "quality_score": 59
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/heiligenberg/",
+      "clicks": 1,
+      "impressions": 2,
+      "position": 1.5,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/bayern/neukirchen-beim-heiligen-blut/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 2.0,
+      "quality_score": 95
+    },
+    {
+      "url": "/standorte/bayern/schondorf-am-ammersee/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 3.5,
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/gevelsberg/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 4.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/bruchem/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 5.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/duiven/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 5.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/esthal/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 5.5,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/sinzig/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 5.5,
+      "quality_score": 64
+    },
+    {
+      "url": "/en/locations/netherlands/groningen/nieuwe-pekela/",
+      "clicks": 1,
+      "impressions": 2,
+      "position": 6.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/standorte/hessen/obertshausen/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 6.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/muellheim-feldberg/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 6.5,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/bayern/schwarzenbach-an-der-saale/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 6.5,
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/luxemburg/remich/canach/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 6.5,
+      "quality_score": 57
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/kamp-lintfort/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 6.5,
+      "quality_score": 64
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/didam/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 7.5,
+      "quality_score": 59
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/rheda-wiedenbrueck/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 7.5,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/ludwigsburg/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 8.5,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/bayern/bischofsheim-in-der-rhoen/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 9.0,
+      "quality_score": 95
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/hauptstuhl/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 10.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/bayern/bad-griesbach/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 11.0,
+      "quality_score": 76
+    },
+    {
+      "url": "/en/locations/netherlands/friesland/appelscha/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 13.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/en/locations/netherlands/limburg/keent/",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 1.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/standorte/bayern/weigendorf/",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 1.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/schweiz/st-gallen/moerschwil/",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 1.0,
+      "quality_score": 58
+    },
+    {
+      "url": "/en/locations/netherlands/friesland/opeinde/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/oberteuringen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/hessen/burgsolms/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/nettetal/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/erlenbach-rechts-des-dorfbachs-oberhalb-bahnlinie/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1.0,
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/zuid-holland/nieuwerkerk-aan-den-ijssel/",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 2.0,
+      "quality_score": 89
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/genthin/",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 2.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/neftenbach-dorf-neftenbach/",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 2.0,
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/niederhasli/",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 2.0,
+      "quality_score": 58
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/corlaer/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/en/locations/netherlands/zuid-holland/hoogmade/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/rosenberg/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/bayern/bockhorn/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/hessen/felsberg/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/bad-duerkheim/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0,
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/horgen-allmend/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0,
+      "quality_score": 58
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/meissenheim/",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 3.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/en/locations/denmark/midtjylland/skjern/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 3.0,
+      "quality_score": 58
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/hunnerberg/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 3.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/en/locations/switzerland/bern/muenchenbuchsee/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 3.0,
+      "quality_score": 58
+    },
+    {
+      "url": "/standorte/bayern/bad-windsheim/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 3.0,
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/finningen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 3.0,
+      "quality_score": 65
+    },
+    {
+      "url": "/standorte/bayern/guenzburg/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 3.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/bayern/winterhausen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 3.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/hessen/kuenzell/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 3.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/adliswil-oberleimbach/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 3.0,
+      "quality_score": 58
+    },
+    {
+      "url": "/standorte/niedersachsen/walsrode/",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 4.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/renkum/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/en/locations/netherlands/limburg/nieuw-bergen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/standorte/bayern/baunach/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/bayern/weissenhorn/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/hessen/moerfelden-walldorf/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/moenchhagen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/bad-sassendorf/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4.0,
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/weingarten/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/winningen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/kloetze/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/en/locations/luxembourg/remich/schengen/",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 5.0,
+      "quality_score": 55
+    },
+    {
+      "url": "/en/locations/netherlands/drenthe/zuidlaren/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 5.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/en/locations/netherlands/limburg/maastricht/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 5.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/cranendonck/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 5.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/gerwen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 5.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/broek-in-waterland/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 5.0,
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/overijssel/dalfsen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 5.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/en/locations/netherlands/overijssel/heino/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 5.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/wettswil-wettswil-dorf/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 5.0,
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/bayern/westendorf-097/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 5.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/daenemark/midtjylland/struer/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 5.0,
+      "quality_score": 57
+    },
+    {
+      "url": "/standorte/niederlande/friesland/balk/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 5.0,
+      "quality_score": 58
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/kloten-hostrass/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 5.0,
+      "quality_score": 58
+    },
+    {
+      "url": "/en/locations/netherlands/utrecht/schoonrewoerd/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 6.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/en/locations/switzerland/solothurn/zuchwil/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 6.0,
+      "quality_score": 58
+    },
+    {
+      "url": "/en/locations/switzerland/st-gallen/niederhelfenschwil/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 6.0,
+      "quality_score": 53
+    },
+    {
+      "url": "/en/locations/switzerland/vaud/la-chaux/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 6.0,
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/buchenbach/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 6.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/laupheim/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 6.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/schleswig-holstein/kayhude/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 6.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/en/locations/denmark/hovedstaden/lilleroed/",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 7.0,
+      "quality_score": 58,
+      "seen_as": [
+        "/en/locations/denmark/hovedstaden/liller-d/"
+      ]
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/heerde/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 7.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/oud-gastel/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 7.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/den-burg/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 7.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/veltheim-kreis-5-rosenberg/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 7.0,
+      "quality_score": 89
+    },
+    {
+      "url": "/standorte/bayern/dietfurt/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 7.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/niederlande/noord-brabant/steenbergen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 7.0,
+      "quality_score": 58
+    },
+    {
+      "url": "/standorte/niederlande/zuid-holland/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 7.0,
+      "quality_score": 39
+    },
+    {
+      "url": "/standorte/niedersachsen/bovenden/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 7.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/wetzikon/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 7.0,
+      "quality_score": 58
+    },
+    {
+      "url": "/en/locations/denmark/sjaelland/nykoebing-falster/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 8.0,
+      "quality_score": 59,
+      "seen_as": [
+        "/en/locations/denmark/sj-lland/nyk-bing-falster/"
+      ]
+    },
+    {
+      "url": "/en/locations/netherlands/flevoland/lelystad/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 8.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/aalst/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 8.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/raamsdonksveer/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 8.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/empfingen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 8.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/bayern/coburg/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 8.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/bayern/essenbach/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 8.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/thueringen/weimar/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 8.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/en/locations/denmark/sjaelland/noerre-alslev/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 9.0,
+      "quality_score": 59,
+      "seen_as": [
+        "/en/locations/denmark/sj-lland/n-rre-alslev/"
+      ]
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/seuzach-dorf-breite-weid/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 9.0,
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/luxembourg/grevenmacher/betzdorf/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 10.0,
+      "quality_score": 58
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/naastenbest/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 10.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/en/locations/netherlands/zeeland/vlissingen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 10.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/en/locations/switzerland/solothurn/kleinluetzel/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 10.0,
+      "quality_score": 58
+    },
+    {
+      "url": "/standorte/brandenburg/beelitz/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 10.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/bedburg/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 10.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/greifensee-muellerwis-seilerwis/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 10.0,
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/wetzikon-kempten/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 10.0,
+      "quality_score": 58
+    },
+    {
+      "url": "/en/locations/netherlands/limburg/elsloo/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 11.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/genderen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 11.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/standorte/bayern/burgsinn/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 11.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/bayern/priesendorf/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 11.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/sachsen/grimma/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 11.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/kloten-freienberg-chanzler-chlini-chaseren/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 11.0,
+      "quality_score": 81
+    },
+    {
+      "url": "/standorte/niederlande/gelderland/nijkerk/",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 12.0,
+      "quality_score": 58
+    },
+    {
+      "url": "/en/locations/netherlands/friesland/twijzel/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 12.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/rheden/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 12.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/en/locations/netherlands/limburg/malberg/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 12.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/hilversum/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 12.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/standorte/bayern/fuchsmuehl/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 12.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/schweiz/graubuenden/thusis/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 12.0,
+      "quality_score": 57
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/doornspijk/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 13.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/elburg/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 13.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/amstelveen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 13.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/standorte/bayern/heidenheim/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 13.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/bayern/schweinfurt/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 13.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/standorte/niederlande/noord-holland/limmen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 13.0,
+      "quality_score": 58
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/heiloo/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 14.0,
+      "quality_score": 59
+    },
+    {
+      "url": "/en/locations/switzerland/neuchatel/auvernier/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 14.0,
+      "quality_score": 58
+    },
+    {
+      "url": "/standorte/bayern/grossenseebach/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 14.0,
+      "quality_score": 64
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/heerewaarden/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 15.0,
+      "quality_score": 59
+    }
+  ],
+  "entries": [
+    {
+      "url": "/standorte/baden-wuerttemberg/neuhausen-auf-den-fildern/",
+      "status": "approved",
+      "quality_score": 95
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/sankt-georgen-im-schwarzwald/",
+      "status": "approved",
+      "quality_score": 95
+    },
+    {
+      "url": "/standorte/bayern/bad-berneck-im-fichtelgebirge/",
+      "status": "approved",
+      "quality_score": 95
+    },
+    {
+      "url": "/standorte/bayern/bad-koenigshofen-im-grabfeld/",
+      "status": "approved",
+      "quality_score": 95
+    },
+    {
+      "url": "/standorte/bayern/sankt-leonhard-am-wonneberg/",
+      "status": "approved",
+      "quality_score": 95
+    },
+    {
+      "url": "/standorte/bayern/sondheim-vor-der-rhoen/",
+      "status": "approved",
+      "quality_score": 95
+    },
+    {
+      "url": "/standorte/hessen/bad-homburg-vor-der-hoehe/",
+      "status": "approved",
+      "quality_score": 95
+    },
+    {
+      "url": "/standorte/hessen/bad-soden-am-taunus/",
+      "status": "approved",
+      "quality_score": 95
+    },
+    {
+      "url": "/standorte/hessen/rosbach-vor-der-hoehe/",
+      "status": "approved",
+      "quality_score": 95
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/bad-muenster-am-stein-ebernburg/",
+      "status": "approved",
+      "quality_score": 95
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/landau-in-der-pfalz/",
+      "status": "approved",
+      "quality_score": 95
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/allmersbach-im-tal/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/au-am-rhein/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/buchen-in-odenwald/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/dettingen-unter-teck/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/eningen-unter-achalm/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/gutach-im-breisgau/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/haslach-im-kinzigtal/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/kirchheim-unter-teck/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/koenigsfeld-im-schwarzwald/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/schoenau-im-schwarzwald/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/schonach-im-schwarzwald/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/stetten-am-kalten-markt/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/weil-der-stadt/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/weil-im-schoenbuch/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/zell-im-wiesental/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/zell-unter-aichelberg/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/zimmern-ob-rottweil/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/altdorf-bei-nuernberg/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/alzenau-in-unterfranken/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/aschau-am-inn/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/aschau-im-chiemgau/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/au-in-der-hallertau/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/aura-im-sinngrund/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/berg-im-gau/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/furth-im-wald/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/grafing-bei-muenchen/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/grossreuth-bei-schweinau/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/haag-in-oberbayern/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/hoechstaedt-bei-thiersheim/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/hofheim-in-unterfranken/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/immenstadt-im-allgaeu/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/kempten-allgaeu/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/kirchdorf-am-inn/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/kirchheim-bei-muenchen/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/kraiburg-am-inn/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/neufahrn-bei-freising/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/neuhaus-am-inn/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/neumarkt-in-der-oberpfalz/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/neunburg-vorm-wald/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/neustadt-bei-coburg/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/nussdorf-am-inn/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/oettingen-in-bayern/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/ottobrunn-bei-muenchen/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/pullach-im-isartal/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/reit-im-winkl/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/rothenburg-ob-der-tauber/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/sachsen-bei-ansbach/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/schwandorf-in-bayern/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/simbach-am-inn/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/thundorf-in-unterfranken/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/toeging-am-inn/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/wasserburg-am-inn/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/weidhausen-bei-coburg/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/weissenburg-in-bayern/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/bayern/zell-im-fichtelgebirge/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/brandenburg/bernau-bei-berlin/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/brandenburg/frankfurt-oder/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/brandenburg/schwedt-oder/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/hamburg/st-georg/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/hamburg/st-pauli/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/hessen/hoechst-im-odenwald/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/hessen/koenigstein-im-taunus/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/hessen/neustadt-hessen/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/bergen-auf-ruegen/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/elmenhorst-lichtenhagen/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/niedersachsen/alt-lehndorf/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/niedersachsen/am-hagenring/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/niedersachsen/auf-der-horst/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/niedersachsen/bad-grund/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/niedersachsen/bad-lauterberg-im-harz/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/niedersachsen/bad-muender-am-deister/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/niedersachsen/bei-der-hoehne/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/niedersachsen/brake-unterweser/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/niedersachsen/buchholz-in-der-nordheide/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/niedersachsen/hagen-im-bremischen/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/niedersachsen/isernhagen-farster-bauerschaft/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/niedersachsen/petritor-nord/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/niedersachsen/petritor-ost/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/niedersachsen/petritor-west/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/niedersachsen/querum-wabenkamp/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/niedersachsen/ruehme-lincolnsdlg/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/niedersachsen/ruehme-vorwerksdlg/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/niedersachsen/schuntersdlg-west/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/niedersachsen/wilhelmitor-nord/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/niedersachsen/wilhelmitor-sued/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/hennef-sieg/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/hamm-sieg/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/heuchelheim-bei-frankenthal/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/langenbach-bei-marienberg/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/niederkirchen-bei-deidesheim/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/rhodt-unter-rietburg/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/burg-bei-magdeburg/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/haldensleben-i/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/halle-saale/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/sachsen/neukirch-lausitz/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/sachsen/neustadt-in-sachsen/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/schleswig-holstein/burg-auf-fehmarn/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/schleswig-holstein/neustadt-in-holstein/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/schleswig-holstein/oldenburg-in-holstein/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/schleswig-holstein/schuelp-bei-rendsburg/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/schleswig-holstein/wentorf-bei-hamburg/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/schleswig-holstein/wyk-auf-foehr/",
+      "status": "approved",
+      "quality_score": 94
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/au/",
+      "status": "approved",
+      "quality_score": 93
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/lauterbach-schwarzwald/",
+      "status": "approved",
+      "quality_score": 93
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/muenstertal-schwarzwald/",
+      "status": "approved",
+      "quality_score": 93
+    },
+    {
+      "url": "/standorte/niedersachsen/freiburg-elbe/",
+      "status": "approved",
+      "quality_score": 93
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/neustadt-nord/",
+      "status": "approved",
+      "quality_score": 93
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/neustadt-sued/",
+      "status": "approved",
+      "quality_score": 93
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/nienburg-saale/",
+      "status": "approved",
+      "quality_score": 93
+    },
+    {
+      "url": "/standorte/sachsen/reichenbach-vogtland/",
+      "status": "approved",
+      "quality_score": 93
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/egmond-aan-den-hoef/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/ouderkerk-aan-de-amstel/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/netherlands/utrecht/loenen-aan-de-vecht/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/netherlands/zeeland/nieuw-en-sint-joosland/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/netherlands/zuid-holland/alphen-aan-den-rijn/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/netherlands/zuid-holland/capelle-aan-den-ijssel/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/netherlands/zuid-holland/katwijk-aan-den-rijn/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/netherlands/zuid-holland/krimpen-aan-den-ijssel/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/netherlands/zuid-holland/nieuwerbrug-aan-den-rijn/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/netherlands/zuid-holland/ouderkerk-aan-den-ijssel/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/elgg-staedtchen-und-umgebung/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/erlenbach-links-des-dorfbachs-oberhalb-bahnlinie/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/erlenbach-rechts-des-dorfbachs-oberhalb-bahnlinie/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/greifensee-muellerwis-seilerwis/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/horgen-horgen-dorfkern/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/kloten-kloten-zentrum/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/kollbrunn-kollbrunn-dorfkern/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/mattenbach-kreis-7-deutweg/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/mattenbach-kreis-7-endliker/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/mattenbach-kreis-7-gutschick/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/mattenbach-kreis-7/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/naenikon-naenikon-dorfkern/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/neftenbach-dorf-neftenbach/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/oberwinterthur-kreis-2-guggenbuehl/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/oberwinterthur-kreis-2-hegi/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/oberwinterthur-kreis-2-talacker/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/oberwinterthur-kreis-2-zinzikon/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/ruemlang-ruemlang-dorfkern/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/rueti-dorfzentrum-suedl-teil/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/seen-kreis-3-bueelwiesen/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/seen-kreis-3-ganzenbuehl/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/seen-kreis-3-oberseen/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/seen-kreis-3-waldegg/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/seen-kreis-3-waser/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/seen-kreis-3/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/seuzach-dorf-breite-weid/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/seuzach-seuzach-dorf/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/stadt-winterthur-kreis-1-altstadt/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/stadt-winterthur-kreis-1-bruehlberg/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/stadt-winterthur-kreis-1-heiligberg/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/stadt-winterthur-kreis-1-lind/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/stadt-winterthur-kreis-1-neuwiesen/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/stadt-winterthur-kreis-1-toessfeld/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/stadt-winterthur-kreis-1/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/toess-kreis-4-eichliacker/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/toess-kreis-4-schlosstal/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/toess-kreis-4-vorder-daettnau/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/veltheim-kreis-5-blumenau/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/volketswil-volketswil-dorf/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/waedenswil-dorf-waedenswil/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/wiesendangen-wiesendangen-dorf/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/wuelflingen-kreis-6-haerti/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/wuelflingen-kreis-6-lindenplatz/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/wuelflingen-kreis-6-niederfeld/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/wuelflingen-kreis-6-oberfeld/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/wuelflingen-kreis-6/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-1-city/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-1-lindenhof/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-1-rathaus/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-10-hoengg/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-10-ruetihof/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-10-wipkingen/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-10/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-11-affoltern/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-11-oerlikon/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-11-schwandenholz/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-11-seebach/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-12-auzelg/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-12-hirzenbach/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-12-saatlen/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-12-schwamendingen-mitte/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-2-enge/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-2-mittel-leimbach/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-2-unter-leimbach/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-2-wollishofen/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-3-alt-wiedikon/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-3-friesenberg/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-3-sihlfeld/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-4-aussersihl/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-4-hard/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-4-langstrasse/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-4-werd/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-5-escher-wyss/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-5-gewerbeschule/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-5/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-6-oberstrass/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-6-unterstrass/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-7-fluntern/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-7-hirslanden/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-7-hottingen/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-7-witikon/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-8-muehlebach/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-8-seefeld/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-8-weinegg/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-9-albisrieden/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-9-altstetten/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/standorte/bayern/lauf-an-der-pegnitz/",
+      "status": "approved",
+      "quality_score": 89
+    },
+    {
+      "url": "/en/locations/denmark/hovedstaden/indre-by/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/denmark/syddanmark/thuroe-by/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/drenthe/de-loo/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/drenthe/de-wijk/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/friesland/de-domp/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/friesland/de-drait/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/friesland/de-greiden/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/friesland/de-knipe/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/friesland/de-westereen/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/beek-gem-montferland/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/berg-en-bos/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/berg-en-dal/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/de-bouwhof/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/de-haven/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/de-heeze/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/de-mheen/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/s-heerenberg/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/t-harde/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/t-loo/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/groningen/de-wijert/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/limburg/de-heeg/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/bergen-op-zoom/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/de-blaak/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/de-doornakkers/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/de-kruiskamp/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/de-reit/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/de-rompert/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/loon-op-zand/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/muschberg-en-geestenberg/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/s-gravenmoer/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/s-hertogenbosch/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/son-en-breugel/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/t-hofke/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/broek-op-langedijk/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/de-glip/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/de-goorn/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/de-koog/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/de-kwakel/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/de-maer/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/de-noord/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/de-rijp/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/egmond-aan-zee/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/t-veld/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/t-zand/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/wijk-aan-zee/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/overijssel/de-hoven/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/utrecht/bosch-en-duin/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/utrecht/de-bilt/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/utrecht/de-hagen/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/utrecht/de-meern/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/utrecht/de-uithof/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/utrecht/oog-in-al/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/utrecht/op-buuren/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/utrecht/wijk-bij-duurstede/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/zeeland/sas-van-gent/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/zuid-holland/berkel-en-rodenrijs/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/zuid-holland/de-kieviet/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/zuid-holland/de-lier/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/zuid-holland/de-peulen/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/zuid-holland/hoek-van-holland/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/zuid-holland/katwijk-aan-zee/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/zuid-holland/kop-van-zuid/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/zuid-holland/s-gravendeel/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/zuid-holland/s-gravenland/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/netherlands/zuid-holland/s-gravenzande/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/aargau/lauffohr-brugg/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/bern/aeschi-b-spiez/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/bern/biel-bienne/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/bern/busswil-bei-melchnau/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/bern/erlenbach-im-simmental/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/bern/la-neuveville/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/bern/rueti-bei-lyssach/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/bern/walliswil-bei-niederbipp/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/bern/wangen-an-der-aare/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/fribourg/la-roche/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/fribourg/la-tour-de-treme/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/fribourg/murten-morat/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/geneve/le-grand-saconnex/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/graubuenden/la-punt-chamues-ch/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/graubuenden/santa-maria-in-calanca/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/graubuenden/st-moritz/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/jura/le-noirmont/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/neuchatel/la-chaux-de-fonds/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/neuchatel/le-landeron/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/neuchatel/le-locle/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/st-gallen/au/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/st-gallen/haag-rheintal/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/thurgau/rickenbach-bei-wil/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/ticino/castel-san-pietro/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/ticino/riva-san-vitale/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/valais-wallis/chermignon-d-en-haut/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/vaud/l-abbaye/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/vaud/la-sarraz/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/vaud/la-tour-de-peilz/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/vaud/le-mont-sur-lausanne/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/vaud/le-vaud/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/aeugst-am-albis/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/affoltern-am-albis/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/au-mittel-dorf/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/au-unter-dorf/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/au/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/daellikon-daellikon-dorf/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/dietlikon-dietlikon-dorf/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/embrach-embrach-dorfkern/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/glattbrugg-rohr-platten-balsberg/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/glattbrugg-wydacker-bettacker-laettenwiesen/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/grossacker-opfikon/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/hittnau-hittnau-dorf/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/kilchberg-kilchberg-dorfkern/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/kindhausen-kindhausen-dorf/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/langnau-am-albis/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/langnau-langnau-dorf/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/niederglatt-niederglatt-dorfkern/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/oberglatt-oberglatt-dorfkern/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/oberwinterthur-kreis-2/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/pfaeffikon-pfaeffikon-dorfkern/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/richterswil-richterswil-dorfkern/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/rueti-westlicher-dorfteil/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/tann-tann-dorfkern/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/toess-kreis-4/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/veltheim-kreis-5/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-1/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-11/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-12/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-2/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-3/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-6/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-7/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-8/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/zuerich-kreis-9/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/immenstaad-am-bodensee/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/kressbronn-am-bodensee/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/hamburg/kleiner-grasbrook/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/krakow-am-see/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/plau-am-see/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/niederlande/zuid-holland/capelle-aan-den-ijssel/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/niederlande/zuid-holland/krimpen-aan-den-ijssel/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/niederlande/zuid-holland/nieuwerkerk-aan-den-ijssel/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/niederlande/zuid-holland/ouderkerk-aan-den-ijssel/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/niedersachsen/eisdorf-am-harz/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/niedersachsen/herzberg-am-harz/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/niedersachsen/osterode-am-harz/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/adliswil-adliswil-stadtkern/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/dietlikon-dietlikon-dorf/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/elgg-staedtchen-und-umgebung/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/erlenbach-links-des-dorfbachs-oberhalb-bahnlinie/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/hittnau-hittnau-dorf/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/horgen-horgen-dorfkern/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/kilchberg-kilchberg-dorfkern/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/kindhausen-kindhausen-dorf/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/kloten-kloten-zentrum/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/kollbrunn-kollbrunn-dorfkern/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/langnau-langnau-dorf/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/mattenbach-kreis-7-deutweg/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/mattenbach-kreis-7-endliker/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/mattenbach-kreis-7-gutschick/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/mattenbach-kreis-7/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/naenikon-naenikon-dorfkern/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/oberwinterthur-kreis-2-guggenbuehl/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/oberwinterthur-kreis-2-hegi/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/oberwinterthur-kreis-2-talacker/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/oberwinterthur-kreis-2-zinzikon/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/pfaeffikon-pfaeffikon-dorfkern/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/richterswil-richterswil-dorfkern/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/ruemlang-ruemlang-dorfkern/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/rueti-dorfzentrum-suedl-teil/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/rueti-westlicher-dorfteil/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/seen-kreis-3-bueelwiesen/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/seen-kreis-3-ganzenbuehl/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/seen-kreis-3-oberseen/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/seen-kreis-3-waldegg/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/seen-kreis-3-waser/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/seen-kreis-3/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/seuzach-seuzach-dorf/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/stadt-winterthur-kreis-1-altstadt/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/stadt-winterthur-kreis-1-bruehlberg/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/stadt-winterthur-kreis-1-heiligberg/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/stadt-winterthur-kreis-1-lind/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/stadt-winterthur-kreis-1-neuwiesen/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/stadt-winterthur-kreis-1-toessfeld/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/stadt-winterthur-kreis-1/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/tann-tann-dorfkern/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/toess-kreis-4-eichliacker/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/toess-kreis-4-schlosstal/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/toess-kreis-4-vorder-daettnau/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/toess-kreis-4/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/veltheim-kreis-5-blumenau/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/veltheim-kreis-5-rosenberg/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/veltheim-kreis-5/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/volketswil-volketswil-dorf/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/waedenswil-dorf-waedenswil/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/wiesendangen-wiesendangen-dorf/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/wuelflingen-kreis-6-haerti/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/wuelflingen-kreis-6-lindenplatz/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/wuelflingen-kreis-6-niederfeld/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/wuelflingen-kreis-6-oberfeld/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/wuelflingen-kreis-6/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-1-city/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-1-lindenhof/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-1-rathaus/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-1/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-10-hoengg/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-10-ruetihof/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-10-wipkingen/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-10/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-11-affoltern/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-11-oerlikon/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-11-schwandenholz/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-11-seebach/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-11/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-12-auzelg/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-12-hirzenbach/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-12-saatlen/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-12-schwamendingen-mitte/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-12/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-2-enge/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-2-mittel-leimbach/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-2-unter-leimbach/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-2-wollishofen/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-3-alt-wiedikon/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-3-friesenberg/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-3-sihlfeld/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-3/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-4-aussersihl/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-4-hard/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-4-langstrasse/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-4-werd/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-5-escher-wyss/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-5-gewerbeschule/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-5/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-6-oberstrass/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-6-unterstrass/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-6/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-7-fluntern/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-7-hirslanden/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-7-hottingen/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-7-witikon/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-8-muehlebach/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-8-seefeld/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-8-weinegg/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-8/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-9-albisrieden/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-9-altstetten/",
+      "status": "approved",
+      "quality_score": 88
+    },
+    {
+      "url": "/en/locations/denmark/midtjylland/ry/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/daenemark/hovedstaden/indre-by/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/daenemark/midtjylland/ry/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/daenemark/syddanmark/thuroe-by/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/drenthe/de-loo/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/drenthe/de-wijk/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/friesland/de-domp/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/friesland/de-drait/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/friesland/de-greiden/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/friesland/de-knipe/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/friesland/de-westereen/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/gelderland/beek-gem-montferland/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/gelderland/berg-en-bos/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/gelderland/berg-en-dal/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/gelderland/de-bouwhof/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/gelderland/de-haven/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/gelderland/de-heeze/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/gelderland/de-mheen/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/gelderland/s-heerenberg/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/gelderland/t-harde/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/gelderland/t-loo/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/groningen/de-wijert/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/limburg/de-heeg/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/noord-brabant/bergen-op-zoom/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/noord-brabant/de-blaak/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/noord-brabant/de-doornakkers/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/noord-brabant/de-kruiskamp/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/noord-brabant/de-reit/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/noord-brabant/de-rompert/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/noord-brabant/loon-op-zand/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/noord-brabant/muschberg-en-geestenberg/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/noord-brabant/s-gravenmoer/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/noord-brabant/s-hertogenbosch/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/noord-brabant/son-en-breugel/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/noord-brabant/t-hofke/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/noord-holland/broek-in-waterland/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/noord-holland/broek-op-langedijk/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/noord-holland/de-glip/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/noord-holland/de-goorn/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/noord-holland/de-koog/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/noord-holland/de-kwakel/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/noord-holland/de-maer/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/noord-holland/de-noord/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/noord-holland/de-rijp/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/noord-holland/egmond-aan-den-hoef/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/noord-holland/egmond-aan-zee/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/noord-holland/ouderkerk-aan-de-amstel/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/noord-holland/t-veld/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/noord-holland/t-zand/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/noord-holland/wijk-aan-zee/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/overijssel/de-hoven/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/utrecht/bosch-en-duin/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/utrecht/de-bilt/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/utrecht/de-hagen/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/utrecht/de-meern/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/utrecht/de-uithof/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/utrecht/loenen-aan-de-vecht/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/utrecht/oog-in-al/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/utrecht/op-buuren/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/utrecht/wijk-bij-duurstede/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/zeeland/nieuw-en-sint-joosland/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/zeeland/sas-van-gent/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/zuid-holland/alphen-aan-den-rijn/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/zuid-holland/berkel-en-rodenrijs/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/zuid-holland/de-kieviet/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/zuid-holland/de-lier/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/zuid-holland/de-peulen/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/zuid-holland/hoek-van-holland/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/zuid-holland/katwijk-aan-den-rijn/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/zuid-holland/katwijk-aan-zee/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/zuid-holland/kop-van-zuid/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/zuid-holland/nieuwerbrug-aan-den-rijn/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/zuid-holland/s-gravendeel/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/zuid-holland/s-gravenland/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/niederlande/zuid-holland/s-gravenzande/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/aargau/lauffohr-brugg/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/bern/aeschi-b-spiez/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/bern/biel-bienne/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/bern/busswil-bei-melchnau/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/bern/erlenbach-im-simmental/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/bern/la-neuveville/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/bern/rueti-bei-lyssach/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/bern/walliswil-bei-niederbipp/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/bern/wangen-an-der-aare/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/fribourg/la-roche/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/fribourg/la-tour-de-treme/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/fribourg/murten-morat/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/geneve/le-grand-saconnex/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/graubuenden/la-punt-chamues-ch/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/graubuenden/santa-maria-in-calanca/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/graubuenden/st-moritz/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/jura/le-noirmont/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/neuchatel/la-chaux-de-fonds/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/neuchatel/le-landeron/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/neuchatel/le-locle/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/st-gallen/au/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/thurgau/rickenbach-bei-wil/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/ticino/castel-san-pietro/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/ticino/riva-san-vitale/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/valais-wallis/chermignon-d-en-haut/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/vaud/l-abbaye/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/vaud/la-chaux/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/vaud/la-sarraz/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/vaud/la-tour-de-peilz/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/vaud/le-mont-sur-lausanne/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/vaud/le-vaud/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/aeugst-am-albis/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/affoltern-am-albis/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/au-mittel-dorf/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/au-unter-dorf/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/au/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/daellikon-daellikon-dorf/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/embrach-embrach-dorfkern/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/glattbrugg-rohr-platten-balsberg/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/glattbrugg-wydacker-bettacker-laettenwiesen/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/grossacker-opfikon/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/langnau-am-albis/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/niederglatt-niederglatt-dorfkern/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/oberglatt-oberglatt-dorfkern/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/oberwinterthur-kreis-2/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/wettswil-wettswil-dorf/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-2/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-7/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich-kreis-9/",
+      "status": "approved",
+      "quality_score": 87
+    },
+    {
+      "url": "/en/locations/switzerland/schaffhausen/stein-am-rhein/",
+      "status": "approved",
+      "quality_score": 85
+    },
+    {
+      "url": "/en/locations/switzerland/vaud/le-chenit/",
+      "status": "approved",
+      "quality_score": 84
+    },
+    {
+      "url": "/standorte/schweiz/schaffhausen/stein-am-rhein/",
+      "status": "approved",
+      "quality_score": 84
+    },
+    {
+      "url": "/standorte/schweiz/vaud/le-chenit/",
+      "status": "approved",
+      "quality_score": 84
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/benningen-am-neckar/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/biberach-an-der-riss/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/bissingen-an-der-teck/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/boebingen-an-der-rems/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/breisach-am-rhein/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/buch-am-ahorn/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/dettingen-an-der-erms/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/ebersbach-an-der-fils/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/eutingen-an-der-enz/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/fridingen-an-der-donau/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/geislingen-an-der-steige/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/giengen-an-der-brenz/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/gingen-an-der-fils/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/heidenheim-an-der-brenz/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/hirschberg-an-der-bergstrasse/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/hoefen-an-der-enz/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/horb-am-neckar/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/kirchberg-an-der-iller/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/kirchberg-an-der-jagst/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/kirchberg-an-der-murr/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/kirchheim-am-ries/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/marbach-am-neckar/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/michelbach-an-der-bilz/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/muehlheim-am-bach/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/neuenburg-am-rhein/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/neuenstadt-am-kocher/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/reichenbach-an-der-fils/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/remseck-am-neckar/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/rot-am-see/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/sontheim-an-der-brenz/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/steinheim-an-der-murr/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/sulz-am-neckar/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/sulzbach-an-der-murr/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/vaihingen-an-der-enz/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/weilheim-an-der-teck/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/altenstadt-an-der-waldnaab/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/baechingen-an-der-brenz/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/bernau-am-chiemsee/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/buch-am-buchrain/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/burgkirchen-an-der-alz/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/diessen-am-ammersee/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/dillingen-an-der-donau/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/erlenbach-am-main/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/garching-an-der-alz/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/gemuenden-am-main/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/gstadt-am-chiemsee/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/haag-an-der-amper/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/herrsching-am-ammersee/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/hochstadt-am-main/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/hoechstadt-an-der-aisch/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/hoechstaedt-an-der-donau/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/hohenberg-an-der-eger/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/inning-am-ammersee/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/inning-am-holz/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/kahl-am-main/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/klingenberg-am-main/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/landau-an-der-isar/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/landsberg-am-lech/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/lohr-am-main/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/muhr-am-see/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/murnau-am-staffelsee/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/neuburg-an-der-donau/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/neuhaus-an-der-pegnitz/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/neuhof-an-der-zenn/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/neunkirchen-am-brand/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/neunkirchen-am-main/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/neunkirchen-am-sand/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/neustadt-am-kulm/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/neustadt-am-main/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/neustadt-an-der-aisch/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/neustadt-an-der-donau/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/neustadt-an-der-waldnaab/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/obernburg-am-main/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/pfaffenhofen-an-der-ilm/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/pfaffenhofen-an-der-roth/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/prien-am-chiemsee/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/redwitz-an-der-rodach/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/rieden-an-der-koetz/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/roethenbach-an-der-pegnitz/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/rottenburg-an-der-laaber/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/saal-an-der-saale/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/schoenau-am-koenigssee/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/seehausen-am-staffelsee/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/stoetten-am-auerberg/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/sulzbach-am-main/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/sulzfeld-am-main/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/taching-am-see/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/trostberg-an-der-alz/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/utting-am-ammersee/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/vohburg-an-der-donau/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/waging-am-see/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/woerth-am-main/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/woerth-an-der-donau/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/bayern/woerth-an-der-isar/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/brandenburg/brandenburg-an-der-havel/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/hessen/allendorf-an-der-lahn/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/hessen/allendorf-an-der-lumda/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/hessen/frankfurt-am-main/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/hessen/gemuenden-an-der-wohra/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/hessen/heppenheim-an-der-bergstrasse/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/hessen/hochheim-am-main/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/hessen/limburg-an-der-lahn/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/hessen/marburg-an-der-lahn/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/hessen/muehlheim-am-main/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/hessen/rotenburg-an-der-fulda/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/hessen/schwalbach-am-taunus/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/hessen/steinau-an-der-strasse/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/hessen/steinbach-am-taunus/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/niedersachsen/bergen-an-der-dumme/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/niedersachsen/neuhaus-an-der-oste/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/bingen-am-rhein/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/herxheim-am-berg/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/holzhausen-an-der-haide/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/ingelheim-am-rhein/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/kirchheim-an-der-weinstrasse/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/linz-am-rhein/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/ludwigshafen-am-rhein/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/muenchweiler-an-der-alsenz/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/muenchweiler-an-der-rodalb/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/neustadt-an-der-weinstrasse/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/offenbach-an-der-queich/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/woerth-am-rhein/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/roeblingen-am-see/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/sachsen/sohland-am-rotstein/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/schleswig-holstein/schoenwalde-am-bungsberg/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/thueringen/neuhaus-am-rennweg/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/thueringen/neustadt-am-rennsteig/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/thueringen/neustadt-an-der-orla/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/standorte/thueringen/schmiedefeld-am-rennsteig/",
+      "status": "approved",
+      "quality_score": 83
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/hausen-am-albis-hausen-dorf/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/kloten-freienberg-chanzler-chlini-chaseren/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/freiberg-am-neckar/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/kirchheim-am-neckar/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/lauffen-am-neckar/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/steinheim-am-albuch/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/weil-am-rhein/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/wendlingen-am-neckar/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/bayern/dentlein-am-forst/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/bayern/gmund-am-tegernsee/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/bayern/stockstadt-am-main/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/bayern/zell-am-main/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/berlin/berlin-koepenick/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/berlin/falkenhagener-feld/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/berlin/franzoesisch-buchholz/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/berlin/maerkisches-viertel/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/berlin/prenzlauer-berg/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/berlin/stadtrandsiedlung-malchow/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/hamburg/gross-borstel/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/hamburg/gross-flottbek/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/hessen/hanau-am-main/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/hessen/hofheim-am-taunus/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/hessen/ruedesheim-am-rhein/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/hessen/ruesselsheim-am-main/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/hessen/stockstadt-am-rhein/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/klein-rogahn/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/niedersachsen/gemeinde-friedland/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/niedersachsen/klein-berssen/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/niedersachsen/klein-gusborn/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/niedersachsen/klein-schwuelper/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/niedersachsen/koenigslutter-am-elm/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/niedersachsen/lutter-am-barenberge/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/niedersachsen/schwarzer-berg/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/haltern-am-see/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/klein-reken/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/monheim-am-rhein/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/porz-am-rhein/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/annweiler-am-trifels/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/klein-wanzleben/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/neue-neustadt/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/schleswig-holstein/klein-nordende/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/schleswig-holstein/klein-offenseth-sparrieshoop/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/standorte/schleswig-holstein/klein-roennau/",
+      "status": "approved",
+      "quality_score": 82
+    },
+    {
+      "url": "/en/locations/switzerland/vaud/chateau-d-oex/",
+      "status": "approved",
+      "quality_score": 81
+    },
+    {
+      "url": "/standorte/schweiz/st-gallen/haag-rheintal/",
+      "status": "approved",
+      "quality_score": 81
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/hausen-am-albis-hausen-dorf/",
+      "status": "approved",
+      "quality_score": 81
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/",
+      "status": "approved",
+      "quality_score": 80
+    },
+    {
+      "url": "/standorte/bayern/",
+      "status": "approved",
+      "quality_score": 80
+    },
+    {
+      "url": "/standorte/brandenburg/",
+      "status": "approved",
+      "quality_score": 80
+    },
+    {
+      "url": "/standorte/hessen/",
+      "status": "approved",
+      "quality_score": 80
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/",
+      "status": "approved",
+      "quality_score": 80
+    },
+    {
+      "url": "/standorte/niedersachsen/",
+      "status": "approved",
+      "quality_score": 80
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/",
+      "status": "approved",
+      "quality_score": 80
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/",
+      "status": "approved",
+      "quality_score": 80
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/",
+      "status": "approved",
+      "quality_score": 80
+    },
+    {
+      "url": "/standorte/sachsen/",
+      "status": "approved",
+      "quality_score": 80
+    },
+    {
+      "url": "/standorte/schleswig-holstein/",
+      "status": "approved",
+      "quality_score": 80
+    },
+    {
+      "url": "/standorte/schweiz/vaud/chateau-d-oex/",
+      "status": "approved",
+      "quality_score": 80
+    },
+    {
+      "url": "/standorte/thueringen/",
+      "status": "approved",
+      "quality_score": 80
+    },
+    {
+      "url": "/standorte/niedersachsen/neustadt-am-ruebenberge/",
+      "status": "approved",
+      "quality_score": 79
+    },
+    {
+      "url": "/standorte/bayern/bad-toelz/",
+      "status": "approved",
+      "quality_score": 77
+    },
+    {
+      "url": "/standorte/thueringen/bad-klosterlausnitz/",
+      "status": "approved",
+      "quality_score": 77
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/altes-lager/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/bad-bellingen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/bad-buchau/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/bad-ditzenbach/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/bad-herrenalb/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/bad-liebenzell/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/bad-mergentheim/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/bad-peterstal-griesbach/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/bad-rappenau/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/bad-rippoldsau-schapbach/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/bad-saeckingen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/bad-saulgau/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/bad-schussenried/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/bad-teinach-zavelstein/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/bad-ueberkingen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/bad-urach/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/bad-waldsee/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/bad-wildbad/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/bad-wimpfen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/bad-wurzach/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/sankt-blasien/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/sankt-johann/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/sankt-leon-rot/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/sankt-maergen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/sankt-peter/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/schwaebisch-gmuend/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/schwaebisch-hall/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/stuttgart-feuerbach/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/stuttgart-muehlhausen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/bad-aibling/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/bad-alexandersbad/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/bad-birnbach/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/bad-bocklet/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/bad-brueckenau/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/bad-endorf/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/bad-feilnbach/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/bad-fuessing/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/bad-heilbrunn/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/bad-kissingen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/bad-kohlgrub/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/bad-neualbenreuth/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/bad-reichenhall/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/bad-staffelstein/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/bad-steben/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/bad-wiessee/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/bad-woerishofen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/bayerisch-eisenstein/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/bayerisch-gmain/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/markt-berolzheim/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/markt-bibart/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/markt-einersheim/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/markt-erlbach/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/markt-indersdorf/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/markt-nordheim/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/markt-rettenbach/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/markt-schwaben/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/markt-taschendorf/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/markt-wald/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/neumarkt-sankt-veit/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/sankt-englmar/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bayern/sankt-wolfgang/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/brandenburg/alt-tucheband/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/brandenburg/bad-belzig/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/brandenburg/bad-freienwalde/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/brandenburg/bad-liebenwerda/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/brandenburg/bad-saarow/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/brandenburg/bad-wilsnack/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/brandenburg/gross-koeris/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/brandenburg/gross-kreutz/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/brandenburg/gross-lindow/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/brandenburg/gross-pankow/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/brandenburg/hohen-neuendorf/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/brandenburg/koenigs-wusterhausen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/brandenburg/neu-zauche/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/brandenburg/rietz-neuendorf/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/brandenburg/wendisch-rietz/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bremen/bremen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bremen/bremerhaven/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bremen/burglesum/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/bremen/vegesack/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/hessen/alten-buseck/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/hessen/bad-arolsen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/hessen/bad-camberg/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/hessen/bad-endbach/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/hessen/bad-hersfeld/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/hessen/bad-karlshafen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/hessen/bad-koenig/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/hessen/bad-nauheim/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/hessen/bad-orb/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/hessen/bad-salzschlirf/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/hessen/bad-schwalbach/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/hessen/bad-soden-salmuenster/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/hessen/bad-sooden-allendorf/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/hessen/bad-vilbel/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/hessen/bad-wildungen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/hessen/hessisch-lichtenau/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/hessen/kronberg-tal/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/alt-meteln/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/bad-doberan/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/bad-kleinen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/bad-suelze/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/burg-stargard/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/gross-kiesow/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/gross-laasch/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/gross-miltzow/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/gross-nemerow/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/gross-wokern/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/muehl-rosin/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/muehlen-eichsen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/neu-kaliss/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/ostseebad-binz/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/ostseebad-boltenhagen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/ostseebad-dierhagen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/ostseebad-goehren/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/ostseebad-kuehlungsborn/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/ostseebad-prerow/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/ostseebad-zinnowitz/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/raben-steinfeld/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/seebad-bansin/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/seebad-heringsdorf/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/seeheilbad-graal-mueritz/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/alt-wallmoden/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/altes-hochschulviertel/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/bad-bentheim/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/bad-bevensen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/bad-eilsen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/bad-essen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/bad-fallingbostel/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/bad-gandersheim/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/bad-harzburg/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/bad-iburg/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/bad-laer/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/bad-nenndorf/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/bad-pyrmont/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/bad-rothenfelde/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/bad-sachsa/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/bad-salzdetfurth/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/bad-zwischenahn/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/deutsch-evern/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/gross-ippener/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/gross-munzel/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/gross-oesingen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/gross-twuelpstedt/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/hannoversch-muenden/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/hanstedt-eins/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/hessisch-oldendorf/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/neu-darchau/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/neu-wulmstorf/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/neues-hochschulviertel/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/querumer-forst/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/sankt-andreasberg/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/viewegs-garten/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/niedersachsen/wendisch-evern/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/altstadt-nord/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/altstadt-sud/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/bad-berleburg/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/bad-driburg/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/bad-fredeburg/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/bad-holzhausen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/bad-honnef/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/bad-laasphe/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/bad-lippspringe/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/bad-meinberg/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/bad-muenstereifel/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/bad-oeynhausen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/bad-salzuflen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/bad-wuennenberg/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/bahnhof-reken/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/bergisch-gladbach/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/bonn-hardtberg/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/gross-reken/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/porta-westfalica/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/preussisch-oldendorf/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/sankt-augustin/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/bad-bergzabern/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/bad-breisig/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/bad-ems/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/bad-hoenningen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/bad-kreuznach/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/bad-marienberg/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/bad-neuenahr-ahrweiler/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/bad-sobernheim/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/sankt-goar/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/sankt-goarshausen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/sankt-julian/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/sankt-katharinen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/sankt-martin/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/sankt-sebastian/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/saarland/sankt-ingbert/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/saarland/sankt-wendel/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/bad-bibra/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/bad-duerrenberg/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/bad-koesen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/bad-lauchstaedt/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/bad-schmiedeberg/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/bad-suderode/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/eisleben-lutherstadt/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/gross-ammensleben/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/gross-boernecke/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/gross-quenstedt/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/gross-rodensleben/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/gross-rosenburg/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/gross-santersleben/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/luftkurort-arendsee/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/osternienburger-land/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen/aeussere-neustadt/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen/bad-brambach/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen/bad-dueben/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen/bad-elster/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen/bad-lausick/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen/bad-muskau/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen/bad-schandau/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen/bad-schlema/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen/gross-dueben/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen/kurort-gohrisch/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen/kurort-jonsdorf/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen/kurort-oybin/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen/neustadt-vogtland/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen/sankt-egidien/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/sachsen/stadt-wehlen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/schleswig-holstein/alt-duvenstedt/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/schleswig-holstein/bad-bramstedt/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/schleswig-holstein/bad-oldesloe/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/schleswig-holstein/bad-schwartau/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/schleswig-holstein/bad-segeberg/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/schleswig-holstein/gross-groenau/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/schleswig-holstein/gross-kummerfeld/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/schleswig-holstein/gross-rheide/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/schleswig-holstein/gross-wittensee/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/schleswig-holstein/sankt-margarethen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/schleswig-holstein/sankt-michaelisdonn/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/schleswig-holstein/sankt-peter-ording/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/schleswig-holstein/timmendorfer-strand/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/thueringen/bad-berka/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/thueringen/bad-blankenburg/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/thueringen/bad-frankenhausen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/thueringen/bad-koestritz/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/thueringen/bad-langensalza/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/thueringen/bad-liebenstein/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/thueringen/bad-lobenstein/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/thueringen/bad-salzungen/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/thueringen/bad-sulza/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/thueringen/bad-tennstedt/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/thueringen/heilbad-heiligenstadt/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/thueringen/sankt-gangloff/",
+      "status": "approved",
+      "quality_score": 76
+    },
+    {
+      "url": "/standorte/thueringen/sankt-kilian/",
+      "status": "approved",
+      "quality_score": 76
+    }
+  ]
 }
-
