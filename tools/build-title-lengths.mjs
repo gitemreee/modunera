@@ -58,17 +58,31 @@ const decode = (s) => s.replace(/&amp;/g, "&").replace(/&#39;/g, "'").replace(/&
    the rule for "MODUNERA Ratgeber". */
 const rules = [...POLICY.suffix_rules].sort((a, b) => b.from.length - a.from.length);
 
-function shorten(title) {
+const DROP_MIDDLE = new Set((POLICY.middle_segments_to_drop ?? []).map((s) => s.trim()));
+
+/* Three parts, and the middle one is the same on every page in its language.
+   "Hersteller & Lieferung" is not what anyone types and does not tell this page
+   apart from the next one; it is simply what pushes the place name past the cut.
+   Dropping it takes a location title from 71 characters to 42. */
+function dropMiddle(title) {
+  const parts = title.split("|").map((p) => p.trim());
+  if (parts.length !== 3) return title;
+  if (!DROP_MIDDLE.has(parts[1])) return title;
+  return `${parts[0]} | ${parts[2]}`;
+}
+
+function shorten(rawTitle) {
+  const title = dropMiddle(rawTitle);
   const m = /^(.*?)\s*\|\s*([^|]+)$/.exec(title);
-  if (!m) return null;
+  if (!m) return title === rawTitle ? null : title;
   const body = m[1];
   const suffix = m[2].trim();
   for (const rule of rules) {
     if (suffix !== rule.from) continue;
-    if (rule.only_if_body_has_keyword && !KEYWORD.test(decode(body))) return null;
+    if (rule.only_if_body_has_keyword && !KEYWORD.test(decode(body))) return title === rawTitle ? null : title;
     return `${body} | ${rule.to}`;
   }
-  return null;
+  return title === rawTitle ? null : title;
 }
 
 let indexable = 0;

@@ -15,7 +15,28 @@
     "the source instead, in the generator that composes them.",
     "",
     "og:title carries the same string as <title> on this site, so both are rewritten",
-    "together. The JSON-LD headline is the body without the suffix and is untouched."
+    "together. The JSON-LD headline is the body without the suffix and is untouched.",
+    "",
+    "THE MIDDLE SEGMENT ON LOCATION PAGES",
+    "",
+    "Opening the location gate took the indexable set from 526 pages to 1,707, and",
+    "1,506 of those titles are longer than Google prints. Almost all of them are one",
+    "template with three parts:",
+    "",
+    "  Tiny House in Bad Abbach kaufen | Hersteller & Lieferung | MODUNERA   (71)",
+    "",
+    "The middle part is identical on every location page in its language. It is not",
+    "what anyone types, it does not distinguish this page from the next one, and it",
+    "is what pushes the place name's own title past the cut. Dropping it leaves",
+    "",
+    "  Tiny House in Bad Abbach kaufen | MODUNERA                            (42)",
+    "",
+    "which fits, and leads with the two words the query actually contains. These are",
+    "the pages carrying 22 of the site's 26 clicks, so it is the highest-value title",
+    "change available.",
+    "",
+    "Only the listed middles are dropped, and only when the title has exactly three",
+    "parts. A middle segment that says something specific is left alone."
   ],
   "reviewed_at": "2026-08-19",
   "keyword_required": "tiny\\s*-?\\s*house",
@@ -42,5 +63,20 @@
     }
   ],
   "target_chars": 60,
-  "target_note": "Google truncates on pixel width, not characters, so 60 is an approximation. tools/score-titles.mjs also reports an em width so a short title of wide capitals is not passed by a count that happens to fit."
+  "target_note": "Google truncates on pixel width, not characters, so 60 is an approximation. tools/score-titles.mjs also reports an em width so a short title of wide capitals is not passed by a count that happens to fit.",
+  "middle_segments_to_drop": [
+    "Hersteller & Lieferung",
+    "Hersteller &amp; Lieferung",
+    "Lieferung & Planung",
+    "Lieferung &amp; Planung",
+    "Delivery & planning",
+    "Delivery &amp; planning",
+    "Levering & planning",
+    "Levering &amp; planning",
+    "Levering & planlægning",
+    "Levering &amp; planlægning",
+    "Livraison & planification",
+    "Livraison &amp; planification"
+  ],
+  "middle_segment_note": "Both the raw and the HTML-escaped ampersand are listed, because the title is compared as it appears in the file and the file carries &amp;."
 }
