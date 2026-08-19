@@ -59,6 +59,7 @@ jobs:
           node tools/build-photo-placement.mjs
           node tools/build-image-attrs.mjs
           node tools/build-nordic-redirects.mjs
+          node tools/build-title-lengths.mjs
           node tools/build-content-lastmod.mjs
           node tools/build-seo-governance-v7.mjs
           node tools/build-de-source-block.mjs

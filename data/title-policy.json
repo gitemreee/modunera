@@ -1,0 +1,46 @@
+{
+  "_comment": [
+    "Section 57 and the Search Console numbers behind it. 339 of 526 indexable",
+    "pages carried a <title> longer than Google prints, and 9,273 characters of",
+    "that were boilerplate: 245 pages ended '| MODUNERA Tiny House' (22 characters)",
+    "and 108 ended '| MODUNERA Ratgeber' (20).",
+    "",
+    "The obvious move — strip the words 'Tiny House' from every suffix — is wrong,",
+    "and measuring said so. Of the 245, only 97 already carry the phrase before the",
+    "pipe. On the other 148 the suffix is the only place the keyword appears, and",
+    "removing it would trade a truncation problem for a relevance one.",
+    "",
+    "So the rule is conditional: the suffix is shortened only where the title has",
+    "already said it. The remaining pages keep their keyword and are shortened at",
+    "the source instead, in the generator that composes them.",
+    "",
+    "og:title carries the same string as <title> on this site, so both are rewritten",
+    "together. The JSON-LD headline is the body without the suffix and is untouched."
+  ],
+  "reviewed_at": "2026-08-19",
+  "keyword_required": "tiny\\s*-?\\s*house",
+  "keyword_note": "Matched case-insensitively against the title body, before the final pipe. Written as a pattern so 'Tiny-House-Siedlung' counts.",
+  "suffix_rules": [
+    {
+      "from": "MODUNERA Tiny House",
+      "to": "MODUNERA",
+      "only_if_body_has_keyword": true,
+      "saves": 11
+    },
+    {
+      "from": "MODUNERA Ratgeber",
+      "to": "MODUNERA",
+      "only_if_body_has_keyword": true,
+      "saves": 9,
+      "note": "All 108 of these already name the subject in the body; 'Ratgeber' is a section label, not a search term anyone types."
+    },
+    {
+      "from": "MODUNERA Tiny House Ratgeber",
+      "to": "MODUNERA",
+      "only_if_body_has_keyword": true,
+      "saves": 20
+    }
+  ],
+  "target_chars": 60,
+  "target_note": "Google truncates on pixel width, not characters, so 60 is an approximation. tools/score-titles.mjs also reports an em width so a short title of wide capitals is not passed by a count that happens to fit."
+}
