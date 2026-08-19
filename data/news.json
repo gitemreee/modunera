@@ -1,6 +1,6 @@
 {
   "_comment": "Sourced local news, from READY-TO-APPLY/news-source-registry.json in the V7 pack. Every item is MODUNERA's own analysis of a named public source — no source text is reproduced, no source image is used, and no fact appears here that is not in the cited material. Where the registry marks a figure as needing re-verification the text says so instead of stating it. 'meaning' is explicitly an inference. Each item is reviewed on the interval in the registry; when checked_at passes next_review_at the page says the check is due rather than pretending it is current.",
-  "reviewed_at": "2026-08-14",
+  "reviewed_at": "2026-08-18",
   "review_interval_days": 90,
   "hubs": {
     "de": { "path": "news", "label": "Marktnachrichten", "title": "Tiny House Nachrichten aus den fünf Zielmärkten | MODUNERA Tiny House", "h1": "Was sich in den Zielmärkten wirklich bewegt.", "lead": "Kommunale Projekte, Bauanträge und Planverfahren aus Deutschland, den Niederlanden, Dänemark, Luxemburg und der Schweiz — mit Quelle, Prüfdatum und einer klaren Grenze zwischen Tatsache und Einschätzung." },
@@ -366,6 +366,51 @@
         "meaning": [
           "The value for a buyer is in separating two things that are often conflated. A public demonstrator shows that a municipality can carry an innovative project; it does not show that private tiny houses are generally exempt from authorisation in Luxembourg.",
           "For a private project the route remains prior authorisation from the bourgmestre and conformity with the commune's PAG and PAP. A municipal precedent does not open that route automatically."
+        ]
+      }
+    },
+    {
+      "id": "de-menden-sauerlandstrasse",
+      "country": "DE",
+      "place": "Menden (Sauerland), Nordrhein-Westfalen",
+      "nativeLang": "de",
+      "publisher": "Beteiligungsportal Nordrhein-Westfalen / Stadt Menden (Sauerland)",
+      "sourceUrl": "https://beteiligung.nrw.de/portal/men/beteiligung/themen/1016912",
+      "sourceDate": null,
+      "sourceDateNote": true,
+      "checkedAt": "2026-08-18",
+      "nextReviewAt": "2026-11-16",
+      "status": "planning-participation",
+      "slug": {
+        "de": "menden-sauerlandstrasse-tiny-house-siedlung",
+        "en": "menden-sauerlandstrasse-tiny-house-settlement"
+      },
+      "de": {
+        "title": "Menden (Sauerland): laufendes Beteiligungsverfahren zu einer Tiny-House-Siedlung an der Sauerlandstraße",
+        "summary": "Die Stadt Menden (Sauerland) führt über das Beteiligungsportal Nordrhein-Westfalen ein Verfahren zu einer Tiny-House-Siedlung an der Sauerlandstraße. Das Verfahren steht dort auf aktiv; eine Zahl der Einheiten nennt die Seite nicht.",
+        "what": [
+          "Verfahrensträger ist die Stadt Menden (Sauerland), Neumarkt 5, 58706 Menden. Das Portal führt das Verfahren unter dem Titel „Tiny-House-Siedlung Sauerlandstraße“, mit dem Status aktiv und einem Zeitraum, der am 15.08.2025 beginnt und kein Enddatum trägt.",
+          "Eine Anzahl geplanter Einheiten steht dort nicht. Ebenso wenig Grundstücksgrößen, ein Zeitplan der Umsetzung oder eine Vergabeform. Wir geben diese Angaben nicht an, weil die Quelle sie nicht macht — nicht, weil sie null wären.",
+          "Die Stadt hatte das Vorhaben zuvor selbst angekündigt und für den 10.07.2025 eine Informationsveranstaltung im Ratssaal angesetzt. Auch diese Ankündigung nennt weder Einheitenzahl noch Fertigstellungstermin."
+        ],
+        "meaning": [
+          "Das ist unsere Einordnung, nicht die der Stadt: ein Beteiligungsverfahren ohne Enddatum ist ein Verfahren, das noch läuft. Wer dort einen Platz sucht, richtet sich nach dem Takt der Kommune und nicht nach dem eines Herstellers. Der erste Anruf gilt der Stadt, nicht dem Werk.",
+          "Dass keine Einheitenzahl genannt ist, ist selbst eine Information. Sie heißt: der Zuschnitt steht noch nicht fest. In genau diesem Abschnitt entscheidet sich, welche Maße, Höhen und Anschlüsse später zulässig sind — und das ist der Abschnitt, in dem eine Spezifikation noch anpassbar ist, statt nachträglich passend gemacht zu werden.",
+          "Übertragbar ist der Weg, nicht das Ergebnis. Ein Verfahren gilt für seinen Geltungsbereich. Für jeden anderen Standort in Nordrhein-Westfalen bleibt die Prüfung vor Ort erforderlich."
+        ]
+      },
+      "en": {
+        "title": "Menden (Sauerland): an open participation procedure for a tiny house settlement on Sauerlandstraße",
+        "summary": "The town of Menden (Sauerland) is running a procedure for a tiny house settlement on Sauerlandstraße through the North Rhine-Westphalia participation portal. The portal shows the procedure as active; it states no number of units.",
+        "what": [
+          "The authority conducting the procedure is Stadt Menden (Sauerland), Neumarkt 5, 58706 Menden. The portal lists it under the title „Tiny-House-Siedlung Sauerlandstraße“, with the status active and a period beginning 15.08.2025 and carrying no end date.",
+          "No number of planned units is given there. Neither are plot sizes, an implementation timetable, or how plots would be allocated. We do not state those figures because the source does not — not because they are zero.",
+          "The town had announced the project itself beforehand and scheduled an information event in the council chamber for 10.07.2025. That announcement likewise names no unit count and no completion date."
+        ],
+        "meaning": [
+          "This is our reading, not the town's: a participation procedure with no end date is a procedure still under way. Anyone looking for a plot there moves at the municipality's pace, not a manufacturer's. The first call belongs to the town, not the factory.",
+          "The absence of a unit count is itself information. It says the layout is not settled. This is exactly the stage at which permissible dimensions, heights and connections are decided — and the stage at which a specification can still be shaped, rather than adapted afterwards.",
+          "What transfers is the route, not the outcome. A procedure applies within its own boundary. Any other site in North Rhine-Westphalia still needs its own check."
         ]
       }
     }

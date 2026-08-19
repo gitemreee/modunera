@@ -14,6 +14,7 @@ node tools/build-modunera-depth.mjs       # MD 1–MD 8 in five languages, count
 node tools/build-news-v7.mjs              # sourced local news, five market hubs
 node tools/build-production-faq-v7.mjs    # production, quality, delivery and buying FAQ
 node tools/build-daily-blog.mjs           # the daily practice series at /blog/praxis/
+node tools/build-intelligence-dashboard.mjs   # /intelligence/: market signals, candidates, opportunities
 node tools/build-modunera-v2.mjs          # navigation, comparison pages, guide hubs, cookie notice
 node tools/build-modunera-depth.mjs --extend   # appendix, product word, blocked-claim removal
 node tools/build-quality-spec.mjs         # the twelve component cards on /qualitaet/
@@ -28,6 +29,17 @@ node tools/build-shell-v3.mjs             # floating frame, left rail (runs last
 node tools/validate-modunera.mjs          # gate: canonicals, JSON-LD, links, brand, colours
 node tools/validate-seo-v7.mjs            # gate: claims, sitemap, hreflang, schema, legal
 ```
+
+Two more run on their own schedules rather than inside this order:
+
+```bash
+node tools/market-intelligence.mjs        # the daily European scan; writes data/market-signals.json
+node tools/test-market-intelligence.mjs   # the nineteen tests of section 75
+```
+
+`market-intelligence.mjs` runs *before* the order above, because
+`build-news-v7.mjs` and `build-intelligence-dashboard.mjs` both read what it
+wrote. It is safe to run alone: it touches no HTML.
 
 The four V7 steps run **after** the content pipeline, in that order. They read the
 finished HTML, so running any content generator afterwards undoes them — that is

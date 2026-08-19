@@ -1,0 +1,69 @@
+MODUNERA DAILY INTELLIGENCE REPORT
+
+Date:   2026-08-19
+Run ID: run-2026-08-19-001
+Search provider: not-configured  (NOT CONFIGURED — no scan performed)
+Search Console:  not connected
+
+MARKET SCAN
+
+Deutschland (DE)
+  queries planned: 7   sources checked: 0   signals: 1
+  note: provider not configured
+Nederland (NL)
+  queries planned: 6   sources checked: 0   signals: 0
+  note: provider not configured
+Danmark (DK)
+  queries planned: 6   sources checked: 0   signals: 0
+  note: provider not configured
+Luxembourg (LU)
+  queries planned: 4   sources checked: 0   signals: 0
+  note: provider not configured
+Schweiz / Suisse (CH)
+  queries planned: 5   sources checked: 0   signals: 0
+  note: provider not configured
+
+VERIFIED INBOX
+
+  hand-verified candidates considered: 1
+
+DECISION
+
+  UPDATE_EXISTING_ARTICLE
+  Tiny-House-Siedlung Sauerlandstraße (DE) — the same project is already published; a new URL would split it in two
+  source: https://beteiligung.nrw.de/portal/men/beteiligung/themen/1016912
+  auto-publish news: off  — waiting for a person
+
+RUN COUNTERS (section 72)
+
+  queries planned             28
+  sources visited             0
+  sources accepted            0
+  sources rejected            0
+  projects discovered         0
+  existing projects updated   1
+  tender opportunities        0
+  business leads              0
+  GSC opportunities           0
+  content generated           0
+  content updated             0
+
+REVIEW QUEUE
+
+  nothing due today
+
+STORE
+
+  signals: 1   opportunities: 0   tenders: 0
+  DE  Tiny-House-Siedlung Sauerlandstraße
+      Menden (Sauerland) · PUBLIC_CONSULTATION · score 87 · tier 1 · CREATE_NEWS
+      units: not stated by the source   next review 2026-09-17
+      https://beteiligung.nrw.de/portal/men/beteiligung/themen/1016912
+
+ERRORS
+
+  DE: provider not configured
+  NL: provider not configured
+  DK: provider not configured
+  LU: provider not configured
+  CH: provider not configured

@@ -51,6 +51,7 @@ jobs:
           node tools/build-news-v7.mjs
           node tools/build-production-faq-v7.mjs
           node tools/build-daily-blog.mjs
+          node tools/build-intelligence-dashboard.mjs
           node tools/build-modunera-v2.mjs
           node tools/build-modunera-depth.mjs --extend
           node tools/build-quality-spec.mjs

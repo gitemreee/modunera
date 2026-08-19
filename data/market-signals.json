@@ -1,0 +1,242 @@
+{
+  "_comment": [
+    "Signals, business opportunities and tenders found by tools/market-intelligence.mjs.",
+    "",
+    "Every entry here was read from the source URL it names. Nothing in this file",
+    "is generated, inferred or filled in to make a record look complete: a field",
+    "that the source did not state is null, and it stays null.",
+    "",
+    "A signal is a candidate, not a published page. Publication is a separate,",
+    "deliberate step — see the decision on each run in `runs`."
+  ],
+  "updated_at": "2026-08-19",
+  "runs": [
+    {
+      "runId": "run-2026-08-18-001",
+      "date": "2026-08-18",
+      "startedAt": "2026-08-18T23:43:20.267Z",
+      "provider": "not-configured",
+      "providerConfigured": false,
+      "gsc": "not connected",
+      "markets": {
+        "DE": {
+          "queries": 7,
+          "checked": 0,
+          "accepted": 0,
+          "rejected": 0,
+          "signals": 1,
+          "error": "provider not configured"
+        },
+        "NL": {
+          "queries": 6,
+          "checked": 0,
+          "accepted": 0,
+          "rejected": 0,
+          "signals": 0,
+          "error": "provider not configured"
+        },
+        "DK": {
+          "queries": 6,
+          "checked": 0,
+          "accepted": 0,
+          "rejected": 0,
+          "signals": 0,
+          "error": "provider not configured"
+        },
+        "LU": {
+          "queries": 4,
+          "checked": 0,
+          "accepted": 0,
+          "rejected": 0,
+          "signals": 0,
+          "error": "provider not configured"
+        },
+        "CH": {
+          "queries": 5,
+          "checked": 0,
+          "accepted": 0,
+          "rejected": 0,
+          "signals": 0,
+          "error": "provider not configured"
+        }
+      },
+      "queriesPlanned": 28,
+      "sourcesChecked": 0,
+      "sourcesAccepted": 0,
+      "sourcesRejected": 0,
+      "candidates": 1,
+      "verifiedInboxCandidates": 1,
+      "projectsDiscovered": 0,
+      "existingProjectsUpdated": 1,
+      "tenderOpportunities": 0,
+      "businessLeads": 0,
+      "gscOpportunities": 0,
+      "contentGenerated": 0,
+      "contentUpdated": 0,
+      "decision": "UPDATE_EXISTING_ARTICLE",
+      "decisionWhy": "Tiny-House-Siedlung Sauerlandstraße (DE) — the same project is already published; a new URL would split it in two",
+      "dueForReview": [],
+      "errors": [
+        "DE: provider not configured",
+        "NL: provider not configured",
+        "DK: provider not configured",
+        "LU: provider not configured",
+        "CH: provider not configured"
+      ],
+      "signalsPublished": 1,
+      "decisionSignal": "https://beteiligung.nrw.de/portal/men/beteiligung/themen/1016912",
+      "autoPublish": {
+        "news": false,
+        "blog": false,
+        "guides": false
+      },
+      "awaitingHumanDecision": true,
+      "finishedAt": "2026-08-18T23:43:20.272Z"
+    },
+    {
+      "runId": "run-2026-08-19-001",
+      "date": "2026-08-19",
+      "startedAt": "2026-08-19T00:07:42.659Z",
+      "provider": "not-configured",
+      "providerConfigured": false,
+      "gsc": "not connected",
+      "markets": {
+        "DE": {
+          "queries": 7,
+          "checked": 0,
+          "accepted": 0,
+          "rejected": 0,
+          "signals": 1,
+          "error": "provider not configured"
+        },
+        "NL": {
+          "queries": 6,
+          "checked": 0,
+          "accepted": 0,
+          "rejected": 0,
+          "signals": 0,
+          "error": "provider not configured"
+        },
+        "DK": {
+          "queries": 6,
+          "checked": 0,
+          "accepted": 0,
+          "rejected": 0,
+          "signals": 0,
+          "error": "provider not configured"
+        },
+        "LU": {
+          "queries": 4,
+          "checked": 0,
+          "accepted": 0,
+          "rejected": 0,
+          "signals": 0,
+          "error": "provider not configured"
+        },
+        "CH": {
+          "queries": 5,
+          "checked": 0,
+          "accepted": 0,
+          "rejected": 0,
+          "signals": 0,
+          "error": "provider not configured"
+        }
+      },
+      "queriesPlanned": 28,
+      "sourcesChecked": 0,
+      "sourcesAccepted": 0,
+      "sourcesRejected": 0,
+      "candidates": 1,
+      "verifiedInboxCandidates": 1,
+      "projectsDiscovered": 0,
+      "existingProjectsUpdated": 1,
+      "tenderOpportunities": 0,
+      "businessLeads": 0,
+      "gscOpportunities": 0,
+      "contentGenerated": 0,
+      "contentUpdated": 0,
+      "decision": "UPDATE_EXISTING_ARTICLE",
+      "decisionWhy": "Tiny-House-Siedlung Sauerlandstraße (DE) — the same project is already published; a new URL would split it in two",
+      "dueForReview": [],
+      "errors": [
+        "DE: provider not configured",
+        "NL: provider not configured",
+        "DK: provider not configured",
+        "LU: provider not configured",
+        "CH: provider not configured"
+      ],
+      "signalsPublished": 1,
+      "decisionSignal": "https://beteiligung.nrw.de/portal/men/beteiligung/themen/1016912",
+      "autoPublish": {
+        "news": false,
+        "blog": false,
+        "guides": false
+      },
+      "awaitingHumanDecision": true,
+      "finishedAt": "2026-08-19T00:07:42.664Z"
+    }
+  ],
+  "signals": [
+    {
+      "id": "de-menden-sauerland",
+      "country": "DE",
+      "region": "Nordrhein-Westfalen",
+      "municipality": "Menden (Sauerland)",
+      "type": "MUNICIPAL_TINY_HOUSE_SITE",
+      "title": "Tiny-House-Siedlung Sauerlandstraße",
+      "summary": "Die Stadt Menden (Sauerland) führt auf dem Beteiligungsportal des Landes Nordrhein-Westfalen ein Verfahren zu einer Tiny-House-Siedlung an der Sauerlandstraße. Das Verfahren steht dort seit dem 15.08.2025 auf aktiv, ein Enddatum ist nicht angegeben. Eine Zahl der geplanten Einheiten oder Grundstücke nennt die Seite nicht.",
+      "status": "PUBLIC_CONSULTATION",
+      "statusEvidence": "Beteiligungsportal NRW, Verfahren \"Tiny-House-Siedlung Sauerlandstraße\", Status Aktiv, Zeitraum 15.08.2025 bis –.",
+      "units": null,
+      "authority": "Stadt Menden (Sauerland)",
+      "authorityAddress": "Neumarkt 5, 58706 Menden",
+      "publisher": "Beteiligung NRW / Stadt Menden (Sauerland)",
+      "sourceUrl": "https://beteiligung.nrw.de/portal/men/beteiligung/themen/1016912",
+      "sourceAuthority": 1,
+      "corroboratingSources": [
+        {
+          "url": "https://www.menden.de/aktuelles/detailseite/tiny-house-siedlung-an-der-sauerlandstrasse",
+          "publisher": "Stadt Menden (Sauerland)",
+          "date": "2025-05-22",
+          "states": "Ankündigung, dass an der Sauerlandstraße eine Tiny-House-Siedlung entwickelt werden soll; Informationsveranstaltung am 10.07.2025 im Ratssaal. Keine Einheitenzahl, keine Grundstücksgrößen, kein Fertigstellungstermin genannt."
+        }
+      ],
+      "contactOnSource": "Ein Ansprechpartner der Stadt ist auf der Quellseite genannt; die Kontaktdaten stehen dort und werden hier bewusst nicht kopiert.",
+      "notStatedBySource": [
+        "Anzahl der Einheiten",
+        "Grundstücksgrößen",
+        "Zeitplan der Umsetzung",
+        "Vergabeform"
+      ],
+      "publishedAt": "2025-08-15",
+      "firstSeenAt": "2026-08-18",
+      "lastCheckedAt": "2026-08-19",
+      "nextReviewAt": "2026-09-17",
+      "seoScore": 20,
+      "commercialScore": 30,
+      "score": 87,
+      "scoreParts": {
+        "commercial_relevance": 20,
+        "target_market_relevance": 15,
+        "official_source_authority": 15,
+        "freshness": 2,
+        "search_opportunity": 10,
+        "buyer_usefulness": 10,
+        "uniqueness": 5,
+        "product_relevance": 5,
+        "internal_link_opportunity": 5
+      },
+      "recommendedAction": "CREATE_NEWS",
+      "recommendedWhy": "score 87, tier 1 source, no existing page covers it",
+      "origin": "verified-inbox",
+      "published": true,
+      "publishedUrls": [
+        "/news/menden-sauerlandstrasse-tiny-house-siedlung/",
+        "/en/news/menden-sauerlandstrasse-tiny-house-settlement/"
+      ],
+      "publishedAs": "de-menden-sauerlandstrasse"
+    }
+  ],
+  "opportunities": [],
+  "tenders": []
+}

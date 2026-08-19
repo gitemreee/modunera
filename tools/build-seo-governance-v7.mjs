@@ -11,7 +11,10 @@ const MAX_URLS_PER_SITEMAP = 20_000;
 const INDEX_ROBOTS = "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1";
 const NOINDEX_ROBOTS = "noindex,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1";
 const PRIVATE_ROBOTS = "noindex,nofollow";
-const PRIVATE_PREFIXES = ["/admin-demo/", "/customer-portal/", "/booking/", "/saved-designs/"];
+/* /intelligence/ is the Intelligence screen from sections 62-64. It is generated
+   from data/market-signals.json and is not a search result: noindex,nofollow, out
+   of the sitemap, and linked from nowhere. */
+const PRIVATE_PREFIXES = ["/admin-demo/", "/customer-portal/", "/booking/", "/saved-designs/", "/intelligence/"];
 /* Sweden and Türkiye are not target markets. Both are single legacy pages; they
    stay reachable and keep their links, but they are not search results. */
 const NON_MARKET_PREFIXES = ["/sv/", "/tr/"];

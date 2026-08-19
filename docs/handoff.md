@@ -61,6 +61,7 @@ Break any of these and the work stops being defensible.
 | Location indexing gate | `data/location-index-policy.json` |
 | Social artwork and copy | `social/instagram/` |
 | Social generators | `tools/social/` |
+| Market intelligence engine | `docs/market-intelligence.md` |
 
 ## 4. Traps that have already caught someone
 
@@ -118,6 +119,20 @@ Each of these cost real time. They are listed so they cost it once.
 6. **Production dates**, so a schedule shape can be published. Every competitor
    publishes a lead time; MODUNERA publishes none.
 7. **Italian branch for Switzerland.** Unbuilt extension point, not a fault.
+8. **Search Console, connected.** The site now has impressions and clicks from
+   Germany and nothing is reading them. `docs/market-intelligence.md` §8.
+9. **A search provider key**, if the daily scan is to scan. Same file, §9.
+
+Closed 2026-08-19: *the market intelligence engine*. The daily European scan, its
+store, the `/intelligence/` screen and nineteen tests are in place and running —
+`docs/market-intelligence.md` is the full report. Two limits are worth knowing
+before reading anything else it produces: there is no server, so every database
+model is a JSON file and the admin panel is a generated static page; and there is
+no search-provider key, so the scheduled scan reports `provider: not-configured`
+and decides `NO_PUBLISH` every morning until one is set as a repository secret.
+It says that rather than inventing a scan. One verified finding went through the
+whole path — Stadt Menden (Sauerland), Beteiligung NRW, tier 1, score 87 — and is
+published as `/news/menden-sauerlandstrasse-tiny-house-siedlung/`.
 
 Closed 2026-08-18: *the Drive photographs*. Thirteen photographs from the owner's
 Drive folder are ingested, graded and placed: /factory/ gains two production
