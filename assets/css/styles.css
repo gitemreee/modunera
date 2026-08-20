@@ -2020,15 +2020,24 @@ body{
 
    And the brand goes with it. A reader who screenshots a page halfway down
    should have the name in the shot; a bar that leaves takes the only thing
-   identifying whose page it is. On scroll it gives up some weight rather than
-   the screen: thinner padding, more transparency, the page reading through it. */
-.nav{transition:padding .22s ease, background .22s ease, box-shadow .22s ease}
+   identifying whose page it is.
+
+   IT USED TO SHRINK ON SCROLL, AND THAT WAS THE FAULT
+
+   The bar reduced its padding and scaled the logo to 90 percent as soon as the
+   reader passed 40 pixels. Measured at 1440 the logo went from 52.2 to 47
+   pixels; at 390 from 33.4 to 30.1. Everything to the right of the brand moved
+   with it, so the menu appeared to slide sideways during an ordinary scroll —
+   and it moved back on the way up, twice per visit.
+
+   A navigation bar that changes size while you read is answering a question
+   nobody asked. Only the background still reacts: it gains opacity so the text
+   stays legible over whatever scrolls beneath. Nothing changes geometry. */
+.nav{transition:background .22s ease, box-shadow .22s ease}
 body.scrolled .nav{
   background:rgba(255,255,255,.58);
   box-shadow:0 8px 26px -16px rgba(24,38,28,.34);
 }
-body.scrolled .nav-inner{padding-block:6px}
-body.scrolled .brand img{transform:scale(.9); transform-origin:left center; transition:transform .22s ease}
 @media (max-width:720px){
   .nav{top:8px; left:10px; right:10px; width:auto; transform:none}
 }
@@ -2045,21 +2054,20 @@ body.scrolled .brand img{transform:scale(.9); transform-origin:left center; tran
 @media (max-width:720px){ :root{--bar:76px} }
 body.scrolled .nav{background:rgba(255,255,255,.62)}
 
-/* --- the claim goes down and comes back ----------------------------------
-   Hiding it past 40px was half a behaviour: it left on the way down and only
-   returned at the very top, so a reader who scrolled up two screens to check
-   something got a bar that still looked stripped. It now follows direction —
-   away while descending, back the moment the reader goes up — which is the
-   pattern every reader already knows from a phone's own chrome.
+/* --- the claim stays ------------------------------------------------------
+   It used to collapse on the way down and come back on the way up, following
+   the reader's direction the way a phone's own chrome does. That is a defensible
+   pattern for a system bar and the wrong one for a brand: measured at 390 the
+   claim went from 104.8 pixels wide to 0 during a normal scroll, taking the
+   words Design Your Nature off the page and pulling the menu left as it
+   collapsed. On the way up it pushed everything back.
 
-   Collapsed with max-width and opacity rather than display:none, because a
-   width can be animated and a display cannot, and a claim that pops is worse
-   than a claim that leaves. */
+   The claim is three words. It costs a fraction of a bar that has room for it at
+   every width the site supports, and a reader who screenshots halfway down a
+   page should get the whole brand, not the half that survived the scroll. It
+   stays. overflow and white-space remain so a narrow viewport clips it cleanly
+   instead of wrapping the logo lockup onto two lines. */
 .brand-claim{
   overflow:hidden; white-space:nowrap; max-width:24ch;
-  transition:opacity .22s ease, max-width .3s cubic-bezier(.2,.8,.3,1);
 }
-body.scrolled .brand-claim{opacity:0; max-width:0}
-body.scrolled.scroll-up .brand-claim{opacity:1; max-width:24ch}
-@media (prefers-reduced-motion:reduce){ .brand-claim{transition:opacity .15s ease} }
 /* MODUNERA BRAND PALETTE END */
