@@ -1,27 +1,27 @@
 MODUNERA DAILY INTELLIGENCE REPORT
 
-Date:   2026-08-19
-Run ID: run-2026-08-19-002
-Search provider: not-configured  (NOT CONFIGURED — no scan performed)
+Date:   2026-08-20
+Run ID: run-2026-08-20-001
+Search provider:   (NOT CONFIGURED — no scan performed)
 Search Console:  not connected
 
 MARKET SCAN
 
 Deutschland (DE)
   queries planned: 7   results read: 0   kept: 0   discarded: 0
-  note: MODUNERA_SEARCH_PROVIDER is not set
+  note: no adapter in this build for provider "" (known: brave)
 Nederland (NL)
   queries planned: 6   results read: 0   kept: 0   discarded: 0
-  note: MODUNERA_SEARCH_PROVIDER is not set
+  note: no adapter in this build for provider "" (known: brave)
 Danmark (DK)
   queries planned: 6   results read: 0   kept: 0   discarded: 0
-  note: MODUNERA_SEARCH_PROVIDER is not set
+  note: no adapter in this build for provider "" (known: brave)
 Luxembourg (LU)
   queries planned: 4   results read: 0   kept: 0   discarded: 0
-  note: MODUNERA_SEARCH_PROVIDER is not set
+  note: no adapter in this build for provider "" (known: brave)
 Schweiz / Suisse (CH)
   queries planned: 5   results read: 0   kept: 0   discarded: 0
-  note: MODUNERA_SEARCH_PROVIDER is not set
+  note: no adapter in this build for provider "" (known: brave)
 
 SEARCH CONSOLE (sections 37 and 38)
 
@@ -85,8 +85,8 @@ STORE
 
 ERRORS
 
-  DE: MODUNERA_SEARCH_PROVIDER is not set
-  NL: MODUNERA_SEARCH_PROVIDER is not set
-  DK: MODUNERA_SEARCH_PROVIDER is not set
-  LU: MODUNERA_SEARCH_PROVIDER is not set
-  CH: MODUNERA_SEARCH_PROVIDER is not set
+  DE: no adapter in this build for provider "" (known: brave)
+  NL: no adapter in this build for provider "" (known: brave)
+  DK: no adapter in this build for provider "" (known: brave)
+  LU: no adapter in this build for provider "" (known: brave)
+  CH: no adapter in this build for provider "" (known: brave)
