@@ -1278,6 +1278,13 @@ async function rewriteWhatsapp() {
   for (const file of files) {
     const rel = relative(ROOT, file).replaceAll("\\", "/");
     const original = await readFile(file, "utf8");
+    /* The dock's markup depends on assets/css/styles.css. On a page that does not
+       load that stylesheet — a self-contained study like /demo-apple/ — the
+       injected SVGs render at their intrinsic size, which is the full width of
+       the viewport, three times. Found by loading the demo and looking at it.
+       So the dock goes only where its stylesheet already is; that is a property
+       of the page, not a path list that has to be remembered. */
+    if (!original.includes("assets/css/styles.css")) continue;
     // the page's own declaration, so the Dutch, Danish and French sections stop
     // opening a German panel
     const lang = detectLang(original);

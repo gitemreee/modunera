@@ -1,0 +1,224 @@
+<!doctype html><html lang="de-DE"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MODUNERA — Design-Demo | Tiny House</title><meta name="description" content="Interne Design-Demo: die MODUNERA-Startseite in der Formensprache einer Apple-Produktseite."><meta name="robots" content="noindex,nofollow"><link rel="canonical" href="https://modunera.com/demo-apple/"><link rel="icon" type="image/png" href="../assets/brand/modunera-mark-v1.png">
+<style>
+/* DESIGN-DEMO — die Formensprache einer Apple-Produktseite, auf MODUNERA angewandt.
+
+   Bewusste Entscheidungen, damit die Bewertung fair ist:
+   - Schrift ist der SF-Stack (-apple-system). Das ist hier kein Zufallsgriff zum
+     Systemfont, sondern der Punkt der Übung: SF Pro IST diese Designsprache.
+   - Farbwelt ist Apples Neutralraum (#f5f5f7 / #1d1d1f), als einziger Akzent das
+     Markengrün. Terrakotta markiert "Neu" — die Marke bleibt erkennbar.
+   - Alle Preise, Längen und Aussagen stammen von den bestehenden, geprüften
+     Seiten. Nichts wurde für die Demo erfunden.
+   - Die Seite ist noindex, in keiner Sitemap und nirgends verlinkt. */
+:root{
+  --bg:#f5f5f7; --ink:#1d1d1f; --mut:#6e6e73; --line:#d2d2d7;
+  --green:#3A5A40; --green-deep:#2d4632; --clay:#B3592E;
+  --dark:#000; --dark-ink:#f5f5f7; --dark-mut:#86868b;
+  --sf:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Segoe UI",Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sf);background:var(--bg);color:var(--ink);line-height:1.47;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1024px;margin-inline:auto;padding-inline:22px}
+.wide{max-width:1440px;margin-inline:auto}
+
+/* --- die zwei Leisten -------------------------------------------------- */
+.ap-nav{position:sticky;top:0;z-index:100;background:rgba(251,251,253,.8);backdrop-filter:saturate(1.8) blur(20px);-webkit-backdrop-filter:saturate(1.8) blur(20px);border-bottom:1px solid rgba(0,0,0,.06)}
+.ap-nav .row{max-width:1024px;margin-inline:auto;height:44px;display:flex;align-items:center;gap:32px;padding-inline:22px;font-size:12px;color:#424245}
+.ap-nav .mark{font-weight:600;letter-spacing:.06em;font-size:13px;color:var(--ink)}
+.ap-nav a:hover{color:#000}
+.ap-nav .sp{flex:1}
+.ap-nav .cta{background:var(--green);color:#fff;padding:4px 12px;border-radius:980px;font-size:12px}
+.ap-nav .cta:hover{background:var(--green-deep);color:#fff}
+.localbar{position:sticky;top:44px;z-index:99;background:rgba(255,255,255,.72);backdrop-filter:saturate(1.8) blur(20px);-webkit-backdrop-filter:saturate(1.8) blur(20px);border-bottom:1px solid rgba(0,0,0,.06)}
+.localbar .row{max-width:1024px;margin-inline:auto;height:48px;display:flex;align-items:center;padding-inline:22px}
+.localbar h2{font-size:19px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.localbar .sp{flex:1}
+.localbar .price{font-size:12px;color:var(--mut);margin-right:14px}
+.localbar .buy{background:var(--green);color:#fff;font-size:12px;padding:5px 14px;border-radius:980px}
+.localbar .buy:hover{background:var(--green-deep)}
+
+/* --- Kapitel ------------------------------------------------------------ */
+.chapter{padding:110px 0 0;text-align:center;overflow:hidden}
+.kicker{font-size:17px;font-weight:600;color:var(--clay);margin-bottom:10px}
+h1.mega{font-size:clamp(48px,8vw,96px);font-weight:700;letter-spacing:-.015em;line-height:1.03}
+.chapter h2{font-size:clamp(40px,6vw,80px);font-weight:700;letter-spacing:-.015em;line-height:1.05}
+.sub{font-size:clamp(19px,2.4vw,28px);color:var(--mut);font-weight:500;max-width:720px;margin:18px auto 0}
+.links{display:flex;gap:34px;justify-content:center;margin-top:22px;font-size:19px}
+.links a{color:var(--green);display:inline-flex;align-items:center;gap:5px}
+.links a:hover{text-decoration:underline}
+.links a::after{content:"›";font-size:22px;line-height:1}
+.hero-img{margin-top:54px}
+.hero-img img{width:100%;height:min(72vh,760px);object-fit:cover}
+
+/* Ladeauftritt: gestaffelt, einmal, und bei reduzierter Bewegung gar nicht */
+.rise{opacity:0;transform:translateY(18px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
+.rise.d1{animation-delay:.08s}.rise.d2{animation-delay:.18s}.rise.d3{animation-delay:.3s}.rise.d4{animation-delay:.44s}
+@keyframes rise{to{opacity:1;transform:none}}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rise,.reveal{opacity:1;transform:none;animation:none;transition:none}}
+
+/* --- dunkles Kapitel ---------------------------------------------------- */
+.chapter.dark{background:var(--dark);color:var(--dark-ink)}
+.chapter.dark .sub{color:var(--dark-mut)}
+.chapter.dark .links a{color:#7fb08a}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:60px}
+.duo figure{position:relative}
+.duo img{width:100%;height:520px;object-fit:cover}
+.duo figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px;font-size:14px;color:#fff;text-align:left;background:linear-gradient(0deg,rgba(0,0,0,.55),transparent)}
+
+/* --- Modellgalerie: horizontales Snap-Band ------------------------------ */
+.rail{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:64px max(22px,calc((100vw - 1440px)/2 + 22px)) 20px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.card{scroll-snap-align:start;flex:0 0 min(400px,86vw);background:#fff;border-radius:28px;overflow:hidden;text-align:left;box-shadow:0 2px 12px rgba(0,0,0,.06);transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 44px rgba(0,0,0,.12)}
+.card img{width:100%;height:300px;object-fit:cover}
+.card .body{padding:24px 26px 28px}
+.card .tag{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--clay)}
+.card h3{font-size:24px;font-weight:700;margin:6px 0 4px}
+.card p{font-size:14px;color:var(--mut)}
+.card .price{margin-top:14px;font-size:14px;font-weight:600}
+.railhint{font-size:12px;color:var(--mut);padding-bottom:70px}
+
+/* --- Spezifikationsstreifen --------------------------------------------- */
+.specs{display:grid;grid-template-columns:repeat(4,1fr);max-width:1024px;margin:64px auto 0;border-top:1px solid var(--line)}
+.specs>div{padding:34px 20px;border-right:1px solid var(--line)}
+.specs>div:last-child{border-right:0}
+.specs strong{display:block;font-size:32px;font-weight:700;letter-spacing:-.01em}
+.specs span{font-size:13px;color:var(--mut)}
+.chapter.dark .specs{border-color:#333}
+.chapter.dark .specs>div{border-color:#333}
+.chapter.dark .specs span{color:var(--dark-mut)}
+
+/* --- breites Bild als Atempause ----------------------------------------- */
+.breath{margin-top:70px}
+.breath img{width:100%;height:min(80vh,820px);object-fit:cover}
+
+/* --- Abschluss + Kleingedrucktes ---------------------------------------- */
+.closing{padding:120px 0 90px;text-align:center}
+.closing .btn{display:inline-block;margin-top:26px;background:var(--green);color:#fff;font-size:17px;padding:12px 26px;border-radius:980px}
+.closing .btn:hover{background:var(--green-deep)}
+.fine{border-top:1px solid var(--line);padding:34px 0 60px;font-size:12px;color:var(--mut)}
+.fine p{max-width:1024px;margin:0 auto 8px;padding-inline:22px}
+.fine a{text-decoration:underline}
+/* Auf dem Telefon macht es Apple genauso: der Preis verschwindet aus der
+   Leiste, der Titel bleibt einzeilig, der Knopf bleibt. Drei Elemente in 48
+   Pixeln Hoehe sind bei 390 Pixeln Breite eines zu viel — gemessen, nicht
+   vermutet: der Titel brach dreizeilig um und lief ueber den Inhalt. */
+@media (max-width:560px){
+  .localbar .price{display:none}
+  .localbar h2{font-size:16px}
+}
+@media (max-width:820px){
+  .duo{grid-template-columns:1fr}
+  .duo img{height:340px}
+  .specs{grid-template-columns:1fr 1fr}
+  .specs>div:nth-child(2n){border-right:0}
+  .specs>div{border-bottom:1px solid var(--line)}
+  .ap-nav .row{gap:18px}
+  .ap-nav .row a.hide-m{display:none}
+}
+</style></head><body>
+
+<nav class="ap-nav" aria-label="Demo-Navigation"><div class="row">
+  <a class="mark" href="../index.html">MODUNERA</a>
+  <a href="../modelle/" class="hide-m">Modelle</a>
+  <a href="../leistungen/" class="hide-m">Weitere Bauten</a>
+  <a href="../laender/" class="hide-m">Länder</a>
+  <a href="../ratgeber/" class="hide-m">Ratgeber</a>
+  <span class="sp"></span>
+  <a class="cta" href="../kontakt/">Projekt anfragen</a>
+</div></nav>
+<div class="localbar"><div class="row">
+  <h2>Tiny House&nbsp;<span style="color:var(--mut);font-weight:400">MD&nbsp;1–MD&nbsp;8</span></h2>
+  <span class="sp"></span><span class="price">ab 42.900&nbsp;€ ab Werk</span>
+  <a class="buy" href="../studio/">Konfigurieren</a>
+</div></div>
+
+<main id="main">
+
+<header class="chapter">
+  <div class="wrap">
+    <p class="kicker rise">Acht Modelle. Eine technische Basis.</p>
+    <h1 class="mega rise d1">Weniger Haus,<br>mehr Freiheit.</h1>
+    <p class="sub rise d2">Architektonisch starke Tiny Houses für Deutschland und Europa — nach eigener Spezifikation gefertigt, individuell konfiguriert und für vier Jahreszeiten planbar.</p>
+    <div class="links rise d3"><a href="../studio/">Tiny House gestalten</a><a href="../katalog/">Alle Modelle ansehen</a></div>
+  </div>
+  <div class="hero-img rise d4 wide"><img decoding="async" width="1536" height="864" src="../assets/images/gallery/hero-forest.webp" alt="MODUNERA Tiny House zwischen Bäumen, Aussenansicht mit grosser Verglasung" fetchpriority="high"></div>
+</header>
+
+<section class="chapter dark">
+  <div class="wrap">
+    <p class="kicker reveal" style="color:#7fb08a">Vier Jahreszeiten</p>
+    <h2 class="reveal">Gebaut für den Januar.<br>Nicht nur für den Prospekt.</h2>
+    <p class="sub reveal">Dämmung, Verglasung, Lüftung und Heizung werden auf das Klima am konkreten Standort abgestimmt — je Projekt festgelegt, nicht pauschal versprochen.</p>
+  </div>
+  <div class="duo wide" style="padding-inline:22px">
+    <figure class="reveal"><img decoding="async" width="1344" height="756" src="../assets/images/gallery/mc2-kitchen.webp" alt="Küchenzeile mit Einbaugeräten in einem MODUNERA Innenraum" loading="lazy"><figcaption>Möbel nach Mass, zusammen mit Grundriss und Technik geplant.</figcaption></figure>
+    <figure class="reveal"><img decoding="async" width="720" height="800" src="../assets/images/gallery/mc4-bedroom.webp" alt="Schlafbereich mit Holzverkleidung und Fenster" loading="lazy"><figcaption>Schlafbereich mit geplanter Lüftung statt nachträglicher Hoffnung.</figcaption></figure>
+  </div>
+  <div class="specs reveal">
+    <div><strong>8–9,70&nbsp;m</strong><span>Modellabhängige Längenoptionen</span></div>
+    <div><strong>MD&nbsp;1–8</strong><span>Acht Grundrisse auf einer Basis</span></div>
+    <div><strong>4</strong><span>Jahreszeiten, planbar je Standort</span></div>
+    <div><strong>5</strong><span>Zielmärkte in Europa</span></div>
+  </div>
+  <div style="height:100px"></div>
+</section>
+
+<section class="chapter">
+  <div class="wrap">
+    <p class="kicker reveal">Die Modelle</p>
+    <h2 class="reveal">Acht Ausgangspunkte.<br>Kein Einheitsgrundriss.</h2>
+    <p class="sub reveal">Preise sind unverbindliche Ab-Werk-Indikationen; Lieferung, Zoll und Aufstellung werden je Projekt kalkuliert.</p>
+  </div>
+  <div class="rail">
+    <a class="card reveal" href="../modelle/md-1/"><img decoding="async" width="1600" height="900" src="../assets/images/gallery/mc1-exterior.webp" alt="MD 1 Aussenansicht" loading="lazy"><div class="body"><span class="tag">Panorama &amp; Loft</span><h3>MD&nbsp;1</h3><p>1 Loft · 8,00 / 9,70&nbsp;m</p><p class="price">ab 44.900&nbsp;€</p></div></a>
+    <a class="card reveal" href="../modelle/md-2/"><img decoding="async" width="1536" height="864" src="../assets/images/gallery/mc2-exterior.webp" alt="MD 2 Aussenansicht" loading="lazy"><div class="body"><span class="tag">Für Familien</span><h3>MD&nbsp;2</h3><p>2 Lofts · 9,00&nbsp;m</p><p class="price">ab 52.900&nbsp;€</p></div></a>
+    <a class="card reveal" href="../modelle/md-6/"><img decoding="async" width="756" height="535" src="../assets/images/gallery/mc6-exterior.webp" alt="MD 6 Aussenansicht" loading="lazy"><div class="body"><span class="tag">Chalet-Konzept</span><h3>MD&nbsp;6</h3><p>Steildach · 8,00 / 9,00&nbsp;m</p><p class="price">ab 54.900&nbsp;€</p></div></a>
+    <a class="card reveal" href="../modelle/md-7/"><img decoding="async" width="1540" height="840" src="../assets/images/gallery/mc7-exterior.webp" alt="MD 7 Aussenansicht" loading="lazy"><div class="body"><span class="tag">Einstieg</span><h3>MD&nbsp;7</h3><p>1 Loft · 8,00&nbsp;m</p><p class="price">ab 42.900&nbsp;€</p></div></a>
+    <a class="card reveal" href="../katalog/"><img decoding="async" width="840" height="459" src="../assets/images/gallery/mc8-angle.webp" alt="MD 8 Aussenansicht" loading="lazy"><div class="body"><span class="tag">Alle acht</span><h3>Katalog</h3><p>MD&nbsp;1 bis MD&nbsp;8 im Überblick</p><p class="price" style="color:var(--green)">Vergleichen&nbsp;›</p></div></a>
+  </div>
+  <p class="railhint">Seitlich wischen · Jede Karte öffnet die bestehende Modellseite</p>
+</section>
+
+<section class="chapter" style="background:#fff">
+  <div class="wrap">
+    <p class="kicker reveal">Direkt ab Werk</p>
+    <h2 class="reveal">Ein Ansprechpartner.<br>Vom Stahl bis zur Übergabe.</h2>
+    <p class="sub reveal">Konfiguration, Fertigung, Dokumente und Lieferung laufen über eine Hand. Der Standort wird vor Bestellung geprüft — wir ersetzen keine lokale Genehmigungsberatung, wir bereiten sie vor.</p>
+    <div class="links reveal"><a href="../factory/">Die Produktion ansehen</a><a href="../produktion-faq/">60 Fragen vor dem Auftrag</a></div>
+  </div>
+  <div class="breath reveal wide"><img decoding="async" width="1536" height="864" src="../assets/images/gallery/interior-feature.webp" alt="Innenraum eines MODUNERA Tiny House mit Blick nach draussen" loading="lazy"></div>
+  <div style="height:110px"></div>
+</section>
+
+<section class="closing" style="background:var(--bg)">
+  <div class="wrap">
+    <h2 class="reveal" style="font-size:clamp(34px,5vw,64px);font-weight:700;letter-spacing:-.015em">Vom ersten Gedanken<br>zum lieferbaren Tiny House.</h2>
+    <p class="sub reveal">Zielland, Nutzung, Personen, Budget — mehr braucht die Ersteinschätzung nicht.</p>
+    <a class="btn reveal" href="../kontakt/">Projekt starten</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="fine">
+  <p><strong>Design-Demo.</strong> Diese Seite ist eine interne Gestaltungsstudie in der Formensprache einer Apple-Produktseite. Sie ist nicht verlinkt, nicht indexiert und kein Angebot. Die produktive Startseite ist <a href="../index.html">modunera.com</a>.</p>
+  <p>Unverbindliche Preisindikationen ab Werk · Technische Prüfung erforderlich · © 2026 MODUNERA</p>
+</footer>
+
+<script>
+/* Ein Beobachter, eine Klasse. Bei reduzierter Bewegung erledigt CSS alles. */
+(function(){
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.18});
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body></html>
