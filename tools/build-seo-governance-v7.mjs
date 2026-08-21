@@ -14,9 +14,7 @@ const PRIVATE_ROBOTS = "noindex,nofollow";
 /* /intelligence/ is the Intelligence screen from sections 62-64. It is generated
    from data/market-signals.json and is not a search result: noindex,nofollow, out
    of the sitemap, and linked from nowhere. */
-/* /demo-apple/ is a design study the owner asked to see before deciding whether
-   any of it reaches the real pages. Unlinked, unindexed, not an offer. */
-const PRIVATE_PREFIXES = ["/admin-demo/", "/customer-portal/", "/booking/", "/saved-designs/", "/intelligence/", "/demo-apple/"];
+const PRIVATE_PREFIXES = ["/admin-demo/", "/customer-portal/", "/booking/", "/saved-designs/", "/intelligence/"];
 /* Sweden and Türkiye are not target markets. Both are single legacy pages; they
    stay reachable and keep their links, but they are not search results. */
 const NON_MARKET_PREFIXES = ["/sv/", "/tr/"];

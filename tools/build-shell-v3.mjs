@@ -35,7 +35,7 @@ import { extname, join, relative, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = fileURLToPath(new URL("../", import.meta.url));
-const SKIP = /^(google[0-9a-f]+\.html|admin-demo\/|customer-portal\/|booking\/|saved-designs\/|demo-apple\/)/;
+const SKIP = /^(google[0-9a-f]+\.html|admin-demo\/|customer-portal\/|booking\/|saved-designs\/)/;
 
 /* The rail. Six destinations and two controls, each with a label that is read by
    a screen reader and shown as a tooltip on hover — an icon with no accessible
