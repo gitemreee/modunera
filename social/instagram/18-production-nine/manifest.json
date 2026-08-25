@@ -1,0 +1,99 @@
+{
+  "set": "production nine — built, moved, handed over",
+  "arrangement": "3x3 checkerboard; a card never touches a card",
+  "sources": "social/instagram/17-drive-2026-08-21 (owner's Drive, batch 2)",
+  "posts": [
+    {
+      "n": 1,
+      "role": "picture",
+      "template": "photo",
+      "file": "post-1.jpg",
+      "why": "The set opens inside the hall: an A-frame with its cladding half done and the offcuts still on the floor. Nothing says 'we build this ourselves' like a frame nobody tidied for the camera.",
+      "photograph": "IMG_6037.HEIC",
+      "logo": "white"
+    },
+    {
+      "n": 2,
+      "role": "card",
+      "template": "card",
+      "file": "post-2.jpg",
+      "why": "The claim of the whole set, in the words /factory/ already uses. Forest ground, cream type — the pairing the launch nine proved.",
+      "ground": "#2E4733",
+      "type": "#DAD7CD",
+      "contrast": 7.06,
+      "logo": "white"
+    },
+    {
+      "n": 3,
+      "role": "picture",
+      "template": "photo",
+      "file": "post-3.jpg",
+      "why": "A kitchen whose worktop still wears its protective film. The photograph does the arguing: fit-out happens in the hall, not on the plot.",
+      "photograph": "IMG_3849.HEIC",
+      "logo": "white"
+    },
+    {
+      "n": 4,
+      "role": "card",
+      "template": "numeral",
+      "file": "post-4.jpg",
+      "why": "The one number that makes road delivery possible, already public on the site. A numeral is where the eye rests between pictures.",
+      "ground": "#F5F5F5",
+      "type": "#97311A",
+      "contrast": 6.95,
+      "logo": "colour"
+    },
+    {
+      "n": 5,
+      "role": "picture",
+      "template": "photo",
+      "file": "post-5.jpg",
+      "why": "The centre tile gets the strongest frame: a unit behind the tow vehicle at dusk, actually moving. The whole set pivots on it.",
+      "photograph": "d9c3d6ca-4188-4ca1-ab9a-59311b8eb375.JPG",
+      "logo": "white"
+    },
+    {
+      "n": 6,
+      "role": "card",
+      "template": "card",
+      "file": "post-6.jpg",
+      "why": "The delivery promise the site makes on every country page, on the set's one near-black. It reads like method, not marketing.",
+      "ground": "#232426",
+      "type": "#DAD7CD",
+      "contrast": 10.79,
+      "logo": "white"
+    },
+    {
+      "n": 7,
+      "role": "picture",
+      "template": "photo",
+      "file": "post-7.jpg",
+      "why": "Two units on tandem-axle trailers in the yard. Pairs with 5: before the road, and on it.",
+      "photograph": "96b30700-e8fe-458c-b326-318c2928c047.JPG",
+      "logo": "white"
+    },
+    {
+      "n": 8,
+      "role": "card",
+      "template": "card",
+      "file": "post-8.jpg",
+      "why": "The loudest ground carries the shortest sentence in the set — the three steps between yard and road, in the order they happen.",
+      "ground": "#97311A",
+      "type": "#FFFFFF",
+      "contrast": 7.58,
+      "logo": "white"
+    },
+    {
+      "n": 9,
+      "role": "picture",
+      "template": "duo",
+      "file": "post-9.jpg",
+      "why": "Two units prepared for a delivery, flags of Türkiye and Azerbaijan on the facade. The duo band keeps the type off the photograph — the picture is the claim, and it needs no help.",
+      "ground": "#F5F5F5",
+      "type": "#3A5A40",
+      "contrast": 7.09,
+      "logo": "white",
+      "photograph": "b93f484c-fded-4c20-89a0-b12ac521e558.JPG"
+    }
+  ]
+}
