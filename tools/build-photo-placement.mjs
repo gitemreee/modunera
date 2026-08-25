@@ -92,35 +92,53 @@ const INSERTIONS = {
    model would be inventing product data to fill a layout.
 
    Idempotent by marker, like INSERTIONS. */
-const GALLERIES = {
-  "factory/index.html": {
+/* One page can carry more than one gallery now — /factory/ shows production AND
+   transport — so this is a list of specs with a page field, not an object keyed
+   by page. Each spec stays idempotent by its own marker. */
+const GALLERIES = [
+  {
+    page: "factory/index.html",
     marker: 'data-photo-gallery="production"',
     // /factory/ has no section-soft; the gallery goes in front of the dark band
     anchor: '<section class="section section-dark">',
     eyebrow: "Aus der Fertigung",
-    h2: "Zwei Einheiten im Bau.",
-    lead: "Aufnahmen aus der Halle, nicht aus dem Katalog. Die erste zeigt eine Einheit auf Stützen mit montierter Aussenhaut, die zweite den Innenausbau, bevor die Wände geschlossen sind.",
-    photos: ["production-hall-unit", "production-interior-fitout"],
+    h2: "Fünf Aufnahmen aus dem Bau.",
+    lead: "Aufnahmen aus der Halle, nicht aus dem Katalog: eine A-Frame-Einheit im Rohbau, eine Einheit auf Stützen mit montierter Aussenhaut, der Innenausbau vor dem Schliessen der Wände, und eine Küche, deren Arbeitsplatte noch Schutzfolie trägt.",
+    photos: ["production-aframe-workshop", "production-hall-unit",
+             "production-interior-fitout", "production-fitout-benches",
+             "production-fitout-kitchen"],
   },
-  "projects/index.html": {
+  {
+    page: "factory/index.html",
+    marker: 'data-photo-gallery="transport"',
+    anchor: '<section class="section section-dark">',
+    eyebrow: "Auf dem Weg",
+    h2: "Vom Hof auf die Strasse.",
+    lead: "Die Übergabe ist Teil der Arbeit: Einheiten auf Tandemachs-Anhängern auf dem Werksgelände, eine Einheit hinter dem Zugfahrzeug auf der Landstrasse, und zwei Einheiten, vorbereitet für eine Auslieferung mit Flaggen der Türkei und Aserbaidschans an der Fassade.",
+    photos: ["transport-trailer-yard", "transport-road", "transport-export-flags",
+             "unit-trailer-gable"],
+  },
+  {
+    page: "projects/index.html",
     marker: 'data-photo-gallery="delivered"',
     anchor: '<section class="section section-soft">',
     eyebrow: "Gebaute Einheiten",
     h2: "Sechs Aufnahmen von ausgeführten Einheiten.",
     lead: "Fassaden, Terrassen und ein Fassadendetail — fotografiert auf dem Hof, auf dem Aufstellplatz und auf Messen. Keine Visualisierung, keine Renderansicht.",
     photos: ["unit-angular-dark", "unit-standing-seam", "unit-terrace-event",
-             "unit-exhibition-terrace", "detail-wood-and-metal", "unit-trailer-gable"],
+             "unit-exhibition-terrace", "detail-wood-and-metal", "unit-porch-sand"],
   },
-  "modelle/index.html": {
+  {
+    page: "modelle/index.html",
     marker: 'data-photo-gallery="built"',
     anchor: '<section class="section section-soft">',
     eyebrow: "Gebaut, nicht gerendert",
     h2: "So sehen ausgeführte Innenräume aus.",
-    lead: "Die Grundrisse oben sind Zeichnungen der acht Modelle. Diese fünf Aufnahmen sind Innenräume gebauter Einheiten. Welche Aufnahme zu welchem Modell gehört, steht bewusst nicht dabei: das wäre eine Zuordnung, die wir hier nicht belegen können.",
+    lead: "Die Grundrisse oben sind Zeichnungen der acht Modelle. Diese sechs Aufnahmen sind Innenräume gebauter Einheiten. Welche Aufnahme zu welchem Modell gehört, steht bewusst nicht dabei: das wäre eine Zuordnung, die wir hier nicht belegen können.",
     photos: ["interior-stair-sofa", "interior-kitchen-oven", "interior-living-tv",
-             "interior-loft-ladder", "interior-door-kitchen"],
+             "interior-loft-ladder", "interior-door-kitchen", "interior-tall-loft"],
   },
-};
+];
 
 /* The gallery derivative each placement should point at, and its real size. */
 function derivative(name) {
@@ -222,12 +240,11 @@ for (const [page, name] of Object.entries(SHARE_CARDS)) {
 
 let sectionsAdded = 0;
 let galleriesAdded = 0;
-for (const [page, spec] of Object.entries(GALLERIES)) {
+for (const spec of GALLERIES) {
+  const page = spec.page;
   const file = join(ROOT, page);
   if (!existsSync(file)) { missing.push(page); continue; }
   const html = await readFile(file, "utf8");
-  if (html.includes(spec.marker)) continue;          // already inserted
-  if (!html.includes(spec.anchor)) { missing.push(`${page}: gallery anchor not found`); continue; }
 
   const cards = spec.photos.map((name) => {
     const t = derivative(name);
@@ -242,9 +259,25 @@ for (const [page, spec] of Object.entries(GALLERIES)) {
     `<h2>${esc(spec.h2)}</h2></div><p>${esc(spec.lead)}</p></div>` +
     `<div class="gallery-grid">${cards}</div></div></section>`;
 
-  await writeFile(file, html.replace(spec.anchor, block + spec.anchor), "utf8");
-  galleriesAdded += 1;
-  pagesChanged += 1;
+  /* A gallery already on the page is REPLACED, not skipped. Skipping froze the
+     first version forever: the photo lists changed for batch 2 and the pages
+     kept showing the old ones, because "marker present" was read as "done".
+     Replacing is what lets an edit to the list above reach the built page —
+     the same lesson the WhatsApp dock pass already carries. Idempotent all the
+     same: regenerating an unchanged spec produces byte-identical HTML. */
+  let next;
+  if (html.includes(spec.marker)) {
+    const re = new RegExp(`<section class="section" ${spec.marker.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}>[\\s\\S]*?</section>`);
+    next = html.replace(re, block);
+  } else {
+    if (!html.includes(spec.anchor)) { missing.push(`${page}: gallery anchor not found`); continue; }
+    next = html.replace(spec.anchor, block + spec.anchor);
+  }
+  if (next !== html) {
+    await writeFile(file, next, "utf8");
+    galleriesAdded += 1;
+    pagesChanged += 1;
+  }
 }
 
 for (const [page, spec] of Object.entries(INSERTIONS)) {

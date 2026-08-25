@@ -467,6 +467,150 @@
           "kb": 54
         }
       ]
+    },
+    {
+      "name": "production-aframe-workshop",
+      "category": "production",
+      "source": "IMG_6037.HEIC",
+      "alt_de": "A-Frame-Einheit im Rohbau in der Werkhalle, Holzschalung montiert, Zuschnitte auf dem Boden",
+      "files": [
+        {
+          "file": "assets/images/photos/production-aframe-workshop-1200.webp",
+          "px": "1200x800",
+          "kb": 128
+        },
+        {
+          "file": "assets/images/photos/production-aframe-workshop-760.webp",
+          "px": "760x507",
+          "kb": 62
+        }
+      ]
+    },
+    {
+      "name": "production-fitout-kitchen",
+      "category": "production",
+      "source": "IMG_3849.HEIC",
+      "alt_de": "Küchenzeile während des Innenausbaus, Arbeitsplatte noch mit Schutzfolie und Dichtstoff",
+      "files": [
+        {
+          "file": "assets/images/photos/production-fitout-kitchen-1200.webp",
+          "px": "1200x800",
+          "kb": 124
+        },
+        {
+          "file": "assets/images/photos/production-fitout-kitchen-760.webp",
+          "px": "760x507",
+          "kb": 61
+        }
+      ]
+    },
+    {
+      "name": "production-fitout-benches",
+      "category": "production",
+      "source": "IMG_3854.HEIC",
+      "alt_de": "Innenausbau einer Einheit: weiße Wandschalung, eingebaute Sitzbänke, Hängeschränke",
+      "files": [
+        {
+          "file": "assets/images/photos/production-fitout-benches-1200.webp",
+          "px": "1200x800",
+          "kb": 38
+        },
+        {
+          "file": "assets/images/photos/production-fitout-benches-760.webp",
+          "px": "760x507",
+          "kb": 21
+        }
+      ]
+    },
+    {
+      "name": "transport-road",
+      "category": "transport",
+      "source": "d9c3d6ca-4188-4ca1-ab9a-59311b8eb375.JPG",
+      "alt_de": "Tiny House auf dem Anhänger hinter dem Zugfahrzeug, unterwegs auf der Landstraße bei Abendlicht",
+      "files": [
+        {
+          "file": "assets/images/photos/transport-road-1200.webp",
+          "px": "1200x800",
+          "kb": 90
+        },
+        {
+          "file": "assets/images/photos/transport-road-760.webp",
+          "px": "760x507",
+          "kb": 57
+        }
+      ]
+    },
+    {
+      "name": "transport-export-flags",
+      "category": "transport",
+      "source": "b93f484c-fded-4c20-89a0-b12ac521e558.JPG",
+      "alt_de": "Zwei fertige Einheiten auf dem Hof, vorbereitet für die Auslieferung, mit Flaggen der Türkei und Aserbaidschans an der Fassade",
+      "files": [
+        {
+          "file": "assets/images/photos/transport-export-flags-1200.webp",
+          "px": "1200x800",
+          "kb": 119
+        },
+        {
+          "file": "assets/images/photos/transport-export-flags-760.webp",
+          "px": "760x507",
+          "kb": 64
+        }
+      ]
+    },
+    {
+      "name": "transport-trailer-yard",
+      "category": "transport",
+      "source": "96b30700-e8fe-458c-b326-318c2928c047.JPG",
+      "alt_de": "Zwei Einheiten auf Tandemachs-Anhängern auf dem Werksgelände, bereit zur Abfahrt",
+      "files": [
+        {
+          "file": "assets/images/photos/transport-trailer-yard-1200.webp",
+          "px": "1200x800",
+          "kb": 92
+        },
+        {
+          "file": "assets/images/photos/transport-trailer-yard-760.webp",
+          "px": "760x507",
+          "kb": 59
+        }
+      ]
+    },
+    {
+      "name": "unit-porch-sand",
+      "category": "finished",
+      "source": "IMG_0012.HEIC",
+      "alt_de": "Ausgeführte Einheit mit überdachter Veranda und Holzgeländer auf sandigem Untergrund",
+      "files": [
+        {
+          "file": "assets/images/photos/unit-porch-sand-1200.webp",
+          "px": "1200x800",
+          "kb": 225
+        },
+        {
+          "file": "assets/images/photos/unit-porch-sand-760.webp",
+          "px": "760x507",
+          "kb": 100
+        }
+      ]
+    },
+    {
+      "name": "interior-tall-loft",
+      "category": "interior",
+      "source": "fb8b030f-1c7a-42e8-b2c1-7c8c4b5de23e.JPG",
+      "alt_de": "Hoher Innenraum mit Küchenzeile, offenen Regalen und Blick zum Schlafloft über der Treppe",
+      "files": [
+        {
+          "file": "assets/images/photos/interior-tall-loft-1200.webp",
+          "px": "1200x800",
+          "kb": 80
+        },
+        {
+          "file": "assets/images/photos/interior-tall-loft-760.webp",
+          "px": "760x507",
+          "kb": 50
+        }
+      ]
     }
   ]
 }

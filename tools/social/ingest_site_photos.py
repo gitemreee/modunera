@@ -40,7 +40,8 @@ from build_instagram_grid import (  # noqa: E402  reuse, do not re-implement
 
 ROOT = Path(__file__).resolve().parents[2]
 SRC = [ROOT / "social/instagram/01-selected", ROOT / "social/instagram/00-candidates",
-       ROOT / "social/instagram/16-drive-2026-08"]
+       ROOT / "social/instagram/16-drive-2026-08",
+       ROOT / "social/instagram/17-drive-2026-08-21"]
 OUT = ROOT / "assets/images/photos"
 
 L_EXT = dict(warmth=1.02, lift=0.03, contrast=1.16, saturation=0.94)
@@ -128,6 +129,32 @@ PLAN = {
     "production-interior-fitout": (
         "IMG_4323.HEIC", "production", L_INT, 0.58,
         "Innenausbau im Rohzustand: Giebeldecke verkleidet, Einbauten gestellt, Verpackungsmaterial noch am Boden"),
+    # --- batch 2, 2026-08-21: the two phases the site was missing ---------
+    "production-aframe-workshop": (
+        "IMG_6037.HEIC", "production", L_INT, 0.5,
+        "A-Frame-Einheit im Rohbau in der Werkhalle, Holzschalung montiert, Zuschnitte auf dem Boden"),
+    "production-fitout-kitchen": (
+        "IMG_3849.HEIC", "production", L_INT, 0.45,
+        "K\u00fcchenzeile w\u00e4hrend des Innenausbaus, Arbeitsplatte noch mit Schutzfolie und Dichtstoff"),
+    "production-fitout-benches": (
+        "IMG_3854.HEIC", "production", L_INT, 0.45,
+        "Innenausbau einer Einheit: wei\u00dfe Wandschalung, eingebaute Sitzb\u00e4nke, H\u00e4ngeschr\u00e4nke"),
+    "transport-road": (
+        "d9c3d6ca-4188-4ca1-ab9a-59311b8eb375.JPG", "transport", L_EXT, 0.5,
+        "Tiny House auf dem Anh\u00e4nger hinter dem Zugfahrzeug, unterwegs auf der Landstra\u00dfe bei Abendlicht"),
+    "transport-export-flags": (
+        "b93f484c-fded-4c20-89a0-b12ac521e558.JPG", "transport", L_EXT, 0.5,
+        "Zwei fertige Einheiten auf dem Hof, vorbereitet f\u00fcr die Auslieferung, mit Flaggen der T\u00fcrkei und Aserbaidschans an der Fassade"),
+    "transport-trailer-yard": (
+        "96b30700-e8fe-458c-b326-318c2928c047.JPG", "transport", L_EXT, 0.5,
+        "Zwei Einheiten auf Tandemachs-Anh\u00e4ngern auf dem Werksgel\u00e4nde, bereit zur Abfahrt"),
+    "unit-porch-sand": (
+        "IMG_0012.HEIC", "finished", L_EXT, 0.5,
+        "Ausgef\u00fchrte Einheit mit \u00fcberdachter Veranda und Holzgel\u00e4nder auf sandigem Untergrund"),
+    "interior-tall-loft": (
+        "fb8b030f-1c7a-42e8-b2c1-7c8c4b5de23e.JPG", "interior", L_INT, 0.45,
+        "Hoher Innenraum mit K\u00fcchenzeile, offenen Regalen und Blick zum Schlafloft \u00fcber der Treppe"),
+
 }
 
 # The sizes the site's templates ask for. Hero stills carry a portrait crop as
