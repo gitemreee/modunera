@@ -1,0 +1,60 @@
+{
+  "set": "one story behind each of the nine highlight covers",
+  "format": "1080x1920, story-safe margins 250/260",
+  "stories": [
+    {
+      "slug": "models",
+      "kind": "photo",
+      "file": "story-models.jpg",
+      "link": "modunera.com/en/models/"
+    },
+    {
+      "slug": "prices",
+      "kind": "card",
+      "file": "story-prices.jpg",
+      "link": "modunera.com/en/price-comparison/"
+    },
+    {
+      "slug": "guides",
+      "kind": "card",
+      "file": "story-guides.jpg",
+      "link": "modunera.com/en/guides/"
+    },
+    {
+      "slug": "europe",
+      "kind": "card",
+      "file": "story-europe.jpg",
+      "link": "modunera.com/en/countries/"
+    },
+    {
+      "slug": "quality",
+      "kind": "photo",
+      "file": "story-quality.jpg",
+      "link": "modunera.com/en/advantages/"
+    },
+    {
+      "slug": "build",
+      "kind": "card",
+      "file": "story-build.jpg",
+      "link": "modunera.com/en/services/"
+    },
+    {
+      "slug": "production",
+      "kind": "photo",
+      "file": "story-production.jpg",
+      "link": "modunera.com/en/production-faq/"
+    },
+    {
+      "slug": "faq",
+      "kind": "card",
+      "file": "story-faq.jpg",
+      "link": "modunera.com/en/faq/"
+    },
+    {
+      "slug": "nature",
+      "kind": "photo",
+      "file": "story-nature.jpg",
+      "link": null
+    }
+  ]
+}
