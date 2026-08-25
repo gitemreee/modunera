@@ -9,7 +9,7 @@
     "A signal is a candidate, not a published page. Publication is a separate,",
     "deliberate step — see the decision on each run in `runs`."
   ],
-  "updated_at": "2026-08-24",
+  "updated_at": "2026-08-25",
   "runs": [
     {
       "runId": "run-2026-08-18-001",
@@ -650,6 +650,99 @@
       },
       "awaitingHumanDecision": true,
       "finishedAt": "2026-08-24T05:23:00.412Z"
+    },
+    {
+      "runId": "run-2026-08-25-001",
+      "date": "2026-08-25",
+      "startedAt": "2026-08-25T05:09:11.652Z",
+      "provider": "",
+      "providerConfigured": false,
+      "gsc": "not connected",
+      "markets": {
+        "DE": {
+          "queries": 7,
+          "checked": 0,
+          "accepted": 0,
+          "rejected": 0,
+          "signals": 1,
+          "error": "no adapter in this build for provider \"\" (known: brave)",
+          "countryDropped": false
+        },
+        "NL": {
+          "queries": 6,
+          "checked": 0,
+          "accepted": 0,
+          "rejected": 0,
+          "signals": 0,
+          "error": "no adapter in this build for provider \"\" (known: brave)",
+          "countryDropped": false
+        },
+        "DK": {
+          "queries": 6,
+          "checked": 0,
+          "accepted": 0,
+          "rejected": 0,
+          "signals": 0,
+          "error": "no adapter in this build for provider \"\" (known: brave)",
+          "countryDropped": false
+        },
+        "LU": {
+          "queries": 4,
+          "checked": 0,
+          "accepted": 0,
+          "rejected": 0,
+          "signals": 0,
+          "error": "no adapter in this build for provider \"\" (known: brave)",
+          "countryDropped": false
+        },
+        "CH": {
+          "queries": 5,
+          "checked": 0,
+          "accepted": 0,
+          "rejected": 0,
+          "signals": 0,
+          "error": "no adapter in this build for provider \"\" (known: brave)",
+          "countryDropped": false
+        }
+      },
+      "queriesPlanned": 28,
+      "sourcesChecked": 0,
+      "sourcesAccepted": 0,
+      "sourcesRejected": 0,
+      "candidates": 1,
+      "verifiedInboxCandidates": 1,
+      "projectsDiscovered": 0,
+      "existingProjectsUpdated": 1,
+      "tenderOpportunities": 0,
+      "businessLeads": 0,
+      "gscOpportunities": 0,
+      "contentGenerated": 0,
+      "contentUpdated": 0,
+      "decision": "UPDATE_EXISTING_ARTICLE",
+      "decisionWhy": "Tiny-House-Siedlung Sauerlandstraße (DE) — already published as de-menden-sauerlandstrasse; a second URL would split the project in two",
+      "dueForReview": [],
+      "errors": [
+        "DE: no adapter in this build for provider \"\" (known: brave)",
+        "NL: no adapter in this build for provider \"\" (known: brave)",
+        "DK: no adapter in this build for provider \"\" (known: brave)",
+        "LU: no adapter in this build for provider \"\" (known: brave)",
+        "CH: no adapter in this build for provider \"\" (known: brave)"
+      ],
+      "signalsPublished": 1,
+      "gscRows": 0,
+      "resolutionsApplied": 4,
+      "rechecksDue": [],
+      "newSignals": 0,
+      "rejectedNotStored": 0,
+      "rejectionReasons": {},
+      "decisionSignal": "https://beteiligung.nrw.de/portal/men/beteiligung/themen/1016912",
+      "autoPublish": {
+        "news": false,
+        "blog": false,
+        "guides": false
+      },
+      "awaitingHumanDecision": true,
+      "finishedAt": "2026-08-25T05:09:11.656Z"
     }
   ],
   "signals": [
@@ -686,7 +779,7 @@
       ],
       "publishedAt": "2025-08-15",
       "firstSeenAt": "2026-08-18",
-      "lastCheckedAt": "2026-08-24",
+      "lastCheckedAt": "2026-08-25",
       "nextReviewAt": "2026-09-17",
       "seoScore": 20,
       "commercialScore": 30,
