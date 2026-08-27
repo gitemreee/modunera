@@ -492,7 +492,7 @@ function modelIndexPage(lang) {
     const c = MODEL_COPY[String(n)][lang];
     const s = PRICING.models[`mc${n}`];
     const img = MODEL_COPY[String(n)].images[0];
-    return `<article class="model-card"><a href="${root}${p.models}/md-${n}/"><img src="${root}assets/images/gallery/${img}.webp" alt="MODUNERA MD ${n}" loading="lazy" width="900" height="600"><div class="model-content"><div class="model-label">${esc(c.label)}</div><h3>MD ${n}</h3><p>${esc(c.lead)}</p><div class="model-specs"><span>${esc(lengths(n, lang))}</span><span>${esc(MODEL_COPY[String(n)].sleeps)}</span><span>${esc(eur(s.base_eur, lang))}</span></div></div></a></article>`;
+    return `<article class="model-card"><a href="${root}${p.models}/md-${n}/">${gridImg(root, img, `MODUNERA MD ${n}`)}<div class="model-content"><div class="model-label">${esc(c.label)}</div><h3>MD ${n}</h3><p>${esc(c.lead)}</p><div class="model-specs"><span>${esc(lengths(n, lang))}</span><span>${esc(MODEL_COPY[String(n)].sleeps)}</span><span>${esc(eur(s.base_eur, lang))}</span></div></div></a></article>`;
   }).join("");
 
   const trail = [[UI[lang].breadHome, PATHS[lang].home], [heading[0], `${p.models}/`]];
@@ -1730,7 +1730,7 @@ function homeModelSection(lang, root) {
     const c = MODEL_COPY[String(n)][lang];
     const s = PRICING.models[`mc${n}`];
     const img = MODEL_COPY[String(n)].images[0];
-    return `<article class="model-card"><a href="${root}${p.models}/md-${n}/"><img src="${root}assets/images/gallery/${img}.webp" alt="MODUNERA MD ${n} – ${esc(c.label)}" loading="lazy" width="900" height="600"><div class="model-content"><div class="model-label">${esc(c.label)}</div><h3>MD ${n}</h3><p>${esc(c.lead)}</p><div class="model-specs"><span>${esc(lengths(n, lang))}</span><span>${esc(MODEL_COPY[String(n)].sleeps)} ${esc(h.sleeps)}</span><span>${esc(MODEL_FROM[lang])} ${esc(eur(s.base_eur, lang))}</span></div></div></a></article>`;
+    return `<article class="model-card"><a href="${root}${p.models}/md-${n}/">${gridImg(root, img, `MODUNERA MD ${n} – ${esc(c.label)}`)}<div class="model-content"><div class="model-label">${esc(c.label)}</div><h3>MD ${n}</h3><p>${esc(c.lead)}</p><div class="model-specs"><span>${esc(lengths(n, lang))}</span><span>${esc(MODEL_COPY[String(n)].sleeps)} ${esc(h.sleeps)}</span><span>${esc(MODEL_FROM[lang])} ${esc(eur(s.base_eur, lang))}</span></div></div></a></article>`;
   }).join("");
 
   const compareHref = lang === "de" ? "modellvergleich/" : lang === "en" ? "en/model-comparison/" : `${p.questions}/`;
@@ -1745,6 +1745,21 @@ const HOME_CLOSE = "<!-- MODUNERA HOME MODELS END -->";
 /* German prices read "ab 44.900 €", English "from €44,900" — the word in front of
    the figure differs per language and is shared with the navigation. */
 const MODEL_FROM = { de: "ab", en: "from", nl: "vanaf", da: "fra", fr: "dès" };
+
+/* The grid card image, responsive when a -900 sibling exists. The full gallery
+   originals are up to 441 KB for a card the layout renders at ~700 px; measured
+   at load, the home page transferred 3.26 MB of images, mostly here. The
+   sibling is emitted by tools/make_image_derivatives.py; where one is missing
+   the original stands alone, so a new gallery file never breaks the build. */
+function gridImg(root, img, alt) {
+  const sibling = join(ROOT, `assets/images/gallery/${img}-900.webp`);
+  const src = `${root}assets/images/gallery/${img}-900.webp`;
+  const full = `${root}assets/images/gallery/${img}.webp`;
+  if (!existsSync(sibling)) {
+    return `<img src="${full}" alt="${alt}" loading="lazy" width="900" height="600">`;
+  }
+  return `<img src="${src}" srcset="${src} 900w, ${full} 1600w" sizes="(max-width:920px) 100vw, 720px" alt="${alt}" loading="lazy" width="900" height="600">`;
+}
 
 async function buildHomeModels() {
   let changed = 0;

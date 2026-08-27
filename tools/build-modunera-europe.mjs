@@ -167,6 +167,15 @@ function buildLocations(source) {
     }
     for (const region of regions) {
       region.cities.sort((a, b) => a.name.localeCompare(b.name, code === "DK" ? "da" : code === "NL" ? "nl" : code === "CH" ? "de-CH" : "de"));
+      // mark names that repeat inside one country, so the page title can
+      // disambiguate — Au (Zürich) and Au (St. Gallen) shipped identical titles
+      {
+        const names = new Map();
+        for (const r2 of regions) for (const c2 of r2.cities)
+          names.set(c2.name, (names.get(c2.name) ?? 0) + 1);
+        for (const r2 of regions) for (const c2 of r2.cities)
+          if ((names.get(c2.name) ?? 0) > 1) c2.ambiguous = true;
+      }
       for (const city of region.cities) city.nearby = region.cities.filter((candidate) => candidate !== city).map((candidate) => [distance(city, candidate), candidate]).sort((a, b) => a[0] - b[0]).slice(0, 6).map((pair) => pair[1]);
     }
     markets[code] = { country, regions, count: regions.reduce((sum, region) => sum + region.cities.length, 0) };
@@ -216,8 +225,29 @@ function locationPage(city, lang) {
   const region = city.region.display;
   const country = city.country[isDe ? "de" : "en"];
   const faq = locationFaqs(city, lang);
-  const title = isDe ? `Tiny House in ${place}, ${country} | Lieferung & Planung | MODUNERA` : `Tiny house in ${place}, ${country} | Delivery & planning | MODUNERA`;
-  const description = isDe ? `Tiny House für ${place}: Modelle, individuelle Möbel, Genehmigungsorientierung und Lieferung nach ${region}, ${country}. Projektcheck per WhatsApp.` : `Tiny houses for ${place}: models, bespoke furniture, permit guidance and delivery to ${region}, ${country}. Start with a WhatsApp project check.`;
+  /* Two length problems the 2026-08-27 audit measured on the opened set, both
+     driven by long place names ("Hirschberg an der Bergstraße", "Muschberg en
+     Geestenberg"): 207 titles and 177 descriptions past what Google prints.
+     The title drops the country when the place alone already fills it — a local
+     query does not need the country restated — and the description falls back
+     to a shorter sentence instead of being cut mid-word downstream.
+     One more: two places in one country can share a name (Au in Zürich and Au
+     in St. Gallen shipped with identical titles). When the caller marks the
+     name ambiguous, the region joins the title and the two become distinct. */
+  const shownPlace = city.ambiguous ? `${place} (${region})` : place;
+  const longName = shownPlace.length > 22;
+  const title = isDe
+    ? (longName ? `Tiny House in ${shownPlace} | MODUNERA`
+                : `Tiny House in ${shownPlace}, ${country} | Lieferung & Planung | MODUNERA`)
+    : (longName ? `Tiny house in ${shownPlace} | MODUNERA`
+                : `Tiny house in ${shownPlace}, ${country} | Delivery & planning | MODUNERA`);
+  const longDesc = isDe
+    ? `Tiny House für ${place}: Modelle, individuelle Möbel, Genehmigungsorientierung und Lieferung nach ${region}, ${country}. Projektcheck per WhatsApp.`
+    : `Tiny houses for ${place}: models, bespoke furniture, permit guidance and delivery to ${region}, ${country}. Start with a WhatsApp project check.`;
+  const shortDesc = isDe
+    ? `Tiny House für ${place}: Modelle, Möbel nach Maß, Genehmigungsorientierung und Lieferung. Projektcheck per WhatsApp.`
+    : `Tiny houses for ${place}: models, bespoke furniture, permit guidance and delivery. WhatsApp project check.`;
+  const description = longDesc.length > 158 ? shortDesc : longDesc;
   const deUrl = canonicalFor(paths.de);
   const enUrl = canonicalFor(paths.en);
   const schema = [

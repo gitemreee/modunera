@@ -131,6 +131,8 @@ let pagesChanged = 0;
 let dimensionsAdded = 0;
 let lazyAdded = 0;
 let decodingAdded = 0;
+let srcsetAdded = 0;
+let bgSwapped = 0;
 let unresolved = new Set();
 let deferredScripts = 0;
 
@@ -186,8 +188,45 @@ for (const file of htmlFiles) {
       next = next.replace(/<img\b/i, '<img decoding="async"');
       decodingAdded += 1;
     }
+    /* Responsive gallery images, wherever a -900 sibling exists. The heavy
+       originals (mc1-exterior.webp alone is 441 KB) are referenced from many
+       templates; teaching each generator about siblings would be six edits that
+       drift. Here, one rule: a lazy gallery <img> without a srcset gets the
+       -900 as its default and the original as the 2x candidate. Eager images —
+       heroes — are left to their templates, which already choose deliberately.
+       Siblings come from tools/make_image_derivatives.py. */
+    if (!attrOf(next, "srcset") && !eager) {
+      const src = srcOf(next);
+      const m = src && src.match(/^(.*assets\/images\/gallery\/)([a-z0-9-]+)\.webp$/i);
+      if (m && !m[2].endsWith("-900")) {
+        const sibling = resolve(dirname(file), `${m[1]}${m[2]}-900.webp`.split("?")[0]);
+        /* existsSync, not the size cache: the cache holds only files some <img>
+           already references, and a sibling nothing references yet is exactly
+           the case this rule exists for. */
+        if (existsSync(sibling)) {
+          const small = `${m[1]}${m[2]}-900.webp`;
+          next = next
+            .replace(`src="${src}"`, `src="${small}" srcset="${small} 900w, ${src} 1600w" sizes="(max-width:920px) 100vw, 760px"`);
+          srcsetAdded += 1;
+        }
+      }
+    }
     return next;
   });
+
+  /* Inline-style backgrounds get the same sibling treatment. CSS knows no
+     srcset, but the quality cards paint a ~500 px visual from a full gallery
+     original — mc3-exterior.webp is 282 KB where its -900 is 91. A background
+     the CSS file owns is the stylesheet's business; one written inline into the
+     page is this pass's. */
+  html = html.replace(/background-image:url\('([^']*assets\/images\/gallery\/)([a-z0-9-]+)\.webp'\)/gi,
+    (whole, prefix, name) => {
+      if (name.endsWith("-900")) return whole;
+      const sibling = resolve(dirname(file), `${prefix}${name}-900.webp`.split("?")[0]);
+      if (!existsSync(sibling)) return whole;
+      bgSwapped += 1;
+      return `background-image:url('${prefix}${name}-900.webp')`;
+    });
 
   /* The place index: 1,003 KB fetched on load for a search box most visitors
      never use. The path moves onto the input and main.js loads it on focus. */
@@ -209,6 +248,8 @@ console.log(JSON.stringify({
   dimensions_added: dimensionsAdded,
   lazy_added: lazyAdded,
   decoding_added: decodingAdded,
+  responsive_srcset_added: srcsetAdded,
+  inline_backgrounds_swapped: bgSwapped,
   locations_script_deferred: deferredScripts,
   images_without_a_readable_size: unresolved.size,
   unreadable_examples: [...unresolved].slice(0, 5),

@@ -76,7 +76,55 @@
     "Levering & planlægning",
     "Levering &amp; planlægning",
     "Livraison & planification",
-    "Livraison &amp; planification"
+    "Livraison &amp; planification",
+    "Lieferung & Planung",
+    "Lieferung &amp; Planung",
+    "Delivery & planning",
+    "Delivery &amp; planning"
   ],
-  "middle_segment_note": "Both the raw and the HTML-escaped ampersand are listed, because the title is compared as it appears in the file and the file carries &amp;."
+  "middle_segment_note": "Both the raw and the HTML-escaped ampersand are listed, because the title is compared as it appears in the file and the file carries &amp;.",
+  "phrase_trims": [
+    {
+      "find": ": Hersteller, Modelle & Lieferung",
+      "replace": ""
+    },
+    {
+      "find": ": Hersteller, Modelle &amp; Lieferung",
+      "replace": ""
+    },
+    {
+      "find": ": Leitfaden für Planung, Kosten und Qualität",
+      "replace": ": der Leitfaden"
+    },
+    {
+      "find": " – Praxis-Checkliste",
+      "replace": ""
+    }
+  ],
+  "phrase_trims_note": "Literal boilerplate substrings removed from any over-limit title. Each is a formula stamped across a page family; nothing topic-bearing is in this list.",
+  "colon_tail_trim": {
+    "enabled": true,
+    "only_when_over": 60,
+    "min_head": 18,
+    "exempt_trees": [
+      "/news/",
+      "/en/news/",
+      "/nl/nieuws/",
+      "/da/nyheder/",
+      "/fr/actualites/",
+      "/blog/praxis/"
+    ],
+    "note": "An over-long 'Head: descriptive tail | SUFFIX' keeps the head and the suffix. The head carries the query; the tail was written for the page, not the SERP. News and the daily series are exempt - there the tail IS the story."
+  },
+  "location_country_tail": {
+    "enabled": true,
+    "only_when_over": 60,
+    "pattern": "^(Tiny [Hh]ouse in .+?), [^|]+( \\| MODUNERA)$",
+    "note": "On a location page whose place name alone overfills the title, the country goes: a local query never needed it restated."
+  },
+  "description_trim": {
+    "enabled": true,
+    "max": 158,
+    "note": "Descriptions past 160 are cut at the last sentence end at or before 158; if no sentence end exists past 80, at the last word with an ellipsis. Sentence-aware because a mid-word cut in a SERP reads as a defect."
+  }
 }

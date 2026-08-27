@@ -40,6 +40,7 @@ import { fileURLToPath } from "node:url";
 const ROOT = fileURLToPath(new URL("../", import.meta.url));
 const POLICY = JSON.parse(await readFile(join(ROOT, "data/title-policy.json"), "utf8"));
 const DRY = process.argv.includes("--dry");
+const TITLE_LIMIT = POLICY.target_chars ?? 60;
 const KEYWORD = new RegExp(POLICY.keyword_required, "i");
 
 async function walk(dir, out = []) {
@@ -71,8 +72,39 @@ function dropMiddle(title) {
   return `${parts[0]} | ${parts[2]}`;
 }
 
-function shorten(rawTitle) {
-  const title = dropMiddle(rawTitle);
+const PHRASE_TRIMS = POLICY.phrase_trims ?? [];
+const COLON = POLICY.colon_tail_trim ?? { enabled: false };
+const COUNTRY_TAIL = POLICY.location_country_tail ?? { enabled: false };
+const COUNTRY_RE = COUNTRY_TAIL.enabled ? new RegExp(COUNTRY_TAIL.pattern) : null;
+
+/* Four rules, all conditional on the title actually being over the limit — a
+   title that fits is never touched, whatever formulas it contains. Order:
+   boilerplate middles, literal phrase trims, the location country tail, and
+   last the colon tail, because the first three are surgical and the fourth is
+   the broadest. */
+function shorten(rawTitle, route) {
+  let title = dropMiddle(rawTitle);
+  if (title.length > TITLE_LIMIT) {
+    for (const { find, replace } of PHRASE_TRIMS) {
+      if (title.length <= TITLE_LIMIT) break;
+      if (title.includes(find)) title = title.split(find).join(replace);
+    }
+  }
+  if (COUNTRY_RE && title.length > (COUNTRY_TAIL.only_when_over ?? 60)) {
+    const m = COUNTRY_RE.exec(title);
+    if (m) title = m[1] + m[2];
+  }
+  if (COLON.enabled && title.length > (COLON.only_when_over ?? 60)
+      && !(COLON.exempt_trees ?? []).some((t) => route.startsWith(t))) {
+    const m = /^([^:|]{18,}?):\s[^|]+(\|.*)$/.exec(title);
+    if (m && m[1].trim().length >= (COLON.min_head ?? 18)) {
+      title = `${m[1].trim()} ${m[2].trim()}`;
+    }
+  }
+  return finishShorten(rawTitle, title);
+}
+
+function finishShorten(rawTitle, title) {
   const m = /^(.*?)\s*\|\s*([^|]+)$/.exec(title);
   if (!m) return title === rawTitle ? null : title;
   const body = m[1];
@@ -89,6 +121,7 @@ let indexable = 0;
 let changed = 0;
 let keptForKeyword = 0;
 let charsSaved = 0;
+let descTrimmed = 0;
 const byRule = {};
 
 for (const file of await walk(ROOT)) {
@@ -100,27 +133,50 @@ for (const file of await walk(ROOT)) {
   const titleMatch = original.match(/<title>([\s\S]*?)<\/title>/i);
   if (!titleMatch) continue;
   const title = titleMatch[1].trim();
-  const next = shorten(title);
+  const route = "/" + relative(ROOT, file).replace(/index\.html$/, "");
+  const next = shorten(title, route);
 
   if (!next) {
     /* Recorded, not silent: a page left long because its keyword lives in the
        suffix is a page for a generator to fix, not a page that was overlooked. */
     const suffix = (/\|\s*([^|]+)$/.exec(title) ?? [])[1]?.trim();
     if (suffix && rules.some((r) => r.from === suffix)) keptForKeyword += 1;
-    continue;
   }
 
   let html = original;
-  html = html.replace(/<title>[\s\S]*?<\/title>/i, `<title>${next}</title>`);
+  if (next) html = html.replace(/<title>[\s\S]*?<\/title>/i, `<title>${next}</title>`);
   /* og:title mirrors <title> on this site. Changing one and not the other would
      make the page say two different things to two different readers. */
-  html = html.split(`content="${title}"`).join(`content="${next}"`);
+  if (next) html = html.split(`content="${title}"`).join(`content="${next}"`);
+
+  /* The second SERP line. Sentence-aware: a description past 160 is cut at the
+     last sentence end at or before the cap — a mid-word cut in a result page
+     reads as a defect, and Google rewrites defective lines with whatever it
+     finds. Only if no sentence end exists past 80 does it fall to a word
+     boundary with an ellipsis. */
+  const DESC = POLICY.description_trim ?? { enabled: false };
+  if (DESC.enabled) {
+    const dm = html.match(/<meta name="description" content="([^"]*)"/i);
+    if (dm && dm[1].length > 160) {
+      const cap = DESC.max ?? 158;
+      const text = dm[1];
+      let cut = -1;
+      for (const mm of text.matchAll(/[.!?](?=\s|$)/g)) {
+        if (mm.index + 1 <= cap) cut = mm.index + 1; else break;
+      }
+      const trimmed = cut > 80
+        ? text.slice(0, cut).trim()
+        : text.slice(0, cap - 1).replace(/\s+\S*$/, "").trim() + "…";
+      html = html.split(`content="${text}"`).join(`content="${trimmed}"`);
+      descTrimmed += 1;
+    }
+  }
 
   if (html !== original) {
     changed += 1;
-    charsSaved += title.length - next.length;
-    const suffix = (/\|\s*([^|]+)$/.exec(title) ?? [])[1]?.trim();
-    byRule[suffix] = (byRule[suffix] ?? 0) + 1;
+    if (next) charsSaved += title.length - next.length;
+    const suffix = next ? (/\|\s*([^|]+)$/.exec(title) ?? [])[1]?.trim() : null;
+    if (suffix) byRule[suffix] = (byRule[suffix] ?? 0) + 1;
     if (!DRY) await writeFile(file, html, "utf8");
   }
 }
@@ -130,6 +186,7 @@ console.log(JSON.stringify({
   titles_shortened: changed,
   characters_recovered: charsSaved,
   left_long_because_the_suffix_carries_the_keyword: keptForKeyword,
+  descriptions_trimmed: descTrimmed,
   by_suffix: byRule,
   dry_run: DRY,
 }));
