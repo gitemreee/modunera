@@ -62,6 +62,7 @@ Break any of these and the work stops being defensible.
 | Social artwork and copy | `social/instagram/` |
 | Social generators | `tools/social/` |
 | Market intelligence engine | `docs/market-intelligence.md` |
+| SEO audit and intent maps | `SEO_AUDIT.md`, `URL_INTENT_MAP.md`, `KEYWORD_MAP.md`, `CONTENT_PRUNING_PLAN.md` |
 
 ## 4. Traps that have already caught someone
 

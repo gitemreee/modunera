@@ -92,6 +92,22 @@ for (const tree of TREES) {
   }
 }
 
+/* URL consolidations. Not Nordic slugs, but this generator owns _redirects, and
+   a second writer of the same file would be a race. Each pair is a page that was
+   removed because it duplicated the survivor:
+   - /studio/ and /konfigurator/ were one configurator at two URLs with identical
+     <title>s and 94% identical main content (6-gram Jaccard, measured 2026-08-25).
+     Both carried ~3,100 internal links each. konfigurator survives: it is the
+     word German buyers actually search.
+   - /tiny-house-deutschland/ targeted the same query family as the Germany hub
+     /laender/deutschland/, which carries twice its internal links and the
+     five-language cluster. The hub survives. */
+const CONSOLIDATIONS = [
+  ["/studio/", "/konfigurator/"],
+  ["/tiny-house-deutschland/", "/laender/deutschland/"],
+];
+for (const [from, to] of CONSOLIDATIONS) rules.push([from, to]);
+
 rules.sort(([a], [b]) => a.localeCompare(b, "en"));
 const width = Math.max(...rules.map(([from]) => from.length));
 const body = [

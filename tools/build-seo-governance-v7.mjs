@@ -170,6 +170,19 @@ for (const file of htmlFiles) {
     if (!shouldIndex) excludedLocations += 1;
   }
 
+  /* A page with no robots meta at all is indexable by default, but implicit is
+     not policy: /modelle/ shipped for weeks with no robots tag while every page
+     around it carried one, found in the 2026-08-25 audit. Anything this pass has
+     not classified above gets the explicit INDEX policy line. */
+  if (!getRobots(html)) {
+    const updated = setRobots(html, INDEX_ROBOTS);
+    if (updated !== html) {
+      await writeFile(file, updated);
+      html = updated;
+      changedRobots += 1;
+    }
+  }
+
   const robots = getRobots(html);
   if (/noindex/i.test(robots)) {
     if (isNonMarket(route)) excludedNonMarket += 1;

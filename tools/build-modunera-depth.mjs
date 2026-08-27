@@ -254,10 +254,10 @@ function footer(lang, rel) {
     .map((c) => `<a href="${root}${p.countries}/${cs[c]}/">${esc(cn[c].replace(/^the /, ""))}</a>`)
     .join("");
   const compare = lang === "de"
-    ? `<a href="${root}modellvergleich/">Modellvergleich</a><a href="${root}preisvergleich/">Preisvergleich</a><a href="${root}vorteile/">Vorteile</a><a href="${root}studio/">Design Studio</a>`
+    ? `<a href="${root}modellvergleich/">Modellvergleich</a><a href="${root}preisvergleich/">Preisvergleich</a><a href="${root}vorteile/">Vorteile</a><a href="${root}konfigurator/">Design Studio</a>`
     : lang === "en"
-      ? `<a href="${root}en/model-comparison/">Model comparison</a><a href="${root}en/price-comparison/">Price comparison</a><a href="${root}en/advantages/">Advantages</a><a href="${root}studio/">Design Studio</a>`
-      : `<a href="${root}${p.models}/">${esc(LOCALES[lang].labels.allModels)}</a><a href="${root}${p.countries}/">${esc(LOCALES[lang].labels.countries)}</a><a href="${root}studio/">Design Studio</a>`;
+      ? `<a href="${root}en/model-comparison/">Model comparison</a><a href="${root}en/price-comparison/">Price comparison</a><a href="${root}en/advantages/">Advantages</a><a href="${root}konfigurator/">Design Studio</a>`
+      : `<a href="${root}${p.models}/">${esc(LOCALES[lang].labels.allModels)}</a><a href="${root}${p.countries}/">${esc(LOCALES[lang].labels.countries)}</a><a href="${root}konfigurator/">Design Studio</a>`;
   const knowledge = `<a href="${root}${p.guides}/">${esc(lang === "de" ? "Ratgeber" : lang === "en" ? "Guides" : LOCALES[lang].labels.guides)}</a><a href="${root}${p.questions}/">${esc(lang === "de" ? "Länderfragen" : lang === "en" ? "Country questions" : LOCALES[lang].labels.questions)}</a><a href="${root}${p.faq}/">${esc(lang === "de" ? "FAQ" : lang === "en" ? "FAQ" : LOCALES[lang].labels.faq)}</a><a href="${root}kontakt/">${esc(lang === "fr" || lang === "en" || lang === "nl" ? "Contact" : lang === "da" ? "Kontakt" : "Kontakt")}</a>`;
   const waMsg = lang === "de"
     ? "Hallo MODUNERA, mein Zielland ist: __. Nutzung: __. Wunschgröße/Modell: __. Bitte kontaktieren Sie mich."
@@ -338,10 +338,30 @@ function modelPage(lang, n) {
   const images = MODEL_COPY[String(n)].images;
   const heroImage = `assets/images/gallery/${images[0]}.webp`;
 
-  const title = `${model} – ${copy.label} | MODUNERA Tiny House`;
+  /* The commercial title. "MD 1 – Panorama und Loft" described the model to
+     someone already on the site; in a search result it competed on charm against
+     rivals stating price and size. Query intent, dimensions and the from-price —
+     all three from data the site already publishes — now stand in the snippet.
+     The lengths use an en dash ("8,00–9,70 m") instead of the body copy's
+     " oder ", because the pipe-separated title has no room for prose. */
+  const titleLengths = (spec.lengths.match(/[\d.,]+/g) ?? [])
+    .map((v) => (lang === "en" ? v.replace(",", ".") : v.replace(".", ",")))
+    .join("\u2013") + "\u00a0m";
+  const BUY = { de: "Tiny House kaufen", en: "Tiny House", nl: "Tiny House kopen",
+                da: "tiny house", fr: "tiny house" }[lang];
+  const FROM = { de: "ab", en: "from", nl: "vanaf", da: "fra", fr: "d\u00e8s" }[lang];
+  const title = `${model} ${BUY} | ${titleLengths} | ${FROM} ${vars.price} | MODUNERA`;
   const leadHasTerm = /tiny[\s-]*house/i.test(copy.lead);
   const rawDescription = leadHasTerm ? copy.lead : `${model} ${TERM} – ${copy.lead}`;
-  const description = rawDescription.length > 155 ? rawDescription.slice(0, 152).trimEnd() + "…" : rawDescription;
+  /* The description carries the price too, when it fits: the snippet is the one
+     place a buyer compares suppliers without clicking, and rivals print theirs. */
+  const PRICE_TAIL = { de: ` Ab ${vars.price} ab Werk.`, en: ` From ${vars.price} ex works.`,
+                       nl: ` Vanaf ${vars.price} af fabriek.`, da: ` Fra ${vars.price} ab fabrik.`,
+                       fr: ` D\u00e8s ${vars.price} d\u00e9part usine.` }[lang];
+  const base = rawDescription.length > 155 - PRICE_TAIL.length
+    ? rawDescription.slice(0, 152 - PRICE_TAIL.length).trimEnd() + "…"
+    : rawDescription;
+  const description = base + PRICE_TAIL;
 
   const productLd = {
     "@context": "https://schema.org",

@@ -84,6 +84,29 @@ const replacements = [
   ["modelle/mc-3", "modelle/md-3"], ["modelle/mc-4", "modelle/md-4"],
   ["modelle/mc-5", "modelle/md-5"], ["modelle/mc-6", "modelle/md-6"],
   ["modelle/mc-7", "modelle/md-7"], ["modelle/mc-8", "modelle/md-8"],
+
+  /* URL consolidations, 2026-08-25. /studio/ and /konfigurator/ were one tool at
+     two URLs with identical titles (94% identical main content, measured);
+     /tiny-house-deutschland/ duplicated /laender/deutschland/'s query family.
+     The pages 301 in _redirects; these rewrites point the legacy pages' own body
+     links at the surviving URL so no internal link routes through a redirect. */
+  ['href="studio/', 'href="konfigurator/'],
+  ['href="../studio/', 'href="../konfigurator/'],
+  ['href="../../studio/', 'href="../../konfigurator/'],
+  ['href="../../../studio/', 'href="../../../konfigurator/'],
+  ['href="/studio/', 'href="/konfigurator/'],
+  ['href="https://modunera.com/studio/', 'href="https://modunera.com/konfigurator/'],
+  ['href="tiny-house-deutschland/', 'href="laender/deutschland/'],
+  ['href="../tiny-house-deutschland/', 'href="../laender/deutschland/'],
+  ['href="../../tiny-house-deutschland/', 'href="../../laender/deutschland/'],
+  ['href="/tiny-house-deutschland/', 'href="/laender/deutschland/'],
+  ['href="https://modunera.com/tiny-house-deutschland/', 'href="https://modunera.com/laender/deutschland/'],
+  /* The location tree links from three directories deep — the first run of this
+     list stopped at two and the validator reported 7,208 broken references.
+     Depth is enumerated to four for both consolidations; deeper does not exist. */
+  ['href="../../../tiny-house-deutschland/', 'href="../../../laender/deutschland/'],
+  ['href="../../../../tiny-house-deutschland/', 'href="../../../../laender/deutschland/'],
+  ['href="../../../../studio/', 'href="../../../../konfigurator/'],
 ];
 
 let scannedFiles = 0;
