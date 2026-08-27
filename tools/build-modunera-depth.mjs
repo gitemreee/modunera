@@ -1544,8 +1544,25 @@ function articleBody(found, root) {
         .join("")}<li>Zuständige Stelle im Zielland angefragt und Antwort schriftlich erhalten?</li><li>Zufahrt und Entladepunkt mit Fotos und Maßen dokumentiert?</li><li>Budget inklusive Fundament, Anschlüssen, Entladung, Planung, Gebühren und Versicherung gerechnet?</li></ul></section>`
     );
   } else {
+    /* 2026-08-25, the pruning. The mistakes format is no longer a page of its
+       own: 50 topics each held a -leitfaden and a -fehler-checkliste on ONE
+       search intent, with intra-family duplication measured at 0.29-0.55
+       six-gram Jaccard (CONTENT_PRUNING_PLAN.md). The checklist material was
+       genuinely good - the FORMAT was the problem - so the guide absorbs it
+       whole: the mistakes argued in full, then the pre-order checklist, then
+       the FAQ. One topic, one URL, everything the two pages said. */
     sections.push(
-      `<section id="section-${n0 + 3}"><h2>Häufige Fragen</h2>${faqMarkup(topic.faq)}</section>`
+      `<section id="section-${n0 + 3}"><h2>Die häufigsten Fehler — und wie sie sich vermeiden lassen</h2>${topic.mistakes
+        .map(([mTitle, mText], i) => `<h3>Fehler ${i + 1}: ${esc(mTitle)}</h3><p>${esc(mText)}</p>`)
+        .join("")}</section>`
+    );
+    sections.push(
+      `<section id="section-${n0 + 4}"><h2>Vor der Bestellung abhaken</h2><ul class="check-list">${topic.mistakes
+        .map(([mTitle]) => `<li>${esc(mTitle)} — geprüft und schriftlich festgehalten?</li>`)
+        .join("")}<li>Zuständige Stelle im Zielland angefragt und Antwort schriftlich erhalten?</li><li>Zufahrt und Entladepunkt mit Fotos und Maßen dokumentiert?</li><li>Budget inklusive Fundament, Anschlüssen, Entladung, Planung, Gebühren und Versicherung gerechnet?</li></ul></section>`
+    );
+    sections.push(
+      `<section id="section-${n0 + 5}"><h2>Häufige Fragen</h2>${faqMarkup(topic.faq)}</section>`
     );
   }
 
@@ -1555,8 +1572,9 @@ function articleBody(found, root) {
     .filter(([k, t]) => t.cat === topic.cat && k !== key && TOPIC_SLUGS.has(k))
     .slice(0, 6);
   if (siblings.length) {
+    const sibId = format === "guide" ? n0 + 6 : n0 + 4;
     sections.push(
-      `<section id="section-${n0 + 4}"><h2>Weiterlesen zu ${esc(CATEGORY_LABELS[topic.cat])}</h2><div class="post-list">${siblings
+      `<section id="section-${sibId}"><h2>Weiterlesen zu ${esc(CATEGORY_LABELS[topic.cat])}</h2><div class="post-list">${siblings
         .map(([k, t]) => {
           const have = TOPIC_SLUGS.get(k) ?? {};
           const slug = have[format] ?? have.guide ?? have.mistakes ?? have.post;
@@ -1572,7 +1590,12 @@ function articleBody(found, root) {
 
 function tableOfContents(found) {
   const kind = bodyFormat(found);
-  const all = [...articleHeadings(found), kind === "overview" ? "Die beiden ausführlichen Beiträge" : kind === "mistakes" ? "Vor der Bestellung abhaken" : "Häufige Fragen"];
+  const tail = kind === "overview"
+    ? ["Die beiden ausführlichen Beiträge"]
+    : kind === "mistakes"
+      ? ["Vor der Bestellung abhaken"]
+      : ["Die häufigsten Fehler — und wie sie sich vermeiden lassen", "Vor der Bestellung abhaken", "Häufige Fragen"];
+  const all = [...articleHeadings(found), ...tail];
   return `<div class="toc"><strong>Inhalt</strong>${all
     .map((h, i) => `<a href="#section-${i + 1}">${esc(h)}</a>`)
     .join("")}</div>`;
@@ -1877,8 +1900,32 @@ async function normaliseTitles() {
   return changed;
 }
 
+/* The German blog index carries a legacy card grid that no generator rebuilds —
+   baked by the retired scale script. When the pruning removed 52 article
+   directories, 104 of its links pointed at nothing (two per card: image and
+   title). Rather than hand-editing a legacy page, this pass drops any card whose
+   href has no directory behind it. Self-healing: a future removal needs no edit
+   here, and a re-run with nothing removed changes nothing. */
+async function pruneBlogIndexCards() {
+  const file = join(ROOT, "blog/index.html");
+  const original = await readFile(file, "utf8");
+  let removed = 0;
+  const next = original.replace(/<article class="blog-card[^"]*"[\s\S]*?<\/article>/g, (card) => {
+    const href = card.match(/href="([^"]+)"/)?.[1] ?? "";
+    if (!href || href.startsWith("http")) return card;
+    const target = join(ROOT, "blog", href.replace(/\/$/, ""), "index.html");
+    if (existsSync(target)) return card;
+    removed += 1;
+    return "";
+  });
+  if (next !== original) await writeFile(file, next, "utf8");
+  return removed;
+}
+
 if (extendOnly) {
   const rewritten = await rewriteArticles();
+  const deadCards = await pruneBlogIndexCards();
+  if (deadCards) console.error(`blog index: ${deadCards} dead card(s) removed`);
   const homes = await buildHomeModels();
   const countries = await extendCountryPages();
   const articles = await extendArticles();

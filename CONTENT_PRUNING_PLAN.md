@@ -1,5 +1,12 @@
 # CONTENT_PRUNING_PLAN — the guide families
 
+**EXECUTED 2026-08-25** for every within-topic family: 52 directories removed,
+52 301s live, the guide format absorbed the mistakes material whole (argued in
+full + pre-order checklist + FAQ on one URL). Indexable pages 1,713 → 1,661.
+Cross-topic candidates (e.g. `preise` vs `preise-kosten`, `airbnb` vs
+`airbnb-glamping`) are intentionally NOT merged — different topic entries with
+partially different material; they need editorial judgement, not mechanics.
+
 Date: 2026-08-25. 112 indexable `/blog/` folders; 50 topic families hold 2–3
 URLs each on ONE intent (a `-leitfaden` and a `-fehler-checkliste`, sometimes a
 third). Similarity below is the worst 6-gram Jaccard pair inside the family —
