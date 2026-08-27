@@ -1,7 +1,7 @@
 MODUNERA DAILY INTELLIGENCE REPORT
 
-Date:   2026-08-26
-Run ID: run-2026-08-26-001
+Date:   2026-08-27
+Run ID: run-2026-08-27-001
 Search provider:   (NOT CONFIGURED — no scan performed)
 Search Console:  not connected
 
