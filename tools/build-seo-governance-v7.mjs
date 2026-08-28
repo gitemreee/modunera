@@ -160,7 +160,17 @@ for (const file of htmlFiles) {
       changedRobots += 1;
     }
   } else if (location) {
-    const shouldIndex = approved.has(normaliseRoute(route));
+    /* Hubs are not leaves. The gate exists for the 14,514 programmatic CITY
+       pages; the 127 country/region hubs above them are navigation — the pages
+       that give an opened city its crawl path and its internal links. Found
+       2026-08-28 while chasing slow indexing: /standorte/ itself and 113 other
+       hubs were noindex because this branch asked the allow-list about every
+       route under the prefix, and the allow-list only ever contained leaves.
+       A hub is any location directory with child directories; it indexes. */
+    const dir = path.dirname(file);
+    const hasChildDirs = (await readdir(dir, { withFileTypes: true }))
+      .some((e) => e.isDirectory() && existsSync(path.join(dir, e.name, "index.html")));
+    const shouldIndex = hasChildDirs || approved.has(normaliseRoute(route));
     const updated = setRobots(html, shouldIndex ? INDEX_ROBOTS : NOINDEX_ROBOTS);
     if (updated !== html) {
       await writeFile(file, updated);

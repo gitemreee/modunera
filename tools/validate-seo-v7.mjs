@@ -26,7 +26,7 @@
    Exit code 1 on any failure. Run it after the full pipeline.
 */
 import { readFile, readdir } from "node:fs/promises";
-import { existsSync } from "node:fs";
+import { existsSync, readdirSync } from "node:fs";
 import { dirname, extname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -155,7 +155,14 @@ for (const { loc, lastmod } of entries) {
   if (!page) { fail("6 sitemap target missing", route); continue; }
   if (!page.indexable) fail("3 noindex in sitemap", route);
   if (isPrivate(route)) fail("4 private area in sitemap", route);
-  if (isLocation(route) && !approved.has(route)) fail("5 unapproved location in sitemap", route);
+  /* Rule 5 polices the gated LEAVES. A hub — a location directory with child
+     directories — is navigation, not a gated page; the governance pass indexes
+     hubs by structure and the validator mirrors that definition rather than
+     asserting an allow-list that only ever contained leaves. */
+  const isHub = isLocation(route) && existsSync(join(ROOT, route.slice(1))) &&
+    readdirSync(join(ROOT, route.slice(1)), { withFileTypes: true })
+      .some((e) => e.isDirectory() && existsSync(join(ROOT, route.slice(1), e.name, "index.html")));
+  if (isLocation(route) && !isHub && !approved.has(route)) fail("5 unapproved location in sitemap", route);
   if (page.canonical.replace(BASE, "") !== route) fail("7 canonical mismatch", `${route} -> ${page.canonical}`);
   if (lastmod && lastmod > today) fail("9 future lastmod", `${route} ${lastmod}`);
 }

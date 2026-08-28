@@ -103,3 +103,11 @@ jobs:
             sleep $((2 ** attempt))
           done
           exit 1
+
+      # After a publish, tell the IndexNow engines (Bing, Seznam, Naver, Yandex)
+      # about the URL set. Google has no such door; for the Bing-fed AI answer
+      # engines this is the fastest one there is. Never fails the job: the
+      # publish above already happened.
+      - name: Ping IndexNow
+        if: success()
+        run: node tools/ping-indexnow.mjs || true
