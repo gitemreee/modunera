@@ -1,31 +1,81 @@
 MODUNERA DAILY INTELLIGENCE REPORT
 
-Date:   2026-08-28
-Run ID: run-2026-08-28-001
-Search provider:   (NOT CONFIGURED — no scan performed)
-Search Console:  not connected
+Date:   2026-08-29
+Run ID: run-2026-08-29-002
+Search provider: not-configured  (NOT CONFIGURED — no scan performed)
+Search Console:  998 row(s) from 7 file(s)
 
 MARKET SCAN
 
 Deutschland (DE)
   queries planned: 7   results read: 0   kept: 0   discarded: 0
-  note: no adapter in this build for provider "" (known: brave)
+  note: MODUNERA_SEARCH_PROVIDER is not set
 Nederland (NL)
   queries planned: 6   results read: 0   kept: 0   discarded: 0
-  note: no adapter in this build for provider "" (known: brave)
+  note: MODUNERA_SEARCH_PROVIDER is not set
 Danmark (DK)
   queries planned: 6   results read: 0   kept: 0   discarded: 0
-  note: no adapter in this build for provider "" (known: brave)
+  note: MODUNERA_SEARCH_PROVIDER is not set
 Luxembourg (LU)
   queries planned: 4   results read: 0   kept: 0   discarded: 0
-  note: no adapter in this build for provider "" (known: brave)
+  note: MODUNERA_SEARCH_PROVIDER is not set
 Schweiz / Suisse (CH)
   queries planned: 5   results read: 0   kept: 0   discarded: 0
-  note: no adapter in this build for provider "" (known: brave)
+  note: MODUNERA_SEARCH_PROVIDER is not set
 
 SEARCH CONSOLE (sections 37 and 38)
 
-  not connected
+  998 row(s) from 7 file(s)
+  RANKS_TOO_LOW             24
+  NEAR_PAGE_ONE             25
+  MISSING_CONTENT           8
+
+  RANKS_TOO_LOW  https://modunera.com/en/blog/permits-and-law/
+      clicks 0  impressions 86  position 61.6  CTR 0.00%
+      -> the page exists and ranks too low to be seen — strengthen it and link to it from pages that already rank; do not write a second one
+  RANKS_TOO_LOW  https://modunera.com/blog/tiny-house-baugenehmigung-leitfaden/
+      clicks 0  impressions 69  position 61.6  CTR 0.00%
+      -> the page exists and ranks too low to be seen — strengthen it and link to it from pages that already rank; do not write a second one
+  RANKS_TOO_LOW  https://modunera.com/en/guides/tiny-house-denmark-permits/
+      clicks 0  impressions 45  position 42.2  CTR 0.00%
+      -> the page exists and ranks too low to be seen — strengthen it and link to it from pages that already rank; do not write a second one
+  RANKS_TOO_LOW  https://modunera.com/en/blog/
+      clicks 0  impressions 45  position 63.4  CTR 0.00%
+      -> the page exists and ranks too low to be seen — strengthen it and link to it from pages that already rank; do not write a second one
+  RANKS_TOO_LOW  https://modunera.com/en/guides/
+      clicks 0  impressions 45  position 68.1  CTR 0.00%
+      -> the page exists and ranks too low to be seen — strengthen it and link to it from pages that already rank; do not write a second one
+  NEAR_PAGE_ONE  https://modunera.com/fr/blog/tiny-house-fondation/
+      clicks 0  impressions 43  position 18.3  CTR 0.00%
+      -> strengthen the page that already ranks, do not mint a second one
+  RANKS_TOO_LOW  https://modunera.com/da/ydelser/modulbyggeri/
+      clicks 0  impressions 39  position 58  CTR 0.00%
+      -> the page exists and ranks too low to be seen — strengthen it and link to it from pages that already rank; do not write a second one
+  RANKS_TOO_LOW  https://modunera.com/en/models/md-8/
+      clicks 0  impressions 37  position 51.8  CTR 0.00%
+      -> the page exists and ranks too low to be seen — strengthen it and link to it from pages that already rank; do not write a second one
+  RANKS_TOO_LOW  https://modunera.com/da/blog/tilladelse-og-lovgivning/
+      clicks 0  impressions 36  position 24.4  CTR 0.00%
+      -> the page exists and ranks too low to be seen — strengthen it and link to it from pages that already rank; do not write a second one
+  RANKS_TOO_LOW  https://modunera.com/tiny-house-preise/
+      clicks 0  impressions 36  position 72.3  CTR 0.00%
+      -> the page exists and ranks too low to be seen — strengthen it and link to it from pages that already rank; do not write a second one
+  RANKS_TOO_LOW  https://modunera.com/blog/europa/tiny-house-daenemark-genehmigung/
+      clicks 1  impressions 36  position 36.4  CTR 2.78%
+      -> the page exists and ranks too low to be seen — strengthen it and link to it from pages that already rank; do not write a second one
+  RANKS_TOO_LOW  https://modunera.com/blog/tiny-house-baugenehmigung-fehler-checkliste/
+      clicks 0  impressions 35  position 90.2  CTR 0.00%
+      -> the page exists and ranks too low to be seen — strengthen it and link to it from pages that already rank; do not write a second one
+  RANKS_TOO_LOW  https://modunera.com/da/lande/danmark/
+      clicks 0  impressions 29  position 51.3  CTR 0.00%
+      -> the page exists and ranks too low to be seen — strengthen it and link to it from pages that already rank; do not write a second one
+  NEAR_PAGE_ONE  https://modunera.com/nl/blog/indeling-en-interieur/
+      clicks 0  impressions 28  position 15.1  CTR 0.00%
+      -> strengthen the page that already ranks, do not mint a second one
+  MISSING_CONTENT  tiny house planen lassen
+      clicks 0  impressions 27  position 63.6  CTR 0.00%
+      -> impressions exist and no page answers the query; a new page is worth considering
+  ... and 42 more, all in data/market-signals.json
 
 VERIFIED INBOX
 
@@ -51,7 +101,7 @@ RUN COUNTERS (section 72)
   existing projects updated   1
   tender opportunities        0
   business leads              0
-  GSC opportunities           0
+  GSC opportunities           57
   content generated           0
   content updated             0
 
@@ -85,8 +135,11 @@ STORE
 
 ERRORS
 
-  DE: no adapter in this build for provider "" (known: brave)
-  NL: no adapter in this build for provider "" (known: brave)
-  DK: no adapter in this build for provider "" (known: brave)
-  LU: no adapter in this build for provider "" (known: brave)
-  CH: no adapter in this build for provider "" (known: brave)
+  GSC: data/gsc/Arama görünümü.csv: column(s) not recognised and ignored: Arama Görünümü
+  GSC: data/gsc/Filtreler.csv: column(s) not recognised and ignored: Filtre uygula, Değer
+  GSC: data/gsc/Filtreler.csv: no impressions column, skipped
+  DE: MODUNERA_SEARCH_PROVIDER is not set
+  NL: MODUNERA_SEARCH_PROVIDER is not set
+  DK: MODUNERA_SEARCH_PROVIDER is not set
+  LU: MODUNERA_SEARCH_PROVIDER is not set
+  CH: MODUNERA_SEARCH_PROVIDER is not set

@@ -277,16 +277,26 @@ const SearchProvider = {
 
 const GSC = CONFIG.gsc ?? {};
 
+/* Google words these headings differently between exports and interface
+   versions — the 2026-08-19 file said "En çok kullanılan sorgular" and the
+   2026-08-29 file "En çok yapılan sorgular", and the metric columns arrived as
+   "TO" and "Pozisyon" rather than the spelled-out forms. Every variant seen is
+   listed; the unrecognised-column warning is what surfaced the difference, so a
+   future rewording will be reported by name rather than silently dropped. */
 const GSC_FIELDS = {
-  query:       ["query", "queries", "top queries", "sorgu", "sorgular", "en cok kullanilan sorgular", "en çok kullanılan sorgular"],
-  page:        ["page", "pages", "top pages", "sayfa", "sayfalar", "en cok kullanilan sayfalar", "en çok kullanılan sayfalar"],
+  query:       ["query", "queries", "top queries", "sorgu", "sorgular",
+                "en cok kullanilan sorgular", "en çok kullanılan sorgular",
+                "en cok yapilan sorgular", "en çok yapılan sorgular"],
+  page:        ["page", "pages", "top pages", "sayfa", "sayfalar",
+                "en cok kullanilan sayfalar", "en çok kullanılan sayfalar",
+                "en alakali sayfalar", "en alakalı sayfalar"],
   country:     ["country", "countries", "ulke", "ülke", "ulkeler", "ülkeler"],
   device:      ["device", "cihaz"],
   date:        ["date", "tarih"],
   clicks:      ["clicks", "tiklamalar", "tıklamalar"],
   impressions: ["impressions", "gosterimler", "gösterimler"],
-  ctr:         ["ctr", "average ctr", "ortalama ctr"],
-  position:    ["position", "average position", "ortalama konum", "konum"],
+  ctr:         ["ctr", "average ctr", "ortalama ctr", "to"],
+  position:    ["position", "average position", "ortalama konum", "konum", "pozisyon"],
 };
 
 const foldHeading = (h) => String(h ?? "")
@@ -415,9 +425,15 @@ function gscOpportunities(rows) {
     } else if (t.near_page_one && pos !== null &&
         pos >= t.near_page_one.min_position && pos <= t.near_page_one.max_position) {
       kind = "NEAR_PAGE_ONE";
-    } else if (t.missing_content && imp >= t.missing_content.min_impressions &&
-        pos !== null && pos > t.missing_content.min_position) {
-      kind = "MISSING_CONTENT";
+    } else if (imp >= (t.missing_content?.min_impressions ?? 15) &&
+        pos !== null && pos > (t.missing_content?.min_position ?? 20)) {
+      /* Same numbers, two different diagnoses, and conflating them sends
+         somebody to write a page that already exists. A QUERY drawing
+         impressions with nothing of ours ranking is missing content. A PAGE
+         drawing impressions from position 60 is not missing — it exists, it is
+         simply not seen, and the answer is authority and internal links, not a
+         new URL. The row type decides. */
+      kind = r.query ? "MISSING_CONTENT" : "RANKS_TOO_LOW";
     }
     /* COUNTRY_GROWTH is deliberately not decided here. "Search from a country is
        rising" is a comparison against an earlier export, and a single file has
@@ -433,7 +449,9 @@ function gscOpportunities(rows) {
       clicks: r.clicks ?? 0, impressions: imp,
       ctr: ctr === null ? null : Math.round(ctr * 10000) / 10000,
       position: pos === null ? null : Math.round(pos * 10) / 10,
-      action: (t[kind.toLowerCase()] ?? {}).action ?? null,
+      action: kind === "RANKS_TOO_LOW"
+        ? "the page exists and ranks too low to be seen — strengthen it and link to it from pages that already rank; do not write a second one"
+        : (t[kind.toLowerCase()] ?? {}).action ?? null,
       source: r.source,
     });
   }

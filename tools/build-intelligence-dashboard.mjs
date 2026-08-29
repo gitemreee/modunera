@@ -151,6 +151,7 @@ const KIND_LABEL = {
   HIGH_IMPRESSION_LOW_CTR: ["Viele Impressionen, kaum Klicks", "Titel und Description sind der Test — die Seite rankt bereits."],
   NEAR_PAGE_ONE: ["Knapp vor Seite eins (Position 8–20)", "Die vorhandene Seite stärken, keine zweite anlegen."],
   MISSING_CONTENT: ["Impressionen ohne passende Seite", "Eine neue Seite ist einen Gedanken wert."],
+  RANKS_TOO_LOW: ["Seite vorhanden, aber zu weit hinten", "Stärken und von rankenden Seiten verlinken — keine zweite Seite."],
   COUNTRY_GROWTH: ["Wachsender Markt", "Der Cluster für diesen Markt wirkt; ihn stärken."],
 };
 const gscCounts = {};

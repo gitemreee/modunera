@@ -321,9 +321,9 @@
       "data/gsc"
     ],
     "export_file": "data/gsc-export.json",
-    "min_impressions": 50,
+    "min_impressions": 8,
     "high_impression_low_ctr": {
-      "min_impressions": 100,
+      "min_impressions": 15,
       "max_position": 10,
       "max_ctr": 0.02,
       "action": "title and meta description are the test; the page already ranks"
@@ -331,17 +331,31 @@
     "near_page_one": {
       "min_position": 8,
       "max_position": 20,
-      "action": "strengthen the page that already ranks, do not mint a second one"
+      "action": "strengthen the page that already ranks, do not mint a second one",
+      "min_impressions": 8
     },
     "missing_content": {
-      "min_impressions": 100,
+      "min_impressions": 15,
       "min_position": 20,
       "action": "impressions exist and no page answers the query; a new page is worth considering"
     },
     "country_growth": {
-      "min_clicks": 5,
+      "min_clicks": 3,
       "action": "the cluster for that market is working; strengthen it"
-    }
+    },
+    "_calibration_note": [
+      "Recalibrated 2026-08-29 against the first real export. The original floors",
+      "(50 impressions, 100 for the CTR and missing-content buckets) were written",
+      "for a site with traffic this one does not have yet: over 28 days the whole",
+      "property drew 2,264 impressions and its single biggest query 27. Nothing",
+      "could ever cross those floors, so the instrument read 998 rows and reported",
+      "nothing - a measuring device calibrated past its own subject.",
+      "",
+      "The floors below are set so a query needs to be real but not large. They",
+      "should RISE as the property grows: at 20,000 impressions a month an 8-",
+      "impression query is noise again. Revisit when a monthly export first passes",
+      "10,000 impressions."
+    ]
   },
   "decision": {
     "note": "Section 18. Creating a new URL is deliberately the last option, not the default.",
