@@ -126,5 +126,40 @@
     "enabled": true,
     "max": 158,
     "note": "Descriptions past 160 are cut at the last sentence end at or before 158; if no sentence end exists past 80, at the last word with an ellipsis. Sentence-aware because a mid-word cut in a SERP reads as a defect."
+  },
+  "page_overrides_note": [
+    "Editorial decisions, one page at a time, applied before the length rules —",
+    "an override is a judgement and outranks a formula.",
+    "",
+    "2026-08-29, the German permit cluster. Three indexable pages bid for one head",
+    "query family and all three sat at position 60-73 while drawing 115",
+    "impressions between them: /blog/tiny-house-genehmigung-deutschland/ (the",
+    "legal basis), /blog/tiny-house-baugenehmigung-leitfaden/ (the application",
+    "procedure) and the German member of the five-country Europa series. Their",
+    "material is genuinely different — 0.33 and 0.47 six-gram overlap, most of it",
+    "the shared generated closing sections — so this is not a merge. It is three",
+    "titles that all promised the same thing. Each now names what only it covers:",
+    "the pillar keeps the head terms, the procedure page takes Bauantrag and",
+    "Vorbescheid, the series member says it is the country entry in a comparison.",
+    "",
+    "The two series titles are here rather than in the generator because normaliseTitles() appends the product term to any title lacking it, which pushed a 52-character title to 68. An override is applied later than that pass and settles the question."
+  ],
+  "page_overrides": {
+    "/blog/tiny-house-genehmigung-deutschland/": {
+      "title": "Tiny House Genehmigung Deutschland | MODUNERA",
+      "description": "Wann ein Tiny House in Deutschland genehmigungspflichtig ist: die drei Fälle des Baugesetzbuchs, das Landesrecht und die Reihenfolge der Prüfung."
+    },
+    "/blog/tiny-house-baugenehmigung-leitfaden/": {
+      "title": "Bauantrag fürs Tiny House: Unterlagen und Ablauf | MODUNERA",
+      "description": "Was in die Bauvoranfrage gehört, was in den Bauantrag — und wann ein Vorbescheid der günstigere Weg zur Baugenehmigung ist."
+    },
+    "/blog/europa/tiny-house-deutschland-genehmigung/": {
+      "title": "Genehmigung Deutschland im Ländervergleich | MODUNERA",
+      "description": "Deutschland im Fünf-Länder-Vergleich: Standort, Nutzung, Fahrgestell und Unterlagen — neben Niederlande, Dänemark, Luxemburg und Schweiz."
+    },
+    "/en/guides/tiny-house-germany-permits/": {
+      "title": "Permits in Germany, compared | MODUNERA",
+      "description": "Germany as one entry in the five-country comparison: site, use, trailer and documents, beside the Netherlands, Denmark, Luxembourg and Switzerland."
+    }
   }
 }

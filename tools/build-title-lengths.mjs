@@ -82,7 +82,13 @@ const COUNTRY_RE = COUNTRY_TAIL.enabled ? new RegExp(COUNTRY_TAIL.pattern) : nul
    boilerplate middles, literal phrase trims, the location country tail, and
    last the colon tail, because the first three are surgical and the fourth is
    the broadest. */
+const OVERRIDES = POLICY.page_overrides ?? {};
+
 function shorten(rawTitle, route) {
+  /* An editorial override outranks every formula below it: the length rules
+     exist to repair titles nobody chose, and these were chosen. */
+  const ov = OVERRIDES[route];
+  if (ov?.title) return ov.title === rawTitle ? null : ov.title;
   let title = dropMiddle(rawTitle);
   if (title.length > TITLE_LIMIT) {
     for (const { find, replace } of PHRASE_TRIMS) {
@@ -154,6 +160,11 @@ for (const file of await walk(ROOT)) {
      reads as a defect, and Google rewrites defective lines with whatever it
      finds. Only if no sentence end exists past 80 does it fall to a word
      boundary with an ellipsis. */
+  const ovDesc = OVERRIDES[route]?.description;
+  if (ovDesc) {
+    const dm0 = html.match(/<meta name="description" content="([^"]*)"/i);
+    if (dm0 && dm0[1] !== ovDesc) html = html.split(`content="${dm0[1]}"`).join(`content="${ovDesc}"`);
+  }
   const DESC = POLICY.description_trim ?? { enabled: false };
   if (DESC.enabled) {
     const dm = html.match(/<meta name="description" content="([^"]*)"/i);
