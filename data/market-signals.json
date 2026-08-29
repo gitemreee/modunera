@@ -1026,8 +1026,8 @@
     {
       "runId": "run-2026-08-29-001",
       "date": "2026-08-29",
-      "startedAt": "2026-08-29T09:30:50.147Z",
-      "provider": "not-configured",
+      "startedAt": "2026-08-29T11:19:56.332Z",
+      "provider": "",
       "providerConfigured": false,
       "gsc": "998 row(s) from 7 file(s)",
       "markets": {
@@ -1037,7 +1037,7 @@
           "accepted": 0,
           "rejected": 0,
           "signals": 1,
-          "error": "MODUNERA_SEARCH_PROVIDER is not set",
+          "error": "no adapter in this build for provider \"\" (known: brave)",
           "countryDropped": false
         },
         "NL": {
@@ -1046,7 +1046,7 @@
           "accepted": 0,
           "rejected": 0,
           "signals": 0,
-          "error": "MODUNERA_SEARCH_PROVIDER is not set",
+          "error": "no adapter in this build for provider \"\" (known: brave)",
           "countryDropped": false
         },
         "DK": {
@@ -1055,7 +1055,7 @@
           "accepted": 0,
           "rejected": 0,
           "signals": 0,
-          "error": "MODUNERA_SEARCH_PROVIDER is not set",
+          "error": "no adapter in this build for provider \"\" (known: brave)",
           "countryDropped": false
         },
         "LU": {
@@ -1064,7 +1064,7 @@
           "accepted": 0,
           "rejected": 0,
           "signals": 0,
-          "error": "MODUNERA_SEARCH_PROVIDER is not set",
+          "error": "no adapter in this build for provider \"\" (known: brave)",
           "countryDropped": false
         },
         "CH": {
@@ -1073,7 +1073,7 @@
           "accepted": 0,
           "rejected": 0,
           "signals": 0,
-          "error": "MODUNERA_SEARCH_PROVIDER is not set",
+          "error": "no adapter in this build for provider \"\" (known: brave)",
           "countryDropped": false
         }
       },
@@ -1097,11 +1097,11 @@
         "GSC: data/gsc/Arama görünümü.csv: column(s) not recognised and ignored: Arama Görünümü",
         "GSC: data/gsc/Filtreler.csv: column(s) not recognised and ignored: Filtre uygula, Değer",
         "GSC: data/gsc/Filtreler.csv: no impressions column, skipped",
-        "DE: MODUNERA_SEARCH_PROVIDER is not set",
-        "NL: MODUNERA_SEARCH_PROVIDER is not set",
-        "DK: MODUNERA_SEARCH_PROVIDER is not set",
-        "LU: MODUNERA_SEARCH_PROVIDER is not set",
-        "CH: MODUNERA_SEARCH_PROVIDER is not set"
+        "DE: no adapter in this build for provider \"\" (known: brave)",
+        "NL: no adapter in this build for provider \"\" (known: brave)",
+        "DK: no adapter in this build for provider \"\" (known: brave)",
+        "LU: no adapter in this build for provider \"\" (known: brave)",
+        "CH: no adapter in this build for provider \"\" (known: brave)"
       ],
       "signalsPublished": 1,
       "gscRows": 998,
@@ -1117,7 +1117,7 @@
         "guides": false
       },
       "awaitingHumanDecision": true,
-      "finishedAt": "2026-08-29T09:30:50.172Z"
+      "finishedAt": "2026-08-29T11:19:56.347Z"
     }
   ],
   "signals": [
