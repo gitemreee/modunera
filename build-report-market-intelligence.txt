@@ -1,7 +1,7 @@
 MODUNERA DAILY INTELLIGENCE REPORT
 
-Date:   2026-08-29
-Run ID: run-2026-08-29-002
+Date:   2026-08-30
+Run ID: run-2026-08-30-001
 Search provider:   (NOT CONFIGURED — no scan performed)
 Search Console:  998 row(s) from 7 file(s)
 
