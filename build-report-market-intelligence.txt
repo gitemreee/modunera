@@ -1,7 +1,7 @@
 MODUNERA DAILY INTELLIGENCE REPORT
 
-Date:   2026-09-14
-Run ID: run-2026-09-14-001
+Date:   2026-09-15
+Run ID: run-2026-09-15-001
 Search provider:   (NOT CONFIGURED — no scan performed)
 Search Console:  998 row(s) from 7 file(s)
 
@@ -107,7 +107,7 @@ RUN COUNTERS (section 72)
 
 REVIEW QUEUE
 
-  nothing due today
+  nl-meppel-nieuwveense-landen  status=agreement-and-planning  due 2026-09-15
 
 STORE
 
