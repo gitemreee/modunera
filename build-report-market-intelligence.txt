@@ -1,7 +1,7 @@
 MODUNERA DAILY INTELLIGENCE REPORT
 
-Date:   2026-09-30
-Run ID: run-2026-09-30-001
+Date:   2026-10-01
+Run ID: run-2026-10-01-001
 Search provider:   (NOT CONFIGURED — no scan performed)
 Search Console:  998 row(s) from 7 file(s)
 
@@ -82,6 +82,9 @@ VERIFIED INBOX
   hand-verified candidates considered: 1
   leads chased to a conclusion:        4
 
+  DUE FOR A RE-CHECK
+    PENDING_OFFICIAL since 2026-10-01 — https://dinavis.dk/samfund/ECE19543648/kommunen-trykker-paa-startknappen-til-nye-sommerhuse/
+
 DECISION
 
   UPDATE_EXISTING_ARTICLE
@@ -107,7 +110,9 @@ RUN COUNTERS (section 72)
 
 REVIEW QUEUE
 
+  ch-st-margrethen-baugesuch  status=public-building-application  due 2026-10-01
   nl-meppel-nieuwveense-landen  status=agreement-and-planning  due 2026-09-15
+  nl-vlaardingen-hoofdstedenbuurt  status=permit-or-planning  due 2026-10-01
 
 STORE
 
@@ -129,7 +134,7 @@ STORE
       units: not stated by the source   next review 2026-09-18
       https://www.kreis-eic.de/aktuelles/ausschreibungen-und-bekanntmachungen/ausschreibungen-bau-liefer-und-dienstleistungen
   DK  Efter syv år sker der noget: Nu er nyt sommerhusområde på vej
-      — · UNKNOWN · score 65 · tier 2 · FIND_OFFICIAL_SOURCE
+      — · UNKNOWN · score 65 · tier 2 · RECHECK_OFFICIAL_SOURCE
       units: not stated by the source   next review 2026-09-18
       https://dinavis.dk/samfund/ECE19543648/kommunen-trykker-paa-startknappen-til-nye-sommerhuse/
 
