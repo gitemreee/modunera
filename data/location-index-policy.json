@@ -46,178 +46,563 @@
     "  data/gsc/                                the search side, once exports are in",
     "",
     "A page that stops ranking is not automatically removed. Removing it is a",
-    "decision with the same evidence in front of you, not a side effect."
+    "decision with the same evidence in front of you, not a side effect.",
+    "",
+    "2026-10-07 review, against the three-month export to 2026-10-02.",
+    "378 pages already satisfied the search_evidence_rule above and were still",
+    "noindex: they carried 993 impressions and 87 clicks in the window — 30% of",
+    "the property's clicks — while being told not to be indexed. Google had not",
+    "finished acting on the tag; left alone they would have dropped out. They are",
+    "approved here on the rule that was already written, not on a new one."
   ],
   "default_status": "noindex",
   "minimum_quality_score": 75,
-  "reviewed_at": "2026-08-19",
-  "evidence_window": "Search Console, three months to 2026-08-19",
+  "reviewed_at": "2026-10-07",
+  "evidence_window": "Search Console, three months to 2026-10-02",
   "counts": {
     "location_pages_total": 14641,
-    "approved_on_search_evidence": 157,
+    "approved_on_search_evidence": 535,
     "approved_on_quality_score": 1026,
-    "approved_total": 1183,
-    "still_noindex": 13458
+    "approved_total": 1561,
+    "still_noindex": 13080
   },
   "search_evidence_rule": "position <= 15 in the Search Console export, on a page that exists (URLs Google still holds under a corrected Danish slug are resolved through _redirects first)",
   "approved_urls": [
-    "/standorte/schweiz/zuerich/adliswil-huendli-zopf/",
-    "/standorte/bayern/bad-abbach/",
-    "/standorte/bayern/neu-ulm/",
-    "/standorte/nordrhein-westfalen/moers/",
-    "/en/locations/switzerland/zuerich/kloten-hostrass/",
-    "/standorte/baden-wuerttemberg/bad-duerrheim/",
-    "/standorte/schweiz/zuerich/wetzikon-ober-wetzikon/",
-    "/standorte/bayern/tegernsee/",
-    "/standorte/schweiz/bern/wiedlisbach/",
-    "/en/locations/netherlands/utrecht/everdingen/",
-    "/en/locations/switzerland/zuerich/adliswil-adliswil-stadtkern/",
-    "/standorte/bayern/kirchdorf-im-wald/",
-    "/standorte/hessen/lollar/",
-    "/standorte/nordrhein-westfalen/rietberg/",
-    "/en/locations/netherlands/noord-brabant/sint-oedenrode/",
-    "/standorte/bayern/bad-neustadt-an-der-saale/",
-    "/standorte/sachsen/moritzburg/",
-    "/standorte/nordrhein-westfalen/herford/",
-    "/en/locations/netherlands/limburg/panningen/",
-    "/standorte/baden-wuerttemberg/goeppingen/",
-    "/standorte/baden-wuerttemberg/muehlhausen-081/",
-    "/en/locations/luxembourg/esch-sur-alzette/dudelange/",
-    "/en/locations/netherlands/limburg/blitterswijck/",
-    "/standorte/daenemark/midtjylland/hvide-sande/",
-    "/en/locations/netherlands/zuid-holland/zwijndrecht/",
-    "/standorte/baden-wuerttemberg/heiligenberg/",
-    "/standorte/bayern/neukirchen-beim-heiligen-blut/",
-    "/standorte/bayern/schondorf-am-ammersee/",
-    "/standorte/nordrhein-westfalen/gevelsberg/",
-    "/en/locations/netherlands/gelderland/bruchem/",
-    "/en/locations/netherlands/gelderland/duiven/",
-    "/standorte/rheinland-pfalz/esthal/",
-    "/standorte/rheinland-pfalz/sinzig/",
-    "/en/locations/netherlands/groningen/nieuwe-pekela/",
-    "/standorte/hessen/obertshausen/",
-    "/standorte/baden-wuerttemberg/muellheim-feldberg/",
-    "/standorte/bayern/schwarzenbach-an-der-saale/",
-    "/standorte/luxemburg/remich/canach/",
-    "/standorte/nordrhein-westfalen/kamp-lintfort/",
-    "/en/locations/netherlands/gelderland/didam/",
-    "/standorte/nordrhein-westfalen/rheda-wiedenbrueck/",
-    "/standorte/baden-wuerttemberg/ludwigsburg/",
-    "/standorte/bayern/bischofsheim-in-der-rhoen/",
-    "/standorte/rheinland-pfalz/hauptstuhl/",
-    "/standorte/bayern/bad-griesbach/",
-    "/en/locations/netherlands/friesland/appelscha/",
-    "/en/locations/netherlands/limburg/keent/",
-    "/standorte/bayern/weigendorf/",
-    "/standorte/schweiz/st-gallen/moerschwil/",
-    "/en/locations/netherlands/friesland/opeinde/",
-    "/standorte/baden-wuerttemberg/oberteuringen/",
-    "/standorte/hessen/burgsolms/",
-    "/standorte/nordrhein-westfalen/nettetal/",
-    "/standorte/schweiz/zuerich/erlenbach-rechts-des-dorfbachs-oberhalb-bahnlinie/",
-    "/en/locations/netherlands/zuid-holland/nieuwerkerk-aan-den-ijssel/",
-    "/standorte/sachsen-anhalt/genthin/",
-    "/standorte/schweiz/zuerich/neftenbach-dorf-neftenbach/",
-    "/standorte/schweiz/zuerich/niederhasli/",
-    "/en/locations/netherlands/gelderland/corlaer/",
-    "/en/locations/netherlands/zuid-holland/hoogmade/",
-    "/standorte/baden-wuerttemberg/rosenberg/",
-    "/standorte/bayern/bockhorn/",
-    "/standorte/hessen/felsberg/",
-    "/standorte/rheinland-pfalz/bad-duerkheim/",
-    "/standorte/schweiz/zuerich/horgen-allmend/",
-    "/standorte/baden-wuerttemberg/meissenheim/",
+    "/en/locations/denmark/hovedstaden/lilleroed/",
+    "/en/locations/denmark/midtjylland/hatting/",
     "/en/locations/denmark/midtjylland/skjern/",
-    "/en/locations/netherlands/gelderland/hunnerberg/",
-    "/en/locations/switzerland/bern/muenchenbuchsee/",
-    "/standorte/bayern/bad-windsheim/",
-    "/standorte/bayern/finningen/",
-    "/standorte/bayern/guenzburg/",
-    "/standorte/bayern/winterhausen/",
-    "/standorte/hessen/kuenzell/",
-    "/standorte/schweiz/zuerich/adliswil-oberleimbach/",
-    "/standorte/niedersachsen/walsrode/",
-    "/en/locations/netherlands/gelderland/renkum/",
-    "/en/locations/netherlands/limburg/nieuw-bergen/",
-    "/standorte/bayern/baunach/",
-    "/standorte/bayern/weissenhorn/",
-    "/standorte/hessen/moerfelden-walldorf/",
-    "/standorte/mecklenburg-vorpommern/moenchhagen/",
-    "/standorte/nordrhein-westfalen/bad-sassendorf/",
-    "/standorte/rheinland-pfalz/weingarten/",
-    "/standorte/rheinland-pfalz/winningen/",
-    "/standorte/sachsen-anhalt/kloetze/",
+    "/en/locations/denmark/sjaelland/noerre-alslev/",
+    "/en/locations/denmark/sjaelland/nykoebing-falster/",
+    "/en/locations/luxembourg/esch-sur-alzette/differdange/",
+    "/en/locations/luxembourg/esch-sur-alzette/dudelange/",
+    "/en/locations/luxembourg/esch-sur-alzette/soleuvre/",
+    "/en/locations/luxembourg/grevenmacher/betzdorf/",
+    "/en/locations/luxembourg/grevenmacher/wasserbillig/",
+    "/en/locations/luxembourg/mersch/boevange-sur-attert/",
+    "/en/locations/luxembourg/mersch/tuntange/",
+    "/en/locations/luxembourg/redange/redange-sur-attert/",
+    "/en/locations/luxembourg/redange/saeul/",
+    "/en/locations/luxembourg/remich/lenningen/",
     "/en/locations/luxembourg/remich/schengen/",
+    "/en/locations/luxembourg/remich/stadtbredimus/",
+    "/en/locations/luxembourg/wiltz/boulaide/",
+    "/en/locations/netherlands/drenthe/exloo/",
+    "/en/locations/netherlands/drenthe/havelte/",
+    "/en/locations/netherlands/drenthe/hollandscheveld/",
+    "/en/locations/netherlands/drenthe/uffelte/",
     "/en/locations/netherlands/drenthe/zuidlaren/",
+    "/en/locations/netherlands/flevoland/lelystad/",
+    "/en/locations/netherlands/flevoland/tollebeek/",
+    "/en/locations/netherlands/flevoland/zeewolde/",
+    "/en/locations/netherlands/friesland/appelscha/",
+    "/en/locations/netherlands/friesland/drachten/",
+    "/en/locations/netherlands/friesland/ijlst/",
+    "/en/locations/netherlands/friesland/joure/",
+    "/en/locations/netherlands/friesland/lemmer/",
+    "/en/locations/netherlands/friesland/mantgum/",
+    "/en/locations/netherlands/friesland/oosterwolde/",
+    "/en/locations/netherlands/friesland/opeinde/",
+    "/en/locations/netherlands/friesland/sint-nicolaasga/",
+    "/en/locations/netherlands/friesland/twijzel/",
+    "/en/locations/netherlands/friesland/wommels/",
+    "/en/locations/netherlands/friesland/workum/",
+    "/en/locations/netherlands/gelderland/aalst/",
+    "/en/locations/netherlands/gelderland/angerlo/",
+    "/en/locations/netherlands/gelderland/arnhem/",
+    "/en/locations/netherlands/gelderland/barneveld/",
+    "/en/locations/netherlands/gelderland/bruchem/",
+    "/en/locations/netherlands/gelderland/buren/",
+    "/en/locations/netherlands/gelderland/corlaer/",
+    "/en/locations/netherlands/gelderland/culemborg/",
+    "/en/locations/netherlands/gelderland/didam/",
+    "/en/locations/netherlands/gelderland/doornspijk/",
+    "/en/locations/netherlands/gelderland/duiven/",
+    "/en/locations/netherlands/gelderland/ederveen/",
+    "/en/locations/netherlands/gelderland/elburg/",
+    "/en/locations/netherlands/gelderland/epse/",
+    "/en/locations/netherlands/gelderland/gendringen/",
+    "/en/locations/netherlands/gelderland/gorssel/",
+    "/en/locations/netherlands/gelderland/heelsum/",
+    "/en/locations/netherlands/gelderland/heerde/",
+    "/en/locations/netherlands/gelderland/heerewaarden/",
+    "/en/locations/netherlands/gelderland/hoevelaken/",
+    "/en/locations/netherlands/gelderland/horssen/",
+    "/en/locations/netherlands/gelderland/huissen/",
+    "/en/locations/netherlands/gelderland/hummelo/",
+    "/en/locations/netherlands/gelderland/hunnerberg/",
+    "/en/locations/netherlands/gelderland/lichtenvoorde/",
+    "/en/locations/netherlands/gelderland/meteren/",
+    "/en/locations/netherlands/gelderland/nijkerk/",
+    "/en/locations/netherlands/gelderland/nijmegen/",
+    "/en/locations/netherlands/gelderland/oosterbeek/",
+    "/en/locations/netherlands/gelderland/putten/",
+    "/en/locations/netherlands/gelderland/renkum/",
+    "/en/locations/netherlands/gelderland/rheden/",
+    "/en/locations/netherlands/gelderland/terschuur/",
+    "/en/locations/netherlands/gelderland/veldhuizen/",
+    "/en/locations/netherlands/gelderland/velp/",
+    "/en/locations/netherlands/gelderland/wapenveld/",
+    "/en/locations/netherlands/gelderland/winterswijk/",
+    "/en/locations/netherlands/gelderland/zevenhuizen/",
+    "/en/locations/netherlands/groningen/aduard/",
+    "/en/locations/netherlands/groningen/bedum/",
+    "/en/locations/netherlands/groningen/grijpskerk/",
+    "/en/locations/netherlands/groningen/midwolda/",
+    "/en/locations/netherlands/groningen/musselkanaal/",
+    "/en/locations/netherlands/groningen/niekerk/",
+    "/en/locations/netherlands/groningen/nieuwe-pekela/",
+    "/en/locations/netherlands/groningen/oldehove/",
+    "/en/locations/netherlands/groningen/reitdiep/",
+    "/en/locations/netherlands/groningen/schildwolde/",
+    "/en/locations/netherlands/groningen/wildervank/",
+    "/en/locations/netherlands/limburg/blitterswijck/",
+    "/en/locations/netherlands/limburg/brunssum/",
+    "/en/locations/netherlands/limburg/elsloo/",
+    "/en/locations/netherlands/limburg/grevenbicht/",
+    "/en/locations/netherlands/limburg/grubbenvorst/",
+    "/en/locations/netherlands/limburg/guttecoven/",
+    "/en/locations/netherlands/limburg/heerlen/",
+    "/en/locations/netherlands/limburg/heksenberg/",
+    "/en/locations/netherlands/limburg/heythuysen/",
+    "/en/locations/netherlands/limburg/keent/",
+    "/en/locations/netherlands/limburg/kelpen-oler/",
     "/en/locations/netherlands/limburg/maastricht/",
+    "/en/locations/netherlands/limburg/malberg/",
+    "/en/locations/netherlands/limburg/meezenbroek/",
+    "/en/locations/netherlands/limburg/melderslo/",
+    "/en/locations/netherlands/limburg/nieuw-bergen/",
+    "/en/locations/netherlands/limburg/panningen/",
+    "/en/locations/netherlands/limburg/schimmert/",
+    "/en/locations/netherlands/limburg/spaubeek/",
+    "/en/locations/netherlands/limburg/ulestraten/",
+    "/en/locations/netherlands/limburg/voerendaal/",
+    "/en/locations/netherlands/limburg/well/",
+    "/en/locations/netherlands/limburg/wellerlooi/",
+    "/en/locations/netherlands/limburg/ysselsteyn/",
+    "/en/locations/netherlands/noord-brabant/aalst/",
+    "/en/locations/netherlands/noord-brabant/berlicum/",
     "/en/locations/netherlands/noord-brabant/cranendonck/",
+    "/en/locations/netherlands/noord-brabant/duizel/",
+    "/en/locations/netherlands/noord-brabant/esch/",
+    "/en/locations/netherlands/noord-brabant/fijnaart/",
+    "/en/locations/netherlands/noord-brabant/geffen/",
+    "/en/locations/netherlands/noord-brabant/gemert/",
+    "/en/locations/netherlands/noord-brabant/genderen/",
     "/en/locations/netherlands/noord-brabant/gerwen/",
+    "/en/locations/netherlands/noord-brabant/heesch/",
+    "/en/locations/netherlands/noord-brabant/heeze/",
+    "/en/locations/netherlands/noord-brabant/huijbergen/",
+    "/en/locations/netherlands/noord-brabant/klein-zundert/",
+    "/en/locations/netherlands/noord-brabant/lierop/",
+    "/en/locations/netherlands/noord-brabant/maaspoort/",
+    "/en/locations/netherlands/noord-brabant/made/",
+    "/en/locations/netherlands/noord-brabant/middelbeers/",
+    "/en/locations/netherlands/noord-brabant/molenhoek/",
+    "/en/locations/netherlands/noord-brabant/naastenbest/",
+    "/en/locations/netherlands/noord-brabant/odiliapeel/",
+    "/en/locations/netherlands/noord-brabant/oirschot/",
+    "/en/locations/netherlands/noord-brabant/oosterhout/",
+    "/en/locations/netherlands/noord-brabant/oud-gastel/",
+    "/en/locations/netherlands/noord-brabant/raamsdonksveer/",
+    "/en/locations/netherlands/noord-brabant/sint-oedenrode/",
+    "/en/locations/netherlands/noord-brabant/sint-willebrord/",
+    "/en/locations/netherlands/noord-brabant/wagenberg/",
+    "/en/locations/netherlands/noord-brabant/woensdrecht/",
+    "/en/locations/netherlands/noord-brabant/zeelst/",
+    "/en/locations/netherlands/noord-brabant/zijtaart/",
+    "/en/locations/netherlands/noord-holland/aalsmeer/",
+    "/en/locations/netherlands/noord-holland/amstelveen/",
     "/en/locations/netherlands/noord-holland/broek-in-waterland/",
+    "/en/locations/netherlands/noord-holland/den-burg/",
+    "/en/locations/netherlands/noord-holland/halfweg-2/",
+    "/en/locations/netherlands/noord-holland/heiloo/",
+    "/en/locations/netherlands/noord-holland/hilversum/",
+    "/en/locations/netherlands/noord-holland/hippolytushoef/",
+    "/en/locations/netherlands/noord-holland/hoorn/",
+    "/en/locations/netherlands/noord-holland/kudelstaart/",
+    "/en/locations/netherlands/noord-holland/limmen/",
+    "/en/locations/netherlands/noord-holland/nieuwe-niedorp/",
+    "/en/locations/netherlands/noord-holland/opperdoes/",
+    "/en/locations/netherlands/noord-holland/venhuizen/",
+    "/en/locations/netherlands/noord-holland/weesp/",
+    "/en/locations/netherlands/noord-holland/wormer/",
+    "/en/locations/netherlands/overijssel/borgele/",
+    "/en/locations/netherlands/overijssel/borne/",
     "/en/locations/netherlands/overijssel/dalfsen/",
+    "/en/locations/netherlands/overijssel/genemuiden/",
+    "/en/locations/netherlands/overijssel/grafhorst/",
     "/en/locations/netherlands/overijssel/heino/",
-    "/en/locations/switzerland/zuerich/wettswil-wettswil-dorf/",
-    "/standorte/bayern/westendorf-097/",
-    "/standorte/daenemark/midtjylland/struer/",
-    "/standorte/niederlande/friesland/balk/",
-    "/standorte/schweiz/zuerich/kloten-hostrass/",
+    "/en/locations/netherlands/overijssel/hengelo/",
+    "/en/locations/netherlands/overijssel/nijrees/",
+    "/en/locations/netherlands/overijssel/vollenhove/",
+    "/en/locations/netherlands/utrecht/baarn/",
+    "/en/locations/netherlands/utrecht/driebergen-rijsenburg/",
+    "/en/locations/netherlands/utrecht/everdingen/",
+    "/en/locations/netherlands/utrecht/leersum/",
     "/en/locations/netherlands/utrecht/schoonrewoerd/",
+    "/en/locations/netherlands/utrecht/vinkeveen/",
+    "/en/locations/netherlands/utrecht/wilnis/",
+    "/en/locations/netherlands/zeeland/kamperland/",
+    "/en/locations/netherlands/zeeland/vlissingen/",
+    "/en/locations/netherlands/zuid-holland/berkenwoude/",
+    "/en/locations/netherlands/zuid-holland/hoogmade/",
+    "/en/locations/netherlands/zuid-holland/nieuwerkerk-aan-den-ijssel/",
+    "/en/locations/netherlands/zuid-holland/nootdorp/",
+    "/en/locations/netherlands/zuid-holland/the-hague/",
+    "/en/locations/netherlands/zuid-holland/zwijndrecht/",
+    "/en/locations/switzerland/aargau/mellingen/",
+    "/en/locations/switzerland/aargau/seengen/",
+    "/en/locations/switzerland/aargau/wuerenlos/",
+    "/en/locations/switzerland/appenzell-ausserrhoden/gais/",
+    "/en/locations/switzerland/basel-landschaft/ormalingen/",
+    "/en/locations/switzerland/bern/burgistein/",
+    "/en/locations/switzerland/bern/muenchenbuchsee/",
+    "/en/locations/switzerland/glarus/mollis/",
+    "/en/locations/switzerland/neuchatel/auvernier/",
+    "/en/locations/switzerland/schwyz/goldau/",
+    "/en/locations/switzerland/schwyz/kuessnacht/",
+    "/en/locations/switzerland/schwyz/lachen/",
+    "/en/locations/switzerland/schwyz/siebnen/",
+    "/en/locations/switzerland/schwyz/wollerau/",
+    "/en/locations/switzerland/solothurn/balsthal/",
+    "/en/locations/switzerland/solothurn/derendingen/",
+    "/en/locations/switzerland/solothurn/kleinluetzel/",
+    "/en/locations/switzerland/solothurn/laupersdorf/",
+    "/en/locations/switzerland/solothurn/matzendorf/",
     "/en/locations/switzerland/solothurn/zuchwil/",
     "/en/locations/switzerland/st-gallen/niederhelfenschwil/",
+    "/en/locations/switzerland/st-gallen/wittenbach/",
+    "/en/locations/switzerland/thurgau/altnau/",
+    "/en/locations/switzerland/thurgau/buerglen/",
+    "/en/locations/switzerland/thurgau/ermatingen/",
+    "/en/locations/switzerland/thurgau/sulgen/",
+    "/en/locations/switzerland/thurgau/taegerwilen/",
+    "/en/locations/switzerland/uri/silenen/",
+    "/en/locations/switzerland/valais-wallis/saint-maurice/",
     "/en/locations/switzerland/vaud/la-chaux/",
-    "/standorte/baden-wuerttemberg/buchenbach/",
-    "/standorte/baden-wuerttemberg/laupheim/",
-    "/standorte/schleswig-holstein/kayhude/",
-    "/en/locations/denmark/hovedstaden/lilleroed/",
-    "/en/locations/netherlands/gelderland/heerde/",
-    "/en/locations/netherlands/noord-brabant/oud-gastel/",
-    "/en/locations/netherlands/noord-holland/den-burg/",
+    "/en/locations/switzerland/vaud/leysin/",
+    "/en/locations/switzerland/vaud/yverdon-les-bains/",
+    "/en/locations/switzerland/zuerich/adliswil-adliswil-stadtkern/",
+    "/en/locations/switzerland/zuerich/ebmatingen/",
+    "/en/locations/switzerland/zuerich/kloten-hostrass/",
+    "/en/locations/switzerland/zuerich/kuesnacht/",
+    "/en/locations/switzerland/zuerich/oberglatt-bahnhofquartier/",
     "/en/locations/switzerland/zuerich/veltheim-kreis-5-rosenberg/",
-    "/standorte/bayern/dietfurt/",
-    "/standorte/niederlande/noord-brabant/steenbergen/",
-    "/standorte/niederlande/zuid-holland/",
-    "/standorte/niedersachsen/bovenden/",
-    "/standorte/schweiz/zuerich/wetzikon/",
-    "/en/locations/denmark/sjaelland/nykoebing-falster/",
-    "/en/locations/netherlands/flevoland/lelystad/",
-    "/en/locations/netherlands/gelderland/aalst/",
-    "/en/locations/netherlands/noord-brabant/raamsdonksveer/",
+    "/en/locations/switzerland/zuerich/waedenswil-eichweid/",
+    "/en/locations/switzerland/zuerich/wettswil-wettswil-dorf/",
+    "/standorte/baden-wuerttemberg/bad-duerrheim/",
+    "/standorte/baden-wuerttemberg/buchenbach/",
+    "/standorte/baden-wuerttemberg/eisingen/",
     "/standorte/baden-wuerttemberg/empfingen/",
-    "/standorte/bayern/coburg/",
-    "/standorte/bayern/essenbach/",
-    "/standorte/thueringen/weimar/",
-    "/en/locations/denmark/sjaelland/noerre-alslev/",
-    "/standorte/schweiz/zuerich/seuzach-dorf-breite-weid/",
-    "/en/locations/luxembourg/grevenmacher/betzdorf/",
-    "/en/locations/netherlands/noord-brabant/naastenbest/",
-    "/en/locations/netherlands/zeeland/vlissingen/",
-    "/en/locations/switzerland/solothurn/kleinluetzel/",
-    "/standorte/brandenburg/beelitz/",
-    "/standorte/nordrhein-westfalen/bedburg/",
-    "/standorte/schweiz/zuerich/greifensee-muellerwis-seilerwis/",
-    "/standorte/schweiz/zuerich/wetzikon-kempten/",
-    "/en/locations/netherlands/limburg/elsloo/",
-    "/en/locations/netherlands/noord-brabant/genderen/",
+    "/standorte/baden-wuerttemberg/eriskirch/",
+    "/standorte/baden-wuerttemberg/eschelbronn/",
+    "/standorte/baden-wuerttemberg/fichtenberg/",
+    "/standorte/baden-wuerttemberg/goeppingen/",
+    "/standorte/baden-wuerttemberg/grossbottwar/",
+    "/standorte/baden-wuerttemberg/gueglingen/",
+    "/standorte/baden-wuerttemberg/hartheim/",
+    "/standorte/baden-wuerttemberg/hassmersheim/",
+    "/standorte/baden-wuerttemberg/heiligenberg/",
+    "/standorte/baden-wuerttemberg/hermaringen/",
+    "/standorte/baden-wuerttemberg/hochdorf-084/",
+    "/standorte/baden-wuerttemberg/hohentengen-083/",
+    "/standorte/baden-wuerttemberg/iffezheim/",
+    "/standorte/baden-wuerttemberg/kirchardt/",
+    "/standorte/baden-wuerttemberg/koenigheim/",
+    "/standorte/baden-wuerttemberg/langenbrettach/",
+    "/standorte/baden-wuerttemberg/laupheim/",
+    "/standorte/baden-wuerttemberg/ludwigsburg/",
+    "/standorte/baden-wuerttemberg/meissenheim/",
+    "/standorte/baden-wuerttemberg/muehlhausen-081/",
+    "/standorte/baden-wuerttemberg/muellheim-feldberg/",
+    "/standorte/baden-wuerttemberg/muellheim/",
+    "/standorte/baden-wuerttemberg/munderkingen/",
+    "/standorte/baden-wuerttemberg/murrhardt/",
+    "/standorte/baden-wuerttemberg/obernheim/",
+    "/standorte/baden-wuerttemberg/oberteuringen/",
+    "/standorte/baden-wuerttemberg/rheinau-083/",
+    "/standorte/baden-wuerttemberg/rosenberg/",
+    "/standorte/baden-wuerttemberg/schechingen/",
+    "/standorte/baden-wuerttemberg/schoemberg-082/",
+    "/standorte/baden-wuerttemberg/schwaikheim/",
+    "/standorte/baden-wuerttemberg/staig/",
+    "/standorte/baden-wuerttemberg/talheim-081/",
+    "/standorte/baden-wuerttemberg/tannhausen/",
+    "/standorte/baden-wuerttemberg/unterreichenbach/",
+    "/standorte/baden-wuerttemberg/wimsheim/",
+    "/standorte/baden-wuerttemberg/winterbach/",
+    "/standorte/bayern/bad-abbach/",
+    "/standorte/bayern/bad-griesbach/",
+    "/standorte/bayern/bad-neustadt-an-der-saale/",
+    "/standorte/bayern/bad-windsheim/",
+    "/standorte/bayern/baunach/",
+    "/standorte/bayern/bellenberg/",
+    "/standorte/bayern/biessenhofen/",
+    "/standorte/bayern/bischofsheim-in-der-rhoen/",
+    "/standorte/bayern/bockhorn/",
+    "/standorte/bayern/buchloe/",
+    "/standorte/bayern/burgbernheim/",
     "/standorte/bayern/burgsinn/",
-    "/standorte/bayern/priesendorf/",
-    "/standorte/sachsen/grimma/",
-    "/standorte/schweiz/zuerich/kloten-freienberg-chanzler-chlini-chaseren/",
-    "/standorte/niederlande/gelderland/nijkerk/",
-    "/en/locations/netherlands/friesland/twijzel/",
-    "/en/locations/netherlands/gelderland/rheden/",
-    "/en/locations/netherlands/limburg/malberg/",
-    "/en/locations/netherlands/noord-holland/hilversum/",
+    "/standorte/bayern/buttenheim/",
+    "/standorte/bayern/coburg/",
+    "/standorte/bayern/dasing/",
+    "/standorte/bayern/dietfurt/",
+    "/standorte/bayern/eckersdorf/",
+    "/standorte/bayern/egenhofen/",
+    "/standorte/bayern/ehekirchen/",
+    "/standorte/bayern/essenbach/",
+    "/standorte/bayern/finningen/",
+    "/standorte/bayern/flossenbuerg/",
     "/standorte/bayern/fuchsmuehl/",
-    "/standorte/schweiz/graubuenden/thusis/",
-    "/en/locations/netherlands/gelderland/doornspijk/",
-    "/en/locations/netherlands/gelderland/elburg/",
-    "/en/locations/netherlands/noord-holland/amstelveen/",
-    "/standorte/bayern/heidenheim/",
-    "/standorte/bayern/schweinfurt/",
-    "/standorte/niederlande/noord-holland/limmen/",
-    "/en/locations/netherlands/noord-holland/heiloo/",
-    "/en/locations/switzerland/neuchatel/auvernier/",
+    "/standorte/bayern/gaimersheim/",
+    "/standorte/bayern/gars/",
+    "/standorte/bayern/gerbrunn/",
+    "/standorte/bayern/goldbach/",
+    "/standorte/bayern/grafenau/",
+    "/standorte/bayern/grafenrheinfeld/",
+    "/standorte/bayern/grainet/",
+    "/standorte/bayern/grassau/",
     "/standorte/bayern/grossenseebach/",
-    "/en/locations/netherlands/gelderland/heerewaarden/"
+    "/standorte/bayern/guenzburg/",
+    "/standorte/bayern/hattenhofen/",
+    "/standorte/bayern/heidenheim/",
+    "/standorte/bayern/hinterschmiding/",
+    "/standorte/bayern/hohenpeissenberg/",
+    "/standorte/bayern/jettingen-scheppach/",
+    "/standorte/bayern/kirchdorf-im-wald/",
+    "/standorte/bayern/kirchseeon/",
+    "/standorte/bayern/koetzting/",
+    "/standorte/bayern/krumbach/",
+    "/standorte/bayern/mallersdorf-pfaffenberg/",
+    "/standorte/bayern/neu-ulm/",
+    "/standorte/bayern/neukirchen-beim-heiligen-blut/",
+    "/standorte/bayern/nussdorf/",
+    "/standorte/bayern/oberhaid/",
+    "/standorte/bayern/oberreute/",
+    "/standorte/bayern/ottobeuren/",
+    "/standorte/bayern/penzing/",
+    "/standorte/bayern/pfronten/",
+    "/standorte/bayern/plattling/",
+    "/standorte/bayern/pliening/",
+    "/standorte/bayern/ploessberg/",
+    "/standorte/bayern/priesendorf/",
+    "/standorte/bayern/pyrbaum/",
+    "/standorte/bayern/reichenbach/",
+    "/standorte/bayern/reichenberg/",
+    "/standorte/bayern/rottenbuch/",
+    "/standorte/bayern/rueckersdorf/",
+    "/standorte/bayern/ruhstorf/",
+    "/standorte/bayern/schondorf-am-ammersee/",
+    "/standorte/bayern/schwarzenbach-an-der-saale/",
+    "/standorte/bayern/schweinfurt/",
+    "/standorte/bayern/seefeld/",
+    "/standorte/bayern/stadtlauringen/",
+    "/standorte/bayern/strasslach-dingharting/",
+    "/standorte/bayern/tegernsee/",
+    "/standorte/bayern/treuchtlingen/",
+    "/standorte/bayern/uffenheim/",
+    "/standorte/bayern/urspringen/",
+    "/standorte/bayern/vohenstrauss/",
+    "/standorte/bayern/weigendorf/",
+    "/standorte/bayern/weissenhorn/",
+    "/standorte/bayern/westendorf-097/",
+    "/standorte/bayern/wildflecken/",
+    "/standorte/bayern/winterhausen/",
+    "/standorte/berlin/britz/",
+    "/standorte/berlin/charlottenburg-nord/",
+    "/standorte/berlin/friedrichshain/",
+    "/standorte/berlin/hermsdorf/",
+    "/standorte/berlin/lichterfelde/",
+    "/standorte/berlin/luebars/",
+    "/standorte/berlin/mitte/",
+    "/standorte/berlin/nikolassee/",
+    "/standorte/berlin/oberschoeneweide/",
+    "/standorte/brandenburg/beelitz/",
+    "/standorte/brandenburg/gramzow/",
+    "/standorte/brandenburg/sonnewalde/",
+    "/standorte/brandenburg/steinhoefel/",
+    "/standorte/brandenburg/wusterhausen/",
+    "/standorte/daenemark/hovedstaden/gilleleje/",
+    "/standorte/daenemark/hovedstaden/kokkedal/",
+    "/standorte/daenemark/midtjylland/hvide-sande/",
+    "/standorte/daenemark/midtjylland/struer/",
+    "/standorte/daenemark/nordjylland/hurup/",
+    "/standorte/daenemark/nordjylland/strandby/",
+    "/standorte/daenemark/syddanmark/glamsbjerg/",
+    "/standorte/hamburg/fuhlsbuettel/",
+    "/standorte/hamburg/neuenfelde/",
+    "/standorte/hessen/alsbach-haehnlein/",
+    "/standorte/hessen/battenberg/",
+    "/standorte/hessen/breitenbach/",
+    "/standorte/hessen/burgsolms/",
+    "/standorte/hessen/felsberg/",
+    "/standorte/hessen/frankenau/",
+    "/standorte/hessen/geisenheim/",
+    "/standorte/hessen/griesheim/",
+    "/standorte/hessen/idstein/",
+    "/standorte/hessen/kassel/",
+    "/standorte/hessen/kelsterbach/",
+    "/standorte/hessen/kuenzell/",
+    "/standorte/hessen/lollar/",
+    "/standorte/hessen/moerfelden-walldorf/",
+    "/standorte/hessen/obertshausen/",
+    "/standorte/hessen/oberursel/",
+    "/standorte/hessen/witzenhausen/",
+    "/standorte/luxemburg/echternach/echternach/",
+    "/standorte/luxemburg/esch-sur-alzette/esch-sur-alzette/",
+    "/standorte/luxemburg/esch-sur-alzette/roeser/",
+    "/standorte/luxemburg/redange/beckerich/",
+    "/standorte/luxemburg/remich/canach/",
+    "/standorte/mecklenburg-vorpommern/altefaehr/",
+    "/standorte/mecklenburg-vorpommern/bartenshagen-parkentin/",
+    "/standorte/mecklenburg-vorpommern/dranske/",
+    "/standorte/mecklenburg-vorpommern/moenchhagen/",
+    "/standorte/mecklenburg-vorpommern/roevershagen/",
+    "/standorte/mecklenburg-vorpommern/sagard/",
+    "/standorte/mecklenburg-vorpommern/stralsund/",
+    "/standorte/mecklenburg-vorpommern/ziesendorf/",
+    "/standorte/niederlande/friesland/balk/",
+    "/standorte/niederlande/friesland/noordwolde/",
+    "/standorte/niederlande/gelderland/brummen/",
+    "/standorte/niederlande/gelderland/nijkerk/",
+    "/standorte/niederlande/gelderland/zonnemaat/",
+    "/standorte/niederlande/groningen/oosterhoogebrug/",
+    "/standorte/niederlande/groningen/stadskanaal/",
+    "/standorte/niederlande/limburg/kerkrade/",
+    "/standorte/niederlande/limburg/schilberg/",
+    "/standorte/niederlande/noord-brabant/nuenen/",
+    "/standorte/niederlande/noord-brabant/nuland/",
+    "/standorte/niederlande/noord-brabant/steenbergen/",
+    "/standorte/niederlande/noord-holland/hoogwoud/",
+    "/standorte/niederlande/noord-holland/hoorn/",
+    "/standorte/niederlande/noord-holland/laren/",
+    "/standorte/niederlande/noord-holland/limmen/",
+    "/standorte/niederlande/noord-holland/tuitjenhorn/",
+    "/standorte/niederlande/noord-holland/wijdenes/",
+    "/standorte/niederlande/zeeland/brouwershaven/",
+    "/standorte/niederlande/zeeland/middelburg/",
+    "/standorte/niederlande/zuid-holland/",
+    "/standorte/niederlande/zuid-holland/rozenburg/",
+    "/standorte/niedersachsen/balje/",
+    "/standorte/niedersachsen/bovenden/",
+    "/standorte/niedersachsen/dohren/",
+    "/standorte/niedersachsen/elze-48c1e/",
+    "/standorte/niedersachsen/hemmoor/",
+    "/standorte/niedersachsen/hesel/",
+    "/standorte/niedersachsen/nienburg/",
+    "/standorte/niedersachsen/rhede/",
+    "/standorte/niedersachsen/salzbergen/",
+    "/standorte/niedersachsen/walsrode/",
+    "/standorte/nordrhein-westfalen/ahlen/",
+    "/standorte/nordrhein-westfalen/bad-sassendorf/",
+    "/standorte/nordrhein-westfalen/bedburg/",
+    "/standorte/nordrhein-westfalen/eschweiler/",
+    "/standorte/nordrhein-westfalen/gevelsberg/",
+    "/standorte/nordrhein-westfalen/herford/",
+    "/standorte/nordrhein-westfalen/kamp-lintfort/",
+    "/standorte/nordrhein-westfalen/leichlingen/",
+    "/standorte/nordrhein-westfalen/moers/",
+    "/standorte/nordrhein-westfalen/nettetal/",
+    "/standorte/nordrhein-westfalen/rheda-wiedenbrueck/",
+    "/standorte/nordrhein-westfalen/rietberg/",
+    "/standorte/nordrhein-westfalen/verl/",
+    "/standorte/rheinland-pfalz/bad-duerkheim/",
+    "/standorte/rheinland-pfalz/birkenheide/",
+    "/standorte/rheinland-pfalz/bruchweiler-baerenbach/",
+    "/standorte/rheinland-pfalz/eppenbrunn/",
+    "/standorte/rheinland-pfalz/esthal/",
+    "/standorte/rheinland-pfalz/etzbach/",
+    "/standorte/rheinland-pfalz/hauptstuhl/",
+    "/standorte/rheinland-pfalz/heimbach/",
+    "/standorte/rheinland-pfalz/hillesheim/",
+    "/standorte/rheinland-pfalz/hochstadt/",
+    "/standorte/rheinland-pfalz/ilbesheim/",
+    "/standorte/rheinland-pfalz/muenstermaifeld/",
+    "/standorte/rheinland-pfalz/niederfell/",
+    "/standorte/rheinland-pfalz/otterstadt/",
+    "/standorte/rheinland-pfalz/plaidt/",
+    "/standorte/rheinland-pfalz/schwedelbach/",
+    "/standorte/rheinland-pfalz/sinzig/",
+    "/standorte/rheinland-pfalz/trittenheim/",
+    "/standorte/rheinland-pfalz/wachenheim/",
+    "/standorte/rheinland-pfalz/weingarten/",
+    "/standorte/rheinland-pfalz/winningen/",
+    "/standorte/sachsen-anhalt/beetzendorf/",
+    "/standorte/sachsen-anhalt/calbe/",
+    "/standorte/sachsen-anhalt/dobien/",
+    "/standorte/sachsen-anhalt/genthin/",
+    "/standorte/sachsen-anhalt/gerbstedt/",
+    "/standorte/sachsen-anhalt/kloetze/",
+    "/standorte/sachsen-anhalt/koethen/",
+    "/standorte/sachsen-anhalt/osterwieck/",
+    "/standorte/sachsen-anhalt/polleben/",
+    "/standorte/sachsen-anhalt/sangerhausen/",
+    "/standorte/sachsen-anhalt/wallendorf/",
+    "/standorte/sachsen-anhalt/zoeschen/",
+    "/standorte/sachsen/elsterberg/",
+    "/standorte/sachsen/gersdorf-e48b5/",
+    "/standorte/sachsen/goerlitz/",
+    "/standorte/sachsen/grimma/",
+    "/standorte/sachsen/kamenz/",
+    "/standorte/sachsen/moritzburg/",
+    "/standorte/sachsen/niesky/",
+    "/standorte/sachsen/oberseifersdorf/",
+    "/standorte/sachsen/oederan/",
+    "/standorte/sachsen/treuen/",
+    "/standorte/schleswig-holstein/ascheberg/",
+    "/standorte/schleswig-holstein/boesdorf/",
+    "/standorte/schleswig-holstein/kayhude/",
+    "/standorte/schweiz/aargau/gontenschwil/",
+    "/standorte/schweiz/aargau/uerkheim/",
+    "/standorte/schweiz/bern/luetzelflueh/",
+    "/standorte/schweiz/bern/wiedlisbach/",
+    "/standorte/schweiz/graubuenden/thusis/",
+    "/standorte/schweiz/nidwalden/beckenried/",
+    "/standorte/schweiz/st-gallen/moerschwil/",
+    "/standorte/schweiz/st-gallen/waldkirch/",
+    "/standorte/schweiz/thurgau/ermatingen/",
+    "/standorte/schweiz/zuerich/adliswil-huendli-zopf/",
+    "/standorte/schweiz/zuerich/adliswil-oberleimbach/",
+    "/standorte/schweiz/zuerich/binz/",
+    "/standorte/schweiz/zuerich/buelach-seematt/",
+    "/standorte/schweiz/zuerich/dietikon-kreuzacker/",
+    "/standorte/schweiz/zuerich/dietikon/",
+    "/standorte/schweiz/zuerich/dietlikon-eichwiesen/",
+    "/standorte/schweiz/zuerich/duebendorf-vogelquartier/",
+    "/standorte/schweiz/zuerich/erlenbach-rechts-des-dorfbachs-oberhalb-bahnlinie/",
+    "/standorte/schweiz/zuerich/greifensee-muellerwis-seilerwis/",
+    "/standorte/schweiz/zuerich/hegnau-dammboden-grindel/",
+    "/standorte/schweiz/zuerich/horgen-allmend/",
+    "/standorte/schweiz/zuerich/kloten-freienberg-chanzler-chlini-chaseren/",
+    "/standorte/schweiz/zuerich/kloten-hostrass/",
+    "/standorte/schweiz/zuerich/kuesnacht-dorf/",
+    "/standorte/schweiz/zuerich/kuesnacht/",
+    "/standorte/schweiz/zuerich/maennedorf-ausserfeld/",
+    "/standorte/schweiz/zuerich/neftenbach-dorf-neftenbach/",
+    "/standorte/schweiz/zuerich/niederhasli/",
+    "/standorte/schweiz/zuerich/regensdorf-hofacher-geeren/",
+    "/standorte/schweiz/zuerich/regensdorf-obstgarten/",
+    "/standorte/schweiz/zuerich/rueti/",
+    "/standorte/schweiz/zuerich/schlieren-freiestrasse/",
+    "/standorte/schweiz/zuerich/schlieren-kamp/",
+    "/standorte/schweiz/zuerich/schlieren/",
+    "/standorte/schweiz/zuerich/schwerzenbach-chimli/",
+    "/standorte/schweiz/zuerich/seuzach-dorf-breite-weid/",
+    "/standorte/schweiz/zuerich/thalwil-dorfkern/",
+    "/standorte/schweiz/zuerich/uetikon-grossdorf/",
+    "/standorte/schweiz/zuerich/uster-gschwader/",
+    "/standorte/schweiz/zuerich/uster-nossikon/",
+    "/standorte/schweiz/zuerich/uster-ober-uster/",
+    "/standorte/schweiz/zuerich/waedenswil-eichweid/",
+    "/standorte/schweiz/zuerich/waedenswil-hangenmoos/",
+    "/standorte/schweiz/zuerich/wetzikon-kempten/",
+    "/standorte/schweiz/zuerich/wetzikon-ober-wetzikon/",
+    "/standorte/schweiz/zuerich/wetzikon/",
+    "/standorte/schweiz/zuerich/zuerich/",
+    "/standorte/thueringen/frankenheim/",
+    "/standorte/thueringen/gehren/",
+    "/standorte/thueringen/langenwetzendorf/",
+    "/standorte/thueringen/weimar/"
   ],
   "search_evidence": [
     {
@@ -1327,6 +1712,2274 @@
       "impressions": 1,
       "position": 15.0,
       "quality_score": 59
+    },
+    {
+      "url": "/standorte/bayern/vohenstrauss/",
+      "clicks": 3,
+      "impressions": 12,
+      "position": 4.67
+    },
+    {
+      "url": "/en/locations/netherlands/limburg/ysselsteyn/",
+      "clicks": 3,
+      "impressions": 4,
+      "position": 3.5
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/stralsund/",
+      "clicks": 2,
+      "impressions": 22,
+      "position": 4.86
+    },
+    {
+      "url": "/standorte/bayern/gaimersheim/",
+      "clicks": 2,
+      "impressions": 6,
+      "position": 2.0
+    },
+    {
+      "url": "/en/locations/netherlands/friesland/mantgum/",
+      "clicks": 2,
+      "impressions": 6,
+      "position": 3.83
+    },
+    {
+      "url": "/en/locations/luxembourg/remich/stadtbredimus/",
+      "clicks": 2,
+      "impressions": 6,
+      "position": 6.67
+    },
+    {
+      "url": "/standorte/niedersachsen/elze-48c1e/",
+      "clicks": 2,
+      "impressions": 6,
+      "position": 8.33
+    },
+    {
+      "url": "/en/locations/switzerland/uri/silenen/",
+      "clicks": 2,
+      "impressions": 4,
+      "position": 1.5
+    },
+    {
+      "url": "/standorte/bayern/buttenheim/",
+      "clicks": 2,
+      "impressions": 4,
+      "position": 4.0
+    },
+    {
+      "url": "/standorte/niedersachsen/dohren/",
+      "clicks": 2,
+      "impressions": 3,
+      "position": 3.33
+    },
+    {
+      "url": "/en/locations/netherlands/limburg/wellerlooi/",
+      "clicks": 2,
+      "impressions": 2,
+      "position": 1.0
+    },
+    {
+      "url": "/standorte/hessen/idstein/",
+      "clicks": 2,
+      "impressions": 2,
+      "position": 1.5
+    },
+    {
+      "url": "/standorte/thueringen/langenwetzendorf/",
+      "clicks": 2,
+      "impressions": 2,
+      "position": 1.5
+    },
+    {
+      "url": "/standorte/sachsen/goerlitz/",
+      "clicks": 1,
+      "impressions": 20,
+      "position": 7.3
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/murrhardt/",
+      "clicks": 1,
+      "impressions": 14,
+      "position": 6.64
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/ahlen/",
+      "clicks": 1,
+      "impressions": 9,
+      "position": 4.11
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/sangerhausen/",
+      "clicks": 1,
+      "impressions": 9,
+      "position": 4.33
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/wimsheim/",
+      "clicks": 1,
+      "impressions": 8,
+      "position": 4.12
+    },
+    {
+      "url": "/standorte/schweiz/thurgau/ermatingen/",
+      "clicks": 1,
+      "impressions": 7,
+      "position": 3.71
+    },
+    {
+      "url": "/standorte/hessen/witzenhausen/",
+      "clicks": 1,
+      "impressions": 7,
+      "position": 5.29
+    },
+    {
+      "url": "/standorte/berlin/lichterfelde/",
+      "clicks": 1,
+      "impressions": 7,
+      "position": 5.57
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/koethen/",
+      "clicks": 1,
+      "impressions": 7,
+      "position": 7.43
+    },
+    {
+      "url": "/standorte/thueringen/gehren/",
+      "clicks": 1,
+      "impressions": 6,
+      "position": 3.67
+    },
+    {
+      "url": "/standorte/bayern/ploessberg/",
+      "clicks": 1,
+      "impressions": 6,
+      "position": 6.83
+    },
+    {
+      "url": "/standorte/hessen/kelsterbach/",
+      "clicks": 1,
+      "impressions": 6,
+      "position": 10.67
+    },
+    {
+      "url": "/standorte/schweiz/nidwalden/beckenried/",
+      "clicks": 1,
+      "impressions": 5,
+      "position": 3.0
+    },
+    {
+      "url": "/standorte/sachsen/kamenz/",
+      "clicks": 1,
+      "impressions": 5,
+      "position": 3.8
+    },
+    {
+      "url": "/standorte/luxemburg/echternach/echternach/",
+      "clicks": 1,
+      "impressions": 5,
+      "position": 5.2
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/leichlingen/",
+      "clicks": 1,
+      "impressions": 5,
+      "position": 6.2
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/talheim-081/",
+      "clicks": 1,
+      "impressions": 5,
+      "position": 10.0
+    },
+    {
+      "url": "/en/locations/netherlands/friesland/lemmer/",
+      "clicks": 1,
+      "impressions": 4,
+      "position": 4.75
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/hohentengen-083/",
+      "clicks": 1,
+      "impressions": 4,
+      "position": 5.5
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/etzbach/",
+      "clicks": 1,
+      "impressions": 4,
+      "position": 7.5
+    },
+    {
+      "url": "/en/locations/luxembourg/remich/lenningen/",
+      "clicks": 1,
+      "impressions": 4,
+      "position": 7.75
+    },
+    {
+      "url": "/standorte/brandenburg/wusterhausen/",
+      "clicks": 1,
+      "impressions": 4,
+      "position": 9.75
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/unterreichenbach/",
+      "clicks": 1,
+      "impressions": 3,
+      "position": 1.67
+    },
+    {
+      "url": "/en/locations/netherlands/groningen/schildwolde/",
+      "clicks": 1,
+      "impressions": 3,
+      "position": 2.0
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/epse/",
+      "clicks": 1,
+      "impressions": 3,
+      "position": 4.0
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/niederfell/",
+      "clicks": 1,
+      "impressions": 3,
+      "position": 7.0
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/huissen/",
+      "clicks": 1,
+      "impressions": 3,
+      "position": 9.33
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/winterswijk/",
+      "clicks": 1,
+      "impressions": 3,
+      "position": 9.67
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/klein-zundert/",
+      "clicks": 1,
+      "impressions": 3,
+      "position": 10.67
+    },
+    {
+      "url": "/en/locations/netherlands/limburg/meezenbroek/",
+      "clicks": 1,
+      "impressions": 2,
+      "position": 1.0
+    },
+    {
+      "url": "/standorte/niedersachsen/hesel/",
+      "clicks": 1,
+      "impressions": 2,
+      "position": 1.0
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/koenigheim/",
+      "clicks": 1,
+      "impressions": 2,
+      "position": 1.5
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/uetikon-grossdorf/",
+      "clicks": 1,
+      "impressions": 2,
+      "position": 1.5
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/grossbottwar/",
+      "clicks": 1,
+      "impressions": 2,
+      "position": 2.0
+    },
+    {
+      "url": "/standorte/schweiz/bern/luetzelflueh/",
+      "clicks": 1,
+      "impressions": 2,
+      "position": 2.5
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/gueglingen/",
+      "clicks": 1,
+      "impressions": 2,
+      "position": 3.0
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/tannhausen/",
+      "clicks": 1,
+      "impressions": 2,
+      "position": 4.0
+    },
+    {
+      "url": "/en/locations/netherlands/limburg/ulestraten/",
+      "clicks": 1,
+      "impressions": 2,
+      "position": 6.0
+    },
+    {
+      "url": "/standorte/hessen/breitenbach/",
+      "clicks": 1,
+      "impressions": 2,
+      "position": 6.0
+    },
+    {
+      "url": "/en/locations/switzerland/vaud/yverdon-les-bains/",
+      "clicks": 1,
+      "impressions": 2,
+      "position": 6.5
+    },
+    {
+      "url": "/standorte/daenemark/nordjylland/hurup/",
+      "clicks": 1,
+      "impressions": 2,
+      "position": 6.5
+    },
+    {
+      "url": "/en/locations/switzerland/basel-landschaft/ormalingen/",
+      "clicks": 1,
+      "impressions": 2,
+      "position": 10.0
+    },
+    {
+      "url": "/en/locations/netherlands/utrecht/wilnis/",
+      "clicks": 1,
+      "impressions": 2,
+      "position": 10.5
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/oosterbeek/",
+      "clicks": 1,
+      "impressions": 2,
+      "position": 11.0
+    },
+    {
+      "url": "/en/locations/luxembourg/wiltz/boulaide/",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 1.0
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/gendringen/",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 1.0
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/heelsum/",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 1.0
+    },
+    {
+      "url": "/en/locations/netherlands/groningen/musselkanaal/",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 1.0
+    },
+    {
+      "url": "/en/locations/netherlands/limburg/kelpen-oler/",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 1.0
+    },
+    {
+      "url": "/en/locations/switzerland/thurgau/sulgen/",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 1.0
+    },
+    {
+      "url": "/standorte/bayern/buchloe/",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 1.0
+    },
+    {
+      "url": "/standorte/bayern/hinterschmiding/",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 1.0
+    },
+    {
+      "url": "/standorte/hessen/geisenheim/",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 1.0
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/obernheim/",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/winterbach/",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/standorte/niederlande/noord-brabant/nuland/",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/standorte/schweiz/aargau/uerkheim/",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/opperdoes/",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 6.0
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/regensdorf-obstgarten/",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 10.0
+    },
+    {
+      "url": "/standorte/hessen/kassel/",
+      "clicks": 0,
+      "impressions": 32,
+      "position": 12.12
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/dietikon-kreuzacker/",
+      "clicks": 0,
+      "impressions": 18,
+      "position": 5.11
+    },
+    {
+      "url": "/standorte/schleswig-holstein/boesdorf/",
+      "clicks": 0,
+      "impressions": 13,
+      "position": 10.62
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/uster-ober-uster/",
+      "clicks": 0,
+      "impressions": 12,
+      "position": 4.67
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/ilbesheim/",
+      "clicks": 0,
+      "impressions": 11,
+      "position": 10.0
+    },
+    {
+      "url": "/standorte/luxemburg/esch-sur-alzette/esch-sur-alzette/",
+      "clicks": 0,
+      "impressions": 10,
+      "position": 5.1
+    },
+    {
+      "url": "/standorte/niedersachsen/nienburg/",
+      "clicks": 0,
+      "impressions": 8,
+      "position": 7.5
+    },
+    {
+      "url": "/standorte/sachsen/oederan/",
+      "clicks": 0,
+      "impressions": 8,
+      "position": 10.0
+    },
+    {
+      "url": "/standorte/niedersachsen/hemmoor/",
+      "clicks": 0,
+      "impressions": 8,
+      "position": 10.12
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/langenbrettach/",
+      "clicks": 0,
+      "impressions": 7,
+      "position": 4.43
+    },
+    {
+      "url": "/en/locations/netherlands/zuid-holland/nootdorp/",
+      "clicks": 0,
+      "impressions": 7,
+      "position": 5.29
+    },
+    {
+      "url": "/standorte/bayern/eckersdorf/",
+      "clicks": 0,
+      "impressions": 7,
+      "position": 5.29
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/rheinau-083/",
+      "clicks": 0,
+      "impressions": 7,
+      "position": 6.29
+    },
+    {
+      "url": "/standorte/bayern/goldbach/",
+      "clicks": 0,
+      "impressions": 7,
+      "position": 7.0
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/heimbach/",
+      "clicks": 0,
+      "impressions": 7,
+      "position": 12.71
+    },
+    {
+      "url": "/standorte/bayern/burgbernheim/",
+      "clicks": 0,
+      "impressions": 6,
+      "position": 5.0
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/waedenswil-hangenmoos/",
+      "clicks": 0,
+      "impressions": 6,
+      "position": 8.0
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/schechingen/",
+      "clicks": 0,
+      "impressions": 6,
+      "position": 13.83
+    },
+    {
+      "url": "/standorte/bayern/kirchseeon/",
+      "clicks": 0,
+      "impressions": 5,
+      "position": 1.8
+    },
+    {
+      "url": "/standorte/hessen/battenberg/",
+      "clicks": 0,
+      "impressions": 5,
+      "position": 3.4
+    },
+    {
+      "url": "/en/locations/netherlands/limburg/voerendaal/",
+      "clicks": 0,
+      "impressions": 5,
+      "position": 4.0
+    },
+    {
+      "url": "/standorte/niedersachsen/salzbergen/",
+      "clicks": 0,
+      "impressions": 5,
+      "position": 4.4
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/wachenheim/",
+      "clicks": 0,
+      "impressions": 5,
+      "position": 5.4
+    },
+    {
+      "url": "/standorte/berlin/friedrichshain/",
+      "clicks": 0,
+      "impressions": 5,
+      "position": 6.4
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/gerbstedt/",
+      "clicks": 0,
+      "impressions": 5,
+      "position": 6.4
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/kirchardt/",
+      "clicks": 0,
+      "impressions": 5,
+      "position": 6.6
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/binz/",
+      "clicks": 0,
+      "impressions": 5,
+      "position": 7.2
+    },
+    {
+      "url": "/standorte/hessen/oberursel/",
+      "clicks": 0,
+      "impressions": 5,
+      "position": 8.8
+    },
+    {
+      "url": "/en/locations/switzerland/solothurn/balsthal/",
+      "clicks": 0,
+      "impressions": 5,
+      "position": 9.6
+    },
+    {
+      "url": "/standorte/niederlande/noord-brabant/nuenen/",
+      "clicks": 0,
+      "impressions": 4,
+      "position": 2.75
+    },
+    {
+      "url": "/standorte/bayern/uffenheim/",
+      "clicks": 0,
+      "impressions": 4,
+      "position": 3.0
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/altefaehr/",
+      "clicks": 0,
+      "impressions": 4,
+      "position": 4.25
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/uster-gschwader/",
+      "clicks": 0,
+      "impressions": 4,
+      "position": 4.25
+    },
+    {
+      "url": "/standorte/bayern/grafenau/",
+      "clicks": 0,
+      "impressions": 4,
+      "position": 4.5
+    },
+    {
+      "url": "/standorte/bayern/krumbach/",
+      "clicks": 0,
+      "impressions": 4,
+      "position": 5.75
+    },
+    {
+      "url": "/standorte/sachsen/gersdorf-e48b5/",
+      "clicks": 0,
+      "impressions": 4,
+      "position": 6.0
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/duebendorf-vogelquartier/",
+      "clicks": 0,
+      "impressions": 4,
+      "position": 7.0
+    },
+    {
+      "url": "/standorte/hamburg/neuenfelde/",
+      "clicks": 0,
+      "impressions": 4,
+      "position": 8.5
+    },
+    {
+      "url": "/standorte/bayern/reichenbach/",
+      "clicks": 0,
+      "impressions": 4,
+      "position": 9.0
+    },
+    {
+      "url": "/standorte/niederlande/noord-holland/hoogwoud/",
+      "clicks": 0,
+      "impressions": 4,
+      "position": 9.5
+    },
+    {
+      "url": "/standorte/sachsen/treuen/",
+      "clicks": 0,
+      "impressions": 4,
+      "position": 9.5
+    },
+    {
+      "url": "/standorte/berlin/charlottenburg-nord/",
+      "clicks": 0,
+      "impressions": 4,
+      "position": 10.0
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/heesch/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 2.0
+    },
+    {
+      "url": "/standorte/berlin/oberschoeneweide/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 2.0
+    },
+    {
+      "url": "/standorte/bayern/pyrbaum/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 2.67
+    },
+    {
+      "url": "/standorte/niedersachsen/rhede/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 2.67
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/iffezheim/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 4.0
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/verl/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 4.0
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/beetzendorf/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 4.0
+    },
+    {
+      "url": "/standorte/niederlande/friesland/noordwolde/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 4.33
+    },
+    {
+      "url": "/en/locations/netherlands/limburg/grubbenvorst/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 5.0
+    },
+    {
+      "url": "/en/locations/netherlands/limburg/melderslo/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 5.33
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/weesp/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 5.33
+    },
+    {
+      "url": "/en/locations/switzerland/thurgau/buerglen/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 5.33
+    },
+    {
+      "url": "/standorte/nordrhein-westfalen/eschweiler/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 5.33
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/halfweg-2/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 5.67
+    },
+    {
+      "url": "/standorte/bayern/gars/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 5.67
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/schwaikheim/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 6.0
+    },
+    {
+      "url": "/standorte/niederlande/limburg/kerkrade/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 6.33
+    },
+    {
+      "url": "/standorte/bayern/reichenberg/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 6.67
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/putten/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 7.0
+    },
+    {
+      "url": "/standorte/berlin/mitte/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 7.0
+    },
+    {
+      "url": "/en/locations/netherlands/overijssel/borne/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 7.33
+    },
+    {
+      "url": "/standorte/bayern/seefeld/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 7.33
+    },
+    {
+      "url": "/en/locations/netherlands/overijssel/hengelo/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 7.67
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/hochstadt/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 8.0
+    },
+    {
+      "url": "/standorte/niederlande/noord-holland/hoorn/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 8.33
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/zoeschen/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 8.33
+    },
+    {
+      "url": "/en/locations/netherlands/friesland/ijlst/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 9.67
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/terschuur/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 11.33
+    },
+    {
+      "url": "/en/locations/switzerland/vaud/leysin/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 11.33
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/barneveld/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 13.0
+    },
+    {
+      "url": "/en/locations/netherlands/drenthe/hollandscheveld/",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 13.33
+    },
+    {
+      "url": "/standorte/schleswig-holstein/ascheberg/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 1.0
+    },
+    {
+      "url": "/en/locations/netherlands/groningen/niekerk/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 1.5
+    },
+    {
+      "url": "/standorte/bayern/pliening/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 1.5
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/roevershagen/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 1.5
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/polleben/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 1.5
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/made/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 2.0
+    },
+    {
+      "url": "/en/locations/switzerland/schwyz/wollerau/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 2.0
+    },
+    {
+      "url": "/standorte/bayern/mallersdorf-pfaffenberg/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 2.0
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/dietikon/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 2.0
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/waedenswil-eichweid/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 2.0
+    },
+    {
+      "url": "/en/locations/netherlands/friesland/drachten/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 2.5
+    },
+    {
+      "url": "/en/locations/netherlands/friesland/joure/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 2.5
+    },
+    {
+      "url": "/standorte/bayern/grassau/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 2.5
+    },
+    {
+      "url": "/standorte/daenemark/syddanmark/glamsbjerg/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 2.5
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/schlieren-freiestrasse/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 2.5
+    },
+    {
+      "url": "/en/locations/netherlands/limburg/spaubeek/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 3.0
+    },
+    {
+      "url": "/en/locations/switzerland/solothurn/matzendorf/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 3.0
+    },
+    {
+      "url": "/standorte/bayern/dasing/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 3.0
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/trittenheim/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 3.0
+    },
+    {
+      "url": "/standorte/bayern/grainet/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 3.5
+    },
+    {
+      "url": "/standorte/bayern/nussdorf/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 3.5
+    },
+    {
+      "url": "/standorte/hamburg/fuhlsbuettel/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 3.5
+    },
+    {
+      "url": "/standorte/niederlande/zeeland/brouwershaven/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 3.5
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/hillesheim/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 3.5
+    },
+    {
+      "url": "/en/locations/netherlands/flevoland/tollebeek/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 4.0
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/angerlo/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 4.0
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/aalst/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 4.0
+    },
+    {
+      "url": "/en/locations/netherlands/overijssel/vollenhove/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 4.0
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/hartheim/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 4.0
+    },
+    {
+      "url": "/standorte/niederlande/limburg/schilberg/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 4.0
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/uster-nossikon/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 4.0
+    },
+    {
+      "url": "/en/locations/netherlands/flevoland/zeewolde/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 4.5
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/huijbergen/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 4.5
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/oosterhout/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 4.5
+    },
+    {
+      "url": "/en/locations/switzerland/thurgau/taegerwilen/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 4.5
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/schoemberg-082/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 4.5
+    },
+    {
+      "url": "/standorte/bayern/ottobeuren/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 4.5
+    },
+    {
+      "url": "/standorte/bayern/wildflecken/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 4.5
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/bartenshagen-parkentin/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 4.5
+    },
+    {
+      "url": "/en/locations/netherlands/friesland/oosterwolde/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 5.0
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/veldhuizen/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 5.0
+    },
+    {
+      "url": "/en/locations/netherlands/zuid-holland/berkenwoude/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 5.0
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/schlieren-kamp/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 5.0
+    },
+    {
+      "url": "/en/locations/denmark/midtjylland/hatting/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 5.5
+    },
+    {
+      "url": "/en/locations/switzerland/solothurn/derendingen/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 5.5
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/fichtenberg/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 5.5
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/munderkingen/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 5.5
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/sagard/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 5.5
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/kuesnacht/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 5.5
+    },
+    {
+      "url": "/en/locations/luxembourg/redange/redange-sur-attert/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 6.0
+    },
+    {
+      "url": "/en/locations/netherlands/drenthe/havelte/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 6.0
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/arnhem/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 6.0
+    },
+    {
+      "url": "/en/locations/netherlands/groningen/wildervank/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 6.0
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/wormer/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 6.0
+    },
+    {
+      "url": "/standorte/bayern/bellenberg/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 6.0
+    },
+    {
+      "url": "/standorte/bayern/plattling/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 6.0
+    },
+    {
+      "url": "/standorte/daenemark/hovedstaden/gilleleje/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 6.0
+    },
+    {
+      "url": "/en/locations/netherlands/overijssel/grafhorst/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 6.5
+    },
+    {
+      "url": "/standorte/hessen/griesheim/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 6.5
+    },
+    {
+      "url": "/standorte/niederlande/zeeland/middelburg/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 6.5
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/schlieren/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 6.5
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/thalwil-dorfkern/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 6.5
+    },
+    {
+      "url": "/en/locations/netherlands/groningen/grijpskerk/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 7.0
+    },
+    {
+      "url": "/en/locations/netherlands/limburg/heerlen/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 7.0
+    },
+    {
+      "url": "/standorte/bayern/penzing/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 7.0
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/muenstermaifeld/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 7.0
+    },
+    {
+      "url": "/standorte/sachsen/niesky/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 7.0
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/ederveen/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 7.5
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/aalsmeer/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 7.5
+    },
+    {
+      "url": "/standorte/sachsen/oberseifersdorf/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 7.5
+    },
+    {
+      "url": "/standorte/schweiz/aargau/gontenschwil/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 7.5
+    },
+    {
+      "url": "/en/locations/netherlands/utrecht/driebergen-rijsenburg/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 8.0
+    },
+    {
+      "url": "/standorte/bayern/grafenrheinfeld/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 8.0
+    },
+    {
+      "url": "/standorte/niedersachsen/balje/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 8.0
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/dobien/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 8.0
+    },
+    {
+      "url": "/standorte/bayern/treuchtlingen/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 8.5
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/hoorn/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 9.0
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/ziesendorf/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 10.0
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/schwedelbach/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 10.0
+    },
+    {
+      "url": "/en/locations/switzerland/schwyz/kuessnacht/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 11.0
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/meteren/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 12.0
+    },
+    {
+      "url": "/standorte/hessen/frankenau/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 12.5
+    },
+    {
+      "url": "/standorte/schweiz/st-gallen/waldkirch/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 12.5
+    },
+    {
+      "url": "/standorte/berlin/nikolassee/",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 14.5
+    },
+    {
+      "url": "/en/locations/luxembourg/grevenmacher/wasserbillig/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1.0
+    },
+    {
+      "url": "/en/locations/netherlands/limburg/grevenbicht/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1.0
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/sint-willebrord/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1.0
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/wagenberg/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1.0
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/hippolytushoef/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1.0
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/kudelstaart/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1.0
+    },
+    {
+      "url": "/en/locations/netherlands/overijssel/nijrees/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1.0
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/hassmersheim/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1.0
+    },
+    {
+      "url": "/standorte/bayern/biessenhofen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1.0
+    },
+    {
+      "url": "/standorte/bayern/hattenhofen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1.0
+    },
+    {
+      "url": "/standorte/bayern/rueckersdorf/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1.0
+    },
+    {
+      "url": "/standorte/bayern/strasslach-dingharting/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1.0
+    },
+    {
+      "url": "/standorte/berlin/britz/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1.0
+    },
+    {
+      "url": "/standorte/luxemburg/esch-sur-alzette/roeser/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1.0
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/calbe/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1.0
+    },
+    {
+      "url": "/en/locations/netherlands/friesland/workum/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/lichtenvoorde/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/en/locations/netherlands/groningen/aduard/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/en/locations/netherlands/limburg/heksenberg/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/en/locations/netherlands/limburg/heythuysen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/en/locations/netherlands/limburg/schimmert/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/en/locations/netherlands/limburg/well/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/duizel/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/geffen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/heeze/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/maaspoort/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/limmen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/en/locations/switzerland/aargau/mellingen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/en/locations/switzerland/aargau/seengen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/en/locations/switzerland/aargau/wuerenlos/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/en/locations/switzerland/bern/burgistein/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/kuesnacht/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/standorte/bayern/flossenbuerg/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/standorte/bayern/koetzting/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/standorte/bayern/oberreute/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/standorte/bayern/pfronten/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/standorte/brandenburg/sonnewalde/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/standorte/niederlande/groningen/stadskanaal/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/standorte/niederlande/zuid-holland/rozenburg/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/eppenbrunn/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/osterwieck/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/kuesnacht-dorf/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2.0
+    },
+    {
+      "url": "/en/locations/luxembourg/mersch/boevange-sur-attert/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 3.0
+    },
+    {
+      "url": "/en/locations/luxembourg/redange/saeul/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 3.0
+    },
+    {
+      "url": "/en/locations/netherlands/friesland/sint-nicolaasga/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 3.0
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/wapenveld/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 3.0
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/odiliapeel/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 3.0
+    },
+    {
+      "url": "/en/locations/netherlands/utrecht/leersum/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 3.0
+    },
+    {
+      "url": "/en/locations/switzerland/st-gallen/wittenbach/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 3.0
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/hermaringen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 3.0
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/staig/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 3.0
+    },
+    {
+      "url": "/standorte/bayern/rottenbuch/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 3.0
+    },
+    {
+      "url": "/standorte/bayern/ruhstorf/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 3.0
+    },
+    {
+      "url": "/standorte/berlin/luebars/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 3.0
+    },
+    {
+      "url": "/standorte/niederlande/noord-holland/laren/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 3.0
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/plaidt/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 3.0
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/regensdorf-hofacher-geeren/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 3.0
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/hummelo/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4.0
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/nijmegen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4.0
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/woensdrecht/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4.0
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/zijtaart/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4.0
+    },
+    {
+      "url": "/en/locations/switzerland/thurgau/altnau/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4.0
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/waedenswil-eichweid/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4.0
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/eriskirch/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4.0
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/hochdorf-084/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4.0
+    },
+    {
+      "url": "/standorte/bayern/jettingen-scheppach/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4.0
+    },
+    {
+      "url": "/standorte/bayern/urspringen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4.0
+    },
+    {
+      "url": "/standorte/brandenburg/gramzow/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4.0
+    },
+    {
+      "url": "/standorte/niederlande/gelderland/zonnemaat/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4.0
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/bruchweiler-baerenbach/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4.0
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/otterstadt/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4.0
+    },
+    {
+      "url": "/standorte/sachsen-anhalt/wallendorf/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4.0
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/hegnau-dammboden-grindel/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4.0
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/maennedorf-ausserfeld/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4.0
+    },
+    {
+      "url": "/en/locations/luxembourg/esch-sur-alzette/differdange/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 5.0
+    },
+    {
+      "url": "/en/locations/netherlands/drenthe/uffelte/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 5.0
+    },
+    {
+      "url": "/en/locations/netherlands/friesland/wommels/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 5.0
+    },
+    {
+      "url": "/en/locations/netherlands/groningen/oldehove/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 5.0
+    },
+    {
+      "url": "/en/locations/netherlands/limburg/guttecoven/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 5.0
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/nieuwe-niedorp/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 5.0
+    },
+    {
+      "url": "/en/locations/netherlands/overijssel/borgele/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 5.0
+    },
+    {
+      "url": "/en/locations/netherlands/zeeland/kamperland/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 5.0
+    },
+    {
+      "url": "/standorte/bayern/gerbrunn/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 5.0
+    },
+    {
+      "url": "/standorte/bayern/hohenpeissenberg/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 5.0
+    },
+    {
+      "url": "/standorte/brandenburg/steinhoefel/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 5.0
+    },
+    {
+      "url": "/standorte/daenemark/hovedstaden/kokkedal/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 5.0
+    },
+    {
+      "url": "/standorte/hessen/alsbach-haehnlein/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 5.0
+    },
+    {
+      "url": "/standorte/mecklenburg-vorpommern/dranske/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 5.0
+    },
+    {
+      "url": "/en/locations/netherlands/drenthe/exloo/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 6.0
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/horssen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 6.0
+    },
+    {
+      "url": "/en/locations/switzerland/solothurn/laupersdorf/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 6.0
+    },
+    {
+      "url": "/en/locations/switzerland/valais-wallis/saint-maurice/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 6.0
+    },
+    {
+      "url": "/standorte/bayern/ehekirchen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 6.0
+    },
+    {
+      "url": "/standorte/niederlande/groningen/oosterhoogebrug/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 6.0
+    },
+    {
+      "url": "/standorte/rheinland-pfalz/birkenheide/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 6.0
+    },
+    {
+      "url": "/en/locations/netherlands/groningen/reitdiep/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 7.0
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/fijnaart/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 7.0
+    },
+    {
+      "url": "/en/locations/netherlands/overijssel/genemuiden/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 7.0
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/eisingen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 7.0
+    },
+    {
+      "url": "/standorte/niederlande/gelderland/brummen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 7.0
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/rueti/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 7.0
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/buren/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 8.0
+    },
+    {
+      "url": "/en/locations/netherlands/groningen/bedum/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 8.0
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/berlicum/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 8.0
+    },
+    {
+      "url": "/en/locations/netherlands/zuid-holland/the-hague/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 8.0
+    },
+    {
+      "url": "/en/locations/switzerland/schwyz/goldau/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 8.0
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/ebmatingen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 8.0
+    },
+    {
+      "url": "/standorte/bayern/stadtlauringen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 8.0
+    },
+    {
+      "url": "/standorte/luxemburg/redange/beckerich/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 8.0
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/buelach-seematt/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 8.0
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/dietlikon-eichwiesen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 8.0
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/zevenhuizen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 9.0
+    },
+    {
+      "url": "/en/locations/switzerland/schwyz/siebnen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 9.0
+    },
+    {
+      "url": "/standorte/daenemark/nordjylland/strandby/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 9.0
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/schwerzenbach-chimli/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 9.0
+    },
+    {
+      "url": "/standorte/schweiz/zuerich/zuerich/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 9.0
+    },
+    {
+      "url": "/standorte/thueringen/frankenheim/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 9.0
+    },
+    {
+      "url": "/en/locations/luxembourg/esch-sur-alzette/soleuvre/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 10.0
+    },
+    {
+      "url": "/en/locations/luxembourg/mersch/tuntange/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 10.0
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/gorssel/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 10.0
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/velp/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 10.0
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/gemert/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 10.0
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/oirschot/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 10.0
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/zeelst/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 10.0
+    },
+    {
+      "url": "/en/locations/netherlands/noord-holland/venhuizen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 10.0
+    },
+    {
+      "url": "/en/locations/netherlands/utrecht/baarn/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 10.0
+    },
+    {
+      "url": "/en/locations/netherlands/utrecht/vinkeveen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 10.0
+    },
+    {
+      "url": "/en/locations/switzerland/appenzell-ausserrhoden/gais/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 10.0
+    },
+    {
+      "url": "/en/locations/switzerland/glarus/mollis/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 10.0
+    },
+    {
+      "url": "/en/locations/switzerland/schwyz/lachen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 10.0
+    },
+    {
+      "url": "/en/locations/switzerland/zuerich/oberglatt-bahnhofquartier/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 10.0
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/culemborg/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 11.0
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/nijkerk/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 11.0
+    },
+    {
+      "url": "/en/locations/netherlands/groningen/midwolda/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 11.0
+    },
+    {
+      "url": "/en/locations/netherlands/limburg/brunssum/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 11.0
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/esch/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 11.0
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/molenhoek/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 11.0
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/muellheim/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 11.0
+    },
+    {
+      "url": "/standorte/bayern/egenhofen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 11.0
+    },
+    {
+      "url": "/standorte/niederlande/noord-holland/wijdenes/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 11.0
+    },
+    {
+      "url": "/en/locations/netherlands/gelderland/hoevelaken/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 12.0
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/middelbeers/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 12.0
+    },
+    {
+      "url": "/standorte/baden-wuerttemberg/eschelbronn/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 12.0
+    },
+    {
+      "url": "/standorte/niederlande/noord-holland/tuitjenhorn/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 12.0
+    },
+    {
+      "url": "/standorte/bayern/oberhaid/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 13.0
+    },
+    {
+      "url": "/standorte/sachsen/elsterberg/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 13.0
+    },
+    {
+      "url": "/en/locations/netherlands/noord-brabant/lierop/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 14.0
+    },
+    {
+      "url": "/en/locations/switzerland/thurgau/ermatingen/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 14.0
+    },
+    {
+      "url": "/standorte/berlin/hermsdorf/",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 14.0
     }
   ],
   "entries": [

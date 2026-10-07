@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-10-07T15:29:54.220Z",
+  "generated_at": "2026-10-07T15:43:29.582Z",
   "html_pages_seen": 15139,
-  "indexable_canonical_pages": 1785,
-  "approved_location_routes": 1183,
-  "excluded_location_pages": 13344,
+  "indexable_canonical_pages": 2163,
+  "approved_location_routes": 1561,
+  "excluded_location_pages": 12966,
   "excluded_non_market_pages": 2,
   "excluded_incomplete_legal_pages": 3,
-  "robots_tags_changed": 6788,
+  "robots_tags_changed": 6732,
   "sitemap_files": [
     "sitemap-0001.xml"
   ],
-  "sitemap_urls": 1785,
-  "pages_with_images": 1785,
+  "sitemap_urls": 2163,
+  "pages_with_images": 2163,
   "pages_with_explicit_lastmod": 488
 }
