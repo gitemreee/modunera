@@ -1,0 +1,29 @@
+{
+  "set": "paid ad — Dein Platz in der Natur",
+  "photograph": "f1b98089-4ffb-4c23-a654-d831609455ac.JPG",
+  "copy": {
+    "headline": [
+      "DEIN PLATZ",
+      "IN DER NATUR."
+    ],
+    "price": "39.500 €",
+    "sub": [
+      "7-Meter-Modell",
+      "Lieferung nach Deutschland in 15 Tagen"
+    ]
+  },
+  "figures_source": "owner, not data/pricing.json — see the module docstring",
+  "post": {
+    "size": "1080x1350",
+    "headline_on_band": 10.17,
+    "price_on_band": 6.19,
+    "sub_on_band": 7.06
+  },
+  "story": {
+    "size": "1080x1920",
+    "safe_margins": "250/260",
+    "headline_on_band": 10.17,
+    "price_on_band": 6.19,
+    "sub_on_band": 7.06
+  }
+}
