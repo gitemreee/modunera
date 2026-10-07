@@ -1,6 +1,21 @@
 # Interior nine — captions
 
-Set: `social/instagram/20-interior-nine/`. Post in order, 1 to 9.
+## Posting order
+
+**Publish from 9 down to 1**, the same as the launch nine and the production
+nine. Instagram puts the newest post top left, so the tile you want in that
+corner goes up last. Publishing 1 first would mirror the composition — post 1
+would land bottom right.
+
+The checkerboard itself survives either direction (reversing a sequence in a
+three-column grid is a 180-degree rotation, and rotation preserves adjacency),
+so no card would touch a card either way. Only the composition would be back
+to front.
+
+Because the feed sees these in the opposite order from the grid, none of the
+captions below refer to another post by number. Each one stands on its own.
+
+Set: `social/instagram/20-interior-nine/`.
 
 Every figure below is already public on the site: 9,70 m and the eight-model
 range from `data/pricing.json`, the Ro-Ro line from the transport and country
@@ -17,7 +32,7 @@ account when the tags are stable.
 Eight metres, read end to end: shelf, worktop, window, bed.
 No floor plan explains a tiny house as fast as standing in the door does.
 
-Swipe through — this is the inside we have never shown.
+This is the inside we have never shown. Eight more coming.
 
 #modunera #tinyhouse #tinyhousedesign #interiordesign #smallspaceliving
 
@@ -83,8 +98,8 @@ get a small house that feels small.
 
 Stair, truss, the pitch overhead.
 
-Two ways up across the range: the ladder in post 3, and this. Different
-houses, different lives — pick the one you will still like in year three.
+Two ways up across the range: a ladder, or a stair. Different houses,
+different lives — pick the one you will still like in year three.
 
 #modunera #tinyhouse #aframe #tinyhousestairs #interiordesign
 
@@ -108,7 +123,7 @@ Ask us for the route to your address and we will walk you through it.
 
 Standing in the door, looking through to the kitchen and the stair.
 
-That is the set. If you want to see the rest, the models and the
-configurator are on modunera.com — link in bio.
+A new set starts here: nine frames from inside the units.
+The models and the configurator are on modunera.com — link in bio.
 
 #modunera #tinyhouse #tinyhouseliving #designyournature #comeinside
