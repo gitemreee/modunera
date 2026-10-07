@@ -947,14 +947,23 @@ def duo_post(source: Path, statement: list[str], ground: tuple[int, int, int],
                     micro=min(1.0, 0.55 + 0.28 * reduction))
     canvas.paste(photo, (0, 0))
 
+    # The logo gets the same solved scrim photo_post uses, not a dialled one.
+    # This block used to sample a fixed box and scale a hand-picked 150 by the
+    # need, which is the guess apply_until_legible was written to remove — and it
+    # shipped: the production nine's duo measured 4.17:1 against its own 4.6
+    # target, and an interior doorway measured 3.32:1. The loop measures the
+    # glyphs themselves and stops when they actually clear.
+    def _duo_head(c: Image.Image, a: int) -> Image.Image:
+        out = c.copy()
+        out.paste(head_scrim(c.crop((0, 0, POST_W, split)),
+                             height_ratio=0.30, strength=a), (0, 0))
+        return out
+
+    canvas, head_alpha = apply_until_legible(
+        canvas, [ink_mask(None, "logo")], _duo_head)
     draw = ImageDraw.Draw(canvas)
-    luma, _ = _luma(canvas, (MARGIN, SAFE_TOP + 36, MARGIN + 246, SAFE_TOP + 106))
-    need = scrim_need(luma)
-    if need > 0.04:
-        head = head_scrim(canvas.crop((0, 0, POST_W, split)), height_ratio=0.30,
-                          strength=int(150 * need))
-        canvas.paste(head, (0, 0))
     place_logo(canvas, light=True)
+    canvas.info["head_scrim"] = head_alpha
 
     # The band below the photograph is a section, so its statement follows the
     # section rule: white on moss, roof red on paper. It was moss-on-paper here,

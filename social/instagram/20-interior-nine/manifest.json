@@ -1,0 +1,100 @@
+{
+  "set": "interior nine — inside the eight metres",
+  "arrangement": "3x3 checkerboard; a card never touches a card",
+  "sources": "social/instagram/16-drive-2026-08 and 17-drive-2026-08-21 (owner's Drive), photographs unused by the production nine",
+  "figures": "9,70 m / 44.900 € — data/pricing.json, the file the model pages read",
+  "posts": [
+    {
+      "n": 1,
+      "role": "picture",
+      "template": "photo",
+      "file": "post-1.jpg",
+      "why": "The set opens on the frame that answers the question fastest: the whole length of a unit read end to end, shelves, worktop, window, bed. One picture does what a floor plan needs a page for.",
+      "photograph": "fb8b030f-1c7a-42e8-b2c1-7c8c4b5de23e.JPG",
+      "logo": "white"
+    },
+    {
+      "n": 2,
+      "role": "card",
+      "template": "card",
+      "file": "post-2.jpg",
+      "why": "The claim of the set, on the forest ground the launch nine proved. Eight metres is the shorter of the two public lengths, so the sentence is the modest version of the fact, not the flattering one.",
+      "ground": "#2E4733",
+      "type": "#DAD7CD",
+      "contrast": 7.06,
+      "logo": "white"
+    },
+    {
+      "n": 3,
+      "role": "picture",
+      "template": "photo",
+      "file": "post-3.jpg",
+      "why": "Worktop, hob and the ladder to the loft in a single frame. The ladder is the part people underestimate, so it belongs in the picture rather than in a caption arguing about it.",
+      "photograph": "IMG_4217.HEIC",
+      "logo": "white"
+    },
+    {
+      "n": 4,
+      "role": "card",
+      "template": "numeral",
+      "file": "post-4.jpg",
+      "why": "The length that governs everything inside, already public on the model pages via data/pricing.json. A numeral is where the eye rests between two pictures.",
+      "ground": "#F5F5F5",
+      "type": "#97311A",
+      "contrast": 6.95,
+      "logo": "colour"
+    },
+    {
+      "n": 5,
+      "role": "picture",
+      "template": "photo",
+      "file": "post-5.jpg",
+      "why": "The centre tile gets the frame the set is really selling: sofa, pendant, television, curtains. It was captioned EVENINGS first, which the picture does not back — there is still packaging in the corner. A furnished unit before anyone moves in is what this is, so that is what it says.",
+      "photograph": "IMG_9993.HEIC",
+      "logo": "white"
+    },
+    {
+      "n": 6,
+      "role": "card",
+      "template": "card",
+      "file": "post-6.jpg",
+      "why": "How the plans are actually drawn, in six words, on the set's one near-black. It reads as method rather than marketing, which is the register the rest of the account keeps.",
+      "ground": "#232426",
+      "type": "#DAD7CD",
+      "contrast": 10.79,
+      "logo": "white"
+    },
+    {
+      "n": 7,
+      "role": "picture",
+      "template": "photo",
+      "file": "post-7.jpg",
+      "why": "The A-frame interior: stair, truss, the pitch overhead. Pairs with 3 — the two different ways up that the range offers.",
+      "photograph": "IMG_0372.JPG",
+      "logo": "white"
+    },
+    {
+      "n": 8,
+      "role": "card",
+      "template": "card",
+      "file": "post-8.jpg",
+      "why": "How the room in the other eight pictures reaches a plot, in the site's own words. The transport pages are careful that Ro-Ro is a leg of a route and not a door-to-door service, so the card says 'in part' rather than claiming the ship does the job.",
+      "ground": "#97311A",
+      "type": "#FFFFFF",
+      "contrast": 7.58,
+      "logo": "white"
+    },
+    {
+      "n": 9,
+      "role": "picture",
+      "template": "duo",
+      "file": "post-9.jpg",
+      "why": "A doorway looking through to the kitchen and the stair — the set closes on the view you get standing in the door. The duo band keeps the type off the photograph entirely.",
+      "ground": "#F5F5F5",
+      "type": "#3A5A40",
+      "contrast": 7.09,
+      "logo": "white",
+      "photograph": "IMG_6838.HEIC"
+    }
+  ]
+}
