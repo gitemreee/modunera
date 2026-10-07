@@ -173,3 +173,62 @@ nothing of anyone. It says something true without needing a signature.
 If the donation is real, this becomes one of the strongest posts on the account,
 because almost nobody in the category can evidence one. It is worth doing
 properly rather than quickly.
+
+## 3a. Ausstattungsliste — blocks the equipment tables in the catalogue
+
+Added 2026-10-07, after a competitor catalogue (REDUKT, v202604) was supplied as
+the standard to match. Their specification names makes and models for every
+fitting. Ours names none, so `build/MODUNERA-Katalog-de.pdf` ships with models,
+prices, components and delivery, and stops where their equipment tables begin.
+
+Three of their entries contradict MODUNERA's own published `/qualitaet/`, so
+their list cannot be adapted even in part: they build a **timber** C24/KVH frame
+where MODUNERA builds **steel**; **aluminium** joinery where MODUNERA fits
+**PVC**; **laminate** worktops where MODUNERA fits **solid panel**. Every line
+below has to come from MODUNERA's own production, not from theirs.
+
+Fill in per model where it differs, once where it does not.
+
+**Fahrgestell**
+- [ ] Hersteller, Typ, Achszahl, zulässige Gesamtmasse
+- [ ] Plattformmaße (L x B) je Modell
+- [ ] CoC / Typgenehmigung: Nummer und Geltungsbereich
+- [ ] Lässt sich der Aufbau vom Fahrgestell trennen? Wenn ja, wie
+
+**Aufbau**
+- [ ] Stahlgüte, Profilquerschnitte, Korrosionsschutzverfahren und Norm
+- [ ] Dämmstoff und Stärke für Boden, Wand, Dach
+- [ ] Dampfbremse / Unterspannbahn: Fabrikat und Typ
+- [ ] Fassadenvarianten mit Materialbezeichnung je Paket
+- [ ] Dachaufbau und Dacheindeckung
+- [ ] U-Werte mit der Berechnung oder dem Bericht dahinter
+
+**Fenster und Türen**
+- [ ] Hersteller, Profilsystem, Verglasungsaufbau je Modell
+- [ ] Leistungserklärung (DoP)
+
+**Innenausbau**
+- [ ] Wand- und Deckenbekleidung: Material und Stärke
+- [ ] Bodenbelag: Typ und Nutzungsklasse
+- [ ] Küche: Korpus, Front, Arbeitsplatte — Material und Stärke
+- [ ] Möbel: was ist im Preis, was ist Option
+
+**Geräte** — Fabrikat und Typ, je Paket
+- [ ] Kochfeld, Kühlschrank, Dunstabzug
+- [ ] Warmwasserbereiter (Leistung, Volumen)
+- [ ] Heizung und Kühlung
+- [ ] Lüftung
+- [ ] Sanitärobjekte: Dusche, WC, Waschtisch, Armaturen
+
+**Installationen**
+- [ ] Elektro: Phasenzahl, Absicherung, FI, Anschlusswert
+- [ ] Wasser und Abwasser: Rohrmaterial, Anschlussart
+
+**Pakete**
+- [ ] Welche Ausstattungsstufen gibt es, und was enthält jede
+- [ ] Optionsliste mit Aufpreisen
+- [ ] Gibt es eine Off-grid-Variante, und was gehört dazu
+
+**Preis**
+- [ ] Netto oder brutto, und mit welchem Mehrwertsteuersatz
+- [ ] Gültig ab welchem Datum
