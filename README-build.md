@@ -25,6 +25,7 @@ node tools/build-nordic-redirects.mjs     # 301s for the corrected Danish slugs
 node tools/build-title-lengths.mjs        # shortens the boilerplate suffix where the title already says it
 node tools/build-content-lastmod.mjs      # real content dates, from a content hash
 node tools/build-seo-governance-v7.mjs    # robots policy, location gate, sitemaps
+node tools/build-about-topic.mjs        # `about` names a topic, not a Product (GSC product-snippet error)
 node tools/build-de-source-block.mjs      # official permit source on the German-market location pages
 node tools/build-shell-v3.mjs             # floating frame, left rail (runs last: it wraps finished pages)
 node tools/validate-modunera.mjs          # gate: canonicals, JSON-LD, links, brand, colours
