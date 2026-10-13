@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-13T14:53:50.332Z",
-  "html_pages_seen": 15139,
+  "generated_at": "2026-10-13T18:52:16.689Z",
+  "html_pages_seen": 15140,
   "indexable_canonical_pages": 2163,
   "approved_location_routes": 1561,
   "excluded_location_pages": 12966,
   "excluded_non_market_pages": 2,
-  "excluded_incomplete_legal_pages": 3,
-  "robots_tags_changed": 6571,
+  "excluded_incomplete_legal_pages": 4,
+  "robots_tags_changed": 1,
   "sitemap_files": [
     "sitemap-0001.xml"
   ],

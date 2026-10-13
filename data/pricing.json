@@ -109,5 +109,20 @@
       "note_de": "Durchschnittswert – Route für das einzelne Projekt bestätigt",
       "note_en": "Average figure – route confirmed per project"
     }
+  },
+  "enquiry_budget_bands": {
+    "_comment": "Budget bands for the enquiry form on /kontakt/. Derived from the ex-works range above, not invented: the old bands opened at \"Unter 60.000 €\", which every one of the eight models falls into, so the field sorted nobody. The bands below put ex-works in the first, a delivered German project in the second, and leave room above for larger or multi-unit work.",
+    "de": [
+      "Bis 55.000 €",
+      "55.000–75.000 €",
+      "75.000–100.000 €",
+      "Mehr als 100.000 €"
+    ],
+    "en": [
+      "Up to €55,000",
+      "€55,000–75,000",
+      "€75,000–100,000",
+      "More than €100,000"
+    ]
   }
 }

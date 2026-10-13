@@ -16,11 +16,12 @@
    afterwards for anyone who prefers it. So this adds markup, not machinery, and
    Netlify does not have to detect a form on eleven thousand pages.
 
-   Scope. German /standorte/ only, this pass. /en/locations/ ranks better than
-   anything else on the site and has no form either, but it also has no English
-   privacy page — /legal/datenschutz/ exists in German alone. Putting an English
-   form in front of an EU visitor and linking consent to a German-only policy is
-   not a thing to do quietly, so the English tree waits for its privacy page.
+   Scope. Both location trees. The English one waited a pass: /en/locations/
+   ranks better than anything else on the site, at positions 1.5 to 3.8, but
+   there was no English privacy page, and putting a form in front of an EU
+   visitor with consent linked to a German-only policy is not a thing to do
+   quietly. tools/build-privacy.mjs now renders /en/legal/privacy/, so the form
+   follows.
 
    The form is shorter than the one on /kontakt/: a visitor who has just landed
    on a town page will not fill in seven fields. Name, e-mail, phone, use and a
@@ -68,7 +69,7 @@ async function walk(dir, out = []) {
    Reading the h1 instead would mean parsing "Tiny House in Aalen kaufen" and
    guessing which words are the name. The about node holds the place and
    nothing else. */
-const ABOUT_PREFIX = /^Tiny House für\s+/;
+const ABOUT_PREFIX = /^Tiny (?:House für|house for)\s+/;
 
 function placeOf(html) {
   const place = html.match(/"contentLocation":\{"@type":"Place","name":"((?:[^"\\]|\\.)*)"/);
@@ -78,46 +79,73 @@ function placeOf(html) {
   return null;
 }
 
-function block(place, root) {
+const COPY = {
+  de: {
+    privacy: "legal/datenschutz/",
+    eyebrow: (p) => `Anfrage · ${p}`,
+    h2: (p) => `Was ist in ${p} geplant?`,
+    lead: "Beschreiben Sie das Projekt in zwei Sätzen. Sie bekommen eine Ersteinschätzung zu Modell, Lieferweg und den nächsten Schritten — keine automatische Preisliste.",
+    name: "Name", email: "E-Mail", phone: "Telefon / WhatsApp", use: "Nutzung",
+    project: "Ihr Projekt", submit: "Anfrage senden",
+    uses: ["Privates Wohnen", "Ferienhaus", "Airbnb / Glamping", "Homeoffice", "Händler / Distributor"],
+    consent: (href) => `Ich bin einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert werden. Details in der <a href="${href}" style="text-decoration:underline">Datenschutzerklärung</a>.`,
+    note: "Pflichtfelder sind nur Name und E-Mail. Nach dem Absenden öffnet sich zusätzlich WhatsApp mit einer vorbereiteten Nachricht, falls Sie dort weiterschreiben möchten.",
+  },
+  en: {
+    privacy: "en/legal/privacy/",
+    eyebrow: (p) => `Enquiry · ${p}`,
+    h2: (p) => `What are you planning in ${p}?`,
+    lead: "Describe the project in two sentences. You get a first assessment of model, delivery route and the next steps — not an automated price list.",
+    name: "Name", email: "E-mail", phone: "Phone / WhatsApp", use: "Intended use",
+    project: "Your project", submit: "Send enquiry",
+    uses: ["Private living", "Holiday home", "Airbnb / glamping", "Home office", "Dealer / distributor"],
+    consent: (href) => `I agree that my details may be stored in order to handle my enquiry. Details in the <a href="${href}" style="text-decoration:underline">privacy notice</a>.`,
+    note: "Only name and e-mail are required. After sending, WhatsApp also opens with a prepared message in case you would rather continue there.",
+  },
+};
+
+function block(place, root, lang) {
+  const t = COPY[lang];
   const p = esc(place);
   return `<section class="section section-soft" id="${ID}"><div class="container">` +
     `<form class="editorial-copy" data-lead-form name="projektanfrage" method="POST" data-netlify="true" netlify-honeypot="bot-field">` +
     `<input type="hidden" name="form-name" value="projektanfrage">` +
     `<input type="hidden" name="Lieferort" value="${p}">` +
     `<p style="display:none"><label>Bitte frei lassen<input name="bot-field"></label></p>` +
-    `<div class="eyebrow">Anfrage · ${p}</div>` +
-    `<h2>Was ist in ${p} geplant?</h2>` +
-    `<p>Beschreiben Sie das Projekt in zwei Sätzen. Sie bekommen eine Ersteinschätzung zu Modell, Lieferweg und den nächsten Schritten — keine automatische Preisliste.</p>` +
+    `<div class="eyebrow">${t.eyebrow(p)}</div>` +
+    `<h2>${t.h2(p)}</h2>` +
+    `<p>${t.lead}</p>` +
     `<div class="form-grid">` +
-    `<div class="field"><label>Name</label><input name="Name" required></div>` +
-    `<div class="field"><label>E-Mail</label><input name="E-Mail" type="email" required></div>` +
-    `<div class="field"><label>Telefon / WhatsApp</label><input name="Telefon"></div>` +
-    `<div class="field"><label>Nutzung</label><select name="Nutzung"><option>Privates Wohnen</option><option>Ferienhaus</option><option>Airbnb / Glamping</option><option>Homeoffice</option><option>Händler / Distributor</option></select></div>` +
-    `<div class="field full"><label>Ihr Projekt</label><textarea name="Projekt" rows="4"></textarea></div>` +
+    `<div class="field"><label>${t.name}</label><input name="Name" required></div>` +
+    `<div class="field"><label>${t.email}</label><input name="E-Mail" type="email" required></div>` +
+    `<div class="field"><label>${t.phone}</label><input name="Telefon"></div>` +
+    `<div class="field"><label>${t.use}</label><select name="Nutzung">${t.uses.map((u) => `<option>${u}</option>`).join("")}</select></div>` +
+    `<div class="field full"><label>${t.project}</label><textarea name="Projekt" rows="4"></textarea></div>` +
     `</div>` +
     `<div class="save-bar"><div class="field" style="grid-column:1/-1">` +
     `<label style="display:flex;gap:10px;align-items:flex-start;font-weight:400">` +
     `<input type="checkbox" name="Einwilligung" value="ja" required style="margin-top:5px">` +
-    `<span>Ich bin einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert werden. Details in der <a href="${root}legal/datenschutz/" style="text-decoration:underline">Datenschutzerklärung</a>.</span>` +
+    `<span>${t.consent(root + t.privacy)}</span>` +
     `</label></div>` +
-    `<button class="btn btn-primary">Anfrage senden</button>` +
+    `<button class="btn btn-primary">${t.submit}</button>` +
     `</div>` +
-    `<p class="legal-note">Pflichtfelder sind nur Name und E-Mail. Nach dem Absenden öffnet sich zusätzlich WhatsApp mit einer vorbereiteten Nachricht, falls Sie dort weiterschreiben möchten.</p>` +
+    `<p class="legal-note">${t.note}</p>` +
     `</form></div></section>`;
 }
 
 const report = { added: 0, already: 0, no_place: [], no_anchor: [] };
 
-for (const file of await walk("standorte")) {
-  const html = await readFile(join(ROOT, file), "utf8");
-  if (html.includes(`id="${ID}"`)) { report.already += 1; continue; }
-  if (!html.includes(ANCHOR)) { report.no_anchor.push(file); continue; }
-  const place = placeOf(html);
-  if (!place) { report.no_place.push(file); continue; }
-  const depth = file.split("/").length - 1;      // standorte/<region>/<ort>/index.html
-  const root = "../".repeat(depth);
-  await writeFile(join(ROOT, file), html.replace(ANCHOR, block(place, root) + ANCHOR), "utf8");
-  report.added += 1;
+for (const [dir, lang] of [["standorte", "de"], ["en/locations", "en"]]) {
+  for (const file of await walk(dir)) {
+    const html = await readFile(join(ROOT, file), "utf8");
+    if (html.includes(`id="${ID}"`)) { report.already += 1; continue; }
+    if (!html.includes(ANCHOR)) { report.no_anchor.push(file); continue; }
+    const place = placeOf(html);
+    if (!place) { report.no_place.push(file); continue; }
+    const root = "../".repeat(file.split("/").length - 1);
+    await writeFile(join(ROOT, file), html.replace(ANCHOR, block(place, root, lang) + ANCHOR), "utf8");
+    report.added += 1;
+  }
 }
 
 for (const key of ["no_place", "no_anchor"]) {

@@ -96,7 +96,11 @@ function isNonMarket(route) {
 /* Statutory pages that are still missing register data. They stay published and
    linked, but an incomplete Impressum should not be a search result. Remove a
    route here once REQUIRED-BUSINESS-INPUTS.md section 1 is satisfied. */
-const INCOMPLETE_LEGAL = ["/legal/impressum/", "/legal/datenschutz/", "/legal/cookies/"];
+// The English privacy notice joined this list on 2026-10-13. It carries the
+// same gap as its German twin — no legal entity named, section 1 of
+// REQUIRED-BUSINESS-INPUTS.md — and an incomplete notice should not be
+// indexed in one language while it is withheld in the other.
+const INCOMPLETE_LEGAL = ["/legal/impressum/", "/legal/datenschutz/", "/legal/cookies/", "/en/legal/privacy/"];
 
 function collectImages(html, canonical) {
   const images = [];
