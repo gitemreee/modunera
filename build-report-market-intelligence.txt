@@ -1,7 +1,7 @@
 MODUNERA DAILY INTELLIGENCE REPORT
 
-Date:   2026-10-13
-Run ID: run-2026-10-13-001
+Date:   2026-10-14
+Run ID: run-2026-10-14-001
 Search provider:   (NOT CONFIGURED — no scan performed)
 Search Console:  1470 row(s) from 7 file(s)
 
@@ -21,6 +21,9 @@ Luxembourg (LU)
   note: no adapter in this build for provider "" (known: brave)
 Schweiz / Suisse (CH)
   queries planned: 5   results read: 0   kept: 0   discarded: 0
+  note: no adapter in this build for provider "" (known: brave)
+France (FR)
+  queries planned: 6   results read: 0   kept: 0   discarded: 0
   note: no adapter in this build for provider "" (known: brave)
 
 SEARCH CONSOLE (sections 37 and 38)
@@ -95,7 +98,7 @@ DECISION
 
 RUN COUNTERS (section 72)
 
-  queries planned             28
+  queries planned             34
   sources visited             0
   sources accepted            0
   sources rejected            0
@@ -149,3 +152,4 @@ ERRORS
   DK: no adapter in this build for provider "" (known: brave)
   LU: no adapter in this build for provider "" (known: brave)
   CH: no adapter in this build for provider "" (known: brave)
+  FR: no adapter in this build for provider "" (known: brave)
