@@ -42,6 +42,12 @@ node tools/market-intelligence.mjs        # the daily European scan; writes data
 node tools/test-market-intelligence.mjs   # the nineteen tests of section 75
 ```
 
+Since 2026-10-14 the scan also covers FR (French queries, `brave_country: FR`).
+There is no French country page yet, so a French signal's country link falls
+back to the countries hub (`COUNTRIES_HUB` in `build-news-v7.mjs`) instead of
+a path that does not exist. BE and UK are not added: both are a market-entry
+decision for the owner, not a query list.
+
 `market-intelligence.mjs` runs *before* the order above, because
 `build-news-v7.mjs` and `build-intelligence-dashboard.mjs` both read what it
 wrote. It is safe to run alone: it touches no HTML.
@@ -169,11 +175,51 @@ built out.
 | New market guides | `MARKET_GUIDES` in `tools/build-modunera-v2.mjs` |
 | Country copy, permits, regions | `COUNTRIES` in `tools/build-modunera-europe.mjs` |
 | Location data | `data/europe-locations-source.json` |
+| Operator pages (`/gewerblich/`, `/en/commercial/`, six segments) | `data/commercial.json` |
+| Tourism regions (`/regionen/`, `/en/regions/`, ten landscapes) | `data/tourism-regions.json` |
+| The daily practice series queue | `data/blog-daily-*.json` |
+| Markets the daily scan covers, and their queries | `markets` in `data/market-scan-config.json` |
+| Anonymised market research the above was derived from | `data/market-research-2026-10.json` |
 
 Never edit `assets/css/styles.css` between the `MODUNERA BRAND PALETTE`
 markers — that block is regenerated from `tools/design-system-v2.css` on every
 build. Edits outside the markers survive, but the generated block is appended
 last and therefore wins on equal specificity.
+
+## Operator pages and tourism regions
+
+Both were added on 2026-10-14 from two documents the owner supplied: a
+European import report for HS 9406 and a list of one hundred German B2B
+prospects. The site had no page for a campsite, a holiday park, a hotel, a
+marina, a municipality or a village project before that day, and the
+prospects cluster by landscape rather than by town, which the state-ordered
+location tree could not answer. What the documents say, reduced to what may be
+published, is in `data/market-research-2026-10.json`; the prospect list itself
+belongs in a CRM, not in a public repository, and no name, address, telephone
+number or e-mail from it is committed anywhere.
+
+`data/commercial.json` is one hub and six segments in German and English:
+title, lead, direct answer, sections, the list a prospect should clarify before
+enquiring, FAQ, menu labels. Each segment page carries the enquiry form with
+the use preset (`Nutzung`) and a unit-count select, posting to the same
+Netlify form as every other page. The hub and the segments form the third
+column of the *Tiny Houses* menu; `.nav-menu-wide:has(.nav-col:nth-child(3))`
+in the design system widens the panel for it.
+
+`data/tourism-regions.json` is ten landscapes, each with a bounding box and a
+list of states. A town from `data/locations.json` belongs to a region when its
+coordinates fall inside the box and its state is in the list — nothing is
+assigned by hand, so the mapping cannot drift from the data it is derived
+from, and the page says the assignment is geographic, not official. The first
+48 places (largest first where population is known) are visible; the rest
+fold behind a `<details>`, every link still in the document. Each region
+links down to its towns, up to its state pages (which carry the official
+source), and across to the operator segments typical for it.
+
+Neither file claims a delivered project, names an operator, or quotes a rule a
+Land sets differently from the next. Those are the three things a region or
+operator page would most like to say and may not until section 8 of
+`REQUIRED-BUSINESS-INPUTS.md` is answered.
 
 ## SEO governance (V7)
 
@@ -469,7 +515,14 @@ There is no server, so "one per day" is a scheduled build:
 both gates, and commits only if the output changed. If a gate fails nothing is
 pushed, because a date arriving is not a reason to publish a broken site.
 
-**Two things the generator refuses to build.** A post under 1,800 words, and any
+The queue is refilled in files of five: `blog-daily-3.json` and
+`blog-daily-4.json` (2026-10-15 to 2026-10-24) are the operator's practice —
+site rules, cleaning time, crane or manoeuvring, wastewater, power failure,
+handover, winterising, season start, nightly price, series decisions — written
+for the B2B reader the operator pages address, under the categories `gewerbe`
+and `regionen` in `CATEGORY_LABEL`.
+
+**Two things the generator refuses to build.** A post under 2,000 words, and any
 pair of published posts whose 6-gram Jaccard overlap exceeds 30%. The second one
 is the whole point: a daily series is the easiest possible way to recreate the
 problem the *Duplication* section below describes, and length is not a defence —

@@ -37,6 +37,9 @@ const LOCALES = JSON.parse(await readFile(join(ROOT, "data/locales.json"), "utf8
 const HTML_LANG = { de: "de-DE", en: "en-GB", nl: "nl-NL", da: "da-DK", fr: "fr-FR" };
 const HREFLANG = { de: "de-DE", en: "en", nl: "nl-NL", da: "da-DK", fr: "fr" };
 const HOME = { de: "", en: "en/", nl: "nl/", da: "da/", fr: "fr/" };
+/* A market the scan covers but the site has no country page for yet (FR since
+   2026-10-14) links to the countries hub instead of a path that does not exist. */
+const COUNTRIES_HUB = { de: "laender/", en: "en/countries/", nl: "nl/landen/", da: "da/lande/", fr: "fr/pays/" };
 const COUNTRY_PAGE = {
   de: { DE: "laender/deutschland/", NL: "laender/niederlande/", DK: "laender/daenemark/", LU: "laender/luxemburg/", CH: "laender/schweiz/" },
   en: { DE: "en/countries/germany/", NL: "en/countries/netherlands/", DK: "en/countries/denmark/", LU: "en/countries/luxembourg/", CH: "en/countries/switzerland/" },
@@ -140,7 +143,7 @@ function itemPage(item, lang) {
 
     `<section class="section section-soft"><div class="container"><div class="hero-actions">` +
     `<a class="btn btn-primary" href="${waLink(lang)}" target="_blank" rel="noopener">${esc(l.cta)}</a>` +
-    `<a class="btn btn-outline" href="${root}${COUNTRY_PAGE[lang][item.country]}">${esc(l.countryGuide)} →</a>` +
+    `<a class="btn btn-outline" href="${root}${COUNTRY_PAGE[lang][item.country] ?? COUNTRIES_HUB[lang]}">${esc(l.countryGuide)} →</a>` +
     `<a class="btn btn-outline" href="${item.sourceUrl}" target="_blank" rel="noopener nofollow">${esc(l.openSource)} ↗</a>` +
     `</div></div></section></main>`;
 

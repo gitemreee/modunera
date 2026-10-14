@@ -1,0 +1,655 @@
+{
+  "_comment": [
+    "The commercial section: /gewerblich/ and /en/commercial/. One hub and six",
+    "segment pages, rendered by tools/build-modunera-v2.mjs.",
+    "",
+    "Why it exists. Two documents arrived on 2026-10-14: a trade-intelligence",
+    "report on the European tiny-house market and a list of one hundred German",
+    "B2B prospects. The list is entirely operators — campsites and glamping",
+    "sites, holiday-park chains, nature hotels, marinas, tiny-house villages,",
+    "tourism associations — and the report puts typical purchases in this",
+    "segment at several units per project. The site had nothing for that",
+    "buyer: not one page titled for a campsite, a hotel, a marina or a",
+    "municipality, and five commercial-intent impressions in three months of",
+    "Search Console data. A buyer with a budget for a dozen units landed on a",
+    "page written for a private family, or did not land at all.",
+    "",
+    "What is NOT in here, on purpose. No prospect's name. The hundred companies",
+    "are the owner's outreach list and belong in a CRM, not in a public",
+    "repository, and naming one on a page would read as a reference the",
+    "company has not earned. No delivered-project claims, no capacity figures,",
+    "no unit counts attributed to MODUNERA — the market report's '5 to 50",
+    "units per project' describes the segment, not this company. No",
+    "regulatory numbers: fire-separation distances, pitch sizes and seasonal",
+    "limits are set by each Land's campsite ordinance and the operator's own",
+    "site rules, so the page tells the buyer what to clarify and with whom,",
+    "and does not quote a figure it cannot source.",
+    "",
+    "What the pages CAN say is what the rest of the site already says: eight",
+    "models, a welded steel frame, 2.55 m base width, PVC joinery, ex-works",
+    "price indications from data/pricing.json, road delivery with an optional",
+    "Ro-Ro leg, bespoke built-in furniture, and project documents that do not",
+    "replace local legal advice. Each segment page points the buyer at the",
+    "existing guide on that use, so the three guides already written are",
+    "strengthened rather than duplicated."
+  ],
+  "updated": "2026-10-14",
+  "hub": {
+    "slug": { "de": "gewerblich", "en": "en/commercial" },
+    "photo": "transport-export-flags",
+    "de": {
+      "title": "Tiny Houses für Betreiber: Camping, Ferienpark, Hotel, Marina, Kommune | MODUNERA",
+      "description": "Tiny Houses für gewerbliche Betreiber und Kommunen: Campingplatz und Glamping, Ferienpark, Hotel-Erweiterung, Marina, Tiny-House-Dorf, kommunale Projekte. Mehrere Einheiten je Projekt, Lieferung aus einer Hand.",
+      "h1": "Tiny Houses für Betreiber und Kommunen",
+      "lead": "Ein Campingplatz braucht etwas anderes als eine Familie: mehrere gleiche Einheiten, einen Liefertermin, der in die Nebensaison fällt, eine Platzordnung, die das Haus einhalten muss, und eine Rechnung, die sich über Nächte und nicht über Jahre rechnet. Diese Seiten sind für diesen Blick geschrieben.",
+      "answer": "MODUNERA plant und liefert Tiny Houses für gewerbliche Betreiber in Deutschland und den Nachbarländern: Campingplätze und Glamping-Anbieter, Ferienparks, Hotels, Marinas, Tiny-House-Dörfer und kommunale Projekte. Mehrere Einheiten je Projekt werden als ein Vorhaben geplant — Modell, Route, Entladung und Reihenfolge gemeinsam. Der Standort und seine Regeln bleiben Sache des Betreibers und der Behörde; wir liefern die technischen Projektunterlagen dazu.",
+      "intro_h2": "Sechs Betreiberarten, sechs verschiedene Fragen",
+      "intro_p": [
+        "Wer ein Tiny House betreibt statt darin zu wohnen, stellt andere Fragen. Nicht „Wie viel Stauraum hat das Loft?“, sondern „Wie viele Nächte im Jahr?“, „Was sagt die Platzordnung?“, „Wie kommen zwölf Einheiten in einer Woche auf den Platz?“ und „Was kostet ein Ausfall in der Hauptsaison?“. Die Antworten unterscheiden sich je nach Betreiberart deutlich, deshalb gibt es für jede eine eigene Seite.",
+        "Allen gemeinsam ist der Rahmen, in dem wir arbeiten: acht Ausgangsmodelle auf 2,55 m Grundbreite, eine geschweißte Stahlkonstruktion, Möbel, die für die konkrete Nutzung gezeichnet werden, und eine Lieferung, die für das Projekt als Ganzes geplant wird. Preisindikationen ab Werk stehen auf den Modellseiten; verbindlich ist ausschließlich ein geprüftes Angebot nach technischer Klärung."
+      ],
+      "segments_h2": "Welche Art von Betrieb planen Sie?",
+      "why_h2": "Was für Betreiber anders geplant wird",
+      "why": [
+        ["Mehrere Einheiten als ein Projekt", "Route, Zufahrt, Entladereihenfolge und Aufstellung werden einmal geplant, nicht je Haus. Das entscheidet darüber, ob eine Lieferung in die Nebensaison passt."],
+        ["Grundriss für Gäste, nicht für Bewohner", "Ein Gästehaus braucht ein Bad, das schnell zu reinigen ist, ein Bett ohne Leiter und Stauraum für Koffer statt für ein Leben. Die Möbel werden dafür gezeichnet."],
+        ["Fassade und Ausstattung je Standort", "Küste, Alpen und Wald stellen verschiedene Anforderungen an Fassade, Verglasung und Heizung. Die Variante wird je Standort gewählt, nicht pauschal."],
+        ["Unterlagen für den Antrag", "Zeichnungen, technische Daten und Produktangaben für die Abstimmung mit der Behörde und dem Betreiber des Platzes gehören zum Projekt. Rechts- und Genehmigungsberatung ersetzen sie nicht."]
+      ],
+      "faq": [
+        ["Liefert MODUNERA auch mehrere Einheiten auf einmal?", "Ja. Mehrere Einheiten je Projekt werden gemeinsam geplant: Modell, Ausstattung, Transportroute, Zufahrt, Entladung und Reihenfolge der Aufstellung. Der Zeitplan wird mit dem Betreiber abgestimmt, in der Regel so, dass die Lieferung außerhalb der Hauptsaison liegt."],
+        ["Was muss ich als Betreiber vor der Bestellung klären?", "Die Nutzungsart des Grundstücks und die Platzordnung, die saisonalen Regeln, die Erschließung je Stellplatz (Strom, Wasser, Abwasser), die Zufahrt für einen Tieflader und die Anforderungen der zuständigen Behörde. Die Seite zu Ihrer Betreiberart listet die Punkte im Einzelnen."],
+        ["Gibt es Preise für größere Stückzahlen?", "Preisindikationen ab Werk stehen auf den Modellseiten und gelten je Einheit in Basisausstattung. Ob und wie sich ein Projekt mit mehreren Einheiten anders rechnet, hängt von Modell, Ausstattung, Route und Zeitplan ab und wird im Angebot ausgewiesen — nicht als Pauschale vorab."],
+        ["Kann ich ein Modell vor der Bestellung sehen?", "Fragen Sie nach einer Besichtigung oder nach aktuellen Fotos ausgeführter Einheiten. Die Modellbilder auf der Website sind Visualisierungen; wo Fotografien gebauter Einheiten vorliegen, zeigen wir sie."],
+        ["Ersetzt MODUNERA die Genehmigungsplanung?", "Nein. Wir liefern die technischen Projektunterlagen zum Haus. Ob und wie der Standort genutzt werden darf, klären Betreiber und Behörde; dafür empfehlen wir lokale Rechts- oder Planungsberatung."]
+      ]
+    },
+    "en": {
+      "title": "Tiny houses for operators: campsite, holiday park, hotel, marina, municipality | MODUNERA",
+      "description": "Tiny houses for commercial operators and municipalities: campsites and glamping, holiday parks, hotel extensions, marinas, tiny-house villages, municipal projects. Several units per project, delivered as one job.",
+      "h1": "Tiny houses for operators and municipalities",
+      "lead": "A campsite needs something different from a family: several identical units, a delivery date that falls in the off-season, site rules the house has to meet, and a calculation that works in nights rather than years. These pages are written for that view.",
+      "answer": "MODUNERA plans and delivers tiny houses for commercial operators in Germany and its neighbours: campsites and glamping sites, holiday parks, hotels, marinas, tiny-house villages and municipal projects. Several units per project are planned as one job — model, route, unloading and sequence together. The site and its rules remain the operator's and the authority's; we supply the technical project documents for it.",
+      "intro_h2": "Six kinds of operator, six different questions",
+      "intro_p": [
+        "Someone who runs a tiny house rather than living in it asks different questions. Not “how much storage is in the loft?” but “how many nights a year?”, “what do the site rules say?”, “how do twelve units get onto the site in one week?” and “what does a breakdown in high season cost?”. The answers differ sharply by operator type, so each gets its own page.",
+        "What they share is the frame we work in: eight base models on a 2.55 m base width, a welded steel structure, furniture drawn for the actual use, and a delivery planned for the project as a whole. Ex-works price indications are on the model pages; only a checked quotation after technical review is binding."
+      ],
+      "segments_h2": "What kind of operation are you planning?",
+      "why_h2": "What is planned differently for operators",
+      "why": [
+        ["Several units as one project", "Route, access, unloading sequence and placement are planned once, not per house. That decides whether a delivery fits into the off-season."],
+        ["A layout for guests, not residents", "A guest unit needs a bathroom that cleans quickly, a bed without a ladder and storage for suitcases rather than a life. The furniture is drawn for that."],
+        ["Facade and fit-out per site", "Coast, Alps and forest make different demands on facade, glazing and heating. The variant is chosen per site, not across the board."],
+        ["Documents for the application", "Drawings, technical data and product information for the discussion with the authority and the site operator are part of the project. They do not replace legal or planning advice."]
+      ],
+      "faq": [
+        ["Does MODUNERA deliver several units at once?", "Yes. Several units per project are planned together: model, specification, transport route, access, unloading and placement sequence. The schedule is agreed with the operator, usually so that delivery falls outside the high season."],
+        ["What do I need to clarify as an operator before ordering?", "The permitted use of the land and the site rules, seasonal restrictions, services at each pitch (power, water, wastewater), access for a low-loader and the requirements of the competent authority. The page for your operator type lists the points in detail."],
+        ["Are there prices for larger quantities?", "Ex-works price indications are on the model pages and apply per unit in base specification. Whether and how a multi-unit project is priced differently depends on model, specification, route and schedule and is shown in the quotation — not as a flat rate in advance."],
+        ["Can I see a model before ordering?", "Ask for a viewing or for current photographs of built units. The model images on the website are visualisations; where photographs of built units exist, we show them."],
+        ["Does MODUNERA replace the permit planning?", "No. We supply the technical project documents for the house. Whether and how the site may be used is for the operator and the authority to settle; we recommend local legal or planning advice for that."]
+      ]
+    }
+  },
+  "segments": [
+    {
+      "id": "camping",
+      "slug": { "de": "gewerblich/campingplatz-glamping", "en": "en/commercial/campsite-glamping" },
+      "photo": "unit-terrace-event",
+      "preset": { "de": "Campingplatz / Glamping", "en": "Campsite / glamping" },
+      "related": ["blog/tiny-house-glamping-leitfaden/", "blog/tiny-house-airbnb-glamping/", "ratgeber/nutzung-und-geschaeftsmodell/"],
+      "de": {
+        "menu": ["Campingplatz & Glamping", "Mietobjekte auf dem Platz"],
+        "card": "Mietobjekte, die in die Platzordnung passen und außerhalb der Saison geliefert werden.",
+        "title": "Tiny House für Campingplatz und Glamping: Mietobjekte für Betreiber | MODUNERA",
+        "description": "Tiny Houses als Mietobjekte für Campingplätze und Glamping-Anbieter: Platzordnung, Stellplatz-Erschließung, Saison, Lieferung mehrerer Einheiten und was vor der Bestellung zu klären ist.",
+        "h1": "Tiny House für Campingplatz und Glamping",
+        "lead": "Auf einem Campingplatz ist ein Tiny House kein Wohnhaus, sondern ein Mietobjekt mit einer Platznummer. Es muss in die Platzordnung passen, an die vorhandene Erschließung anschließen, in der Nebensaison geliefert werden und sich über Übernachtungen rechnen. Das ändert fast jede Entscheidung, vom Grundriss bis zur Fassade.",
+        "answer": "Für Campingplätze und Glamping-Betreiber plant MODUNERA Tiny Houses als Mietobjekte: Grundriss für wechselnde Gäste, Fassade und Verglasung je Standort, Anschlüsse auf die vorhandene Stellplatz-Erschließung ausgelegt, mehrere Einheiten je Projekt gemeinsam geliefert. Die Platzordnung, die saisonalen Regeln und die Anforderungen der Behörde klärt der Betreiber; wir liefern die Unterlagen zum Haus.",
+        "sections": [
+          { "h2": "Die Platzordnung entscheidet, bevor ein Modell gewählt wird", "p": [
+            "Jeder Campingplatz hat eine Platzordnung, und sie ist für ein Mietobjekt bindender als jede Modellbroschüre. Sie regelt typischerweise Abstände zwischen Objekten, zulässige Höhen, Fassadenfarben, ob eine Terrasse angebaut werden darf, wie entwässert wird und ob das Objekt im Winter stehen bleiben darf. Die Ordnung leitet sich aus der Campingplatzverordnung des jeweiligen Bundeslandes und aus der Genehmigung des Platzes ab, und sie unterscheidet sich von Platz zu Platz.",
+            "Deshalb beginnt ein Projekt bei uns mit dieser Ordnung, nicht mit einem Modell. Wer zuerst ein Modell wählt und dann feststellt, dass die Höhe oder der Abstand nicht passt, hat die Reihenfolge umgedreht. Wir fragen nach der Platzordnung, nach dem Lageplan der Stellplätze und nach dem, was die Behörde für den Platz genehmigt hat — und wählen dann das Modell, das hineinpasst."
+          ]},
+          { "h2": "Erschließung je Stellplatz: was vorhanden ist, bestimmt die Technik", "p": [
+            "Ein Stellplatz auf einem Campingplatz hat in der Regel einen Stromanschluss mit begrenzter Absicherung, oft einen Wasseranschluss und manchmal einen Abwasseranschluss. Die Leistung, die der Anschluss hergibt, entscheidet darüber, welche Heizung und welcher Warmwasserbereiter sinnvoll sind. Ein Haus, das für einen 32-Ampere-Hausanschluss geplant wurde, überfordert einen 16-Ampere-Stellplatz.",
+            "Wir legen Elektro, Wasser und Abwasser auf die Erschließung aus, die der Platz tatsächlich hat, und benennen vorab, was das für Heizung, Warmwasser und Kochfeld bedeutet. Wo kein Abwasseranschluss liegt, ist das eine Planungsfrage für den Betreiber, keine, die ein Haus allein lösen kann."
+          ]},
+          { "h2": "Grundriss für Gäste: anders als für Bewohner", "p": [
+            "Ein Mietobjekt wird jede Woche von anderen Menschen bewohnt und dazwischen gereinigt. Das verlangt ein Bad, das in wenigen Minuten sauber ist, ein Bett, das ohne Leiter erreichbar ist, Stauraum für Koffer statt für ein ganzes Leben, und Oberflächen, die Gäste nicht beschädigen. Ein Loft über einer Leiter ist für Bewohner reizvoll und für Gäste ab einem bestimmten Alter ein Ausschlusskriterium.",
+            "Die Möbel werden für diese Nutzung gezeichnet: Betten ebenerdig oder über einer festen Treppe, eine Küchenzeile, die für eine Woche reicht, ein Bad mit Duschkabine statt offener Dusche, Haken und Ablagen dort, wo Gäste sie suchen. Welche der acht Modelle für Gästebetrieb meistens infrage kommen, steht im Glamping-Leitfaden."
+          ]},
+          { "h2": "Lieferung außerhalb der Saison, mehrere Einheiten in einer Woche", "p": [
+            "Ein Campingplatz kann in der Hauptsaison keinen Tieflader auf dem Gelände gebrauchen. Die Lieferung mehrerer Einheiten wird deshalb als ein Vorhaben geplant: Route, Zufahrt zum Platz, Reihenfolge der Stellplätze, Kran oder Rangieren, Aufstellung und Ausrichtung auf den Stützen. Was in einer Woche im November erledigt wird, stört im Juli den Betrieb.",
+            "Der Weg aus der Fertigung nach Deutschland führt über die Straße und je nach Route über einen Ro-Ro- oder Fährabschnitt. Alle acht Modelle bleiben auf 2,55 m Grundbreite, damit der Transport ohne Sondergenehmigung für Überbreite möglich bleibt. Die letzte Zufahrt — Tore, Kurvenradien, Tragfähigkeit der Wege — prüfen wir mit dem Betreiber vor der Bestellung."
+          ]}
+        ],
+        "clarify_h2": "Vor der Anfrage klären",
+        "clarify": [
+          "Platzordnung und Lageplan der Stellplätze, auf denen die Einheiten stehen sollen",
+          "Was die Behörde für den Platz genehmigt hat: Objektgröße, Höhe, Winterstandzeit",
+          "Erschließung je Stellplatz: Absicherung des Stromanschlusses, Wasser, Abwasser",
+          "Saisonzeiten und das Zeitfenster, in dem geliefert werden kann",
+          "Zufahrt für einen Tieflader bis an den Stellplatz: Tore, Kurven, Untergrund",
+          "Gewünschte Einheitenzahl und ob alle gleich oder in zwei Varianten sein sollen"
+        ],
+        "faq": [
+          ["Darf ein Tiny House auf jedem Campingplatz aufgestellt werden?", "Das regeln die Campingplatzverordnung des Bundeslandes, die Genehmigung des Platzes und die Platzordnung des Betreibers. Ob ein Objekt dieser Größe auf einem bestimmten Stellplatz zulässig ist, klärt der Betreiber mit der zuständigen Behörde. Wir liefern die technischen Angaben zum Haus, die dafür gebraucht werden."],
+          ["Kann das Haus im Winter auf dem Platz bleiben?", "Das hängt von der Genehmigung des Platzes und der Platzordnung ab, nicht vom Haus. Technisch ist eine Einheit für Ganzjahresbetrieb ausgelegt, wenn Dämmung, Heizung und frostsichere Wasserführung dafür gewählt werden — das wird je Standort entschieden."],
+          ["Wie viele Einheiten können in einem Projekt geliefert werden?", "Das wird je Projekt geplant. Entscheidend sind Zufahrt, Entladung, Reihenfolge und das Zeitfenster außerhalb der Saison. Nennen Sie in der Anfrage die gewünschte Zahl; der Zeitplan ergibt sich aus Fertigung und Route."],
+          ["Was kostet ein Tiny House als Mietobjekt?", "Preisindikationen ab Werk stehen auf den Modellseiten. Für ein Mietobjekt kommen Lieferung, Aufstellung, Anschlüsse und die Ausstattung für Gästebetrieb dazu; was sich über Übernachtungen rechnet, hängt von Auslastung und Saison ab und steht im Glamping-Leitfaden."],
+          ["Werden Terrasse und Außenbereich mitgeliefert?", "Eine Terrasse kann Teil der Konstruktion sein oder vor Ort gebaut werden; was zulässig ist, steht in der Platzordnung. Wir planen den Außenraum mit, weil er bei Glamping-Objekten einen großen Teil des Erlebnisses ausmacht."]
+        ]
+      },
+      "en": {
+        "menu": ["Campsite & glamping", "Rental units on the pitch"],
+        "card": "Rental units that fit the site rules and arrive outside the season.",
+        "title": "Tiny house for campsites and glamping: rental units for operators | MODUNERA",
+        "description": "Tiny houses as rental units for campsites and glamping operators: site rules, pitch services, season, delivery of several units and what to clarify before ordering.",
+        "h1": "Tiny house for campsites and glamping",
+        "lead": "On a campsite a tiny house is not a home but a rental unit with a pitch number. It has to fit the site rules, connect to the services that exist, arrive in the off-season and pay for itself in nights. That changes almost every decision, from layout to facade.",
+        "answer": "For campsites and glamping operators MODUNERA plans tiny houses as rental units: a layout for changing guests, facade and glazing per site, connections designed for the pitch services that exist, several units per project delivered together. Site rules, seasonal restrictions and the authority's requirements are clarified by the operator; we supply the documents for the house.",
+        "sections": [
+          { "h2": "The site rules decide before a model is chosen", "p": [
+            "Every campsite has site rules, and for a rental unit they are more binding than any model brochure. They typically govern distances between units, permitted heights, facade colours, whether a terrace may be added, how drainage works and whether the unit may stay over winter. The rules derive from the campsite ordinance of the Land and from the site's own permit, and they differ from site to site.",
+            "So a project with us starts with those rules, not with a model. Choosing a model first and then finding the height or the spacing does not fit is doing it in the wrong order. We ask for the site rules, the pitch plan and what the authority has approved for the site — and then pick the model that fits."
+          ]},
+          { "h2": "Pitch services: what exists determines the technology", "p": [
+            "A campsite pitch usually has a power connection with a limited fuse rating, often a water connection and sometimes a wastewater connection. The power the connection can supply decides which heating and which water heater make sense. A house planned for a 32-amp domestic supply overloads a 16-amp pitch.",
+            "We design electrics, water and wastewater for the services the site actually has, and say in advance what that means for heating, hot water and the hob. Where there is no wastewater connection, that is a planning question for the operator, not one a house can solve on its own."
+          ]},
+          { "h2": "A layout for guests: different from one for residents", "p": [
+            "A rental unit is lived in by different people every week and cleaned in between. That calls for a bathroom that is clean in minutes, a bed reachable without a ladder, storage for suitcases rather than a whole life, and surfaces guests do not damage. A loft up a ladder is appealing for residents and, past a certain age, a deal-breaker for guests.",
+            "The furniture is drawn for that use: beds at floor level or over a fixed stair, a kitchenette that lasts a week, a bathroom with a shower enclosure rather than an open shower, hooks and shelves where guests look for them. Which of the eight models are usually suited to guest operation is in the glamping guide."
+          ]},
+          { "h2": "Delivery outside the season, several units in a week", "p": [
+            "A campsite cannot use a low-loader on the grounds in high season. Delivery of several units is therefore planned as one job: route, access to the site, pitch sequence, crane or manoeuvring, placement and levelling on the supports. What is done in a week in November disrupts operations in July.",
+            "The way from production to Germany is by road and, depending on the route, in part by Ro-Ro or ferry. All eight models stay on a 2.55 m base width so transport remains possible without an oversize permit. The final access — gates, turning radii, load-bearing of the tracks — we check with the operator before ordering."
+          ]}
+        ],
+        "clarify_h2": "Clarify before enquiring",
+        "clarify": [
+          "Site rules and the pitch plan for the pitches the units will stand on",
+          "What the authority has approved for the site: unit size, height, winter standing",
+          "Services per pitch: fuse rating of the power connection, water, wastewater",
+          "Season dates and the window in which delivery is possible",
+          "Low-loader access right up to the pitch: gates, bends, ground",
+          "Number of units wanted and whether all identical or in two variants"
+        ],
+        "faq": [
+          ["Can a tiny house be placed on any campsite?", "That is governed by the Land's campsite ordinance, the site's permit and the operator's site rules. Whether a unit of this size is permitted on a given pitch is for the operator to settle with the competent authority. We supply the technical information on the house needed for that."],
+          ["Can the house stay on the site over winter?", "That depends on the site's permit and the site rules, not on the house. Technically a unit is designed for year-round operation when insulation, heating and frost-proof water routing are chosen for it — decided per site."],
+          ["How many units can be delivered in one project?", "That is planned per project. Access, unloading, sequence and the off-season window are decisive. State the number wanted in the enquiry; the schedule follows from production and route."],
+          ["What does a tiny house cost as a rental unit?", "Ex-works price indications are on the model pages. For a rental unit, delivery, placement, connections and the guest fit-out come on top; what pays back in nights depends on occupancy and season and is covered in the glamping guide."],
+          ["Are the terrace and outdoor area included?", "A terrace can be part of the structure or built on site; what is permitted is in the site rules. We plan the outdoor space along with the unit because it is a large part of the experience in glamping."]
+        ]
+      }
+    },
+    {
+      "id": "ferienpark",
+      "slug": { "de": "gewerblich/ferienpark-resort", "en": "en/commercial/holiday-park-resort" },
+      "photo": "unit-exhibition-terrace",
+      "preset": { "de": "Ferienpark / Resort", "en": "Holiday park / resort" },
+      "related": ["blog/tiny-house-ferienpark-leitfaden/", "ratgeber/nutzung-und-geschaeftsmodell/", "modellvergleich/"],
+      "de": {
+        "menu": ["Ferienpark & Resort", "Einheiten in Serie"],
+        "card": "Gleiche Einheiten in Serie, auf Betreiberregeln und Nebenkosten gerechnet.",
+        "title": "Tiny House für Ferienpark und Resort: Einheiten in Serie | MODUNERA",
+        "description": "Tiny Houses für Ferienparks und Resorts: gleiche Einheiten in Serie, Betreiberregeln als Teil der Kalkulation, standardisierte Zufahrt und Entladung, Reinigung und Instandhaltung im Betrieb.",
+        "h1": "Tiny House für Ferienpark und Resort",
+        "lead": "Ein Ferienpark kauft kein Haus, sondern eine Serie. Zwölf gleiche Einheiten, die am selben Tag gereinigt, mit denselben Ersatzteilen repariert und nach denselben Regeln vermietet werden. Was bei einem Haus eine Vorliebe ist, wird bei zwölf zur Betriebskostenfrage.",
+        "answer": "Für Ferienparks und Resorts plant MODUNERA Tiny Houses als Serie gleicher oder in wenigen Varianten abgestufter Einheiten: ein Grundriss, der sich schnell reinigen lässt, Materialien, die Gästebetrieb aushalten, Anschlüsse auf die Parkinfrastruktur ausgelegt, und eine Lieferung, die in das Betriebsjahr des Parks passt. Betreiberregeln, Nebenkosten und die Genehmigung des Parks bleiben Sache des Betreibers.",
+        "sections": [
+          { "h2": "Warum Serie etwas anderes ist als zwölf Einzelbestellungen", "p": [
+            "Ein Park, der zwölf Einheiten betreibt, braucht sie gleich — nicht aus Gestaltungsgründen, sondern weil Reinigung, Wartung, Ersatzteile und Buchungssystem auf Gleichheit beruhen. Ein Wasserhahn, der in elf Häusern gleich und im zwölften anders ist, kostet im Betrieb mehr als er beim Kauf gespart hat.",
+            "Deshalb wird ein Serienprojekt bei uns einmal gezeichnet und dann gebaut: ein Grundriss, eine Ausstattungsliste, eine Fassadenvariante, gegebenenfalls eine zweite Variante für Familien. Änderungen werden vor der Serie entschieden, nicht während ihr. Das ist der Unterschied zwischen einem Park und zwölf Privatkunden."
+          ]},
+          { "h2": "Betreiberregeln und Nebenkosten sind Teil der Kalkulation", "p": [
+            "Viele Ferienparks vermieten Stellplätze an Investoren und betreiben die Einheiten selbst. Dann gelten Betreiberregeln: welche Objekte zugelassen sind, wie sie aussehen dürfen, welche Nebenkosten anfallen und wie sie indexiert werden. Diese Regeln stehen vor dem Kauf fest und gehören in die Rechnung, bevor ein Modell gewählt wird.",
+            "Wir fragen nach diesen Regeln und planen das Haus dagegen: zulässige Maße, Fassade, Terrasse, Anschlusspunkte. Der Ferienpark-Leitfaden geht die Kostenseite im Einzelnen durch — Saison, Nebenkosten, Instandhaltung und was davon über die Rendite entscheidet."
+          ]},
+          { "h2": "Standardisierte Zufahrt, standardisierte Entladung", "p": [
+            "In einem Park mit festen Wegen und festen Stellplätzen wiederholt sich die Aufstellung. Das ist ein Vorteil, wenn die erste Einheit sorgfältig geplant wurde: Zufahrt, Kran- oder Rangierposition, Ausrichtung auf den Stützen, Anschlusspunkte — einmal festgelegt, elfmal wiederholt.",
+            "Die Lieferung wird so geplant, dass sie in die Schließzeit oder in die Nebensaison des Parks fällt. Der Weg aus der Fertigung führt über die Straße, je nach Route mit einem Ro-Ro- oder Fährabschnitt; die 2,55 m Grundbreite aller Modelle hält den Transport ohne Überbreite möglich."
+          ]},
+          { "h2": "Materialien, die Gästebetrieb aushalten", "p": [
+            "Eine Einheit, die zwanzig Wochen im Jahr von wechselnden Gästen bewohnt wird, altert anders als ein Wohnhaus. Türen werden öfter geschlagen, Böden öfter nass gewischt, Küchen von Menschen benutzt, die sie nicht kennen. Die Materialwahl folgt dem: Arbeitsplatten aus massivem Paneel statt beschichteter Spanplatte, lackierte Fronten, Böden mit hoher Nutzungsklasse.",
+            "Die zwölf Komponenten, aus denen eine Einheit gebaut wird — Stahlkonstruktion, Fahrgestell, Fassade, Fenster, Elektrik, Küche — stehen auf der Qualitätsseite mit ihrer Begründung. Für einen Park zählt davon vor allem, was sich im Betrieb bewährt und was sich austauschen lässt."
+          ]}
+        ],
+        "clarify_h2": "Vor der Anfrage klären",
+        "clarify": [
+          "Betreiberregeln des Parks: zugelassene Objekte, Maße, Fassade, Terrasse",
+          "Nebenkosten je Stellplatz und ihre Indexierung",
+          "Ob die Einheiten vom Park oder von Investoren betrieben werden",
+          "Infrastruktur je Stellplatz und die Anschlusspunkte",
+          "Schließzeit oder Nebensaison als Lieferfenster",
+          "Gewünschte Zahl der Einheiten und die Zahl der Varianten"
+        ],
+        "faq": [
+          ["Können alle Einheiten exakt gleich gebaut werden?", "Ja, das ist bei einem Serienprojekt der Normalfall. Grundriss, Ausstattung und Fassade werden einmal festgelegt und dann wiederholt. Eine zweite Variante — etwa mit zusätzlichem Raum für Familien — wird vor der Serie entschieden."],
+          ["Wie lange dauert die Lieferung einer Serie?", "Das hängt von der Zahl der Einheiten, der Fertigung und der Route ab und wird im Angebot terminiert. Geplant wird so, dass die Aufstellung in die Schließzeit oder Nebensaison fällt."],
+          ["Wer kümmert sich um Reinigung und Instandhaltung?", "Der Betreiber. Wir planen die Einheit so, dass beides schnell geht — und liefern die Unterlagen, mit denen Ersatzteile identifiziert werden können. Einen Betriebs- oder Wartungsdienst vor Ort bieten wir nicht an."],
+          ["Was ist, wenn der Park Investoren-Stellplätze vermietet?", "Dann gelten die Betreiberregeln des Parks für das Objekt, und die Nebenkosten gehören in die Rechnung des Investors. Beides klären Sie mit dem Park, bevor Sie bestellen; wir planen das Haus gegen diese Regeln."],
+          ["Gibt es einen Serienpreis?", "Preisindikationen ab Werk gelten je Einheit und stehen auf den Modellseiten. Wie sich ein Serienprojekt rechnet, hängt von Zahl, Ausstattung, Route und Zeitplan ab und wird im Angebot ausgewiesen — nicht als Pauschale vorab."]
+        ]
+      },
+      "en": {
+        "menu": ["Holiday park & resort", "Units in series"],
+        "card": "Identical units in series, calculated against operator rules and running costs.",
+        "title": "Tiny house for holiday parks and resorts: units in series | MODUNERA",
+        "description": "Tiny houses for holiday parks and resorts: identical units in series, operator rules as part of the calculation, standardised access and unloading, cleaning and maintenance in operation.",
+        "h1": "Tiny house for holiday parks and resorts",
+        "lead": "A holiday park does not buy a house, it buys a series. Twelve identical units cleaned on the same day, repaired with the same spare parts and let under the same rules. What is a preference with one house becomes an operating-cost question with twelve.",
+        "answer": "For holiday parks and resorts MODUNERA plans tiny houses as a series of identical units, or units graded in a few variants: a layout that cleans quickly, materials that stand up to guest use, connections designed for the park's infrastructure, and a delivery that fits the park's operating year. Operator rules, running costs and the park's permit remain the operator's.",
+        "sections": [
+          { "h2": "Why a series is different from twelve single orders", "p": [
+            "A park running twelve units needs them identical — not for design reasons, but because cleaning, maintenance, spare parts and the booking system rely on sameness. A tap that is the same in eleven houses and different in the twelfth costs more in operation than it saved at purchase.",
+            "So a series project with us is drawn once and then built: one layout, one specification list, one facade variant, possibly a second variant for families. Changes are decided before the series, not during it. That is the difference between a park and twelve private customers."
+          ]},
+          { "h2": "Operator rules and running costs are part of the calculation", "p": [
+            "Many holiday parks let pitches to investors and operate the units themselves. Then operator rules apply: which units are admitted, what they may look like, which running costs arise and how they are indexed. Those rules are fixed before the purchase and belong in the calculation before a model is chosen.",
+            "We ask for these rules and plan the house against them: permitted dimensions, facade, terrace, connection points. The holiday-park guide goes through the cost side in detail — season, running costs, maintenance and which of them decide the return."
+          ]},
+          { "h2": "Standardised access, standardised unloading", "p": [
+            "In a park with fixed roads and fixed pitches the placement repeats. That is an advantage if the first unit was planned carefully: access, crane or manoeuvring position, levelling on the supports, connection points — set once, repeated eleven times.",
+            "Delivery is planned to fall in the park's closure or off-season. The way from production is by road, with a Ro-Ro or ferry leg depending on the route; the 2.55 m base width of all models keeps transport possible without oversize."
+          ]},
+          { "h2": "Materials that stand up to guest use", "p": [
+            "A unit lived in by changing guests twenty weeks a year ages differently from a home. Doors are slammed more often, floors mopped more often, kitchens used by people who do not know them. The choice of materials follows: worktops of solid panel rather than coated chipboard, lacquered fronts, floors of a high use class.",
+            "The twelve components a unit is built from — steel structure, chassis, facade, windows, electrics, kitchen — are on the quality page with their reasoning. For a park what matters most is what proves itself in operation and what can be replaced."
+          ]}
+        ],
+        "clarify_h2": "Clarify before enquiring",
+        "clarify": [
+          "The park's operator rules: admitted units, dimensions, facade, terrace",
+          "Running costs per pitch and how they are indexed",
+          "Whether the units are operated by the park or by investors",
+          "Infrastructure per pitch and the connection points",
+          "Closure or off-season as the delivery window",
+          "Number of units wanted and the number of variants"
+        ],
+        "faq": [
+          ["Can all units be built exactly alike?", "Yes, that is the normal case in a series project. Layout, specification and facade are fixed once and then repeated. A second variant — say with an extra room for families — is decided before the series."],
+          ["How long does delivery of a series take?", "That depends on the number of units, production and the route, and is scheduled in the quotation. It is planned so that placement falls in the closure or off-season."],
+          ["Who handles cleaning and maintenance?", "The operator. We plan the unit so both are quick — and supply the documents with which spare parts can be identified. We do not offer an on-site operating or maintenance service."],
+          ["What if the park lets investor pitches?", "Then the park's operator rules apply to the unit, and the running costs belong in the investor's calculation. Both are clarified with the park before ordering; we plan the house against those rules."],
+          ["Is there a series price?", "Ex-works price indications apply per unit and are on the model pages. How a series project is priced depends on number, specification, route and schedule and is shown in the quotation — not as a flat rate in advance."]
+        ]
+      }
+    },
+    {
+      "id": "hotel",
+      "slug": { "de": "gewerblich/hotel-naturhotel", "en": "en/commercial/hotel-nature-hotel" },
+      "photo": "aframe-night",
+      "preset": { "de": "Hotel / Naturhotel", "en": "Hotel / nature hotel" },
+      "related": ["blog/tiny-house-gaestehaus-leitfaden/", "blog/tiny-house-airbnb-glamping/", "qualitaet/"],
+      "de": {
+        "menu": ["Hotel & Naturhotel", "Zimmer außerhalb des Hauses"],
+        "card": "Zusätzliche Zimmer im Außenbereich, die zum Haus passen und zur Saison geliefert werden.",
+        "title": "Tiny House für Hotels und Naturhotels: Zimmer im Außenbereich | MODUNERA",
+        "description": "Tiny Houses als zusätzliche Zimmer für Hotels und Naturhotels: Kategorie und Preis pro Nacht, Anbindung an Housekeeping und Technik, Gestaltung im Einklang mit dem Haupthaus, Lieferung außerhalb der Saison.",
+        "h1": "Tiny House für Hotels und Naturhotels",
+        "lead": "Für ein Hotel ist ein Tiny House im Garten ein Zimmer einer neuen Kategorie — mit eigenem Preis pro Nacht, eigener Geschichte und denselben Erwartungen an Bad, Bett und Service wie das Haupthaus. Es muss zum Haus passen, vom Housekeeping erreicht werden und sich ohne Baustelle in die Saison fügen.",
+        "answer": "Für Hotels und Naturhotels plant MODUNERA Tiny Houses als zusätzliche Zimmer im Außenbereich: Grundriss und Ausstattung auf dem Niveau der Hauskategorie, Fassade und Materialien im Einklang mit dem Haupthaus, Anschlüsse an die Haustechnik, Wege für Housekeeping und Gäste mitgedacht, Lieferung außerhalb der Saison. Ob und wie das Grundstück dafür genutzt werden darf, klärt das Hotel mit der Behörde.",
+        "sections": [
+          { "h2": "Eine neue Zimmerkategorie, nicht ein Nebengebäude", "p": [
+            "Hotels, die Tiny Houses aufstellen, tun es selten aus Platzmangel. Sie tun es, weil ein freistehendes Zimmer mit Terrasse und Blick in die Landschaft eine Kategorie ist, die das Haupthaus nicht anbieten kann — und die Gäste anders bezahlen. Der Preis pro Nacht richtet sich nach dem Erlebnis, und das Erlebnis beginnt damit, dass das Haus zum Hotel gehört und nicht wie ein Fremdkörper daneben steht.",
+            "Deshalb beginnt die Planung bei der Kategorie: Welche Ausstattung erwartet ein Gast, der für dieses Zimmer mehr bezahlt als für ein Doppelzimmer? Bad, Bett, Licht, Außenraum, Ruhe — und wie das Haus von außen zum Haupthaus spricht. Fassade und Materialien werden dafür gewählt, nicht aus dem Katalog."
+          ]},
+          { "h2": "Housekeeping, Technik und Wege", "p": [
+            "Ein Zimmer außerhalb des Hauses muss vom Housekeeping in derselben Zeit zu reinigen sein wie eines im Haus, oder es rechnet sich nicht. Das bestimmt den Grundriss: Bad und Bett erreichbar ohne Leiter, Oberflächen, die schnell sauber sind, Wäsche und Reinigungsmaterial auf kurzem Weg. Und es bestimmt die Lage: Weg vom Haupthaus, Beleuchtung, Winterdienst.",
+            "Die Technik wird an das Hotel angeschlossen — Strom, Wasser, Abwasser, gegebenenfalls Netzwerk und Schließsystem. Was das Hotel hergibt, legt fest, was im Haus sinnvoll ist. Wir planen die Anschlusspunkte mit dem Haustechniker, bevor das Haus gebaut wird."
+          ]},
+          { "h2": "Gestaltung im Einklang mit dem Haupthaus", "p": [
+            "Ein Naturhotel im Schwarzwald, ein Seehotel an der Ostsee und ein Berghotel in den Alpen stellen verschiedene Anforderungen an das, was im Garten stehen darf. Die acht Modelle unterscheiden sich im Grundriss; Fassade, Dachform und Farben werden je Standort gewählt — Thermowood, Verbundplatte oder Stehfalz, hell oder dunkel, mit oder ohne Terrasse.",
+            "Wo das Hotel eine Gestaltungssatzung oder Auflagen aus dem Denkmalschutz hat, gehören sie vor der Planung auf den Tisch. Die Modellbilder auf der Website sind Visualisierungen; für die Abstimmung mit dem Haus zeigen wir Fotografien gebauter Einheiten und Materialmuster."
+          ]},
+          { "h2": "Lieferung ohne Baustelle in der Saison", "p": [
+            "Ein Hotel kann keinen Tieflader und keinen Kran im Garten gebrauchen, während Gäste frühstücken. Die Lieferung wird deshalb auf die Schließzeit oder auf ruhige Wochen gelegt und als ein Tag geplant: Zufahrt, Kranposition, Aufstellung, Anschluss. Das Haus kommt fertig ausgebaut; vor Ort bleiben Anschlüsse, Ausrichtung und der Außenraum.",
+            "Der Weg aus der Fertigung führt über die Straße, je nach Ziel mit einem Ro-Ro- oder Fährabschnitt. Die letzte Zufahrt — Einfahrt, Kurven, Tragfähigkeit, Bäume — prüfen wir mit dem Hotel vor der Bestellung."
+          ]}
+        ],
+        "clarify_h2": "Vor der Anfrage klären",
+        "clarify": [
+          "Zimmerkategorie und Zielpreis pro Nacht, an denen sich die Ausstattung orientiert",
+          "Was die Behörde für das Grundstück zulässt; Gestaltungssatzung oder Denkmalschutz",
+          "Anschlusspunkte an die Haustechnik: Strom, Wasser, Abwasser, Netzwerk, Schließsystem",
+          "Wege für Housekeeping und Gäste, Beleuchtung, Winterdienst",
+          "Schließzeit oder ruhige Wochen als Lieferfenster",
+          "Zahl der Einheiten und ob eine zweite Variante gewünscht ist"
+        ],
+        "faq": [
+          ["Passt ein Tiny House zu einem gehobenen Hotel?", "Das entscheidet die Ausstattung, nicht die Größe. Bad, Bett, Licht, Materialien und Außenraum werden für die Kategorie geplant, in der das Zimmer verkauft werden soll. Ein freistehendes Zimmer mit Terrasse und Blick ist in vielen Häusern die teuerste Kategorie."],
+          ["Brauche ich eine Baugenehmigung für ein Tiny House im Hotelgarten?", "Das richtet sich nach Landesbauordnung, Bebauungsplan und der Nutzung des Grundstücks und ist mit der zuständigen Behörde zu klären. Wir liefern die technischen Unterlagen zum Haus, die dafür gebraucht werden; die Genehmigungsplanung ersetzen wir nicht."],
+          ["Kann das Haus an das Schließsystem und das Netzwerk des Hotels angeschlossen werden?", "Die Infrastruktur dafür — Leerrohre, Stromversorgung, Montagepunkte — wird im Rohbau vorgesehen, wenn das Hotel sie wünscht. Welches System eingesetzt wird, entscheidet das Hotel; wir stimmen die Anschlusspunkte mit dem Haustechniker ab."],
+          ["Wie lange ist das Haus im Garten eine Baustelle?", "Das Haus kommt fertig ausgebaut. Vor Ort bleiben Aufstellung, Ausrichtung, Anschlüsse und der Außenraum — geplant als ein Tag für die Aufstellung, die weiteren Arbeiten nach Umfang des Außenraums."],
+          ["Gibt es Fotografien gebauter Einheiten?", "Ja. Die Modellbilder auf der Website sind Visualisierungen; für die Abstimmung mit dem Haus zeigen wir Fotografien ausgeführter Einheiten und Materialmuster. Fragen Sie danach in der Anfrage."]
+        ]
+      },
+      "en": {
+        "menu": ["Hotel & nature hotel", "Rooms outside the house"],
+        "card": "Extra rooms in the grounds that match the house and arrive outside the season.",
+        "title": "Tiny house for hotels and nature hotels: rooms in the grounds | MODUNERA",
+        "description": "Tiny houses as extra rooms for hotels and nature hotels: category and rate per night, connection to housekeeping and services, design in keeping with the main house, delivery outside the season.",
+        "h1": "Tiny house for hotels and nature hotels",
+        "lead": "For a hotel a tiny house in the garden is a room in a new category — with its own rate per night, its own story and the same expectations of bathroom, bed and service as the main house. It has to match the house, be reachable by housekeeping and fit into the season without a building site.",
+        "answer": "For hotels and nature hotels MODUNERA plans tiny houses as extra rooms in the grounds: layout and fit-out at the level of the house's category, facade and materials in keeping with the main house, connections to the building services, routes for housekeeping and guests considered, delivery outside the season. Whether and how the grounds may be used for it is for the hotel to settle with the authority.",
+        "sections": [
+          { "h2": "A new room category, not an outbuilding", "p": [
+            "Hotels that place tiny houses rarely do so for lack of space. They do it because a free-standing room with a terrace and a view of the landscape is a category the main house cannot offer — and one guests pay for differently. The rate per night follows the experience, and the experience starts with the house belonging to the hotel rather than standing beside it like a stranger.",
+            "So planning starts with the category: what fit-out does a guest expect who pays more for this room than for a double? Bathroom, bed, light, outdoor space, quiet — and how the house speaks to the main house from outside. Facade and materials are chosen for that, not from a catalogue."
+          ]},
+          { "h2": "Housekeeping, services and routes", "p": [
+            "A room outside the house has to be cleaned by housekeeping in the same time as one inside, or it does not pay. That sets the layout: bathroom and bed reachable without a ladder, surfaces that clean quickly, linen and cleaning material within a short walk. And it sets the position: path from the main house, lighting, winter service.",
+            "The services are connected to the hotel — power, water, wastewater, possibly network and locking system. What the hotel can supply determines what makes sense in the house. We plan the connection points with the building engineer before the house is built."
+          ]},
+          { "h2": "Design in keeping with the main house", "p": [
+            "A nature hotel in the Black Forest, a lakeside hotel on the Baltic and a mountain hotel in the Alps make different demands on what may stand in the garden. The eight models differ in layout; facade, roof form and colours are chosen per site — Thermowood, composite panel or standing seam, light or dark, with or without a terrace.",
+            "Where the hotel has a design statute or heritage conditions, they go on the table before planning. The model images on the website are visualisations; for coordination with the house we show photographs of built units and material samples."
+          ]},
+          { "h2": "Delivery without a building site in season", "p": [
+            "A hotel cannot have a low-loader and a crane in the garden while guests are at breakfast. Delivery is therefore set for the closure or for quiet weeks and planned as one day: access, crane position, placement, connection. The house arrives fully fitted out; what remains on site is connections, levelling and the outdoor space.",
+            "The way from production is by road, with a Ro-Ro or ferry leg depending on the destination. The final access — drive, bends, load-bearing, trees — we check with the hotel before ordering."
+          ]}
+        ],
+        "clarify_h2": "Clarify before enquiring",
+        "clarify": [
+          "Room category and target rate per night that the fit-out is aimed at",
+          "What the authority permits on the grounds; design statute or heritage conditions",
+          "Connection points to building services: power, water, wastewater, network, locking",
+          "Routes for housekeeping and guests, lighting, winter service",
+          "Closure or quiet weeks as the delivery window",
+          "Number of units and whether a second variant is wanted"
+        ],
+        "faq": [
+          ["Does a tiny house suit an upmarket hotel?", "The fit-out decides that, not the size. Bathroom, bed, light, materials and outdoor space are planned for the category the room is to be sold in. A free-standing room with terrace and view is the most expensive category in many houses."],
+          ["Do I need a building permit for a tiny house in the hotel garden?", "That follows the Land building code, the development plan and the use of the land, and is to be settled with the competent authority. We supply the technical documents on the house needed for that; we do not replace the permit planning."],
+          ["Can the house be connected to the hotel's locking system and network?", "The infrastructure for it — conduits, power supply, mounting points — is provided in the shell if the hotel wants it. Which system is used is the hotel's decision; we coordinate the connection points with the building engineer."],
+          ["How long is the house a building site in the garden?", "The house arrives fully fitted out. What remains on site is placement, levelling, connections and the outdoor space — planned as one day for placement, further work according to the scope of the outdoor space."],
+          ["Are there photographs of built units?", "Yes. The model images on the website are visualisations; for coordination with the house we show photographs of built units and material samples. Ask for them in the enquiry."]
+        ]
+      }
+    },
+    {
+      "id": "marina",
+      "slug": { "de": "gewerblich/marina-kueste", "en": "en/commercial/marina-coast" },
+      "photo": "unit-porch-sand",
+      "preset": { "de": "Marina / Küste", "en": "Marina / coast" },
+      "related": ["blog/tiny-house-vier-jahreszeiten/", "qualitaet/", "standorte/mecklenburg-vorpommern/"],
+      "de": {
+        "menu": ["Marina & Küste", "Übernachten am Wasser"],
+        "card": "Übernachtungseinheiten am Wasser, für Salz, Wind und Feuchte ausgelegt.",
+        "title": "Tiny House für Marina und Küste: Übernachten am Wasser | MODUNERA",
+        "description": "Tiny Houses als Übernachtungseinheiten für Marinas, Yachthäfen und Küstenbetriebe: Fassade und Beschläge für Salzluft, Wind und Feuchte, Anschluss an die Hafeninfrastruktur, Lieferung außerhalb der Saison.",
+        "h1": "Tiny House für Marina und Küste",
+        "lead": "Ein Yachthafen hat Gäste, die abends nicht an Bord schlafen wollen, und Flächen am Wasser, die außerhalb der Saison leer stehen. Ein Tiny House an der Kaimauer ist dafür eine Übernachtungseinheit — aber eine, die Salzluft, Wind und Feuchte aushalten muss, jeden Tag.",
+        "answer": "Für Marinas, Yachthäfen und Küstenbetriebe plant MODUNERA Tiny Houses als Übernachtungseinheiten am Wasser: Fassade, Beschläge und Verglasung für Salzluft, Wind und Feuchte gewählt, Anschlüsse auf die Hafeninfrastruktur ausgelegt, Lieferung außerhalb der Saison. Was auf der Hafenfläche aufgestellt werden darf, klärt der Betreiber mit der Behörde und dem Eigentümer der Fläche.",
+        "sections": [
+          { "h2": "Salz, Wind und Feuchte entscheiden über Material und Beschläge", "p": [
+            "Eine Einheit fünfzig Meter vom Wasser altert schneller als eine im Binnenland, wenn sie dafür nicht gewählt wurde. Salzluft greift Metall an, Wind drückt Regen in jede Fuge, und Feuchte sucht sich die kälteste Ecke. Das ist keine Frage der Pflege, sondern der Auswahl: welche Fassade, welche Beschläge, welche Verglasung, welche Entwässerung.",
+            "Für Küstenstandorte wählen wir die Fassadenvariante und die Beschläge entsprechend und lüften und entwässern die Konstruktion so, dass Feuchte nicht stehen bleibt. Welche Verglasung eingebaut wird, entscheidet das Klima am Standort — an der Nordsee ist die Anforderung eine andere als im Wallis, und das steht so auf der Qualitätsseite."
+          ]},
+          { "h2": "Hafeninfrastruktur: Strom, Wasser und die Frage des Abwassers", "p": [
+            "Ein Hafen hat Stromsäulen und Wasserentnahme für Boote, selten aber einen Abwasseranschluss an jeder Fläche. Was vorhanden ist, bestimmt, welche Technik im Haus sinnvoll ist: Absicherung des Stromanschlusses, Warmwasserbereitung, ob eine Küche mit Kochfeld oder nur eine Teeküche gewünscht ist.",
+            "Wir legen Elektro, Wasser und Abwasser auf die Infrastruktur aus, die der Hafen hat, und benennen vorab, was das bedeutet. Wo kein Abwasseranschluss liegt, ist das eine Planungsfrage für den Betreiber, nicht eine, die ein Haus allein löst."
+          ]},
+          { "h2": "Was auf der Hafenfläche stehen darf", "p": [
+            "Hafenflächen sind oft Sondergebiete, Teil eines Bebauungsplans oder im Eigentum eines Landes, einer Kommune oder eines Verbandes. Ob dort eine Übernachtungseinheit aufgestellt werden darf, für welche Dauer und in welcher Größe, ist eine Frage an die Behörde und an den Eigentümer der Fläche — nicht an den Hersteller.",
+            "Wir liefern die technischen Angaben zum Haus, die für diese Klärung gebraucht werden: Maße, Gewicht, Aufstellung auf Stützen ohne Fundament, Anschlussbedarf. Die Rechts- und Genehmigungsberatung ersetzen wir nicht."
+          ]},
+          { "h2": "Lieferung über die Straße, auch wenn das Ziel am Wasser liegt", "p": [
+            "Eine Einheit für einen Hafen kommt über die Straße, nicht über das Wasser — auch wenn der Weg aus der Fertigung je nach Route einen Ro-Ro- oder Fährabschnitt enthält. Die 2,55 m Grundbreite aller Modelle hält den Transport ohne Überbreite möglich. Die letzte Zufahrt zum Hafengelände, die Tragfähigkeit der Kaiflächen und die Kranposition prüfen wir mit dem Betreiber vor der Bestellung.",
+            "Geliefert wird außerhalb der Saison, wenn die Stege leer sind und ein Tieflader auf dem Gelände niemanden stört."
+          ]}
+        ],
+        "clarify_h2": "Vor der Anfrage klären",
+        "clarify": [
+          "Wer Eigentümer der Hafenfläche ist und was dort aufgestellt werden darf",
+          "Was die Behörde für die Fläche zulässt: Dauer, Größe, Zahl der Einheiten",
+          "Vorhandene Infrastruktur: Stromsäulen und ihre Absicherung, Wasser, Abwasser",
+          "Lage zum Wasser, Windrichtung, Hochwasser- oder Sturmflutlage",
+          "Zufahrt für einen Tieflader und Tragfähigkeit der Kaiflächen",
+          "Saisonzeiten und das Lieferfenster"
+        ],
+        "faq": [
+          ["Hält ein Tiny House Salzluft und Sturm aus?", "Wenn Fassade, Beschläge, Verglasung und Entwässerung dafür gewählt werden, ja. Das wird je Standort entschieden, nicht pauschal. Welche Komponenten das betrifft, steht mit ihrer Begründung auf der Qualitätsseite."],
+          ["Darf auf einer Hafenfläche ein Tiny House stehen?", "Das klären Betreiber, Eigentümer der Fläche und Behörde. Hafenflächen sind oft Sondergebiete; Dauer, Größe und Zahl der Einheiten hängen von der Genehmigung ab. Wir liefern die technischen Angaben zum Haus für diese Klärung."],
+          ["Braucht das Haus ein Fundament?", "Nein. Die Einheit steht auf vier Stützen, die nach dem Abstellen ausgerichtet werden; Untergrund und Lastverteilung gehören zur Planung am Standort. Das ist auf einer Hafenfläche oft der Grund, warum eine Aufstellung ohne Baustelle möglich ist."],
+          ["Was ist bei Hochwasser oder Sturmflut?", "Das ist eine Frage des Standorts und seiner Lage, nicht des Hauses. Ob eine Fläche in einem Überschwemmungs- oder Sturmflutgebiet liegt und was dort zulässig ist, klärt der Betreiber mit der Behörde, bevor ein Modell gewählt wird."],
+          ["Kann das Haus über das Wasser geliefert werden?", "Die Lieferung erfolgt über die Straße bis zum Hafengelände. Ob ein Ro-Ro- oder Fährabschnitt Teil der Route aus der Fertigung ist, hängt vom Ziel ab; eine Anlieferung über die Kaimauer per Schiff ist nicht der Normalfall und wird nur geplant, wenn Zufahrt und Kran es erfordern."]
+        ]
+      },
+      "en": {
+        "menu": ["Marina & coast", "Overnight stays by the water"],
+        "card": "Overnight units by the water, specified for salt, wind and damp.",
+        "title": "Tiny house for marinas and the coast: overnight stays by the water | MODUNERA",
+        "description": "Tiny houses as overnight units for marinas, yacht harbours and coastal operators: facade and fittings for salt air, wind and damp, connection to harbour infrastructure, delivery outside the season.",
+        "h1": "Tiny house for marinas and the coast",
+        "lead": "A yacht harbour has guests who do not want to sleep aboard in the evening, and areas by the water that stand empty outside the season. A tiny house on the quay is an overnight unit for that — but one that has to withstand salt air, wind and damp, every day.",
+        "answer": "For marinas, yacht harbours and coastal operators MODUNERA plans tiny houses as overnight units by the water: facade, fittings and glazing chosen for salt air, wind and damp, connections designed for the harbour infrastructure, delivery outside the season. What may be placed on the harbour area is for the operator to settle with the authority and the owner of the land.",
+        "sections": [
+          { "h2": "Salt, wind and damp decide material and fittings", "p": [
+            "A unit fifty metres from the water ages faster than one inland if it was not chosen for it. Salt air attacks metal, wind drives rain into every joint, and damp finds the coldest corner. That is not a question of care but of selection: which facade, which fittings, which glazing, which drainage.",
+            "For coastal sites we choose the facade variant and the fittings accordingly and ventilate and drain the structure so that damp does not linger. Which glazing is fitted is decided by the climate at the site — on the North Sea the requirement differs from the Valais, and that is how the quality page states it."
+          ]},
+          { "h2": "Harbour infrastructure: power, water and the wastewater question", "p": [
+            "A harbour has power pedestals and water points for boats, but rarely a wastewater connection at every area. What exists determines which technology makes sense in the house: fuse rating of the power supply, water heating, whether a kitchen with a hob or only a tea kitchen is wanted.",
+            "We design electrics, water and wastewater for the infrastructure the harbour has and say in advance what that means. Where there is no wastewater connection, that is a planning question for the operator, not one a house solves on its own."
+          ]},
+          { "h2": "What may stand on the harbour area", "p": [
+            "Harbour areas are often special-use zones, part of a development plan or owned by a Land, a municipality or an association. Whether an overnight unit may be placed there, for how long and at what size is a question for the authority and the owner of the land — not for the manufacturer.",
+            "We supply the technical information on the house needed for that clarification: dimensions, weight, placement on supports without a foundation, connection requirements. We do not replace legal or permit advice."
+          ]},
+          { "h2": "Delivery by road, even when the destination is on the water", "p": [
+            "A unit for a harbour arrives by road, not by water — even if the way from production includes a Ro-Ro or ferry leg depending on the route. The 2.55 m base width of all models keeps transport possible without oversize. The final access to the harbour grounds, the load-bearing of the quay surfaces and the crane position we check with the operator before ordering.",
+            "Delivery is outside the season, when the jetties are empty and a low-loader on the grounds disturbs no one."
+          ]}
+        ],
+        "clarify_h2": "Clarify before enquiring",
+        "clarify": [
+          "Who owns the harbour area and what may be placed there",
+          "What the authority permits for the area: duration, size, number of units",
+          "Existing infrastructure: power pedestals and their fuse rating, water, wastewater",
+          "Position relative to the water, wind direction, flood or storm-surge situation",
+          "Low-loader access and load-bearing of the quay surfaces",
+          "Season dates and the delivery window"
+        ],
+        "faq": [
+          ["Does a tiny house withstand salt air and storms?", "If facade, fittings, glazing and drainage are chosen for it, yes. That is decided per site, not across the board. Which components it concerns is on the quality page with the reasoning."],
+          ["May a tiny house stand on a harbour area?", "That is for the operator, the owner of the land and the authority to settle. Harbour areas are often special-use zones; duration, size and number of units depend on the permit. We supply the technical information on the house for that clarification."],
+          ["Does the house need a foundation?", "No. The unit stands on four supports that are levelled after setting down; ground and load distribution are part of the planning at the site. On a harbour area that is often the reason placement without a building site is possible."],
+          ["What about flooding or storm surge?", "That is a question of the site and its position, not of the house. Whether an area lies in a flood or storm-surge zone and what is permitted there is for the operator to settle with the authority before a model is chosen."],
+          ["Can the house be delivered by water?", "Delivery is by road to the harbour grounds. Whether a Ro-Ro or ferry leg is part of the route from production depends on the destination; delivery over the quay by ship is not the normal case and is planned only if access and crane require it."]
+        ]
+      }
+    },
+    {
+      "id": "gemeinde",
+      "slug": { "de": "gewerblich/gemeinde-tourismus", "en": "en/commercial/municipality-tourism" },
+      "photo": "transport-trailer-yard",
+      "preset": { "de": "Gemeinde / Tourismusverband", "en": "Municipality / tourism board" },
+      "related": ["news/", "blog/tiny-house-genehmigung-deutschland/", "ratgeber/genehmigung-und-recht/"],
+      "de": {
+        "menu": ["Gemeinde & Tourismus", "Kommunale Projekte"],
+        "card": "Pilotprojekte, Beteiligungsverfahren und Ausschreibungen mit Unterlagen, die die Verwaltung braucht.",
+        "title": "Tiny House für Gemeinden und Tourismusverbände: kommunale Projekte | MODUNERA",
+        "description": "Tiny Houses für kommunale Projekte und Tourismusverbände: Pilotflächen, Tiny-House-Siedlungen, Beteiligungsverfahren, Ausschreibungen, Unterlagen für Bauleitplanung und Vergabe.",
+        "h1": "Tiny House für Gemeinden und Tourismusverbände",
+        "lead": "Wenn eine Gemeinde über Tiny Houses nachdenkt, geht es selten um ein Haus. Es geht um eine Fläche, einen Bebauungsplan, ein Beteiligungsverfahren, eine Vergabe — und um die Frage, ob das, was am Ende steht, zu dem passt, was beschlossen wurde. Dafür braucht die Verwaltung andere Unterlagen als ein Privatkunde.",
+        "answer": "Für Gemeinden, Tourismusverbände und kommunale Gesellschaften liefert MODUNERA, was ein Vorhaben in der Verwaltung braucht: technische Produktunterlagen für Bauleitplanung und Vergabe, Maße, Gewichte und Anschlussbedarf je Modell, Angaben zu Aufstellung ohne Fundament und zum Rückbau, und eine Lieferung mehrerer Einheiten als ein geplantes Projekt. Bauleitplanung, Beteiligung und Vergabe bleiben Sache der Kommune; wir beobachten laufende Verfahren und benennen sie mit Quelle.",
+        "sections": [
+          { "h2": "Pilotfläche, Siedlung oder Tourismusangebot: drei verschiedene Vorhaben", "p": [
+            "Kommunale Tiny-House-Projekte haben in der Regel eine von drei Formen. Eine Pilotfläche, auf der wenige Einheiten zeitlich befristet stehen, um Erfahrungen zu sammeln. Eine Siedlung, für die ein Bebauungsplan aufgestellt oder geändert wird und in der Einheiten dauerhaft bewohnt werden. Oder ein touristisches Angebot — Übernachtungseinheiten an einem See, auf einem kommunalen Campingplatz, an einem Wanderweg — das ein Tourismusverband oder eine kommunale Gesellschaft betreibt.",
+            "Die drei brauchen verschiedene Unterlagen und verschiedene Zeitpläne. Eine Pilotfläche kann innerhalb einer Saison stehen; eine Siedlung braucht das Verfahren der Bauleitplanung mit Beteiligung; ein Tourismusangebot braucht einen Betreiber und eine Rechnung über Nächte. Wir fragen zuerst, welches Vorhaben gemeint ist."
+          ]},
+          { "h2": "Unterlagen für Bauleitplanung und Vergabe", "p": [
+            "Eine Verwaltung, die ein Vorhaben vorbereitet, braucht Angaben, die sich in einen Bebauungsplan, eine Beschlussvorlage oder eine Leistungsbeschreibung übernehmen lassen: Maße je Modell, Gewichte, Grundfläche, Höhe, Aufstellung auf Stützen ohne Fundament, Anschlussbedarf an Strom, Wasser und Abwasser, Rückbaubarkeit. Wir liefern diese Angaben als technische Produktunterlagen.",
+            "Was wir nicht liefern, ist die Planung selbst. Bauleitplanung, Umweltprüfung, Beteiligung und Vergabe sind Aufgaben der Kommune und ihrer Planer; wir ersetzen keine Rechts-, Planungs- oder Vergabeberatung. Die Unterlagen sind so geschrieben, dass sie in diese Verfahren passen."
+          ]},
+          { "h2": "Laufende Verfahren, mit Quelle und Prüfdatum", "p": [
+            "Wir beobachten laufende kommunale Verfahren zu Tiny-House-Flächen in Deutschland und den Nachbarländern — Beteiligungsverfahren, Bebauungspläne, Ausschreibungen — und veröffentlichen sie auf der Nachrichtenseite mit der amtlichen Quelle und dem Datum, an dem wir sie zuletzt geprüft haben. Eine Zahl, die die Quelle nicht nennt, nennen wir nicht.",
+            "Für eine Gemeinde, die ein eigenes Vorhaben vorbereitet, sind diese Verfahren Referenzen: wie andere Kommunen die Fläche ausgewiesen, die Beteiligung geführt und die Nutzung geregelt haben. Die Seite verlinkt auf die Originaldokumente, nicht auf unsere Zusammenfassung."
+          ]},
+          { "h2": "Mehrere Einheiten, ein Zeitplan, ein Ansprechpartner", "p": [
+            "Ein kommunales Projekt liefert selten ein Haus. Es liefert fünf oder zwanzig, auf eine Fläche, die dafür vorbereitet wurde, in einem Zeitfenster, das der Beschluss vorgibt. Die Lieferung wird als ein Vorhaben geplant: Route, Zufahrt, Reihenfolge der Aufstellung, Anschluss. Der Weg aus der Fertigung führt über die Straße, je nach Ziel mit einem Ro-Ro- oder Fährabschnitt; die 2,55 m Grundbreite aller Modelle hält den Transport ohne Überbreite möglich.",
+            "Für die Verwaltung bedeutet das einen Ansprechpartner für alle Einheiten, einen Zeitplan und einen Satz Unterlagen — und die Möglichkeit, die Einheiten später zu versetzen oder zurückzubauen, weil sie auf Stützen stehen und nicht auf Fundamenten."
+          ]}
+        ],
+        "clarify_h2": "Vor der Anfrage klären",
+        "clarify": [
+          "Welches Vorhaben gemeint ist: Pilotfläche, Siedlung oder Tourismusangebot",
+          "Stand des Verfahrens: Beschluss, Bauleitplanung, Beteiligung, Vergabe",
+          "Fläche, Eigentum und was planungsrechtlich dort zulässig ist",
+          "Erschließung der Fläche: Strom, Wasser, Abwasser, Zufahrt",
+          "Wer die Einheiten betreibt und über welchen Zeitraum",
+          "Zahl der Einheiten und das Zeitfenster, das der Beschluss vorgibt"
+        ],
+        "faq": [
+          ["Kann MODUNERA an einer kommunalen Ausschreibung teilnehmen?", "Fragen Sie an und nennen Sie das Verfahren. Ob und wie eine Teilnahme möglich ist, hängt von der Leistungsbeschreibung, den Eignungsanforderungen und den Fristen ab. Die technischen Produktunterlagen, die eine Verwaltung dafür braucht, liefern wir."],
+          ["Liefert MODUNERA die Bauleitplanung mit?", "Nein. Bauleitplanung, Umweltprüfung, Beteiligung und Vergabe sind Aufgaben der Kommune und ihrer Planer. Wir liefern die technischen Angaben zum Haus, die sich in diese Verfahren übernehmen lassen, und ersetzen keine Rechts-, Planungs- oder Vergabeberatung."],
+          ["Können Einheiten später versetzt oder zurückgebaut werden?", "Ja. Die Einheiten stehen auf vier Stützen ohne Fundament und werden über die Straße transportiert. Versetzen und Rückbau sind damit Transportvorgänge, keine Abbrucharbeiten — was für Pilotflächen und befristete Nutzungen oft der entscheidende Punkt ist."],
+          ["Woher stammen die Verfahren auf der Nachrichtenseite?", "Aus amtlichen Quellen: Beteiligungsportalen, Ratsinformationssystemen, Amtsblättern. Jeder Eintrag nennt die Quelle und das Datum der letzten Prüfung. Eine Zahl, die die Quelle nicht nennt, steht dort nicht."],
+          ["Gibt es Referenzen in anderen Gemeinden?", "Ausgeführte Projekte nennen wir nur, wenn sie dokumentiert sind und der Auftraggeber zustimmt. Fragen Sie in der Anfrage danach; was wir nicht belegen können, behaupten wir nicht."]
+        ]
+      },
+      "en": {
+        "menu": ["Municipality & tourism", "Municipal projects"],
+        "card": "Pilot sites, participation procedures and tenders with the documents an administration needs.",
+        "title": "Tiny house for municipalities and tourism boards: municipal projects | MODUNERA",
+        "description": "Tiny houses for municipal projects and tourism boards: pilot sites, tiny-house settlements, participation procedures, tenders, documents for land-use planning and procurement.",
+        "h1": "Tiny house for municipalities and tourism boards",
+        "lead": "When a municipality thinks about tiny houses it is rarely about a house. It is about a site, a development plan, a participation procedure, a procurement — and whether what finally stands there matches what was resolved. For that an administration needs different documents from a private customer.",
+        "answer": "For municipalities, tourism boards and municipal companies MODUNERA supplies what a project needs in the administration: technical product documents for land-use planning and procurement, dimensions, weights and connection requirements per model, information on placement without a foundation and on removal, and delivery of several units as one planned project. Land-use planning, participation and procurement remain the municipality's; we monitor current procedures and name them with their source.",
+        "sections": [
+          { "h2": "Pilot site, settlement or tourism offer: three different projects", "p": [
+            "Municipal tiny-house projects usually take one of three forms. A pilot site where a few units stand for a limited time to gather experience. A settlement for which a development plan is drawn up or amended and in which units are lived in permanently. Or a tourism offer — overnight units by a lake, on a municipal campsite, along a hiking trail — operated by a tourism board or a municipal company.",
+            "The three need different documents and different schedules. A pilot site can stand within a season; a settlement needs the land-use planning procedure with participation; a tourism offer needs an operator and a calculation in nights. We first ask which project is meant."
+          ]},
+          { "h2": "Documents for land-use planning and procurement", "p": [
+            "An administration preparing a project needs information that can be carried into a development plan, a council paper or a specification: dimensions per model, weights, footprint, height, placement on supports without a foundation, connection requirements for power, water and wastewater, removability. We supply this as technical product documents.",
+            "What we do not supply is the planning itself. Land-use planning, environmental assessment, participation and procurement are tasks of the municipality and its planners; we do not replace legal, planning or procurement advice. The documents are written so that they fit into those procedures."
+          ]},
+          { "h2": "Current procedures, with source and check date", "p": [
+            "We monitor current municipal procedures on tiny-house sites in Germany and its neighbours — participation procedures, development plans, tenders — and publish them on the news page with the official source and the date we last checked them. A figure the source does not give, we do not give.",
+            "For a municipality preparing its own project these procedures are references: how other municipalities designated the site, ran the participation and regulated the use. The page links to the original documents, not to our summary."
+          ]},
+          { "h2": "Several units, one schedule, one contact", "p": [
+            "A municipal project rarely delivers one house. It delivers five or twenty, to a site prepared for it, in a window the resolution sets. Delivery is planned as one job: route, access, placement sequence, connection. The way from production is by road, with a Ro-Ro or ferry leg depending on the destination; the 2.55 m base width of all models keeps transport possible without oversize.",
+            "For the administration that means one contact for all units, one schedule and one set of documents — and the option of relocating or removing the units later, because they stand on supports and not on foundations."
+          ]}
+        ],
+        "clarify_h2": "Clarify before enquiring",
+        "clarify": [
+          "Which project is meant: pilot site, settlement or tourism offer",
+          "Stage of the procedure: resolution, land-use planning, participation, procurement",
+          "Site, ownership and what is permitted there under planning law",
+          "Services to the site: power, water, wastewater, access",
+          "Who operates the units and over what period",
+          "Number of units and the window the resolution sets"
+        ],
+        "faq": [
+          ["Can MODUNERA take part in a municipal tender?", "Enquire and name the procedure. Whether and how participation is possible depends on the specification, the suitability requirements and the deadlines. The technical product documents an administration needs for it, we supply."],
+          ["Does MODUNERA supply the land-use planning?", "No. Land-use planning, environmental assessment, participation and procurement are tasks of the municipality and its planners. We supply the technical information on the house that can be carried into those procedures and do not replace legal, planning or procurement advice."],
+          ["Can units be relocated or removed later?", "Yes. The units stand on four supports without a foundation and are transported by road. Relocation and removal are therefore transport operations, not demolition — which for pilot sites and time-limited uses is often the decisive point."],
+          ["Where do the procedures on the news page come from?", "From official sources: participation portals, council information systems, official gazettes. Each entry names the source and the date of the last check. A figure the source does not give is not there."],
+          ["Are there references in other municipalities?", "We name completed projects only when they are documented and the client agrees. Ask for them in the enquiry; what we cannot evidence, we do not claim."]
+        ]
+      }
+    },
+    {
+      "id": "dorf",
+      "slug": { "de": "gewerblich/tiny-house-dorf-oekodorf", "en": "en/commercial/tiny-house-village-eco-village" },
+      "photo": "aframe-lawn",
+      "preset": { "de": "Tiny-House-Dorf / Ökodorf", "en": "Tiny-house village / eco-village" },
+      "related": ["blog/tiny-house-genehmigung-deutschland/", "blog/tiny-house-vier-jahreszeiten/", "modellvergleich/"],
+      "de": {
+        "menu": ["Tiny-House-Dorf & Ökodorf", "Dauerhaft bewohnte Einheiten"],
+        "card": "Dauerhaft bewohnte Einheiten für Siedlungen, Dörfer und Gemeinschaftsprojekte.",
+        "title": "Tiny House für Tiny-House-Dorf und Ökodorf: dauerhaftes Wohnen | MODUNERA",
+        "description": "Tiny Houses für Tiny-House-Dörfer, Ökodörfer und Gemeinschaftsprojekte: dauerhaft bewohnte Einheiten, Ganzjahresausstattung, gemeinsame Erschließung, Lieferung mehrerer Einheiten in Etappen.",
+        "h1": "Tiny House für Tiny-House-Dorf und Ökodorf",
+        "lead": "Ein Tiny-House-Dorf ist das Gegenteil eines Campingplatzes: hier wohnen Menschen dauerhaft, im Winter, mit Büchern und Werkzeug und einem Leben, das Stauraum braucht. Die Einheiten müssen vier Jahreszeiten aushalten, an eine gemeinsame Erschließung anschließen und in Etappen kommen, wenn das Dorf wächst.",
+        "answer": "Für Tiny-House-Dörfer, Ökodörfer und Gemeinschaftsprojekte plant MODUNERA dauerhaft bewohnte Einheiten: Ganzjahresausstattung mit Dämmung, Heizung und frostsicherer Wasserführung, Grundrisse für Bewohner statt Gäste, Anschlüsse auf die gemeinsame Erschließung des Dorfes ausgelegt, Lieferung in Etappen, wenn Flächen und Bewohner dazukommen. Bebauungsplan, Genehmigung und Betreibermodell bleiben Sache des Projekts.",
+        "sections": [
+          { "h2": "Dauerhaft wohnen heißt vier Jahreszeiten, nicht zwanzig Wochen", "p": [
+            "Eine Einheit, die im Januar bewohnt wird, braucht etwas anderes als eine, die im Oktober abgeschlossen wird. Dämmung, Heizung, Lüftung mit Wärmerückgewinnung, frostsichere Wasserführung und Verglasung werden für das Klima am Standort gewählt — ein Dorf im Harz und eines an der Ostsee stellen verschiedene Anforderungen. Welche Komponenten das betrifft und warum, steht auf der Qualitätsseite.",
+            "Und Bewohner brauchen Stauraum. Ein Grundriss für Gäste kommt mit einem Koffer aus; ein Grundriss für Bewohner muss Winterkleidung, Werkzeug, Vorräte und das aufnehmen, was ein Leben ansammelt. Das verändert Möbel, Loft und Nebenräume — und spricht bei dauerhaftem Wohnen oft für die längeren Varianten der Modelle."
+          ]},
+          { "h2": "Gemeinsame Erschließung: was das Dorf hergibt", "p": [
+            "Ein Dorf erschließt seine Flächen gemeinsam: ein Stromanschluss für alle, eine Wasserleitung, eine Abwasserlösung — kommunal, als Kleinkläranlage oder als Mischform. Was das Dorf hergibt, bestimmt, was in den Einheiten sinnvoll ist: Absicherung je Einheit, Warmwasser, Heizung, ob Photovoltaik und Speicher in die Einheit oder in das Dorf gehören.",
+            "Wir legen die Einheiten auf die Erschließung aus, die das Dorf plant, und benennen vorab, was das für Technik und Kosten bedeutet. Die Erschließung selbst — Leitungen, Kläranlage, Zufahrt — ist Planung des Dorfes und seiner Fachplaner."
+          ]},
+          { "h2": "Bebauungsplan, Genehmigung und Betreibermodell", "p": [
+            "Ein Tiny-House-Dorf braucht planungsrechtlich eine Fläche, auf der dauerhaftes Wohnen zulässig ist — in der Regel einen Bebauungsplan, der das ausweist, und je Einheit eine Baugenehmigung oder ein Verfahren, das sie ersetzt. Das unterscheidet sich je Bundesland und je Gemeinde und ist Sache des Projekts, seiner Planer und der Behörde.",
+            "Dazu kommt das Betreibermodell: Kaufen die Bewohner ihre Einheit und pachten die Fläche? Betreibt ein Verein oder eine Genossenschaft alle Einheiten? Beides ist möglich, beides verändert, wer mit uns spricht und wer die Unterlagen braucht. Wir liefern die technischen Produktunterlagen zum Haus für beide Wege; Rechts- und Genehmigungsberatung ersetzen wir nicht."
+          ]},
+          { "h2": "Lieferung in Etappen, wenn das Dorf wächst", "p": [
+            "Dörfer entstehen selten auf einmal. Fünf Einheiten im ersten Jahr, acht im zweiten, wenn neue Bewohner und neue Flächen dazukommen. Die Lieferung wird deshalb in Etappen geplant, mit einer Route, Zufahrt und Aufstellung, die sich wiederholen lassen. Gleiche Grundrisse in einer Etappe vereinfachen Fertigung und Lieferung; Varianten je Bewohner sind möglich, wenn sie vor der Etappe entschieden werden.",
+            "Der Weg aus der Fertigung führt über die Straße, je nach Ziel mit einem Ro-Ro- oder Fährabschnitt. Die 2,55 m Grundbreite aller Modelle hält den Transport ohne Überbreite möglich; die letzte Zufahrt zur Fläche prüfen wir mit dem Projekt vor der ersten Etappe."
+          ]}
+        ],
+        "clarify_h2": "Vor der Anfrage klären",
+        "clarify": [
+          "Planungsrechtlicher Stand der Fläche: Bebauungsplan, zulässige Nutzung, Verfahren je Einheit",
+          "Betreibermodell: Eigentum der Bewohner, Verein, Genossenschaft",
+          "Gemeinsame Erschließung: Strom, Wasser, Abwasserlösung, Zufahrt",
+          "Klima am Standort und die Anforderungen an Ganzjahresbetrieb",
+          "Etappen: wie viele Einheiten wann, und ob gleiche Grundrisse je Etappe",
+          "Wer für das Projekt spricht und wer die Unterlagen braucht"
+        ],
+        "faq": [
+          ["Sind die Einheiten für dauerhaftes Wohnen im Winter ausgelegt?", "Wenn Dämmung, Heizung, Lüftung und frostsichere Wasserführung dafür gewählt werden, ja. Das wird je Standort entschieden, nicht pauschal. Welche Komponenten das betrifft, steht mit ihrer Begründung auf der Qualitätsseite."],
+          ["Braucht jede Einheit eine eigene Baugenehmigung?", "In der Regel ja, oder ein Verfahren, das sie ersetzt — das richtet sich nach Landesbauordnung und Bebauungsplan und ist Sache des Projekts und der Behörde. Wir liefern die technischen Unterlagen zum Haus, die dafür gebraucht werden."],
+          ["Können Bewohner ihre Einheit individuell gestalten?", "Grundriss-, Material- und Möbelanpassungen sind je Einheit möglich, wenn sie vor der Etappe entschieden werden, in der die Einheit gebaut wird. Gleiche Grundrisse je Etappe vereinfachen Fertigung und Lieferung; der Umfang individueller Anpassungen wird im Angebot ausgewiesen."],
+          ["Was ist mit Photovoltaik und Speicher?", "Beides kann in die Einheit oder in die gemeinsame Infrastruktur des Dorfes gehören — das ist eine Frage der Erschließungsplanung. Die Infrastruktur dafür in der Einheit — Leitungen, Montagepunkte, Platz für einen Speicher — wird im Rohbau vorgesehen, wenn das Projekt sie wünscht."],
+          ["Können Einheiten später versetzt werden?", "Ja. Die Einheiten stehen auf vier Stützen ohne Fundament und werden über die Straße transportiert. Ein Versetzen innerhalb des Dorfes oder an einen anderen Standort ist ein Transportvorgang, kein Abbruch."]
+        ]
+      },
+      "en": {
+        "menu": ["Tiny-house village & eco-village", "Permanently lived-in units"],
+        "card": "Permanently lived-in units for settlements, villages and community projects.",
+        "title": "Tiny house for tiny-house villages and eco-villages: permanent living | MODUNERA",
+        "description": "Tiny houses for tiny-house villages, eco-villages and community projects: permanently lived-in units, year-round specification, shared services, delivery of several units in stages.",
+        "h1": "Tiny house for tiny-house villages and eco-villages",
+        "lead": "A tiny-house village is the opposite of a campsite: here people live permanently, in winter, with books and tools and a life that needs storage. The units have to withstand four seasons, connect to shared services and arrive in stages as the village grows.",
+        "answer": "For tiny-house villages, eco-villages and community projects MODUNERA plans permanently lived-in units: year-round specification with insulation, heating and frost-proof water routing, layouts for residents rather than guests, connections designed for the village's shared services, delivery in stages as sites and residents are added. Development plan, permit and operating model remain the project's.",
+        "sections": [
+          { "h2": "Permanent living means four seasons, not twenty weeks", "p": [
+            "A unit lived in in January needs something different from one locked up in October. Insulation, heating, ventilation with heat recovery, frost-proof water routing and glazing are chosen for the climate at the site — a village in the Harz and one on the Baltic make different demands. Which components that concerns and why is on the quality page.",
+            "And residents need storage. A layout for guests gets by with a suitcase; a layout for residents has to take winter clothes, tools, supplies and what a life accumulates. That changes furniture, loft and ancillary rooms — and for permanent living often argues for the longer variants of the models."
+          ]},
+          { "h2": "Shared services: what the village provides", "p": [
+            "A village services its sites jointly: one power connection for all, one water main, one wastewater solution — municipal, a small treatment plant or a mixed form. What the village provides determines what makes sense in the units: fuse rating per unit, hot water, heating, whether photovoltaics and storage belong in the unit or in the village.",
+            "We design the units for the services the village plans and say in advance what that means for technology and cost. The services themselves — mains, treatment plant, access — are the planning of the village and its specialist planners."
+          ]},
+          { "h2": "Development plan, permit and operating model", "p": [
+            "Under planning law a tiny-house village needs a site where permanent living is permitted — usually a development plan that designates it, and per unit a building permit or a procedure that replaces it. That differs by Land and by municipality and is for the project, its planners and the authority.",
+            "Then there is the operating model: do residents buy their unit and lease the site? Does an association or a cooperative operate all units? Both are possible, both change who talks to us and who needs the documents. We supply the technical product documents on the house for both routes; we do not replace legal or permit advice."
+          ]},
+          { "h2": "Delivery in stages as the village grows", "p": [
+            "Villages rarely come about all at once. Five units in the first year, eight in the second when new residents and new sites are added. Delivery is therefore planned in stages, with a route, access and placement that can be repeated. Identical layouts within a stage simplify production and delivery; variants per resident are possible if decided before the stage.",
+            "The way from production is by road, with a Ro-Ro or ferry leg depending on the destination. The 2.55 m base width of all models keeps transport possible without oversize; the final access to the site we check with the project before the first stage."
+          ]}
+        ],
+        "clarify_h2": "Clarify before enquiring",
+        "clarify": [
+          "Planning status of the site: development plan, permitted use, procedure per unit",
+          "Operating model: resident ownership, association, cooperative",
+          "Shared services: power, water, wastewater solution, access",
+          "Climate at the site and the requirements for year-round operation",
+          "Stages: how many units when, and whether identical layouts per stage",
+          "Who speaks for the project and who needs the documents"
+        ],
+        "faq": [
+          ["Are the units designed for permanent living in winter?", "If insulation, heating, ventilation and frost-proof water routing are chosen for it, yes. That is decided per site, not across the board. Which components it concerns is on the quality page with the reasoning."],
+          ["Does every unit need its own building permit?", "Usually yes, or a procedure that replaces it — that follows the Land building code and the development plan and is for the project and the authority. We supply the technical documents on the house needed for that."],
+          ["Can residents customise their unit?", "Layout, material and furniture adjustments are possible per unit if decided before the stage in which the unit is built. Identical layouts per stage simplify production and delivery; the scope of individual adjustments is shown in the quotation."],
+          ["What about photovoltaics and storage?", "Both can belong in the unit or in the village's shared infrastructure — that is a question of services planning. The infrastructure for it in the unit — conduits, mounting points, space for a battery — is provided in the shell if the project wants it."],
+          ["Can units be relocated later?", "Yes. The units stand on four supports without a foundation and are transported by road. Relocation within the village or to another site is a transport operation, not demolition."]
+        ]
+      }
+    }
+  ]
+}

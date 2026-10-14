@@ -53,6 +53,7 @@ const assert = (cond, message) => { if (!cond) throw new Error(message); };
 
 const json = (p) => JSON.parse(readFileSync(join(ROOT, p), "utf8"));
 const CONFIG = json("data/market-scan-config.json");
+const PLANNED_RESULTS = CONFIG.markets.reduce((n, m) => n + m.queries.length, 0) * 2;
 const NEWS = json("data/news.json");
 
 const scratch = await mkdtemp(join(tmpdir(), "modunera-mi-"));
@@ -333,8 +334,9 @@ test("provider adapter parses a real response shape", async () => {
     const s = runEngine([], { provider: braveEnv(stub.url) });
     const run = s.runs[0];
     assert(run.provider === "brave", `run reports provider ${run.provider}`);
-    /* 28 planned queries x 2 usable results; the third result has no URL. */
-    assert(run.sourcesChecked === 56, `read ${run.sourcesChecked} results, expected 56`);
+    /* every planned query x 2 usable results; the third result has no URL.
+       Derived from the config so that adding a market does not break the test. */
+    assert(run.sourcesChecked === PLANNED_RESULTS, `read ${run.sourcesChecked} results, expected ${PLANNED_RESULTS}`);
     /* One stored, not two: the second result is a tier 3 host and the engine
        counts rejections rather than keeping them. */
     assert(s.signals.length === 1, `${s.signals.length} signals stored, expected 1`);
@@ -346,7 +348,7 @@ test("provider adapter parses a real response shape", async () => {
     /* Nothing the scan found is publishable on the strength of a snippet. */
     assert(sig.recommendedAction === "VERIFY_ON_SOURCE",
       `a scraped candidate was recommended for ${sig.recommendedAction}, not VERIFY_ON_SOURCE`);
-    return "56 read, 1 kept, tier 3 counted not stored, ISO date kept, scan result needs verifying";
+    return `${PLANNED_RESULTS} read, 1 kept, tier 3 counted not stored, ISO date kept, scan result needs verifying`;
   } finally { stub.close(); }
 });
 
@@ -368,7 +370,7 @@ test("provider rejects the country code", async () => {
   try {
     const s = runEngine([], { provider: braveEnv(stub.url) });
     const run = s.runs[0];
-    assert(run.sourcesChecked === 56, `country retry lost results: ${run.sourcesChecked} read`);
+    assert(run.sourcesChecked === PLANNED_RESULTS, `country retry lost results: ${run.sourcesChecked} read`);
     assert(Object.values(run.markets).every((m) => m.countryDropped), "the retry without country was not recorded");
     assert(run.errors.some((e) => /retried without it/.test(e)), "the dropped country was not reported");
     return "422 on country retried once without it, results kept, retry recorded";

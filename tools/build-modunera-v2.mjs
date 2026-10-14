@@ -90,6 +90,35 @@ const MENU_PRICING = JSON.parse(await readFile(join(ROOT, "data/pricing.json"), 
    route from, so a renamed hub cannot leave a dead menu entry behind. */
 const MENU_NEWS = JSON.parse(await readFile(join(ROOT, "data/news.json"), "utf8")).hubs;
 const MENU_PFAQ = JSON.parse(await readFile(join(ROOT, "data/production-faq.json"), "utf8")).hub;
+
+/* The commercial section — /gewerblich/ and /en/commercial/ — from
+   data/commercial.json. Six operator segments and a hub. The menu reads the
+   same file the pages are rendered from, so a renamed segment cannot leave a
+   dead entry behind. Real photographs come from data/site-photos.json; the
+   og:image stays the site default because head() resolves it under gallery/. */
+const COMMERCIAL = JSON.parse(await readFile(join(ROOT, "data/commercial.json"), "utf8"));
+const SITE_PHOTOS = Object.fromEntries(
+  JSON.parse(await readFile(join(ROOT, "data/site-photos.json"), "utf8")).photos.map((p) => [p.name, p]),
+);
+const commercialMenu = (lang) => [
+  [`${COMMERCIAL.hub.slug[lang]}/`, lang === "de" ? "Betreiber-Übersicht" : "Operators overview",
+    lang === "de" ? "Camping, Park, Hotel, Marina, Kommune" : "Campsite, park, hotel, marina, municipality"],
+  ...COMMERCIAL.segments.map((seg) => [`${seg.slug[lang]}/`, seg[lang].menu[0], seg[lang].menu[1]]),
+];
+
+/* Tourism regions — /regionen/ and /en/regions/ — from data/tourism-regions.json.
+   A town joins a region by coordinates: inside the region's bounding box and in
+   one of its states, read from data/locations.json. Nothing is assigned by
+   hand, so the mapping cannot drift from the data it is derived from. */
+const REGIONS = JSON.parse(await readFile(join(ROOT, "data/tourism-regions.json"), "utf8"));
+const TOWNS = JSON.parse(await readFile(join(ROOT, "data/locations.json"), "utf8"));
+const STATE_SLUG = Object.fromEntries(TOWNS.map((t) => [t.state, t.state_slug]));
+function regionTowns(region) {
+  const [latLo, latHi] = region.bbox.lat, [lngLo, lngHi] = region.bbox.lng;
+  const states = new Set(region.states);
+  return TOWNS.filter((t) => states.has(t.state) && t.lat >= latLo && t.lat <= latHi && t.lng >= lngLo && t.lng <= lngHi)
+    .sort((a, b) => a.name.localeCompare(b.name, "de"));
+}
 const MENU_SUBS = {
   de: { faq: "60 Fragen vor dem Auftrag", news: "Projekte mit Quelle und Prüfdatum" },
   en: { faq: "60 questions before the order", news: "Projects with source and check date" },
@@ -142,6 +171,7 @@ const MENU = {
           ["preisvergleich/", "Preis je Zielland", "Lieferung einkalkuliert"],
           ["vorteile/", "Vorteile", "Warum ein Tiny House"],
         ]],
+        ["Für Betreiber", commercialMenu("de")],
       ]},
       { label: "Länder", menu: [
         ["laender/", "Alle Zielmärkte", "Fünf Länder im Überblick"],
@@ -151,6 +181,7 @@ const MENU = {
         ["laender/luxemburg/", "Luxemburg", "Gemeinde & Kantone"],
         ["laender/schweiz/", "Schweiz", "Kanton & Bewilligung"],
         ["preisvergleich/", "Preisvergleich", "Budget je Zielland"],
+        ["regionen/", "Regionen", "Küste, Alpen, Mittelgebirge, Seen"],
         ["standorte/", "Standorte Deutschland", "7.000+ lokale Seiten"],
         newsEntry("de"),
       ]},
@@ -223,10 +254,12 @@ const MENU = {
           ["en/price-comparison/", "Price by destination", "Delivery included"],
           ["en/advantages/", "Advantages", "Why a tiny house"],
         ]],
+        ["For operators", commercialMenu("en")],
       ]},
       { label: "Countries", menu: [
         ["en/countries/", "All target markets", "Five countries at a glance"],
         ["en/countries/germany/", "Germany", "Rules, transport, regions"],
+        ["en/regions/", "Regions", "Coast, Alps, uplands, lakes"],
         ["en/countries/netherlands/", "Netherlands", "Environment and Planning Act"],
         ["en/countries/denmark/", "Denmark", "Municipality and regions"],
         ["en/countries/luxembourg/", "Luxembourg", "Municipal authorisation"],
@@ -524,6 +557,208 @@ const COUNTRY_LABELS = {
   LU: { de: "Luxemburg", en: "Luxembourg", deSlug: "luxemburg", enSlug: "luxembourg" },
   CH: { de: "Schweiz", en: "Switzerland", deSlug: "schweiz", enSlug: "switzerland" },
 };
+
+/* --- commercial section --------------------------------------------------- */
+
+function sitePhoto(name, lang, fallbackAlt) {
+  const p = SITE_PHOTOS[name];
+  const f = p?.files.find((x) => /-1200\.webp$/.test(x.file)) ?? p?.files.find((x) => /-1100\.webp$/.test(x.file));
+  if (!f) return null;
+  const [w, h] = f.px.split("x").map(Number);
+  return { src: f.file, w, h, alt: lang === "de" ? p.alt_de : fallbackAlt };
+}
+
+/* The same form the location pages carry (tools/build-location-enquiry.mjs):
+   same Netlify form name, same field names, same consent wording, so a lead
+   from a campsite lands beside a lead from a town page. Two differences for
+   operators: the use is preset from the segment, and a units field asks how
+   many — the one qualifying question a private buyer never has to answer. */
+function enquiryForm(lang, root, preset) {
+  const de = lang === "de";
+  const t = de ? {
+    eyebrow: "Anfrage", h2: "Was ist geplant?",
+    lead: "Beschreiben Sie das Vorhaben in zwei Sätzen. Sie bekommen eine Ersteinschätzung zu Modell, Lieferweg und den nächsten Schritten — keine automatische Preisliste.",
+    name: "Name", email: "E-Mail", phone: "Telefon / WhatsApp", place: "Standort / Ort", units: "Anzahl Einheiten",
+    unitOptions: ["1", "2–4", "5–10", "11–25", "mehr als 25"],
+    project: "Ihr Vorhaben", submit: "Anfrage senden",
+    consent: `Ich bin einverstanden, dass meine Angaben zur Bearbeitung meiner Anfrage gespeichert werden. Details in der <a href="${root}legal/datenschutz/" style="text-decoration:underline">Datenschutzerklärung</a>.`,
+    note: "Pflichtfelder sind nur Name und E-Mail. Nach dem Absenden öffnet sich zusätzlich WhatsApp mit einer vorbereiteten Nachricht, falls Sie dort weiterschreiben möchten.",
+  } : {
+    eyebrow: "Enquiry", h2: "What are you planning?",
+    lead: "Describe the project in two sentences. You get a first assessment of model, delivery route and the next steps — not an automated price list.",
+    name: "Name", email: "E-mail", phone: "Phone / WhatsApp", place: "Site / place", units: "Number of units",
+    unitOptions: ["1", "2–4", "5–10", "11–25", "more than 25"],
+    project: "Your project", submit: "Send enquiry",
+    consent: `I agree that my details may be stored in order to handle my enquiry. Details in the <a href="${root}en/legal/privacy/" style="text-decoration:underline">privacy notice</a>.`,
+    note: "Only name and e-mail are required. After sending, WhatsApp also opens with a prepared message in case you would rather continue there.",
+  };
+  return `<section class="section section-soft" id="anfrage"><div class="container">` +
+    `<form class="editorial-copy" data-lead-form name="projektanfrage" method="POST" data-netlify="true" netlify-honeypot="bot-field">` +
+    `<input type="hidden" name="form-name" value="projektanfrage">` +
+    `<input type="hidden" name="Nutzung" value="${esc(preset)}">` +
+    `<p style="display:none"><label>Bitte frei lassen<input name="bot-field"></label></p>` +
+    `<div class="eyebrow">${t.eyebrow} · ${esc(preset)}</div><h2>${t.h2}</h2><p>${t.lead}</p>` +
+    `<div class="form-grid">` +
+    `<div class="field"><label>${t.name}</label><input name="Name" required></div>` +
+    `<div class="field"><label>${t.email}</label><input name="E-Mail" type="email" required></div>` +
+    `<div class="field"><label>${t.phone}</label><input name="Telefon"></div>` +
+    `<div class="field"><label>${t.place}</label><input name="Lieferort"></div>` +
+    `<div class="field"><label>${t.units}</label><select name="Einheiten">${t.unitOptions.map((o) => `<option>${o}</option>`).join("")}</select></div>` +
+    `<div class="field full"><label>${t.project}</label><textarea name="Projekt" rows="4"></textarea></div>` +
+    `</div>` +
+    `<div class="save-bar"><div class="field" style="grid-column:1/-1"><label style="display:flex;gap:10px;align-items:flex-start;font-weight:400">` +
+    `<input type="checkbox" name="Einwilligung" value="ja" required style="margin-top:5px"><span>${t.consent}</span></label></div>` +
+    `<button class="btn btn-primary">${t.submit}</button></div>` +
+    `<p class="legal-note">${t.note}</p></form></div></section>`;
+}
+
+const commercialSchema = (file, title, description, lang, trail, faq) => [
+  { "@context": "https://schema.org", "@type": "WebPage", name: title, url: canonicalFor(file), description, dateModified: UPDATED, inLanguage: lang === "de" ? "de-DE" : "en" },
+  breadcrumb(trail),
+  faqSchema(faq),
+];
+
+function commercialHubPage(lang) {
+  const de = lang === "de";
+  const hub = COMMERCIAL.hub; const c = hub[lang];
+  const file = `${hub.slug[lang]}/index.html`;
+  const root = rootFor(file);
+  const photo = sitePhoto(hub.photo, lang, c.h1);
+  const trail = de ? [["MODUNERA", ""], ["Für Betreiber", "gewerblich/"]] : [["MODUNERA", "en/"], ["For operators", "en/commercial/"]];
+  const cards = COMMERCIAL.segments.map((seg) =>
+    `<a class="state-card" href="${root}${seg.slug[lang]}/"><span>${esc(seg[lang].menu[1])}</span><h3>${esc(seg[lang].menu[0])}</h3><p>${esc(seg[lang].card)}</p></a>`).join("");
+  const why = c.why.map(([h, p], i) =>
+    `<div class="benefit"><span class="benefit-number">0${i + 1}</span><h3>${esc(h)}</h3><p>${esc(p)}</p></div>`).join("");
+  return head({ file, lang, title: c.title, description: c.description,
+      alternateDe: canonicalFor(`${hub.slug.de}/index.html`), alternateEn: canonicalFor(`${hub.slug.en}/index.html`),
+      schema: commercialSchema(file, c.title, c.description, lang, trail, c.faq) }) +
+    chrome(root, lang) +
+    `<main id="main"><header class="location-hero"><img src="${root}${photo.src}" width="${photo.w}" height="${photo.h}" alt="${esc(photo.alt)}"><div class="location-hero-overlay"></div><div class="container location-hero-content">` +
+    `<div class="breadcrumbs">${trail.map(([n, u], i) => i === trail.length - 1 ? esc(n) : `<a href="${root}${u || (de ? "index.html" : "en/")}">${esc(n)}</a>`).join(" · ")}</div>` +
+    `<span class="hero-kicker">MODUNERA · ${de ? "Gewerblich" : "Commercial"}</span><h1>${esc(c.h1)}</h1><p>${esc(c.lead)}</p>` +
+    `<div class="hero-actions"><a class="btn btn-primary" href="#anfrage">${de ? "Projekt anfragen" : "Enquire about a project"}</a><a class="btn btn-light" href="${root}${de ? "katalog/" : "en/models/"}">${de ? "Modelle ansehen" : "See the models"}</a></div></div></header>` +
+    `<section class="section section-tight"><div class="container"><div class="answer-box"><strong>${de ? "Direkte Antwort" : "Direct answer"}</strong><p>${esc(c.answer)}</p></div></div></section>` +
+    `<section class="section"><div class="container"><div class="section-header"><div><div class="eyebrow">${de ? "Betreiber" : "Operators"}</div><h2>${esc(c.intro_h2)}</h2></div></div><div class="editorial-copy">${c.intro_p.map((p) => `<p>${esc(p)}</p>`).join("")}</div></div></section>` +
+    `<section class="section section-soft"><div class="container"><div class="section-header"><div><div class="eyebrow">${de ? "Sechs Segmente" : "Six segments"}</div><h2>${esc(c.segments_h2)}</h2></div></div><div class="state-grid">${cards}</div></div></section>` +
+    `<section class="section"><div class="container"><div class="section-header"><div><div class="eyebrow">${de ? "Planung" : "Planning"}</div><h2>${esc(c.why_h2)}</h2></div></div><div class="benefit-grid">${why}</div></div></section>` +
+    `<section class="section section-soft"><div class="container"><div class="section-header"><div><div class="eyebrow">FAQ</div><h2>${de ? "Schnelle Antworten, klare Grenzen." : "Fast answers, clear limits."}</h2></div></div><div class="faq-list">${faqMarkup(c.faq)}</div></div></section>` +
+    enquiryForm(lang, root, de ? "Gewerblich / Betreiber" : "Commercial / operator") +
+    `</main>` + footer(root, lang);
+}
+
+function commercialSegmentPage(seg, lang) {
+  const de = lang === "de";
+  const c = seg[lang];
+  const file = `${seg.slug[lang]}/index.html`;
+  const root = rootFor(file);
+  const photo = sitePhoto(seg.photo, lang, c.h1);
+  const hub = COMMERCIAL.hub;
+  const trail = de
+    ? [["MODUNERA", ""], ["Für Betreiber", `${hub.slug.de}/`], [c.menu[0], `${seg.slug.de}/`]]
+    : [["MODUNERA", "en/"], ["For operators", `${hub.slug.en}/`], [c.menu[0], `${seg.slug.en}/`]];
+  const sections = c.sections.map((sec) => `<h2>${esc(sec.h2)}</h2>${sec.p.map((p) => `<p>${esc(p)}</p>`).join("")}`).join("");
+  const clarify = c.clarify.map((i) => `<li>${esc(i)}</li>`).join("");
+  const related = seg.related.map((href) => `<a class="btn btn-outline" href="${root}${href}">${esc(href.replace(/\/$/, "").split("/").pop().replace(/-/g, " "))}</a>`).join("");
+  const others = COMMERCIAL.segments.filter((o) => o.id !== seg.id).map((o) =>
+    `<a class="state-card" href="${root}${o.slug[lang]}/"><span>${esc(o[lang].menu[1])}</span><h3>${esc(o[lang].menu[0])}</h3><p>${esc(o[lang].card)}</p></a>`).join("");
+  return head({ file, lang, title: c.title, description: c.description,
+      alternateDe: canonicalFor(`${seg.slug.de}/index.html`), alternateEn: canonicalFor(`${seg.slug.en}/index.html`),
+      schema: commercialSchema(file, c.title, c.description, lang, trail, c.faq) }) +
+    chrome(root, lang) +
+    `<main id="main"><header class="location-hero"><img src="${root}${photo.src}" width="${photo.w}" height="${photo.h}" alt="${esc(photo.alt)}"><div class="location-hero-overlay"></div><div class="container location-hero-content">` +
+    `<div class="breadcrumbs">${trail.map(([n, u], i) => i === trail.length - 1 ? esc(n) : `<a href="${root}${u || (de ? "index.html" : "en/")}">${esc(n)}</a>`).join(" · ")}</div>` +
+    `<span class="hero-kicker">MODUNERA · ${esc(c.menu[0])}</span><h1>${esc(c.h1)}</h1><p>${esc(c.lead)}</p>` +
+    `<div class="hero-actions"><a class="btn btn-primary" href="#anfrage">${de ? "Projekt anfragen" : "Enquire about a project"}</a><a class="btn btn-light" href="${root}${de ? "modellvergleich/" : "en/model-comparison/"}">${de ? "Modelle vergleichen" : "Compare models"}</a></div></div></header>` +
+    `<section class="section section-tight"><div class="container"><div class="data-strip"><div><span>${de ? "Modelle" : "Models"}</span><strong>MD 1–MD 8</strong></div><div><span>${de ? "Grundbreite" : "Base width"}</span><strong>2,55 m</strong></div><div><span>${de ? "Lieferung" : "Delivery"}</span><strong>${de ? "je Projekt geplant" : "planned per project"}</strong></div><div><span>${de ? "Einheiten" : "Units"}</span><strong>${de ? "mehrere je Vorhaben" : "several per job"}</strong></div></div>` +
+    `<div class="answer-box"><strong>${de ? "Direkte Antwort" : "Direct answer"}</strong><p>${esc(c.answer)}</p></div></div></section>` +
+    `<section class="section"><div class="container"><div class="editorial-copy">${sections}</div></div></section>` +
+    `<section class="section section-soft"><div class="container"><div class="section-header"><div><div class="eyebrow">${de ? "Checkliste" : "Checklist"}</div><h2>${esc(c.clarify_h2)}</h2></div></div><ul class="check-list">${clarify}</ul>` +
+    `<p class="legal-note">${de ? "Vertiefung in den bestehenden Leitfäden:" : "Further reading in the existing guides:"}</p><div class="hero-actions">${related}</div></div></section>` +
+    `<section class="section"><div class="container"><div class="section-header"><div><div class="eyebrow">FAQ · ${esc(c.menu[0])}</div><h2>${de ? "Schnelle Antworten, klare Grenzen." : "Fast answers, clear limits."}</h2></div></div><div class="faq-list">${faqMarkup(c.faq)}</div></div></section>` +
+    enquiryForm(lang, root, seg.preset[lang]) +
+    `<section class="section section-soft"><div class="container"><div class="section-header"><div><div class="eyebrow">${de ? "Andere Betreiber" : "Other operators"}</div><h2>${de ? "Weitere Betreiberarten" : "Other operator types"}</h2></div></div><div class="state-grid">${others}</div></div></section>` +
+    `</main>` + footer(root, lang);
+}
+
+/* --- tourism regions ------------------------------------------------------ */
+
+const regionSchema = (file, title, description, lang, trail, faq) => [
+  { "@context": "https://schema.org", "@type": "WebPage", name: title, url: canonicalFor(file), description, dateModified: UPDATED, inLanguage: lang === "de" ? "de-DE" : "en" },
+  breadcrumb(trail),
+  ...(faq?.length ? [faqSchema(faq)] : []),
+];
+
+const segmentById = (id) => COMMERCIAL.segments.find((seg) => seg.id === id);
+
+function regionIndexPage(lang) {
+  const de = lang === "de";
+  const file = de ? "regionen/index.html" : "en/regions/index.html";
+  const root = rootFor(file);
+  const title = de ? "Tiny House nach Region: Küste, Alpen, Mittelgebirge, Seen | MODUNERA" : "Tiny house by region: coast, Alps, uplands, lakes | MODUNERA";
+  const description = de
+    ? "Zehn Landschaften Deutschlands und was sie von einem Tiny House verlangen: Ostsee und Nordsee, Schwarzwald, Allgäu, Alpen, Bodensee, Eifel, Harz, Seenplatte, Heide — mit den Orten, die dazugehören."
+    : "Ten German landscapes and what they demand of a tiny house: Baltic and North Sea, Black Forest, Allgäu, Alps, Lake Constance, Eifel, Harz, lake district, heath — with the places that belong to them.";
+  const trail = de ? [["MODUNERA", ""], ["Regionen", "regionen/"]] : [["MODUNERA", "en/"], ["Regions", "en/regions/"]];
+  const cards = REGIONS.regions.map((r) => {
+    const n = regionTowns(r).length;
+    return `<a class="state-card" href="${root}${de ? "regionen/" : "en/regions/"}${r.slug[lang]}/"><span>${n} ${de ? "Orte" : "places"}</span><h3>${esc(r.name[lang])}</h3><p>${esc(r[lang].lead.split(". ")[0])}.</p></a>`;
+  }).join("");
+  return head({ file, lang, title, description,
+      alternateDe: canonicalFor("regionen/index.html"), alternateEn: canonicalFor("en/regions/index.html"),
+      schema: regionSchema(file, title, description, lang, trail) }) +
+    chrome(root, lang) +
+    `<main id="main"><section class="page-hero"><div class="container"><div class="breadcrumbs">${trail.map(([n, u], i) => i === trail.length - 1 ? esc(n) : `<a href="${root}${u || (de ? "index.html" : "en/")}">${esc(n)}</a>`).join(" · ")}</div>` +
+    `<div class="eyebrow">${de ? "Zehn Landschaften" : "Ten landscapes"}</div><h1>${de ? "Tiny House nach Region" : "Tiny house by region"}</h1>` +
+    `<p>${de ? "Die Ortsseiten sind nach Bundesland geordnet. Menschen suchen nach Landschaft: Küste, Berg, See, Wald. Diese Seiten ordnen die Orte so, wie gesucht wird — und sagen, was jede Landschaft von einer Einheit verlangt." : "The town pages are organised by state. People search by landscape: coast, mountain, lake, forest. These pages organise the places the way people search — and say what each landscape demands of a unit."}</p></div></section>` +
+    `<section class="section"><div class="container"><div class="state-grid">${cards}</div>` +
+    `<p class="legal-note">${de ? "Die Zuordnung der Orte ist geografisch abgeleitet, nicht amtlich. Was an einem Standort gilt, steht auf der Seite seines Bundeslandes mit amtlicher Quelle." : "The assignment of places is derived geographically, not official. What applies at a site is on its state page, with the official source."}</p></div></section>` +
+    `</main>` + footer(root, lang);
+}
+
+function regionPage(region, lang) {
+  const de = lang === "de";
+  const c = region[lang];
+  const file = de ? `regionen/${region.slug.de}/index.html` : `en/regions/${region.slug.en}/index.html`;
+  const root = rootFor(file);
+  const photo = sitePhoto(region.photo, lang, c.h1);
+  const towns = regionTowns(region);
+  const trail = de
+    ? [["MODUNERA", ""], ["Regionen", "regionen/"], [region.name.de, `regionen/${region.slug.de}/`]]
+    : [["MODUNERA", "en/"], ["Regions", "en/regions/"], [region.name.en, `en/regions/${region.slug.en}/`]];
+  const sections = c.sections.map((sec) => `<h2>${esc(sec.h2)}</h2>${sec.p.map((p) => `<p>${esc(p)}</p>`).join("")}`).join("");
+  const states = region.states.map((st) => `<a class="btn btn-outline" href="${root}standorte/${STATE_SLUG[st]}/">${esc(st)}</a>`).join("");
+  const segs = region.segments.map(segmentById).filter(Boolean).map((seg) =>
+    `<a class="state-card" href="${root}${seg.slug[lang]}/"><span>${esc(seg[lang].menu[1])}</span><h3>${esc(seg[lang].menu[0])}</h3><p>${esc(seg[lang].card)}</p></a>`).join("");
+  /* Largest places first (population where the data has it), the first 48 visible,
+     the rest behind a <details> — 275 cards in a row is a wall on a phone, and
+     every link stays in the document for the crawler either way. */
+  const VISIBLE = 48;
+  const ranked = [...towns].sort((a, b) => (b.population ?? 0) - (a.population ?? 0) || a.name.localeCompare(b.name, "de"));
+  const card = (t) => `<a class="place-link" href="${root}${t.path}"><strong>${esc(t.name)}</strong><span>${esc(t.state)}</span></a>`;
+  const places = `<div class="places-list">${ranked.slice(0, VISIBLE).map(card).join("")}</div>` +
+    (ranked.length > VISIBLE
+      ? `<details class="place-more"><summary>${de ? `Alle ${ranked.length} Orte anzeigen` : `Show all ${ranked.length} places`}</summary><div class="places-list">${ranked.slice(VISIBLE).map(card).join("")}</div></details>`
+      : "");
+  const others = REGIONS.regions.filter((r) => r !== region).map((r) =>
+    `<a class="state-card" href="${root}${de ? "regionen/" + r.slug.de : "en/regions/" + r.slug.en}/"><span>${regionTowns(r).length} ${de ? "Orte" : "places"}</span><h3>${esc(r.name[lang])}</h3></a>`).join("");
+  return head({ file, lang, title: c.title, description: c.description,
+      alternateDe: canonicalFor(`regionen/${region.slug.de}/index.html`), alternateEn: canonicalFor(`en/regions/${region.slug.en}/index.html`),
+      schema: regionSchema(file, c.title, c.description, lang, trail) }) +
+    chrome(root, lang) +
+    `<main id="main"><header class="location-hero"><img src="${root}${photo.src}" width="${photo.w}" height="${photo.h}" alt="${esc(photo.alt)}"><div class="location-hero-overlay"></div><div class="container location-hero-content">` +
+    `<div class="breadcrumbs">${trail.map(([n, u], i) => i === trail.length - 1 ? esc(n) : `<a href="${root}${u || (de ? "index.html" : "en/")}">${esc(n)}</a>`).join(" · ")}</div>` +
+    `<span class="hero-kicker">MODUNERA · ${esc(region.name[lang])}</span><h1>${esc(c.h1)}</h1><p>${esc(c.lead)}</p>` +
+    `<div class="hero-actions"><a class="btn btn-primary" href="${root}${de ? "gewerblich/" : "en/commercial/"}">${de ? "Für Betreiber" : "For operators"}</a><a class="btn btn-light" href="${root}${de ? "modellvergleich/" : "en/model-comparison/"}">${de ? "Modelle vergleichen" : "Compare models"}</a></div></div></header>` +
+    `<section class="section section-tight"><div class="container"><div class="data-strip"><div><span>${de ? "Orte in der Region" : "Places in the region"}</span><strong>${towns.length}</strong></div><div><span>${de ? "Bundesländer" : "States"}</span><strong>${region.states.length}</strong></div><div><span>${de ? "Modelle" : "Models"}</span><strong>MD 1–MD 8</strong></div><div><span>${de ? "Grundbreite" : "Base width"}</span><strong>2,55 m</strong></div></div>` +
+    `<div class="answer-box"><strong>${de ? "Direkte Antwort" : "Direct answer"}</strong><p>${esc(c.answer)}</p></div></div></section>` +
+    `<section class="section"><div class="container"><div class="editorial-copy">${sections}</div>` +
+    `<p class="legal-note">${de ? "Was planungsrechtlich gilt, steht mit amtlicher Quelle auf der Seite des Bundeslandes:" : "What applies under planning law is on the state page, with the official source:"}</p><div class="hero-actions">${states}</div></div></section>` +
+    `<section class="section section-soft"><div class="container"><div class="section-header"><div><div class="eyebrow">${de ? "Betreiber" : "Operators"}</div><h2>${de ? "Wer hier typischerweise plant" : "Who typically plans here"}</h2></div></div><div class="state-grid">${segs}</div></div></section>` +
+    `<section class="section"><div class="container"><div class="section-header"><div><div class="eyebrow">${de ? "Orte" : "Places"}</div><h2>${de ? `${towns.length} Orte in der Region ${esc(region.name.de)}` : `${towns.length} places in the ${esc(region.name.en)} region`}</h2></div>` +
+    `<p>${de ? "Geografisch abgeleitete Zuordnung über Koordinaten und Bundesland — eine Orientierung, keine amtliche Gebietsabgrenzung." : "Assigned geographically by coordinates and state — an orientation, not an official boundary. The town pages are in German."}</p></div>${places}</div></section>` +
+    `<section class="section section-soft"><div class="container"><div class="section-header"><div><div class="eyebrow">${de ? "Andere Regionen" : "Other regions"}</div><h2>${de ? "Weitere Landschaften" : "Other landscapes"}</h2></div></div><div class="state-grid">${others}</div></div></section>` +
+    `</main>` + footer(root, lang);
+}
 
 /* --- MD 1-MD 8 comparison ------------------------------------------------- */
 
@@ -1408,6 +1643,18 @@ async function main() {
   await put("en/price-comparison/index.html", priceComparisonPage(pricing, "en"));
   await put("vorteile/index.html", advantagesPage(pricing, "de"));
   await put("en/advantages/index.html", advantagesPage(pricing, "en"));
+
+  for (const lang of ["de", "en"]) {
+    await put(`${COMMERCIAL.hub.slug[lang]}/index.html`, commercialHubPage(lang));
+    for (const seg of COMMERCIAL.segments) await put(`${seg.slug[lang]}/index.html`, commercialSegmentPage(seg, lang));
+  }
+
+  for (const lang of ["de", "en"]) {
+    await put(lang === "de" ? "regionen/index.html" : "en/regions/index.html", regionIndexPage(lang));
+    for (const region of REGIONS.regions) {
+      await put(lang === "de" ? `regionen/${region.slug.de}/index.html` : `en/regions/${region.slug.en}/index.html`, regionPage(region, lang));
+    }
+  }
 
   const posts = await collectGuides();
   const { groups, rest } = groupGuides(posts);

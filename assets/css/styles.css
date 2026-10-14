@@ -451,6 +451,11 @@ p{margin:0 0 10px}
    the two columns overlap. */
 .nav-menu-wide{display:grid;grid-template-columns:repeat(2,1fr);gap:2px 12px;
   width:min(536px,calc(100vw - 32px));min-width:0;left:50%;transform:translateX(-50%);padding:12px}
+/* a third column (the operator segments) widens the panel instead of wrapping under the first */
+.nav-menu-wide:has(.nav-col:nth-child(3)){grid-template-columns:repeat(3,1fr);width:min(800px,calc(100vw - 32px))}
+/* region pages: the long tail of places folds behind a summary line */
+.place-more{margin-top:14px}.place-more>summary{cursor:pointer;padding:14px 18px;border:1px solid var(--line);border-radius:14px;background:#fff;font-weight:700;list-style:none}
+.place-more>summary::-webkit-details-marker{display:none}.place-more>summary::after{content:" +";color:var(--muted)}.place-more[open]>summary::after{content:" −"}.place-more>.places-list{margin-top:10px}
 .nav-col{min-width:0}
 .nav-col h5{margin:0 0 4px;padding:0 11px;font-size:var(--fs-label);letter-spacing:.1em;
   text-transform:uppercase;color:var(--muted);font-weight:800}

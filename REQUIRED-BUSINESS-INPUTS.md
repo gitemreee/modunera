@@ -232,3 +232,36 @@ Fill in per model where it differs, once where it does not.
 **Preis**
 - [ ] Netto oder brutto, und mit welchem Mehrwertsteuersatz
 - [ ] Gültig ab welchem Datum
+
+## 8. Operators, regions and markets — blocks references on `/gewerblich/` and `/regionen/`
+
+Added 2026-10-14 with the operator pages and the tourism-region pages. Both
+are written without a single delivered project, operator name or regional
+rule, because none of those is confirmed. Each item below unlocks a sentence
+the pages currently cannot say.
+
+**Reference projects (B2B)**
+- [ ] Has MODUNERA delivered to a campsite, holiday park, hotel, marina, municipality or village project? Which, where, how many units, when — and may it be named?
+- [ ] A photograph of a delivered unit in operation (not a render), with the operator's written consent
+- [ ] One operator willing to be quoted, with name and role
+
+**Series and commercial terms**
+- [ ] Lead time for 5, 12 and 25 identical units
+- [ ] Volume terms, if any (the pages say "quoted per project" until there is a number)
+- [ ] Payment and warranty terms for operators, if they differ from private buyers
+
+**Winter and altitude**
+- [ ] Which models, with which package, are specified for year-round occupation — and the U-values that back it
+- [ ] Snow-load verification available per site, or a standard verification for a stated zone
+- [ ] Frost-proof water routing: standard, or an option, and what it contains
+
+**Markets**
+- [ ] Decision on Belgium and the United Kingdom as target markets (the October 2026 report ranks them second and fourth outside Germany; both need a dealer and, for the UK, UKCA and a customs broker)
+- [ ] Decision on a French country page under `/fr/` (the scan covers FR since 2026-10-14; the sections exist, the country page does not)
+- [ ] Which compliance files exist today: EN 1090, EN 14351, GPSR representative, RE2020 / BENG
+
+**The prospect list**
+- [ ] Where it lives (a CRM, not the repository) and who owns follow-up — the site carries its shape only, in `data/market-research-2026-10.json`
+
+**Forms**
+- [ ] A mailbox that receives Netlify form notifications (`modunera.com` has no MX record; `emre@` and `ersan@` do not receive mail until DNS is set up at the mail provider)

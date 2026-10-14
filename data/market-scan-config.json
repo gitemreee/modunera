@@ -30,7 +30,7 @@
     "carries its own terms in its own language, which is also why the results are",
     "worth having."
   ],
-  "reviewed_at": "2026-08-18",
+  "reviewed_at": "2026-10-14",
   "run": {
     "schedule_cron_utc": "35 4 * * *",
     "schedule_note": "04:35 UTC is 07:35 Europe/Istanbul. Istanbul is UTC+3 all year, so this does not drift with daylight saving. It runs before the daily post at 05:12 UTC on purpose: the scan may add a news item, and the post run should pick it up in the same morning rather than the next one. It is not on the hour because GitHub schedules cluster at :00 and are delayed there most.",
@@ -137,6 +137,23 @@
         }
       ],
       "brave_country": "CH"
+    },
+    {
+      "code": "FR",
+      "name": "France",
+      "languages": [
+        "fr"
+      ],
+      "queries": [
+        "tiny house commune PLU habitat léger",
+        "tiny house terrain commune appel à projets",
+        "habitat léger réversible commune autorisation",
+        "camping extension hébergement insolite permis",
+        "tiny house projet commune délibération",
+        "village de tiny houses commune"
+      ],
+      "brave_country": "FR",
+      "_note": "Added 2026-10-14 from the October 2026 import report: France is the largest 9406 importer outside Germany, the fastest-growing retail market in the report's sources, and the French market pages already exist under /fr/. There is no French country page on the site; news for FR therefore links to the countries hub until one is built."
     }
   ],
   "source_authority": [

@@ -249,6 +249,8 @@ const CATEGORY_LABEL = {
   "container": "Container",
   "kauf": "Kauf und Kundenfragen",
   "technik": "Technik im Betrieb",
+  "gewerbe": "Betreiber und Vermietung",
+  "regionen": "Regionen und Standorte",
 };
 
 /* --- the duplication guard -------------------------------------------------- */

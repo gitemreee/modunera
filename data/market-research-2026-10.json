@@ -1,0 +1,105 @@
+{
+  "_comment": [
+    "What two documents supplied by the owner on 2026-10-14 say, reduced to what",
+    "the site may act on. The documents themselves are not in the repository.",
+    "",
+    "Document A: 'Avrupa Tiny House & Modüler Ev Pazarı — Son 5 Yıl İthalat–",
+    "İhracat Analizi' (trade intelligence report, prepared 2026-10-13, HS 9406 and",
+    "8716.10, Germany excluded by design). Its figures come from UN Comtrade /",
+    "WITS, OEC, IndexBox, TrendEconomy, Trading Economics, Statistics Estonia and",
+    "named market-research houses; it marks every unit count as derived from",
+    "weight, and the site repeats none of its numbers as a claim. They are here",
+    "so the next decision about markets starts from the same table.",
+    "",
+    "Document B: 'MODUNERA — Almanya 100 Potansiyel B2B Müşteri Listesi': one",
+    "hundred named operators with web, telephone and e-mail. The list is a sales",
+    "asset and belongs in a CRM. This file keeps only its shape — how many of",
+    "which kind, in which landscape — because the shape is what decided which",
+    "pages to build. No name, domain, number or address from it is stored here",
+    "or anywhere else in the repository, which is public.",
+    "",
+    "Nothing in this file is rendered. It is read by people."
+  ],
+  "prepared": "2026-10-14",
+  "report": {
+    "scope": "HS 9406 prefabricated buildings (9406.10 wood, 9406.20 modular steel, 9406.90 other) plus 8716.10 for wheeled units; 2020–2024 full years, 2025 partial; Germany excluded from the ranking",
+    "caveat": "Customs data is reported in USD and kilograms. There is no 'tiny house' code; every unit count in the report is weight divided by an assumed 4–8 t per unit and is labelled an estimate there.",
+    "turkey_exports_9406_musd": { "2020": 239, "2021": 265, "2022": 296, "2023": 302, "2024": "261–279 (source-dependent)" },
+    "turkey_average_price_usd_per_t_2024": 2766,
+    "turkey_main_markets": "Gulf and Central Asia, not Europe; Europe is roughly 15–20 % of 9406 exports. Largest European destination: the Netherlands (16.6 M$ in 2022, 7.8 M$ in 2024); the UK is the most-requested market for wheeled units (10.5 M$ in 2024).",
+    "romania_position": "Second-ranked exporter in the report; ~20 % cheaper per tonne than Turkey (≈2,200 vs 2,766 $/t), capacity-limited, EU-internal. The report's advice is not to compete with Romania on price but on finish, design, delivery speed and full fit-out.",
+    "largest_european_importers_excl_de_musd": { "FR": "459–605", "UK": "547–570", "NO": 489, "SE": 439, "NL": 410, "CH": "120–150", "AT": "100–130" },
+    "retail_benchmarks_2026_eur": {
+      "_unit": "fully fitted 20 m² / 30 m², as quoted in the report from retail price guides; a benchmark, not a MODUNERA price",
+      "FR": { "per_m2": 2650, "20": 53000, "30": 73500 },
+      "BE": { "per_m2": 2700, "20": 54000, "30": 75000 },
+      "NL": { "per_m2": "2700–3200", "20": "54000–64000", "30": "75000–90000" },
+      "DE": { "per_m2": "2900–3200", "20": "58000–64000", "30": "80000–90000" },
+      "DK": { "per_m2": 3000, "20": 60000, "30": 85000 },
+      "AT": { "per_m2": 3000, "20": 60000, "30": 85000 },
+      "CH": { "per_m2": 4400, "20": 88000, "30": 120000 },
+      "UK": { "per_m2": 2600, "20": 52000, "30": 72000 },
+      "RO": { "per_m2": 1100, "20": 22000, "30": 32000 }
+    },
+    "market_size": "European tiny-home end-user market ≈245 M$ in 2024, ≈19.7 % CAGR to 2031 in the report's source; France the fastest-growing sub-market there; mobile (wheeled) share ≈60 %.",
+    "entry_priority_excl_de": ["NL", "BE", "FR", "UK+IE", "AT/CH", "SE/NO/DK", "GR/BG/RO"],
+    "b2b_segments": [
+      { "segment": "Glamping, camping and holiday-park chains", "countries": ["FR", "NL", "BE", "UK", "DK", "GR", "HR"], "typical_order": "5–50 units per project, annual renewal" },
+      { "segment": "Tiny-house villages and plot developers", "countries": ["NL", "BE", "FR", "UK"], "typical_order": "10–100 units" },
+      { "segment": "Municipalities — temporary and social housing", "countries": ["NL", "UK", "IE", "SE"], "typical_order": "20–200 units by tender" },
+      { "segment": "Farmers and rural landowners", "countries": ["FR", "NL"], "typical_order": "1–3 units" },
+      { "segment": "Short-term-rental investors", "countries": ["FR", "ES", "PT", "GR", "HR"], "typical_order": "1–5 units" },
+      { "segment": "Garden office / ADU", "countries": ["UK", "NL", "BE", "CH", "AT"], "typical_order": "1 unit, high volume, 10–20 m²" },
+      { "segment": "Student-housing operators", "countries": ["NL", "UK", "IE", "DK"], "typical_order": "50–300 stackable modules; EN 1090 steel certification required" }
+    ],
+    "compliance_items_the_report_names": ["CE: EN 1090 (steel), EN 14351 (windows)", "GPSR responsible representative in the EU", "NL BENG and FR RE2020 energy files", "FR habitat léger and UK Caravan Act compatible wheeled model (≤ 3,500 kg, O2 chassis)", "UKCA and a post-Brexit customs broker for the UK"],
+    "open_points_the_report_itself_lists": ["Turkey→FR/BE/RO/GR/Nordics 9406 figures by year (TÜİK query)", "Romania 2021–2022 partner breakdown (Eurostat Comext)", "8716.10 wheeled volume (TÜİK + Eurostat)", "A verified importer list (paid bill-of-lading data)", "2025 full-year data (Comtrade, Feb–Apr 2027)"]
+  },
+  "prospects_de": {
+    "count": 100,
+    "by_category": {
+      "_method": "The list's own category column; two records whose category wrapped across lines were assigned by reading the record.",
+      "Luxus-Glamping und Camping": 30,
+      "Naturhotel": 17,
+      "Ferienpark und Feriendorf": 13,
+      "Gemeinde und Tourismusverband": 13,
+      "Ökodorf": 12,
+      "Tiny-House-Siedlung und -Park": 8,
+      "Marina": 7
+    },
+    "by_tourism_region": {
+      "_method": "Keyword match on the list's one-line descriptions against the ten regions in data/tourism-regions.json. 54 records carry no landscape cue in their description and are not counted; one record matched two regions. These are cues, not geocoded positions.",
+      "alpen-chiemgau": 10,
+      "ostsee": 7,
+      "schwarzwald": 5,
+      "mecklenburgische-seenplatte": 5,
+      "nordsee": 5,
+      "eifel": 5,
+      "lueneburger-heide": 3,
+      "allgaeu": 3,
+      "harz": 3,
+      "bodensee": 1,
+      "no_cue": 54
+    },
+    "notes": [
+      "Several records are Austrian (Salzburger Land, Kärnten) or Europe-wide chains headquartered outside Germany; the list is 'Germany-facing', not strictly German.",
+      "The categories map one-to-one onto the six operator segments in data/commercial.json: camping ← Glamping/Camping and Tiny-House-Park; ferienpark ← Ferienpark/Feriendorf; hotel ← Naturhotel; marina ← Marina; gemeinde ← Gemeinde/Tourismusverband; dorf ← Ökodorf and Tiny-House-Siedlung.",
+      "What the list does not contain and the site therefore does not claim: that any of these operators has enquired, bought, or been delivered to."
+    ]
+  },
+  "what_changed_on_the_site": {
+    "2026-10-14": [
+      "data/commercial.json → /gewerblich/ and /en/commercial/ with six segment pages and the enquiry form with a use preset",
+      "data/tourism-regions.json → /regionen/ and /en/regions/ with ten landscape pages, towns assigned by coordinates",
+      "data/blog-daily-3.json and -4.json → ten operator-practice posts, 2026-10-15 to 2026-10-24",
+      "FR added to the markets in data/market-scan-config.json; country-link fallback in build-news-v7.mjs",
+      "Third column 'Für Betreiber' in the Tiny Houses menu; 'Regionen' entry in the Länder menu"
+    ],
+    "not_done_and_why": [
+      "BE and UK markets: a market-entry decision (dealer, UKCA, customs broker) for the owner, not a query list to add",
+      "'Nummer 1 im Tiny-House-Markt': not a publishable claim; the validators ban superlatives without a source, and the report ranks Turkey third as a supplier",
+      "Reference projects on the operator pages: none may be named until section 8 of REQUIRED-BUSINESS-INPUTS.md is answered",
+      "A French country page under /fr/: the French sections exist, the country page does not; a build decision for the next batch"
+    ]
+  }
+}

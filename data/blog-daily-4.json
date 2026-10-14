@@ -1,0 +1,635 @@
+{
+  "_comment": [
+    "Fourth queue, same day and same reasoning as blog-daily-3.json: the",
+    "operator's practice, one question per post. Posts 6 to 10 of the batch.",
+    "",
+    "The price post works a numbered example and says so in every figure. The",
+    "numbers are arithmetic on assumptions the reader is told to replace, not",
+    "market data, and not MODUNERA prices — those live in data/pricing.json and",
+    "on the model pages, and the post points there rather than restating them."
+  ],
+  "posts": [
+    {
+      "slug": "uebergabe-pruefen-bevor-unterschrieben-wird",
+      "publish_on": "2026-10-20",
+      "category": "gewerbe",
+      "title": "Die Übergabe: was ein Betreiber prüft, bevor er unterschreibt",
+      "description": "Am Liefertag steht die Einheit auf den Stützen und jemand hält ein Protokoll hin. Was ein Betreiber in dieser Stunde prüft — Ausrichtung, Türen, Dichtheit, Anschlüsse, Ausstattung, Unterlagen — und warum die Stunde nicht zu kürzen ist.",
+      "image": "delivery-trailer",
+      "imageAlt": "Tiny House auf dem Tieflader vor der Fertigung, bereit für die Auslieferung",
+      "lead": "Die Einheit steht auf dem Stellplatz, der Tieflader ist weg, der Kran abgebaut, und jemand hält ein Übergabeprotokoll hin. Es ist spät, alle sind müde, und die Versuchung ist groß, zu unterschreiben und morgen zu schauen. Diese Stunde ist die letzte, in der ein Mangel ein Mangel des Lieferanten ist und nicht ein Problem des Betreibers. Was darin geprüft wird, lässt sich in eine Reihenfolge bringen, die eine Stunde dauert und die man nicht kürzt.",
+      "sections": [
+        {
+          "h2": "Warum die Übergabestunde die teuerste Stunde des Projekts ist",
+          "p": [
+            "Ein Übergabeprotokoll ist das Dokument, das festhält, in welchem Zustand die Einheit angekommen ist. Was darin steht, ist dokumentiert; was nicht darin steht, muss später bewiesen werden. Ein Kratzer in der Arbeitsplatte, der am Liefertag notiert wird, ist ein Transportschaden. Derselbe Kratzer, drei Wochen später gemeldet, ist eine Diskussion darüber, ob der erste Gast ihn verursacht hat.",
+            "Das gilt für alles, was sich am Liefertag prüfen lässt und drei Wochen später nicht mehr eindeutig ist: Oberflächen, Dichtheit, Funktion der Geräte, Vollständigkeit der Ausstattung. Es gilt nicht für das, was sich erst im Betrieb zeigt — ein Heizungsthermostat, das im Dezember falsch regelt, ist am Liefertag im Oktober nicht zu prüfen, und dafür gibt es die Gewährleistung.",
+            "Deshalb ist die Übergabestunde kein Ritual, sondern die wirtschaftlich wichtigste Stunde des Projekts. Wer sie mit einer Liste angeht, braucht eine Stunde. Wer sie ohne Liste angeht, braucht entweder zwei oder übersieht die Hälfte. Bei MODUNERA gehört das Protokoll zur Lieferung; was ein Betreiber darüber hinaus je Betreiberart klärt, steht auf der Seite für Betreiber und Kommunen."
+          ]
+        },
+        {
+          "h2": "Erstens: Stand und Ausrichtung auf den Stützen",
+          "p": [
+            "Die Einheit steht auf vier Stützen, und ob sie richtig steht, entscheidet über alles, was danach kommt: ob Türen und Fenster schließen, ob Wasser in der Dusche abläuft, ob die Terrasse anschließt. Geprüft wird mit einer Wasserwaage in beiden Richtungen auf dem Boden und auf einer Fensterbank — und mit dem Blick darauf, ob alle vier Stützen tragen oder eine in der Luft hängt.",
+            "Der Untergrund unter den Stützen gehört zur Planung am Standort, nicht zur Lieferung. Trotzdem wird er bei der Übergabe angeschaut: Steht jede Stütze auf einer Platte, die die Last verteilt, oder auf Rasen, der nach dem ersten Regen nachgibt? Eine Einheit, die im November gerade steht und im März schief, ist kein Lieferfehler, sondern ein Untergrundfehler — aber er zeigt sich zuerst an den Türen, und dann wird gestritten.",
+            "Die Empfehlung: Ausrichtung in beiden Richtungen protokollieren, mit Foto der Wasserwaage, und den Untergrund unter jeder Stütze benennen. Das ist die Grundlage, auf die sich später alles bezieht."
+          ]
+        },
+        {
+          "h2": "Zweitens: jede Tür, jedes Fenster, jede Klappe",
+          "p": [
+            "Nach dem Stand kommen die beweglichen Teile. Jede Tür wird geöffnet, geschlossen, abgeschlossen, wieder aufgeschlossen; jedes Fenster gekippt, geöffnet, geschlossen; jede Klappe und jeder Schrank bewegt. Was klemmt, schleift oder nicht verriegelt, wird notiert — auch dann, wenn es nur ein wenig klemmt, denn ein wenig im Oktober ist viel im Dezember, wenn Holz und Dichtungen anders reagieren.",
+            "Dazu gehört die Dichtung: Ein Blatt Papier, zwischen Rahmen und Flügel geklemmt und bei geschlossenem Fenster herausgezogen, zeigt, ob die Dichtung anliegt. Ein Fenster, bei dem das Papier ohne Widerstand herausgeht, ist nicht dicht, und das zeigt sich im Betrieb als Zugluft und Kondensat. Das Nachstellen von Fenstern und Türen war Thema eines früheren Beitrags dieser Reihe; bei der Übergabe geht es nur darum, festzuhalten, was nachzustellen ist.",
+            "Für ein Mietobjekt kommt ein Punkt dazu: Die Schließanlage. Welche Schlüssel gehören zu welcher Tür, wie viele gibt es, funktioniert ein eventuelles Zahlenschloss? Was hier fehlt, fehlt beim ersten Gast."
+          ]
+        },
+        {
+          "h2": "Drittens: Wasser auf, Wasser zu, und was dazwischen passiert",
+          "p": [
+            "Wasser wird angeschlossen, der Haupthahn geöffnet, und dann wird gewartet. Ein paar Minuten, in denen niemand etwas aufdreht, und in denen man den Boden unter der Küchenzeile, im Bad und am Warmwasserbereiter anschaut. Was jetzt tropft, tropft unter Druck — und das ist der Moment, in dem man es sehen will, nicht nach dem ersten Gast.",
+            "Dann wird jede Entnahmestelle geöffnet: Spüle, Waschbecken, Dusche, WC-Spülung. Läuft Wasser, läuft es ab, läuft es warm, wenn der Warmwasserbereiter Zeit hatte? Jeder Abfluss wird mit einem Eimer Wasser geprüft, nicht nur mit dem Hahn — ein Siphon, der bei wenig Wasser ablaufen scheint und bei einem Eimer überläuft, ist ein Siphon mit Problem.",
+            "Die Dichtheit der Abwasserseite wird außen geprüft: Wo gehen die Abgänge hin, sind sie angeschlossen, tropft am Anschluss etwas? Das ist bei einer Einheit auf Stützen von unten sichtbar, und es ist die Stelle, an der sich im Betrieb Gerüche und Feuchte sammeln, wenn sie nicht dicht ist."
+          ]
+        },
+        {
+          "h2": "Viertens: Strom an, Gerät für Gerät",
+          "p": [
+            "Strom wird angeschlossen, der Hauptschalter eingeschaltet, und dann wird jeder Fehlerstromschutzschalter mit der Prüftaste ausgelöst und wieder eingeschaltet. Das ist die einzige Prüfung, die ein Laie an der Elektrik machen darf, und sie ist die wichtigste. Danach wird Gerät für Gerät eingeschaltet: Licht in jedem Raum, jede Steckdose mit einem Prüfgerät oder einem Ladegerät, Kochfeld, Kühlschrank, Warmwasserbereiter, Heizung, Lüftung, Klimagerät, wenn vorhanden.",
+            "Am Ende werden die Geräte gleichzeitig eingeschaltet, die ein Gast abends gleichzeitig einschalten würde — und die Sicherung muss halten. Wenn sie nicht hält, ist das am Liefertag ein Planungsthema, das sich klären lässt; im August ist es der Anruf um zehn Uhr abends, den ein früherer Beitrag beschrieben hat.",
+            "Protokolliert wird, was nicht geht, und was geht, wird nicht als selbstverständlich übergangen: Ein Satz wie 'alle Steckdosen geprüft, alle Geräte in Betrieb genommen, Volllasttest bestanden' ist im Protokoll mehr wert als ein Haken."
+          ]
+        },
+        {
+          "h2": "Fünftens: Oberflächen, Vollständigkeit, Ausstattung",
+          "p": [
+            "Jetzt kommt der Rundgang mit dem Blick, der sonst der Gast hat: Oberflächen auf Kratzer, Dellen, Flecken; Fugen auf Lücken; Kanten auf Beschädigung. Innen und außen, bei Tageslicht, mit einer Taschenlampe für die Stellen, an die kein Licht kommt. Was auffällt, wird fotografiert — mit einem Maßstab im Bild, wenn es um Größe geht — und im Protokoll mit Ort und Foto notiert.",
+            "Dann die Vollständigkeit: Die Ausstattungsliste aus dem Angebot wird Position für Position abgeglichen. Ist die Küche so bestückt wie bestellt, sind die Möbel die bestellten, sind Leuchten, Beschläge und Griffe die aus dem Angebot? Bei einem Mietobjekt kommt die Betriebsausstattung dazu — Matratzen, Bettwäsche, Vorhänge, Haken —, soweit sie Teil der Lieferung war.",
+            "Was fehlt oder abweicht, ist kein Grund, die Übergabe zu verweigern, aber ein Grund, es zu protokollieren. Ein Protokoll mit drei notierten Abweichungen ist ein normales Protokoll; eines ohne Notiz ist entweder ein perfektes Haus oder ein unvollständiger Rundgang."
+          ]
+        },
+        {
+          "h2": "Sechstens: die Unterlagen",
+          "p": [
+            "Mit der Einheit kommen Unterlagen, und sie werden bei der Übergabe auf Vollständigkeit geprüft, nicht gelesen: technische Zeichnungen, Angaben zu Maßen und Gewicht, Elektro- und Sanitärpläne, Bedienungsanleitungen der Geräte, die Liste der Komponenten, mit denen Ersatzteile identifiziert werden, Pflegehinweise für Oberflächen. Was fehlt, wird nachgefordert — jetzt, wo es einfach ist.",
+            "Für einen Betreiber sind diese Unterlagen die Grundlage des Betriebs: Die Elektropläne braucht die Fachkraft, die im August kommt; die Komponentenliste braucht, wer Ersatzteile bestellt; die Pflegehinweise braucht, wer reinigt. Ein Ordner, der am Liefertag vollständig ist, erspart im Betrieb Dutzende Anrufe.",
+            "Für ein Mietobjekt lohnt sich außerdem, aus den Unterlagen gleich das zu machen, was im Haus hängen soll: die Anleitung für den Gast — Sicherung, Heizung, Wasser, Müll — in drei Sätzen je Thema."
+          ]
+        },
+        {
+          "h2": "Wer bei der Übergabe dabei ist",
+          "p": [
+            "Auf der Seite des Betreibers sollte die Person dabei sein, die die Einheit später betreibt — nicht nur die, die sie gekauft hat. Wer die Reinigung organisiert, sieht andere Dinge als wer den Vertrag unterschrieben hat: ob der Abstand zwischen Bett und Wand den Wischmopp durchlässt, ob der Mülleimer dort steht, wo er am Wechseltag gebraucht wird, ob der Schlüsselkasten erreichbar ist. Diese Perspektive fehlt in den meisten Protokollen, und sie ist die, die im Betrieb jeden Tag zählt.",
+            "Dazu kommt, wo Elektrik und Wasseranschluss vom Platz gestellt wurden, der Platzwart oder die Fachkraft, die die Anschlüsse gemacht hat. Ein Anschluss, der bei der Übergabe nicht funktioniert, hat zwei mögliche Ursachen — die Einheit oder der Platz —, und wenn beide Seiten im selben Moment vor Ort sind, ist die Ursache in zehn Minuten geklärt statt in zehn Tagen.",
+            "Auf der Seite des Lieferanten ist jemand dabei, der die Einheit kennt und entscheiden darf: Wer eine Abweichung nicht anerkennen kann, weil er dafür erst anrufen muss, verlängert die Stunde. Bei MODUNERA ist das die Person, die die Auslieferung begleitet, und sie hat die Ausstattungsliste des Angebots dabei."
+          ]
+        },
+        {
+          "h2": "Fotos, die später etwas beweisen",
+          "p": [
+            "Fotos sind der Teil des Protokolls, der ohne Anleitung am häufigsten misslingt. Ein Bild eines Kratzers ohne Umgebung zeigt einen Kratzer irgendwo; ein Bild mit einem Zollstock daneben und einem zweiten Bild, das zeigt, an welcher Stelle der Arbeitsplatte er liegt, zeigt einen bestimmten Kratzer an einem bestimmten Ort. Die Regel ist deshalb: je Abweichung ein Übersichtsbild und ein Detailbild, beide mit Datum, beide dem Protokollpunkt zugeordnet.",
+            "Dazu kommen Bilder, die keine Abweichung zeigen: jeder Raum aus zwei Ecken, jede Fassadenseite, die Unterseite mit den Stützen, der Verteiler mit allen Schaltern in Stellung, der Zählerstand von Strom und Wasser. Diese Bilder sind die Ausgangslage für alles Spätere — für die Gewährleistung, für den Vergleich im Oktober und im März, für die Versicherung, wenn es je nötig wird.",
+            "Die Bilder werden am selben Tag an einem Ort gespeichert, der nicht das Telefon ist, auf dem sie aufgenommen wurden, und der Ordner trägt das Datum der Übergabe. Ein Protokoll mit einem Ordner von vierzig Bildern ist in einem Jahr noch nutzbar; eines mit Bildern, die irgendwo auf einem Telefon liegen, nicht."
+          ]
+        },
+        {
+          "h2": "Siebtens: unterschreiben, mit allem, was notiert ist",
+          "p": [
+            "Am Ende wird unterschrieben, und zwar mit dem, was im Protokoll steht: Ausrichtung und Untergrund, bewegliche Teile und Dichtungen, Wasser und Abwasser, Strom und Volllast, Oberflächen und Vollständigkeit, Unterlagen. Jede Abweichung mit Ort, Foto und, soweit möglich, einer Vereinbarung darüber, wer sie bis wann behebt. Ein Protokoll mit Abweichungen und Vereinbarungen ist ein gutes Protokoll — es ist das, was beide Seiten später brauchen.",
+            "Was nicht unterschrieben werden sollte, ist ein Protokoll ohne Prüfung — 'wird morgen angeschaut' steht in keinem Protokoll und hilft niemandem. Und was nicht verweigert werden sollte, ist die Übergabe wegen Abweichungen, die sich beheben lassen: Die Einheit steht, sie ist dicht, sie funktioniert; ein Kratzer in der Arbeitsplatte ist ein Kratzer, kein Grund, den Tieflader zurückzurufen.",
+            "Die Stunde ist dann vorbei. Was sie gekostet hat, ist eine Stunde; was sie erspart, zeigt sich in den Monaten danach, in jedem Gespräch, das nicht geführt werden muss, weil es im Protokoll steht."
+          ]
+        }
+      ],
+      "checklist": {
+        "h2": "Die Übergabestunde",
+        "items": [
+          "Ausrichtung mit Wasserwaage in beiden Richtungen, alle vier Stützen tragen, Untergrund je Stütze benannt",
+          "Jede Tür, jedes Fenster, jede Klappe bewegt; Dichtungen mit Papierprobe; Schlüssel gezählt",
+          "Wasser unter Druck, Minuten warten, Boden an Küche, Bad und Warmwasserbereiter prüfen",
+          "Jede Entnahmestelle, jeder Abfluss mit Eimer, Abwasserabgänge von außen",
+          "Prüftaste jedes Fehlerstromschutzschalters, jede Steckdose, jedes Gerät, dann Volllast",
+          "Oberflächen innen und außen bei Tageslicht und Taschenlampe, Abweichungen mit Foto und Maßstab",
+          "Ausstattungsliste aus dem Angebot Position für Position",
+          "Unterlagen auf Vollständigkeit: Zeichnungen, Pläne, Anleitungen, Komponentenliste, Pflegehinweise",
+          "Unterschrift mit allen Notizen und Vereinbarungen — nicht ohne Prüfung, nicht verweigert wegen Behebbarem"
+        ]
+      },
+      "faq": [
+        [
+          "Wie lange dauert eine Übergabe?",
+          "Mit Liste etwa eine Stunde für eine Einheit; bei mehreren gleichen Einheiten wird die zweite schneller, weil man weiß, wo man hinschaut. Ohne Liste dauert es entweder länger oder es wird die Hälfte übersehen."
+        ],
+        [
+          "Was ist, wenn es bei der Übergabe dunkel ist?",
+          "Dann wird der Teil der Prüfung, der Tageslicht braucht — Oberflächen außen, Fugen, Fassade —, am nächsten Morgen nachgeholt und im Protokoll als offen vermerkt. Alles andere lässt sich mit Innenlicht und Taschenlampe prüfen. Ein Protokoll mit einem offenen Punkt ist besser als keines."
+        ],
+        [
+          "Darf ich die Übergabe verweigern?",
+          "Wenn die Einheit nicht steht, nicht dicht ist oder nicht funktioniert, ja. Wegen behebbarer Abweichungen — ein Kratzer, ein fehlendes Teil, ein klemmendes Fenster — nicht; die werden protokolliert und mit Frist vereinbart. Die Einheit ist dann geliefert, der Mangel ist dokumentiert."
+        ],
+        [
+          "Wer trägt Mängel, die erst im Betrieb auffallen?",
+          "Das regelt die Gewährleistung, und dafür ist das Protokoll die Ausgangsbasis: Was am Liefertag in Ordnung war, steht darin, und was später auftritt, lässt sich davon abgrenzen. Ein Thermostat, das im Dezember falsch regelt, war im Oktober nicht prüfbar — das ist ein Gewährleistungsfall, kein Übergabeversäumnis."
+        ],
+        [
+          "Gehört ein Übergabeprotokoll zur Lieferung von MODUNERA?",
+          "Ja. Es hält den Zustand bei Lieferung fest und wird von beiden Seiten unterschrieben. Die Liste in diesem Beitrag ist das, was ein Betreiber darüber hinaus für sich prüft — insbesondere Volllast, Ausstattung und die Unterlagen, die er im Betrieb braucht."
+        ]
+      ]
+    },
+    {
+      "slug": "winterfest-in-einem-nachmittag",
+      "publish_on": "2026-10-21",
+      "category": "gewerbe",
+      "title": "Eine Vermietungseinheit winterfest machen: der Nachmittag im Oktober",
+      "description": "Eine Einheit, die über den Winter leer steht, braucht einen Nachmittag im Oktober und eine Reihenfolge: Wasser entleeren, Frostschutz, Lüftung, Strom, Innenraum, Außenbereich. Was dabei getan wird und was im März den Unterschied macht.",
+      "image": "unit-standing-seam",
+      "imageAlt": "Längsseite eines Tiny House mit dunkler Stehfalzfassade, Fenster geschlossen",
+      "lead": "Der letzte Gast ist abgereist, die Saison ist vorbei, und die Einheit wird bis März nicht mehr bewohnt. Was jetzt in einem Nachmittag getan wird, entscheidet darüber, ob im März eine Einheit wartet, die man aufschließt und lüftet — oder eine, in der ein geplatztes Rohr, ein schimmelnder Schrank oder ein leergelaufener Akku wartet. Dieser Beitrag geht den Nachmittag in der Reihenfolge durch, in der er funktioniert.",
+      "sections": [
+        {
+          "h2": "Zwei Arten von Winter: leer und beheizt, oder leer und kalt",
+          "p": [
+            "Bevor der Nachmittag beginnt, braucht es eine Entscheidung: Bleibt die Heizung über den Winter auf Frostschutz, oder wird die Einheit kalt gestellt? Beides ist möglich, beides hat einen Preis. Frostschutzbetrieb kostet Strom über fünf Monate und setzt voraus, dass der Strom nicht ausfällt — ein Ausfall im Januar, den niemand bemerkt, ist dann ein geplatztes Rohr. Kaltstellen kostet nichts im Betrieb, verlangt aber, dass jeder Tropfen Wasser aus dem Haus ist.",
+            "Für Vermietungseinheiten, die vom Platz aus nicht täglich gesehen werden, ist Kaltstellen in der Regel die sicherere Wahl: Es gibt nichts, was ausfallen kann. Für Einheiten, die neben dem Haupthaus stehen und bei denen jemand den Stromausfall bemerken würde, ist Frostschutz bequemer, weil das Entleeren entfällt. Was die Platzordnung und die Genehmigung zum Winterstand sagen, kommt hinzu — das hat der Beitrag zur Platzordnung behandelt.",
+            "Der Rest dieses Beitrags geht vom Kaltstellen aus, weil das der Fall ist, bei dem etwas zu tun ist. Wer auf Frostschutz lässt, macht denselben Nachmittag ohne das Entleeren — und mit einem Plan für den Stromausfall."
+          ]
+        },
+        {
+          "h2": "Erstens: Wasser raus, vollständig",
+          "p": [
+            "Der Haupthahn wird geschlossen, dann werden alle Entnahmestellen geöffnet — Spüle, Waschbecken, Dusche, Außenhahn — und bleiben offen, damit die Leitungen leerlaufen. Der Warmwasserbereiter wird entleert, über seinen Entleerungshahn, in einen Eimer oder nach draußen; ein Speicher, der voll bleibt, ist der häufigste Frostschaden in kaltgestellten Einheiten. Die WC-Spülung wird betätigt, bis der Spülkasten leer ist, und der Siphon des WC wird mit Frostschutzmittel für Sanitärleitungen gefüllt, ebenso die Siphons von Dusche, Waschbecken und Spüle.",
+            "Was hier oft übersehen wird: der Tiefpunkt. Jede Wasserleitung hat eine tiefste Stelle, an der Wasser stehen bleibt, wenn es nicht abfließen kann — eine Schleife unter der Küchenzeile, ein Bogen hinter dem Warmwasserbereiter. Wo die Installation einen Entleerungshahn am Tiefpunkt hat, wird er geöffnet; wo sie keinen hat, wird mit Druckluft ausgeblasen, vorsichtig, oder die Leitung bleibt ein Risiko, das man kennt.",
+            "Bei MODUNERA wird die Wasserführung für Einheiten, die kaltgestellt werden sollen, mit Entleerungsmöglichkeit am Tiefpunkt geplant — das ist eine Frage, die bei der Planung gestellt wird, nicht beim ersten Winter. Welche Komponenten das betrifft, steht auf der Qualitätsseite."
+          ]
+        },
+        {
+          "h2": "Zweitens: Geräte, die Wasser halten",
+          "p": [
+            "Nach den Leitungen kommen die Geräte, die unbemerkt Wasser halten: Der Kühlschrank wird abgetaut, ausgewischt und mit offener Tür stehen gelassen, damit er nicht schimmelt. Eine Waschmaschine, falls vorhanden, wird über die Notentleerung geleert und der Zulaufschlauch abgeschraubt. Ein Geschirrspüler ebenso. Eine Kaffeemaschine wird geleert. Jedes Gerät mit Wassertank — Luftentfeuchter, Dampfbügelstation — wird geleert und offen gelassen.",
+            "Die Klimaanlage, wenn vorhanden, hat einen Kondensatablauf, der im Winter einfrieren kann; er wird geprüft und, wo möglich, freigeblasen. Die Lüftungsanlage mit Wärmerückgewinnung hat einen Kondensatablauf mit Siphon, der ebenfalls Frostschutz braucht, wenn die Anlage abgeschaltet wird.",
+            "Jedes dieser Geräte ist ein kleiner Punkt, und jeder davon ist im März ein großer, wenn er übersehen wurde: ein Kühlschrank, der fünf Monate geschlossen stand, riecht nach fünf Monaten; eine Waschmaschine mit Restwasser hat eine geplatzte Pumpe."
+          ]
+        },
+        {
+          "h2": "Drittens: Lüftung einstellen, nicht abschalten",
+          "p": [
+            "Die Versuchung ist, alles abzuschalten und die Einheit zu verschließen. Das ist der Weg zu Schimmel. Eine kaltgestellte Einheit, die fünf Monate ohne Luftwechsel steht, sammelt Feuchte aus den Materialien, aus dem Boden, aus jeder Temperaturschwankung — und die Feuchte kondensiert an der kältesten Stelle, meist in einer Ecke hinter einem Schrank.",
+            "Deshalb bleibt die Lüftung an, auf kleinster Stufe, wenn sie Strom hat; oder die Einheit bekommt eine kontrollierte Dauerlüftung über gekippte Fenster mit Insektenschutz und Regenschutz, wenn kein Strom bleibt. Schränke werden geöffnet, Schubladen herausgezogen, Matratzen hochgestellt, Polster aufgestellt — alles, was Luft an Oberflächen bringt, die sonst eingeschlossen wären.",
+            "Ein Luftentfeuchter mit Granulat in jedem Raum ist für kaltgestellte Einheiten ohne Strom eine einfache Hilfe; einer mit Stromanschluss und Dauerablauf ist die bessere, wenn Strom bleibt. Was man im März sieht, wenn die Lüftung richtig eingestellt war: nichts. Das ist das Ziel."
+          ]
+        },
+        {
+          "h2": "Viertens: Strom — was bleibt an, was geht aus",
+          "p": [
+            "Wenn die Einheit kaltgestellt wird, bleibt wenig an: die Lüftung auf kleinster Stufe, eventuell ein Entfeuchter, eventuell eine Alarmanlage oder ein Temperaturfühler, der meldet. Alles andere geht aus — nicht nur die Geräte, sondern die Stromkreise am Verteiler, damit nichts im Standby Strom zieht und nichts bei einem Fehler Schaden anrichtet. Der Fehlerstromschutzschalter bleibt an, damit das, was an bleibt, geschützt ist.",
+            "Akkus werden ausgebaut oder auf Lagerladung gebracht: Akkuwerkzeug, Fernbedienungen, Rauchmelder mit austauschbarer Batterie — die Batterie bleibt drin, der Melder bleibt aktiv. Eine Photovoltaikanlage mit Speicher, falls vorhanden, wird nach Herstellerangabe in den Winterbetrieb versetzt, nicht einfach abgeschaltet; ein Speicher, der fünf Monate leer steht, ist im März ein Speicher mit weniger Kapazität.",
+            "Ein Temperaturfühler mit Meldung ist für Betreiber, die mehrere Einheiten kaltstellen, die beste Investition dieses Nachmittags: Er meldet, wenn es in einer Einheit kälter wird als geplant — und damit, dass ein Fenster aufgegangen ist, eine Tür nicht schließt oder etwas anderes nicht stimmt."
+          ]
+        },
+        {
+          "h2": "Fünftens: Innenraum — reinigen, sichern, dokumentieren",
+          "p": [
+            "Die Einheit wird gereinigt wie nach einem Gast, aber gründlicher: alles, was Lebensmittel war, raus; alles, was Feuchte hält, aufgestellt; Textilien gewaschen und trocken verstaut oder mitgenommen; Mülleimer leer und offen. Was fünf Monate in einer kalten Einheit bleibt, sollte nichts sein, was ein Tier anzieht oder einen Geruch entwickelt.",
+            "Dann wird gesichert: Fenster geschlossen bis auf die, die bewusst gekippt bleiben; Rollläden oder Vorhänge so, dass Sonne nicht auf Polster scheint, aber Licht hereinkommt; Türen abgeschlossen; Schlüssel am vereinbarten Ort. Und dokumentiert: ein Rundgang mit Fotos jedes Raums, datiert — das ist der Zustand im Oktober, mit dem der Zustand im März verglichen wird.",
+            "Für Betreiber mit mehreren Einheiten lohnt sich eine Liste je Einheit, die beim Kaltstellen abgehakt und beim Wiederanfahren im März in umgekehrter Reihenfolge durchgegangen wird. Die Liste ist dieselbe; nur die Richtung ändert sich."
+          ]
+        },
+        {
+          "h2": "Sechstens: der Außenbereich",
+          "p": [
+            "Die Terrasse wird freigeräumt, Möbel verstaut oder abgedeckt, Pflanzkübel entleert oder frostsicher gestellt. Die Dachentwässerung wird gereinigt — Laub in der Rinne ist im Herbst normal und im Winter ein Eisdamm; ein früherer Beitrag dieser Reihe hat die Dachentwässerung im Herbst behandelt. Der Bereich unter der Einheit wird kontrolliert: Nichts, was Wasser staut, nichts, was ein Tier als Winterquartier nutzt.",
+            "Die Stützen werden angeschaut: Steht die Einheit noch gerade, hat sich der Untergrund unter einer Stütze gesetzt? Eine Einheit, die im Oktober schief steht, steht im März schiefer. Der Außenhahn wird entleert und offen gelassen, Schläuche abgeschraubt und verstaut.",
+            "Zuletzt der Blick auf die Fassade: Wo ist Holz vergraut, wo ist Metall angelaufen, wo sammelt sich Schmutz? Das ist keine Winterarbeit, aber der Moment, in dem man es sieht und für das Frühjahr notiert."
+          ]
+        },
+        {
+          "h2": "Frostschutzmittel: welches, wie viel, wohin",
+          "p": [
+            "In die Siphons gehört Frostschutzmittel für Sanitäranlagen, nicht das Mittel aus dem Kühler eines Autos. Das Sanitärmittel ist für Kunststoffe und Dichtungen unbedenklich und für den Abfluss zugelassen; das Kfz-Mittel ist beides nicht und wird im März in die Kläranlage oder die Sickergrube gespült. Wer eine Einheit ohne Kanalanschluss betreibt, achtet außerdem darauf, dass das Mittel mit dem Tank oder der Kleinkläranlage verträglich ist — die Herstellerangabe sagt es.",
+            "Die Menge richtet sich nach dem Siphon: Er muss so weit gefüllt sein, dass das Wasser darin vollständig ersetzt ist, sonst friert die Mischung an der Oberfläche trotzdem. Praktisch heißt das, das Mittel langsam einzugießen, bis es den Siphon durchspült hat, und dann noch etwas nachzugeben. Beim WC wird der Siphon in der Schüssel genauso behandelt; der Spülkasten bleibt leer.",
+            "Das Mittel wird im Protokoll des Nachmittags vermerkt — Produkt, Menge, Stellen —, damit im März klar ist, was gespült werden muss und wohin das Spülwasser darf."
+          ]
+        },
+        {
+          "h2": "Mehrere Einheiten: die Reihenfolge über den Platz",
+          "p": [
+            "Wer acht oder zwölf Einheiten kaltstellt, macht nicht zwölfmal denselben Nachmittag, sondern einen Nachmittag in Stationen: erst in allen Einheiten das Wasser abstellen und entleeren, dann in allen die Geräte, dann in allen die Lüftung und den Strom, dann in allen den Innenraum. Das spart Wege, Werkzeug und vor allem Fehler — wer den gleichen Handgriff zwölfmal hintereinander macht, vergisst ihn beim zwölften Mal nicht.",
+            "Die Liste je Einheit bleibt trotzdem, und sie wird je Einheit abgehakt, nicht je Station. Am Ende des Nachmittags liegen zwölf abgehakte Listen vor, und was auf einer offen ist, wird am nächsten Morgen nachgeholt. Eine Einheit, bei der nicht sicher ist, ob der Speicher entleert wurde, wird noch einmal aufgeschlossen — die zehn Minuten sind billiger als der Speicher.",
+            "Wenn der Platz über den Winter geschlossen ist, kommt noch dazu, wer im Januar nach den Einheiten sieht: einmal im Monat ein Rundgang, Temperaturfühler abgefragt, Fenster von außen kontrolliert, nach Sturm ein Blick auf Dächer und Terrassen. Das ist kein Tag Arbeit, aber es ist jemandes Aufgabe, und sie wird benannt, bevor der Platz schließt.",
+            "Was dabei ebenfalls über den Platz entschieden wird: wo die ausgebauten Akkus, die Textilien und die Terrassenmöbel lagern. Zwölf Einheiten ergeben zwölf Sätze Polster, und ein trockener Raum dafür gehört zur Planung des Platzes, nicht zur Improvisation am Nachmittag. Wer ihn nicht hat, lässt die Polster in den Einheiten — aufgestellt, nicht gestapelt — und nimmt in Kauf, dass sie im März gelüftet werden müssen."
+          ]
+        },
+        {
+          "h2": "Was im März den Unterschied macht",
+          "p": [
+            "Der Nachmittag im Oktober dauert, je nach Einheit, drei bis vier Stunden, bei mehreren gleichen Einheiten weniger je Einheit. Was er im März erspart, lässt sich nicht in Stunden messen, sondern in dem, was nicht passiert ist: kein geplatztes Rohr, kein Schimmel in der Ecke, kein Kühlschrank, der ausgetauscht werden muss, kein Speicher mit halber Kapazität. Jedes davon kostet mehr als der Nachmittag.",
+            "Und es lässt sich daran messen, wie das Wiederanfahren läuft: Wasser auf, Strom an, Lüftung hoch, lüften, reinigen, Betten beziehen — ein Vormittag, wenn der Oktober richtig war. Ein Nachmittag im Oktober und ein Vormittag im März: Das ist der Preis dafür, dass eine Vermietungseinheit fünf Monate leer steht, ohne Schaden zu nehmen.",
+            "Für die Planung heißt das: Eine Einheit, die kaltgestellt werden soll, wird dafür geplant — mit Entleerung am Tiefpunkt, mit einer Lüftung, die auf kleinster Stufe laufen kann, mit einem Verteiler, an dem sich Stromkreise einzeln abschalten lassen. Das ist bei MODUNERA eine Frage der Anfrage, nicht des ersten Winters."
+          ]
+        }
+      ],
+      "checklist": {
+        "h2": "Der Nachmittag im Oktober",
+        "items": [
+          "Entscheidung: Frostschutzbetrieb mit Stromausfallplan, oder kaltstellen",
+          "Haupthahn zu, alle Entnahmestellen auf, Warmwasserbereiter entleert, Spülkasten leer, Siphons mit Frostschutz",
+          "Tiefpunkt der Leitungen entleert oder ausgeblasen",
+          "Kühlschrank abgetaut und offen, Waschmaschine und Geschirrspüler notentleert, alle Tanks leer",
+          "Kondensatabläufe von Klima und Lüftung geprüft",
+          "Lüftung auf kleinster Stufe, Schränke offen, Matratzen hoch, Entfeuchter gestellt",
+          "Stromkreise am Verteiler aus, FI an, Akkus versorgt, Temperaturfühler mit Meldung",
+          "Innenraum gereinigt, gesichert, mit datierten Fotos dokumentiert",
+          "Terrasse geräumt, Dachrinne gereinigt, Stützen und Untergrund kontrolliert, Außenhahn entleert"
+        ]
+      },
+      "faq": [
+        [
+          "Ist Frostschutzbetrieb oder Kaltstellen besser?",
+          "Für Einheiten, die über den Winter nicht täglich gesehen werden, ist Kaltstellen sicherer, weil nichts ausfallen kann. Für Einheiten neben dem Haupthaus, bei denen ein Stromausfall bemerkt würde, ist Frostschutz bequemer. Beides geht; die Entscheidung fällt vor dem Nachmittag."
+        ],
+        [
+          "Reicht es, den Haupthahn zu schließen?",
+          "Nein. Das Wasser in den Leitungen, im Warmwasserbereiter, im Spülkasten und in den Siphons bleibt und friert. Entleeren heißt: Leitungen leerlaufen lassen, Speicher entleeren, Siphons mit Frostschutz füllen, Tiefpunkt entleeren oder ausblasen."
+        ],
+        [
+          "Warum soll die Lüftung anbleiben, wenn niemand da ist?",
+          "Weil eine verschlossene Einheit ohne Luftwechsel über fünf Monate Feuchte sammelt, die an der kältesten Stelle kondensiert — das ist Schimmel hinter dem Schrank. Lüftung auf kleinster Stufe, offene Schränke und ein Entfeuchter verhindern das."
+        ],
+        [
+          "Was ist mit einer Photovoltaikanlage und Speicher?",
+          "Sie werden nach Herstellerangabe in den Winterbetrieb versetzt, nicht abgeschaltet. Ein Speicher, der fünf Monate leer steht, verliert Kapazität. Was die Anlage im Winter liefert, reicht meist für Lüftung und Temperaturfühler."
+        ],
+        [
+          "Wird eine Einheit von MODUNERA für das Kaltstellen geplant?",
+          "Wenn das bei der Anfrage genannt wird, ja: Entleerung am Tiefpunkt, eine Lüftung mit kleinster Stufe, ein Verteiler mit einzeln schaltbaren Stromkreisen. Das sind Planungsentscheidungen, keine Nachrüstungen — deshalb gehört der Winterbetrieb in die Anfrage."
+        ]
+      ]
+    },
+    {
+      "slug": "saisonstart-durchsicht",
+      "publish_on": "2026-10-22",
+      "category": "gewerbe",
+      "title": "Saisonstart: die Durchsicht einer Einheit, bevor der erste Gast kommt",
+      "description": "Im März wird die Einheit wieder angefahren. Was ein Betreiber dabei durchgeht — in umgekehrter Reihenfolge zum Oktober — und was er dabei findet, wenn der Winter etwas hinterlassen hat.",
+      "image": "interior-stair-white",
+      "imageAlt": "Heller Innenraum mit weißer Treppe, Fenster geöffnet, Licht auf dem Boden",
+      "lead": "Der erste Gast kommt in zwei Wochen, die Einheit stand fünf Monate leer, und irgendwo zwischen dem Aufschließen und dem Beziehen der Betten muss alles gefunden werden, was der Winter hinterlassen hat. Die Durchsicht im März ist der Nachmittag im Oktober rückwärts — plus den Blick auf das, was sich in fünf Monaten ohne Zutun verändert hat. Dieser Beitrag geht sie durch, mit dem, was man dabei typischerweise findet.",
+      "sections": [
+        {
+          "h2": "Die Reihenfolge: erst schauen, dann einschalten",
+          "p": [
+            "Die Versuchung im März ist, Wasser und Strom einzuschalten und zu sehen, was passiert. Das ist die falsche Reihenfolge. Zuerst wird geschaut — mit geschlossenem Haupthahn und ausgeschaltetem Verteiler —, ob der Winter etwas hinterlassen hat, das beim Einschalten zum Schaden wird: ein Riss in einer Leitung, ein Nest in einem Gerät, Feuchte an einer Steckdose. Erst wenn der Rundgang nichts Beunruhigendes zeigt, wird eingeschaltet, Schritt für Schritt.",
+            "Der Rundgang beginnt außen: Fassade, Dach, Dachentwässerung, Stützen, Untergrund, Terrasse. Dann innen: Decken, Wände, Ecken, Fenster, Böden, Schränke, Geräte. Dann die Technik: Wasser, Strom, Lüftung, Heizung. Dann die Ausstattung: Betten, Küche, Bad, Gästeanleitung. Dann die Dokumentation: Fotos vom März neben die Fotos vom Oktober.",
+            "Wer die Liste vom Oktober hat, geht sie rückwärts durch. Wer sie nicht hat, macht sie jetzt — und hat sie im nächsten Oktober. Wie Betreiber die Einheit im Herbst kaltstellen, hat der vorige Beitrag beschrieben; was dort getan wurde, wird hier geprüft."
+          ]
+        },
+        {
+          "h2": "Außen: was fünf Monate Wetter hinterlassen",
+          "p": [
+            "Die Fassade zuerst. Holz ist über den Winter weiter vergraut, und das ist normal — ein früherer Beitrag hat erklärt, was Vergrauung ist und was nicht. Nicht normal sind Risse, abgeplatzte Oberflächen, dunkle Flecken an Stellen, an denen Wasser gestanden hat, und Spuren von Tieren. Metallfassaden werden auf Kratzer, Beulen und Anlaufstellen angeschaut, besonders an der Wetterseite und an der Küste.",
+            "Dach und Dachentwässerung: Liegt Laub in der Rinne, ist ein Fallrohr verstopft, hat ein Eisdamm etwas verschoben? Ein Blick mit der Leiter, ein Eimer Wasser in die Rinne, und man sieht, ob es abläuft. Die Stützen: Steht die Einheit noch gerade? Die Wasserwaage auf dem Boden sagt es; wenn sich eine Stütze gesetzt hat, wird nachgestellt, bevor Türen und Fenster geprüft werden — sonst prüft man den Untergrund, nicht die Fenster.",
+            "Der Bereich unter der Einheit: trocken, frei, ohne Nester? Der Außenhahn: entleert geblieben, kein Riss? Die Terrasse: Dielen fest, Geländer fest, nichts, was ein Gast mit dem Fuß findet?"
+          ]
+        },
+        {
+          "h2": "Innen: Feuchte, Gerüche und die Ecke hinter dem Schrank",
+          "p": [
+            "Die Tür geht auf, und das Erste, was man prüft, ist der Geruch. Eine Einheit, die richtig gelüftet überwintert hat, riecht nach nichts. Eine, die muffig riecht, hat irgendwo Feuchte — und die wird gesucht, bevor irgendetwas anderes geschieht: in den Ecken hinter Schränken, unter Matratzen, in der Dusche, hinter dem Kühlschrank, an der Innenseite der Fenster, wo Kondensat gestanden hat.",
+            "Was man dabei findet, ist meistens klein: ein Fleck Schimmel in einer Ecke, der sich mit dem richtigen Mittel entfernen lässt; Kondensatspuren auf einer Fensterbank; eine Matratze, die feucht geworden ist, weil sie nicht hochgestellt war. Jeder Fund ist eine Notiz für den nächsten Oktober: Diese Ecke braucht einen Entfeuchter, diese Matratze muss raus.",
+            "Dann die Fenster und Türen: Schließen sie, nach einem Winter, in dem Holz und Dichtungen gearbeitet haben? Was klemmt, wird nachgestellt. Die Böden: Fugen, Kanten, Stellen, an denen Wasser gestanden haben könnte. Die Schränke: innen trocken, keine Spuren von Tieren, nichts, was über den Winter vergessen wurde."
+          ]
+        },
+        {
+          "h2": "Wasser: Schritt für Schritt, mit Blick nach unten",
+          "p": [
+            "Erst wenn der Rundgang nichts Beunruhigendes gezeigt hat, kommt das Wasser. Alle Entnahmestellen bleiben geschlossen, der Haupthahn wird langsam geöffnet, und dann wird gewartet — mit dem Blick auf den Boden unter der Küchenzeile, im Bad, am Warmwasserbereiter. Was jetzt tropft, hat der Winter beschädigt, und man will es sehen, bevor der Speicher voll ist.",
+            "Dann wird der Warmwasserbereiter gefüllt, entlüftet und erst danach eingeschaltet — ein Speicher, der ohne Wasser heizt, ist ein Speicher, der kaputtgeht. Dann jede Entnahmestelle: Spüle, Waschbecken, Dusche, WC. Das Frostschutzmittel in den Siphons wird mit reichlich Wasser gespült. Jeder Abfluss mit einem Eimer Wasser geprüft. Der Außenhahn geöffnet, angeschlossen, geprüft.",
+            "Die Leitungen werden einige Minuten laufen gelassen, bis das Wasser klar und frisch ist — fünf Monate Stillstand hinterlassen Geschmack. Und die Abwasserseite wird von außen angeschaut: Sind die Abgänge angeschlossen, tropft nichts, riecht nichts?"
+          ]
+        },
+        {
+          "h2": "Strom: Prüftaste, Stromkreise, Geräte, Volllast",
+          "p": [
+            "Der Verteiler wird eingeschaltet, Stromkreis für Stromkreis, mit einem Moment dazwischen, in dem man hört und riecht, ob etwas nicht stimmt. Jeder Fehlerstromschutzschalter wird mit der Prüftaste ausgelöst und wieder eingeschaltet. Dann die Geräte, eines nach dem anderen: Licht, Steckdosen, Kühlschrank, Kochfeld, Warmwasserbereiter, Heizung, Lüftung, Klima. Der Kühlschrank bekommt Zeit, kalt zu werden, bevor man ihn beurteilt.",
+            "Am Ende der Volllasttest: Alles, was ein Gast abends gleichzeitig einschaltet, gleichzeitig ein — und die Sicherung hält, oder sie hält nicht, und dann ist der März der richtige Moment, das zu klären. Ein früherer Beitrag hat beschrieben, was vor der Saison geregelt wird, damit der Ausfall im August nicht kommt; die Durchsicht im März ist der Termin, an dem es geprüft wird.",
+            "Akkus werden eingesetzt oder geladen, Rauchmelder geprüft, der Temperaturfühler abgefragt — was hat er über den Winter gemeldet, und war es das, was erwartet wurde?"
+          ]
+        },
+        {
+          "h2": "Lüftung und Heizung: hochfahren und beobachten",
+          "p": [
+            "Die Lüftung wird von der kleinsten Stufe auf Normalbetrieb gestellt, und die Filter werden gewechselt oder gereinigt — fünf Monate auf kleinster Stufe haben sie nicht geschont, und ein Gast merkt eine Lüftung, die nicht zieht. Der Kondensatablauf wird geprüft, der Siphon mit Wasser gefüllt.",
+            "Die Heizung wird eingeschaltet und beobachtet: Wird es warm, gleichmäßig, in jedem Raum? Ein Thermostat, das über den Winter verstellt wurde, regelt falsch; eine Fußbodenheizung, die lange aus war, braucht Zeit. Zwei, drei Tage mit Heizung und Lüftung im Normalbetrieb, bevor der erste Gast kommt, sind die beste Prüfung — und sie trocknen die Einheit nach dem Winter durch.",
+            "Die Klimaanlage, wenn vorhanden, wird im Kühlbetrieb kurz getestet, auch wenn im März niemand kühlen will; der Kondensatablauf muss frei sein, bevor der Sommer kommt."
+          ]
+        },
+        {
+          "h2": "Was der Winter typischerweise hinterlässt",
+          "p": [
+            "Nach einigen Jahren kennt jeder Betreiber die Liste dessen, was im März zu finden ist, und sie ist kürzer, als man befürchtet. Kondensatspuren an den Fensterinnenseiten in dem Raum, in dem die Lüftung am schwächsten war. Eine Dichtung, die über den Winter spröde geworden ist und an einer Tür nicht mehr anliegt. Ein Siphon, in dem das Frostschutzmittel verdunstet ist, weil die Einheit wärmer stand als gedacht. Laub in einer Rinne, das im Oktober noch nicht gefallen war.",
+            "Seltener, aber teurer: ein Nagetier, das sich hinter der Küchenzeile eingerichtet hat, weil ein Lüftungsgitter fehlte; eine Terrassendiele, die sich gehoben hat, weil Wasser darunter gefroren ist; ein Rollladen, der eingefroren war und beim ersten Versuch nicht aufging. Jeder dieser Funde hat eine Ursache, die sich im nächsten Oktober beheben lässt — ein Gitter, eine Entwässerung, ein offen gelassener Rollladen.",
+            "Was man nicht finden sollte, wenn der Oktober richtig war: Wasser, wo keines hingehört. Ein feuchter Boden unter dem Warmwasserbereiter, ein nasser Schrankboden, ein Wasserfleck an der Decke — das sind keine Winterspuren, sondern Schäden, und sie werden vor allem anderen geklärt."
+          ]
+        },
+        {
+          "h2": "Wer die Durchsicht macht und wie sie festgehalten wird",
+          "p": [
+            "Die Durchsicht macht, wer die Einheit im Betrieb verantwortet, nicht wer gerade Zeit hat. Für die Technik — Verteiler, Warmwasserbereiter, Lüftung — kommt die Fachkraft dazu, die auch im Sommer gerufen würde, und zwar an einem Vormittag, an dem sie alle Einheiten hintereinander sieht. Das ist ihre günstigste Stunde im Jahr, und sie sieht im März die Dinge, die im August zum Notfall werden.",
+            "Festgehalten wird die Durchsicht wie die Übergabe und das Kaltstellen: eine Liste je Einheit, abgehakt, mit Funden und Fotos, datiert. Die Liste vom März liegt neben der vom Oktober und der vom März davor, und aus den dreien lässt sich ablesen, was sich jedes Jahr wiederholt — und das ist die Stelle, an der eine Änderung an der Einheit oder am Ablauf lohnt.",
+            "Für Betreiber mit mehreren Einheiten und wechselndem Personal ist diese Dokumentation außerdem das Einzige, was den Wissensstand von einem Jahr ins nächste trägt. Wer die Durchsicht im letzten Jahr gemacht hat, ist vielleicht nicht mehr da; die Liste ist es."
+          ]
+        },
+        {
+          "h2": "Die Woche vor dem ersten Gast",
+          "p": [
+            "Zwischen der Durchsicht und dem ersten Gast liegt eine Woche, und sie wird gebraucht: für die Behebung dessen, was gefunden wurde, für die zwei, drei Tage Heizung und Lüftung im Normalbetrieb, für eine Probenacht. Die Probenacht ist der Schritt, den die meisten auslassen und der am meisten zeigt: Jemand schläft eine Nacht in der Einheit, duscht am Morgen, kocht einen Kaffee und merkt, was ein Gast merken würde — eine Lampe, die flackert, ein Fenster, das klappert, ein Geruch aus dem Abfluss, der bei der Durchsicht nicht da war.",
+            "Am Ende der Woche ist die Einheit nicht nur geprüft, sondern benutzt worden. Das ist der Zustand, in dem der erste Gast sie bekommen sollte — und der Unterschied zwischen einer Bewertung, die das Haus lobt, und einer, die den ersten Morgen beschreibt.",
+            "Wer mehrere Einheiten betreibt, macht die Probenacht nicht in jeder, sondern in der, die bei der Durchsicht die meisten Funde hatte — und in einer, die keine hatte, als Vergleich. Was in beiden gleich ist, ist der Zustand der Serie; was sich unterscheidet, ist die einzelne Einheit, und das ist die Stelle, an der nachgearbeitet wird."
+          ]
+        },
+        {
+          "h2": "Ausstattung, Anleitung, Fotos — und die Liste für den Oktober",
+          "p": [
+            "Zuletzt die Ausstattung: Betten beziehen, Küche einräumen, Bad bestücken, Verbrauchsmaterial auffüllen, die Ausstattungsliste an der Schranktür abgleichen. Die Anleitung für den Gast prüfen: Stimmen Nummern, Zeiten, Hinweise noch? Was sich über den Winter geändert hat — ein neuer Platzwart, eine neue Müllregel —, wird eingetragen.",
+            "Dann die Fotos: Jeder Raum, datiert, neben die Fotos vom Oktober. Was sich verändert hat, ist das, was der Winter getan hat; was gleich geblieben ist, ist das, was im Oktober richtig gemacht wurde. Beides ist die Liste für den nächsten Oktober — und die Liste wird jedes Jahr kürzer, weil jedes Jahr etwas gelernt wurde.",
+            "Die Durchsicht dauert einen Vormittag für eine Einheit, wenn der Oktober richtig war. Bei mehreren gleichen Einheiten geht es je Einheit schneller, weil man weiß, wo man hinschaut. Was man dabei findet, ist meistens klein — und das ist der Beweis, dass der Oktober richtig war. Was bei der Planung einer Einheit getan wird, damit März und Oktober so kurz bleiben, steht auf der Seite für Campingplatz und Glamping."
+          ]
+        }
+      ],
+      "checklist": {
+        "h2": "Die Durchsicht im März",
+        "items": [
+          "Erst Rundgang mit geschlossenem Haupthahn und ausgeschaltetem Verteiler, dann einschalten",
+          "Außen: Fassade, Dach, Rinne mit Eimer Wasser, Stützen mit Wasserwaage, Bereich unter der Einheit, Terrasse",
+          "Innen: Geruch, Ecken hinter Schränken, unter Matratzen, Fensterinnenseiten, Fenster und Türen",
+          "Wasser: Haupthahn langsam, Blick nach unten, Speicher füllen und entlüften vor dem Einschalten, Siphons spülen, Abflüsse mit Eimer",
+          "Strom: Stromkreise einzeln, Prüftasten, Geräte einzeln, dann Volllast",
+          "Lüftung auf Normalbetrieb, Filter gewechselt, Heizung zwei bis drei Tage beobachten",
+          "Ausstattung, Gästeanleitung, Verbrauchsmaterial",
+          "Fotos je Raum neben die Oktober-Fotos; Notizen für den nächsten Oktober"
+        ]
+      },
+      "faq": [
+        [
+          "Warum nicht einfach Wasser und Strom einschalten und sehen, was passiert?",
+          "Weil ein Riss in einer Leitung oder Feuchte an einer Steckdose beim Einschalten zum Schaden wird. Erst schauen, dann einschalten — Schritt für Schritt, mit Blick nach unten beim Wasser und mit einem Moment dazwischen beim Strom."
+        ],
+        [
+          "Was ist, wenn die Einheit muffig riecht?",
+          "Dann hat irgendwo Feuchte gestanden, und sie wird gesucht, bevor etwas anderes geschieht: Ecken hinter Schränken, unter Matratzen, Dusche, hinter dem Kühlschrank, Fensterinnenseiten. Der Fund ist meist klein und entfernbar — und eine Notiz für den nächsten Oktober."
+        ],
+        [
+          "Wie lange vor dem ersten Gast sollte die Durchsicht sein?",
+          "Mindestens eine Woche, besser zwei. Heizung und Lüftung brauchen zwei, drei Tage im Normalbetrieb, um die Einheit durchzutrocknen und zu zeigen, ob sie richtig regeln — und was gefunden wird, braucht Zeit zum Beheben."
+        ],
+        [
+          "Muss der Warmwasserbereiter wirklich erst gefüllt werden?",
+          "Ja. Ein Speicher, der ohne Wasser heizt, nimmt Schaden. Füllen, entlüften, dann einschalten — in dieser Reihenfolge."
+        ],
+        [
+          "Was, wenn die Sicherung beim Volllasttest auslöst?",
+          "Dann ist der März der richtige Moment, das zu klären: Absicherung des Stellplatzes prüfen, Lastverteilung anpassen, Geräte mit geringerer Spitzenlast erwägen. Im August ist es der Anruf um zehn Uhr abends; im März ist es ein Planungsthema."
+        ]
+      ]
+    },
+    {
+      "slug": "preis-pro-nacht-herleiten",
+      "publish_on": "2026-10-23",
+      "category": "gewerbe",
+      "title": "Preis pro Nacht: wie Betreiber ihn aus den Kosten herleiten",
+      "description": "Der Preis pro Nacht wird nicht geraten, sondern hergeleitet: aus Anschaffung, Nebenkosten, Reinigung, Instandhaltung und Auslastung. Ein Rechenweg mit einem ausdrücklich erfundenen Beispiel, das der Leser durch seine Zahlen ersetzt.",
+      "image": "unit-porch-sand",
+      "imageAlt": "Ausgeführte Einheit mit überdachter Veranda und Holzgeländer am Abend",
+      "lead": "Die meisten Betreiber setzen den Preis pro Nacht so, wie die Nachbarn ihn setzen, und schauen dann am Jahresende, ob es gereicht hat. Das ist der umgekehrte Weg. Der Preis lässt sich herleiten — aus dem, was eine Einheit kostet, was sie im Betrieb kostet und wie viele Nächte sie belegt ist — und dann mit dem Markt vergleichen. Dieser Beitrag zeigt den Rechenweg an einem Beispiel, dessen Zahlen ausdrücklich erfunden sind: Sie zeigen die Methode, nicht einen Markt, und jeder Leser ersetzt sie durch seine.",
+      "sections": [
+        {
+          "h2": "Warum der Preis hergeleitet wird und nicht geraten",
+          "p": [
+            "Ein Preis pro Nacht, der vom Nachbarn abgeschaut ist, sagt nichts darüber, ob die eigene Einheit damit Geld verdient. Der Nachbar hat vielleicht ein abbezahltes Objekt, einen anderen Stellplatz, eine andere Reinigung, eine andere Auslastung. Sein Preis ist sein Ergebnis; das eigene Ergebnis braucht die eigene Rechnung.",
+            "Die Rechnung hat vier Teile: die Kosten der Einheit, umgelegt auf die Jahre, die sie genutzt wird; die laufenden Kosten im Jahr, die anfallen, ob ein Gast da ist oder nicht; die Kosten je Belegung, die nur mit dem Gast entstehen; und die Zahl der Nächte, auf die das alles verteilt wird. Aus diesen vier Teilen ergibt sich ein Preis, bei dem die Einheit sich trägt — und darüber liegt das, was sie verdient.",
+            "Der Vergleich mit dem Markt kommt danach, nicht davor. Liegt der hergeleitete Preis unter dem Markt, ist Spielraum da. Liegt er darüber, stimmt etwas an den Kosten oder an der Auslastung, und das will man wissen, bevor die Einheit gekauft ist. Was bei der Planung einer Mieteinheit je Betreiberart dazu zu klären ist, steht auf der Seite für Betreiber."
+          ]
+        },
+        {
+          "h2": "Teil eins: die Einheit, auf Jahre verteilt",
+          "p": [
+            "Die Anschaffung besteht nicht nur aus dem Haus. Sie besteht aus dem Haus ab Werk, der Lieferung, der Aufstellung, den Anschlüssen, der Terrasse, der Betriebsausstattung — Matratzen, Wäsche, Geschirr — und dem, was der Stellplatz an Vorbereitung brauchte. Preisindikationen für das Haus ab Werk stehen auf den Modellseiten; alles andere ergibt sich aus dem Standort und wird im Angebot und in den eigenen Rechnungen ausgewiesen.",
+            "Diese Summe wird auf die Jahre verteilt, in denen die Einheit genutzt werden soll, und dabei wird berücksichtigt, was sie am Ende noch wert ist — eine Einheit auf Stützen, die versetzt werden kann, hat einen Restwert, den ein eingemauertes Nebengebäude nicht hat. Im Beispiel: Angenommen, die gesamte Anschaffung beträgt 70.000 Euro, die Nutzungsdauer zehn Jahre, der Restwert 10.000 Euro. Dann sind das 6.000 Euro im Jahr, die die Einheit allein für ihre Existenz kostet. Diese Zahlen sind erfunden; sie zeigen nur, wie gerechnet wird.",
+            "Wer finanziert, rechnet die Zinsen dazu; wer aus Eigenkapital kauft, rechnet den entgangenen Ertrag dazu, wenn er ehrlich ist. Beides erhöht die Jahreszahl."
+          ]
+        },
+        {
+          "h2": "Teil zwei: was das Jahr kostet, ob ein Gast da ist oder nicht",
+          "p": [
+            "Die laufenden Kosten fallen an, auch wenn die Einheit leer steht: Stellplatzpacht oder Nebenkosten des Parks, Versicherung, Grundgebühren für Strom und Wasser, Instandhaltungsrücklage, Buchungssystem, Werbung, gegebenenfalls Steuern und Abgaben, die sich auf das Objekt beziehen. Jede davon ist eine Position, die der Betreiber kennt oder erfragen kann, und die Summe ist das, was das Jahr kostet, bevor ein Gast kommt.",
+            "Die Instandhaltungsrücklage wird gern vergessen und ist die Position, die den Unterschied zwischen einem Betreiber macht, der im fünften Jahr eine neue Arbeitsplatte bezahlen kann, und einem, der sie nicht bezahlen kann. Ein fester Prozentsatz der Anschaffung im Jahr, zurückgelegt, ist die einfache Regel; die Höhe hängt davon ab, wie das Objekt beansprucht wird und wie es gebaut ist.",
+            "Im Beispiel: Angenommen, die laufenden Kosten betragen zusammen 4.000 Euro im Jahr. Mit den 6.000 Euro aus Teil eins sind das 10.000 Euro, die die Einheit im Jahr kostet, bevor der erste Gast kommt. Erfundene Zahl, dieselbe Methode."
+          ]
+        },
+        {
+          "h2": "Teil drei: was jede Belegung kostet",
+          "p": [
+            "Dann die Kosten, die nur mit dem Gast entstehen: Reinigung je Wechsel, Wäsche je Wechsel, Verbrauch an Strom und Wasser je Nacht, Verbrauchsmaterial, Plattformgebühren je Buchung, wenn über eine Plattform vermietet wird. Diese Kosten werden nicht auf das Jahr verteilt, sondern je Belegung oder je Nacht gerechnet.",
+            "Die Reinigungszeit ist hier die größte Position, und sie ist die, die bei der Planung des Grundrisses entschieden wurde — ein früherer Beitrag dieser Reihe hat beschrieben, wie man sie vor dem Bau misst. Zwanzig Minuten je Wechsel oder vierzig sind, über fünfzig Wechsel im Jahr und einen Stundensatz gerechnet, eine Zahl, die im Preis pro Nacht sichtbar wird.",
+            "Im Beispiel: Angenommen, ein Wechsel kostet mit Reinigung und Wäsche 60 Euro, eine Nacht an Verbrauch und Material 8 Euro, und eine Buchung dauert im Schnitt vier Nächte. Dann kostet eine Nacht an belegungsabhängigen Kosten 15 Euro Wechselanteil plus 8 Euro Verbrauch, also 23 Euro. Erfunden, zur Illustration."
+          ]
+        },
+        {
+          "h2": "Teil vier: die Nächte, auf die alles verteilt wird",
+          "p": [
+            "Die Auslastung ist die Zahl, die alles entscheidet und am wenigsten in der Hand des Betreibers liegt. Sie hängt von Saison, Lage, Wetter, Platz und Konkurrenz ab und ist im ersten Jahr eine Annahme. Eine ehrliche Annahme rechnet mit der Saisonlänge des Platzes und einer Auslastung innerhalb der Saison, die eher vorsichtig als hoffnungsvoll ist.",
+            "Im Beispiel: Angenommen, die Saison dauert 180 Tage, und die Einheit ist in dieser Zeit zu 60 Prozent belegt. Das sind 108 Nächte im Jahr. Die 10.000 Euro aus Teil eins und zwei verteilen sich auf diese 108 Nächte: 93 Euro je Nacht, nur um die Existenz der Einheit und das Jahr zu tragen. Dazu die 23 Euro je Nacht aus Teil drei. Der Preis, bei dem die Einheit sich gerade trägt, liegt im Beispiel also bei etwa 116 Euro je Nacht. Erfunden — aber so wird gerechnet.",
+            "Wer das Beispiel mit 150 Nächten rechnet, kommt auf etwa 90 Euro; wer mit 80 Nächten rechnet, auf etwa 148. Das zeigt, warum die Auslastung die wichtigste Annahme ist und warum sie vorsichtig sein sollte: Ein Preis, der auf 150 Nächten beruht, trägt die Einheit bei 108 nicht."
+          ]
+        },
+        {
+          "h2": "Was über dem Tragepreis liegt — und der Vergleich mit dem Markt",
+          "p": [
+            "Der hergeleitete Preis ist der, bei dem die Einheit sich trägt. Er ist nicht der Verkaufspreis; der liegt darüber, um das zu verdienen, wofür der Betreiber das alles macht. Wie weit darüber, ist eine Entscheidung — und sie wird jetzt mit dem Markt verglichen: Was nehmen vergleichbare Objekte am selben Platz, in derselben Saison, mit vergleichbarer Ausstattung?",
+            "Liegt der Markt deutlich über dem Tragepreis, ist der Spielraum da, und die Frage ist, wie viel davon in den Preis geht und wie viel in die Auslastung — ein niedrigerer Preis mit mehr Nächten kann mehr bringen als ein höherer mit weniger. Liegt der Markt unter dem Tragepreis, trägt sich die Einheit an diesem Platz mit dieser Auslastung nicht, und das will man wissen, bevor sie gekauft ist: Dann ändert sich die Anschaffung, der Stellplatz, die Saison oder das Konzept.",
+            "Was die Rechnung außerdem zeigt, ist, welche Positionen den Preis treiben: Im Beispiel sind es die Anschaffung und die Auslastung, nicht die Reinigung. Das ist bei den meisten Einheiten so — und es ist der Grund, warum die Anschaffung sorgfältig und die Auslastung vorsichtig geplant wird."
+          ]
+        },
+        {
+          "h2": "Saisonpreise: ein Tragepreis, verschieden verteilt",
+          "p": [
+            "Der hergeleitete Tragepreis ist ein Durchschnitt über alle Nächte des Jahres. Im Betrieb wird er nicht als eine Zahl verlangt, sondern als mehrere: ein Preis für die Hauptsaison, einer für die Nebensaison, vielleicht einer für Wochenenden. Das ändert an der Rechnung nichts — die Summe aller Nächte mal ihrem Preis muss die Jahreskosten tragen —, aber es ändert, wie die Nächte gewichtet werden.",
+            "Im Beispiel: Wenn von den 108 Nächten 60 in der Hauptsaison liegen und 48 in der Nebensaison, und die Nebensaison zu zwei Dritteln des Hauptsaisonpreises verkauft wird, dann muss der Hauptsaisonpreis über dem Durchschnitt liegen — rechnerisch bei etwa 136 Euro, die Nebensaison bei etwa 91, damit zusammen dieselben rund 12.500 Euro herauskommen, die 108 Nächte zu 116 Euro ergeben. Erfundene Zahlen, aber der Mechanismus ist immer derselbe: Ein Nachlass in der Nebensaison ist ein Aufschlag in der Hauptsaison, oder er ist ein Verlust.",
+            "Wer Saisonpreise setzt, rechnet sie deshalb vom Jahresbedarf her und nicht vom Gefühl, was die Nebensaison noch verträgt. Und wer in der Nebensaison Nächte dazugewinnt, die sonst leer wären, verbessert die Rechnung — wenn der Preis über den belegungsabhängigen Kosten liegt. Eine Nacht für 30 Euro, die 23 Euro kostet, bringt 7 Euro; eine für 20 Euro bringt Arbeit."
+          ]
+        },
+        {
+          "h2": "Was die Rechnung über die Anschaffung sagt",
+          "p": [
+            "Die Rechnung läuft in beide Richtungen. Wer den Marktpreis und die realistische Auslastung kennt, kann von dort zurückrechnen, welche Anschaffung sich an diesem Platz trägt — und das ist die nützlichere Richtung, wenn die Einheit noch nicht gekauft ist. Im Beispiel: Wenn der Markt 120 Euro je Nacht hergibt und 108 Nächte realistisch sind, dann bleiben nach Abzug der belegungsabhängigen Kosten etwa 10.500 Euro im Jahr. Davon gehen die laufenden Kosten ab; was bleibt, ist der Betrag, den die Anschaffung je Jahr kosten darf.",
+            "Diese Zahl, mal Nutzungsjahre, plus Restwert, ist die Obergrenze für das, was Haus, Lieferung, Aufstellung und Ausstattung zusammen kosten dürfen, damit sich die Einheit gerade trägt. Alles darunter ist Ertrag; alles darüber ist ein Objekt, das an diesem Platz nicht funktioniert, so schön es ist. Mit dieser Zahl im Kopf liest man eine Preisliste anders — und eine Ausstattungsliste auch."
+          ]
+        },
+        {
+          "h2": "Die Rechnung als Werkzeug, nicht als Wahrheit",
+          "p": [
+            "Die Rechnung mit erfundenen Zahlen hat einen Zweck: Sie zeigt, welche Zahlen man braucht und wie sie zusammenhängen. Die eigenen Zahlen sind andere — andere Anschaffung, andere Nebenkosten, andere Saison, andere Auslastung — und erst mit ihnen wird die Rechnung zu einem Ergebnis. Wer sie einmal aufgestellt hat, kann sie jedes Jahr mit den tatsächlichen Zahlen vergleichen und sieht, wo die Annahme falsch war.",
+            "Für die Planung einer Einheit heißt das: Die Anschaffung ist die größte Position, und sie wird von Modell, Ausstattung, Lieferung und Standort bestimmt; die Reinigungszeit ist die Position, die am Grundriss entschieden wird; die Instandhaltung ist die Position, die von der Materialwahl abhängt. Alle drei werden vor dem Bau entschieden, und alle drei stehen im Preis pro Nacht.",
+            "Der Preis pro Nacht ist am Ende eine Zahl, die aus vielen anderen folgt. Wer sie herleitet, weiß, warum sie so hoch ist; wer sie abschaut, weiß es nicht — bis zum Jahresende."
+          ]
+        }
+      ],
+      "checklist": {
+        "h2": "Die vier Teile der Rechnung",
+        "items": [
+          "Anschaffung vollständig: Haus ab Werk, Lieferung, Aufstellung, Anschlüsse, Terrasse, Betriebsausstattung, Stellplatzvorbereitung",
+          "Auf Nutzungsjahre verteilt, Restwert abgezogen, Finanzierung oder entgangener Ertrag dazu",
+          "Laufende Kosten im Jahr: Pacht, Versicherung, Grundgebühren, Instandhaltungsrücklage, Buchung, Werbung, Abgaben",
+          "Kosten je Belegung: Reinigung und Wäsche je Wechsel, Verbrauch je Nacht, Plattformgebühr je Buchung",
+          "Nächte: Saisonlänge mal vorsichtige Auslastung",
+          "Tragepreis = (Teil eins + Teil zwei) geteilt durch Nächte + Teil drei je Nacht",
+          "Vergleich mit dem Markt erst danach; Spielraum oder Konzeptfrage",
+          "Jedes Jahr Annahmen durch tatsächliche Zahlen ersetzen"
+        ]
+      },
+      "faq": [
+        [
+          "Sind die Zahlen im Beitrag echte Marktzahlen?",
+          "Nein. Alle Zahlen im Beispiel sind erfunden und so gekennzeichnet. Sie zeigen die Methode, nicht einen Markt und nicht MODUNERA-Preise. Preisindikationen für die Modelle ab Werk stehen auf den Modellseiten; alles andere ergibt sich aus dem Standort und den eigenen Rechnungen."
+        ],
+        [
+          "Welche Position treibt den Preis am meisten?",
+          "In den meisten Rechnungen die Anschaffung, auf die Jahre verteilt, und die Auslastung, auf die sie verteilt wird. Die Reinigung ist spürbar, aber selten entscheidend. Deshalb wird die Anschaffung sorgfältig und die Auslastung vorsichtig geplant."
+        ],
+        [
+          "Wie hoch sollte die Instandhaltungsrücklage sein?",
+          "Ein fester Prozentsatz der Anschaffung im Jahr, zurückgelegt. Die Höhe hängt davon ab, wie das Objekt beansprucht wird und wie es gebaut ist — massive Arbeitsplatten und lackierte Fronten brauchen weniger Rücklage als beschichtete Spanplatte. Eine Pauschale gibt es nicht."
+        ],
+        [
+          "Was, wenn der Markt unter dem Tragepreis liegt?",
+          "Dann trägt sich die Einheit an diesem Platz mit dieser Auslastung nicht, und das ist eine Information, die vor dem Kauf wertvoll ist: Anschaffung, Stellplatz, Saison oder Konzept ändern — oder nicht kaufen."
+        ],
+        [
+          "Hilft MODUNERA bei dieser Rechnung?",
+          "Mit den Positionen, die wir kennen: Preisindikation des Hauses, Angaben zu Lieferung und Aufstellung, Materialwahl mit Blick auf Instandhaltung, Grundriss mit Blick auf Reinigungszeit. Pacht, Saison, Auslastung und Markt kennt der Betreiber; die Rechnung ist seine."
+        ]
+      ]
+    },
+    {
+      "slug": "zwei-varianten-statt-zwoelf-wuensche",
+      "publish_on": "2026-10-24",
+      "category": "gewerbe",
+      "title": "Zwei Varianten statt zwölf Wünsche: wie ein Serienprojekt entschieden wird",
+      "description": "Wer zwölf Einheiten bestellt, bestellt nicht zwölf Häuser, sondern eine Serie. Wie Betreiber die Varianten festlegen, was vor der Serie entschieden wird und was nicht mehr, und warum Gleichheit im Betrieb Geld ist.",
+      "image": "production-fitout-benches",
+      "imageAlt": "Innenausbau einer Einheit in der Fertigung: weiße Wandschalung, Einbauten vorbereitet",
+      "lead": "Ein Ferienpark bestellt zwölf Einheiten, und in der ersten Besprechung hat jeder im Raum einen Wunsch: eine mit größerem Bad, eine mit zwei Schlafräumen, eine mit heller Fassade, eine mit Kamin. Zwölf Wünsche ergeben zwölf Häuser, und zwölf Häuser sind im Betrieb zwölf Probleme. Ein Serienprojekt wird anders entschieden: Es gibt eine Variante, vielleicht zwei, und alles andere wird vor der Serie entschieden oder gar nicht. Dieser Beitrag beschreibt, wie diese Entscheidung geführt wird.",
+      "sections": [
+        {
+          "h2": "Warum Gleichheit im Betrieb Geld ist",
+          "p": [
+            "Zwölf gleiche Einheiten werden am Wechseltag in derselben Reihenfolge gereinigt, mit demselben Material, in derselben Zeit. Sie haben dieselben Ersatzteile, dieselbe Anleitung für den Gast, dieselbe Beschreibung im Buchungssystem, denselben Preis. Wer eine davon kennt, kennt alle. Jede Abweichung kostet an jeder dieser Stellen: Eine Einheit mit anderer Armatur braucht ein anderes Ersatzteil, eine mit anderem Grundriss eine andere Reinigungszeit, eine mit anderer Ausstattung eine andere Beschreibung.",
+            "Das ist der Grund, warum Serienprojekte bei MODUNERA einmal gezeichnet und dann gebaut werden: Ein Grundriss, eine Ausstattungsliste, eine Fassadenvariante — und Änderungen vor der Serie, nicht während. Die Seite für Ferienpark und Resort beschreibt das; dieser Beitrag beschreibt, wie man zu dem einen Grundriss kommt, wenn zwölf Leute zwölf Wünsche haben.",
+            "Der Satz, der die Besprechung leitet, lautet: Jede Abweichung muss sich im Betrieb bezahlt machen, nicht nur im Prospekt gefallen. Was diesen Satz übersteht, wird eine Variante. Was ihn nicht übersteht, wird eine Option — oder gestrichen."
+          ]
+        },
+        {
+          "h2": "Schritt eins: den Gast beschreiben, nicht das Haus",
+          "p": [
+            "Die Besprechung beginnt nicht mit Grundrissen, sondern mit Gästen. Wer bucht auf diesem Platz, in dieser Saison, zu diesem Preis? Paare, Familien mit kleinen Kindern, Familien mit Jugendlichen, Gruppen, Alleinreisende mit Hund? Wie lange bleiben sie, was tun sie tagsüber, was abends? Was erwarten sie vom Bad, vom Bett, von der Küche, vom Außenraum?",
+            "Aus dieser Beschreibung ergibt sich fast von selbst, ob eine Variante reicht oder zwei nötig sind: Ein Platz, auf dem Paare und Familien gleichermaßen buchen, braucht vielleicht eine Variante für zwei und eine für vier. Ein Platz, auf dem fast nur Paare buchen, braucht eine. Ein Platz mit Hundegästen braucht einen Boden und eine Terrasse, die das aushalten — in allen Einheiten, nicht in einer.",
+            "Die Beschreibung wird aufgeschrieben, denn sie ist das Kriterium für alles Weitere: Ein Wunsch, der keinem der beschriebenen Gäste dient, ist ein Wunsch des Betreibers, nicht des Gastes. Das ist nicht verboten, aber es ist etwas anderes."
+          ]
+        },
+        {
+          "h2": "Schritt zwei: den Grundriss aus dem Gast ableiten",
+          "p": [
+            "Mit dem Gast vor Augen wird der Grundriss entschieden — und zwar entlang der Fragen, die im Betrieb zählen: Wo schlafen die Gäste, ebenerdig oder im Loft, über Leiter oder Treppe? Wie groß ist das Bad, und wie schnell ist es zu reinigen? Wie viel Küche braucht ein Gast, der vier Nächte bleibt? Wo ist der Stauraum, und wofür? Was ist mit dem Außenraum?",
+            "Die acht Modelle unterscheiden sich im Grundriss — Zahl der Lofts, zusätzlicher Raum, Veranda —, und der Modellvergleich zeigt, welche für welche Nutzung meist infrage kommen. Für die Serie wird eines gewählt, gegebenenfalls in zwei Längen, und dann an den Gast angepasst: Bettposition, Badausstattung, Küchenumfang, Möbel. Diese Anpassung wird einmal gemacht und dann wiederholt.",
+            "Ein Gedanke, der hilft: Der Grundriss, der für den schwierigsten erwarteten Gast funktioniert — die Familie mit zwei Kindern und Koffern —, funktioniert auch für das Paar. Umgekehrt gilt das nicht. Wer für den einfachsten Gast plant, hat bei allen anderen ein Problem."
+          ]
+        },
+        {
+          "h2": "Schritt drei: die Ausstattung in drei Spalten",
+          "p": [
+            "Die Ausstattungsliste wird in drei Spalten geführt: Was alle Einheiten haben; was eine Variante zusätzlich hat; was eine Option ist, die später nachgerüstet werden kann. Die erste Spalte ist die Serie. Die zweite ist das, was eine zweite Variante rechtfertigt — und es sollte wenig sein, sonst ist es keine Variante, sondern ein anderes Haus. Die dritte ist das, was aus der Besprechung übrig bleibt und nicht gestrichen werden musste.",
+            "Für jede Position in der ersten Spalte gilt: eine Entscheidung, ein Fabrikat, ein Typ. Nicht 'Armatur schwarz oder chrom je nach Einheit', sondern eine. Nicht 'Kühlschrank mit oder ohne Gefrierfach', sondern eines. Diese Disziplin ist das, was später die Ersatzteilliste kurz hält und die Reinigungszeit gleich.",
+            "Was in die dritte Spalte kommt, wird so geplant, dass es nachrüstbar ist, ohne die Serie zu verändern: Leerrohre für etwas, das später kommt, Montagepunkte, Platz. Ein Kamin, der in der ersten Serie nicht kommt, kann in der zweiten kommen, wenn der Abzug vorbereitet ist — oder nie, wenn er es nicht ist."
+          ]
+        },
+        {
+          "h2": "Schritt vier: die Fassade je Standort, einmal",
+          "p": [
+            "Die Fassade ist die Position, bei der die meisten Wünsche entstehen und bei der die Antwort am klarsten ist: Sie wird je Standort gewählt, nicht je Einheit. Was die Platzordnung erlaubt, was das Klima verlangt und was zum Bild des Parks passt, ergibt eine Variante — Thermoholz, Verbundplatte oder Stehfalz, in einer Farbe. Zwölf Einheiten in einer Fassade sind ein Park; zwölf in sechs Fassaden sind ein Gebrauchtmarkt.",
+            "Wo der Park zwei Bereiche hat, die sich unterscheiden — am Wasser und im Wald, am Weg und im Hintergrund —, kann es zwei Fassaden geben, je Bereich eine. Das ist dann keine Abweichung, sondern eine Zuordnung, und sie wird im Lageplan festgehalten. Die Begründung für die drei Fassadenvarianten steht auf der Qualitätsseite.",
+            "Was nicht geht, ist die Fassade als Wunsch des einzelnen Investors, wenn der Park die Einheiten an Investoren vermietet: Dann gelten die Betreiberregeln des Parks, und die Fassade steht darin."
+          ]
+        },
+        {
+          "h2": "Schritt fünf: vor der Serie entscheiden, danach nicht mehr",
+          "p": [
+            "Der wichtigste Schritt ist ein Datum: der Tag, an dem die Serie festgelegt ist und danach nicht mehr verändert wird. Bis zu diesem Tag wird diskutiert, gezeichnet, verworfen, entschieden. Ab diesem Tag wird gebaut, und ein Wunsch, der danach kommt, ist ein Wunsch für die nächste Serie. Das ist für alle Beteiligten unbequem und für das Projekt der einzige Weg, in der Zeit und im Budget zu bleiben.",
+            "Vor diesem Tag lohnt sich eine Mustereinheit — in der Fertigung oder als erste gelieferte Einheit —, an der die Entscheidungen geprüft werden: Steht das Bett richtig, ist das Bad in der gemessenen Zeit zu reinigen, passt die Fassade zum Park? Was dabei auffällt, wird geändert, und dann ist die Serie festgelegt. Was nach der ersten Serie auffällt, wird in der zweiten geändert.",
+            "Bei MODUNERA wird dieser Tag im Angebot benannt, und was bis dahin entschieden ist, ist das, was gebaut wird. Änderungen danach sind möglich, aber sie sind Änderungen an einer Serie, mit allem, was das kostet — und sie werden so ausgewiesen."
+          ]
+        },
+        {
+          "h2": "Die Besprechung führen: wer entscheidet, wer berät",
+          "p": [
+            "Zwölf Wünsche entstehen, weil zwölf Leute im Raum sind und jeder etwas beiträgt. Das ist richtig so — die Reinigungskraft weiß, was am Wechseltag stört, der Platzwart, wo der Strom knapp ist, der Vertrieb, was Gäste fragen. Aber beraten und entscheiden sind zwei verschiedene Rollen, und die Besprechung funktioniert, wenn vorher klar ist, wer welche hat. Eine Person entscheidet über die Serie; alle anderen liefern Gründe.",
+            "Hilfreich ist, die Wünsche nicht zu diskutieren, sondern zu sortieren: Jeder Wunsch bekommt die Frage, welchem der beschriebenen Gäste er dient und was er im Betrieb kostet — in Reinigungszeit, in Ersatzteilen, in Beschreibung, in Preis. Ein Wunsch mit einem klaren Gast und geringen Betriebskosten wandert in die Serie. Einer mit klarem Gast und hohen Betriebskosten wird eine Variante, wenn genug Gäste da sind. Einer ohne klaren Gast wird eine Option oder gestrichen. Die Sortierung dauert eine Stunde und erspart drei.",
+            "Was dabei nicht hilft, ist der Vergleich mit anderen Parks. Was dort gut läuft, läuft dort gut — mit deren Gästen, deren Platz, deren Reinigung. Die eigene Serie wird aus dem eigenen Gast abgeleitet, nicht aus dem Prospekt eines anderen.",
+            "Ein praktischer Kniff für die Sortierung: Jeder Wunsch wird auf eine Karte geschrieben, und die Karten werden an der Wand in drei Spalten gehängt — Serie, Variante, Option — mit einer vierten für Gestrichenes. Am Ende der Stunde hängt die Serie an der Wand, und jeder im Raum hat gesehen, warum sein Wunsch dort hängt, wo er hängt. Das erspart die Diskussion, die sonst nach der Besprechung im Flur weitergeht."
+          ]
+        },
+        {
+          "h2": "Wenn die Einheiten an Investoren verkauft werden",
+          "p": [
+            "Manche Parks verkaufen die Einheiten an private Investoren und betreiben sie im Auftrag. Dann sitzt ein dritter Wunsch im Raum: der des Investors, der sein Haus gern anders hätte als das des Nachbarn. Für die Serie ändert das nichts — der Betrieb ist derselbe, die Reinigung ist dieselbe, der Gast ist derselbe —, aber es ändert, wie die Serie kommuniziert wird: als Betreiberregel, die zum Kauf gehört, nicht als Vorschlag.",
+            "Die Betreiberregel sagt, was die Serie ist und was ein Investor wählen kann: in der Regel nichts an Grundriss und Fassade, wenig an der Ausstattung, einiges an dem, was im Haus steht und nicht fest ist. Was ein Investor darüber hinaus will, kann er haben — in einer Einheit, die nicht im Betreibermodell des Parks läuft. Diese Trennung früh zu benennen erspart Gespräche, die sonst nach dem Kauf geführt werden, wenn sie niemandem mehr nützen.",
+            "Für MODUNERA ist ein solches Projekt eine Serie wie jede andere: ein Grundriss, eine Liste, ein Stichtag. Wer der Vertragspartner ist — der Park oder der einzelne Investor — ist eine kaufmännische Frage, die mit dem Park vor der Serie geklärt wird."
+          ]
+        },
+        {
+          "h2": "Was von den zwölf Wünschen übrig bleibt",
+          "p": [
+            "Am Ende der Besprechung sind aus zwölf Wünschen meistens eine Variante, selten zwei, ein paar Optionen für später und eine Liste von Dingen, die gestrichen wurden, weil sie keinem Gast dienen. Das ist kein Verlust; es ist das, was ein Serienprojekt von zwölf Einzelbestellungen unterscheidet. Die Einheiten werden am selben Tag gereinigt, mit denselben Teilen repariert, mit derselben Anleitung übergeben und zum selben Preis vermietet.",
+            "Und das Ergebnis sieht nicht nach Serie aus, wenn die Serie gut entschieden wurde: Eine Variante, die für den Gast gedacht ist, wirkt in jeder Einheit so, als wäre sie für diese Einheit gedacht. Was der Gast sieht, ist ein Haus; was der Betreiber hat, sind zwölf gleiche.",
+            "Für die Anfrage heißt das: Wer eine Serie plant, bringt die Beschreibung des Gastes mit, nicht die Liste der Wünsche. Aus der ersten lässt sich eine Serie ableiten; aus der zweiten nur eine Diskussion."
+          ]
+        }
+      ],
+      "checklist": {
+        "h2": "Die Serie entscheiden",
+        "items": [
+          "Den Gast beschreiben: wer, wie lange, was erwartet — schriftlich, als Kriterium",
+          "Eine Variante, höchstens zwei, aus dem Gast abgeleitet; für den schwierigsten Gast planen",
+          "Grundriss entlang der Betriebsfragen: Bett, Bad, Küche, Stauraum, Außenraum",
+          "Ausstattung in drei Spalten: Serie, Variante, Option — je Position ein Fabrikat, ein Typ",
+          "Optionen so vorbereiten, dass sie ohne Änderung der Serie nachrüstbar sind",
+          "Fassade je Standort oder je Bereich, nicht je Einheit",
+          "Ein Datum, an dem die Serie festgelegt ist; davor Mustereinheit, danach keine Änderung",
+          "Was keinem Gast dient, streichen — das ist kein Verlust"
+        ]
+      },
+      "faq": [
+        [
+          "Warum nicht jede Einheit anders, wenn Gäste Abwechslung mögen?",
+          "Weil Abwechslung im Prospekt im Betrieb zwölf verschiedene Reinigungszeiten, Ersatzteillisten und Anleitungen bedeutet. Was Gäste tatsächlich bewerten, ist, ob das Haus für sie funktioniert — und ein gut entschiedener Grundriss wirkt in jeder Einheit so, als wäre er für diese gedacht."
+        ],
+        [
+          "Wie viele Varianten sind sinnvoll?",
+          "Eine, wenn die Gäste ähnlich sind; zwei, wenn zwei klar verschiedene Gruppen buchen — etwa Paare und Familien. Mehr als zwei ist selten eine Serie, sondern mehrere Häuser mit allem, was das im Betrieb kostet."
+        ],
+        [
+          "Was, wenn nach der Serie ein wichtiger Wunsch auftaucht?",
+          "Dann ist er ein Wunsch für die nächste Serie oder eine Option, wenn sie vorbereitet wurde. Änderungen an einer laufenden Serie sind möglich, aber sie kosten Zeit und Geld und werden so ausgewiesen. Deshalb lohnt sich die Mustereinheit vor dem Stichtag."
+        ],
+        [
+          "Kann die Fassade je Einheit gewählt werden?",
+          "Je Standort oder je Bereich des Parks, nicht je Einheit. Was die Platzordnung erlaubt, was das Klima verlangt und was zum Park passt, ergibt eine Variante — zwölf in sechs Fassaden sind kein Park."
+        ],
+        [
+          "Wie läuft das bei MODUNERA konkret?",
+          "Ein Serienprojekt wird einmal gezeichnet und dann gebaut: ein Grundriss, eine Ausstattungsliste, eine Fassadenvariante, gegebenenfalls eine zweite Variante. Der Stichtag steht im Angebot; was bis dahin entschieden ist, wird gebaut. Die Seite für Ferienpark und Resort beschreibt den Ablauf."
+        ]
+      ]
+    }
+  ]
+}

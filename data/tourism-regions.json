@@ -1,0 +1,476 @@
+{
+  "_comment": [
+    "Tourism regions of Germany as a layer between the country page and the",
+    "7,406 town pages. Rendered by tools/build-modunera-v2.mjs as /regionen/ and",
+    "/en/regions/.",
+    "",
+    "Why. The hundred B2B prospects that arrived on 2026-10-14 cluster by",
+    "landscape, not by town: Baltic and North Sea resorts and marinas, Alpine",
+    "and Allgäu hotels, Black Forest and Eifel nature hotels, the Harz, the",
+    "Mecklenburg lakes, the Lüneburg Heath. A private buyer searches the same",
+    "way — 'Tiny House Bodensee' sat at position 8 in the October export with no",
+    "page to land on, and the town pages cannot answer a question that spans",
+    "three Bundesländer. The town tree is organised by state; these pages",
+    "organise it by where people actually go.",
+    "",
+    "How a town joins a region. By coordinates: each region carries a bounding",
+    "box and a list of states, and a town from data/locations.json belongs to",
+    "the region if it lies inside both. A bounding box is a geographic",
+    "approximation and the page says so, in the same words the town pages use",
+    "for their distance figures. No town is assigned by hand, so the mapping",
+    "cannot drift from the data it is derived from.",
+    "",
+    "What a region page does NOT do: it does not say MODUNERA has delivered",
+    "there, name an operator, or quote a rule a Land sets differently from the",
+    "next. It describes the landscape's demands on a unit — coast, altitude,",
+    "forest — and routes the reader to the towns, the Bundesland pages, the",
+    "operator segments and the official source each state page already carries."
+  ],
+  "updated": "2026-10-14",
+  "regions": [
+    {
+      "slug": { "de": "ostsee", "en": "baltic-coast" },
+      "name": { "de": "Ostsee", "en": "Baltic coast" },
+      "states": ["Schleswig-Holstein", "Mecklenburg-Vorpommern"],
+      "bbox": { "lat": [53.85, 54.95], "lng": [9.75, 14.45] },
+      "photo": "unit-porch-sand",
+      "segments": ["camping", "marina", "ferienpark"],
+      "de": {
+        "title": "Tiny House an der Ostsee: Küste, Salzluft, Saison | MODUNERA",
+        "description": "Tiny Houses für die Ostseeküste von Schleswig-Holstein bis Rügen: was Salzluft, Wind und Saisonbetrieb von Fassade, Verglasung und Heizung verlangen, welche Orte zur Region gehören und welche Betreiber hier typischerweise planen.",
+        "h1": "Tiny House an der Ostsee",
+        "lead": "Die Ostseeküste ist Saisonland: Ostseebäder, Marinas und Campingplätze von der Flensburger Förde bis Usedom, mit einem Sommer, der alles trägt, und einem Winter, in dem die meisten Einheiten leer stehen. Was ein Tiny House hier aushalten muss, ist Salzluft, Wind von der See und Feuchte — und was es leisten muss, ist ein Sommer voller Wechseltage.",
+        "answer": "An der Ostsee werden Fassade, Beschläge und Verglasung für Salzluft, Wind und Feuchte gewählt und die Technik für eine Einheit geplant, die im Sommer dicht belegt ist und im Winter meist leer steht. Die Ortsseiten der Region liegen in Schleswig-Holstein und Mecklenburg-Vorpommern; was dort planungsrechtlich gilt, steht auf den Seiten der beiden Bundesländer mit amtlicher Quelle.",
+        "sections": [
+          { "h2": "Was die Küste von einer Einheit verlangt", "p": [
+            "Fünfzig Meter vom Wasser altert eine Einheit schneller als im Binnenland, wenn sie dafür nicht gewählt wurde. Salzluft greift Metall an, der Wind drückt Regen in jede Fuge, und Feuchte sucht sich die kälteste Ecke. Deshalb werden an der Ostsee Fassadenvariante, Beschläge und Verglasung für den Standort gewählt und die Konstruktion so gelüftet und entwässert, dass Feuchte nicht stehen bleibt. Welche Komponenten das betrifft und warum, steht auf der Qualitätsseite.",
+            "Der Wind ist außerdem eine Frage der Aufstellung: Ausrichtung zur Wetterseite, Terrasse im Windschatten, Verankerung der Stützen auf dem Untergrund. Das wird je Stellplatz entschieden, nicht pauschal."
+          ]},
+          { "h2": "Saisonbetrieb: dicht im Sommer, leer im Winter", "p": [
+            "Die meisten Einheiten an der Ostsee sind Mietobjekte auf Campingplätzen, in Ferienparks oder an Marinas, und sie leben von einer Saison, die von Ostern bis in den Oktober reicht. Das verändert die Planung: Grundriss für Gäste, Reinigungszeit am Wechseltag, Lieferung außerhalb der Saison, Kaltstellen im Oktober. Die Praxisreihe behandelt jeden dieser Punkte in einem eigenen Beitrag.",
+            "Ob eine Einheit über den Winter stehen bleiben darf, entscheidet die Genehmigung des Platzes und die Platzordnung — nicht das Haus. Für Ostseebäder mit strengen Ortsgestaltungssatzungen gehört außerdem das Erscheinungsbild früh auf den Tisch."
+          ]},
+          { "h2": "Wer hier typischerweise plant", "p": [
+            "An der Ostsee sind es vor allem Campingplätze und Glamping-Anbieter, Marinas und Yachthäfen mit Übernachtungseinheiten und Ferienparks entlang der Küste. Für jede dieser Betreiberarten gibt es eine eigene Seite mit dem, was vor der Anfrage zu klären ist."
+          ]}
+        ]
+      },
+      "en": {
+        "title": "Tiny house on the Baltic coast: coast, salt air, season | MODUNERA",
+        "description": "Tiny houses for the German Baltic coast from Schleswig-Holstein to Rügen: what salt air, wind and seasonal operation demand of facade, glazing and heating, which places belong to the region and which operators typically plan here.",
+        "h1": "Tiny house on the Baltic coast",
+        "lead": "The Baltic coast is seasonal country: seaside resorts, marinas and campsites from the Flensburg Fjord to Usedom, with a summer that carries everything and a winter in which most units stand empty. What a tiny house has to withstand here is salt air, wind off the sea and damp — and what it has to deliver is a summer full of changeover days.",
+        "answer": "On the Baltic, facade, fittings and glazing are chosen for salt air, wind and damp, and the services are planned for a unit that is densely booked in summer and mostly empty in winter. The town pages of the region lie in Schleswig-Holstein and Mecklenburg-Vorpommern; what applies there under planning law is on the two state pages, with the official source.",
+        "sections": [
+          { "h2": "What the coast demands of a unit", "p": [
+            "Fifty metres from the water a unit ages faster than inland if it was not chosen for it. Salt air attacks metal, wind drives rain into every joint, and damp finds the coldest corner. So on the Baltic the facade variant, fittings and glazing are chosen for the site and the structure is ventilated and drained so that damp does not linger. Which components that concerns and why is on the quality page.",
+            "Wind is also a question of placement: orientation to the weather side, terrace in the lee, anchoring of the supports on the ground. That is decided per pitch, not across the board."
+          ]},
+          { "h2": "Seasonal operation: full in summer, empty in winter", "p": [
+            "Most units on the Baltic are rental units on campsites, in holiday parks or at marinas, and they live from a season that runs from Easter into October. That changes the planning: a layout for guests, cleaning time on changeover day, delivery outside the season, shutting down in October. The practice series covers each of these points in a post of its own.",
+            "Whether a unit may stay over winter is decided by the site's permit and the site rules — not by the house. In seaside resorts with strict local design statutes the appearance also goes on the table early."
+          ]},
+          { "h2": "Who typically plans here", "p": [
+            "On the Baltic it is above all campsites and glamping operators, marinas and yacht harbours with overnight units, and holiday parks along the coast. Each of these operator types has its own page with what to clarify before enquiring."
+          ]}
+        ]
+      }
+    },
+    {
+      "slug": { "de": "nordsee", "en": "north-sea-coast" },
+      "name": { "de": "Nordsee", "en": "North Sea coast" },
+      "states": ["Schleswig-Holstein", "Niedersachsen", "Bremen", "Hamburg"],
+      "bbox": { "lat": [53.3, 55.1], "lng": [6.5, 9.45] },
+      "photo": "unit-standing-seam",
+      "segments": ["camping", "ferienpark", "marina"],
+      "de": {
+        "title": "Tiny House an der Nordsee: Wind, Watt, Inseln | MODUNERA",
+        "description": "Tiny Houses für die Nordseeküste und die Inseln: Westwind, Sturmflutlagen, Deichvorland und Fährlogistik. Was die Küste von Fassade und Aufstellung verlangt, welche Orte zur Region gehören und welche Betreiber hier planen.",
+        "h1": "Tiny House an der Nordsee",
+        "lead": "Die Nordsee ist die raue der beiden deutschen Küsten: Westwind ohne Pause, Sturmflutlagen hinter dem Deich, Inseln, die nur mit der Fähre erreichbar sind. Ein Tiny House hier ist entweder für diesen Wind gebaut, oder es ist nach zwei Wintern nicht mehr das, was geliefert wurde. Und auf den Inseln ist jede Lieferung eine Logistikfrage, bevor sie eine Baufrage ist.",
+        "answer": "An der Nordsee werden Fassade, Beschläge und Verglasung für dauerhaften Westwind und Salzluft gewählt; die Aufstellung berücksichtigt Windlast und Lage zum Deich. Für die Inseln wird die Fährlogistik vor dem Modell geklärt. Ob ein Standort in einem Überschwemmungs- oder Sturmflutgebiet liegt und was dort zulässig ist, klärt der Betreiber mit der Behörde — die Seiten der Bundesländer nennen die amtliche Quelle.",
+        "sections": [
+          { "h2": "Wind als Dauerzustand", "p": [
+            "An der Nordsee ist Wind nicht Wetter, sondern Zustand. Das verlangt von einer Einheit mehr als an der Ostsee: eine Fassade, deren Fugen dem Schlagregen standhalten, Beschläge, die Salz aushalten, eine Verglasung, die zum Klima passt, und eine Aufstellung, bei der Windlast und Verankerung der Stützen vor dem ersten Sturm geklärt sind. Die Begründung für die Komponenten steht auf der Qualitätsseite; die Entscheidung fällt je Standort."
+          ]},
+          { "h2": "Deichvorland, Sturmflut und die Frage an die Behörde", "p": [
+            "Flächen hinter dem Deich und auf den Halligen und Inseln liegen oft in Gebieten, für die besondere Regeln gelten — Überschwemmungsgebiete, Sturmflutlagen, Nationalpark. Ob eine Einheit dort stehen darf, für welche Dauer und in welcher Form, ist eine Frage an die Behörde und an den Eigentümer der Fläche, nicht an den Hersteller. Wir liefern die technischen Angaben zum Haus für diese Klärung."
+          ]},
+          { "h2": "Inseln: die Fähre vor dem Modell", "p": [
+            "Für Sylt, Föhr, Amrum, Pellworm, die Ostfriesischen Inseln und Helgoland ist jede Lieferung zuerst eine Fährfrage: welche Fähre nimmt welche Länge und welches Gewicht, zu welchem Termin, mit welcher Zufahrt am Hafen. Das wird vor der Modellwahl geklärt, weil es die Modellwahl begrenzen kann. Der Weg aus der Fertigung führt über die Straße, je nach Route mit Ro-Ro- oder Fährabschnitt — für die Inseln kommt die Inselfähre hinzu."
+          ]}
+        ]
+      },
+      "en": {
+        "title": "Tiny house on the North Sea coast: wind, mudflats, islands | MODUNERA",
+        "description": "Tiny houses for the German North Sea coast and islands: westerly wind, storm-surge zones, dyke foreland and ferry logistics. What the coast demands of facade and placement, which places belong to the region and which operators plan here.",
+        "h1": "Tiny house on the North Sea coast",
+        "lead": "The North Sea is the rougher of Germany's two coasts: westerly wind without pause, storm-surge zones behind the dyke, islands reachable only by ferry. A tiny house here is either built for that wind or, after two winters, no longer what was delivered. And on the islands every delivery is a logistics question before it is a building question.",
+        "answer": "On the North Sea, facade, fittings and glazing are chosen for constant westerly wind and salt air; placement accounts for wind load and position relative to the dyke. For the islands the ferry logistics are settled before the model. Whether a site lies in a flood or storm-surge zone and what is permitted there is for the operator to settle with the authority — the state pages name the official source.",
+        "sections": [
+          { "h2": "Wind as a permanent condition", "p": [
+            "On the North Sea wind is not weather but a condition. That demands more of a unit than the Baltic does: a facade whose joints withstand driving rain, fittings that tolerate salt, glazing suited to the climate, and a placement where wind load and anchoring of the supports are settled before the first storm. The reasoning for the components is on the quality page; the decision is made per site."
+          ]},
+          { "h2": "Dyke foreland, storm surge and the question for the authority", "p": [
+            "Land behind the dyke and on the Halligen and islands often lies in areas with special rules — flood zones, storm-surge zones, national park. Whether a unit may stand there, for how long and in what form is a question for the authority and the owner of the land, not for the manufacturer. We supply the technical information on the house for that clarification."
+          ]},
+          { "h2": "Islands: the ferry before the model", "p": [
+            "For Sylt, Föhr, Amrum, Pellworm, the East Frisian Islands and Heligoland every delivery is first a ferry question: which ferry takes which length and weight, on which date, with what access at the harbour. That is settled before the model is chosen, because it can limit the choice. The way from production is by road, with a Ro-Ro or ferry leg depending on the route — for the islands the island ferry is added."
+          ]}
+        ]
+      }
+    },
+    {
+      "slug": { "de": "schwarzwald", "en": "black-forest" },
+      "name": { "de": "Schwarzwald", "en": "Black Forest" },
+      "states": ["Baden-Württemberg"],
+      "bbox": { "lat": [47.55, 48.95], "lng": [7.65, 8.65] },
+      "photo": "aframe-olive-grove",
+      "segments": ["hotel", "camping", "dorf"],
+      "de": {
+        "title": "Tiny House im Schwarzwald: Hang, Wald, Höhenlage | MODUNERA",
+        "description": "Tiny Houses für den Schwarzwald: Hanglagen, Schneelast in der Höhe, Waldschatten und Feuchte. Was Naturhotels, Campingplätze und Wohnprojekte hier planen und was vor der Anfrage zu klären ist.",
+        "h1": "Tiny House im Schwarzwald",
+        "lead": "Der Schwarzwald ist Hang. Fast jede Fläche hat Gefälle, fast jeder Zugang eine Kurve, und oberhalb von achthundert Metern einen Winter, der zählt. Dazu der Wald selbst: Schatten, Feuchte, Laub in der Dachrinne. Ein Tiny House hier ist eine Frage der Aufstellung und der Zufahrt, bevor es eine Frage des Modells ist.",
+        "answer": "Im Schwarzwald werden Aufstellung und Zufahrt vor dem Modell geklärt: Hanglage, Kurvenradien, Tragfähigkeit der Wege, Kranstandplatz. In der Höhenlage kommen Schneelast und Winterbetrieb dazu, die je Standort nachgewiesen und geplant werden. Die Ortsseiten liegen in Baden-Württemberg; was dort planungsrechtlich gilt, steht auf der Seite des Bundeslandes mit amtlicher Quelle.",
+        "sections": [
+          { "h2": "Hang: Aufstellung und Zufahrt zuerst", "p": [
+            "Eine Einheit auf vier Stützen steht auf einem Hang, wenn der Untergrund unter jeder Stütze trägt und die Höhendifferenz von den Stützen ausgeglichen werden kann — und das hat Grenzen. Darüber hinaus braucht es ein Fundament oder eine Terrassierung, die zur Planung am Standort gehört. Die Zufahrt entscheidet oft schon davor: Ein Weg mit engen Kehren und Steigung trägt ein neun Meter langes Haus nicht — dann wird gehoben, und dafür braucht es einen Kranstandplatz. Ein Beitrag der Praxisreihe geht Kran und Rangieren im Einzelnen durch."
+          ]},
+          { "h2": "Höhenlage: Schnee und Winter", "p": [
+            "Oberhalb der Täler liegt im Schwarzwald Schnee, und zwar auf dem Dach. Welche Schneelast ein Dach tragen muss, legt die Schneelastzone des Standorts fest, und der Nachweis dafür gehört zu den Projektunterlagen je Standort — eine Pauschale gibt es nicht. Dazu kommt der Winterbetrieb: Dämmung, Heizung, frostsichere Wasserführung und Lüftung werden für eine Einheit gewählt, die im Januar bewohnt wird, oder für eine, die im Oktober kaltgestellt wird."
+          ]},
+          { "h2": "Wald: Schatten, Feuchte, Laub", "p": [
+            "Im Wald steht eine Einheit im Schatten, und Schatten heißt Feuchte, die langsamer trocknet. Fassade und Konstruktion werden so gelüftet und entwässert, dass Feuchte nicht stehen bleibt, und die Dachentwässerung wird für Laub geplant. Wer hier Naturhotels, Campingplätze oder Wohnprojekte betreibt, findet auf den Betreiberseiten, was vor der Anfrage zu klären ist."
+          ]}
+        ]
+      },
+      "en": {
+        "title": "Tiny house in the Black Forest: slope, forest, altitude | MODUNERA",
+        "description": "Tiny houses for the Black Forest: slopes, snow load at altitude, forest shade and damp. What nature hotels, campsites and housing projects plan here and what to clarify before enquiring.",
+        "h1": "Tiny house in the Black Forest",
+        "lead": "The Black Forest is slope. Almost every site has a gradient, almost every access a bend, and above eight hundred metres a winter that counts. Then the forest itself: shade, damp, leaves in the gutter. A tiny house here is a question of placement and access before it is a question of model.",
+        "answer": "In the Black Forest placement and access are settled before the model: slope, bend radii, load-bearing of tracks, crane position. At altitude, snow load and winter operation are added, verified and planned per site. The town pages lie in Baden-Württemberg; what applies there under planning law is on the state page, with the official source.",
+        "sections": [
+          { "h2": "Slope: placement and access first", "p": [
+            "A unit on four supports stands on a slope if the ground under each support bears and the height difference can be taken up by the supports — and that has limits. Beyond them a foundation or terracing is needed, which belongs to planning at the site. Access often decides before that: a track with tight hairpins and gradient does not carry a nine-metre house — then it is lifted, and that needs a crane position. A post in the practice series goes through crane and manoeuvring in detail."
+          ]},
+          { "h2": "Altitude: snow and winter", "p": [
+            "Above the valleys snow lies in the Black Forest, and it lies on the roof. Which snow load a roof must carry is set by the site's snow-load zone, and the verification belongs to the project documents per site — there is no flat figure. Then winter operation: insulation, heating, frost-proof water routing and ventilation are chosen for a unit lived in in January, or for one shut down in October."
+          ]},
+          { "h2": "Forest: shade, damp, leaves", "p": [
+            "In the forest a unit stands in shade, and shade means damp that dries more slowly. Facade and structure are ventilated and drained so that damp does not linger, and the roof drainage is planned for leaves. Anyone running nature hotels, campsites or housing projects here will find what to clarify before enquiring on the operator pages."
+          ]}
+        ]
+      }
+    },
+    {
+      "slug": { "de": "allgaeu", "en": "allgaeu" },
+      "name": { "de": "Allgäu", "en": "Allgäu" },
+      "states": ["Bayern", "Baden-Württemberg"],
+      "bbox": { "lat": [47.3, 47.95], "lng": [9.8, 10.85] },
+      "photo": "aframe-lawn",
+      "segments": ["hotel", "ferienpark", "camping"],
+      "de": {
+        "title": "Tiny House im Allgäu: Voralpen, Schnee, Ganzjahresbetrieb | MODUNERA",
+        "description": "Tiny Houses für das Allgäu: Voralpenklima, Schneelast, Ganzjahresbetrieb mit Sommer- und Wintersaison. Was Hotels, Ferienparks und Campingplätze hier planen und was je Standort nachzuweisen ist.",
+        "h1": "Tiny House im Allgäu",
+        "lead": "Das Allgäu hat zwei Saisons, und beide zählen: den Sommer mit Wanderern und Familien, den Winter mit Skifahrern. Eine Einheit, die hier vermietet wird, läuft im Januar bei Schnee und im Juli bei Hitze — und das verlangt eine Planung für beides, nicht für eines.",
+        "answer": "Im Allgäu werden Einheiten für Ganzjahresbetrieb geplant: Dämmung, Heizung, Lüftung und frostsichere Wasserführung für den Winter, Verschattung und Querlüftung für den Sommer. Schneelast wird je Standort nachgewiesen. Die Ortsseiten liegen in Bayern und Baden-Württemberg; was dort planungsrechtlich gilt, steht auf den Seiten der beiden Bundesländer mit amtlicher Quelle.",
+        "sections": [
+          { "h2": "Zwei Saisons, eine Einheit", "p": [
+            "Eine Einheit, die im Winter vermietet wird, ist eine andere als eine, die im Oktober kaltgestellt wird: Sie braucht Dämmung, Heizung und Lüftung, die den Raum im Januar halten, eine Wasserführung, die nicht einfriert, und einen Zugang, der bei Schnee begehbar bleibt. Dieselbe Einheit braucht im Juli Verschattung und Querlüftung, weil ein kleines Haus mit Glasfront in der Sonne schnell warm wird. Beides wird am Grundriss und an der Ausstattung entschieden, bevor gebaut wird."
+          ]},
+          { "h2": "Schneelast und Dachform", "p": [
+            "Im Allgäu liegt Schnee, und wie viel ein Dach tragen muss, legt die Schneelastzone des Standorts fest. Der Nachweis gehört zu den Projektunterlagen je Standort. Die Dachform entscheidet mit: Was auf einem flachen Dach liegen bleibt, rutscht von einem steilen — und landet dann vor der Tür oder auf der Terrasse, was bei der Aufstellung bedacht wird."
+          ]},
+          { "h2": "Wer hier plant", "p": [
+            "Im Allgäu sind es Hotels, die Zimmer im Außenbereich ergänzen, Ferienparks mit Serienprojekten und Campingplätze mit Ganzjahresbetrieb. Für jede dieser Betreiberarten gibt es eine eigene Seite mit dem, was vor der Anfrage zu klären ist."
+          ]}
+        ]
+      },
+      "en": {
+        "title": "Tiny house in the Allgäu: Alpine foothills, snow, year-round operation | MODUNERA",
+        "description": "Tiny houses for the Allgäu: pre-Alpine climate, snow load, year-round operation with summer and winter seasons. What hotels, holiday parks and campsites plan here and what has to be verified per site.",
+        "h1": "Tiny house in the Allgäu",
+        "lead": "The Allgäu has two seasons, and both count: summer with hikers and families, winter with skiers. A unit let here runs in January in snow and in July in heat — and that demands planning for both, not for one.",
+        "answer": "In the Allgäu units are planned for year-round operation: insulation, heating, ventilation and frost-proof water routing for winter, shading and cross-ventilation for summer. Snow load is verified per site. The town pages lie in Bavaria and Baden-Württemberg; what applies there under planning law is on the two state pages, with the official source.",
+        "sections": [
+          { "h2": "Two seasons, one unit", "p": [
+            "A unit let in winter is a different unit from one shut down in October: it needs insulation, heating and ventilation that hold the room in January, water routing that does not freeze, and an entrance that stays walkable in snow. The same unit needs shading and cross-ventilation in July, because a small house with a glass front warms quickly in the sun. Both are decided at layout and specification, before building."
+          ]},
+          { "h2": "Snow load and roof form", "p": [
+            "Snow lies in the Allgäu, and how much a roof must carry is set by the site's snow-load zone. The verification belongs to the project documents per site. The roof form plays a part: what stays on a flat roof slides off a steep one — and then lands in front of the door or on the terrace, which is considered at placement."
+          ]},
+          { "h2": "Who plans here", "p": [
+            "In the Allgäu it is hotels adding rooms in the grounds, holiday parks with series projects and campsites with year-round operation. Each of these operator types has its own page with what to clarify before enquiring."
+          ]}
+        ]
+      }
+    },
+    {
+      "slug": { "de": "alpen-chiemgau", "en": "bavarian-alps" },
+      "name": { "de": "Alpen und Chiemgau", "en": "Bavarian Alps" },
+      "states": ["Bayern"],
+      "bbox": { "lat": [47.4, 47.95], "lng": [10.85, 13.1] },
+      "photo": "aframe-night",
+      "segments": ["hotel", "gemeinde", "camping"],
+      "de": {
+        "title": "Tiny House in den Alpen und im Chiemgau: Berg, See, Winter | MODUNERA",
+        "description": "Tiny Houses für die bayerischen Alpen und das Chiemgau — von Garmisch über Tegernsee und Chiemsee bis Berchtesgaden: alpine Schneelast, Hanglagen, Seeufer, Ortsgestaltung. Was Hotels und Gemeinden hier planen.",
+        "h1": "Tiny House in den Alpen und im Chiemgau",
+        "lead": "Zwischen Garmisch und Berchtesgaden liegen die höchsten Standorte, die ein Tiny House in Deutschland haben kann, und einige der strengsten Ortsgestaltungssatzungen. Berg, See und ein Winter, der ein halbes Jahr dauert, auf der einen Seite; Hotels, die Zimmer im Freien ergänzen, und Gemeinden, die über Flächen entscheiden, auf der anderen.",
+        "answer": "In den Alpen und im Chiemgau werden Einheiten für alpine Schneelast, Hanglagen und Ganzjahresbetrieb geplant und nach den Gestaltungsvorgaben des Ortes gewählt — Dachform, Fassade, Farbe. Was am Seeufer und in Landschaftsschutzgebieten zulässig ist, klärt der Betreiber mit der Behörde. Die Ortsseiten liegen in Bayern; die Seite des Bundeslandes nennt die amtliche Quelle.",
+        "sections": [
+          { "h2": "Alpine Schneelast und Hang", "p": [
+            "Die Schneelastzonen der Alpenstandorte verlangen vom Dach mehr als irgendwo sonst im Land, und der Nachweis gehört je Standort zu den Projektunterlagen. Dazu der Hang: Aufstellung auf Stützen mit Höhenausgleich, Terrassierung wo nötig, Zufahrt mit Kehren und Steigung, Kranstandplatz. Was im Schwarzwald gilt, gilt hier mit größeren Zahlen."
+          ]},
+          { "h2": "Ortsgestaltung: Dach, Fassade, Farbe", "p": [
+            "Viele Alpengemeinden haben Gestaltungssatzungen, die Dachneigung, Dacheindeckung, Fassadenmaterial und Farbe vorgeben — und sie gelten für eine Einheit auf Stützen ebenso wie für ein Haus. Welche der drei Fassadenvarianten und welche Dachform zulässig ist, wird deshalb vor dem Modell geklärt. Für Hotels, die ein Zimmer im Garten ergänzen, ist das der erste Schritt."
+          ]},
+          { "h2": "Seeufer und Schutzgebiete", "p": [
+            "Tegernsee, Chiemsee, Königssee: Flächen am Ufer liegen oft in Landschaftsschutzgebieten oder Uferschutzzonen, und ob dort eine Einheit stehen darf, ist eine Frage an die Behörde, nicht an den Hersteller. Wir liefern die technischen Angaben zum Haus für diese Klärung; die Betreiberseite für Gemeinden beschreibt, welche Unterlagen eine Verwaltung dafür braucht."
+          ]}
+        ]
+      },
+      "en": {
+        "title": "Tiny house in the Bavarian Alps and Chiemgau: mountain, lake, winter | MODUNERA",
+        "description": "Tiny houses for the Bavarian Alps and the Chiemgau — from Garmisch via Tegernsee and Chiemsee to Berchtesgaden: Alpine snow load, slopes, lakeshores, local design rules. What hotels and municipalities plan here.",
+        "h1": "Tiny house in the Bavarian Alps and Chiemgau",
+        "lead": "Between Garmisch and Berchtesgaden lie the highest sites a tiny house can have in Germany, and some of the strictest local design statutes. Mountain, lake and a winter that lasts half a year on one side; hotels adding rooms outdoors and municipalities deciding on land on the other.",
+        "answer": "In the Alps and the Chiemgau units are planned for Alpine snow load, slopes and year-round operation and chosen to the design rules of the place — roof form, facade, colour. What is permitted on lakeshores and in protected landscapes is for the operator to settle with the authority. The town pages lie in Bavaria; the state page names the official source.",
+        "sections": [
+          { "h2": "Alpine snow load and slope", "p": [
+            "The snow-load zones of Alpine sites demand more of a roof than anywhere else in the country, and the verification belongs to the project documents per site. Then the slope: placement on supports with height compensation, terracing where needed, access with hairpins and gradient, crane position. What applies in the Black Forest applies here with larger numbers."
+          ]},
+          { "h2": "Local design: roof, facade, colour", "p": [
+            "Many Alpine municipalities have design statutes that set roof pitch, roof covering, facade material and colour — and they apply to a unit on supports as much as to a house. Which of the three facade variants and which roof form is permitted is therefore settled before the model. For hotels adding a room in the garden this is the first step."
+          ]},
+          { "h2": "Lakeshores and protected areas", "p": [
+            "Tegernsee, Chiemsee, Königssee: land on the shore often lies in protected landscapes or shore-protection zones, and whether a unit may stand there is a question for the authority, not the manufacturer. We supply the technical information on the house for that clarification; the operator page for municipalities describes which documents an administration needs."
+          ]}
+        ]
+      }
+    },
+    {
+      "slug": { "de": "bodensee", "en": "lake-constance" },
+      "name": { "de": "Bodensee", "en": "Lake Constance" },
+      "states": ["Baden-Württemberg", "Bayern"],
+      "bbox": { "lat": [47.45, 47.85], "lng": [8.9, 9.85] },
+      "photo": "unit-terrace-event",
+      "segments": ["camping", "hotel", "marina"],
+      "de": {
+        "title": "Tiny House am Bodensee: Ufer, Dreiländereck, Saison | MODUNERA",
+        "description": "Tiny Houses für die Bodenseeregion: Uferschutz, Dreiländereck mit der Schweiz und Österreich, lange Saison, hohe Nachfrage. Was Campingplätze, Hotels und Marinas hier planen und was am Ufer zuerst zu klären ist.",
+        "h1": "Tiny House am Bodensee",
+        "lead": "Der Bodensee ist die Region mit der längsten Saison und der dichtesten Nachfrage im Süden — und mit einem Ufer, das fast überall geschützt ist. Wer hier eine Einheit aufstellen will, klärt zuerst, was am Ufer zulässig ist, und plant dann für eine Saison, die von März bis Oktober reicht, mit Gästen aus drei Ländern.",
+        "answer": "Am Bodensee wird zuerst geklärt, was am Ufer und in der zweiten Reihe planungsrechtlich zulässig ist — Uferschutz, Landschaftsschutz, Bebauungsplan —, dann für eine lange Saison mit dichter Belegung geplant. Die Ortsseiten liegen in Baden-Württemberg und Bayern; für die Schweizer Seite des Sees gilt die Länderseite Schweiz. Beide nennen die amtliche Quelle.",
+        "sections": [
+          { "h2": "Das Ufer ist geschützt, die zweite Reihe nicht immer", "p": [
+            "Am Bodensee liegen die meisten Uferflächen in Schutzgebieten oder Uferzonen, in denen neue Einheiten nicht oder nur eingeschränkt zulässig sind. Die Flächen, die infrage kommen, liegen meist in der zweiten Reihe — auf Campingplätzen, in Hotelgärten, an Marinas mit bestehender Nutzung. Was dort gilt, ist eine Frage an die Behörde, und sie wird vor dem Modell gestellt."
+          ]},
+          { "h2": "Lange Saison, dichte Belegung", "p": [
+            "Eine Saison von März bis Oktober mit hoher Auslastung bedeutet viele Wechseltage, und viele Wechseltage bedeuten, dass Reinigungszeit und Grundriss die Rechnung bestimmen. Die Praxisreihe behandelt beides; für Mietobjekte am Bodensee ist das der Kern der Planung."
+          ]},
+          { "h2": "Dreiländereck", "p": [
+            "Gäste kommen aus Deutschland, der Schweiz und Österreich, und Betreiber planen für alle drei. Für Standorte auf der Schweizer Seite des Sees gelten andere Regeln und andere Zollfragen; die Länderseite Schweiz behandelt sie. Wer hier Campingplätze, Hotels oder Marinas betreibt, findet auf den Betreiberseiten, was vor der Anfrage zu klären ist."
+          ]}
+        ]
+      },
+      "en": {
+        "title": "Tiny house on Lake Constance: shore, three countries, season | MODUNERA",
+        "description": "Tiny houses for the Lake Constance region: shore protection, the three-country corner with Switzerland and Austria, a long season, high demand. What campsites, hotels and marinas plan here and what to clarify on the shore first.",
+        "h1": "Tiny house on Lake Constance",
+        "lead": "Lake Constance is the region with the longest season and the densest demand in the south — and with a shore that is protected almost everywhere. Anyone wanting to place a unit here first settles what is permitted on the shore, then plans for a season that runs from March to October, with guests from three countries.",
+        "answer": "On Lake Constance what is permitted under planning law on the shore and in the second row is settled first — shore protection, landscape protection, development plan — then planning is for a long season with dense occupancy. The town pages lie in Baden-Württemberg and Bavaria; for the Swiss side of the lake the Switzerland country page applies. Both name the official source.",
+        "sections": [
+          { "h2": "The shore is protected, the second row not always", "p": [
+            "On Lake Constance most shore land lies in protected areas or shore zones in which new units are not permitted or only with restrictions. The sites that come into question usually lie in the second row — on campsites, in hotel gardens, at marinas with an existing use. What applies there is a question for the authority, and it is asked before the model."
+          ]},
+          { "h2": "Long season, dense occupancy", "p": [
+            "A season from March to October with high occupancy means many changeover days, and many changeover days mean that cleaning time and layout determine the calculation. The practice series covers both; for rental units on Lake Constance that is the core of the planning."
+          ]},
+          { "h2": "Three-country corner", "p": [
+            "Guests come from Germany, Switzerland and Austria, and operators plan for all three. For sites on the Swiss side of the lake different rules and different customs questions apply; the Switzerland country page covers them. Anyone running campsites, hotels or marinas here will find what to clarify before enquiring on the operator pages."
+          ]}
+        ]
+      }
+    },
+    {
+      "slug": { "de": "eifel", "en": "eifel" },
+      "name": { "de": "Eifel", "en": "Eifel" },
+      "states": ["Rheinland-Pfalz", "Nordrhein-Westfalen"],
+      "bbox": { "lat": [49.9, 50.75], "lng": [6.1, 7.2] },
+      "photo": "aframe-deck-olive",
+      "segments": ["dorf", "camping", "hotel"],
+      "de": {
+        "title": "Tiny House in der Eifel: Mittelgebirge, Maare, Nationalpark | MODUNERA",
+        "description": "Tiny Houses für die Eifel: Mittelgebirgsklima, Maare und Täler, Nationalpark und Naturpark. Was Wohnprojekte, Campingplätze und Naturhotels hier planen und was in Schutzgebieten zuerst zu klären ist.",
+        "h1": "Tiny House in der Eifel",
+        "lead": "Die Eifel ist Mittelgebirge mit viel Fläche und wenig Druck: Täler, Maare, Wald, ein Nationalpark und mehrere Naturparks. Hier entstehen Wohnprojekte und Ökodörfer, hier erweitern Campingplätze und Naturhotels — und hier ist die erste Frage fast immer, ob die Fläche in einem Schutzgebiet liegt.",
+        "answer": "In der Eifel wird zuerst geklärt, ob eine Fläche im Nationalpark, in einem Naturpark oder in einem Landschaftsschutzgebiet liegt und was dort zulässig ist. Dann wird für ein Mittelgebirgsklima geplant: Winter mit Frost, feuchte Täler, Hanglagen. Die Ortsseiten liegen in Rheinland-Pfalz und Nordrhein-Westfalen; die Seiten der beiden Bundesländer nennen die amtliche Quelle.",
+        "sections": [
+          { "h2": "Schutzgebiete: die erste Frage", "p": [
+            "Nationalpark Eifel, Naturpark Hohes Venn–Eifel, Naturpark Vulkaneifel, Landschaftsschutzgebiete in den Tälern: Ein großer Teil der Eifel liegt in Gebieten, in denen neue Einheiten nur eingeschränkt oder gar nicht zulässig sind. Ob eine Fläche betroffen ist, sagt die Behörde, und sie sagt es vor der Modellwahl. Wir liefern die technischen Angaben zum Haus für diese Klärung."
+          ]},
+          { "h2": "Mittelgebirgsklima: Frost, Feuchte, Hang", "p": [
+            "Die Eifel hat Winter mit Frost und Täler, in denen Feuchte steht. Eine Einheit, die hier dauerhaft bewohnt wird — und das ist in der Eifel häufiger der Fall als an der Küste —, braucht Dämmung, Heizung, Lüftung und frostsichere Wasserführung für vier Jahreszeiten. Hanglagen verlangen Aufstellung und Zufahrt vor dem Modell, wie im Schwarzwald."
+          ]},
+          { "h2": "Wohnprojekte und Dörfer", "p": [
+            "In der Eifel entstehen Tiny-House-Dörfer und Ökodörfer, in denen Einheiten dauerhaft bewohnt werden und in Etappen kommen. Die Betreiberseite für Tiny-House-Dorf und Ökodorf beschreibt, was dafür zu klären ist: Bebauungsplan, Betreibermodell, gemeinsame Erschließung, Etappen."
+          ]}
+        ]
+      },
+      "en": {
+        "title": "Tiny house in the Eifel: uplands, maars, national park | MODUNERA",
+        "description": "Tiny houses for the Eifel: upland climate, maars and valleys, national park and nature parks. What housing projects, campsites and nature hotels plan here and what to clarify first in protected areas.",
+        "h1": "Tiny house in the Eifel",
+        "lead": "The Eifel is uplands with much space and little pressure: valleys, maars, forest, a national park and several nature parks. Housing projects and eco-villages arise here, campsites and nature hotels extend here — and here the first question is almost always whether the land lies in a protected area.",
+        "answer": "In the Eifel it is settled first whether a site lies in the national park, a nature park or a protected landscape and what is permitted there. Then planning is for an upland climate: winter with frost, damp valleys, slopes. The town pages lie in Rhineland-Palatinate and North Rhine-Westphalia; the two state pages name the official source.",
+        "sections": [
+          { "h2": "Protected areas: the first question", "p": [
+            "Eifel National Park, High Fens–Eifel Nature Park, Vulkaneifel Nature Park, protected landscapes in the valleys: a large part of the Eifel lies in areas where new units are permitted only with restrictions or not at all. Whether a site is affected is for the authority to say, and it says so before the model is chosen. We supply the technical information on the house for that clarification."
+          ]},
+          { "h2": "Upland climate: frost, damp, slope", "p": [
+            "The Eifel has winters with frost and valleys where damp sits. A unit lived in permanently here — which is more often the case in the Eifel than on the coast — needs insulation, heating, ventilation and frost-proof water routing for four seasons. Slopes demand placement and access before the model, as in the Black Forest."
+          ]},
+          { "h2": "Housing projects and villages", "p": [
+            "Tiny-house villages and eco-villages arise in the Eifel, in which units are lived in permanently and arrive in stages. The operator page for tiny-house villages and eco-villages describes what has to be clarified for that: development plan, operating model, shared services, stages."
+          ]}
+        ]
+      }
+    },
+    {
+      "slug": { "de": "harz", "en": "harz" },
+      "name": { "de": "Harz", "en": "Harz" },
+      "states": ["Niedersachsen", "Sachsen-Anhalt", "Thüringen"],
+      "bbox": { "lat": [51.55, 51.95], "lng": [10.2, 11.25] },
+      "photo": "production-aframe-workshop",
+      "segments": ["ferienpark", "hotel", "camping"],
+      "de": {
+        "title": "Tiny House im Harz: Brocken, Schnee, drei Bundesländer | MODUNERA",
+        "description": "Tiny Houses für den Harz: Höhenlage bis zum Brocken, Schneelast, kurze Zufahrten in den Tälern, drei Bundesländer mit drei Bauordnungen. Was Ferienparks, Hotels und Campingplätze hier planen.",
+        "h1": "Tiny House im Harz",
+        "lead": "Der Harz ist das nördlichste Mittelgebirge mit alpinen Verhältnissen: Auf dem Brocken liegt Schnee, wenn im Vorland längst Frühling ist, und die Täler sind eng. Dazu kommt, dass der Harz in drei Bundesländern liegt — Niedersachsen, Sachsen-Anhalt, Thüringen — und ein Projekt je nach Seite des Berges unter einer anderen Bauordnung steht.",
+        "answer": "Im Harz werden Schneelast und Winterbetrieb je Höhenlage nachgewiesen und geplant, und die Zufahrt in den engen Tälern vor dem Modell geprüft. Welche Bauordnung gilt, hängt davon ab, in welchem der drei Bundesländer die Fläche liegt — die drei Länderseiten nennen jeweils die amtliche Quelle.",
+        "sections": [
+          { "h2": "Höhenlage: vom Vorland bis zum Brocken", "p": [
+            "Zwischen dem Harzvorland und den Hochlagen um Braunlage, Schierke und Torfhaus liegen Höhenunterschiede, die über Schneelast, Winterdauer und Heizbedarf entscheiden. Der Nachweis der Schneelast gehört je Standort zu den Projektunterlagen; die Technik für den Winterbetrieb wird für die Höhenlage gewählt, nicht für den Harz im Allgemeinen."
+          ]},
+          { "h2": "Enge Täler, kurze Zufahrten", "p": [
+            "Die Harztäler sind eng, die Straßen kurvig, die Zufahrten zu Ferienparks und Hotels oft über Brücken und durch Ortsdurchfahrten mit Begrenzungen. Ob ein neun Meter langes Haus bis zum Stellplatz kommt, wird vor der Modellwahl geprüft — ein Beitrag der Praxisreihe beschreibt Kran und Rangieren."
+          ]},
+          { "h2": "Drei Bundesländer", "p": [
+            "Eine Fläche in Bad Harzburg steht unter der niedersächsischen Bauordnung, eine in Schierke unter der von Sachsen-Anhalt, eine in Bad Sachsa wieder unter der niedersächsischen und eine am Südharz unter der thüringischen. Die Ortsseiten der Region führen jeweils zur Seite ihres Bundeslandes mit der amtlichen Quelle. Wer hier Ferienparks, Hotels oder Campingplätze betreibt, findet auf den Betreiberseiten, was vor der Anfrage zu klären ist."
+          ]}
+        ]
+      },
+      "en": {
+        "title": "Tiny house in the Harz: Brocken, snow, three states | MODUNERA",
+        "description": "Tiny houses for the Harz: altitude up to the Brocken, snow load, short accesses in the valleys, three states with three building codes. What holiday parks, hotels and campsites plan here.",
+        "h1": "Tiny house in the Harz",
+        "lead": "The Harz is the northernmost upland range with Alpine conditions: snow lies on the Brocken when it is long since spring in the foreland, and the valleys are narrow. Added to that, the Harz lies in three states — Lower Saxony, Saxony-Anhalt, Thuringia — and a project stands under a different building code depending on which side of the mountain it is on.",
+        "answer": "In the Harz snow load and winter operation are verified and planned per altitude, and access in the narrow valleys is checked before the model. Which building code applies depends on which of the three states the site lies in — the three state pages each name the official source.",
+        "sections": [
+          { "h2": "Altitude: from the foreland to the Brocken", "p": [
+            "Between the Harz foreland and the high sites around Braunlage, Schierke and Torfhaus lie height differences that decide snow load, winter length and heating demand. Verification of snow load belongs to the project documents per site; the technology for winter operation is chosen for the altitude, not for the Harz in general."
+          ]},
+          { "h2": "Narrow valleys, short accesses", "p": [
+            "The Harz valleys are narrow, the roads winding, the accesses to holiday parks and hotels often over bridges and through villages with restrictions. Whether a nine-metre house reaches the pitch is checked before the model is chosen — a post in the practice series describes crane and manoeuvring."
+          ]},
+          { "h2": "Three states", "p": [
+            "A site in Bad Harzburg stands under Lower Saxony's building code, one in Schierke under Saxony-Anhalt's, one in Bad Sachsa again under Lower Saxony's and one in the southern Harz under Thuringia's. The region's town pages each lead to their state page with the official source. Anyone running holiday parks, hotels or campsites here will find what to clarify before enquiring on the operator pages."
+          ]}
+        ]
+      }
+    },
+    {
+      "slug": { "de": "mecklenburgische-seenplatte", "en": "mecklenburg-lakes" },
+      "name": { "de": "Mecklenburgische Seenplatte", "en": "Mecklenburg Lake District" },
+      "states": ["Mecklenburg-Vorpommern", "Brandenburg"],
+      "bbox": { "lat": [53.0, 53.75], "lng": [11.9, 13.5] },
+      "photo": "unit-exhibition-terrace",
+      "segments": ["marina", "camping", "ferienpark"],
+      "de": {
+        "title": "Tiny House an der Mecklenburgischen Seenplatte: Seen, Marinas, Weite | MODUNERA",
+        "description": "Tiny Houses für die Mecklenburgische Seenplatte von Schwerin bis zur Müritz: Seeufer, Marinas und Hafenresorts, Campingplätze, Nationalpark. Was am Ufer zuerst zu klären ist und welche Betreiber hier planen.",
+        "h1": "Tiny House an der Mecklenburgischen Seenplatte",
+        "lead": "Mehr als tausend Seen, die Müritz als größter, ein Nationalpark, und entlang der Ufer Marinas, Hafenresorts und Campingplätze, die vom Wassertourismus leben. Die Seenplatte ist Fläche und Ruhe — und eine Region, in der fast jede interessante Fläche am Wasser liegt, mit allem, was das planungsrechtlich bedeutet.",
+        "answer": "An der Seenplatte wird zuerst geklärt, was am Ufer zulässig ist — Uferschutz, Nationalpark, Landschaftsschutz, Hafennutzung —, dann für Übernachtungseinheiten mit Saisonbetrieb und Anschluss an die Hafen- oder Platzinfrastruktur geplant. Die Ortsseiten liegen in Mecklenburg-Vorpommern und Brandenburg; die Seiten der beiden Bundesländer nennen die amtliche Quelle.",
+        "sections": [
+          { "h2": "Ufer: Schutz, Hafen, Zulässigkeit", "p": [
+            "Seeufer an der Seenplatte liegen oft in Uferschutzzonen, im Nationalpark Müritz oder in Landschaftsschutzgebieten; Hafenflächen sind Sondergebiete mit eigener Genehmigung. Ob eine Übernachtungseinheit dort stehen darf, für welche Dauer und in welcher Zahl, klärt der Betreiber mit der Behörde und dem Eigentümer der Fläche. Die Betreiberseite für Marinas beschreibt, was dafür zu klären ist."
+          ]},
+          { "h2": "Wassertourismus: Marinas und Hafenresorts", "p": [
+            "Die Seenplatte lebt vom Wasser: Hausboote, Charterflotten, Marinas mit Übernachtungsgästen, die abends nicht an Bord schlafen wollen. Eine Einheit am Hafen ist dafür eine Übernachtungseinheit — mit Anschluss an die Hafeninfrastruktur, mit Fassade und Beschlägen für Feuchte, mit Lieferung außerhalb der Saison, wenn die Stege leer sind."
+          ]},
+          { "h2": "Weite: Zufahrt ist selten das Problem", "p": [
+            "Anders als in den Mittelgebirgen ist die Zufahrt an der Seenplatte selten die Hürde — die Flächen sind weit, die Wege eben. Die Hürde ist die Zulässigkeit am Ufer. Wer sie geklärt hat, hat ein Projekt; wer sie nicht geklärt hat, hat ein Modell ohne Stellplatz."
+          ]}
+        ]
+      },
+      "en": {
+        "title": "Tiny house in the Mecklenburg Lake District: lakes, marinas, open country | MODUNERA",
+        "description": "Tiny houses for the Mecklenburg Lake District from Schwerin to the Müritz: lakeshores, marinas and harbour resorts, campsites, national park. What to clarify on the shore first and which operators plan here.",
+        "h1": "Tiny house in the Mecklenburg Lake District",
+        "lead": "More than a thousand lakes, the Müritz the largest, a national park, and along the shores marinas, harbour resorts and campsites that live from water tourism. The lake district is space and quiet — and a region where almost every interesting site lies on the water, with everything that means under planning law.",
+        "answer": "In the lake district what is permitted on the shore is settled first — shore protection, national park, protected landscape, harbour use — then planning is for overnight units with seasonal operation and connection to the harbour or site infrastructure. The town pages lie in Mecklenburg-Vorpommern and Brandenburg; the two state pages name the official source.",
+        "sections": [
+          { "h2": "Shore: protection, harbour, permissibility", "p": [
+            "Lakeshores in the lake district often lie in shore-protection zones, in Müritz National Park or in protected landscapes; harbour areas are special-use zones with their own permit. Whether an overnight unit may stand there, for how long and in what number, is for the operator to settle with the authority and the owner of the land. The operator page for marinas describes what has to be clarified."
+          ]},
+          { "h2": "Water tourism: marinas and harbour resorts", "p": [
+            "The lake district lives from the water: houseboats, charter fleets, marinas with overnight guests who do not want to sleep aboard in the evening. A unit at the harbour is an overnight unit for that — with connection to the harbour infrastructure, with facade and fittings for damp, with delivery outside the season when the jetties are empty."
+          ]},
+          { "h2": "Open country: access is rarely the problem", "p": [
+            "Unlike in the uplands, access in the lake district is rarely the hurdle — the sites are open, the tracks level. The hurdle is permissibility on the shore. Whoever has settled it has a project; whoever has not has a model without a pitch."
+          ]}
+        ]
+      }
+    },
+    {
+      "slug": { "de": "lueneburger-heide", "en": "lueneburg-heath" },
+      "name": { "de": "Lüneburger Heide", "en": "Lüneburg Heath" },
+      "states": ["Niedersachsen"],
+      "bbox": { "lat": [52.85, 53.4], "lng": [9.6, 10.65] },
+      "photo": "transport-road",
+      "segments": ["ferienpark", "camping", "dorf"],
+      "de": {
+        "title": "Tiny House in der Lüneburger Heide: Sand, Weite, große Parks | MODUNERA",
+        "description": "Tiny Houses für die Lüneburger Heide: sandiger Untergrund, ebene Flächen, große Ferien- und Campingparks zwischen Hamburg und Hannover. Was Serienprojekte hier brauchen und was der Sand für die Aufstellung bedeutet.",
+        "h1": "Tiny House in der Lüneburger Heide",
+        "lead": "Die Lüneburger Heide ist die Region der großen Parks: Ferienparks, Campingparks und Freizeitanlagen zwischen Hamburg, Bremen und Hannover, mit ebenen Flächen, kurzen Wegen aus den Städten und einem Untergrund, der fast überall Sand ist. Für Serienprojekte ist das eine der einfachsten Regionen im Land — wenn der Sand bei der Aufstellung bedacht wird.",
+        "answer": "In der Heide werden Serienprojekte für große Parks geplant: gleiche Einheiten, standardisierte Zufahrt und Aufstellung, Betreiberregeln als Teil der Kalkulation. Der sandige Untergrund verlangt Lastverteilung unter den Stützen und Entwässerung, die versickert. Die Ortsseiten liegen in Niedersachsen; die Seite des Bundeslandes nennt die amtliche Quelle.",
+        "sections": [
+          { "h2": "Große Parks, Serienprojekte", "p": [
+            "Die Heide hat mehr große Ferien- und Campingparks als jede andere Region im Norden, und für sie sind Tiny Houses Serienprojekte: zwölf gleiche Einheiten, ein Grundriss, eine Fassade, eine Lieferung in der Schließzeit. Die Betreiberseite für Ferienpark und Resort beschreibt, wie das entschieden wird, und die Praxisreihe, wie aus zwölf Wünschen zwei Varianten werden."
+          ]},
+          { "h2": "Sand: Lastverteilung und Versickerung", "p": [
+            "Sand trägt, wenn die Last verteilt wird, und gibt nach, wenn sie es nicht wird. Unter jeder Stütze gehört deshalb eine Platte, die die Last verteilt, und die Ausrichtung wird nach dem ersten Regen kontrolliert. Dafür versickert Regenwasser im Sand fast überall, was die Dachentwässerung einfach macht — was die Platzordnung dazu sagt, gilt trotzdem zuerst."
+          ]},
+          { "h2": "Nähe zur Stadt, eben, erreichbar", "p": [
+            "Zufahrt und Transport sind in der Heide selten eine Hürde: ebene Flächen, breite Wege, kurze Entfernungen zu den Autobahnen. Das macht die Region auch für Wohnprojekte und Tiny-House-Dörfer interessant, die in Etappen wachsen — die Betreiberseite für Tiny-House-Dorf und Ökodorf beschreibt, was dafür zu klären ist."
+          ]}
+        ]
+      },
+      "en": {
+        "title": "Tiny house in the Lüneburg Heath: sand, open country, large parks | MODUNERA",
+        "description": "Tiny houses for the Lüneburg Heath: sandy ground, level sites, large holiday and camping parks between Hamburg and Hanover. What series projects need here and what the sand means for placement.",
+        "h1": "Tiny house in the Lüneburg Heath",
+        "lead": "The Lüneburg Heath is the region of the large parks: holiday parks, camping parks and leisure sites between Hamburg, Bremen and Hanover, with level sites, short ways from the cities and ground that is sand almost everywhere. For series projects it is one of the simplest regions in the country — if the sand is considered at placement.",
+        "answer": "In the Heath series projects are planned for large parks: identical units, standardised access and placement, operator rules as part of the calculation. The sandy ground demands load distribution under the supports and drainage that soaks away. The town pages lie in Lower Saxony; the state page names the official source.",
+        "sections": [
+          { "h2": "Large parks, series projects", "p": [
+            "The Heath has more large holiday and camping parks than any other region in the north, and for them tiny houses are series projects: twelve identical units, one layout, one facade, one delivery in the closure. The operator page for holiday parks and resorts describes how that is decided, and the practice series how twelve wishes become two variants."
+          ]},
+          { "h2": "Sand: load distribution and soakaway", "p": [
+            "Sand bears if the load is distributed and gives way if it is not. Under every support therefore belongs a plate that distributes the load, and the levelling is checked after the first rain. In return rainwater soaks into sand almost everywhere, which makes roof drainage simple — what the site rules say about it still applies first."
+          ]},
+          { "h2": "Near the city, level, reachable", "p": [
+            "Access and transport are rarely a hurdle in the Heath: level sites, wide tracks, short distances to the motorways. That also makes the region interesting for housing projects and tiny-house villages that grow in stages — the operator page for tiny-house villages and eco-villages describes what has to be clarified."
+          ]}
+        ]
+      }
+    }
+  ]
+}

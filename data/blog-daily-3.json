@@ -1,0 +1,649 @@
+{
+  "_comment": [
+    "Third queue of the daily practice series. Written 2026-10-14, after the",
+    "first two queues ran out on 2026-09-06 and the workflow spent five weeks",
+    "publishing nothing.",
+    "",
+    "Different subject from the first forty. Two documents arrived that day: a",
+    "trade report on the European tiny-house market and a list of one hundred",
+    "German B2B prospects — campsites, glamping sites, holiday parks, nature",
+    "hotels, marinas, tourism boards. The series had been written for a private",
+    "owner. This queue is written for the operator: the person who runs twelve",
+    "units, cleans them on changeover day and has a season to protect.",
+    "",
+    "Each post takes ONE operational question and goes down into it. The",
+    "commercial landing pages under /gewerblich/ say what MODUNERA offers each",
+    "operator type; these posts do not repeat that. They are the practice",
+    "behind it, and they link to the landing page rather than restating it.",
+    "",
+    "Same rules as the first two queues: no statute quoted by paragraph, no",
+    "distance or load figure that a Land ordinance sets differently from the",
+    "next, no project or client named. Where a number appears it is a",
+    "worked example and says so. Real photographs only, from",
+    "data/site-photos.json; a render is not a campsite."
+  ],
+  "posts": [
+    {
+      "slug": "platzordnung-sieben-klauseln",
+      "publish_on": "2026-10-15",
+      "category": "gewerbe",
+      "title": "Die Platzordnung: sieben Klauseln, die über ein Tiny House entscheiden",
+      "description": "Bevor ein Betreiber ein Modell wählt, entscheidet die Platzordnung. Sieben Klauseln, die bei fast jeder Ordnung über Höhe, Abstand, Fassade, Terrasse, Winter und Entwässerung bestimmen — und wie man sie liest.",
+      "image": "unit-terrace-event",
+      "imageAlt": "Dunkel verkleidete Einheit mit vorgelagerter Holzterrasse auf einem Platz mit festen Wegen",
+      "lead": "Die Platzordnung eines Campingplatzes ist für ein Mietobjekt das bindendste Dokument, das es gibt — bindender als jede Modellbroschüre und bindender als das, was der Betreiber sich beim ersten Gespräch vorstellt. Sie leitet sich aus der Campingplatzverordnung des Bundeslandes und aus der Genehmigung des Platzes ab, und sie ist von Platz zu Platz verschieden. Wer sie erst nach der Modellwahl liest, dreht die Reihenfolge um. Dieser Beitrag geht die sieben Klauseln durch, die in fast jeder Ordnung stehen und fast jede Entscheidung am Haus bestimmen.",
+      "sections": [
+        {
+          "h2": "Warum die Ordnung vor dem Modell kommt",
+          "p": [
+            "Ein Campingplatz ist eine genehmigte Anlage. Die Genehmigung sagt, was auf dem Platz stehen darf, wie groß, wie hoch, wie lange im Jahr, und sie überträgt dem Betreiber die Pflicht, das durchzusetzen. Die Platzordnung ist das Instrument dafür. Sie ist kein Hausrecht aus Laune, sondern die Übersetzung einer Genehmigung in Regeln für den einzelnen Stellplatz.",
+            "Das hat eine praktische Folge: Ein Objekt, das gegen die Ordnung verstößt, gefährdet nicht nur den Stellplatz, sondern im Zweifel die Genehmigung des Platzes. Betreiber wissen das, und deshalb sind sie bei Abweichungen streng — strenger, als es ein Käufer beim ersten Lesen erwartet. Ein Haus, das zehn Zentimeter zu hoch ist, wird nicht durchgewunken, weil es schön ist.",
+            "Wer ein Mietobjekt plant, liest also zuerst die Ordnung, dann den Lageplan des Stellplatzes, dann die Genehmigung des Platzes, soweit der Betreiber sie zeigt. Erst danach kommt die Frage, welches Modell in diesen Rahmen passt. Bei MODUNERA ist das die Reihenfolge jeder Anfrage aus dem Campingsegment; wie das Segment insgesamt geplant wird, steht auf der Seite für Campingplatz und Glamping."
+          ]
+        },
+        {
+          "h2": "Klausel eins: die zulässige Höhe",
+          "p": [
+            "Fast jede Ordnung nennt eine Höhe, oft gemessen ab Geländeoberkante bis zum höchsten Punkt des Objekts, manchmal bis zur Traufe. Die Zahl unterscheidet sich je nach Bundesland und Platz erheblich, und die Messregel unterscheidet sich auch. Beides muss man wissen, bevor man ein Modell mit Loft wählt, denn das Loft ist das, was ein Tiny House hoch macht.",
+            "Die Messregel ist der Punkt, an dem die meisten Fehler passieren. Steht das Haus auf Stützen, zählt die Höhe der Stützen mit. Steht es auf einem Fahrgestell, zählt das Fahrgestell mit, es sei denn, die Ordnung sagt ausdrücklich etwas anderes. Eine Terrasse mit Geländer kann als Teil des Objekts gelten oder nicht. Wer diese Fragen nicht vor der Bestellung klärt, klärt sie bei der Aufstellung — und dann ist das Haus schon da.",
+            "Die praktische Empfehlung: Höhe und Messregel schriftlich vom Betreiber bestätigen lassen, mit Bezug auf die konkrete Stellplatznummer. Dann wählt man das Modell und die Aufstellungshöhe so, dass Luft bleibt. Ein Haus, das die Höhe gerade so einhält, hält sie nach dem Ausrichten auf unebenem Grund oft nicht mehr."
+          ]
+        },
+        {
+          "h2": "Klausel zwei: Abstände zum Nachbarn und zum Weg",
+          "p": [
+            "Abstände zwischen Objekten sind der zweite Klassiker. Sie dienen dem Brandschutz und dem Rettungsweg und sind deshalb nicht verhandelbar. Die Ordnung nennt meist einen Mindestabstand zwischen Objekten und manchmal einen zum Platzweg; die Campingplatzverordnung des Landes gibt den Rahmen vor, die Platzgenehmigung kann strenger sein.",
+            "Für ein Tiny House heißt das: Die Länge des Modells plus Terrasse plus Abstand muss auf den Stellplatz passen, und zwar in der Ausrichtung, in der das Haus stehen soll. Ein Stellplatz, der auf dem Plan zwölf Meter lang ist, trägt kein Neun-Meter-Haus mit Terrasse, wenn auf beiden Seiten je zwei Meter freizuhalten sind. Das klingt banal und wird trotzdem regelmäßig übersehen, weil der Plan nicht maßstäblich gelesen wird.",
+            "Die Empfehlung: den Stellplatz mit Maßband abgehen, nicht nur auf dem Plan. Was auf dem Plan als Rechteck erscheint, hat vor Ort einen Baum, einen Schacht oder eine Böschung. Die Ordnung regelt den Abstand zum Objekt des Nachbarn; die Realität regelt, wo das Objekt des Nachbarn tatsächlich steht."
+          ]
+        },
+        {
+          "h2": "Klausel drei: Fassade, Farbe und Dachform",
+          "p": [
+            "Viele Ordnungen regeln das Erscheinungsbild: zulässige Fassadenmaterialien, Farbbereiche, manchmal die Dachform. Das wirkt auf den ersten Blick wie Geschmack, ist aber meist eine Auflage aus der Platzgenehmigung, die ein einheitliches Bild in der Landschaft verlangt. Ein dunkles Stehfalzdach kann auf einem Platz vorgeschrieben und auf dem nächsten verboten sein.",
+            "Für die Modellwahl bedeutet das: Die Fassadenvariante wird je Standort gewählt, nicht aus Vorliebe. Thermoholz, Verbundplatte und Stehfalz sind unterschiedliche Antworten auf unterschiedliche Ordnungen, und sie unterscheiden sich außerdem darin, wie sie an der Küste, in den Bergen oder im Wald altern. Die Begründung für jede dieser Varianten steht auf der Qualitätsseite.",
+            "Die Empfehlung: Ein Foto eines Objekts, das auf dem Platz bereits genehmigt steht, sagt mehr als drei Absätze Ordnungstext. Wer sich an einem genehmigten Nachbarn orientiert, hat ein Argument, das der Betreiber kennt."
+          ]
+        },
+        {
+          "h2": "Klausel vier: Terrasse, Vorzelt und Anbauten",
+          "p": [
+            "Ob eine Terrasse angebaut werden darf, wie groß, ob überdacht, ob mit Geländer — das regelt die Ordnung fast immer, und fast immer restriktiver, als Betreiber und Käufer es sich wünschen. Der Grund ist derselbe wie bei den Abständen: Jeder Anbau vergrößert das Objekt, verkleinert den Rettungsweg und verändert das Bild.",
+            "Für Glamping-Objekte ist die Terrasse ein wesentlicher Teil des Produkts, denn Gäste bezahlen den Außenraum mit. Deshalb lohnt es sich, die Terrassenklausel besonders genau zu lesen: Ist eine lose aufgelegte Terrasse etwas anderes als eine fest verbundene? Zählt eine Überdachung zur Objektfläche? Darf das Geländer geschlossen sein?",
+            "Die Empfehlung: Die Terrasse so planen, dass sie in beiden Lesarten der Ordnung zulässig ist — als Teil des Objekts und als eigenständiges Bauteil. Wer die Terrasse als Teil der Konstruktion liefert, hat ein Argument für die Statik; wer sie vor Ort baut, hat ein Argument für die Flexibilität. Beides geht, beides muss zur Ordnung passen."
+          ]
+        },
+        {
+          "h2": "Klausel fünf: die Winterstandzeit",
+          "p": [
+            "Ob ein Objekt über den Winter auf dem Platz bleiben darf, entscheidet die Genehmigung des Platzes, nicht das Haus. Manche Plätze sind ganzjährig genehmigt, manche nur für eine Saison, manche erlauben das Stehenlassen, aber nicht das Bewohnen. Die Ordnung gibt das wieder, oft in einem einzigen Satz, der leicht zu überlesen ist.",
+            "Für die Technik des Hauses ist das die wichtigste Klausel überhaupt. Ein Objekt, das im Winter leer steht, braucht eine frostsichere Wasserführung, die sich entleeren lässt, und eine Heizung, die auf Frostschutz laufen kann. Ein Objekt, das im Winter bewohnt wird, braucht Dämmung, Lüftung und eine Heizung, die den Raum hält. Ein Objekt, das im Winter vom Platz muss, braucht ein Fahrgestell und einen Winterstandplatz.",
+            "Die Empfehlung: Die Winterklausel vor der Technikplanung klären, nicht danach. Wer das umdreht, hat entweder zu viel Technik bezahlt oder zu wenig."
+          ]
+        },
+        {
+          "h2": "Klausel sechs: Entwässerung und Abwasser",
+          "p": [
+            "Die Ordnung regelt, wohin Regenwasser und Abwasser gehen dürfen. Regenwasser vom Dach darf meist versickern, manchmal muss es in eine Rinne; Abwasser muss an einen Anschluss, wenn einer da ist, und darf sonst nur in einen zugelassenen Tank. Was 'zugelassen' heißt, sagt die Ordnung oder der Betreiber.",
+            "Für ein Tiny House heißt das, dass die Dachentwässerung so geplant wird, dass sie zur Regel des Platzes passt, und dass die Abwasserlösung vor der Bestellung feststeht. Ein Haus mit Küche und Bad erzeugt Abwasser; wenn der Stellplatz keinen Anschluss hat, ist das eine Frage an den Betreiber, keine, die das Haus allein löst. Die Optionen dafür behandelt ein eigener Beitrag in dieser Reihe.",
+            "Die Empfehlung: Den Anschlusspunkt auf dem Lageplan markieren lassen. 'Abwasser vorhanden' heißt auf vielen Plätzen 'in fünfzig Metern vorhanden', und fünfzig Meter Leitung sind eine eigene Planung."
+          ]
+        },
+        {
+          "h2": "Klausel sieben: Nutzung, Vermietung und Lärm",
+          "p": [
+            "Die letzte Klausel ist die, die über das Geschäftsmodell entscheidet: Darf das Objekt vermietet werden, an wen, wie viele Personen, mit welchen Ruhezeiten? Manche Ordnungen erlauben die Vermietung nur durch den Betreiber, manche erlauben sie dem Eigentümer des Objekts mit Anmeldung, manche gar nicht. Für ein Mietobjekt ist das die erste Frage, nicht die letzte.",
+            "Dazu kommen Belegungsgrenzen — wie viele Personen pro Objekt — und Ruhezeiten, die sich auf die Ausstattung auswirken: Ein Objekt mit Außenküche und Lautsprechern passt auf einen Platz, auf dem ab zehn Uhr Ruhe ist, schlechter als eines mit Terrasse und Leselampe. Wer die Gäste kennt, die der Platz anzieht, plant das Objekt für sie.",
+            "Die Empfehlung: Die Vermietungsklausel schriftlich bestätigen lassen, bevor eine Einheit bestellt wird, und die Belegungsgrenze mit dem Grundriss abgleichen. Ein Haus für vier Personen auf einem Platz, der zwei pro Objekt erlaubt, ist zu groß geplant."
+          ]
+        },
+        {
+          "h2": "Was die Ordnung nicht regelt — und wer es dann tut",
+          "p": [
+            "Eine Platzordnung ist kein vollständiges Regelwerk. Was sie nicht erwähnt, ist damit nicht erlaubt, sondern offen — und offen heißt, dass die Genehmigung des Platzes, die Campingplatzverordnung des Landes oder die Bauaufsicht die Antwort gibt. Ein Betreiber, der in der Ordnung nichts über Photovoltaik auf dem Dach findet, hat keine Erlaubnis, sondern eine Frage, die er dem Platzbetreiber stellt und sich schriftlich beantworten lässt.",
+            "Typische Lücken sind Dinge, die es bei Wohnwagen nicht gab: fest installierte Terrassen mit Geländer, Wärmepumpen und ihre Außengeräte, Sichtschutzwände, Außenbeleuchtung, Lademöglichkeiten für Elektroautos. Für jede davon gilt dieselbe Reihenfolge — erst der Platzbetreiber, der weiß, was seine Genehmigung hergibt, dann gegebenenfalls die Behörde, dann die Planung am Haus.",
+            "Die schriftliche Antwort ist dabei kein Misstrauen, sondern Betriebsgrundlage: Wer in fünf Jahren mit einem neuen Platzwart über eine Terrasse spricht, die der alte mündlich erlaubt hat, hat ohne Schriftstück nichts in der Hand."
+          ]
+        },
+        {
+          "h2": "Wenn Ordnung und Modell nicht zusammenpassen",
+          "p": [
+            "Manchmal zeigt die Lektüre, dass das Modell, das man wollte, auf diesem Platz nicht steht: zu hoch für Klausel eins, zu lang für die Abstände in Klausel zwei, in der falschen Fassade für Klausel drei. Dann gibt es drei Wege, und sie werden in dieser Reihenfolge geprüft: ein anderes Modell oder eine andere Länge aus derselben Reihe; eine Anpassung am Modell, soweit sie technisch sinnvoll ist — eine niedrigere Dachform, eine andere Fassadenvariante; oder ein anderer Stellplatz auf demselben Platz, auf dem die Klausel anders greift.",
+            "Was nicht geprüft wird, ist der vierte Weg: das Modell aufstellen und hoffen, dass es niemand misst. Die Ordnung wird bei der Abnahme durch den Platzbetreiber geprüft, oft mit Zollstock, und eine Einheit, die dann nicht passt, steht im Weg — buchstäblich, auf dem Tieflader, der nicht entladen werden darf."
+          ]
+        },
+        {
+          "h2": "Wie man die Ordnung liest, ohne etwas zu übersehen",
+          "p": [
+            "Die Platzordnung ist ein Dokument, das für Dauercamper geschrieben wurde und auf Tiny Houses angewendet wird. Deshalb stehen die entscheidenden Klauseln selten unter der Überschrift 'Tiny House', sondern unter 'Mobilheime', 'feste Aufbauten', 'Vorzelte' oder 'Dauerstellplätze'. Wer nach dem Wort sucht, findet nichts; wer nach den sieben Themen sucht, findet alles.",
+            "Ein brauchbares Vorgehen: Die Ordnung einmal vollständig lesen und jede Stelle markieren, die eines der sieben Themen berührt. Dann für jedes Thema eine Frage an den Betreiber formulieren, die mit einer Zahl oder einem Ja beantwortet werden kann. Dann die Antworten schriftlich festhalten und mit der Stellplatznummer verknüpfen. Dieses Blatt ist die Grundlage der Modellwahl — und später die Grundlage dafür, dass niemand sagen kann, er habe das nicht gewusst.",
+            "Was dabei herauskommt, ist selten ein Nein. Es ist ein Rahmen: diese Höhe, diese Länge, diese Fassade, diese Terrasse, dieser Winter, dieser Anschluss, diese Vermietung. In diesen Rahmen passt in der Regel eines der acht Modelle — und das ist dann das richtige, nicht das schönste."
+          ]
+        }
+      ],
+      "checklist": {
+        "h2": "Die sieben Fragen an den Betreiber",
+        "items": [
+          "Zulässige Höhe und die Messregel: ab wo, bis wohin, zählen Stützen und Fahrgestell?",
+          "Mindestabstände zu Nachbarobjekten und zum Platzweg, bezogen auf die Stellplatznummer",
+          "Zulässige Fassadenmaterialien, Farbbereiche und Dachformen",
+          "Terrasse: zulässige Größe, Überdachung, Geländer, fest oder lose",
+          "Winterstandzeit: Stehenlassen erlaubt, Bewohnen erlaubt, oder Abtransport",
+          "Entwässerung: wohin Regenwasser, wo der Abwasseranschluss liegt",
+          "Vermietung: durch wen, an wie viele Personen, mit welchen Ruhezeiten"
+        ]
+      },
+      "faq": [
+        [
+          "Gilt die Platzordnung auch, wenn ich den Stellplatz dauerhaft pachte?",
+          "Ja. Die Pacht regelt das Verhältnis zwischen Pächter und Betreiber, die Platzordnung regelt, was auf dem Platz stehen darf. Sie gilt für jeden Stellplatz, unabhängig von der Vertragsform, weil sie aus der Genehmigung des Platzes stammt."
+        ],
+        [
+          "Kann der Betreiber Ausnahmen von der Ordnung machen?",
+          "Nur im Rahmen dessen, was die Genehmigung des Platzes zulässt. Eine Ausnahme, die gegen die Genehmigung verstößt, gefährdet den Platz; deshalb sind Betreiber dabei zurückhaltend. Was zulässig ist, lässt sich schriftlich bestätigen — was nicht, nicht."
+        ],
+        [
+          "Was ist, wenn die Ordnung Tiny Houses gar nicht erwähnt?",
+          "Dann gelten die Klauseln für Mobilheime, feste Aufbauten oder Dauerstellplätze, je nachdem, worunter der Betreiber das Objekt einordnet. Diese Einordnung vor der Bestellung klären — sie entscheidet darüber, welche Maße und Abstände gelten."
+        ],
+        [
+          "Reicht es, den Lageplan zu haben?",
+          "Nein. Der Lageplan zeigt, wo der Stellplatz liegt; die Ordnung sagt, was darauf stehen darf; die Realität vor Ort zeigt, wo Bäume, Schächte und Nachbarn tatsächlich sind. Alle drei zusammen ergeben den Rahmen für das Modell."
+        ],
+        [
+          "Wer prüft am Ende, ob das Haus der Ordnung entspricht?",
+          "Der Betreiber bei der Aufstellung, und im Zweifel die Behörde, die den Platz genehmigt hat. Deshalb lohnt es sich, die sieben Antworten vor der Bestellung schriftlich zu haben — dann ist die Prüfung eine Bestätigung, keine Überraschung."
+        ]
+      ]
+    },
+    {
+      "slug": "reinigungszeit-messen",
+      "publish_on": "2026-10-16",
+      "category": "gewerbe",
+      "title": "Reinigungszeit messen: warum sie den Grundriss eines Mietobjekts bestimmt",
+      "description": "Am Wechseltag entscheidet die Reinigungszeit darüber, ob ein Mietobjekt sich rechnet. Wie Betreiber sie messen, was im Grundriss Minuten kostet und welche Entscheidungen am Haus sie verkürzen.",
+      "image": "interior-living-tv",
+      "imageAlt": "Wohnbereich einer Einheit mit Ecksofa, Wandfernseher und Pendelleuchten, bereit für den nächsten Gast",
+      "lead": "Ein Mietobjekt wird am Wechseltag gereinigt, zwischen Abreise und Anreise, in einem Zeitfenster von wenigen Stunden, oft für mehrere Objekte zugleich. Die Minuten, die eine Einheit dafür braucht, sind eine der wichtigsten Zahlen im Betrieb — und eine, die bei der Planung fast nie gemessen wird. Dieser Beitrag beschreibt, wie man sie misst, bevor das Haus gebaut ist, und welche Entscheidungen am Grundriss sie verlängern oder verkürzen.",
+      "sections": [
+        {
+          "h2": "Warum die Reinigungszeit eine Grundrissfrage ist",
+          "p": [
+            "Wer zwölf Einheiten betreibt und am Samstag zwischen elf und fünfzehn Uhr alle wechselt, hat vier Stunden für zwölf Reinigungen. Das sind zwanzig Minuten pro Einheit, wenn eine Person reinigt, oder vierzig bei zwei Personen und sechs Einheiten je Person. Jede Minute, die eine Einheit mehr braucht, wird mit zwölf multipliziert und fehlt am Ende des Tages.",
+            "Die Reinigungszeit hängt nur zum Teil davon ab, wie gründlich gereinigt wird. Zum größeren Teil hängt sie davon ab, wie das Haus gebaut ist: wie viele Flächen, wie viele Kanten, wie viele Ecken, in die eine Hand nicht passt, wie weit das Bad vom Wasseranschluss liegt, ob das Bett vom Boden aus zu beziehen ist oder ob man dafür aufs Loft klettert. Das sind Grundrissentscheidungen, und sie werden getroffen, bevor jemand je gereinigt hat.",
+            "Deshalb gehört die Reinigungszeit in die Planung, nicht in den Betrieb. Wer sie vorher misst, baut ein Haus, das sich in zwanzig Minuten reinigen lässt. Wer sie nachher misst, hat ein Haus, das fünfunddreißig braucht, und sucht dann nach einer Reinigungskraft, die schneller ist."
+          ]
+        },
+        {
+          "h2": "Die Messung: ein Wechseltag auf dem Papier",
+          "p": [
+            "Die Messung beginnt mit einer Liste dessen, was bei einem Wechsel tatsächlich passiert, in der Reihenfolge, in der es passiert: Tür auf, lüften, Betten abziehen, Wäsche raus, Müll raus, Bad, Küche, Flächen, Boden, Betten beziehen, Ausstattung prüfen, Tür zu. Für jeden Schritt wird geschätzt, wie viele Minuten er in dem geplanten Grundriss braucht — nicht in einem idealen, sondern in diesem.",
+            "Die Schätzung wird realistisch, wenn man sie mit einer Person macht, die reinigt, und mit dem Grundriss vor sich. Wo liegt das Bett? Wie kommt man an die Rückseite des Sofas? Wo wird der Eimer gefüllt? Wo steht der Wagen mit der Wäsche, und wie weit ist der Weg von dort zum Bett? Diese Fragen ergeben eine Zahl, die meist höher ist als die erste Annahme.",
+            "Das Ergebnis ist eine Minutenzahl je Einheit, die sich mit der Zahl der Einheiten und dem Zeitfenster vergleichen lässt. Passt es, ist der Grundriss in Ordnung. Passt es nicht, gibt es zwei Wege: das Fenster vergrößern — was die Anreisezeit nach hinten schiebt und Gäste kostet — oder den Grundriss ändern. Der zweite Weg ist vor dem Bau billig und nach dem Bau teuer."
+          ]
+        },
+        {
+          "h2": "Das Bett: der größte Posten",
+          "p": [
+            "In den meisten Mietobjekten ist das Bett der größte Einzelposten der Reinigungszeit, und ein Bett im Loft ist der größte Posten überhaupt. Wer eine Leiter hinauf muss, um ein Bett abzuziehen, und dieselbe Leiter mit frischer Wäsche wieder hinauf, braucht dafür ein Vielfaches der Zeit eines ebenerdigen Betts — und arbeitet gebückt unter einer Dachschräge.",
+            "Deshalb ist die erste Grundrissentscheidung für ein Mietobjekt: Wo schlafen die Gäste? Ein Loft ist für Bewohner reizvoll und für den Betrieb teuer, nicht nur in Minuten, sondern auch in Gästen, die keine Leiter mehr steigen wollen. Ein Bett, das vom Boden aus von drei Seiten erreichbar ist, kostet im Grundriss Fläche und spart sie im Betrieb jede Woche.",
+            "Wo ein Loft aus Platzgründen bleibt, lässt sich die Zeit verkürzen: eine feste Treppe statt einer Leiter, eine Lofthöhe, die aufrechtes Arbeiten erlaubt, Matratzen in einem Format, das sich von einer Person beziehen lässt, und Bettwäsche, die ohne Knöpfe auskommt. Welche der acht Modelle ein Loft mit Treppe statt Leiter haben, zeigt der Modellvergleich."
+          ]
+        },
+        {
+          "h2": "Das Bad: Fugen, Kanten und die Duschkabine",
+          "p": [
+            "Das Bad ist der zweite große Posten, und hier entscheidet weniger die Größe als die Zahl der Flächen und Übergänge. Eine offene Dusche mit Gefälle und Ablaufrinne sieht gut aus und verteilt Wasser auf dem ganzen Boden; eine Duschkabine mit Tür hält es in einem Quadratmeter. Für Bewohner ist das Geschmack; für die Reinigung ist es die Hälfte der Zeit.",
+            "Dasselbe gilt für Fugen. Großformatige Wandpaneele haben wenige, Mosaikfliesen viele; eine Waschtischplatte aus einem Stück hat keine Kante, an der sich Kalk sammelt, ein aufgesetztes Becken hat eine. Jede dieser Entscheidungen kostet oder spart eine Minute, und eine Minute mal zwölf mal fünfzig Wechsel im Jahr ist ein Arbeitstag.",
+            "Die Empfehlung für Mietobjekte: Duschkabine statt offener Dusche, Wandpaneele statt Kleinformat, Waschtisch aus einem Stück, WC wandhängend, damit der Boden darunter frei ist, und eine Abstellfläche für das Reinigungsmaterial im Bad selbst, damit niemand damit durch den Wohnraum geht."
+          ]
+        },
+        {
+          "h2": "Die Küche: was Gäste benutzen und was sie zurücklassen",
+          "p": [
+            "In einem Mietobjekt wird die Küche von Menschen benutzt, die sie nicht kennen und nicht pflegen. Sie wird eine Woche lang benutzt und dann in Minuten gereinigt. Das spricht für eine kleine, klar organisierte Küchenzeile: eine durchgehende Arbeitsplatte ohne Fugen, ein Kochfeld, das sich wischen lässt, ein Kühlschrank, der leicht auszuwischen ist, und Schränke mit so wenig Inhalt, wie das Konzept erlaubt.",
+            "Die Arbeitsplatte ist hier die entscheidende Materialfrage. Massives Paneel statt beschichteter Spanplatte, weil die Kante an Spüle und Kochfeld am stärksten beansprucht wird und eine aufgequollene Kante nicht reparabel ist — das ist auf der Qualitätsseite begründet, und im Mietbetrieb zeigt es sich schneller als im Wohnhaus. Eine Platte, die nach zwei Saisons ersetzt werden muss, kostet mehr als eine, die hält.",
+            "Was die Gäste zurücklassen, lässt sich steuern: Eine Ausstattungsliste an der Innenseite der Schranktür, nach der am Wechseltag geprüft wird, verkürzt die Prüfung auf eine Minute und macht Verluste sichtbar, bevor der nächste Gast sie bemerkt."
+          ]
+        },
+        {
+          "h2": "Flächen, Kanten und die Ecke, in die keine Hand passt",
+          "p": [
+            "Nach Bett, Bad und Küche kommen die Flächen: Boden, Fensterbänke, Tische, Ablagen. Hier zählt die Zahl der Kanten und Ecken mehr als die Quadratmeter. Ein Sofa, das an der Wand steht und unter dem sich nichts sammeln kann, ist schneller als eines auf Füßen; eine Fensterbank ohne Dekoration ist schneller als eine mit; ein Tisch mit einer Platte ist schneller als einer mit Rand.",
+            "Die Ecke, in die keine Hand passt, ist der stille Zeitfresser: der Spalt zwischen Einbauschrank und Wand, der Raum hinter dem Kühlschrank, die Rückseite des Betts unter der Dachschräge. Jede davon kostet entweder Zeit oder wird übersprungen, und übersprungene Ecken sind das, was in Bewertungen steht. Die Lösung ist, sie im Grundriss zu vermeiden: Einbauten bündig, Geräte eingebaut, Betten so gestellt, dass man dahinter kommt.",
+            "Der Boden selbst: Ein durchgehender Belag ohne Schwellen und ohne Teppich ist in einem Mietobjekt in Minuten gewischt. Teppiche, Läufer und Schwellen sind Gestaltung, die jede Woche bezahlt wird."
+          ]
+        },
+        {
+          "h2": "Der Weg: wo der Wagen steht und wo das Wasser herkommt",
+          "p": [
+            "Ein Teil der Reinigungszeit entsteht außerhalb des Hauses: Der Weg vom Reinigungswagen zur Tür, vom Wasseranschluss zum Eimer, von der Wäschekammer zum Bett. Bei einem einzelnen Objekt ist das nebensächlich; bei zwölf, die über einen Platz verteilt stehen, ist es die Hälfte des Tages.",
+            "Deshalb gehört zur Planung eines Mietobjekts die Frage, wo das Reinigungsmaterial lagert und wie weit es zum Objekt ist. Ein kleiner, abschließbarer Schrank an der Außenseite des Hauses — für Eimer, Mittel und Ersatzwäsche — spart den Weg zum Wagen bei jedem Wechsel. Ein Außenwasserhahn spart den Weg zum Anschluss. Beides ist bei der Planung des Hauses eine Kleinigkeit und im Betrieb jede Woche sichtbar.",
+            "Wer mehrere Einheiten aufstellt, plant außerdem die Reihenfolge: Die Einheiten so anordnen, dass die Reinigung in einer Linie läuft, ohne Rückwege. Das ist eine Frage der Aufstellung, nicht des Hauses — aber sie wird am selben Tag entschieden."
+          ]
+        },
+        {
+          "h2": "Textilien: was gewaschen wird und wo",
+          "p": [
+            "Die Reinigungszeit endet nicht an der Tür der Einheit. Bettwäsche, Handtücher, Geschirrtücher und — seltener — Vorhänge und Überwürfe gehen am Wechseltag hinaus und müssen irgendwo gewaschen, getrocknet und gelagert werden. Ob das in der Einheit, in einem Wirtschaftsraum des Platzes oder bei einer Wäscherei geschieht, entscheidet über zwanzig Minuten je Wechsel und über die Frage, ob die Einheit eine Waschmaschine braucht, die Platz, Strom und Wasser kostet.",
+            "Für Mietobjekte in Serie ist die Wäscherei mit Mietwäsche in der Regel die kürzeste Lösung: Die Wäsche kommt gefaltet zurück, die Einheit braucht keine Maschine, und der Wechsel besteht aus Abziehen, Beziehen, Zählen. Für eine einzelne Einheit neben dem Haupthaus ist die Maschine im Haupthaus die kürzeste. Die Maschine in der Einheit ist die längste — und die, die am häufigsten geplant wird, weil sie im Prospekt gut aussieht.",
+            "Gezählt wird die Wäsche am Wechseltag mit: zwei Garnituren je Bett im Umlauf, eine dritte als Reserve. Was fehlt, fehlt um sechzehn Uhr, wenn der nächste Gast vor der Tür steht."
+          ]
+        },
+        {
+          "h2": "Der zweite Durchgang: was nicht jede Woche gemacht wird",
+          "p": [
+            "Die gemessene Zeit ist die des normalen Wechsels. Dazu kommt, was nicht jeden Wechsel, aber regelmäßig fällig ist: Fenster innen und außen, Matratzenschoner, Kühlschrank abtauen, Dunstabzugsfilter, Lüftungsfilter, Terrasse schrubben, Fugen im Bad nachbehandeln. Jede dieser Aufgaben bekommt einen Rhythmus — alle vier Wochen, einmal je Saison — und einen Platz im Kalender, nicht im Kopf.",
+            "Für die Planung des Grundrisses zählt der zweite Durchgang ebenso wie der erste: Ein Fenster, das von innen nicht erreichbar ist, weil das Bett davorsteht, wird nicht geputzt. Ein Lüftungsfilter hinter einer verschraubten Blende wird nicht gewechselt. Was in der Planung zehn Minuten kostet, kostet im Betrieb jedes Jahr Stunden — oder es wird nicht gemacht, und das sieht man."
+          ]
+        },
+        {
+          "h2": "Was die Zahl am Ende bedeutet",
+          "p": [
+            "Die gemessene Reinigungszeit ist eine Zahl, mit der sich rechnen lässt. Zwanzig Minuten je Einheit bei zwölf Einheiten sind vier Stunden Wechseltag; dreißig Minuten sind sechs. Der Unterschied sind zwei Stunden Arbeitszeit pro Wechsel, fünfzig Wechsel im Jahr, hundert Stunden. Das ist nicht die größte Zahl in der Kalkulation eines Mietobjekts, aber sie ist die, die jede Woche wiederkommt, und sie ist die, die sich vor dem Bau fast kostenlos verändern lässt.",
+            "Sie hat außerdem eine Seite, die nicht in Minuten steht: Ein Haus, das schnell zu reinigen ist, wird gründlich gereinigt, weil die Zeit dafür reicht. Ein Haus, das langsam zu reinigen ist, wird oberflächlich gereinigt, weil der nächste Gast wartet. Was Gäste in Bewertungen bemängeln, ist selten die Größe des Hauses und oft die Ecke, die niemand erreicht hat.",
+            "Für die Planung heißt das: Reinigungszeit messen, bevor das Modell feststeht; Bett, Bad und Küche danach entscheiden; Flächen und Kanten reduzieren; den Weg mitplanen. Wie MODUNERA Mietobjekte für Betreiber plant, steht auf der Seite für Campingplatz und Glamping — die Reinigungszeit ist dort eine der ersten Fragen."
+          ]
+        }
+      ],
+      "checklist": {
+        "h2": "Reinigungszeit vor dem Bau",
+        "items": [
+          "Wechselfenster und Einheitenzahl festlegen: wie viele Minuten je Einheit bleiben",
+          "Jeden Schritt eines Wechsels mit einer reinigenden Person am Grundriss durchgehen",
+          "Bett ebenerdig oder über fester Treppe, von drei Seiten erreichbar",
+          "Duschkabine statt offener Dusche, Wandpaneele, Waschtisch aus einem Stück, WC wandhängend",
+          "Arbeitsplatte aus massivem Paneel, Kochfeld und Kühlschrank wischbar",
+          "Einbauten bündig, keine Spalte, kein Teppich, keine Schwellen",
+          "Außenschrank für Reinigungsmaterial und Außenwasserhahn einplanen",
+          "Aufstellung der Einheiten so, dass die Reinigung in einer Linie läuft"
+        ]
+      },
+      "faq": [
+        [
+          "Wie viel Reinigungszeit ist für ein Tiny House realistisch?",
+          "Das hängt vom Grundriss ab, und genau deshalb lohnt sich die Messung. Ein Objekt mit ebenerdigem Bett, Duschkabine und kleiner Küche lässt sich in einem anderen Zeitrahmen reinigen als eines mit Loft über Leiter und offener Dusche. Die Zahl ergibt sich aus dem Durchgehen der Schritte am konkreten Grundriss, nicht aus einem Richtwert."
+        ],
+        [
+          "Lohnt sich ein ebenerdiges Bett, wenn es Wohnfläche kostet?",
+          "Im Mietbetrieb meistens ja. Die Fläche, die es kostet, wird einmal bezahlt; die Zeit, die ein Loft über Leiter kostet, wird bei jedem Wechsel bezahlt — und ein Loft schließt Gäste aus, die keine Leiter mehr steigen. Wo das Loft bleibt, ist eine feste Treppe der Kompromiss."
+        ],
+        [
+          "Kann die Reinigungszeit nachträglich verkürzt werden?",
+          "Teilweise: Teppiche entfernen, Dekoration reduzieren, Ausstattungsliste einführen, Reinigungsmaterial im Objekt lagern. Bett, Bad und Küche lassen sich nachträglich nur mit Umbau ändern. Deshalb gehört die Messung vor den Bau."
+        ],
+        [
+          "Was hat die Reinigungszeit mit Bewertungen zu tun?",
+          "Ein Haus, das in der verfügbaren Zeit gründlich gereinigt werden kann, wird gründlich gereinigt. Eines, das zu lange braucht, wird unter Zeitdruck oberflächlich gereinigt — und die übersprungene Ecke ist das, was Gäste bemängeln. Die Minutenzahl ist deshalb auch eine Qualitätszahl."
+        ],
+        [
+          "Plant MODUNERA die Reinigungszeit mit?",
+          "Ja, für Mietobjekte ist sie eine der ersten Fragen: Wo schlafen die Gäste, wie ist das Bad gebaut, wie klein kann die Küche sein, wo lagert das Material. Die Entscheidungen fallen am Grundriss, bevor gebaut wird; die Seite für Campingplatz und Glamping beschreibt den Ablauf."
+        ]
+      ]
+    },
+    {
+      "slug": "kran-oder-rangieren",
+      "publish_on": "2026-10-17",
+      "category": "gewerbe",
+      "title": "Kran oder Rangieren: wie eine Einheit auf den Stellplatz kommt",
+      "description": "Die letzten fünfzig Meter entscheiden über den Liefertag. Wann eine Einheit gezogen, wann sie gehoben wird, was Tore, Kurven und Untergrund dabei bedeuten und wie Betreiber die Aufstellung mehrerer Einheiten planen.",
+      "image": "transport-trailer-yard",
+      "imageAlt": "Zwei Einheiten auf Tandemachs-Anhängern auf dem Werksgelände, bereit zur Abfahrt",
+      "lead": "Ein Tiny House legt den weiten Weg auf der Straße zurück, und der weite Weg ist selten das Problem. Das Problem sind die letzten fünfzig Meter: das Tor, hinter dem der Tieflader nicht wenden kann, die Kurve zwischen zwei Bäumen, der Weg, dessen Tragfähigkeit niemand kennt, der Stellplatz, auf den man nur von einer Seite kommt. Ob eine Einheit am Ende gezogen oder gehoben wird, entscheidet sich dort — und es entscheidet über Kosten, Zeit und darüber, ob der Liefertag ein Tag bleibt.",
+      "sections": [
+        {
+          "h2": "Zwei Wege auf den Stellplatz",
+          "p": [
+            "Eine Einheit kommt auf den Stellplatz, indem sie dorthin gezogen wird — auf eigenem Fahrgestell oder auf einem Rangiergerät — oder indem sie vom Tieflader gehoben und abgesetzt wird. Ziehen braucht einen Weg, der breit, fest und frei genug ist, und einen Stellplatz, auf den man vorwärts oder rückwärts gelangt. Heben braucht einen Kran, einen Standplatz für den Kran und einen Schwenkbereich ohne Bäume, Leitungen und Dächer.",
+            "Welcher Weg der richtige ist, lässt sich nicht aus dem Lageplan ablesen. Er ergibt sich aus der Begehung: Wie breit ist das Tor, wie eng die Kurve, wie fest der Weg, wo stehen Bäume, wo laufen Leitungen, wo kann ein Kran stehen, ohne einzusinken oder einen Nachbarn zu überschwenken? Diese Begehung ist der wichtigste Termin vor der Bestellung, und sie wird am häufigsten ausgelassen.",
+            "Bei MODUNERA ist die letzte Zufahrt deshalb Teil jeder Anfrage: Wir fragen nach Fotos von Tor, Weg und Stellplatz und nach den Maßen, bevor ein Modell gewählt wird. Was dabei je Betreiberart geplant wird, steht auf der Seite für Betreiber und Kommunen."
+          ]
+        },
+        {
+          "h2": "Das Tor: die erste Zahl, die man braucht",
+          "p": [
+            "Die Grundbreite aller acht Modelle beträgt 2,55 m, damit der Transport auf der Straße ohne Sondergenehmigung für Überbreite möglich bleibt. Ein Tor, das 2,55 m breit ist, reicht trotzdem nicht: Dachüberstände, Regenrinnen, Spiegel des Zugfahrzeugs und der Winkel, in dem das Gespann durch das Tor kommt, brauchen Luft. Wer drei Meter lichte Breite hat, ist auf der sicheren Seite; wer weniger hat, muss den Winkel und die Überstände kennen.",
+            "Die Höhe ist die zweite Zahl. Eine Einheit auf dem Tieflader ist höher als eine auf eigenem Fahrgestell, und ein Torbogen, ein Ast oder eine Leitung über der Einfahrt begrenzt sie. Die Höhe der Einheit auf dem Transportmittel steht in den Projektunterlagen; die Höhe der Einfahrt misst der Betreiber — mit dem Blick nach oben, nicht nur zur Seite.",
+            "Die dritte Zahl ist die Gesamtlänge des Gespanns. Ein Zugfahrzeug mit Tieflader braucht zum Durchfahren eines Tors nicht nur das Tor, sondern auch den Platz davor und dahinter, um gerade anzusetzen. Ein Tor an einer engen Straße, in das man nur im rechten Winkel einbiegen kann, ist mit einem langen Gespann nicht befahrbar — unabhängig von seiner Breite."
+          ]
+        },
+        {
+          "h2": "Der Weg: Kurven, Steigung und Tragfähigkeit",
+          "p": [
+            "Hinter dem Tor beginnt der Platzweg, und hier entscheiden drei Dinge: der Kurvenradius, die Steigung und die Tragfähigkeit. Eine Einheit von acht oder neun Metern Länge auf einem Anhänger braucht in einer Kurve mehr Platz, als die Kurve breit ist, weil das Heck ausschwenkt und die Achse schneidet. Was ein Wohnmobil schafft, schafft ein neun Meter langes Haus nicht unbedingt.",
+            "Die Steigung begrenzt das Zugfahrzeug: Auf nassem Rasen oder Schotter zieht ein Transporter eine schwere Einheit keine Steigung hinauf, ein Traktor vielleicht, ein Rangiergerät nur auf festem Grund. Die Tragfähigkeit begrenzt alles: Ein Weg, der für Autos gebaut wurde, trägt eine Einheit mit Anhänger und Zugfahrzeug nicht automatisch — und ein eingesunkener Tieflader auf einem Campingplatz ist der Liefertag, den niemand will.",
+            "Die praktische Empfehlung: Den Weg vom Tor bis zum Stellplatz abgehen, jede Kurve mit Maßband messen, den Untergrund an der schwächsten Stelle prüfen und bei Zweifeln Stahlplatten oder Fahrbleche einplanen. Das ist eine Stunde Arbeit und erspart einen verlorenen Tag."
+          ]
+        },
+        {
+          "h2": "Wann Ziehen der richtige Weg ist",
+          "p": [
+            "Ziehen ist der einfachere und günstigere Weg, wenn er möglich ist. Er braucht keinen Kran, keinen Kranstandplatz und keinen Schwenkbereich; er braucht einen befahrbaren Weg und einen Stellplatz, auf den man gelangt. Eine Einheit auf eigenem Fahrgestell wird mit dem Zugfahrzeug oder einem Rangiergerät auf den Stellplatz geschoben, ausgerichtet und auf die Stützen gesetzt. Eine Einheit ohne eigenes Fahrgestell kann auf einem Rangierwagen gezogen werden, wenn der Weg eben und fest ist.",
+            "Die Grenze des Ziehens ist der Stellplatz selbst: Wenn er nur von einer Seite zugänglich ist und die Einheit in einer bestimmten Ausrichtung stehen soll, muss das Gespann in dieser Ausrichtung ankommen — und das bestimmt, von wo es kommt. Ein Stellplatz, der rückwärts angefahren werden muss, braucht Platz zum Rangieren vor dem Stellplatz, nicht nur auf ihm.",
+            "Für Plätze mit festen Wegen und festen Stellplätzen — Ferienparks, größere Campingplätze — ist Ziehen meist der Normalfall. Das ist ein Vorteil, wenn die erste Einheit sorgfältig geplant wurde: Der Weg, die Rangierposition und die Ausrichtung wiederholen sich für jede weitere Einheit."
+          ]
+        },
+        {
+          "h2": "Wann ein Kran nötig ist",
+          "p": [
+            "Ein Kran ist nötig, wenn der Weg nicht befahrbar ist — zu eng, zu steil, zu weich — oder wenn der Stellplatz nicht angefahren werden kann, etwa hinter einem Gebäude, auf einer Böschung oder am Wasser. Dann wird die Einheit vom Tieflader gehoben und über das Hindernis hinweg abgesetzt. Das ist zuverlässig, aber es braucht drei Dinge, die auf dem Lageplan nicht stehen: einen Standplatz für den Kran, der das Gewicht von Kran und Last trägt; einen Schwenkbereich, der frei von Bäumen, Leitungen und Dächern ist; und eine Reichweite, die vom Standplatz bis zum Stellplatz reicht.",
+            "Die Reichweite ist die Zahl, die über die Krangröße entscheidet, und die Krangröße über die Kosten. Eine Einheit, die zehn Meter vom Kranstandplatz entfernt abgesetzt wird, braucht einen anderen Kran als eine, die dreißig Meter entfernt abgesetzt wird. Deshalb lohnt es sich, den Kranstandplatz so nah wie möglich am Stellplatz zu suchen — und ihn vorher auf Tragfähigkeit zu prüfen.",
+            "Das Gewicht der Einheit steht in den Projektunterlagen; der Kranbetreiber braucht es zusammen mit der Reichweite, um das Gerät zu wählen. Wer beides vor der Bestellung kennt, kann den Kran rechtzeitig buchen und den Liefertag darauf abstimmen."
+          ]
+        },
+        {
+          "h2": "Mehrere Einheiten: Reihenfolge und Rhythmus",
+          "p": [
+            "Wer mehrere Einheiten aufstellt, plant nicht einen Liefertag, sondern einen Rhythmus: In welcher Reihenfolge werden die Stellplätze bedient, damit keine Einheit den Weg zur nächsten versperrt? Wo steht der Tieflader, während die erste Einheit abgesetzt wird, und wo der nächste? Wie viele Einheiten schafft ein Kran an einem Tag, wenn er zwischen zwei Standplätzen umsetzen muss?",
+            "Die Reihenfolge ist einfach, wenn man sie vom entferntesten Stellplatz her denkt: Zuerst die Einheit, die am weitesten hinten steht, dann die davor, bis zur ersten am Tor. So versperrt keine die Zufahrt zur nächsten. Bei Kranlieferungen gilt dasselbe für den Schwenkbereich: Eine Einheit, die bereits steht, darf nicht im Schwenkbereich der nächsten liegen.",
+            "Der Rhythmus wird mit dem Betreiber abgestimmt, so dass die Lieferung außerhalb der Saison liegt und der Platz in diesen Tagen für den Transport frei ist. Was in einer Woche im November erledigt ist, stört im Juli den Betrieb — das ist der Grund, warum Betreiberprojekte bei MODUNERA als ein Vorhaben geplant werden, nicht als Folge von Einzellieferungen."
+          ]
+        },
+        {
+          "h2": "Die Besichtigung vor der Lieferung: was vermessen wird",
+          "p": [
+            "Die verlässlichste Antwort auf die Frage Kran oder Rangieren kommt von einer Besichtigung, nicht von einem Luftbild. Wer sie macht — der Betreiber mit einem Maßband, oder auf Wunsch jemand von der Spedition —, misst in einer festen Reihenfolge: die lichte Breite und Höhe jeder Durchfahrt vom öffentlichen Weg bis zum Stellplatz, Tore eingeschlossen; den Innenradius jeder Kurve; die Steigung der steilsten Stelle; die Breite des Weges an der engsten; die Fläche am Stellplatz, auf der das Zugfahrzeug steht, während der Anhänger rangiert wird.",
+            "Dazu kommen die Dinge, die man nicht messen, aber ansehen kann: Äste, die in die Fahrbahn ragen, Leitungen über dem Weg, Bordsteine, Schachtdeckel, Böschungen, ein Zaun, der im Weg steht. Und der Untergrund: Asphalt, Schotter, Rasen, Sand — mit der Frage, was er nach drei Tagen Regen ist.",
+            "Das Ergebnis wird mit Fotos und Maßen an die Spedition gegeben, und die Spedition sagt, ob sie zieht oder ob ein Kran kommt. Diese Antwort vor dem Liefertermin zu haben, ist der ganze Zweck der Besichtigung."
+          ]
+        },
+        {
+          "h2": "Was ein Kranstandplatz braucht",
+          "p": [
+            "Wenn gehoben wird, braucht der Kran einen Platz, und der hat eigene Anforderungen: eben, tragfähig für ein Fahrzeug, das mit Abstützung deutlich schwerer ist als der Tieflader, in Reichweite des Stellplatzes — und Reichweite heißt beim Kran nicht Luftlinie, sondern Ausladung bei Last, die mit der Entfernung schnell abnimmt. Ein Kran, der zwanzig Meter weit heben soll, ist ein anderer Kran als einer für acht, und er kostet entsprechend.",
+            "Zwischen Kran und Stellplatz darf nichts im Schwenkbereich sein, was nicht beschädigt werden darf: Dächer, Leitungen, Bäume, andere Einheiten. Und der Kranstandplatz muss für den Kran erreichbar sein — ein Kran, der nicht bis zum Standplatz kommt, ist derselbe Fall wie ein Tieflader, der nicht bis zum Tor kommt, nur teurer.",
+            "Die Spedition oder der Kranbetreiber beurteilt das vor Ort oder anhand der Besichtigungsfotos. Für den Betreiber heißt das: den Standplatz freihalten, den Untergrund benennen und am Liefertag niemanden darauf parken lassen."
+          ]
+        },
+        {
+          "h2": "Was am Liefertag vor Ort bleibt",
+          "p": [
+            "Die Einheit kommt fertig ausgebaut; der Liefertag ist der Tag, an dem sie auf den Stützen steht. Was danach vor Ort bleibt, ist überschaubar, aber es gehört in den Zeitplan: Die Einheit wird über die vier Stützen ausgerichtet, damit Türen und Fenster schließen und Wasser abläuft; Untergrund und Lastverteilung unter den Stützen sind dabei Sache der Planung am Standort. Die Anschlüsse werden hergestellt — Strom, Wasser, Abwasser — von wem auch immer sie vor Ort herstellt. Terrasse und Außenraum werden gebaut, soweit sie nicht Teil der Konstruktion sind.",
+            "Für Betreiber ist der wichtigste Punkt, dass die Aufstellung nicht mit dem Betrieb kollidiert: kein Kran im Schwenkbereich einer belegten Einheit, kein Tieflader auf dem Weg zur Rezeption, keine Baustelle in der Saison. Deshalb wird der Liefertag mit dem Platzkalender abgestimmt, nicht nur mit der Fertigung.",
+            "Und deshalb gehört die Begehung vor die Bestellung: Wer Tor, Weg und Stellplatz gemessen hat, weiß, ob gezogen oder gehoben wird, was das kostet und wie lange es dauert. Wer es nicht gemessen hat, erfährt es am Liefertag — und dann ist die Einheit schon da."
+          ]
+        }
+      ],
+      "checklist": {
+        "h2": "Die Begehung vor der Bestellung",
+        "items": [
+          "Lichte Breite und Höhe des Tors, mit Blick nach oben auf Bögen, Äste und Leitungen",
+          "Platz vor und hinter dem Tor, um ein langes Gespann gerade anzusetzen",
+          "Jede Kurve des Platzwegs mit Maßband, für ein Heck, das ausschwenkt",
+          "Steigung und Untergrund an der schwächsten Stelle, bei Zweifeln Fahrbleche",
+          "Zugänglichkeit des Stellplatzes: von welcher Seite, in welcher Ausrichtung, Rangierfläche davor",
+          "Bei Kran: Standplatz, Tragfähigkeit, Schwenkbereich frei, Reichweite bis zum Stellplatz",
+          "Bei mehreren Einheiten: Reihenfolge vom entferntesten Stellplatz her",
+          "Liefertage im Platzkalender außerhalb der Saison blockieren"
+        ]
+      },
+      "faq": [
+        [
+          "Braucht ein Tiny House immer einen Kran?",
+          "Nein. Wo der Weg befahrbar und der Stellplatz anfahrbar ist, wird die Einheit gezogen und auf die Stützen gesetzt. Ein Kran ist nötig, wenn Weg oder Stellplatz das nicht hergeben — zu eng, zu steil, zu weich, oder hinter einem Hindernis."
+        ],
+        [
+          "Wer stellt den Kran?",
+          "Der Kran wird für den Liefertag gebucht, in der Regel von einem regionalen Kranbetreiber, der Gewicht und Reichweite kennt. Beides steht in den Projektunterlagen beziehungsweise ergibt sich aus der Begehung. Wer ihn bucht, wird je Projekt vereinbart."
+        ],
+        [
+          "Warum ist die Breite auf 2,55 m begrenzt?",
+          "Damit der Transport auf der Straße ohne Sondergenehmigung für Überbreite möglich bleibt. Alle acht Modelle halten diese Grundbreite; die Länge unterscheidet sich je Modell. Für das Tor am Platz reicht 2,55 m lichte Breite trotzdem nicht — Überstände, Spiegel und Winkel brauchen Luft."
+        ],
+        [
+          "Was passiert, wenn der Weg am Liefertag zu weich ist?",
+          "Dann werden Fahrbleche oder Stahlplatten gelegt, wenn sie eingeplant sind — oder der Liefertag wird verschoben, wenn sie es nicht sind. Deshalb gehört die Prüfung des Untergrunds an der schwächsten Stelle in die Begehung vor der Bestellung, nicht in den Liefertag."
+        ],
+        [
+          "Kann eine Einheit später versetzt werden?",
+          "Ja. Die Einheit steht auf vier Stützen ohne Fundament und wird über die Straße transportiert. Ein Versetzen auf einen anderen Stellplatz ist derselbe Vorgang wie die Aufstellung — Ziehen oder Heben, je nach Weg — und wird genauso geplant."
+        ]
+      ]
+    },
+    {
+      "slug": "abwasser-ohne-anschluss",
+      "publish_on": "2026-10-18",
+      "category": "gewerbe",
+      "title": "Abwasser ohne Anschluss: die Optionen für Betreiber, ehrlich sortiert",
+      "description": "Viele Stellplätze haben Strom und Wasser, aber keinen Abwasseranschluss. Was ein Betreiber dann tun kann — Leitung, Tank, Trennung, Kleinkläranlage — und was jede Option im Betrieb kostet.",
+      "image": "production-hall-unit",
+      "imageAlt": "Einheit auf Stützen in der Fertigungshalle, Anschlüsse im Boden vorbereitet",
+      "lead": "Ein Tiny House mit Küche und Bad erzeugt Abwasser, jeden Tag, in Mengen, die ein Wohnmobil nicht kennt. Auf vielen Stellplätzen — Campingplätze, Hafenflächen, Pilotflächen von Gemeinden — gibt es Strom und Wasser, aber keinen Abwasseranschluss, oder einen, der fünfzig Meter entfernt liegt. Das ist keine Frage, die das Haus löst; es ist eine Frage an den Betreiber, und sie hat mehrere Antworten mit sehr verschiedenen Kosten. Dieser Beitrag sortiert sie, ohne eine davon schönzureden.",
+      "sections": [
+        {
+          "h2": "Wie viel Abwasser ein Mietobjekt erzeugt",
+          "p": [
+            "Bevor man über Optionen spricht, braucht man die Menge. Ein Mietobjekt mit zwei bis vier Gästen, Dusche, Waschbecken, Spüle und WC erzeugt an einem Tag mit Vollbelegung eine Menge, die sich an der Zahl der Duschen und Spülgänge bemisst — und die ist höher, als die meisten Betreiber beim ersten Überschlag annehmen, weil Gäste im Urlaub anders duschen als zu Hause.",
+            "Die Menge entscheidet über die Option. Ein Tank, der für ein Wochenende reicht, reicht nicht für eine Woche Vollbelegung; eine Kleinkläranlage, die für zwei Objekte ausgelegt ist, ist mit zwölf überfordert. Wer die Menge nicht kennt, wählt die Option nach dem Preis und bezahlt den Unterschied im Betrieb — in Entleerungen, in Störungen, in Gästen, die das Bad nicht benutzen können.",
+            "Die Empfehlung: Die Tagesmenge je Objekt für Vollbelegung schätzen, mit der Zahl der Objekte und der Zahl der Belegungstage multiplizieren, und mit dieser Jahresmenge in die Optionen gehen. Das ist eine Viertelstunde Rechnung und die Grundlage für alles Weitere."
+          ]
+        },
+        {
+          "h2": "Option eins: die Leitung zum vorhandenen Anschluss",
+          "p": [
+            "Die beste Option ist fast immer die, die auf dem Lageplan am weitesten weg aussieht: eine Leitung vom Stellplatz zum vorhandenen Abwasseranschluss des Platzes. Sie ist einmal gebaut und dann jahrelang unsichtbar; sie braucht keine Entleerung, keine Wartung, keine Genehmigung für eine eigene Anlage. Ihre Kosten sind die Leitung selbst, der Graben, das Gefälle und gegebenenfalls eine Hebeanlage, wenn das Gefälle nicht reicht.",
+            "Das Gefälle ist der Punkt, an dem die Leitung scheitert oder gelingt. Abwasser fließt nur bergab, und ein Stellplatz, der tiefer liegt als der Anschluss, braucht eine Hebeanlage — eine Pumpe mit Behälter, die das Abwasser hochfördert. Hebeanlagen funktionieren, sie brauchen aber Strom, Wartung und einen Platz, an dem sie im Winter nicht einfrieren. Für Betreiber sind sie ein Bauteil, das ausfallen kann, und zwar vorzugsweise an einem Samstag im August.",
+            "Die Empfehlung: Vor der Entscheidung die Höhen messen — Stellplatz, Anschluss, der Weg dazwischen — und das Gefälle berechnen. Wo es reicht, ist die Leitung die Lösung. Wo es nicht reicht, ist die Hebeanlage einzuplanen, mit Zugang zur Wartung und mit einem Plan für den Fall, dass sie ausfällt."
+          ]
+        },
+        {
+          "h2": "Option zwei: der Tank",
+          "p": [
+            "Wo keine Leitung möglich ist, ist der Abwassertank die nächstliegende Option: ein zugelassener, dichter Behälter, in den das gesamte Abwasser läuft und der regelmäßig entleert wird. Der Tank ist technisch einfach und planungsrechtlich meist unkompliziert, solange er zugelassen und dicht ist — was die Platzordnung oder die Behörde im Einzelnen regelt.",
+            "Seine Kosten liegen nicht im Tank, sondern in der Entleerung. Ein Tank, der bei Vollbelegung alle paar Tage voll ist, braucht einen Entsorger, der alle paar Tage kommt, und einen Weg, auf dem der Entsorger bis zum Tank fährt. Je kleiner der Tank, desto häufiger die Entleerung; je größer, desto mehr Platz und desto höher die Anschaffung. Die Jahresmenge aus dem ersten Abschnitt ergibt direkt die Zahl der Entleerungen.",
+            "Für ein oder zwei Objekte auf einem Platz, der sonst alles hat, ist der Tank oft die richtige Lösung. Für zwölf Objekte auf einem Platz ohne Anschluss ist er es selten, weil zwölf Entleerungen in der Woche einen Entsorger auf dem Platz bedeuten, der mit dem Betrieb kollidiert. Hier lohnt der Vergleich mit einer Leitung zu einem gemeinsamen Sammelpunkt."
+          ]
+        },
+        {
+          "h2": "Option drei: Grauwasser und Schwarzwasser trennen",
+          "p": [
+            "Abwasser besteht aus zwei Strömen: Grauwasser aus Dusche, Waschbecken und Spüle, und Schwarzwasser aus dem WC. Die Trennung verändert die Rechnung, weil das Grauwasser den größten Teil der Menge ausmacht und das Schwarzwasser den größten Teil des Problems. Wer sie trennt, kann für beide verschiedene Wege wählen.",
+            "Für das Schwarzwasser gibt es Trocken- und Trenntoiletten, die kein oder fast kein Wasser brauchen und deren Feststoffe gesondert entsorgt werden. Für Gäste ist das eine Umstellung, und ob sie für ein Mietobjekt infrage kommt, hängt vom Konzept und vom Publikum ab — in einem Naturcamp ist sie selbstverständlich, in einem Resort nicht. Das Grauwasser bleibt dann als Menge, die aber behandelt werden muss, bevor sie irgendwohin darf; wohin und wie, regelt die Behörde, und das ist je nach Bundesland und Gewässernähe verschieden.",
+            "Die Empfehlung: Die Trennung nur erwägen, wenn das Konzept sie trägt und die Behörde eine Lösung für das Grauwasser genehmigt. Sie ist kein Trick, um den Anschluss zu sparen, sondern ein anderes Produkt — und das muss zum Gast passen."
+          ]
+        },
+        {
+          "h2": "Option vier: die Kleinkläranlage",
+          "p": [
+            "Für mehrere Objekte auf einem Gelände ohne Anschluss ist die Kleinkläranlage die Option, die am ehesten den Charakter einer dauerhaften Lösung hat: Das Abwasser aller Objekte läuft in eine Anlage, die es biologisch reinigt und das gereinigte Wasser versickert oder einleitet. Sie ersetzt die Entleerung durch Wartung und den Tank durch eine genehmigte Anlage.",
+            "Ihre Kosten sind die Anlage, die Genehmigung, die Leitungen von allen Objekten zu ihr und die regelmäßige Wartung durch einen Fachbetrieb. Ihre Grenzen sind die Genehmigung — die wasserrechtliche Erlaubnis für die Einleitung oder Versickerung ist eine eigene Hürde, je nach Gewässernähe und Bodenart — und die Auslegung: Eine Anlage wird für eine Zahl von Einwohnerwerten dimensioniert, und ein Mietobjekt mit Vollbelegung im Sommer und Leerstand im Winter ist für eine biologische Anlage eine schwierige Last.",
+            "Die Empfehlung: Die Kleinkläranlage als Projekt behandeln, nicht als Bauteil. Sie braucht einen Fachplaner, eine Genehmigung und eine Auslegung auf den Betrieb mit seinen Schwankungen. Für ein Dorf oder einen Platz, der ohnehin erschlossen wird, ist sie oft die richtige Lösung; für drei Objekte auf einem Campingplatz ist sie es selten."
+          ]
+        },
+        {
+          "h2": "Was das Haus dazu beiträgt — und was nicht",
+          "p": [
+            "Das Haus kann die Abwasserfrage nicht lösen, aber es kann sie erleichtern. Die Anschlusspunkte für Abwasser werden so gelegt, dass sie zum gewählten Weg passen: ein Abgang an der Seite, von der die Leitung kommt; ein Abgang mit Gefälle zum Tank; getrennte Abgänge für Grau- und Schwarzwasser, wenn getrennt wird. Das wird vor dem Bau festgelegt, und zwar auf Grundlage dessen, was der Betreiber für den Stellplatz entschieden hat.",
+            "Das Haus kann außerdem die Menge beeinflussen: wassersparende Armaturen, eine Dusche mit Durchflussbegrenzer, eine Spülung mit kleiner Menge. Das verändert die Jahresmenge spürbar und damit die Zahl der Entleerungen oder die Auslegung der Anlage. Es ist aber ein Beitrag, keine Lösung — ein Tank wird langsamer voll, nicht gar nicht.",
+            "Was das Haus nicht kann, ist die Entscheidung abnehmen. Wo kein Anschluss liegt, muss der Betreiber einen Weg wählen, und dieser Weg muss vor der Bestellung feststehen, weil die Anschlüsse des Hauses danach gebaut werden. Bei MODUNERA ist die Abwasserfrage deshalb eine der ersten in jeder Betreiberanfrage; was je Betreiberart dazu zu klären ist, steht auf den Seiten für Campingplatz, Marina und Tiny-House-Dorf."
+          ]
+        },
+        {
+          "h2": "Frost, Geruch und die Leitung unter dem Haus",
+          "p": [
+            "Was allen vier Optionen gemeinsam ist: Das Abwasser verlässt das Haus über eine Leitung unter dem Boden, und diese Leitung ist im Winter der empfindlichste Punkt. Eine Einheit auf Stützen hat Luft unter sich, und Luft heißt Frost. Der Abgang wird deshalb kurz, gedämmt und mit Gefälle geführt, damit kein Wasser darin steht, und an der Stelle, an der er den Boden erreicht, frostsicher verlegt — in der Tiefe, die am Standort frostfrei ist, oder mit Begleitheizung, wenn die Tiefe nicht zu erreichen ist.",
+            "Der zweite gemeinsame Punkt ist der Geruch. Jeder Abfluss hat einen Siphon, der ihn abhält, und jeder Siphon trocknet aus, wenn er wochenlang nicht benutzt wird — in der Nebensaison, bei einer Einheit, die drei Wochen leer steht. Dazu braucht die Abwasserleitung eine Entlüftung, über das Dach oder über ein Belüftungsventil, sonst zieht die Spülung die Siphons leer. Beides gehört zur Hausinstallation und wird bei MODUNERA so ausgeführt; was danach kommt, ist die Sache des Standorts.",
+            "Der dritte Punkt ist die Zugänglichkeit: Eine Revisionsöffnung an der Stelle, an der die Hausleitung in die Standortlösung übergeht, erspart im Betrieb das Aufgraben. Sie kostet in der Planung nichts und im Betrieb irgendwann einen Nachmittag."
+          ]
+        },
+        {
+          "h2": "Was die Entscheidung über zehn Jahre kostet",
+          "p": [
+            "Die vier Optionen werden gern nach dem verglichen, was sie am ersten Tag kosten: Die Leitung ist teuer, der Tank ist billig. Über zehn Jahre gerechnet dreht sich das oft um. Ein Tank wird entleert, und jede Entleerung kostet Geld und einen Termin; bei einem Mietobjekt mit voller Saison sind das viele Termine. Eine Leitung kostet einmal und dann nichts mehr als die Abwassergebühr. Eine Kleinkläranlage kostet einmal und dann Wartung, Stromanschluss und die wiederkehrende Prüfung.",
+            "Die ehrliche Rechnung stellt deshalb die Kosten des ersten Tages neben die der nächsten zehn Jahre — und sie zählt den Aufwand dazu, der nicht in Rechnungen steht: den Anruf, wenn der Tank am Samstag voll ist, die Fahrt zur Entleerung, den Gast, der den Pumpwagen vor seiner Terrasse hat. Wer das zusammenzählt, entscheidet selten für die billigste Option am ersten Tag."
+          ]
+        },
+        {
+          "h2": "Die ehrliche Sortierung",
+          "p": [
+            "Wenn man die vier Optionen nach dem sortiert, was sie im Betrieb kosten — nicht in der Anschaffung —, ergibt sich eine Reihenfolge, die selten überrascht und trotzdem oft ignoriert wird: Die Leitung zum vorhandenen Anschluss ist fast immer die günstigste Lösung über die Jahre, auch wenn sie in der Anschaffung die teuerste scheint. Der Tank ist die günstigste Anschaffung und die teuerste Dauerlösung, sobald mehr als ein oder zwei Objekte dranhängen. Die Trennung ist ein anderes Produkt und keine Sparlösung. Die Kleinkläranlage ist ein Projekt und lohnt, wenn ein Gelände ohnehin erschlossen wird.",
+            "Die Reihenfolge der Prüfung folgt daraus: Erst messen, ob eine Leitung geht. Wenn nicht, rechnen, was ein Tank an Entleerungen kostet. Wenn das zu viel ist, prüfen, ob das Konzept eine Trennung trägt. Wenn mehrere Objekte dauerhaft stehen sollen, eine Kleinkläranlage als Projekt planen. Und in jedem Fall die Behörde fragen, bevor etwas gebaut wird — denn was mit Abwasser geschehen darf, regelt sie, nicht der Hersteller des Hauses.",
+            "Wer das in dieser Reihenfolge tut, hat am Ende einen Anschlusspunkt auf dem Lageplan und eine Zahl für die Betriebskosten. Beides braucht das Haus, bevor es gebaut wird."
+          ]
+        }
+      ],
+      "checklist": {
+        "h2": "Abwasser vor der Bestellung",
+        "items": [
+          "Tagesmenge je Objekt bei Vollbelegung schätzen, Jahresmenge aus Objekten und Belegungstagen bilden",
+          "Höhen messen: Stellplatz, vorhandener Anschluss, Gefälle dazwischen",
+          "Leitung prüfen; wo das Gefälle fehlt, Hebeanlage mit Wartungszugang einplanen",
+          "Bei Tank: Entleerungen pro Jahr aus der Jahresmenge berechnen, Zufahrt für den Entsorger prüfen",
+          "Trennung nur, wenn Konzept und Gäste sie tragen und die Behörde das Grauwasser genehmigt",
+          "Bei mehreren Objekten: Kleinkläranlage mit Fachplaner, Genehmigung und Auslegung auf Schwankungen",
+          "Anschlusspunkt auf dem Lageplan markieren, bevor das Haus gebaut wird",
+          "Behörde fragen, was mit dem Abwasser am Standort geschehen darf"
+        ]
+      },
+      "faq": [
+        [
+          "Kann ein Tiny House ohne Abwasseranschluss betrieben werden?",
+          "Technisch ja, mit Tank oder Trennung. Ob das am Standort zulässig ist und was es im Betrieb kostet, hängt vom Platz, von der Behörde und von der Zahl der Objekte ab. Die Frage ist nicht, ob es geht, sondern welche Option über die Jahre die günstigste ist."
+        ],
+        [
+          "Wie groß muss ein Abwassertank sein?",
+          "So groß, dass die Entleerung in einem Rhythmus möglich ist, der zum Betrieb passt. Das ergibt sich aus der Tagesmenge bei Vollbelegung und aus der Frage, wie oft ein Entsorger auf den Platz kommen kann. Eine Pauschale gibt es nicht; die Rechnung ist eine Viertelstunde."
+        ],
+        [
+          "Ist eine Trenntoilette für Gäste zumutbar?",
+          "Das hängt vom Konzept und vom Publikum ab. In einem Naturcamp wird sie erwartet, in einem Resort nicht. Sie ist kein Trick, um den Anschluss zu sparen, sondern ein anderes Produkt — und das Grauwasser bleibt als Menge, die behandelt werden muss."
+        ],
+        [
+          "Wer genehmigt eine Kleinkläranlage?",
+          "Die zuständige Wasserbehörde, meist über eine wasserrechtliche Erlaubnis für Einleitung oder Versickerung. Sie ist eine eigene Hürde, je nach Bodenart und Gewässernähe. Deshalb ist die Anlage ein Projekt mit Fachplaner, kein Bauteil, das man mitbestellt."
+        ],
+        [
+          "Was legt MODUNERA am Haus fest?",
+          "Die Lage der Abwasserabgänge, das Gefälle, getrennte Abgänge bei Trennung und wassersparende Armaturen — auf Grundlage dessen, was der Betreiber für den Stellplatz entschieden hat. Die Entscheidung selbst muss vor dem Bau feststehen, weil die Anschlüsse danach gebaut werden."
+        ]
+      ]
+    },
+    {
+      "slug": "stromausfall-hochsaison",
+      "publish_on": "2026-10-19",
+      "category": "gewerbe",
+      "title": "Stromausfall in der Hochsaison: was vorher geregelt wird",
+      "description": "Ein Stromausfall in einem Mietobjekt im August ist kein technisches, sondern ein organisatorisches Problem. Was Betreiber vorher regeln: Absicherung, Lastverteilung, Zugang, Ersatzteile und die Frage, wer um zehn Uhr abends kommt.",
+      "image": "interior-kitchen-oven",
+      "imageAlt": "Küchenzeile mit Einbaubackofen und Holzarbeitsplatte, die Geräte, die am Abend gleichzeitig laufen",
+      "lead": "Es ist zweiundzwanzig Uhr an einem Samstag im August. In Einheit sieben ist der Strom weg, die Gäste stehen im Dunkeln, die Klimaanlage schweigt, der Kühlschrank taut, und das Telefon des Betreibers klingelt. Was jetzt passiert, wurde nicht jetzt entschieden, sondern Monate vorher — bei der Planung der Absicherung, der Lastverteilung, des Zugangs zum Verteiler und der Frage, wer um diese Uhrzeit kommt. Dieser Beitrag geht durch, was vorher geregelt wird, damit der Anruf kurz bleibt.",
+      "sections": [
+        {
+          "h2": "Warum der Ausfall am Samstagabend kommt",
+          "p": [
+            "Stromausfälle in Mietobjekten kommen nicht zufällig; sie kommen, wenn die Last am höchsten ist. Das ist der Abend: Gäste kochen, duschen mit Durchlauferhitzer, laden Telefone, haben die Klimaanlage an und den Fernseher. Auf einem Stellplatz mit begrenzter Absicherung reicht das, um die Sicherung auszulösen — und sie löst am Samstag aus, weil am Samstag alle Einheiten belegt sind und die Stromsäule des Platzes die Summe aller Einheiten trägt.",
+            "Das heißt: Der Ausfall ist meistens kein Defekt, sondern eine Überlast. Und Überlast ist planbar. Wer weiß, welche Absicherung der Stellplatz hat und welche Geräte im Haus gleichzeitig laufen können, kann vorher ausrechnen, ob das zusammenpasst. Wer es nicht weiß, erfährt es im August.",
+            "Die Grundlage ist die Absicherung der Stromsäule am Stellplatz, in Ampere, und ob sie je Einheit oder je Säule gilt. Diese Zahl steht beim Betreiber; sie gehört in die Anfrage, bevor das Haus geplant wird. Was dabei je Betreiberart zu klären ist, steht auf der Seite für Campingplatz und Glamping — der Stromanschluss ist dort eine der ersten Fragen."
+          ]
+        },
+        {
+          "h2": "Die Lastverteilung: welche Geräte dürfen zusammen laufen",
+          "p": [
+            "Ein Haus, das für einen Stellplatz mit begrenzter Absicherung geplant wird, braucht eine Lastverteilung: eine Entscheidung darüber, welche Geräte gleichzeitig laufen dürfen und welche nicht. Das ist keine Einschränkung für den Gast, wenn sie richtig gemacht ist — es ist eine Vorrangschaltung, die zum Beispiel die Heizung kurz zurücknimmt, während das Kochfeld läuft, und sie danach wieder freigibt, ohne dass jemand es merkt.",
+            "Die Alternative zur Vorrangschaltung ist die Wahl der Geräte: ein Warmwasserspeicher statt eines Durchlauferhitzers, weil der Speicher nachts lädt und abends nicht zieht; ein Kochfeld mit begrenzter Gesamtleistung; eine Heizung, die mit einer kleineren Leistung über längere Zeit arbeitet. Jede dieser Entscheidungen senkt die Spitze, und die Spitze ist das, was die Sicherung auslöst.",
+            "Bei MODUNERA wird die Elektroinstallation auf die Absicherung ausgelegt, die der Stellplatz tatsächlich hat, und die Vorrangschaltung oder die Gerätewahl daraus abgeleitet. Was 16 Ampere im Alltag bedeuten, hat ein früherer Beitrag dieser Reihe am Beispiel durchgerechnet; für Mietobjekte kommt hinzu, dass der Gast die Lastverteilung nicht kennt und nicht kennen soll."
+          ]
+        },
+        {
+          "h2": "Der Zugang: wo der Verteiler sitzt und wer den Schlüssel hat",
+          "p": [
+            "Wenn die Sicherung ausgelöst hat, muss jemand sie wieder einschalten. Die Frage ist, wo sie sitzt und wer hinkommt. Ein Verteiler im Haus, in einem Schrank, den der Gast öffnen kann, ist für die Sicherung des Hauses der richtige Ort — der Gast kann sie selbst wieder einschalten, mit einer Anleitung am Schrank, und der Betreiber muss nicht kommen. Ein Verteiler, der nur mit Schlüssel zugänglich ist, bedeutet, dass der Betreiber kommt.",
+            "Die Sicherung der Stromsäule am Stellplatz ist eine andere Sache. Sie gehört dem Platz, sitzt oft in einem abgeschlossenen Kasten und ist nur für den Betreiber oder den Platzwart zugänglich. Wenn sie auslöst, muss jemand vom Platz kommen — und das ist der Anruf um zehn Uhr abends. Deshalb lohnt es sich, mit dem Betreiber zu klären, wer am Wochenende erreichbar ist und wie schnell.",
+            "Die Empfehlung: Die Sicherung des Hauses für den Gast zugänglich machen, mit einer einfachen Anleitung; die Sicherung des Platzes mit dem Betreiber klären — und beide so auslegen, dass die des Hauses zuerst auslöst, nicht die des Platzes. Dann bleibt das Problem im Haus und der Gast löst es selbst."
+          ]
+        },
+        {
+          "h2": "Wenn es doch ein Defekt ist: Ersatzteile und Erreichbarkeit",
+          "p": [
+            "Nicht jeder Ausfall ist eine Überlast. Ein Gerät kann ausfallen, ein Fehlerstromschutzschalter kann wegen eines feuchten Außensteckers auslösen, ein Kabel kann beschädigt sein. Dann hilft keine Vorrangschaltung, sondern ein Plan: Welche Teile werden am ehesten gebraucht, liegen sie vor Ort, und wer baut sie ein?",
+            "Für einen Betreiber mit mehreren gleichen Einheiten ist das einfacher als für einen Privatkunden: Was in zwölf Häusern gleich ist, lässt sich auf Vorrat halten — ein Fehlerstromschutzschalter, ein Thermostat, eine Steckdose, ein Leuchtmittel — und von einer Person einbauen, die alle zwölf kennt. Die Unterlagen, mit denen Ersatzteile identifiziert werden, gehören zum Projekt; eine Liste der Teile, die vor Ort liegen sollen, lässt sich daraus ableiten.",
+            "Die Erreichbarkeit ist die andere Hälfte: eine Elektrofachkraft in der Region, die den Platz kennt und am Wochenende kommt, oder zumindest am Montag. Diese Verbindung wird vor der Saison geknüpft, nicht während des Ausfalls. Wer sie hat, hat einen Anruf; wer sie nicht hat, hat ein Wochenende."
+          ]
+        },
+        {
+          "h2": "Was der Gast in der Zwischenzeit braucht",
+          "p": [
+            "Zwischen dem Ausfall und der Lösung vergeht Zeit, und in dieser Zeit sitzt ein Gast im Dunkeln. Was er braucht, ist überschaubar und lässt sich vorher ins Haus legen: eine Taschenlampe an einem festen Platz, den die Anleitung nennt; eine Anleitung, die in drei Sätzen sagt, wo die Sicherung ist und was zu tun ist; eine Telefonnummer, die abends erreichbar ist; und eine Aussage darüber, was passiert, wenn das Problem nicht in einer Stunde gelöst ist.",
+            "Der Kühlschrank hält bei geschlossener Tür einige Stunden, die Heizung im Sommer ist nicht das Thema, das Warmwasser im Speicher reicht für den Abend. Was Gäste wirklich beunruhigt, ist nicht die Dunkelheit, sondern die Ungewissheit — und die lässt sich mit einer klaren Anleitung und einer erreichbaren Nummer fast vollständig nehmen.",
+            "Für Betreiber lohnt sich außerdem eine Regel für Kulanz: Was bekommt ein Gast, der einen Abend ohne Strom hatte? Eine Regel, die vorher feststeht, erspart die Diskussion am Telefon und die Bewertung danach."
+          ]
+        },
+        {
+          "h2": "Die Saisonvorbereitung: einmal im Jahr alles durchgehen",
+          "p": [
+            "Vieles, was im August ausfällt, hätte sich im April gezeigt. Die Saisonvorbereitung ist der Termin dafür: Jede Einheit einmal unter Volllast betreiben — alle Geräte, die ein Gast gleichzeitig einschalten würde — und prüfen, ob die Sicherung hält. Jeden Fehlerstromschutzschalter mit der Prüftaste auslösen. Jede Außensteckdose auf Feuchtigkeit prüfen. Jede Anleitung im Haus auf Aktualität prüfen. Die Liste der Ersatzteile mit dem Bestand abgleichen.",
+            "Das ist ein halber Tag für zwölf Einheiten und verhindert einen großen Teil dessen, was sonst am Wochenende passiert. Es ist außerdem der Moment, in dem sich zeigt, ob die Lastverteilung noch stimmt — nach einem Winter, in dem jemand einen zusätzlichen Heizlüfter in Einheit drei gelassen hat.",
+            "Was dabei je Einheit geprüft wird, lässt sich in eine Liste fassen, die am Verteiler hängt und jedes Jahr abgehakt wird. Diese Liste ist das, was aus dem Anruf um zehn Uhr abends eine Ausnahme macht."
+          ]
+        },
+        {
+          "h2": "Der Anschluss des Platzes: die Zahl, die vorher feststeht",
+          "p": [
+            "Bevor über Lastverteilung im Haus gesprochen wird, steht eine Zahl fest, die nicht im Haus liegt: die Absicherung des Stellplatzes. Viele Campingplätze versorgen ihre Plätze über Verteilersäulen mit 16 Ampere je Abgang, gebaut für Wohnwagen mit einem Kühlschrank und einer Lampe. Ein Tiny House mit Kochfeld, Warmwasserbereiter, Heizung und Klimaanlage ist ein anderer Verbraucher, und sechzehn Ampere sind dafür eine Grenze, an der sich alle weiteren Entscheidungen ausrichten.",
+            "Deshalb wird diese Zahl vor der Modellwahl erfragt — beim Platzbetreiber, mit dem Hinweis, was angeschlossen werden soll — und nicht am Liefertag am Verteiler abgelesen. Wenn sie zu klein ist, gibt es drei Wege: Der Platz verstärkt den Abgang, was möglich sein kann oder nicht; das Haus wird für die kleine Absicherung geplant, mit Vorrangschaltung und Geräten mit geringer Spitzenlast; oder die Einheit bekommt einen eigenen Anschluss mit Zähler, was bei Dauerstellplätzen der sauberste Weg ist.",
+            "Jeder dieser Wege ist eine Planungsentscheidung. Keiner davon ist am Samstagabend im August noch verfügbar."
+          ]
+        },
+        {
+          "h2": "Was der Gast vorher wissen sollte — ohne Angst zu machen",
+          "p": [
+            "Ein Gast, der weiß, dass Kochfeld und Klimaanlage nicht gleichzeitig auf voller Stufe laufen, schaltet eines davon ab, bevor die Sicherung es tut. Das wird nicht als Warnung formuliert, sondern als Hinweis in der Anleitung, die im Haus hängt: zwei Sätze zu dem, was zusammen läuft, ein Satz dazu, wo die Sicherung sitzt und wie sie wieder eingeschaltet wird, eine Nummer für den Fall, dass es nicht geht.",
+            "Derselbe Zettel sagt, was mit dem Kühlschrank ist, wenn der Strom eine Stunde weg war — nämlich nichts Schlimmes, wenn die Tür zu bleibt —, und wo die Taschenlampe liegt. Das ist kein Eingeständnis, dass die Einheit anfällig ist; es ist das, was jeder Haushalt weiß und ein Gast in einem fremden Haus nicht wissen kann.",
+            "Für den Betreiber ist dieser Zettel die Hälfte der Lösung: Ein Gast, der die Sicherung selbst wieder einschaltet, ruft nicht an. Die andere Hälfte ist die Planung, die dafür sorgt, dass er es nur selten tun muss."
+          ]
+        },
+        {
+          "h2": "Nach dem Ausfall: was am Montag geprüft wird",
+          "p": [
+            "Jeder Ausfall, auch der, den der Gast selbst behoben hat, wird am Montag angeschaut. Welcher Stromkreis hat ausgelöst, welche Geräte liefen, war es die Überlast oder der Fehlerstromschutzschalter? Ein Fehlerstromschutzschalter, der ohne erkennbaren Grund auslöst, ist kein Lastproblem, sondern ein Hinweis auf Feuchte oder ein defektes Gerät — und das wird von der Fachkraft gesucht, bevor es sich wiederholt.",
+            "Die Ausfälle werden notiert: Datum, Uhrzeit, Einheit, Stromkreis, Ursache, Behebung. Nach einer Saison zeigt die Liste, ob es ein Muster gibt — immer dieselbe Einheit, immer derselbe Stromkreis, immer wenn die Klimaanlage läuft —, und das Muster ist die Planungsaufgabe für den Winter."
+          ]
+        },
+        {
+          "h2": "Was vorher geregelt ist, bleibt klein",
+          "p": [
+            "Ein Stromausfall in einem Mietobjekt ist unvermeidbar; dass er zum Problem wird, nicht. Die Absicherung des Stellplatzes kennen, die Last darauf auslegen, die Sicherung des Hauses für den Gast zugänglich machen, Ersatzteile für das Gleiche vorhalten, eine Fachkraft in der Region kennen, dem Gast eine Anleitung und eine Nummer geben, vor der Saison alles einmal durchgehen — das ist die Liste. Sie ist nicht lang, und sie wird vor der Saison abgearbeitet, nicht während.",
+            "Für die Planung des Hauses heißt das: Die Elektroinstallation wird auf den Stellplatz ausgelegt, nicht auf einen Hausanschluss; die Geräte werden nach ihrer Spitzenlast gewählt; der Verteiler sitzt dort, wo der Gast ihn findet; die Unterlagen nennen die Teile. Das ist bei MODUNERA Teil der Planung für Betreiber, und es ist der Grund, warum die Absicherung des Stellplatzes in der Anfrage steht, bevor ein Modell gewählt wird.",
+            "Der Anruf um zehn Uhr abends kommt trotzdem. Aber er ist kurz: 'Die Sicherung am Verteiler im Flurschrank, die Anleitung hängt daneben.' Und das Telefon ist wieder still."
+          ]
+        }
+      ],
+      "checklist": {
+        "h2": "Vor der Saison geregelt",
+        "items": [
+          "Absicherung der Stromsäule am Stellplatz kennen, je Einheit oder je Säule",
+          "Lastverteilung: Vorrangschaltung oder Gerätewahl, so dass die Spitze unter der Absicherung bleibt",
+          "Sicherung des Hauses für den Gast zugänglich, mit Anleitung am Schrank",
+          "Auslegung so, dass die Sicherung des Hauses vor der des Platzes auslöst",
+          "Ersatzteile für das, was in allen Einheiten gleich ist, vor Ort",
+          "Elektrofachkraft in der Region, die den Platz kennt und erreichbar ist",
+          "Taschenlampe, Anleitung und abends erreichbare Nummer in jeder Einheit",
+          "Saisonvorbereitung: Volllasttest, Prüftasten, Außensteckdosen, Anleitungen, Ersatzteilbestand"
+        ]
+      },
+      "faq": [
+        [
+          "Warum löst die Sicherung immer abends aus?",
+          "Weil abends die Last am höchsten ist: Kochen, Duschen, Klimaanlage, Fernseher, Ladegeräte — gleichzeitig, in allen belegten Einheiten. Das ist meistens keine Störung, sondern eine Überlast, und Überlast ist planbar, wenn die Absicherung des Stellplatzes bekannt ist."
+        ],
+        [
+          "Kann der Gast die Sicherung selbst wieder einschalten?",
+          "Die des Hauses ja, wenn der Verteiler zugänglich ist und eine Anleitung daneben hängt. Die der Stromsäule am Stellplatz meist nicht — sie gehört dem Platz. Deshalb wird so ausgelegt, dass die des Hauses zuerst auslöst."
+        ],
+        [
+          "Was ist eine Vorrangschaltung?",
+          "Eine Schaltung, die bei hoher Last ein Gerät kurz zurücknimmt — zum Beispiel die Heizung, während das Kochfeld läuft — und es danach wieder freigibt. Der Gast merkt es nicht; die Spitze bleibt unter der Absicherung. Die Alternative ist die Wahl von Geräten mit geringerer Spitzenlast."
+        ],
+        [
+          "Welche Ersatzteile sollen vor Ort liegen?",
+          "Das, was in allen Einheiten gleich ist und am ehesten ausfällt: Fehlerstromschutzschalter, Thermostat, Steckdosen, Leuchtmittel. Die Liste ergibt sich aus den Projektunterlagen, mit denen die Teile identifiziert werden; was vor Ort liegen soll, entscheidet der Betreiber."
+        ],
+        [
+          "Legt MODUNERA die Elektrik auf den Stellplatz aus?",
+          "Ja. Die Elektroinstallation wird auf die Absicherung ausgelegt, die der Stellplatz tatsächlich hat, und Vorrangschaltung oder Gerätewahl daraus abgeleitet. Deshalb steht die Absicherung in der Anfrage, bevor ein Modell gewählt wird."
+        ]
+      ]
+    }
+  ]
+}
