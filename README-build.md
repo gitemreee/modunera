@@ -221,6 +221,20 @@ Land sets differently from the next. Those are the three things a region or
 operator page would most like to say and may not until section 8 of
 `REQUIRED-BUSINESS-INPUTS.md` is answered.
 
+## Netlify Forms — a project setting, not a build output
+
+The enquiry form posts to Netlify Forms (`data-netlify="true"`, name
+`projektanfrage`, AJAX in `assets/js/main.js`). Netlify keeps a submission only
+if **Forms is enabled on the project** (app.netlify.com → modunera → Forms) and
+the current deploy was processed with it on. It was off from the day the form
+went onto 14,514 pages (2026-10-14) until 2026-10-18; every post in between
+returned 404 from Netlify and was lost, with no error shown to the visitor.
+Form detection happens at deploy time, and Netlify's default ignore rule skips
+a deploy whose commit changes no file — so after switching Forms on, push a
+real change. Notifications (Forms → Form notifications → Email) go to
+emre@modunera.com, which receives mail since 2026-10-18 (MX, SPF, DKIM on
+Netlify DNS).
+
 ## SEO governance (V7)
 
 Applied from the August 2026 audit pack. Five things it changes and why.
