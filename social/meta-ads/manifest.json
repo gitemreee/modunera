@@ -1,0 +1,108 @@
+{
+  "set": "Meta ads — three variants, three placements",
+  "figures_source": "variant A: owner — see build_ad_nature.py docstring; B and C carry no figures",
+  "variants": {
+    "a-natur": {
+      "photograph": "f1b98089-4ffb-4c23-a654-d831609455ac.JPG",
+      "copy": {
+        "headline": [
+          "DEIN PLATZ",
+          "IN DER NATUR."
+        ],
+        "price": "39.500 €",
+        "sub": [
+          "7-Meter-Modell",
+          "Lieferung nach Deutschland in 15 Tagen"
+        ]
+      },
+      "placements": {
+        "1x1": {
+          "size": "1080x1080",
+          "headline_on_band": 10.17,
+          "price_on_band": 6.19,
+          "sub_on_band": 7.06
+        },
+        "4x5": {
+          "size": "1080x1350",
+          "headline_on_band": 10.17,
+          "price_on_band": 6.19,
+          "sub_on_band": 7.06
+        },
+        "9x16": {
+          "size": "1080x1920",
+          "headline_on_band": 10.17,
+          "price_on_band": 6.19,
+          "sub_on_band": 7.06
+        }
+      }
+    },
+    "b-abend": {
+      "photograph": "IMG_20250913_193621.jpg",
+      "copy": {
+        "headline": [
+          "ANKOMMEN.",
+          "ABSCHALTEN."
+        ],
+        "price": "",
+        "sub": [
+          "Komplett ausgestattet ab Werk",
+          "Lieferung nach Deutschland"
+        ]
+      },
+      "placements": {
+        "1x1": {
+          "size": "1080x1080",
+          "headline_on_band": 10.17,
+          "price_on_band": 6.19,
+          "sub_on_band": 7.06
+        },
+        "4x5": {
+          "size": "1080x1350",
+          "headline_on_band": 10.17,
+          "price_on_band": 6.19,
+          "sub_on_band": 7.06
+        },
+        "9x16": {
+          "size": "1080x1920",
+          "headline_on_band": 10.17,
+          "price_on_band": 6.19,
+          "sub_on_band": 7.06
+        }
+      }
+    },
+    "c-innen": {
+      "photograph": "fb8b030f-1c7a-42e8-b2c1-7c8c4b5de23e.JPG",
+      "copy": {
+        "headline": [
+          "KLEIN GEBAUT.",
+          "GROSS GEDACHT."
+        ],
+        "price": "",
+        "sub": [
+          "Loft, Küche, Bad – fertig ausgebaut",
+          "Acht Modelle, 2,55 m breit"
+        ]
+      },
+      "placements": {
+        "1x1": {
+          "size": "1080x1080",
+          "headline_on_band": 10.17,
+          "price_on_band": 6.19,
+          "sub_on_band": 7.06
+        },
+        "4x5": {
+          "size": "1080x1350",
+          "headline_on_band": 10.17,
+          "price_on_band": 6.19,
+          "sub_on_band": 7.06
+        },
+        "9x16": {
+          "size": "1080x1920",
+          "headline_on_band": 10.17,
+          "price_on_band": 6.19,
+          "sub_on_band": 7.06
+        }
+      }
+    }
+  }
+}
