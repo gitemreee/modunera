@@ -37,6 +37,14 @@ if (!SELECT.test(html)) {
   process.exit(1);
 }
 const next = html.replace(SELECT, `<select name="Budget">${bands.map((b) => `<option>${b}</option>`).join("")}</select>`);
-const changed = next !== html;
-if (changed) await writeFile(join(ROOT, PAGE), next, "utf8");
+/* The contact page is the one projektanfrage variant without an Einheiten
+   field. Netlify keeps one field list per form name and drops posted fields
+   that are not on it, so every variant carries the same nine fields; here the
+   missing one is added hidden, once (the replace is a no-op on a second run). */
+const HIDDEN_UNITS = '<input type="hidden" name="Einheiten" value="">';
+const FORM_NAME = '<input type="hidden" name="form-name" value="projektanfrage">';
+const withUnits = next.includes(HIDDEN_UNITS) ? next : next.replace(FORM_NAME, FORM_NAME + HIDDEN_UNITS);
+if (!withUnits.includes(HIDDEN_UNITS)) { console.error("build-budget-bands: no projektanfrage form-name input on " + PAGE); process.exit(1); }
+const changed = withUnits !== html;
+if (changed) await writeFile(join(ROOT, PAGE), withUnits, "utf8");
 console.log(JSON.stringify({ page: PAGE, bands: bands.length, changed }));

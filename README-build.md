@@ -235,6 +235,17 @@ real change. Notifications (Forms → Form notifications → Email) go to
 emre@modunera.com, which receives mail since 2026-10-18 (MX, SPF, DKIM on
 Netlify DNS).
 
+Netlify keeps **one field list per form name** and silently drops any posted
+field that is not on it; which page's markup defines the list depends on parse
+order. A test on 2026-10-18 lost `Budget` that way. Every variant of
+`projektanfrage` — the contact page, the 14,514 location pages, the operator
+pages — therefore carries the same nine fields (`Nutzung`, `Name`, `E-Mail`,
+`Telefon`, `Lieferort`, `Einheiten`, `Budget`, `Projekt`, `Einwilligung`),
+hidden and empty where the page has no use for one. A new field goes into all
+three generators (`enquiryForm()` in `build-modunera-v2.mjs`,
+`build-location-enquiry.mjs`, `build-budget-bands.mjs` for the contact page)
+in the same commit.
+
 ## SEO governance (V7)
 
 Applied from the August 2026 audit pack. Five things it changes and why.

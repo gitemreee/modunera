@@ -111,6 +111,10 @@ function block(place, root, lang) {
     `<form class="editorial-copy" data-lead-form name="projektanfrage" method="POST" data-netlify="true" netlify-honeypot="bot-field">` +
     `<input type="hidden" name="form-name" value="projektanfrage">` +
     `<input type="hidden" name="Lieferort" value="${p}">` +
+    /* same field list on every projektanfrage variant — see enquiryForm() in
+       build-modunera-v2.mjs for why Netlify needs that */
+    `<input type="hidden" name="Einheiten" value="">` +
+    `<input type="hidden" name="Budget" value="">` +
     `<p style="display:none"><label>Bitte frei lassen<input name="bot-field"></label></p>` +
     `<div class="eyebrow">${t.eyebrow(p)}</div>` +
     `<h2>${t.h2(p)}</h2>` +
@@ -133,16 +137,30 @@ function block(place, root, lang) {
     `</form></div></section>`;
 }
 
-const report = { added: 0, already: 0, no_place: [], no_anchor: [] };
+const report = { added: 0, updated: 0, already: 0, no_place: [], no_anchor: [] };
+/* the block as written by this pass: one section, no section nested inside it */
+const BLOCK_RE = new RegExp(`<section class="section section-soft" id="${ID}">[\\s\\S]*?</form></div></section>`);
 
 for (const [dir, lang] of [["standorte", "de"], ["en/locations", "en"]]) {
   for (const file of await walk(dir)) {
     const html = await readFile(join(ROOT, file), "utf8");
-    if (html.includes(`id="${ID}"`)) { report.already += 1; continue; }
-    if (!html.includes(ANCHOR)) { report.no_anchor.push(file); continue; }
     const place = placeOf(html);
-    if (!place) { report.no_place.push(file); continue; }
     const root = "../".repeat(file.split("/").length - 1);
+    if (html.includes(`id="${ID}"`)) {
+      /* The block is keyed by id, so a page that has it is not given a second
+         one — but the markup is regenerated and swapped in when it differs,
+         because the form's field list changes (2026-10-18: Einheiten and
+         Budget joined it) and a page keeping the old one would post fields
+         Netlify no longer keeps, or lack ones it now expects. */
+      if (!place) { report.no_place.push(file); continue; }
+      const fresh = html.replace(BLOCK_RE, block(place, root, lang));
+      if (fresh === html) { report.already += 1; continue; }
+      await writeFile(join(ROOT, file), fresh, "utf8");
+      report.updated += 1;
+      continue;
+    }
+    if (!html.includes(ANCHOR)) { report.no_anchor.push(file); continue; }
+    if (!place) { report.no_place.push(file); continue; }
     await writeFile(join(ROOT, file), html.replace(ANCHOR, block(place, root, lang) + ANCHOR), "utf8");
     report.added += 1;
   }
@@ -154,5 +172,5 @@ for (const key of ["no_place", "no_anchor"]) {
     for (const f of report[key].slice(0, 5)) console.error(`  ${f}`);
   }
 }
-console.log(JSON.stringify({ added: report.added, already: report.already,
+console.log(JSON.stringify({ added: report.added, updated: report.updated, already: report.already,
   no_place: report.no_place.length, no_anchor: report.no_anchor.length }));

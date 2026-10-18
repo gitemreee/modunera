@@ -596,6 +596,11 @@ function enquiryForm(lang, root, preset) {
     `<form class="editorial-copy" data-lead-form name="projektanfrage" method="POST" data-netlify="true" netlify-honeypot="bot-field">` +
     `<input type="hidden" name="form-name" value="projektanfrage">` +
     `<input type="hidden" name="Nutzung" value="${esc(preset)}">` +
+    /* Netlify registers ONE field list per form name and drops any posted field
+       that is not on it — which list wins depends on which page it parsed first.
+       Every variant of projektanfrage therefore carries the same nine fields,
+       hidden where the page has no use for them. */
+    `<input type="hidden" name="Budget" value="">` +
     `<p style="display:none"><label>Bitte frei lassen<input name="bot-field"></label></p>` +
     `<div class="eyebrow">${t.eyebrow} · ${esc(preset)}</div><h2>${t.h2}</h2><p>${t.lead}</p>` +
     `<div class="form-grid">` +
