@@ -1,5 +1,14 @@
 name: Build and validate MODUNERA
 
+# 2026-10-18: every run since 2026-10-07 failed at "The pipeline must be
+# idempotent", and the reason was this file again: both step lists had fallen
+# behind README-build.md (build-privacy, build-budget-bands,
+# build-location-enquiry and build-about-topic were missing from both, and
+# build-title-lengths from the second pass alone, so the second pass undid what
+# the first had done). The lists below are README-build.md's run order, all of
+# it, in both places. When a generator is added to the README it is added here
+# in the same commit, or this gate fails for the wrong reason again.
+#
 # 2026-08-18: this workflow ran fourteen of the seventeen steps in
 # README-build.md. build-quality-spec.mjs, build-de-source-block.mjs and
 # build-shell-v3.mjs were missing, so the "committed HTML must match a fresh
@@ -68,6 +77,10 @@ jobs:
           node tools/build-title-lengths.mjs
           node tools/build-content-lastmod.mjs
           node tools/build-seo-governance-v7.mjs
+          node tools/build-privacy.mjs
+          node tools/build-budget-bands.mjs
+          node tools/build-location-enquiry.mjs
+          node tools/build-about-topic.mjs
           node tools/build-de-source-block.mjs
           node tools/build-shell-v3.mjs
 
@@ -103,6 +116,7 @@ jobs:
           node tools/build-news-v7.mjs
           node tools/build-production-faq-v7.mjs
           node tools/build-daily-blog.mjs
+          node tools/build-intelligence-dashboard.mjs
           node tools/build-modunera-v2.mjs
           node tools/build-modunera-depth.mjs --extend
           node tools/build-quality-spec.mjs
@@ -110,8 +124,13 @@ jobs:
           node tools/build-photo-placement.mjs
           node tools/build-image-attrs.mjs
           node tools/build-nordic-redirects.mjs
+          node tools/build-title-lengths.mjs
           node tools/build-content-lastmod.mjs
           node tools/build-seo-governance-v7.mjs
+          node tools/build-privacy.mjs
+          node tools/build-budget-bands.mjs
+          node tools/build-location-enquiry.mjs
+          node tools/build-about-topic.mjs
           node tools/build-de-source-block.mjs
           node tools/build-shell-v3.mjs
           find . -name '*.html' -not -path './.git/*' -print0 \
