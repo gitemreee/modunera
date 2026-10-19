@@ -1763,3 +1763,52 @@ body.scrolled .nav{background:rgba(255,255,255,.62)}
 body.scrolled .brand-claim{opacity:0; max-width:0}
 body.scrolled.scroll-up .brand-claim{opacity:1; max-width:24ch}
 @media (prefers-reduced-motion:reduce){ .brand-claim{transition:opacity .15s ease} }
+
+/* --- B2B layer (2026-10-19) -------------------------------------------------
+   Solutions, concepts, regions and the proposal form reuse the catalogue
+   classes above (state-card, data-strip, answer-box, editorial-copy, check-list,
+   compare). What follows is only what those pages need and nothing had: a
+   status badge that separates a concept from a built reference, a lifecycle
+   timeline, a scale strip, a schematic plan, and the stepped form. */
+.status-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;font-size:var(--fs-label);letter-spacing:.08em;text-transform:uppercase;font-weight:800;border:1px solid var(--line);background:#fff;color:var(--moss)}
+.status-badge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--roof)}
+.status-badge.is-verified::before{background:var(--leaf)}
+.lifecycle{counter-reset:stage;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.lifecycle>div{position:relative;border:1px solid var(--line);border-radius:var(--r);background:#fff;padding:20px 18px 18px;counter-increment:stage}
+.lifecycle>div::before{content:"0" counter(stage);display:block;font-family:var(--serif);font-size:2rem;line-height:1;color:var(--roof);margin-bottom:10px}
+.lifecycle h3{font-size:1.02rem;margin:0 0 6px}
+.lifecycle p{font-size:var(--fs-small);color:var(--muted);margin:0 0 8px}
+.lifecycle small{display:block;font-size:.74rem;color:var(--muted);border-top:1px solid var(--line);padding-top:8px}
+.scale-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#fff}
+.scale-strip>div{padding:22px 20px;border-right:1px solid var(--line)}
+.scale-strip>div:last-child{border-right:0}
+.scale-strip strong{display:block;font-family:var(--serif);font-size:1.6rem;color:var(--moss);margin-bottom:6px}
+.scale-strip p{margin:0;font-size:var(--fs-small);color:var(--muted)}
+.plan-diagram{border:1px solid var(--line);border-radius:var(--r);background:#fff;padding:16px}
+.plan-diagram svg{display:block;width:100%;height:auto}
+.plan-diagram figcaption{font-size:.78rem;color:var(--muted);margin-top:10px}
+.module-mix{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.module-mix th,.module-mix td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line);font-size:var(--fs-small)}
+.module-mix th{background:var(--cream);font-size:.7rem;text-transform:uppercase;letter-spacing:.08em}
+.module-mix td:nth-child(2){font-variant-numeric:tabular-nums;font-weight:700}
+.tier-list{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.tier-list>div{border:1px solid var(--line);border-radius:var(--r);background:#fff;padding:18px}
+.tier-list h3{font-size:1rem;margin:0 0 8px}
+.tier-list ul{margin:0 0 8px;padding-left:18px;font-size:var(--fs-small)}
+.tier-list p{margin:0;font-size:.78rem;color:var(--muted)}
+.form-steps fieldset{border:1px solid var(--line);border-radius:var(--r);background:#fff;padding:18px 20px 8px;margin:0 0 14px}
+.form-steps legend{font-weight:800;padding:0 8px;font-size:var(--fs-label);letter-spacing:.08em;text-transform:uppercase;color:var(--moss)}
+.form-steps .step-nav{display:flex;gap:10px;justify-content:space-between;margin:6px 0 14px}
+.js .form-steps[data-steps] fieldset{display:none}
+.js .form-steps[data-steps] fieldset.is-active{display:block}
+.step-indicator{display:flex;gap:6px;margin:0 0 16px;padding:0;list-style:none}
+.step-indicator li{flex:1;height:4px;border-radius:2px;background:var(--line)}
+.step-indicator li.is-done,.step-indicator li.is-active{background:var(--leaf)}
+.form-steps .field select,.form-steps .field input,.form-steps .field textarea{width:100%}
+.consent-row{display:flex;gap:12px;align-items:flex-start;font-weight:400;font-size:var(--fs-small);margin:0 0 12px}
+.consent-row input{flex:0 0 auto;margin-top:4px;width:18px;height:18px}
+.consent-row span{flex:1}
+.form-done{display:none;border:1px solid var(--leaf);background:var(--cream);border-radius:var(--r);padding:18px 20px}
+.form-done.is-visible{display:block}
+@media(max-width:920px){.lifecycle,.scale-strip,.tier-list{grid-template-columns:repeat(2,1fr)}.scale-strip>div:nth-child(2n){border-right:0}}
+@media(max-width:640px){.lifecycle,.scale-strip,.tier-list{grid-template-columns:1fr}.scale-strip>div{border-right:0;border-bottom:1px solid var(--line)}}

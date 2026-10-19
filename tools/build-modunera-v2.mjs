@@ -100,6 +100,25 @@ const COMMERCIAL = JSON.parse(await readFile(join(ROOT, "data/commercial.json"),
 const SITE_PHOTOS = Object.fromEntries(
   JSON.parse(await readFile(join(ROOT, "data/site-photos.json"), "utf8")).photos.map((p) => [p.name, p]),
 );
+/* The B2B layer's data and menu, loaded here because MENU below reads them. */
+const B2B = JSON.parse(await readFile(join(ROOT, "data/b2b.json"), "utf8"));
+const PROPOSAL = `${B2B.proposal.slug}/`;
+
+const b2bMenu = () => [
+  { label: "Solutions", menu: [
+    ["en/solutions/", "All solutions", "Hospitality, housing, facilities"],
+    ...B2B.solutions.map((s) => [`${s.slug}/`, s.menu[0], s.menu[1]]),
+    ["en/concepts/", "Project concepts", "Planning studies, clearly labelled"],
+    ["en/how-we-work/", "How we work", "Eight stages from brief to handover"],
+  ]},
+  { label: "Europe & Africa", menu: [
+    ["en/europe/", "Europe", "Precision, standards, four seasons"],
+    ["en/africa/", "Africa", "Designed for local conditions"],
+    ["en/countries/", "Country guidance", "Five markets with their own pages"],
+    [PROPOSAL, "Request a proposal", "Tell us what you plan to build"],
+  ]},
+];
+
 const commercialMenu = (lang) => [
   [`${COMMERCIAL.hub.slug[lang]}/`, lang === "de" ? "Betreiber-Übersicht" : "Operators overview",
     lang === "de" ? "Camping, Park, Hotel, Marina, Kommune" : "Campsite, park, hotel, marina, municipality"],
@@ -244,6 +263,7 @@ const MENU = {
     cta: "WhatsApp",
     ctaMsg: "Hello MODUNERA, I would like a quick project assessment for a tiny house.",
     items: [
+      ...b2bMenu(),
       { label: "Tiny houses", cols: [
         ["See the models", modelMenuEntries("en")],
         ["Choose and plan", [
@@ -267,7 +287,6 @@ const MENU = {
         ["en/price-comparison/", "Price comparison", "Budget by destination"],
         newsEntry("en"),
       ]},
-      { label: "Advantages", href: "en/advantages/" },
       { label: "Other structures", menu: [
         ["en/services/", "Overview", "Modular, steel, containers, bungalows, furniture"],
         ["en/services/modular-buildings/", "Modular buildings", "Expandable modules"],
@@ -302,6 +321,7 @@ const MENU = {
         ["en/questions/switzerland/", "Switzerland questions", "20 answers"],
         pfaqEntry("en"),
       ]},
+      { label: "Request a proposal", href: "en/request-project-proposal/" },
       { label: "Contact", href: "kontakt/" },
     ],
   },
@@ -763,6 +783,213 @@ function regionPage(region, lang) {
     `<p>${de ? "Geografisch abgeleitete Zuordnung über Koordinaten und Bundesland — eine Orientierung, keine amtliche Gebietsabgrenzung." : "Assigned geographically by coordinates and state — an orientation, not an official boundary. The town pages are in German."}</p></div>${places}</div></section>` +
     `<section class="section section-soft"><div class="container"><div class="section-header"><div><div class="eyebrow">${de ? "Andere Regionen" : "Other regions"}</div><h2>${de ? "Weitere Landschaften" : "Other landscapes"}</h2></div></div><div class="state-grid">${others}</div></div></section>` +
     `</main>` + footer(root, lang);
+}
+
+/* --- B2B layer: solutions, how we work, concepts, Europe/Africa, proposal ---
+   From data/b2b.json. English only in this phase. Every page states what it
+   is: a solution family, a planning study (project_status concept_unbuilt),
+   a region under assessment. No page names a delivered project, an operator,
+   a capacity or a certificate, because none has evidence in the repository.
+   The plan diagrams are schematic SVG drawn here — rectangles on a grid —
+   and captioned as schematic, so a reader cannot take them for a render of
+   something that exists. */
+
+const b2bSchema = (file, title, description, trail, faq) => [
+  { "@context": "https://schema.org", "@type": "WebPage", name: title, url: canonicalFor(file), description, dateModified: B2B.updated, inLanguage: "en" },
+  breadcrumb(trail),
+  ...(faq?.length ? [faqSchema(faq)] : []),
+];
+const crumbs = (root, trail) => `<div class="breadcrumbs">${trail.map(([n, u], i) => i === trail.length - 1 ? esc(n) : `<a href="${root}${u || "en/"}">${esc(n)}</a>`).join(" · ")}</div>`;
+const pageHero = (root, trail, eyebrow, h1, lead) =>
+  `<header class="page-hero"><div class="container">${crumbs(root, trail)}<div class="eyebrow">${esc(eyebrow)}</div><h1>${esc(h1)}</h1><p>${esc(lead)}</p></div></header>`;
+const photoHero = (root, trail, kicker, h1, lead, photoName, ctas) => {
+  const photo = sitePhoto(photoName, "en", h1);
+  return `<header class="location-hero"><img src="${root}${photo.src}" width="${photo.w}" height="${photo.h}" alt="${esc(photo.alt)}"><div class="location-hero-overlay"></div><div class="container location-hero-content">${crumbs(root, trail)}<span class="hero-kicker">${esc(kicker)}</span><h1>${esc(h1)}</h1><p>${esc(lead)}</p><div class="hero-actions">${ctas}</div></div></header>`;
+};
+const exclusionsTable = () =>
+  `<div class="compare"><table><thead><tr><th>Scope line</th><th>Responsibility</th></tr></thead><tbody>${B2B.scope_exclusions.map(([a, b]) => `<tr><td>${esc(a)}</td><td>${esc(b)}</td></tr>`).join("")}</tbody></table></div>`;
+const proposalCta = (root, label = "Request a project proposal") => `<a class="btn btn-primary" href="${root}${PROPOSAL}">${esc(label)}</a>`;
+const ctaBand = (root, h2, p) =>
+  `<section class="section section-dark"><div class="container"><div class="section-header"><div><div class="eyebrow">Next step</div><h2>${esc(h2)}</h2></div><p>${esc(p)}</p></div><div class="hero-actions"><a class="btn btn-sand" href="${root}${PROPOSAL}">Request a project proposal</a><a class="btn btn-outline" href="${root}en/how-we-work/">How we work</a></div></div></section>`;
+const statusBadge = (status) => {
+  const label = { concept_unbuilt: "Concept — not built", illustrative_example: "Illustrative example", completed_verified: "Completed, verified", under_construction_verified: "Under construction, verified", contracted_verified: "Contracted, verified" }[status] ?? status;
+  return `<span class="status-badge${/verified/.test(status) ? " is-verified" : ""}">${esc(label)}</span>`;
+};
+
+/* A schematic plan: unit modules as rectangles on a grid, shared modules in
+   moss, service modules in cream. It is a diagram of a module count and a
+   layout idea, nothing more, and the caption says so. */
+function planDiagram(d) {
+  const cell = 56, gap = 10, pad = 16;
+  const W = pad * 2 + d.cols * cell + (d.cols - 1) * gap, H = pad * 2 + d.rows * cell + (d.rows - 1) * gap;
+  const covered = new Set();
+  const block = (x, y, w, h, fill, stroke) => {
+    for (let i = x; i < x + w; i += 1) for (let j = y; j < y + h; j += 1) covered.add(`${i},${j}`);
+    return `<rect x="${pad + x * (cell + gap)}" y="${pad + y * (cell + gap)}" width="${w * cell + (w - 1) * gap}" height="${h * cell + (h - 1) * gap}" rx="6" fill="${fill}" stroke="${stroke}" stroke-width="1.5"/>`;
+  };
+  let out = "";
+  for (const [x, y, w, h] of d.shared ?? []) out += block(x, y, w, h, "#3A5A40", "#2E4733");
+  for (const [x, y, w, h] of d.service ?? []) out += block(x, y, w, h, "#DAD7CD", "#9aa59c");
+  let units = 0;
+  for (let j = 0; j < d.rows; j += 1) for (let i = 0; i < d.cols; i += 1) {
+    if (covered.has(`${i},${j}`)) continue;
+    units += 1;
+    out += `<rect x="${pad + i * (cell + gap)}" y="${pad + j * (cell + gap)}" width="${cell}" height="${cell}" rx="6" fill="#A3B18A" stroke="#6E9268" stroke-width="1.5"/>`;
+  }
+  return `<figure class="plan-diagram"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Schematic plan: ${esc(d.label)}">${out}</svg>` +
+    `<figcaption>Schematic concept diagram, drawn to count modules and show a layout idea: ${esc(d.label)} (${units} unit positions shown). Not a site plan, not a render, not a built project.</figcaption></figure>`;
+}
+
+function solutionsHubPage() {
+  const file = "en/solutions/index.html", root = rootFor(file), h = B2B.solutions_hub;
+  const trail = [["MODUNERA", "en/"], ["Solutions", "en/solutions/"]];
+  const cards = B2B.solutions.map((s) => `<a class="state-card" href="${root}${s.slug}/"><span>${esc(s.menu[1])}</span><h3>${esc(s.menu[0])}</h3><p>${esc(s.lead.split(". ")[0])}.</p></a>`).join("");
+  const sectors = B2B.sectors.map(([n, d, href]) => `<a class="journey-card" href="${root}${href}"><div><h3>${esc(n)}</h3><p>${esc(d)}</p></div><span class="arrow">↗</span></a>`).join("");
+  const concepts = B2B.concepts.map((c) => `<a class="state-card" href="${root}${c.slug}/">${statusBadge(c.project_status)}<h3>${esc(c.name)}</h3><p>${esc(c.scale)}</p></a>`).join("");
+  return head({ file, lang: "en", title: h.title, description: h.description, schema: b2bSchema(file, h.title, h.description, trail) }) + chrome(root, "en") +
+    `<main id="main">${pageHero(root, trail, "Solutions", h.h1, h.lead)}` +
+    `<section class="section"><div class="container"><div class="state-grid">${cards}</div><div class="answer-box"><strong>Scope</strong><p>${esc(B2B.scope_qualifier)}</p></div></div></section>` +
+    `<section class="section section-soft"><div class="container"><div class="section-header"><div><div class="eyebrow">Sectors</div><h2>${esc(h.sectors_h2)}</h2></div></div><div class="journey-grid">${sectors}</div></div></section>` +
+    `<section class="section"><div class="container"><div class="section-header"><div><div class="eyebrow">Planning studies</div><h2>${esc(B2B.concepts_hub.h1)}</h2></div><p>${esc(B2B.home.concepts_note)}</p></div><div class="state-grid">${concepts}</div></div></section>` +
+    ctaBand(root, B2B.home.final_h2, B2B.home.final_p) + `</main>` + footer(root, "en");
+}
+
+function solutionPage(s) {
+  const file = `${s.slug}/index.html`, root = rootFor(file);
+  const trail = [["MODUNERA", "en/"], ["Solutions", "en/solutions/"], [s.menu[0], `${s.slug}/`]];
+  const li = (xs) => xs.map((x) => `<li>${esc(x)}</li>`).join("");
+  const configs = s.configurations.map(([a, b, c]) => `<tr><td>${esc(a)}</td><td>${esc(b)}</td><td>${esc(c)}</td></tr>`).join("");
+  const others = B2B.solutions.filter((o) => o.id !== s.id).map((o) => `<a class="state-card" href="${root}${o.slug}/"><span>${esc(o.menu[1])}</span><h3>${esc(o.menu[0])}</h3></a>`).join("");
+  const ctas = `${proposalCta(root, s.cta)}<a class="btn btn-light" href="${root}en/how-we-work/">How we work</a>`;
+  return head({ file, lang: "en", title: s.title, description: s.description, schema: b2bSchema(file, s.title, s.description, trail, s.faq) }) + chrome(root, "en") +
+    `<main id="main">${photoHero(root, trail, `MODUNERA · ${s.menu[0]}`, s.h1, s.lead, s.photo, ctas)}` +
+    `<section class="section section-tight"><div class="container"><div class="data-strip"><div><span>Base width</span><strong>2,55 m</strong></div><div><span>Unit length</span><strong>up to 9,70 m</strong></div><div><span>Structure</span><strong>Steel frame</strong></div><div><span>Delivery</span><strong>Road · Ro-Ro · sea</strong></div></div>` +
+    `<div class="answer-box"><strong>Scope</strong><p>${esc(B2B.scope_qualifier)}</p></div></div></section>` +
+    `<section class="section"><div class="container"><div class="section-header"><div><div class="eyebrow">Who this is for</div><h2>Who typically plans this</h2></div></div><ul class="check-list">${li(s.who_for)}</ul>` +
+    `<p class="legal-note">Solution types in this family: ${esc(s.sub_products.join(" · "))}.</p></div></section>` +
+    `<section class="section section-soft"><div class="container"><div class="section-header"><div><div class="eyebrow">Planning and supply</div><h2>What we can help you plan or supply</h2></div></div><ul class="check-list">${li(s.help)}</ul></div></section>` +
+    `<section class="section"><div class="container"><div class="section-header"><div><div class="eyebrow">Typical configurations</div><h2>Three scales, as examples</h2></div><p>Every figure here is illustrative. A real configuration follows the site, the permit and the operator's programme.</p></div>` +
+    `<div class="compare"><table><thead><tr><th>Scale</th><th>Composition</th><th>Status</th></tr></thead><tbody>${configs}</tbody></table></div></div></section>` +
+    `<section class="section section-soft"><div class="container"><div class="section-header"><div><div class="eyebrow">Site readiness and permissions</div><h2>What a site needs before a unit arrives</h2></div></div><ul class="check-list">${li(s.site_readiness)}</ul>` +
+    `<h3>Climate, energy and infrastructure options</h3><ul class="check-list">${li(s.climate)}</ul></div></section>` +
+    `<section class="section"><div class="container"><div class="section-header"><div><div class="eyebrow">Scope and exclusions</div><h2>Who does what</h2></div><p>The same table on every solution page, because the same questions come up in every project.</p></div>${exclusionsTable()}</div></section>` +
+    `<section class="section section-soft"><div class="container"><div class="section-header"><div><div class="eyebrow">Buyer FAQ</div><h2>Fast answers, clear limits.</h2></div></div><div class="faq-list">${faqMarkup(s.faq)}</div></div></section>` +
+    ctaBand(root, `${s.cta}.`, B2B.home.brief_p) +
+    `<section class="section"><div class="container"><div class="section-header"><div><div class="eyebrow">Other solution families</div><h2>Also planned this way</h2></div></div><div class="state-grid">${others}</div></div></section>` +
+    `</main>` + footer(root, "en");
+}
+
+function lifecyclePage() {
+  const file = "en/how-we-work/index.html", root = rootFor(file), l = B2B.lifecycle;
+  const trail = [["MODUNERA", "en/"], ["How we work", "en/how-we-work/"]];
+  const stages = l.stages.map(([h3, p, who, limit]) => `<div><h3>${esc(h3)}</h3><p>${esc(p)}</p><p><strong>Who:</strong> ${esc(who)}</p><small>${esc(limit)}</small></div>`).join("");
+  return head({ file, lang: "en", title: l.title, description: l.description, schema: b2bSchema(file, l.title, l.description, trail) }) + chrome(root, "en") +
+    `<main id="main">${pageHero(root, trail, "Project development", l.h1, l.lead)}` +
+    `<section class="section"><div class="container"><div class="lifecycle">${stages}</div><div class="answer-box"><strong>What this is not</strong><p>Not an automated process, not a fixed programme and not a guarantee. The stages are the order in which questions get answered; how long each takes depends on the site, the country and the client's own decisions.</p></div></div></section>` +
+    `<section class="section section-soft"><div class="container"><div class="section-header"><div><div class="eyebrow">Scope and exclusions</div><h2>Who does what</h2></div></div>${exclusionsTable()}</div></section>` +
+    ctaBand(root, B2B.home.brief_h2, B2B.home.brief_p) + `</main>` + footer(root, "en");
+}
+
+function conceptsHubPage() {
+  const file = "en/concepts/index.html", root = rootFor(file), h = B2B.concepts_hub;
+  const trail = [["MODUNERA", "en/"], ["Project concepts", "en/concepts/"]];
+  const cards = B2B.concepts.map((c) => `<a class="state-card" href="${root}${c.slug}/">${statusBadge(c.project_status)}<h3>${esc(c.name)}</h3><p>${esc(c.scale)} · ${esc(c.brief.split(": ")[0])}</p></a>`).join("");
+  return head({ file, lang: "en", title: h.title, description: h.description, schema: b2bSchema(file, h.title, h.description, trail) }) + chrome(root, "en") +
+    `<main id="main">${pageHero(root, trail, "Concepts, not built references", h.h1, h.lead)}` +
+    `<section class="section"><div class="container"><div class="state-grid">${cards}</div><div class="answer-box"><strong>Verified projects</strong><p>There is no verified MODUNERA project of this scale to show yet. When there is, it appears under its own status — completed, under construction or contracted, verified — with the client's written permission, and never before.</p></div></div></section>` +
+    ctaBand(root, B2B.home.final_h2, B2B.home.final_p) + `</main>` + footer(root, "en");
+}
+
+function conceptPage(c) {
+  const file = `${c.slug}/index.html`, root = rootFor(file);
+  const trail = [["MODUNERA", "en/"], ["Project concepts", "en/concepts/"], [c.name, `${c.slug}/`]];
+  const mix = c.module_mix.map(([t, n, note]) => `<tr><td>${esc(t)}</td><td>${n}</td><td>${esc(note)}</td></tr>`).join("");
+  const others = B2B.concepts.filter((o) => o.id !== c.id).map((o) => `<a class="state-card" href="${root}${o.slug}/">${statusBadge(o.project_status)}<h3>${esc(o.name)}</h3><p>${esc(o.scale)}</p></a>`).join("");
+  const photo = sitePhoto(c.photo, "en", `A MODUNERA unit — photograph, not the ${c.name} concept`);
+  return head({ file, lang: "en", title: c.title, description: c.description, schema: b2bSchema(file, c.title, c.description, trail) }) + chrome(root, "en") +
+    `<main id="main">${pageHero(root, trail, "Planning study", c.name, c.brief)}` +
+    `<section class="section section-tight"><div class="container">${statusBadge(c.project_status)} <span class="legal-note">${esc(c.scale)} · every figure illustrative, to be validated against a real site</span></div></section>` +
+    `<section class="section"><div class="container"><div class="section-header"><div><div class="eyebrow">Layout idea</div><h2>How the modules sit on the site</h2></div></div>${planDiagram(c.diagram)}</div></section>` +
+    `<section class="section section-soft"><div class="container"><div class="section-header"><div><div class="eyebrow">Module mix</div><h2>What the concept is made of</h2></div></div><table class="module-mix"><thead><tr><th>Module</th><th>Count</th><th>Note</th></tr></thead><tbody>${mix}</tbody></table>` +
+    `<h3>Phasing</h3><p>${esc(c.phasing)}</p></div></section>` +
+    `<section class="section"><div class="container"><div class="section-header"><div><div class="eyebrow">Scope limits</div><h2>What this study does not settle</h2></div></div><ul class="check-list">${c.scope_limits.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>${exclusionsTable()}</div></section>` +
+    `<section class="section section-soft"><div class="container"><div class="section-header"><div><div class="eyebrow">Photograph</div><h2>A real unit, for scale</h2></div><p>The photograph shows a MODUNERA unit in production or delivered — the module the concept counts in. It is not an image of the concept.</p></div><figure class="plan-diagram"><img src="${root}${photo.src}" width="${photo.w}" height="${photo.h}" alt="${esc(photo.alt)}" loading="lazy"><figcaption>${esc(photo.alt)}</figcaption></figure></div></section>` +
+    ctaBand(root, `Planning something like the ${c.name.toLowerCase()}?`, B2B.home.brief_p) +
+    `<section class="section"><div class="container"><div class="section-header"><div><div class="eyebrow">Other studies</div><h2>Other concepts</h2></div></div><div class="state-grid">${others}</div></div></section>` +
+    `</main>` + footer(root, "en");
+}
+
+function europePage() {
+  const r = B2B.regions.europe, file = `${r.slug}/index.html`, root = rootFor(file);
+  const trail = [["MODUNERA", "en/"], ["Europe", `${r.slug}/`]];
+  const tiers = r.tiers.map(([h3, list, p]) => `<div><h3>${esc(h3)}</h3><ul>${list.map((x) => `<li>${esc(x)}</li>`).join("")}</ul><p>${esc(p)}</p></div>`).join("");
+  const countries = [["Germany", "en/countries/germany/"], ["Netherlands", "en/countries/netherlands/"], ["Denmark", "en/countries/denmark/"], ["Luxembourg", "en/countries/luxembourg/"], ["Switzerland", "en/countries/switzerland/"]].map(([n, u]) => `<a class="btn btn-outline" href="${root}${u}">${n}</a>`).join("");
+  const sections = r.sections.map(([h2, p]) => `<h2>${esc(h2)}</h2><p>${esc(p)}</p>`).join("");
+  const ctas = `${proposalCta(root, "Discuss a European project")}<a class="btn btn-light" href="${root}en/countries/">Country guidance</a>`;
+  return head({ file, lang: "en", title: r.title, description: r.description, schema: b2bSchema(file, r.title, r.description, trail) }) + chrome(root, "en") +
+    `<main id="main">${photoHero(root, trail, "MODUNERA · Europe", r.h1, r.lead, r.photo, ctas)}` +
+    `<section class="section section-tight"><div class="container"><div class="answer-box"><strong>Direct answer</strong><p>${esc(r.answer)}</p></div></div></section>` +
+    `<section class="section"><div class="container"><div class="section-header"><div><div class="eyebrow">Markets</div><h2>Three tiers, one rule: assessed per project</h2></div><p>An internal sales priority, not a list of offices or approvals.</p></div><div class="tier-list">${tiers}</div><p class="legal-note">Country pages with permit sources and delivery figures:</p><div class="hero-actions">${countries}</div></div></section>` +
+    `<section class="section section-soft"><div class="container"><div class="editorial-copy">${sections}</div></div></section>` +
+    ctaBand(root, "Planning in Europe?", B2B.home.brief_p) + `</main>` + footer(root, "en");
+}
+
+function africaPage() {
+  const r = B2B.regions.africa, file = `${r.slug}/index.html`, root = rootFor(file);
+  const trail = [["MODUNERA", "en/"], ["Africa", `${r.slug}/`]];
+  const focus = r.focus.map(([h3, list]) => `<div><h3>${esc(h3)}</h3><ul>${list.map((x) => `<li>${esc(x)}</li>`).join("")}</ul><p>Under assessment</p></div>`).join("");
+  const axes = r.axes.map(([h3, p]) => `<div><h3>${esc(h3)}</h3><p>${esc(p)}</p></div>`).join("");
+  const li = (xs) => xs.map((x) => `<li>${esc(x)}</li>`).join("");
+  const ctas = `${proposalCta(root, "Discuss an African project")}<a class="btn btn-light" href="${root}en/solutions/prefabricated-facilities/">Facilities</a>`;
+  return head({ file, lang: "en", title: r.title, description: r.description, schema: b2bSchema(file, r.title, r.description, trail) }) + chrome(root, "en") +
+    `<main id="main">${photoHero(root, trail, "MODUNERA · Africa", r.h1, r.lead, r.photo, ctas)}` +
+    `<section class="section section-tight"><div class="container"><div class="answer-box"><strong>Direct answer</strong><p>${esc(r.answer)}</p></div></div></section>` +
+    `<section class="section"><div class="container"><div class="section-header"><div><div class="eyebrow">Markets</div><h2>${esc(r.focus_h2)}</h2></div><p>${esc(r.focus_note)}</p></div><div class="tier-list">${focus}</div></div></section>` +
+    `<section class="section section-soft"><div class="container"><div class="section-header"><div><div class="eyebrow">Design</div><h2>${esc(r.axes_h2)}</h2></div><p>Design evaluation axes, not verified performance and not certificates.</p></div><div class="process-grid">${axes}</div></div></section>` +
+    `<section class="section"><div class="container"><div class="section-header"><div><div class="eyebrow">Logistics</div><h2>${esc(r.logistics_h2)}</h2></div></div><ul class="check-list">${li(r.logistics)}</ul>` +
+    `<h3>${esc(r.checks_h2)}</h3><ul class="check-list">${li(r.checks)}</ul>${exclusionsTable()}</div></section>` +
+    ctaBand(root, "Planning in Africa?", B2B.home.brief_p) + `</main>` + footer(root, "en");
+}
+
+function proposalPage() {
+  const p = B2B.proposal, file = `${p.slug}/index.html`, root = rootFor(file);
+  const trail = [["MODUNERA", "en/"], ["Request a project proposal", `${p.slug}/`]];
+  const field = ([label, name, type, required, extra]) => {
+    const req = required ? " required" : "", id = `f-${name}`;
+    let input;
+    if (type === "select") input = `<select id="${id}" name="${name}"${req}><option value="">Please choose</option>${extra.map((o) => `<option>${esc(o)}</option>`).join("")}</select>`;
+    else if (type === "textarea") input = `<textarea id="${id}" name="${name}" rows="3"${req}></textarea>`;
+    else input = `<input id="${id}" name="${name}" type="${type}"${req}${extra ? ` placeholder="${esc(extra)}"` : ""}>`;
+    return `<div class="field${type === "textarea" ? " full" : ""}"><label for="${id}">${esc(label)}${required ? " *" : ""}</label>${input}</div>`;
+  };
+  const steps = p.steps.map((st, i) => `<fieldset><legend>Step ${i + 1} · ${esc(st.legend)}</legend><div class="form-grid">${st.fields.map(field).join("")}</div>` +
+    `<div class="step-nav">${i > 0 ? `<button type="button" class="btn btn-outline" data-step="prev">Back</button>` : "<span></span>"}<button type="button" class="btn btn-primary" data-step="next">Continue</button></div></fieldset>`).join("");
+  const last = `<fieldset><legend>Step ${p.steps.length + 1} · Review and consent</legend><p>Check your entries with Back, then send. Required fields are marked with *.</p>` +
+    `<label class="consent-row"><input type="checkbox" name="privacy_consent" value="yes" required><span>${p.consent}</span></label>` +
+    `<label class="consent-row"><input type="checkbox" name="marketing_consent" value="yes"><span>${esc(p.marketing_consent)}</span></label>` +
+    `<input type="hidden" name="locale" value="en"><input type="hidden" name="source_path" value="/${p.slug}/"><input type="hidden" name="privacy_version" value="${B2B.updated}">` +
+    `<div class="step-nav"><button type="button" class="btn btn-outline" data-step="prev">Back</button><button class="btn btn-primary">${esc(p.submit)}</button></div><p class="legal-note">${esc(p.upload_note)}</p></fieldset>`;
+  const indicator = `<ol class="step-indicator" aria-hidden="true">${"<li></li>".repeat(p.steps.length + 1)}</ol>`;
+  return head({ file, lang: "en", title: p.title, description: p.description, schema: b2bSchema(file, p.title, p.description, trail) }) + chrome(root, "en") +
+    `<main id="main">${pageHero(root, trail, "Request a project proposal", p.h1, p.lead)}` +
+    `<section class="section"><div class="container">` +
+    `<form class="editorial-copy form-steps" data-lead-form data-steps data-no-whatsapp name="${p.form_name}" method="POST" data-netlify="true" netlify-honeypot="bot-field">` +
+    `<input type="hidden" name="form-name" value="${p.form_name}"><p hidden><label>Leave this empty <input name="bot-field"></label></p>${indicator}${steps}${last}</form>` +
+    `<div class="form-done" role="status"><strong>Request received.</strong><p>${esc(p.after)}</p></div>` +
+    `<div class="answer-box"><strong>${esc(p.alt_h2)}</strong><p>${esc(p.alt_p)}</p></div></div></section>` +
+    `<section class="section section-soft"><div class="container"><div class="section-header"><div><div class="eyebrow">Before you send</div><h2>Who does what</h2></div><p>What a proposal prices and what it leaves to the site, the client or local professionals.</p></div>${exclusionsTable()}</div></section>` +
+    `</main>` + footer(root, "en");
+}
+
+async function buildB2B() {
+  await put("en/solutions/index.html", solutionsHubPage());
+  for (const s of B2B.solutions) await put(`${s.slug}/index.html`, solutionPage(s));
+  await put("en/how-we-work/index.html", lifecyclePage());
+  await put("en/concepts/index.html", conceptsHubPage());
+  for (const c of B2B.concepts) await put(`${c.slug}/index.html`, conceptPage(c));
+  await put("en/europe/index.html", europePage());
+  await put("en/africa/index.html", africaPage());
+  await put(`${B2B.proposal.slug}/index.html`, proposalPage());
 }
 
 /* --- MD 1-MD 8 comparison ------------------------------------------------- */
@@ -1660,6 +1887,8 @@ async function main() {
       await put(lang === "de" ? `regionen/${region.slug.de}/index.html` : `en/regions/${region.slug.en}/index.html`, regionPage(region, lang));
     }
   }
+
+  await buildB2B();
 
   const posts = await collectGuides();
   const { groups, rest } = groupGuides(posts);

@@ -14,21 +14,21 @@ node tools/build-modunera-depth.mjs       # MD 1–MD 8 in five languages, count
 node tools/build-news-v7.mjs              # sourced local news, five market hubs
 node tools/build-production-faq-v7.mjs    # production, quality, delivery and buying FAQ
 node tools/build-daily-blog.mjs           # the daily practice series at /blog/praxis/
-node tools/build-intelligence-dashboard.mjs   # /intelligence/: market signals, candidates, opportunities
+node tools/build-intelligence-dashboard.mjs# /intelligence/: market signals, candidates, opportunities
 node tools/build-modunera-v2.mjs          # navigation, comparison pages, guide hubs, cookie notice
-node tools/build-modunera-depth.mjs --extend   # appendix, product word, blocked-claim removal
+node tools/build-modunera-depth.mjs --extend# appendix, product word, blocked-claim removal
 node tools/build-quality-spec.mjs         # the twelve component cards on /qualitaet/
 node tools/build-hreflang-v7.mjs          # reciprocal five-language clusters
 node tools/build-photo-placement.mjs      # real photographs on factory, projects, quality
 node tools/build-image-attrs.mjs          # intrinsic size, lazy loading, deferred place index
 node tools/build-nordic-redirects.mjs     # 301s for the corrected Danish slugs
 node tools/build-title-lengths.mjs        # shortens the boilerplate suffix where the title already says it
+node tools/build-privacy.mjs              # privacy notice, DE and EN, from data/privacy.json
+node tools/build-budget-bands.mjs         # enquiry budget bands, derived from pricing
+node tools/build-location-enquiry.mjs     # enquiry form on the pages that carry the traffic
+node tools/build-about-topic.mjs          # `about` names a topic, not a Product (GSC product-snippet error)
 node tools/build-content-lastmod.mjs      # real content dates, from a content hash
 node tools/build-seo-governance-v7.mjs    # robots policy, location gate, sitemaps
-node tools/build-privacy.mjs             # privacy notice, DE and EN, from data/privacy.json
-node tools/build-budget-bands.mjs       # enquiry budget bands, derived from pricing
-node tools/build-location-enquiry.mjs   # enquiry form on the pages that carry the traffic
-node tools/build-about-topic.mjs        # `about` names a topic, not a Product (GSC product-snippet error)
 node tools/build-de-source-block.mjs      # official permit source on the German-market location pages
 node tools/build-shell-v3.mjs             # floating frame, left rail (runs last: it wraps finished pages)
 node tools/validate-modunera.mjs          # gate: canonicals, JSON-LD, links, brand, colours
@@ -91,6 +91,12 @@ the whole truth about where the block appears and a second run still changes
 nothing.
 
 All of them are idempotent — a second full run changes nothing.
+Since 2026-10-19 the four content passes (privacy, budget bands, location
+enquiry, about topic) run *before* `build-content-lastmod` and the governance
+pass, not after. Running them after governance let `/en/legal/privacy/` be
+written `index` although governance lists it as incomplete — a page that a
+later pass writes bypasses the robots policy and the sitemap. Content passes
+first, then dates, then governance, then the two wrappers.
 
 ## Tone
 
@@ -176,6 +182,7 @@ built out.
 | Country copy, permits, regions | `COUNTRIES` in `tools/build-modunera-europe.mjs` |
 | Location data | `data/europe-locations-source.json` |
 | Operator pages (`/gewerblich/`, `/en/commercial/`, six segments) | `data/commercial.json` |
+| The B2B layer: English home, `/en/solutions/*`, `/en/how-we-work/`, `/en/concepts/*`, `/en/europe/`, `/en/africa/`, the proposal form | `data/b2b.json` |
 | Tourism regions (`/regionen/`, `/en/regions/`, ten landscapes) | `data/tourism-regions.json` |
 | The daily practice series queue | `data/blog-daily-*.json` |
 | Markets the daily scan covers, and their queries | `markets` in `data/market-scan-config.json` |
@@ -245,6 +252,21 @@ hidden and empty where the page has no use for one. A new field goes into all
 three generators (`enquiryForm()` in `build-modunera-v2.mjs`,
 `build-location-enquiry.mjs`, `build-budget-bands.mjs` for the contact page)
 in the same commit.
+
+## The B2B layer
+
+Added 2026-10-19 on the branch `feat/modunera-global-b2b-redesign` from the
+owner's master brief (`docs/redesign/` holds the audit, the architecture, the
+risks and the handoff). `data/b2b.json` carries the copy; `buildB2B()` in
+`tools/build-modunera-v2.mjs` renders the English solution, lifecycle,
+concept, region and proposal pages, and `englishHome()` in
+`tools/build-modunera-europe.mjs` renders the English home from the same
+file. Every concept page carries `project_status: concept_unbuilt` and says
+so; no page names a delivered project, a capacity or a certificate, because
+the repository holds no evidence for one — `docs/redesign/11-legal-and-
+evidence-blockers.md` lists the questions. The proposal form is a second
+Netlify form, `project-proposal`, with its own field list; it is registered on
+the first deploy that carries it.
 
 ## SEO governance (V7)
 

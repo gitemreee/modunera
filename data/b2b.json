@@ -1,0 +1,432 @@
+{
+  "_comment": [
+    "The B2B layer: MODUNERA as a modular-project developer's supplier, not only",
+    "a tiny-house seller. Rendered by tools/build-modunera-v2.mjs into /en/solutions/,",
+    "/en/how-we-work/, /en/concepts/, /en/europe/, /en/africa/ and",
+    "/en/request-project-proposal/, and read by tools/build-modunera-europe.mjs",
+    "for the English home. English only in this phase; the structure takes a",
+    "second language the way data/commercial.json does.",
+    "",
+    "Source: the owner's master brief of 2026-10-19 (35 sections). What it asked",
+    "for that is NOT here, and why: no delivered projects, operators, capacities,",
+    "certificates, countries 'served' or prices for large projects, because none",
+    "of them has evidence in the repository — docs/redesign/11-legal-and-evidence-",
+    "blockers.md lists each one as the question to the owner. Every concept page",
+    "carries project_status 'concept_unbuilt' and says so on the page. Every",
+    "figure on these pages is marked illustrative. 'Turnkey' is a scope option",
+    "that depends on contract and local partners, never a claim.",
+    "",
+    "Photographs are real MODUNERA units from data/site-photos.json. The",
+    "masterplan diagrams are drawn by the generator as schematic SVG — unit",
+    "rectangles on a plan — and labelled as schematic. No render of a resort,",
+    "community or camp exists; the brief's 'asset needed' list is in",
+    "docs/redesign/04-design-and-content-inventory.md."
+  ],
+  "updated": "2026-10-19",
+  "scope_qualifier": "Project scope, engineering, permissions and delivery are assessed for each destination in Europe and selected African markets.",
+  "scope_exclusions": [
+    ["Land procurement", "by the client unless contracted"],
+    ["Local planning and building permits", "local licensed professionals and authorities"],
+    ["Foundations and site works", "scope dependent"],
+    ["Utilities and connections", "scope dependent"],
+    ["Customs, duties and VAT", "destination and contract dependent"],
+    ["Transport, unloading and crane", "project-specific"],
+    ["Installation and warranty", "contractual scope dependent"]
+  ],
+  "home": {
+    "title": "Modular homes, resorts and facilities — from single homes to entire communities | MODUNERA",
+    "description": "MODUNERA plans and supplies modular homes, hospitality destinations and purpose-built facilities for developers and operators in Europe and selected African markets — and still builds the MD 1–MD 8 tiny-house collection.",
+    "eyebrow": "MODUNERA · Modular project developments",
+    "h1": "From individual homes to entire communities.",
+    "sub": "Modular homes, hospitality destinations and purpose-built facilities — designed around your site, your people and your project's scale.",
+    "cta_primary": "Discuss your project",
+    "cta_secondary": "Explore solutions",
+    "cta_tertiary": "View the tiny-house collection",
+    "what_h2": "Spaces for living. Places for business. Infrastructure for progress.",
+    "scale_h2": "From one module to an entire destination.",
+    "scale_p": "The same manufactured module is the starting point whether a project needs one unit or a hundred. What changes with scale is everything around it: site planning, infrastructure, production batches, transport legs and installation sequence — and that is what a project brief is for.",
+    "scale_steps": [
+      ["1 unit", "A single premium home or guest unit, delivered and placed."],
+      ["10–20 units", "A glamping village, a hotel's garden rooms, a first phase of a community."],
+      ["50–100 units", "A holiday park, a modular housing community, a workforce campus — phased production and logistics."],
+      ["100+ units", "A destination with shared facilities, planned around access, utilities and operations."]
+    ],
+    "industries_h2": "Industries we serve",
+    "industries": [
+      ["Hospitality", "Resort owners, holiday-park operators, hotel groups adding units.", "en/solutions/resorts/"],
+      ["Real estate", "Developers and funds planning multi-unit residential communities.", "en/solutions/modular-housing/"],
+      ["Construction and EPC", "Contractors needing camps, offices and site facilities.", "en/solutions/prefabricated-facilities/"],
+      ["Industrial and energy", "Mining, energy and infrastructure workforce accommodation.", "en/solutions/prefabricated-facilities/"],
+      ["Public and institutional", "Municipalities, agencies and NGOs planning schools, clinics and social buildings.", "en/solutions/prefabricated-facilities/"]
+    ],
+    "lifecycle_h2": "Complete project thinking",
+    "regions_h2": "Europe and Africa",
+    "regions_p": "Serving project enquiries across Europe and selected African markets, with feasibility, scope, regulations and delivery planned for each location.",
+    "concepts_h2": "Selected project concepts",
+    "concepts_note": "Concepts, not built references. Each is a planning study that shows how a project of that scale is put together; none has been built or sold.",
+    "manufacture_h2": "How we manufacture",
+    "manufacture_p": "Steel-frame units, 2.55 m wide, built to MODUNERA's specification in Türkiye, fitted out before they leave the hall and moved by road, Ro-Ro or ferry. The photographs are of real units in production and on delivery; model images elsewhere on the site are marked as visualisations.",
+    "collection_h2": "The tiny-house collection",
+    "collection_p": "Eight models, MD 1 to MD 8, for private living, holiday rental and small-scale hospitality — the product line the company grew on, with its own configurator, price indications and country guidance.",
+    "brief_h2": "Your project starts with a clear brief.",
+    "brief_p": "Country, intended use, development stage, number of units, target date and approximate budget. That is enough for us to say what the next technical and commercial step is.",
+    "final_h2": "Let's plan what you want to build.",
+    "final_p": "Request a project proposal, or write to us. Every large project begins with a conversation about the site."
+  },
+  "solutions_hub": {
+    "title": "Modular solutions for hospitality, housing and facilities | MODUNERA",
+    "description": "Three solution families — hospitality and resorts, modular living and communities, prefabricated facilities — each planned around the site, the people and the scale of the project.",
+    "h1": "Modular solutions",
+    "lead": "Three families of projects, one way of working: the site first, then the module, then the plan that gets it there. Choose the family closest to what you are planning; the proposal form asks the rest.",
+    "sectors_h2": "Who typically asks"
+  },
+  "solutions": [
+    {
+      "id": "resorts",
+      "slug": "en/solutions/resorts",
+      "menu": ["Hospitality and resorts", "Glamping villages, holiday parks, hotel units"],
+      "photo": "unit-terrace-event",
+      "title": "Modular hospitality: resorts, glamping villages and holiday parks | MODUNERA",
+      "description": "Modular accommodation concepts for nature resorts, holiday parks, glamping destinations and hotel expansions — module design, guest experience and site logistics considered together.",
+      "h1": "Modular hospitality. Thoughtfully planned at every scale.",
+      "lead": "Explore modular accommodation concepts for nature resorts, holiday parks, glamping destinations and hospitality expansions. Module design, guest experience and site logistics are considered together, from a first cluster of ten units to a destination with shared facilities.",
+      "cta": "Plan a hospitality project",
+      "who_for": [
+        "Resort owners and holiday-park operators adding or replacing accommodation units",
+        "Hotel groups extending a property into its grounds",
+        "Glamping and camping operators moving from tents and pods to four-season units",
+        "Investors planning a new hospitality destination on secured land"
+      ],
+      "sub_products": ["Modular boutique resorts", "Glamping villages", "Eco resorts and nature retreats", "Holiday-park accommodation", "Lakeside, mountain and forest lodges", "Hotel room clusters", "Reception, restaurant and amenity modules"],
+      "help": [
+        "A unit programme: how many of which type, for which guest, at which rate band",
+        "A concept site layout showing units, circulation, service routes and shared facilities — schematic, for planning conversations",
+        "Module specification for the climate and the season: insulation, glazing, heating and ventilation, facade for salt air or snow",
+        "Production phasing and delivery sequence so the site keeps operating",
+        "A responsibility matrix: what the operator provides, what local partners provide, what MODUNERA supplies"
+      ],
+      "configurations": [
+        ["10–20 units", "Glamping village or first phase: one unit type, shared sanitary and reception modules optional", "illustrative"],
+        ["20–50 units", "Holiday-park extension: two unit types, reception and restaurant module, phased delivery", "illustrative"],
+        ["50–100 units", "Destination: unit mix by guest type, amenity cluster, service yard, staged over seasons", "illustrative"]
+      ],
+      "site_readiness": [
+        "Zoning and the campsite or hospitality permit for the number and type of units",
+        "Access for a 2.55 m wide, up to 9.7 m long unit on a low-loader, or a crane position",
+        "Power supply per pitch and the fuse rating it allows",
+        "Water, wastewater and stormwater: connections or an approved on-site solution",
+        "Ground conditions under the supports, levelling, frost depth"
+      ],
+      "climate": [
+        "Coastal: facade variant, fittings and glazing chosen for salt air and driving rain",
+        "Alpine: snow-load verification per site, roof form, year-round heating and frost-proof water routing",
+        "Temperate forest: ventilation and drainage for damp and shade, gutters planned for leaves",
+        "Hot climates: shading, cross-ventilation, cooling load — assessed per site"
+      ],
+      "faq": [
+        ["Can a resort be delivered as one order?", "Production is planned in batches and delivery in a sequence that suits the site and the season. How many units leave the hall per batch, and in what order, is part of the proposal, not a fixed figure."],
+        ["Do the units count as buildings?", "That depends on the destination: campsite regulations, building codes and local statutes treat a unit on supports differently. The feasibility step settles which rules apply before anything is specified."],
+        ["Does MODUNERA install on site?", "Installation is a scope option. Depending on the country and the contract it is done by a local partner, coordinated by MODUNERA, or by the operator's own contractor to our handover documents. The proposal states which."],
+        ["Can we see a built resort?", "There is no MODUNERA-built resort to visit today. The concept pages show planning studies and are labelled as such; the photographs on this site are of real units, in production and delivered."]
+      ]
+    },
+    {
+      "id": "modular-housing",
+      "slug": "en/solutions/modular-housing",
+      "menu": ["Modular living and communities", "Housing developments, staff housing, villages"],
+      "photo": "unit-porch-sand",
+      "title": "Modular housing for developments that need to scale | MODUNERA",
+      "description": "Flexible housing typologies and development-led manufacturing coordination for residential communities, staff accommodation and multi-home projects. Building approvals and engineering are assessed in the destination market.",
+      "h1": "Modular housing for developments that need to scale.",
+      "lead": "Flexible housing typologies and development-led manufacturing coordination for residential communities, staff accommodation and multi-home projects. Building approvals and engineering are assessed in the destination market — a mobile unit, a permanent dwelling and a holiday home are three different regulatory objects, and they are planned as such.",
+      "cta": "Discuss a housing development",
+      "who_for": [
+        "Developers and funds planning a multi-unit residential community",
+        "Municipalities and housing providers with temporary or relocatable housing needs",
+        "Employers providing staff or workforce housing",
+        "Tiny-house village and eco-village projects that arrive in stages"
+      ],
+      "sub_products": ["Modular permanent homes (subject to local approval)", "Modular housing communities", "Student accommodation", "Workforce and staff housing", "Temporary relocatable housing", "Prefabricated holiday homes and bungalows", "The MD 1–MD 8 tiny-house collection"],
+      "help": [
+        "Typology options: studio, one-bedroom and two-bedroom modules, and what each means for width, transport and site layout",
+        "A concept masterplan: plots, circulation for cars, pedestrians and emergency access, shared green and social modules — schematic",
+        "The regulatory path for the destination: which code applies, which professionals must sign, what the module must demonstrate",
+        "Production batches and phased delivery matched to sales or letting phases",
+        "Cost drivers set out by scope line, so a developer's model has the right rows before a price exists"
+      ],
+      "configurations": [
+        ["20 homes", "Single typology, one phase, shared services on one connection point", "illustrative"],
+        ["80 homes", "Two typologies, four phases, social module and green spaces, staged logistics", "illustrative"],
+        ["200+ homes", "Masterplan with infrastructure phasing; engineering and approvals led by local professionals", "illustrative"]
+      ],
+      "site_readiness": [
+        "A development plan or planning permission that allows the typology and density",
+        "A licensed local architect or engineer for permit documents and structural verification",
+        "Foundations, utilities and roads as site works, by the developer or a contractor",
+        "Access and crane logistics for the delivery sequence",
+        "Energy performance requirements of the destination (for example GEG, BENG, RE2020) assessed per typology"
+      ],
+      "climate": [
+        "Four-season living in Central and Northern Europe: insulation, heating, ventilation with heat recovery, frost-proof services",
+        "Coastal and lakeside sites: facade and fittings for damp and salt",
+        "Hot-dry and hot-humid regions: shading, ventilation, corrosion protection, rainwater — assessed per site"
+      ],
+      "faq": [
+        ["Is a tiny house a permanent home?", "Not automatically. The MD collection is built as a unit on supports; whether it can be a permanent dwelling depends on the destination's building code and the plot. Permanent modular homes are a different specification, assessed per project."],
+        ["Who signs the building permit?", "A locally licensed architect or engineer, with the developer as applicant. MODUNERA supplies the technical documentation of the module that the permit documents refer to."],
+        ["What does MODUNERA deliver — the home or the development?", "The modules, their specification and the coordination of production and delivery. Land, planning, foundations, utilities and roads are site works and belong to the development side, unless a contract says otherwise."],
+        ["Can prices be given per home?", "Price indications exist for the MD collection, ex works. For a development, a proposal sets out the scope lines — modules, fit-out, systems, transport, customs, site works, installation — and prices what is in scope."]
+      ]
+    },
+    {
+      "id": "prefabricated-facilities",
+      "slug": "en/solutions/prefabricated-facilities",
+      "menu": ["Prefabricated facilities", "Camps, offices, schools, sanitary and support buildings"],
+      "photo": "production-hall-unit",
+      "title": "Purpose-built modular facilities for complex sites | MODUNERA",
+      "description": "Accommodation, administrative, sanitation and support-building concepts for industrial and institutional developments, structured around practical procurement, access and operational requirements.",
+      "h1": "Purpose-built modular facilities for complex sites.",
+      "lead": "Accommodation, administrative, sanitation and support-building concepts for industrial and institutional developments, structured around practical procurement, access and operational requirements. Each facility type has its own standards; none is presented as a licensed healthcare or education operation.",
+      "cta": "Request a facility proposal",
+      "who_for": [
+        "Construction and EPC contractors needing worker camps, site offices and sanitary blocks",
+        "Mining, energy and infrastructure operators with workforce accommodation on remote sites",
+        "Public buyers and NGOs planning classroom, clinic and administrative buildings",
+        "Industrial sites adding security, storage and light support structures"
+      ],
+      "sub_products": ["Worker camps and workforce accommodation", "Administrative and relocatable offices", "Classroom buildings", "Healthcare facility buildings (the building, not the medical operation)", "Sanitary blocks and restroom modules", "Dormitory, dining and kitchen modules", "Security and control buildings", "Storage and light industrial support structures", "Steel structure and modular hybrid systems", "Emergency accommodation — capacity and tender terms to be verified per project"],
+      "help": [
+        "A facility programme: beds, desks, seats, showers and meals per shift, translated into module counts",
+        "A campus layout: accommodation blocks, sanitary and dining, administration, circulation, emergency access — schematic",
+        "A technical submission structure for procurement: drawings, specifications, acceptance criteria, exclusions",
+        "Climate packages for hot-dry, hot-humid and cold sites, as design axes to be verified",
+        "Logistics from the hall to the site: road, Ro-Ro, sea container or oversized freight, port, customs, last mile, crane"
+      ],
+      "configurations": [
+        ["100 persons", "Accommodation blocks, one sanitary block, dining and kitchen module, office", "illustrative"],
+        ["300 persons", "Phased accommodation, two sanitary blocks, dining, first-aid room, administration, security", "illustrative"],
+        ["School or clinic building", "Classroom or consultation modules with sanitary and administration — fit-out and licensing by the operator", "illustrative"]
+      ],
+      "site_readiness": [
+        "Site access for container-size or oversized units, unloading area, crane position",
+        "Power, water, wastewater and fuel supply, or the off-grid assessment that replaces them",
+        "Ground preparation and foundations for the facility type",
+        "The procurement model: private project, public tender, EPC subcontract",
+        "Local standards for fire safety, accessibility, hygiene and occupancy, verified by local professionals"
+      ],
+      "climate": [
+        "Hot-dry: solar gain, shading, thermal performance, dust filtration, passive ventilation",
+        "Hot-humid: ventilation, condensation, corrosion, coating durability, rainwater management",
+        "Cold and alpine: insulation, heating, snow load verification",
+        "Storm, seismic and flood exposure: local engineering analysis, always"
+      ],
+      "faq": [
+        ["Can MODUNERA deliver a healthcare facility?", "The building — consultation rooms, sanitary, waiting and administration modules — as a facility building. Medical equipment, licensing and the healthcare operation are the operator's, and the page says so."],
+        ["Are these sea containers?", "No. Container-type modular units are built as units; a converted shipping container is a different product. Where a project needs ISO-container dimensions for sea freight, the unit is designed to them."],
+        ["How are tenders handled?", "With a technical submission structure: drawings, specification, acceptance criteria and exclusions in the format the tender asks for. Whether MODUNERA bids directly or supplies a bidder is decided per procurement model."],
+        ["What about emergency accommodation?", "Only with verified capacity and tender terms for the specific case. It is listed as a facility type, not as a standing capability."]
+      ]
+    }
+  ],
+  "sectors": [
+    ["Hospitality", "Resort sahibi, operator, investor — 20 to 150 accommodation units", "en/solutions/resorts/"],
+    ["Real estate developers", "Developer, fund manager — 20 to 500 homes or a multi-unit community", "en/solutions/modular-housing/"],
+    ["Construction and EPC", "Procurement manager, project director — camps, staff accommodation, offices", "en/solutions/prefabricated-facilities/"],
+    ["Industrial, mining and energy", "Site and HSE management — workforce campuses on remote sites", "en/solutions/prefabricated-facilities/"],
+    ["Public and institutional", "Municipality, agency, NGO, tender contractor — schools, clinics, social buildings", "en/solutions/prefabricated-facilities/"],
+    ["Private buyers", "A household — the MD 1 to MD 8 tiny-house collection, configurator and price indications", "en/models/"]
+  ],
+  "lifecycle": {
+    "title": "How we deliver projects — from brief to handover | MODUNERA",
+    "description": "Eight stages from discovery to aftercare: brief, feasibility, concept design, engineering, commercial proposal, production, international logistics, installation and handover — with who is involved and what each stage cannot promise.",
+    "h1": "How we work: eight stages, no shortcuts.",
+    "lead": "A client buys a project, not a product. These are the stages every large project goes through, who takes part in each, and what each one deliberately does not promise.",
+    "stages": [
+      ["Discovery and project brief", "Country, land, climate, purpose, capacity, number of units, budget band, target date and planning stage.", "Client, MODUNERA", "No price and no programme yet — the brief decides what can be assessed."],
+      ["Feasibility and scope review", "Local regulations and permits, transport access, foundations and site infrastructure, technical requirements, the need for local consultants.", "MODUNERA, local professionals", "A feasibility note is not a permit and not a guarantee that a site can be built on."],
+      ["Concept design and master planning", "Site layout, unit types, access routes, shared facilities, repeatable modules — schematic drawings for decisions.", "MODUNERA, client, local architect", "Concept drawings are not permit drawings."],
+      ["Engineering and technical specification", "Structural, electrical, mechanical, thermal and acoustic performance, fire safety, accessibility, local norms — per discipline.", "Engineers of record, MODUNERA technical", "Verification is done against the destination's rules by professionals licensed there."],
+      ["Commercial proposal and contracting", "Unit and service breakdown, delivery terms (Incoterms), responsibilities, estimated programme, exclusions, currency and payment stages.", "MODUNERA, client", "Indicative and binding proposals are labelled as such; nothing unstated is included."],
+      ["Production and quality gates", "Production planning in batches, in-process checks, factory acceptance and reporting as agreed in the contract.", "Production, MODUNERA quality", "Only the checks the contract names are promised."],
+      ["International logistics and site preparation", "Road, Ro-Ro, sea container or oversized freight; port, customs, crane, foundations, access, utilities ready for the delivery sequence.", "Forwarders, customs agents, client's site contractor", "Customs, duties and VAT depend on route and contract."],
+      ["Installation, handover and aftercare", "Installation responsibilities, test and handover documents, warranty, maintenance and service scope — local partner and manufacturer roles separated.", "Installer, MODUNERA, client", "Warranty and service scope are what the contract states for that country."]
+    ]
+  },
+  "concepts_hub": {
+    "title": "Project concepts — planning studies, not built references | MODUNERA",
+    "description": "Three planning studies that show how a modular project of each scale is put together: a forest hospitality village, an 80-home modular community, an industrial workforce campus. None has been built; each says so.",
+    "h1": "Project concepts",
+    "lead": "Planning studies, not references. Each concept shows how a project of its scale is composed — unit mix, shared facilities, circulation, phasing — and what would have to be settled on a real site. None has been built or sold, and every figure is illustrative."
+  },
+  "concepts": [
+    {
+      "id": "forest-hospitality-village",
+      "slug": "en/concepts/forest-hospitality-village",
+      "project_status": "concept_unbuilt",
+      "name": "Forest hospitality village",
+      "scale": "20–30 accommodation units",
+      "photo": "aframe-night",
+      "title": "Concept: forest hospitality village, 20–30 units | MODUNERA",
+      "description": "A planning study for a 20–30 unit nature resort: unit types, reception and dining modules, guest and service circulation, phasing — schematic, illustrative, not a built project.",
+      "brief": "A nature resort on a forest site: 24 guest units in two types, a reception with a small café, a shared lounge, and a service yard kept out of the guests' view. Guests arrive on foot from a car park at the edge; service vehicles use a separate loop.",
+      "module_mix": [["Guest unit, couple", 16, "one loft, terrace to the forest"], ["Guest unit, family", 8, "two lofts, larger terrace"], ["Reception and café", 1, "double module"], ["Lounge and shared terrace", 1, "double module"], ["Sanitary and laundry (service)", 1, "service module"], ["Service yard and storage", 1, "open-sided"]],
+      "diagram": { "cols": 6, "rows": 4, "shared": [[0, 0, 2, 1]], "service": [[5, 3, 1, 1]], "label": "24 guest units in two types, shared modules at the entrance, service at the far edge" },
+      "scope_limits": [
+        "Landscape, water, wastewater and infrastructure depend on the site and are shown only as positions",
+        "Permits for a hospitality use on a forest site are a question for the local authority before any specification",
+        "Unit count, areas, programme and cost are illustrative and to be validated against a real site"
+      ],
+      "phasing": "Two phases: the entrance cluster with 12 couple units first, so the resort can open; family units and the lounge in the second season."
+    },
+    {
+      "id": "modular-residential-community",
+      "slug": "en/concepts/modular-residential-community",
+      "project_status": "concept_unbuilt",
+      "name": "80-home modular community",
+      "scale": "80 homes, two typologies",
+      "photo": "unit-standing-seam",
+      "title": "Concept: 80-home modular residential community | MODUNERA",
+      "description": "A planning study for an 80-home development with one- and two-bedroom modules: circulation for cars, pedestrians and emergency access, shared green, social module, four production phases — schematic, illustrative, not a built project.",
+      "brief": "A development of 80 homes in two typologies on a level site at the edge of a town: 48 one-bedroom and 32 two-bedroom modules along a loop road, with a shared green at the centre and a social module beside it. Building standard, fire escape and accessibility are assessed for the destination before the typology is fixed.",
+      "module_mix": [["One-bedroom home", 48, "single module, private terrace"], ["Two-bedroom home", 32, "one-and-a-half modules"], ["Social and community module", 1, "double module at the green"], ["Technical and waste module", 2, "per cluster"]],
+      "diagram": { "cols": 10, "rows": 8, "shared": [[4, 3, 2, 2]], "service": [[0, 7, 1, 1], [9, 7, 1, 1]], "label": "80 homes along a loop, shared green and social module at the centre, technical modules at two corners" },
+      "scope_limits": [
+        "Whether these modules can be permanent dwellings depends on the destination's building code — assessed before the typology is fixed",
+        "Roads, foundations, utilities and the green are site works by the developer",
+        "Phasing, counts and areas are illustrative; the MD 2 operator scenario informed the typology mix, no client is named"
+      ],
+      "phasing": "Four production batches of 20 homes, each delivered to a finished quarter of the loop so residents move in while the next quarter is built."
+    },
+    {
+      "id": "industrial-workforce-campus",
+      "slug": "en/concepts/industrial-workforce-campus",
+      "project_status": "concept_unbuilt",
+      "name": "Industrial workforce campus",
+      "scale": "100–300 persons, phased",
+      "photo": "transport-export-flags",
+      "title": "Concept: industrial workforce campus, 100–300 persons | MODUNERA",
+      "description": "A planning study for a phased workforce campus: accommodation blocks, sanitary, dining and kitchen, administration, first-aid room, security — climate packages, emergency access and port-to-site logistics — schematic, illustrative, not a built project.",
+      "brief": "A workforce campus for a remote energy or infrastructure site, built in two phases from 100 to 300 persons: accommodation blocks of four modules, a sanitary block per 50 persons, a dining hall with kitchen, an administration module, a first-aid room (the room, not a licensed clinic) and a security module at the gate. Emergency vehicles reach every block from the ring road.",
+      "module_mix": [["Accommodation block (4 modules, 16 beds)", 19, "phase 1: 7, phase 2: 12"], ["Sanitary block", 6, "one per 50 persons"], ["Dining hall and kitchen", 1, "triple module"], ["Administration", 1, "double module"], ["First-aid room", 1, "single module"], ["Security and gate", 1, "single module"]],
+      "diagram": { "cols": 10, "rows": 6, "shared": [[4, 0, 3, 1], [0, 0, 1, 1]], "service": [[9, 5, 1, 1], [0, 5, 1, 1]], "label": "accommodation blocks on a ring road, dining and administration at the entrance, sanitary blocks between the rows" },
+      "scope_limits": [
+        "Climate package (hot-dry, hot-humid, cold) and off-grid power, water and wastewater are design axes to be engineered per site",
+        "Logistics shown as hall → port → customs → site; routes, duties and local assembly partners are project-specific",
+        "Person counts, module counts and programme are illustrative; fire, hygiene and occupancy standards are the destination's"
+      ],
+      "phasing": "Phase 1 (100 persons) ships as sea-freight-sized units with the dining and administration modules; phase 2 adds twelve accommodation blocks and two sanitary blocks on the prepared ring."
+    }
+  ],
+  "regions": {
+    "europe": {
+      "slug": "en/europe",
+      "photo": "transport-road",
+      "title": "Modular projects in Europe — precision, standards, four seasons | MODUNERA",
+      "description": "MODUNERA plans and supplies modular homes, hospitality units and facilities for projects across Europe: country rules, four-season specification, road and Ro-Ro delivery from Türkiye, and the tiny-house markets the company already serves.",
+      "h1": "Europe: precision, standards, four-season living.",
+      "lead": "Europe is where MODUNERA sells today — Germany, the Netherlands, Denmark, Luxembourg and Switzerland for the tiny-house collection — and where project enquiries for resorts, communities and facilities are assessed country by country. Standards are high and different everywhere; that is why feasibility comes before specification.",
+      "answer": "Project enquiries are assessed for any European destination. The five countries with their own pages carry country guidance, permit sources and delivery figures; for the others, the feasibility step establishes the rules, the route and the local professionals needed. No country is listed as 'served' without a project behind it.",
+      "tiers": [
+        ["Where MODUNERA sells today", ["Germany", "Netherlands", "Denmark", "Luxembourg", "Switzerland"], "Country pages with permit sources, regions and delivery figures exist for each."],
+        ["Priority project markets", ["France", "Belgium", "Austria"], "Named in the October 2026 market report as the next markets; assessed per project today, no country page yet."],
+        ["Opportunity markets", ["Sweden", "Norway", "Finland", "Italy", "Spain", "Portugal", "Poland", "Romania", "Czechia", "United Kingdom", "Ireland", "Greece", "Croatia"], "Assessed per enquiry: route, customs status, standards, local partners."]
+      ],
+      "sections": [
+        ["What is the same everywhere", "A 2.55 m wide steel-frame unit on a low-loader, fitted out before it leaves the hall, moved by road with a Ro-Ro or ferry leg where the route needs one. The technical documentation of the unit is the same document a permit application in any country refers to."],
+        ["What changes with the country", "Which code applies to a unit on supports, who must sign, what energy performance must be shown, how a campsite or holiday park is licensed, which customs status applies between Türkiye and the destination. The country pages answer this for five markets; the feasibility step answers it for the rest."],
+        ["Four seasons", "Central and Northern European projects are specified for winter occupation or for a winter shutdown — insulation, heating, ventilation with heat recovery, frost-proof water routing — and for the summer the same glass front can turn into: shading and cross-ventilation."]
+      ]
+    },
+    "africa": {
+      "slug": "en/africa",
+      "photo": "production-frame-and-finish",
+      "title": "Modular projects in Africa — designed for local conditions | MODUNERA",
+      "description": "Project-led modular housing and facility concepts for selected African markets: climate-responsive options, off-grid assessment, port-to-site logistics, permitting and local-partner assessment — planned per destination, not promised in general.",
+      "h1": "Modular spaces designed for local conditions.",
+      "lead": "Explore project-led modular housing and facility concepts for selected African markets, with climate-responsive options and destination-specific logistics, permitting and local-partner assessments. Africa is not one market: a coastal site in Ghana, an arid site in Namibia and a highland site in Kenya ask different questions of the same module.",
+      "answer": "MODUNERA assesses project enquiries from selected African markets. There is no delivered MODUNERA project in Africa to show today, and no country is listed as served. What exists is a way of working: the design axes below, a logistics chain from the hall to the site, and a feasibility step that establishes sanctions, export controls, insurance, customs, local permits and partners before any specification.",
+      "focus_h2": "Markets under assessment",
+      "focus_note": "A working hypothesis for where enquiries are expected, not a list of countries served. Each market is opened only after the feasibility checks below.",
+      "focus": [
+        ["North Africa", ["Morocco", "Algeria", "Tunisia", "Egypt"]],
+        ["East Africa", ["Kenya", "Tanzania", "Uganda", "Rwanda"]],
+        ["West Africa", ["Ghana", "Côte d'Ivoire", "Senegal", "Nigeria"]],
+        ["Southern Africa", ["South Africa", "Namibia", "Botswana"]],
+        ["Lusophone markets", ["Angola", "Mozambique"]]
+      ],
+      "axes_h2": "Design axes, assessed per site",
+      "axes": [
+        ["Hot-dry regions", "Solar gain, shading, thermal performance, dust filtration, passive ventilation."],
+        ["Hot-humid regions", "Ventilation, condensation, corrosion, coating durability, rainwater management."],
+        ["Coastal sites", "Salt air and corrosion risk in facade, fittings and fixings."],
+        ["Storm, seismic and flood exposure", "Design entirely dependent on local engineering analysis."],
+        ["Off-grid options", "Solar PV with storage, generator integration, clean-water storage and treatment, wastewater — capacity and approval required."],
+        ["Public facilities", "Accessibility, hygiene, safety and operating requirements of schools, clinics and administrative buildings — the operator's licence, not the building's."]
+      ],
+      "logistics_h2": "From the hall to the site",
+      "logistics": ["Production in Türkiye, units sized for sea freight where the route needs it", "Port of loading, shipping, port of discharge", "Customs, import duties and documentation per destination", "Inland haulage and the last mile to a remote site", "Local assembly partner and site works", "Quality gates agreed in the contract"],
+      "checks_h2": "Before a market is opened",
+      "checks": ["Sanctions and export controls", "Insurance and payment security", "Customs regime and import documentation", "Infrastructure at the site: access, power, water", "Local building permits and professionals", "Local partners for assembly and aftercare"]
+    }
+  },
+  "proposal": {
+    "slug": "en/request-project-proposal",
+    "form_name": "project-proposal",
+    "title": "Request a project proposal | MODUNERA",
+    "description": "Tell us what you plan to build: location, intended use, development stage, number of units and approximate budget. The brief determines the next technical and commercial step.",
+    "h1": "Tell us what you plan to build.",
+    "lead": "Share the location, intended use, development stage, number of units and approximate budget. We'll use your brief to determine the appropriate next technical and commercial discussion. Five short steps; only the first is mandatory.",
+    "steps": [
+      {
+        "legend": "Project identity",
+        "fields": [
+          ["Organisation", "organisation", "text", true, ""],
+          ["Contact name", "contact_name", "text", true, ""],
+          ["Business e-mail", "business_email", "email", true, ""],
+          ["Phone or WhatsApp, with country code", "phone", "tel", false, ""],
+          ["Role in the decision", "role", "text", false, "e.g. owner, development director, procurement"],
+          ["Website (optional)", "website", "url", false, ""]
+        ]
+      },
+      {
+        "legend": "Project definition",
+        "fields": [
+          ["Solution", "solution", "select", true, ["Resort or hospitality", "Modular homes or residential community", "Workforce camp", "Modular offices", "Education building", "Healthcare facility building", "Other"]],
+          ["Site country", "site_country", "text", true, ""],
+          ["City or approximate site location", "site_location", "text", false, ""],
+          ["Project phase", "project_phase", "select", false, ["Idea", "Land secured", "Design", "Permit", "Funded", "Tender", "Ready to order"]],
+          ["Number of units", "units_band", "select", true, ["1–9", "10–19", "20–49", "50–99", "100–199", "200+"]],
+          ["Expected occupants, rooms or floor area (where relevant)", "capacity_note", "text", false, ""],
+          ["Is the land secured?", "land_status", "select", false, ["Yes", "No", "Under negotiation"]]
+        ]
+      },
+      {
+        "legend": "Commercial fit",
+        "fields": [
+          ["Indicative total budget", "budget_band", "select", false, ["Under €250k", "€250k–€1M", "€1M–€3M", "€3M–€10M", "€10M+", "Prefer not to say"]],
+          ["Target procurement date or delivery window", "procurement_date", "text", false, ""],
+          ["Required scope", "scope_requested", "select", false, ["Supply only", "Supply and transport", "Installation partnership", "Turnkey feasibility study"]],
+          ["Project financing", "funding_stage", "select", false, ["Confirmed", "In progress", "Exploring", "Confidential"]],
+          ["Procurement model", "procurement_model", "select", false, ["Private project", "Public tender", "EPC subcontract", "Partnership"]]
+        ]
+      },
+      {
+        "legend": "Technical brief",
+        "fields": [
+          ["Climate and location constraints", "climate_note", "textarea", false, ""],
+          ["Utilities and off-grid requirements", "utilities_note", "textarea", false, ""],
+          ["Site access and logistics notes", "access_note", "textarea", false, ""],
+          ["Do you have drawings or a design?", "drawings", "select", false, ["No", "Sketch or brief", "Architectural drawings", "Permit documents"]],
+          ["Describe the project", "message", "textarea", false, ""]
+        ]
+      }
+    ],
+    "upload_note": "File upload is not part of this form yet; drawings and documents can be sent by e-mail after the first reply.",
+    "consent": "I agree that my details may be stored and used to assess this enquiry. Details in the <a href=\"../legal/privacy/\">privacy notice</a>.",
+    "marketing_consent": "I would like to receive occasional project updates from MODUNERA by e-mail (optional).",
+    "submit": "Send project request",
+    "after": "Thank you. Your request has been received and will be read by a person. There is no fixed response time promised; a first reply names the next technical and commercial step.",
+    "alt_h2": "Prefer a shorter route?",
+    "alt_p": "Write to emre@modunera.com with the country, the use and the number of units, or use WhatsApp for a first exchange. The proposal form remains the record of the brief."
+  }
+}
