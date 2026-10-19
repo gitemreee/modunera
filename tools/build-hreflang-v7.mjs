@@ -118,6 +118,27 @@ for (const [, deSlug, enSlug] of v2.matchAll(/deSlug: "([a-z-]+)", enSlug: "([a-
   });
 }
 
+/* The DE/EN page families added in October 2026, paired from their own data
+   files: the operator pages (data/commercial.json), the tourism regions
+   (data/tourism-regions.json) and the B2B layer (data/b2b.json with its German
+   twin data/b2b-de.json, paired by index; the hub routes are fixed per language
+   and mirror B2B_HUB in build-modunera-v2.mjs). Before this, head() wrote an
+   alternate pair on these pages and the strip pass below removed it, because
+   the pairs were in no table here. */
+const commercial = await readJson("data/commercial.json");
+addCluster({ de: `${commercial.hub.slug.de}/`, en: `${commercial.hub.slug.en}/` });
+for (const seg of commercial.segments) addCluster({ de: `${seg.slug.de}/`, en: `${seg.slug.en}/` });
+const tourism = await readJson("data/tourism-regions.json");
+addCluster({ de: "regionen/", en: "en/regions/" });
+for (const r of tourism.regions) addCluster({ de: `regionen/${r.slug.de}/`, en: `en/regions/${r.slug.en}/` });
+const b2bEn = await readJson("data/b2b.json"), b2bDe = await readJson("data/b2b-de.json");
+for (const [de, en] of [["loesungen/", "en/solutions/"], ["so-arbeiten-wir/", "en/how-we-work/"], ["konzepte/", "en/concepts/"]]) addCluster({ de, en });
+b2bEn.solutions.forEach((s, i) => addCluster({ de: `${b2bDe.solutions[i].slug}/`, en: `${s.slug}/` }));
+b2bEn.concepts.forEach((c, i) => addCluster({ de: `${b2bDe.concepts[i].slug}/`, en: `${c.slug}/` }));
+addCluster({ de: `${b2bDe.regions.europe.slug}/`, en: `${b2bEn.regions.europe.slug}/` });
+addCluster({ de: `${b2bDe.regions.africa.slug}/`, en: `${b2bEn.regions.africa.slug}/` });
+addCluster({ de: `${b2bDe.proposal.slug}/`, en: `${b2bEn.proposal.slug}/` });
+
 /* Two generators route their own pages — the local news hubs and the production
    FAQ, whose subject pages exist only in the languages that have enough answers
    for one. Rather than keep a second copy of those rules here, each writes the

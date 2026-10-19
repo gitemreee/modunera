@@ -26,11 +26,11 @@ call, hreflang pairs in `head()` — follow `data/commercial.json`.
 | Work package | Status | Route / file | Test | Risk / blocker |
 |---|---|---|---|---|
 | Design system | Partial — B2B components added, palette kept | `tools/design-system-v2.css` | validators, screenshots | none |
-| Homepage | Done (EN) | `/en/` | validators, 1440/390 screenshots | mobile hero order (doc 13) |
+| Homepage | Done (EN); mobile first screen fixed | `/en/` | validators, 1440/390 measured | — |
 | Solution pages | Done (3 + hub) | `/en/solutions/*` | validators, screenshots | copy is scope-safe; references blocked on doc 11 |
 | Lifecycle | Done | `/en/how-we-work/` | validators | — |
 | Concepts | Done (3 + hub) | `/en/concepts/*` | validators, screenshot | schematic only; renders = asset needed |
 | Regions | Done (EN) | `/en/europe/`, `/en/africa/` | validators, screenshot | Africa is "under assessment" by design |
 | Project enquiry | Done, pending live test | `/en/request-project-proposal/` | stepping tested; POST on preview | file upload, UTM, CRM |
 | SEO migration | No URL moved | `docs/redesign/09-seo-migration-map.csv` | gates pass | CI idempotency gate on PR |
-| Languages | EN only | — | — | doc 08 |
+| Languages | EN + DE (B2B layer); Turkish not planned | `data/b2b-de.json` | validators, screenshots | FR/NL twins next |

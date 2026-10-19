@@ -811,7 +811,9 @@ p{margin:0 0 10px}
      their own block, and the card starts just under them, overlapping by a
      couple of dozen pixels so the two read as one unit. */
   .hero{min-height:0;height:auto;display:block;background:var(--paper);overflow:visible}
-  .hero-media{position:relative;inset:auto;height:400px;width:100%;transform:none}
+  /* 260 px, not 400: on a 390x844 phone the headline and the primary action
+     have to be on the first screen, under the nav, with the photograph above them. */
+  .hero-media{position:relative;inset:auto;height:260px;width:100%;transform:none}
   .hero-media:after{background:linear-gradient(0deg,rgba(5,24,17,.42) 0%,rgba(5,24,17,.08) 38%,transparent 66%)}
   .hero-grain{display:none}
   .hero-content{position:relative;display:block;padding:0;margin-top:-26px}

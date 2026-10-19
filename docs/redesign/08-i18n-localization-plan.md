@@ -6,20 +6,22 @@ sections exist; hreflang clusters are built by `tools/build-hreflang-v7.mjs`
 only for pages with real equivalents; `x-default` is German.
 
 ## The B2B layer
-English only in this phase. `data/b2b.json` is keyed so that a second
+English and German since 2026-10-19 (slice 2): `data/b2b.json` and its
+German twin `data/b2b-de.json`, same structure, one set of page functions.
+DE/EN pairs are clustered by `tools/build-hreflang-v7.mjs`. The German home is
+unchanged; German readers reach the B2B layer through the new "Lösungen" menu. `data/b2b.json` is keyed so that a second
 language is added as a sibling object (the pattern `data/commercial.json`
 already uses for de/en). No machine translation; no language goes live until
 menu, home, the three solution pages, the proposal form, privacy summary and
 contact exist in it at editorial quality (brief §7.3).
 
 ## Order (brief §7.1), with the gate for each
-1. English — live in this branch.
-2. German — next: the B2B hub pages need German twins before the German home
+1. English — built.
+2. German — B2B layer built; German home deliberately unchanged. Originally: the B2B hub pages need German twins before the German home
    changes; translation by a native editor; hreflang pairs added in the
    generator, not by hand.
 3. French, Dutch — after German; the market sections exist, the B2B pages do not.
-4. Turkish — company origin; no section exists yet; a new locale in
-   `data/locales.json` plus the locales generator.
+4. Turkish — **not planned** (owner decision, 2026-10-19). No `/tr/` section will be built.
 5. Phase 2/3 languages — only with a translation workflow (memory, glossary,
    review) in place; Arabic needs an RTL pass over nav, forms and numerals first.
 

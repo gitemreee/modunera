@@ -34,3 +34,22 @@ Solutions · Europe & Africa · Tiny houses · Countries · Other structures · 
 ## Lifecycle of a URL from here
 
 Every route above is in the sitemap and carries a self-referential canonical and no hreflang (English only; a German twin would add the pair the way `data/commercial.json` does). None of the 15,182 pre-existing URLs changed path, canonical or robots in this slice except `/en/legal/privacy/`, which was wrongly `index` and is now `noindex` as governance always intended (see README-build.md, run order note).
+
+## Slice 2 (2026-10-19): German twins
+
+| DE route | EN route |
+|---|---|
+| `/loesungen/` | `/en/solutions/` |
+| `/loesungen/resorts/`, `/loesungen/modulares-wohnen/`, `/loesungen/vorgefertigte-einrichtungen/` | the three solution pages |
+| `/so-arbeiten-wir/` | `/en/how-we-work/` |
+| `/konzepte/` + `waldresort`, `modulare-wohnsiedlung`, `arbeiter-campus` | `/en/concepts/` + three studies |
+| `/europa-projekte/` | `/en/europe/` (`/europa/` was avoided: `blog/europa/` and `faq/europa/` already use the word) |
+| `/afrika/` | `/en/africa/` |
+| `/projektanfrage-b2b/` | `/en/request-project-proposal/` (same Netlify form, `locale` field tells them apart) |
+
+German menu: a "Lösungen" dropdown first, containing the solutions, concepts,
+how-we-work, Europe, Africa and the B2B enquiry. Turkish is not planned.
+
+Also fixed in slice 2: the operator pages and the tourism-region pages carried
+DE/EN alternates from `head()` that `build-hreflang-v7.mjs` stripped because
+it had no table for them; all three families are now clustered.
