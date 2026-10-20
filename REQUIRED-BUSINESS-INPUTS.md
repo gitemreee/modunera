@@ -14,12 +14,12 @@ These three pages are live but set to `noindex,follow`, because a German-facing
 commercial site with an incomplete Impressum is a compliance risk and an
 incomplete one should not be a search result.
 
-- [ ] Full registered company name and legal form (a PDF or photo of the registration)
-- [ ] Registered address that accepts service of process
-- [ ] Trade register / MERSİS number and the registering authority
-- [ ] Tax office and tax number, or VAT identification number
+- [x] Full registered company name and legal form — MC TİNY HOUSE ÜRETİM VE DIŞ TİCARET LİMİTED ŞİRKETİ (2026-10-20, `data/company.json`; registration document still welcome)
+- [x] Registered address — Yeşiltepe Mah. 8036 Sk. No: 3A, Erenler / Sakarya (2026-10-20)
+- [x] MERSİS number — 0613200110100001 (2026-10-20); trade-register (ticaret sicil) number welcome if it differs
+- [x] Tax office and tax number — Ali Fuat Cebesoy Vergi Dairesi, 6132001101 (2026-10-20)
 - [ ] Name and role of the authorised representative(s)
-- [ ] Official e-mail address
+- [x] Official e-mail address — emre@modunera.com (receives mail since 2026-10-18)
 - [ ] Written approval to publish `+90 553 543 5342` as the public number
 - [ ] Any EU branch, subsidiary, representative or service point, with its registration
 - [ ] Named data controller, and a representative under Art. 27 GDPR if there is no EU establishment

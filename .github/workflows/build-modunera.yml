@@ -76,6 +76,7 @@ jobs:
           node tools/build-nordic-redirects.mjs
           node tools/build-title-lengths.mjs
           node tools/build-privacy.mjs
+          node tools/build-impressum.mjs
           node tools/build-budget-bands.mjs
           node tools/build-location-enquiry.mjs
           node tools/build-about-topic.mjs
@@ -126,6 +127,7 @@ jobs:
           node tools/build-nordic-redirects.mjs
           node tools/build-title-lengths.mjs
           node tools/build-privacy.mjs
+          node tools/build-impressum.mjs
           node tools/build-budget-bands.mjs
           node tools/build-location-enquiry.mjs
           node tools/build-about-topic.mjs

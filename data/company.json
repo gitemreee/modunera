@@ -1,0 +1,52 @@
+{
+  "_comment": [
+    "The legal entity behind MODUNERA, as supplied by the owner on 2026-10-20.",
+    "Read by tools/build-impressum.mjs (the Impressum), tools/build-privacy.mjs",
+    "(the controller in the privacy notice) and the English home's Organization",
+    "schema. Nothing here is inferred: a field the owner has not supplied is null",
+    "and the Impressum lists it as still to be added.",
+    "",
+    "Still open (REQUIRED-BUSINESS-INPUTS.md section 1): the authorised",
+    "Still open (REQUIRED-BUSINESS-INPUTS.md section 1): the authorised",
+    "representative(s) (Müdür) by name and written approval for the public phone",
+    "number. MERSİS was supplied on 2026-10-20. Until the representative is here,",
+    "the Impressum is incomplete under § 5 DDG and the legal pages stay noindex."
+  ],
+  "updated": "2026-10-20",
+  "legal_name": "MC TİNY HOUSE ÜRETİM VE DIŞ TİCARET LİMİTED ŞİRKETİ",
+  "legal_form": {
+    "tr": "Limited Şirketi",
+    "de": "Gesellschaft mit beschränkter Haftung nach türkischem Recht (Limited Şirketi)",
+    "en": "limited liability company under Turkish law (Limited Şirketi)"
+  },
+  "brand": "MODUNERA",
+  "address": {
+    "street": "Yeşiltepe Mah. 8036 Sk. No: 3A",
+    "district": "Erenler",
+    "province": "Sakarya",
+    "country": {
+      "tr": "Türkiye",
+      "de": "Türkei",
+      "en": "Türkiye"
+    },
+    "country_code": "TR"
+  },
+  "tax_office": "Ali Fuat Cebesoy Vergi Dairesi",
+  "tax_number": "6132001101",
+  "email": "emre@modunera.com",
+  "phone": "+90 553 543 5342",
+  "representatives": null,
+  "trade_register": null,
+  "mersis": "0613200110100001",
+  "history": {
+    "_source": "Owner's statement, 2026-10-20. The export count was first given as 'more than 300', then 'more than 500'; 500 is the owner's final figure. Export declarations or delivery records back it if it is ever challenged.",
+    "founded": 2017,
+    "founded_place": "Sakarya",
+    "first_export": {
+      "year": 2019,
+      "destination_de": "Bremen, Deutschland",
+      "destination_en": "Bremen, Germany"
+    },
+    "units_shipped_since_2019": "500+"
+  }
+}

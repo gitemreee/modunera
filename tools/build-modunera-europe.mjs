@@ -479,6 +479,7 @@ function europeFaqPage(lang) {
    Organization.areaServed stays the five countries with a product sold there;
    Africa is "under assessment" on its own page and is not a served area here. */
 const SITE_PHOTO_INDEX = Object.fromEntries(JSON.parse(await readFile(join(ROOT, "data/site-photos.json"), "utf8")).photos.map((p) => [p.name, p]));
+const COMPANY = JSON.parse(await readFile(join(ROOT, "data/company.json"), "utf8"));
 const B2B_HOME = JSON.parse(await readFile(join(ROOT, "data/b2b.json"), "utf8"));
 
 function englishHome() {
@@ -507,7 +508,7 @@ function englishHome() {
     const [w, h] = f.px.split("x").map(Number);
     return `<figure class="state-card"><img src="${root}${f.file}" width="${w}" height="${h}" alt="${esc(p.alt_en ?? p.alt_de)}" loading="lazy" style="width:100%;height:auto;border-radius:8px"><figcaption class="legal-note" style="margin:8px 0 0">${esc(p.alt_en ?? p.alt_de)}</figcaption></figure>`;
   }).join("");
-  return head({ file, lang: "en", title, description, image: "hero-forest.webp", alternateDe: BASE, alternateEn: BASE + "en/", schema: [{ "@context": "https://schema.org", "@type": "WebPage", name: title, url: BASE + "en/", description }, { "@context": "https://schema.org", "@type": "Organization", name: "MODUNERA", url: BASE, telephone: PHONE_DISPLAY, logo: BASE + "assets/brand/modunera-master-logo-mountain-v1-600.png", areaServed: ["DE", "NL", "DK", "LU", "CH"] }] }) + nav(root, "en") +
+  return head({ file, lang: "en", title, description, image: "hero-forest.webp", alternateDe: BASE, alternateEn: BASE + "en/", schema: [{ "@context": "https://schema.org", "@type": "WebPage", name: title, url: BASE + "en/", description }, { "@context": "https://schema.org", "@type": "Organization", name: "MODUNERA", legalName: COMPANY.legal_name, url: BASE, email: COMPANY.email, telephone: PHONE_DISPLAY, taxID: COMPANY.tax_number, address: { "@type": "PostalAddress", streetAddress: COMPANY.address.street, addressLocality: COMPANY.address.district, addressRegion: COMPANY.address.province, addressCountry: COMPANY.address.country_code }, logo: BASE + "assets/brand/modunera-master-logo-mountain-v1-600.png", areaServed: ["DE", "NL", "DK", "LU", "CH"] }] }) + nav(root, "en") +
     `<main id="main"><header class="hero"><div class="hero-media"></div><div class="hero-grain"></div><div class="container hero-content"><div class="hero-panel"><div class="hero-kicker">${esc(H.eyebrow)}</div><h1>${esc(H.h1)}</h1><p>${esc(H.sub)}</p>` +
     `<div class="hero-actions"><a class="btn btn-primary" href="${proposal}">${esc(H.cta_primary)}</a><a class="btn btn-outline" href="solutions/">${esc(H.cta_secondary)}</a></div>` +
     `<div class="hero-proof"><span>1 to 100+ units</span><span>MD 1–MD 8 collection</span><span>Europe · selected African markets</span></div><p class="legal-note" style="margin-top:14px">${esc(B2B_HOME.scope_qualifier)}</p></div></div></header>` +

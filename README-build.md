@@ -24,6 +24,7 @@ node tools/build-image-attrs.mjs          # intrinsic size, lazy loading, deferr
 node tools/build-nordic-redirects.mjs     # 301s for the corrected Danish slugs
 node tools/build-title-lengths.mjs        # shortens the boilerplate suffix where the title already says it
 node tools/build-privacy.mjs              # privacy notice, DE and EN, from data/privacy.json
+node tools/build-impressum.mjs            # the Impressum, from data/company.json
 node tools/build-budget-bands.mjs         # enquiry budget bands, derived from pricing
 node tools/build-location-enquiry.mjs     # enquiry form on the pages that carry the traffic
 node tools/build-about-topic.mjs          # `about` names a topic, not a Product (GSC product-snippet error)
@@ -182,6 +183,7 @@ built out.
 | Country copy, permits, regions | `COUNTRIES` in `tools/build-modunera-europe.mjs` |
 | Location data | `data/europe-locations-source.json` |
 | Operator pages (`/gewerblich/`, `/en/commercial/`, six segments) | `data/commercial.json` |
+| Legal entity: Impressum, privacy controller, Organization schema | `data/company.json` |
 | The B2B layer: English home, `/en/solutions/*`, `/en/how-we-work/`, `/en/concepts/*`, `/en/europe/`, `/en/africa/`, the proposal form | `data/b2b.json` (EN), `data/b2b-de.json` (DE: `/loesungen/`, `/so-arbeiten-wir/`, `/konzepte/`, `/europa-projekte/`, `/afrika/`, `/projektanfrage-b2b/`) |
 | Tourism regions (`/regionen/`, `/en/regions/`, ten landscapes) | `data/tourism-regions.json` |
 | The daily practice series queue | `data/blog-daily-*.json` |

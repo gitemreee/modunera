@@ -75,6 +75,13 @@ async function put(rel, html) {
 }
 
 const copy = JSON.parse(await readFile(join(ROOT, "data/privacy.json"), "utf8"));
+/* The controller, from data/company.json (added 2026-10-20), as the first
+   section in both languages. It lives in the company file rather than here so
+   the Impressum and this notice cannot name two different entities. */
+const COMPANY = JSON.parse(await readFile(join(ROOT, "data/company.json"), "utf8"));
+const A = COMPANY.address;
+copy.de.sections.unshift({ h2: "Verantwortlicher", p: [`${COMPANY.legal_name}, ${A.street}, ${A.district} / ${A.province}, ${A.country.de}. E-Mail: ${COMPANY.email}, Telefon: ${COMPANY.phone}. Weitere Angaben im Impressum.`] });
+copy.en.sections.unshift({ h2: "Controller", p: [`${COMPANY.legal_name}, ${A.street}, ${A.district} / ${A.province}, ${A.country.en}. E-mail: ${COMPANY.email}, telephone: ${COMPANY.phone}. Further details in the legal notice.`] });
 const report = {};
 
 const de = await readFile(join(ROOT, DE_PAGE), "utf8");
