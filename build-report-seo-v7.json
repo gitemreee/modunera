@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-19T10:44:46.420Z",
-  "html_pages_seen": 15205,
-  "indexable_canonical_pages": 2228,
+  "generated_at": "2026-10-20T09:39:08.799Z",
+  "html_pages_seen": 15206,
+  "indexable_canonical_pages": 2229,
   "approved_location_routes": 1561,
   "excluded_location_pages": 12966,
   "excluded_non_market_pages": 2,
@@ -10,7 +10,7 @@
   "sitemap_files": [
     "sitemap-0001.xml"
   ],
-  "sitemap_urls": 2228,
-  "pages_with_images": 2228,
-  "pages_with_explicit_lastmod": 553
+  "sitemap_urls": 2229,
+  "pages_with_images": 2229,
+  "pages_with_explicit_lastmod": 554
 }
