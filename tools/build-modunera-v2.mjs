@@ -115,22 +115,52 @@ const B2B_HUB = {
 const B2B = B2B_DATA.en;
 const proposalPath = (lang) => `${B2B_DATA[lang].proposal.slug}/`;
 
+/* The procurement layer (2026-10-22): product families, industries, company
+   pages, procurement FAQ, quick enquiry, French Africa hub. English only, except
+   fr_africa. See the _comment in data/b2b-catalog.json for the honesty rules. */
+const CAT = JSON.parse(await readFile(join(ROOT, "data/b2b-catalog.json"), "utf8"));
+const COMPANY_DATA = JSON.parse(await readFile(join(ROOT, "data/company.json"), "utf8"));
+const INDUSTRIES_HUB = "en/industries/";
+/* The solution options both enquiry forms share, tagged with the family code a
+   family page passes as ?family=, so the form arrives preselected. */
+const FAMILY_OPTION = { "Workforce camp": "MOD-WC", "Prefabricated houses": "MOD-PH", "Flat-pack modules": "MOD-FP", "Modular offices": "MOD-OF", "Education building": "MOD-ED", "Healthcare facility building": "MOD-HC", "Resort or hospitality": "MOD-HO" };
+
 const b2bMenu = (lang = "en") => {
   const D = B2B_DATA[lang], H = B2B_HUB[lang], de = lang === "de";
+  if (!de) return [
+    { label: "Modular solutions", cols: [
+      ["Solution families", [
+        [H.solutions, "All solutions", "Hospitality, housing, facilities"],
+        ...D.solutions.map((s) => [`${s.slug}/`, s.menu[0], s.menu[1]]),
+      ]],
+      ["Building types", CAT.families.map((f) => [`${f.slug}/`, f.menu[0], f.menu[1]])],
+      ["Projects and company", [
+        [H.concepts, "Project concepts", "Planning studies, clearly labelled"],
+        [H.work, "How we work", "Eight stages from brief to handover"],
+        [`${CAT.capability.slug}/`, "Company and capability", "Verified facts, documents, status"],
+        [`${CAT.export_logistics.slug}/`, "Export and logistics", "From Türkiye to your site"],
+        [`${CAT.procurement_faq.slug}/`, "Procurement FAQ", "Supply models, terms, limits"],
+      ]],
+    ]},
+    { label: "Industries & markets", cols: [
+      ["Industries", CAT.industries.map((i) => [`${i.slug}/`, i.menu[0], i.menu[1]])],
+      ["Markets", [
+        [`${D.regions.africa.slug}/`, "Africa hub", "Projects assessed case by case"],
+        [`${CAT.fr_africa.slug}/`, "Afrique (français)", "Projets modulaires en Afrique"],
+        [`${D.regions.europe.slug}/`, "Europe", "Precision, standards, four seasons"],
+        [H.countries, "Country guidance", "Five European markets"],
+        [proposalPath("en"), "Request a proposal", "Tell us what you plan to build"],
+      ]],
+    ]},
+  ];
   return [
     { label: de ? "Lösungen" : "Solutions", menu: [
       [H.solutions, de ? "Alle Lösungen" : "All solutions", de ? "Hospitality, Wohnen, Einrichtungen" : "Hospitality, housing, facilities"],
       ...D.solutions.map((s) => [`${s.slug}/`, s.menu[0], s.menu[1]]),
       [H.concepts, de ? "Projektkonzepte" : "Project concepts", de ? "Planungsstudien, klar gekennzeichnet" : "Planning studies, clearly labelled"],
       [H.work, de ? "So arbeiten wir" : "How we work", de ? "Acht Schritte vom Briefing zur Übergabe" : "Eight stages from brief to handover"],
-      ...(de ? [[`${D.regions.europe.slug}/`, "Europa", "Präzision, Normen, vier Jahreszeiten"], [`${D.regions.africa.slug}/`, "Afrika", "Für lokale Bedingungen geplant"], [proposalPath("de"), "Projekt anfragen (B2B)", "Was planen Sie zu bauen?"]] : []),
+      [`${D.regions.europe.slug}/`, "Europa", "Präzision, Normen, vier Jahreszeiten"], [`${D.regions.africa.slug}/`, "Afrika", "Für lokale Bedingungen geplant"], [proposalPath("de"), "Projekt anfragen (B2B)", "Was planen Sie zu bauen?"],
     ]},
-    ...(de ? [] : [{ label: "Europe & Africa", menu: [
-      [`${D.regions.europe.slug}/`, "Europe", "Precision, standards, four seasons"],
-      [`${D.regions.africa.slug}/`, "Africa", "Designed for local conditions"],
-      [H.countries, "Country guidance", "Five markets with their own pages"],
-      [proposalPath("en"), "Request a proposal", "Tell us what you plan to build"],
-    ]}]),
   ];
 };
 
@@ -901,8 +931,8 @@ const b2bHead = (lang, file, title, description, trail, faq) =>
 const crumbs = (root, trail, lang) => `<div class="breadcrumbs">${trail.map(([n, u], i) => i === trail.length - 1 ? esc(n) : `<a href="${root}${u || (lang === "de" ? "index.html" : "en/")}">${esc(n)}</a>`).join(" · ")}</div>`;
 const pageHero = (root, trail, lang, eyebrow, h1, lead) =>
   `<header class="page-hero"><div class="container">${crumbs(root, trail, lang)}<div class="eyebrow">${esc(eyebrow)}</div><h1>${esc(h1)}</h1><p>${esc(lead)}</p></div></header>`;
-const photoHero = (root, trail, lang, kicker, h1, lead, photoName, ctas) => {
-  const photo = sitePhoto(photoName, lang, h1);
+const photoHero = (root, trail, lang, kicker, h1, lead, photoName, ctas, alt) => {
+  const photo = sitePhoto(photoName, alt ? "en" : lang, alt ?? h1);
   return `<header class="location-hero"><img src="${root}${photo.src}" width="${photo.w}" height="${photo.h}" alt="${esc(photo.alt)}"><div class="location-hero-overlay"></div><div class="container location-hero-content">${crumbs(root, trail, lang)}<span class="hero-kicker">${esc(kicker)}</span><h1>${esc(h1)}</h1><p>${esc(lead)}</p><div class="hero-actions">${ctas}</div></div></header>`;
 };
 const exclusionsTable = (lang) => { const t = UI[lang];
@@ -946,6 +976,8 @@ function solutionsHubPage(lang) {
   return b2bHead(lang, file, h.title, h.description, trail) + chrome(root, lang) +
     `<main id="main">${pageHero(root, trail, lang, t.solutions, h.h1, h.lead)}` +
     `<section class="section"><div class="container"><div class="state-grid">${cards}</div><div class="answer-box"><strong>${t.scope}</strong><p>${esc(D.scope_qualifier)}</p></div></div></section>` +
+    (lang === "en" ? `<section class="section section-soft"><div class="container">${sectionHead("Building types", "Six building types for project buyers", "Each is a project-specific concept with its own technical outline, scope and RFQ path — not a certified catalogue product.")}<div class="state-grid">${familyCards(root)}</div></div></section>` +
+      `<section class="section"><div class="container">${sectionHead("Industries", "Planned by the buyer's industry")}<div class="journey-grid">${industryCards(root)}</div></div></section>` : "") +
     `<section class="section section-soft"><div class="container"><div class="section-header"><div><div class="eyebrow">${t.sectors}</div><h2>${esc(h.sectors_h2)}</h2></div></div><div class="journey-grid">${sectors}</div></div></section>` +
     `<section class="section"><div class="container"><div class="section-header"><div><div class="eyebrow">${t.studies}</div><h2>${esc(D.concepts_hub.h1)}</h2></div><p>${esc(D.home.concepts_note)}</p></div><div class="state-grid">${concepts}</div></div></section>` +
     ctaBand(root, lang, D.home.final_h2, D.home.final_p) + `</main>` + footer(root, lang);
@@ -965,6 +997,7 @@ function solutionPage(lang, s) {
     `<section class="section"><div class="container"><div class="section-header"><div><div class="eyebrow">${t.whoFor}</div><h2>${t.whoForH2}</h2></div></div><ul class="check-list">${li(s.who_for)}</ul>` +
     `<p class="legal-note">${t.types}: ${esc(s.sub_products.join(" · "))}.</p></div></section>` +
     `<section class="section section-soft"><div class="container"><div class="section-header"><div><div class="eyebrow">${t.planSupply}</div><h2>${t.planSupplyH2}</h2></div></div><ul class="check-list">${li(s.help)}</ul></div></section>` +
+    (lang === "en" && CAT.families.some((f) => f.parent === s.id) ? `<section class="section"><div class="container">${sectionHead("Building types", "Building types in this family", "Each has its own page with a technical outline, site readiness, scope and an RFQ path.")}<div class="state-grid">${familyCards(root, CAT.families.filter((f) => f.parent === s.id).map((f) => f.id))}</div></div></section>` : "") +
     `<section class="section"><div class="container"><div class="section-header"><div><div class="eyebrow">${t.configs}</div><h2>${t.configsH2}</h2></div><p>${t.configsP}</p></div>` +
     `<div class="compare"><table><thead><tr><th>${t.scale}</th><th>${t.composition}</th><th>${t.status}</th></tr></thead><tbody>${configs}</tbody></table></div></div></section>` +
     `<section class="section section-soft"><div class="container"><div class="section-header"><div><div class="eyebrow">${t.readiness}</div><h2>${t.readinessH2}</h2></div></div><ul class="check-list">${li(s.site_readiness)}</ul>` +
@@ -1045,7 +1078,24 @@ function africaPage(lang) {
     `<section class="section section-soft"><div class="container"><div class="section-header"><div><div class="eyebrow">${t.design}</div><h2>${esc(r.axes_h2)}</h2></div><p>${t.axesP}</p></div><div class="process-grid">${axes}</div></div></section>` +
     `<section class="section"><div class="container"><div class="section-header"><div><div class="eyebrow">${t.logistics}</div><h2>${esc(r.logistics_h2)}</h2></div></div><ul class="check-list">${li(r.logistics)}</ul>` +
     `<h3>${esc(r.checks_h2)}</h3><ul class="check-list">${li(r.checks)}</ul>${exclusionsTable(lang)}</div></section>` +
+    (lang === "en" ? africaExtrasEn(root) : "") +
     ctaBand(root, lang, t.planningAfrica, D.home.brief_p) + `</main>` + footer(root, lang);
+}
+
+/* The English hub's procurement sections (data/b2b-catalog.json en_africa):
+   segment routing to the family pages, illustrative scales, procurement models,
+   the responsibility matrix from the export page, the quick enquiry and the
+   link to the French hub. */
+function africaExtrasEn(root) {
+  const x = CAT.en_africa, e = CAT.export_logistics;
+  const scales = x.scales.map(([a, b]) => `<tr><td>${esc(a)}</td><td>${esc(b)}</td><td>Illustrative</td></tr>`).join("");
+  const chain = e.chain.map(([a, b, c]) => `<tr><td><strong>${esc(a)}</strong></td><td>${esc(b)}</td><td>${esc(c)}</td></tr>`).join("");
+  return `<section class="section section-soft"><div class="container">${sectionHead("Segments", x.segments_h2)}<div class="state-grid">${familyCards(root, x.segments)}</div></div></section>` +
+    `<section class="section"><div class="container">${sectionHead("Scale", x.scales_h2, x.scales_note)}<div class="compare"><table><thead><tr><th>Scale</th><th>Composition</th><th>Status</th></tr></thead><tbody>${scales}</tbody></table></div></div></section>` +
+    `<section class="section section-soft"><div class="container">${sectionHead("Shipping", e.h1, CAT.incoterms)}<div class="compare"><table><thead><tr><th>Leg</th><th>What happens</th><th>Usually responsible</th></tr></thead><tbody>${chain}</tbody></table></div><p class="legal-note"><a href="${root}${e.slug}/">Export and logistics in detail →</a></p></div></section>` +
+    `<section class="section"><div class="container">${sectionHead("Procurement", x.models_h2)}<div class="process-grid">${x.models.map(([a, b]) => `<div><h3>${esc(a)}</h3><p>${esc(b)}</p></div>`).join("")}</div>` +
+    `<div class="answer-box"><strong>Trust centre</strong><p>Company registration, document status and how quality is checked: <a href="${root}${CAT.capability.slug}/">Company and capability</a>. Procurement questions: <a href="${root}${CAT.procurement_faq.slug}/">Procurement FAQ</a>. <a href="${root}${CAT.fr_africa.slug}/" hreflang="fr" lang="fr">${esc(x.fr_link)}</a>.</p></div></div></section>` +
+    `<section class="section section-soft"><div class="container">${quickForm(root, `${B2B_DATA.en.regions.africa.slug}/`)}<div class="hero-actions">${waCta("Hello Modunera, I am planning a modular project in __ (country): type __, approximately __ people or units, target date __.", "Discuss a project in Africa on WhatsApp")}</div></div></section>`;
 }
 
 function proposalPage(lang) {
@@ -1054,7 +1104,9 @@ function proposalPage(lang) {
   const field = ([label, name, type, required, extra]) => {
     const req = required ? " required" : "", id = `f-${name}`;
     let input;
-    if (type === "select") input = `<select id="${id}" name="${name}"${req}><option value="">${t.choose}</option>${extra.map((o) => `<option>${esc(o)}</option>`).join("")}</select>`;
+    // an option a family page can preselect through ?family=MOD-xx
+    const famAttr = (o) => (FAMILY_OPTION[o] ? ` data-family="${FAMILY_OPTION[o]}"` : "");
+    if (type === "select") input = `<select id="${id}" name="${name}"${req}><option value="">${t.choose}</option>${extra.map((o) => `<option${name === "solution" ? famAttr(o) : ""}>${esc(o)}</option>`).join("")}</select>`;
     else if (type === "textarea") input = `<textarea id="${id}" name="${name}" rows="3"${req}></textarea>`;
     else input = `<input id="${id}" name="${name}" type="${type}"${req}${extra ? ` placeholder="${esc(extra)}"` : ""}>`;
     return `<div class="field${type === "textarea" ? " full" : ""}"><label for="${id}">${esc(label)}${required ? " *" : ""}</label>${input}</div>`;
@@ -1064,20 +1116,231 @@ function proposalPage(lang) {
   const last = `<fieldset><legend>${t.step} ${p.steps.length + 1} · ${t.review}</legend><p>${t.reviewP}</p>` +
     `<label class="consent-row"><input type="checkbox" name="privacy_consent" value="yes" required><span>${p.consent}</span></label>` +
     `<label class="consent-row"><input type="checkbox" name="marketing_consent" value="yes"><span>${esc(p.marketing_consent)}</span></label>` +
-    `<input type="hidden" name="locale" value="${lang}"><input type="hidden" name="source_path" value="/${p.slug}/"><input type="hidden" name="privacy_version" value="${D.updated}">` +
+    `<input type="hidden" name="enquiry_type" value="full"><input type="hidden" name="locale" value="${lang}"><input type="hidden" name="source_path" value="/${p.slug}/"><input type="hidden" name="privacy_version" value="${D.updated}">${rfqHidden()}` +
     `<div class="step-nav"><button type="button" class="btn btn-outline" data-step="prev">${t.back}</button><button class="btn btn-primary">${esc(p.submit)}</button></div><p class="legal-note">${esc(p.upload_note)}</p></fieldset>`;
   const indicator = `<ol class="step-indicator" aria-hidden="true">${"<li></li>".repeat(p.steps.length + 1)}</ol>`;
   /* Both languages post to the same Netlify form, project-proposal: the field
      names are identical and the locale field says which page sent it. */
   return b2bHead(lang, file, p.title, p.description, trail) + chrome(root, lang) +
     `<main id="main">${pageHero(root, trail, lang, t.proposal, p.h1, p.lead)}` +
-    `<section class="section"><div class="container">` +
-    `<form class="editorial-copy form-steps" data-lead-form data-steps data-no-whatsapp name="${p.form_name}" method="POST" data-netlify="true" netlify-honeypot="bot-field">` +
+    `<section class="section" id="brief"><div class="container">` +
+    (lang === "en" ? `<p class="legal-note"><a href="#quick">Short on time? Send a quick enquiry instead — seven fields, about a minute.</a></p>` : "") +
+    `<div class="rfq-full"><form class="editorial-copy form-steps" data-lead-form data-steps data-no-whatsapp data-rfq="full" name="${p.form_name}" method="POST" data-netlify="true" netlify-honeypot="bot-field">` +
     `<input type="hidden" name="form-name" value="${p.form_name}"><p hidden><label>${t.leaveEmpty} <input name="bot-field"></label></p>${indicator}${steps}${last}</form>` +
-    `<div class="form-done" role="status"><strong>${t.received}</strong><p>${esc(p.after)}</p></div>` +
+    `<div class="form-done" role="status"><strong>${lang === "en" ? "Your project enquiry has been received." : t.received}</strong><p>${esc(p.after)}</p><p>${lang === "en" ? "Reference" : "Referenz"}: <strong data-ref></strong></p></div>` +
+    `<div class="form-error" role="alert" hidden><strong>${lang === "en" ? "The request could not be sent." : "Die Anfrage konnte nicht gesendet werden."}</strong><p>${lang === "en" ? "Nothing was saved. Please try again, or write to" : "Es wurde nichts gespeichert. Bitte erneut versuchen oder schreiben an"} <a href="mailto:${COMPANY_DATA.email}">${COMPANY_DATA.email}</a>.</p></div></div>` +
     `<div class="answer-box"><strong>${esc(p.alt_h2)}</strong><p>${esc(p.alt_p)}</p></div></div></section>` +
+    (lang === "en" ? `<section class="section section-soft"><div class="container">${quickForm(root, `${p.slug}/`)}</div></section>` : "") +
     `<section class="section section-soft"><div class="container"><div class="section-header"><div><div class="eyebrow">${t.beforeSend}</div><h2>${t.exclusionsH2}</h2></div><p>${t.beforeSendP}</p></div>${exclusionsTable(lang)}</div></section>` +
     `</main>` + footer(root, lang);
+}
+
+/* --- Procurement layer: families, industries, company, FAQ, quick enquiry ---
+   From data/b2b-catalog.json. Every family page is a pre-qualification page: a
+   use, who it suits, a technical table where each row says whether the value
+   is a published MODUNERA reference or set per project, the system comparison,
+   the process, site readiness, scope and exclusions, FAQ and an RFQ link that
+   carries the family code into the form. Hero photographs are real MODUNERA
+   units and their alt text says they are not the building type on the page. */
+const familyById = Object.fromEntries(CAT.families.map((f) => [f.id, f]));
+const industryById = Object.fromEntries(CAT.industries.map((i) => [i.id, i]));
+const liList = (xs) => xs.map((x) => `<li>${esc(x)}</li>`).join("");
+const sectionHead = (eyebrow, h2, p) => `<div class="section-header"><div><div class="eyebrow">${esc(eyebrow)}</div><h2>${esc(h2)}</h2></div>${p ? `<p>${esc(p)}</p>` : ""}</div>`;
+const rfqHref = (root, family) => `${root}${proposalPath("en")}${family ? `?family=${family}` : ""}#brief`;
+const rfqCta = (root, label, family, cls = "btn btn-primary") => `<a class="${cls}" data-cta="rfq" href="${rfqHref(root, family)}">${esc(label)}</a>`;
+const waCta = (msg, label = "WhatsApp project enquiry", cls = "btn btn-outline") => `<a class="${cls}" data-cta="whatsapp-project" href="${waLink(msg)}" target="_blank" rel="noopener">${esc(label)}</a>`;
+const realPhotoAlt = (what) => `A MODUNERA unit — real photograph, not a ${what}`;
+const statusConcept = () => `<span class="status-badge">${esc(CAT.status_label)}</span>`;
+
+const techTable = (f) => `<div class="compare"><table><thead><tr><th>Parameter</th><th>Value</th><th>Basis</th></tr></thead><tbody>${f.tech.map(([a, b, basis]) => `<tr><td>${esc(a)}</td><td>${esc(b)}</td><td><span class="basis basis-${basis}">${esc(CAT.basis[basis])}</span></td></tr>`).join("")}</tbody></table></div>`;
+const systemsTable = () => `<div class="compare"><table><thead><tr><th>System</th><th>Suits</th><th>Limits</th></tr></thead><tbody>${CAT.systems.rows.map(([a, b, c]) => `<tr><td><strong>${esc(a)}</strong></td><td>${esc(b)}</td><td>${esc(c)}</td></tr>`).join("")}</tbody></table></div>`;
+const processSteps = () => `<ol class="process-steps">${CAT.process.steps.map(([h, p]) => `<li><strong>${esc(h)}</strong><span>${esc(p)}</span></li>`).join("")}</ol>`;
+const familyCards = (root, ids) => (ids ? ids.map((id) => familyById[id]) : CAT.families).map((f) => `<a class="state-card" href="${root}${f.slug}/"><span>${esc(f.code)} · ${esc(f.menu[1])}</span><h3>${esc(f.menu[0])}</h3><p>${esc(f.lead.split(". ")[0])}.</p></a>`).join("");
+const industryCards = (root, ids) => (ids ? ids.map((id) => industryById[id]) : CAT.industries).map((i) => `<a class="journey-card" href="${root}${i.slug}/"><div><h3>${esc(i.menu[0])}</h3><p>${esc(i.menu[1])}</p></div><span class="arrow">↗</span></a>`).join("");
+const enHead = (file, title, description, trail, faq, alternates = {}) =>
+  head({ file, lang: "en", title, description, ...alternates, schema: b2bSchema("en", file, title, description, trail, faq) });
+
+/* The quick enquiry: seven fields, its own Netlify form (quick-enquiry), the
+   same field names as the full brief so both land in one data model
+   (docs/rfq-data-model.md). The hidden fields are filled by assets/js/main.js:
+   reference code, UTM parameters, landing page, product family. */
+const RFQ_HIDDEN = ["ref", "utm_source", "utm_medium", "utm_campaign", "utm_content", "landing_page", "product_family"];
+const rfqHidden = () => RFQ_HIDDEN.map((n) => `<input type="hidden" name="${n}" value="">`).join("");
+function quickForm(root, sourcePath, family = "") {
+  const q = CAT.quick, t = UI.en;
+  const field = ([label, name, type, required, extra]) => {
+    const req = required ? " required" : "", id = `q-${name}`;
+    let input;
+    if (type === "select") input = `<select id="${id}" name="${name}"${req}><option value="">${t.choose}</option>${extra.map((o) => `<option${FAMILY_OPTION[o] ? ` data-family="${FAMILY_OPTION[o]}"` : ""}>${esc(o)}</option>`).join("")}</select>`;
+    else if (type === "textarea") input = `<textarea id="${id}" name="${name}" rows="3"${req}></textarea>`;
+    else input = `<input id="${id}" name="${name}" type="${type}"${req}${type === "email" ? ' autocomplete="email"' : ""}${extra ? ` placeholder="${esc(extra)}"` : ""}>`;
+    return `<div class="field${type === "textarea" ? " full" : ""}"><label for="${id}">${esc(label)}${required ? " *" : ""}</label>${input}</div>`;
+  };
+  const P = B2B_DATA.en.proposal;
+  return `<div class="rfq-box" id="quick"><h2>${esc(q.h2)}</h2><p>${esc(q.p)}</p>` +
+    `<form class="form-steps" data-lead-form data-no-whatsapp data-rfq="quick" name="${q.form_name}" method="POST" data-netlify="true" netlify-honeypot="bot-field">` +
+    `<input type="hidden" name="form-name" value="${q.form_name}"><p hidden><label>${t.leaveEmpty} <input name="bot-field"></label></p>` +
+    `<div class="form-grid">${q.fields.map(field).join("")}</div>` +
+    `<label class="consent-row"><input type="checkbox" name="privacy_consent" value="yes" required><span>${P.consent.replace('href="../legal/privacy/"', `href="${root}en/legal/privacy/"`)}</span></label>` +
+    `<label class="consent-row"><input type="checkbox" name="marketing_consent" value="yes"><span>${esc(P.marketing_consent)}</span></label>` +
+    `<input type="hidden" name="enquiry_type" value="quick"><input type="hidden" name="locale" value="en"><input type="hidden" name="source_path" value="/${sourcePath}"><input type="hidden" name="privacy_version" value="${B2B_DATA.en.updated}">${rfqHidden().replace('name="product_family" value=""', `name="product_family" value="${esc(family)}"`)}` +
+    `<div class="step-nav"><a href="${root}${proposalPath("en")}#brief">${esc(q.full_link)}</a><button class="btn btn-primary">${esc(q.submit)}</button></div></form>` +
+    `<div class="form-done" role="status"><strong>Your project enquiry has been received.</strong><p>Our team will review the details and identify the appropriate next technical and commercial discussion. Please keep your reference number for follow-up: <strong data-ref></strong></p></div>` +
+    `<div class="form-error" role="alert" hidden><strong>The enquiry could not be sent.</strong><p>Nothing was saved. Please try again, or write to <a href="mailto:emre@modunera.com">emre@modunera.com</a>.</p></div></div>`;
+}
+
+function familyPage(f) {
+  const D = B2B_DATA.en, t = UI.en, file = `${f.slug}/index.html`, root = rootFor(file);
+  const trail = [homeCrumb("en"), [t.solutions, B2B_HUB.en.solutions], [f.menu[0], `${f.slug}/`]];
+  const parent = D.solutions.find((s) => s.id === f.parent);
+  const ctas = `${rfqCta(root, f.cta, f.code)}${rfqCta(root, "Discuss my project", f.code, "btn btn-light")}`;
+  const configs = f.configurations.map(([a, b, c]) => `<tr><td>${esc(a)}</td><td>${esc(b)}</td><td>${esc(c)}</td></tr>`).join("");
+  const others = CAT.families.filter((o) => o.id !== f.id).slice(0, 5);
+  return enHead(file, f.title, f.description, trail, f.faq) + chrome(root, "en") +
+    `<main id="main">${photoHero(root, trail, "en", `MODUNERA · ${f.code} · ${f.menu[0]}`, f.h1, f.lead, f.photo, ctas, realPhotoAlt(f.menu[0].toLowerCase()))}` +
+    `<section class="section section-tight"><div class="container">${statusConcept()}<div class="answer-box"><strong>${t.scope}</strong><p>${esc(D.scope_qualifier)} The code ${esc(f.code)} is a catalogue reference for enquiries, not a product approval.</p></div></div></section>` +
+    `<section class="section"><div class="container">${sectionHead(t.whoFor, t.whoForH2)}<ul class="check-list">${liList(f.who_for)}</ul><h3>Typical use cases</h3><ul class="check-list">${liList(f.use_cases)}</ul></div></section>` +
+    `<section class="section section-soft"><div class="container">${sectionHead("Technical outline", "What is fixed and what is set per project", "A row marked MODUNERA reference is a published figure of MODUNERA's units. Every other value is set by engineering for the project and confirmed in the technical offer.")}${techTable(f)}</div></section>` +
+    `<section class="section"><div class="container">${sectionHead("Systems", CAT.systems.h2, CAT.systems.p)}${systemsTable()}</div></section>` +
+    `<section class="section section-soft"><div class="container">${sectionHead(t.configs, t.configsH2, t.configsP)}<div class="compare"><table><thead><tr><th>${t.scale}</th><th>${t.composition}</th><th>${t.status}</th></tr></thead><tbody>${configs}</tbody></table></div>` +
+    `<h3>What we need from you</h3><ul class="check-list">${liList(f.inputs)}</ul></div></section>` +
+    `<section class="section"><div class="container">${sectionHead("Process", CAT.process.h2, CAT.incoterms)}${processSteps()}</div></section>` +
+    `<section class="section section-soft"><div class="container">${sectionHead(t.readiness, t.readinessH2)}<ul class="check-list">${liList(f.site_readiness)}</ul><div class="answer-box"><strong>Country rules</strong><p>${esc(f.country_notes)}</p></div></div></section>` +
+    `<section class="section"><div class="container">${sectionHead(t.exclusions, t.exclusionsH2, t.exclusionsP)}${exclusionsTable("en")}<p class="legal-note">No datasheet is published for this family yet; technical information is supplied with the offer.</p></div></section>` +
+    `<section class="section section-soft"><div class="container">${sectionHead(t.faq, t.faqH2)}<div class="faq-list">${faqMarkup(f.faq)}</div></div></section>` +
+    `<section class="section"><div class="container">${quickForm(root, `${f.slug}/`, f.code)}<div class="hero-actions">${waCta(f.wa)}</div></div></section>` +
+    `<section class="section section-soft"><div class="container">${sectionHead("Related", "Industries and other building types")}<div class="journey-grid">${industryCards(root, f.industries)}</div>` +
+    `<div class="state-grid">${parent ? `<a class="state-card" href="${root}${parent.slug}/"><span>Solution family</span><h3>${esc(parent.menu[0])}</h3></a>` : ""}${familyCards(root, others.map((o) => o.id))}</div></div></section>` +
+    `</main>` + footer(root, "en");
+}
+
+function industryPage(i) {
+  const t = UI.en, file = `${i.slug}/index.html`, root = rootFor(file);
+  const trail = [homeCrumb("en"), ["Industries", INDUSTRIES_HUB], [i.menu[0], `${i.slug}/`]];
+  const ctas = `${rfqCta(root, i.cta, "")}<a class="btn btn-light" href="${root}${B2B_HUB.en.solutions}">Explore modular solutions</a>`;
+  return enHead(file, i.title, i.description, trail, i.faq) + chrome(root, "en") +
+    `<main id="main">${photoHero(root, trail, "en", `MODUNERA · Industries · ${i.menu[0]}`, i.h1, i.lead, i.photo, ctas, realPhotoAlt(`${i.menu[0].toLowerCase()} project`))}` +
+    `<section class="section"><div class="container"><div class="lifecycle industry-flow">` +
+    `<div><h3>The buyer's problem</h3><ul class="check-list">${liList(i.problems)}</ul></div>` +
+    `<div><h3>A modular approach</h3><ul class="check-list">${liList(i.approach)}</ul></div>` +
+    `<div><h3>Project inputs we need</h3><ul class="check-list">${liList(i.inputs)}</ul></div>` +
+    `</div><div class="answer-box"><strong>Limits</strong><p>${esc(i.caution)}</p></div></div></section>` +
+    `<section class="section section-soft"><div class="container">${sectionHead("Building types", "Relevant building types")}<div class="state-grid">${familyCards(root, i.families)}</div></div></section>` +
+    `<section class="section"><div class="container">${sectionHead("Process", CAT.process.h2, CAT.incoterms)}${processSteps()}</div></section>` +
+    `<section class="section section-soft"><div class="container">${sectionHead(t.faq, t.faqH2)}<div class="faq-list">${faqMarkup(i.faq)}</div></div></section>` +
+    `<section class="section"><div class="container">${quickForm(root, `${i.slug}/`)}</div></section>` +
+    `<section class="section section-soft"><div class="container">${sectionHead("Other industries", "Also planned this way")}<div class="journey-grid">${industryCards(root, CAT.industries.filter((o) => o.id !== i.id).map((o) => o.id))}</div></div></section>` +
+    `</main>` + footer(root, "en");
+}
+
+function industriesHubPage() {
+  const file = `${INDUSTRIES_HUB}index.html`, root = rootFor(file);
+  const trail = [homeCrumb("en"), ["Industries", INDUSTRIES_HUB]];
+  const title = "Modular buildings by industry — mining, EPC, energy, public, hospitality | MODUNERA";
+  const description = "How MODUNERA approaches modular projects by industry: the buyer's problem, a modular approach, the inputs needed and the limits — mining, construction and EPC, energy, public housing and hospitality.";
+  return enHead(file, title, description, trail) + chrome(root, "en") +
+    `<main id="main">${pageHero(root, trail, "en", "Industries", "Modular buildings, by the buyer's industry.", "Each industry page starts from the buyer's problem, proposes a modular approach, lists the inputs needed for a proposal and states the limits.")}` +
+    `<section class="section"><div class="container"><div class="journey-grid">${industryCards(root)}</div><div class="answer-box"><strong>${UI.en.scope}</strong><p>${esc(B2B_DATA.en.scope_qualifier)}</p></div></div></section>` +
+    `<section class="section section-soft"><div class="container">${sectionHead("Building types", "Six building types, each labelled as a project-specific concept")}<div class="state-grid">${familyCards(root)}</div></div></section>` +
+    ctaBand(root, "en", B2B_DATA.en.home.final_h2, B2B_DATA.en.home.final_p) + `</main>` + footer(root, "en");
+}
+
+function capabilityPage() {
+  const c = CAT.capability, file = `${c.slug}/index.html`, root = rootFor(file);
+  const trail = [homeCrumb("en"), ["Company and capability", `${c.slug}/`]];
+  const C = COMPANY_DATA;
+  const facts = [
+    ["Legal name", C.legal_name, "Verified"],
+    ["Registered address", `${C.address.street}, ${C.address.district} / ${C.address.province}, Türkiye`, "Verified"],
+    ["Tax number / office", `${C.tax_number} · ${C.tax_office}`, "Verified"],
+    ["MERSİS number", C.mersis, "Verified"],
+    ["Founded", `${C.history.founded}, ${C.history.founded_place}`, "Owner-stated"],
+    ["First export", `${C.history.first_export.year}, ${C.history.first_export.place}, Germany`, "Owner-stated"],
+    ["Units shipped since 2019", `More than ${C.history.units_shipped_since_2019.replace("+", "")}`, "Owner-stated — evidence on request"],
+    ["Contact", `${C.email} · ${C.phone}`, "Verified"],
+  ];
+  const factRows = facts.map(([a, b, s]) => `<tr><td>${esc(a)}</td><td>${esc(b)}</td><td>${esc(s)}</td></tr>`).join("");
+  const docRows = c.docs.map(([a, b]) => `<tr><td>${esc(a)}</td><td>${esc(b)}</td></tr>`).join("");
+  const ctas = `${rfqCta(root, "Request factory capability information", "")}<a class="btn btn-light" href="${root}legal/impressum/">Imprint</a>`;
+  return enHead(file, c.title, c.description, trail) + chrome(root, "en") +
+    `<main id="main">${photoHero(root, trail, "en", "MODUNERA · Company", c.h1, c.lead, c.photo, ctas, "A MODUNERA unit in the production hall — real photograph")}` +
+    `<section class="section"><div class="container">${sectionHead("Trust centre", c.facts_h2, "Verified means published from the company's registration data. Owner-stated means stated by the company and not yet backed by a document on this site.")}<div class="compare"><table><thead><tr><th>Item</th><th>Value</th><th>Status</th></tr></thead><tbody>${factRows}</tbody></table></div></div></section>` +
+    `<section class="section section-soft"><div class="container">${sectionHead("Documents", c.docs_h2, c.docs_p)}<div class="compare"><table><thead><tr><th>Document</th><th>Status</th></tr></thead><tbody>${docRows}</tbody></table></div></div></section>` +
+    `<section class="section"><div class="container">${sectionHead("Quality", c.process_h2, "Built to MODUNERA's specification in Türkiye. The steps below are how a project is checked; the exact inspection points are fixed in each contract.")}<ul class="check-list">${liList(c.process)}</ul>` +
+    `<div class="answer-box"><strong>${esc(c.tender_h2)}</strong><p>${esc(c.tender_p)}</p></div></div></section>` +
+    `<section class="section section-soft"><div class="container">${sectionHead("Next", "Where to go from here")}<div class="state-grid"><a class="state-card" href="${root}${CAT.export_logistics.slug}/"><span>Logistics</span><h3>Export and logistics</h3></a><a class="state-card" href="${root}${CAT.procurement_faq.slug}/"><span>Procurement</span><h3>Procurement FAQ</h3></a><a class="state-card" href="${root}${B2B_HUB.en.concepts}"><span>Planning studies</span><h3>Project concepts</h3></a></div></div></section>` +
+    `</main>` + footer(root, "en");
+}
+
+function exportLogisticsPage() {
+  const e = CAT.export_logistics, file = `${e.slug}/index.html`, root = rootFor(file);
+  const trail = [homeCrumb("en"), ["Company and capability", `${CAT.capability.slug}/`], ["Export and logistics", `${e.slug}/`]];
+  const rows = e.chain.map(([a, b, c]) => `<tr><td><strong>${esc(a)}</strong></td><td>${esc(b)}</td><td>${esc(c)}</td></tr>`).join("");
+  const ctas = `${rfqCta(root, "Send your project brief", "")}<a class="btn btn-light" href="${root}en/guides/customs-import-turkiye-europe/">Customs and import (Europe)</a>`;
+  return enHead(file, e.title, e.description, trail) + chrome(root, "en") +
+    `<main id="main">${photoHero(root, trail, "en", "MODUNERA · Logistics", e.h1, e.lead, e.photo, ctas, "A MODUNERA unit prepared for export — real photograph")}` +
+    `<section class="section"><div class="container">${sectionHead("Responsibility matrix", e.chain_h2, CAT.incoterms)}<div class="compare"><table><thead><tr><th>Leg</th><th>What happens</th><th>Usually responsible</th></tr></thead><tbody>${rows}</tbody></table></div></div></section>` +
+    `<section class="section section-soft"><div class="container">${sectionHead("Site", e.readiness_h2)}<ul class="check-list">${liList(e.readiness)}</ul><p class="legal-note">${esc(e.export_note)}</p></div></section>` +
+    `<section class="section"><div class="container">${quickForm(root, `${e.slug}/`)}</div></section>` +
+    `</main>` + footer(root, "en");
+}
+
+function procurementFaqPage() {
+  const p = CAT.procurement_faq, file = `${p.slug}/index.html`, root = rootFor(file);
+  const trail = [homeCrumb("en"), ["Procurement FAQ", `${p.slug}/`]];
+  return enHead(file, p.title, p.description, trail, p.faq) + chrome(root, "en") +
+    `<main id="main">${pageHero(root, trail, "en", "Resources · Procurement", p.h1, p.lead)}` +
+    `<section class="section"><div class="container"><div class="faq-list">${faqMarkup(p.faq)}</div></div></section>` +
+    `<section class="section section-soft"><div class="container">${sectionHead(UI.en.exclusions, UI.en.exclusionsH2, UI.en.exclusionsP)}${exclusionsTable("en")}</div></section>` +
+    `<section class="section"><div class="container">${quickForm(root, `${p.slug}/`)}</div></section>` +
+    `</main>` + footer(root, "en");
+}
+
+/* The French Africa hub. Its own head because head() only knows de and en; the
+   nav and footer come from the fr locale. Paired with en/africa/ for hreflang. */
+function frAfricaPage() {
+  const a = CAT.fr_africa, file = `${a.slug}/index.html`, root = rootFor(file);
+  const enUrl = BASE + `${B2B_DATA.en.regions.africa.slug}/`, frUrl = BASE + `${a.slug}/`;
+  const trail = [["MODUNERA", "fr/"], ["Afrique", `${a.slug}/`]];
+  const html = enHead(file, a.title, a.description, trail)
+    .replace('<html lang="en">', '<html lang="fr-FR">')
+    .replace('content="en_GB"', 'content="fr_FR"')
+    .replace(/"inLanguage":"en"/, '"inLanguage":"fr-FR"')
+    .replace(/(<link rel="canonical" href="[^"]+">)/, `$1<link rel="alternate" hreflang="en" href="${enUrl}"><link rel="alternate" hreflang="fr" href="${frUrl}"><link rel="alternate" hreflang="x-default" href="${enUrl}">`);
+  const two = (xs) => xs.map(([h, p]) => `<div><h3>${esc(h)}</h3><p>${esc(p)}</p></div>`).join("");
+  const chain = a.chain.map(([x, y, z]) => `<tr><td><strong>${esc(x)}</strong></td><td>${esc(y)}</td><td>${esc(z)}</td></tr>`).join("");
+  const scales = a.scales.map(([x, y]) => `<tr><td>${esc(x)}</td><td>${esc(y)}</td><td>Illustratif</td></tr>`).join("");
+  const ctas = `<a class="btn btn-primary" data-cta="rfq" href="${root}${proposalPath("en")}?lang=fr#brief">${esc(a.cta)}</a>${waCta(a.wa, a.wa_label, "btn btn-light")}`;
+  return html + chrome(root, "fr") +
+    `<main id="main">${photoHero(root, trail, "fr", "MODUNERA · Afrique", a.h1, a.lead, a.photo, ctas, "")
+      .replace(/alt=""/, 'alt="Une unité MODUNERA en production — photographie réelle, pas un projet en Afrique"')}` +
+    `<section class="section section-tight"><div class="container"><div class="answer-box"><strong>${esc(a.answer_h)}</strong><p>${esc(a.answer)}</p></div><p class="legal-note"><a href="${root}${B2B_DATA.en.regions.africa.slug}/" hreflang="en" lang="en">${esc(a.en_link)}</a></p></div></section>` +
+    `<section class="section"><div class="container">${sectionHead("Segments", a.segments_h2)}<div class="process-grid">${two(a.segments)}</div></div></section>` +
+    `<section class="section section-soft"><div class="container">${sectionHead("Conception", a.climate_h2)}<div class="process-grid">${two(a.climate)}</div></div></section>` +
+    `<section class="section"><div class="container">${sectionHead("Échelles", a.scales_h2, a.scales_note)}<div class="compare"><table><thead><tr><th>Échelle</th><th>Composition</th><th>Statut</th></tr></thead><tbody>${scales}</tbody></table></div></div></section>` +
+    `<section class="section section-soft"><div class="container">${sectionHead("Logistique", a.chain_h2, "Les conditions de livraison (Incoterms) sont fixées dans chaque contrat.")}<div class="compare"><table><thead><tr><th>Étape</th><th>Contenu</th><th>Responsable habituel</th></tr></thead><tbody>${chain}</tbody></table></div></div></section>` +
+    `<section class="section"><div class="container">${sectionHead("Achats", a.models_h2)}<div class="process-grid">${two(a.models)}</div></div></section>` +
+    `<section class="section section-soft"><div class="container">${sectionHead("Marchés", a.markets_h2, a.markets_p)}<p>${a.markets.map(esc).join(" · ")}</p><p class="legal-note">${esc(a.legal_note)}</p></div></section>` +
+    `<section class="section section-dark"><div class="container">${sectionHead("Prochaine étape", a.form_h2, a.form_p)}<div class="hero-actions"><a class="btn btn-sand" data-cta="rfq" href="${root}${proposalPath("en")}?lang=fr#brief">${esc(a.form_cta)}</a>${waCta(a.wa, a.wa_label)}</div></div></section>` +
+    `</main>` + frFooter(root);
+}
+const frFooter = (root) => {
+  const L = LOCALE_DEFS.fr, p = L.paths;
+  return `<footer class="footer"><div class="container"><div class="footer-grid"><div>${brandLockup(root, root + "fr/", "fr")}<p>${esc(L.home.intro)}</p><a href="tel:+905535435342">+90 553 543 5342</a></div>` +
+    `<div><h4>MODUNERA</h4><a href="${root}fr/">Accueil</a><a href="${root}fr/${p.models}/">${esc(L.nav.models)}</a><a href="${root}fr/afrique/">Afrique</a></div>` +
+    `<div><h4>Projets</h4><a href="${root}${B2B_HUB.en.solutions}" hreflang="en">Solutions (EN)</a><a href="${root}${proposalPath("en")}" hreflang="en">Demande de projet (EN)</a></div>` +
+    `<div><h4>Légal</h4><a href="${root}legal/impressum/">Mentions légales</a><a href="${root}legal/datenschutz/">Confidentialité</a></div></div>` +
+    `<div class="footer-bottom"><span>© <span data-year>2026</span> MODUNERA.</span><span>${esc(L.sections.legalNote)}</span></div></div></footer>${whatsappDock("fr")}<script src="${root}assets/js/main.js"></script></body></html>`;
+};
+
+async function buildCatalog() {
+  await put(`${INDUSTRIES_HUB}index.html`, industriesHubPage());
+  for (const f of CAT.families) await put(`${f.slug}/index.html`, familyPage(f));
+  for (const i of CAT.industries) await put(`${i.slug}/index.html`, industryPage(i));
+  await put(`${CAT.capability.slug}/index.html`, capabilityPage());
+  await put(`${CAT.export_logistics.slug}/index.html`, exportLogisticsPage());
+  await put(`${CAT.procurement_faq.slug}/index.html`, procurementFaqPage());
+  await put(`${CAT.fr_africa.slug}/index.html`, frAfricaPage());
 }
 
 async function buildB2B() {
@@ -1991,6 +2254,7 @@ async function main() {
   }
 
   await buildB2B();
+  await buildCatalog();
 
   const posts = await collectGuides();
   const { groups, rest } = groupGuides(posts);

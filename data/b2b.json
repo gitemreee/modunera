@@ -37,8 +37,8 @@
     "title": "Modular homes, resorts and facilities — from single homes to entire communities | MODUNERA",
     "description": "MODUNERA plans and supplies modular homes, hospitality destinations and purpose-built facilities for developers and operators in Europe and selected African markets — and still builds the MD 1–MD 8 tiny-house collection.",
     "eyebrow": "MODUNERA · Modular project developments",
-    "h1": "From individual homes to entire communities.",
-    "sub": "Modular homes, hospitality destinations and purpose-built facilities — designed around your site, your people and your project's scale.",
+    "h1": "Designed spaces. Scalable projects.",
+    "sub": "Premium tiny houses and project-specific modular building solutions manufactured in Türkiye — designed around your site, your people and your project's scale.",
     "cta_primary": "Discuss your project",
     "cta_secondary": "Explore solutions",
     "cta_tertiary": "View the tiny-house collection",
@@ -342,15 +342,16 @@
       "photo": "production-frame-and-finish",
       "title": "Modular projects in Africa — designed for local conditions | MODUNERA",
       "description": "Project-led modular housing and facility concepts for selected African markets: climate-responsive options, off-grid assessment, port-to-site logistics, permitting and local-partner assessment — planned per destination, not promised in general.",
-      "h1": "Modular spaces designed for local conditions.",
-      "lead": "Explore project-led modular housing and facility concepts for selected African markets, with climate-responsive options and destination-specific logistics, permitting and local-partner assessments. Africa is not one market: a coastal site in Ghana, an arid site in Namibia and a highland site in Kenya ask different questions of the same module.",
+      "h1": "Modular building solutions for projects across Africa.",
+      "lead": "Planning workforce camps, prefabricated housing or site facilities? Share your project brief. MODUNERA evaluates feasibility, specification and export logistics for selected destinations on a project-by-project basis. Africa is not one market: a coastal site in Ghana, an arid site in Namibia and a highland site in Kenya ask different questions of the same module.",
       "answer": "MODUNERA assesses project enquiries from selected African markets. There is no delivered MODUNERA project in Africa to show today, and no country is listed as served. What exists is a way of working: the design axes below, a logistics chain from the hall to the site, and a feasibility step that establishes sanctions, export controls, insurance, customs, local permits and partners before any specification.",
       "focus_h2": "Markets under assessment",
       "focus_note": "A working hypothesis for where enquiries are expected, not a list of countries served. Each market is opened only after the feasibility checks below.",
       "focus": [
-        ["North Africa", ["Morocco", "Algeria", "Tunisia", "Egypt"]],
+        ["North Africa", ["Morocco", "Algeria", "Tunisia", "Egypt", "Libya"]],
         ["East Africa", ["Kenya", "Tanzania", "Uganda", "Rwanda"]],
-        ["West Africa", ["Ghana", "Côte d'Ivoire", "Senegal", "Nigeria"]],
+        ["West Africa", ["Ghana", "Côte d'Ivoire", "Senegal", "Nigeria", "Guinea"]],
+        ["Central Africa", ["DR Congo"]],
         ["Southern Africa", ["South Africa", "Namibia", "Botswana"]],
         ["Lusophone markets", ["Angola", "Mozambique"]]
       ],
@@ -391,13 +392,15 @@
       {
         "legend": "Project definition",
         "fields": [
-          ["Solution", "solution", "select", true, ["Resort or hospitality", "Modular homes or residential community", "Workforce camp", "Modular offices", "Education building", "Healthcare facility building", "Other"]],
+          ["Solution", "solution", "select", true, ["Resort or hospitality", "Modular homes or residential community", "Workforce camp", "Prefabricated houses", "Flat-pack modules", "Modular offices", "Education building", "Healthcare facility building", "Other"]],
           ["Site country", "site_country", "text", true, ""],
           ["City or approximate site location", "site_location", "text", false, ""],
           ["Project phase", "project_phase", "select", false, ["Idea", "Land secured", "Design", "Permit", "Funded", "Tender", "Ready to order"]],
           ["Number of units", "units_band", "select", true, ["1–9", "10–19", "20–49", "50–99", "100–199", "200+"]],
           ["Expected occupants, rooms or floor area (where relevant)", "capacity_note", "text", false, ""],
-          ["Is the land secured?", "land_status", "select", false, ["Yes", "No", "Under negotiation"]]
+          ["Is the land secured?", "land_status", "select", false, ["Yes", "No", "Under negotiation"]],
+          ["Temporary or permanent", "use_duration", "select", false, ["Temporary", "Permanent", "Not decided yet"]],
+          ["Approximate floor area (m²)", "floor_area", "text", false, "e.g. 2,400 m² in total"]
         ]
       },
       {
@@ -407,7 +410,9 @@
           ["Target procurement date or delivery window", "procurement_date", "text", false, ""],
           ["Required scope", "scope_requested", "select", false, ["Supply only", "Supply and transport", "Installation partnership", "Turnkey feasibility study"]],
           ["Project financing", "funding_stage", "select", false, ["Confirmed", "In progress", "Exploring", "Confidential"]],
-          ["Procurement model", "procurement_model", "select", false, ["Private project", "Public tender", "EPC subcontract", "Partnership"]]
+          ["Procurement model", "procurement_model", "select", false, ["Private project", "Public tender", "EPC subcontract", "Partnership"]],
+          ["Currency", "currency", "select", false, ["EUR", "USD", "GBP", "Other"]],
+          ["Target delivery period", "delivery_window", "text", false, "e.g. Q3 2027"]
         ]
       },
       {
@@ -417,6 +422,8 @@
           ["Utilities and off-grid requirements", "utilities_note", "textarea", false, ""],
           ["Site access and logistics notes", "access_note", "textarea", false, ""],
           ["Do you have drawings or a design?", "drawings", "select", false, ["No", "Sketch or brief", "Architectural drawings", "Permit documents"]],
+          ["Power and water", "offgrid", "select", false, ["Grid connection available", "Off-grid or solar needed", "Not known yet"]],
+          ["Installation scope", "installation_scope", "select", false, ["Supply only", "Supervision of installation", "Installation by MODUNERA", "Not decided yet"]],
           ["Describe the project", "message", "textarea", false, ""]
         ]
       }

@@ -2118,4 +2118,38 @@ body.scrolled.scroll-up .brand-claim{opacity:1; max-width:24ch}
 .form-done.is-visible{display:block}
 @media(max-width:920px){.lifecycle,.scale-strip,.tier-list{grid-template-columns:repeat(2,1fr)}.scale-strip>div:nth-child(2n){border-right:0}}
 @media(max-width:640px){.lifecycle,.scale-strip,.tier-list{grid-template-columns:1fr}.scale-strip>div{border-right:0;border-bottom:1px solid var(--line)}}
+
+/* --- Procurement layer (2026-10-22) -------------------------------------------
+   Family, industry and company pages (data/b2b-catalog.json). A basis tag on
+   each technical row, a numbered process, the quick-enquiry box, a send-error
+   box, and the two division doors on the English home page. */
+.basis{display:inline-block;padding:3px 9px;border-radius:999px;font-size:.7rem;font-weight:700;letter-spacing:.04em;border:1px solid var(--line);white-space:nowrap}
+.basis-reference{background:var(--cream);color:var(--moss-deep);border-color:var(--leaf)}
+.basis-per_project{background:#fff;color:var(--muted)}
+.process-steps{counter-reset:pstep;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.process-steps li{counter-increment:pstep;border:1px solid var(--line);border-radius:var(--r);background:#fff;padding:14px 16px}
+.process-steps li::before{content:counter(pstep);display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--moss);color:#fff;font-size:.78rem;font-weight:800;margin-right:8px}
+.process-steps strong{font-size:.98rem}
+.process-steps span{display:block;font-size:var(--fs-small);color:var(--muted);margin-top:6px}
+.industry-flow{grid-template-columns:repeat(3,1fr)}
+.industry-flow>div::before{content:none}
+.rfq-box{border:1px solid var(--line-strong);border-radius:var(--r);background:#fff;padding:22px 22px 6px;margin:0 0 16px}
+.rfq-box h2{margin:0 0 6px;font-size:1.35rem}
+.rfq-box .form-grid{margin-bottom:12px}
+.rfq-box .step-nav{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:6px 0 16px}
+.form-error{border:1px solid var(--roof);background:#fff5f2;border-radius:var(--r);padding:16px 18px;margin-top:12px}
+.form-error[hidden]{display:none}
+form[aria-busy="true"] button{opacity:.6;pointer-events:none}
+.division-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.division-card{display:block;border:1px solid var(--line);border-radius:var(--r);background:#fff;padding:24px 22px;color:var(--ink);text-decoration:none;transition:transform .2s ease,box-shadow .2s ease}
+.division-card:hover,.division-card:focus-visible{transform:translateY(-2px);box-shadow:var(--lift-sm)}
+.division-card h2{font-size:1.35rem;margin:6px 0 8px}
+.division-card p{color:var(--muted);margin:0 0 12px}
+.division-card .arrow{font-weight:800;color:var(--moss)}
+.division-card-dark{background:var(--moss);color:#fff;border-color:var(--moss-deep)}
+.division-card-dark p,.division-card-dark .eyebrow,.division-card-dark .arrow{color:#e8efe6}
+.compare td .basis{margin:0}
+@media(max-width:920px){.process-steps,.industry-flow{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.process-steps,.industry-flow,.division-grid{grid-template-columns:1fr}.rfq-box{padding:18px 16px 4px}}
+@media(prefers-reduced-motion:reduce){.division-card{transition:none}.division-card:hover{transform:none}}
 /* MODUNERA BRAND PALETTE END */

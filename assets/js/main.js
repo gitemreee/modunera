@@ -112,8 +112,46 @@
   // stepped forms (the project proposal): one fieldset at a time when JS runs,
   // every fieldset visible when it does not. Nothing here touches submission.
   document.documentElement.classList.add('js');
-  qsa('form[data-steps]').forEach(form=>{const sets=qsa('fieldset',form);if(sets.length<2)return;const ind=qs('.step-indicator',form);let i=0;const show=(n)=>{i=Math.max(0,Math.min(sets.length-1,n));sets.forEach((f,k)=>f.classList.toggle('is-active',k===i));if(ind)qsa('li',ind).forEach((li,k)=>{li.classList.toggle('is-done',k<i);li.classList.toggle('is-active',k===i)});sets[i].querySelector('input,select,textarea')?.focus({preventScroll:true});form.scrollIntoView({block:'start',behavior:'smooth'})};const valid=()=>{const bad=qsa('[required]',sets[i]).find(el=>!el.checkValidity());if(bad){bad.reportValidity();return false}return true};form.addEventListener('click',e=>{const b=e.target.closest('[data-step]');if(!b)return;e.preventDefault();if(b.dataset.step==='next'){if(valid())show(i+1)}else show(i-1)});form.addEventListener('submit',e=>{for(let k=0;k<sets.length;k+=1){const bad=qsa('[required]',sets[k]).find(el=>!el.checkValidity());if(bad){e.preventDefault();e.stopImmediatePropagation();show(k);bad.reportValidity();return}}},true);show(0)});
-  qsa('form[data-lead-form]').forEach(form=>form.addEventListener('submit',async e=>{e.preventDefault();const fd=Object.fromEntries(new FormData(form));const lead={...fd,source:location.pathname,createdAt:new Date().toISOString()};
+  qsa('form[data-steps]').forEach(form=>{const sets=qsa('fieldset',form);if(sets.length<2)return;const ind=qs('.step-indicator',form);let i=0;const show=(n)=>{i=Math.max(0,Math.min(sets.length-1,n));sets.forEach((f,k)=>f.classList.toggle('is-active',k===i));if(ind)qsa('li',ind).forEach((li,k)=>{li.classList.toggle('is-done',k<i);li.classList.toggle('is-active',k===i)});sets[i].querySelector('input,select,textarea')?.focus({preventScroll:true});form.scrollIntoView({block:'start',behavior:'smooth'})};const valid=()=>{const bad=qsa('[required]',sets[i]).find(el=>!el.checkValidity());if(bad){bad.reportValidity();return false}return true};form.addEventListener('click',e=>{const b=e.target.closest('[data-step]');if(!b)return;e.preventDefault();if(b.dataset.step==='next'){if(valid()){track('rfq_step_complete',{rfq_type:form.dataset.rfq||'full',step:i+1});show(i+1)}}else show(i-1)});form.addEventListener('submit',e=>{for(let k=0;k<sets.length;k+=1){const bad=qsa('[required]',sets[k]).find(el=>!el.checkValidity());if(bad){e.preventDefault();e.stopImmediatePropagation();show(k);bad.reportValidity();return}}},true);show(0)});
+  // Project enquiries (form[data-rfq]: the quick enquiry and the full brief).
+  // Attribution is first touch per session: the UTM parameters and landing page
+  // of the visit that brought the reader, kept in sessionStorage and nowhere
+  // else. ?family=MOD-xx from a family page preselects the solution. Measurement
+  // goes through track(), so nothing is sent without analytics consent, and no
+  // event carries what was typed — only form type, step and field name.
+  const ATTR_KEYS=['utm_source','utm_medium','utm_campaign','utm_content'];
+  const attribution=(()=>{let a={};try{a=JSON.parse(sessionStorage.getItem('mcAttr')||'null')||{}}catch(err){}const q=new URLSearchParams(location.search);if(!a.landing_page||ATTR_KEYS.some(k=>q.get(k))){a={landing_page:location.pathname};ATTR_KEYS.forEach(k=>{const v=q.get(k);if(v)a[k]=v.slice(0,120)})}try{sessionStorage.setItem('mcAttr',JSON.stringify(a))}catch(err){}return a})();
+  const family=(new URLSearchParams(location.search).get('family')||'').replace(/[^A-Z-]/g,'').slice(0,8);
+  qsa('form[data-rfq]').forEach(form=>{
+    const type=form.dataset.rfq;
+    if(family){const opt=qs(`select[name="solution"] option[data-family="${family}"]`,form);if(opt)opt.selected=true;const pf=qs('input[name="product_family"]',form);if(pf&&!pf.value)pf.value=family}
+    form.addEventListener('focusin',()=>track('rfq_start',{rfq_type:type}),{once:true});
+    form.addEventListener('invalid',e=>track('rfq_validation_error',{rfq_type:type,field:e.target.name||''}),true);
+  });
+  // a short reference the buyer can quote: date plus five random characters
+  const newRef=()=>{const d=new Date(),p=(n)=>String(n).padStart(2,'0');const r=(crypto.getRandomValues?Array.from(crypto.getRandomValues(new Uint8Array(5)),b=>'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'[b%32]).join(''):Math.random().toString(36).slice(2,7).toUpperCase());return `MOD-${String(d.getFullYear()).slice(2)}${p(d.getMonth()+1)}${p(d.getDate())}-${r}`};
+  addEventListener('click',(e)=>{
+    const a=e.target.closest?.('a[data-cta]');if(a)track(a.dataset.cta==='whatsapp-project'?'whatsapp_project_click':'b2b_cta_click',{cta:a.dataset.cta,link_place:linkPlace(a)});
+    const l=e.target.closest?.('.lang-dropdown a[hreflang]');if(l)track('language_switch',{to:l.getAttribute('hreflang')});
+  },{passive:true,capture:true});
+  qsa('form[data-lead-form]').forEach(form=>form.addEventListener('submit',async e=>{e.preventDefault();
+  // A project enquiry shows its confirmation only after Netlify answered 2xx.
+  // A failed POST shows the error box and saves nothing; a second click while
+  // the first is in flight is ignored.
+  if(form.hasAttribute('data-rfq')){
+    if(form.getAttribute('aria-busy')==='true')return;form.setAttribute('aria-busy','true');
+    const set=(n,v)=>{const el=qs(`input[type="hidden"][name="${n}"]`,form);if(el&&!el.value)el.value=v||''};
+    const ref=newRef();set('ref',ref);ATTR_KEYS.concat('landing_page').forEach(k=>set(k,attribution[k]));
+    const box=form.parentElement,err=qs('.form-error',box),done=qs('.form-done',box);if(err)err.hidden=true;
+    const body=Object.fromEntries(new FormData(form));delete body['bot-field'];
+    let ok=false;try{const res=await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(body).toString()});ok=res.ok}catch(err2){ok=false}
+    form.removeAttribute('aria-busy');
+    if(!ok){qs('input[name="ref"]',form).value='';if(err){err.hidden=false;err.scrollIntoView({block:'center'})}track('rfq_submit_error',{rfq_type:form.dataset.rfq});return}
+    track('rfq_submit_success',{rfq_type:form.dataset.rfq,solution:body.solution||'',country:(body.site_country||'').slice(0,40),lang:document.documentElement.lang||''});
+    form.hidden=true;if(done){const r=qs('[data-ref]',done);if(r)r.textContent=ref;done.classList.add('is-visible');done.scrollIntoView({block:'start'})}
+    return;
+  }
+  const fd=Object.fromEntries(new FormData(form));const lead={...fd,source:location.pathname,createdAt:new Date().toISOString()};
   // The lead now reaches a server: Netlify Forms accepts an URL-encoded POST to
   // any path when form-name matches a build-time-registered form. Before this,
   // preventDefault() meant NOTHING was ever submitted anywhere — a buyer who
