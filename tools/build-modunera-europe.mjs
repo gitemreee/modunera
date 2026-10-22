@@ -481,6 +481,7 @@ function europeFaqPage(lang) {
 const SITE_PHOTO_INDEX = Object.fromEntries(JSON.parse(await readFile(join(ROOT, "data/site-photos.json"), "utf8")).photos.map((p) => [p.name, p]));
 const COMPANY = JSON.parse(await readFile(join(ROOT, "data/company.json"), "utf8"));
 const B2B_HOME = JSON.parse(await readFile(join(ROOT, "data/b2b.json"), "utf8"));
+const B2B_CATALOG = JSON.parse(await readFile(join(ROOT, "data/b2b-catalog.json"), "utf8"));
 
 function englishHome() {
   const file = "en/index.html";
@@ -492,7 +493,7 @@ function englishHome() {
   const countries = Object.values(COUNTRIES).map((country) => `<a class="state-card" href="countries/${country.enSlug}/"><span>Local guidance</span><h3>${esc(country.en)}</h3><p>Rules, delivery, regions and the enquiry form</p></a>`).join("");
   const pillars = B2B_HOME.solutions.map((s) => `<a class="state-card" href="${s.slug.replace(/^en\//, "")}/"><span>${esc(s.menu[1])}</span><h3>${esc(s.menu[0])}</h3><p>${esc(s.lead.split(". ")[0])}.</p></a>`).join("");
   const scale = H.scale_steps.map(([a, b]) => `<div><strong>${esc(a)}</strong><p>${esc(b)}</p></div>`).join("");
-  const industries = H.industries.map(([n, d, href]) => `<a class="journey-card" href="${href.replace(/^en\//, "")}"><div><h3>${esc(n)}</h3><p>${esc(d)}</p></div><span class="arrow">↗</span></a>`).join("");
+  const industries = B2B_CATALOG.industries.map((i) => `<a class="journey-card" href="${i.slug.replace(/^en\//, "")}/"><div><h3>${esc(i.menu[0])}</h3><p>${esc(i.menu[1])}</p></div><span class="arrow">↗</span></a>`).join("");
   const stages = B2B_HOME.lifecycle.stages.map(([h3, p]) => `<div><h3>${esc(h3)}</h3><p>${esc(p)}</p></div>`).join("");
   const concepts = B2B_HOME.concepts.map((c) => `<a class="state-card" href="${c.slug.replace(/^en\//, "")}/"><span class="status-badge">Concept — not built</span><h3>${esc(c.name)}</h3><p>${esc(c.scale)}</p></a>`).join("");
   const ALT_EN = {
@@ -510,8 +511,15 @@ function englishHome() {
   }).join("");
   return head({ file, lang: "en", title, description, image: "hero-forest.webp", alternateDe: BASE, alternateEn: BASE + "en/", schema: [{ "@context": "https://schema.org", "@type": "WebPage", name: title, url: BASE + "en/", description }, { "@context": "https://schema.org", "@type": "Organization", name: "MODUNERA", legalName: COMPANY.legal_name, url: BASE, email: COMPANY.email, telephone: PHONE_DISPLAY, taxID: COMPANY.tax_number, address: { "@type": "PostalAddress", streetAddress: COMPANY.address.street, addressLocality: COMPANY.address.district, addressRegion: COMPANY.address.province, addressCountry: COMPANY.address.country_code }, logo: BASE + "assets/brand/modunera-master-logo-mountain-v1-600.png", areaServed: ["DE", "NL", "DK", "LU", "CH"] }] }) + nav(root, "en") +
     `<main id="main"><header class="hero"><div class="hero-media"></div><div class="hero-grain"></div><div class="container hero-content"><div class="hero-panel"><div class="hero-kicker">${esc(H.eyebrow)}</div><h1>${esc(H.h1)}</h1><p>${esc(H.sub)}</p>` +
-    `<div class="hero-actions"><a class="btn btn-primary" href="${proposal}">${esc(H.cta_primary)}</a><a class="btn btn-outline" href="solutions/">${esc(H.cta_secondary)}</a></div>` +
-    `<div class="hero-proof"><span>1 to 100+ units</span><span>MD 1–MD 8 collection</span><span>Europe · selected African markets</span></div><p class="legal-note" style="margin-top:14px">${esc(B2B_HOME.scope_qualifier)}</p></div></div></header>` +
+    `<div class="hero-actions"><a class="btn btn-primary" href="models/" data-cta="tiny-houses">Explore tiny houses</a><a class="btn btn-outline" href="solutions/" data-cta="modular-projects">Explore modular projects</a></div>` +
+    `<div class="hero-proof"><span>1 to 100+ units</span><span>MD 1–MD 8 collection</span><span>Europe · selected African markets</span></div><p class="legal-note" style="margin-top:14px">${esc(B2B_HOME.scope_qualifier)} <a href="${proposal}" data-cta="rfq">${esc(H.cta_primary)} →</a></p></div></div></header>` +
+    /* Two business divisions directly under the hero, so a private buyer and a
+       procurement team each see their own door before scrolling further. */
+    `<section class="section section-tight" id="divisions"><div class="container"><div class="division-grid">` +
+    `<a class="division-card" href="models/" data-cta="tiny-houses"><span class="eyebrow">Division A</span><h2>Premium tiny houses</h2><p>MD 1 to MD 8 for private living, holiday rental and small hospitality — configurator, price indications ex works, country guidance.</p><span class="arrow">Explore the collection →</span></a>` +
+    `<a class="division-card division-card-dark" href="solutions/" data-cta="modular-projects"><span class="eyebrow">Division B</span><h2>Modular and prefabricated project solutions</h2><p>Workforce camps, prefabricated houses, site offices, classroom and clinic buildings, resort units — project-specific, assessed per destination.</p><span class="arrow">Explore modular solutions →</span></a>` +
+    `</div></div></section>` +
+    `<section class="section section-soft" id="systems"><div class="container"><div class="section-header"><div><div class="eyebrow">Modular building systems</div><h2>Six building types for project buyers</h2></div><p>Each is labelled as a project-specific concept, with its technical outline, scope and request path. <a href="industries/">By industry →</a></p></div><div class="state-grid">${B2B_CATALOG.families.map((f) => `<a class="state-card" href="${f.slug.replace(/^en\//, "")}/"><span>${esc(f.code)}</span><h3>${esc(f.menu[0])}</h3><p>${esc(f.menu[1])}</p></a>`).join("")}</div></div></section>` +
     `<section class="section" id="what-we-create"><div class="container"><div class="section-header"><div><div class="eyebrow">What we create</div><h2>${esc(H.what_h2)}</h2></div><p>Three solution families, one way of working: the site first, then the module, then the plan that gets it there.</p></div><div class="state-grid">${pillars}</div></div></section>` +
     `<section class="section section-soft" id="scale"><div class="container"><div class="section-header"><div><div class="eyebrow">Scale</div><h2>${esc(H.scale_h2)}</h2></div><p>${esc(H.scale_p)}</p></div><div class="scale-strip">${scale}</div></div></section>` +
     `<section class="section" id="industries"><div class="container"><div class="section-header"><div><div class="eyebrow">Industries</div><h2>${esc(H.industries_h2)}</h2></div></div><div class="journey-grid">${industries}</div></div></section>` +

@@ -920,6 +920,8 @@
               "Modulare Büros",
               "Bildungsgebäude",
               "Gebäude für eine Gesundheitseinrichtung",
+              "Vorgefertigte Häuser",
+              "Flat-Pack-Module",
               "Sonstiges"
             ]
           ],
@@ -983,6 +985,24 @@
               "Nein",
               "In Verhandlung"
             ]
+          ],
+          [
+            "Temporär oder dauerhaft",
+            "use_duration",
+            "select",
+            false,
+            [
+              "Temporär",
+              "Dauerhaft",
+              "Noch offen"
+            ]
+          ],
+          [
+            "Ungefähre Fläche (m²)",
+            "floor_area",
+            "text",
+            false,
+            "z. B. 2.400 m² gesamt"
           ]
         ]
       },
@@ -1045,12 +1065,66 @@
               "EPC-Nachunternehmerschaft",
               "Partnerschaft"
             ]
+          ],
+          [
+            "Währung",
+            "currency",
+            "select",
+            false,
+            [
+              "EUR",
+              "USD",
+              "GBP",
+              "Andere"
+            ]
+          ],
+          [
+            "Gewünschter Lieferzeitraum",
+            "delivery_window",
+            "text",
+            false,
+            "z. B. Q3 2027"
           ]
         ]
       },
       {
         "legend": "Technische Angaben",
         "fields": [
+          [
+            "Liegen Zeichnungen oder eine Planung vor?",
+            "drawings",
+            "select",
+            false,
+            [
+              "Nein",
+              "Skizze oder Beschreibung",
+              "Architektenzeichnungen",
+              "Genehmigungsunterlagen"
+            ]
+          ],
+          [
+            "Strom und Wasser",
+            "offgrid",
+            "select",
+            false,
+            [
+              "Netzanschluss vorhanden",
+              "Autark oder Solar nötig",
+              "Noch unbekannt"
+            ]
+          ],
+          [
+            "Montageumfang",
+            "installation_scope",
+            "select",
+            false,
+            [
+              "Nur Lieferung",
+              "Montageüberwachung",
+              "Montage durch MODUNERA",
+              "Noch offen"
+            ]
+          ],
           [
             "Klimatische und standortbedingte Einschränkungen",
             "climate_note",
@@ -1071,18 +1145,6 @@
             "textarea",
             false,
             ""
-          ],
-          [
-            "Liegen Zeichnungen oder eine Planung vor?",
-            "drawings",
-            "select",
-            false,
-            [
-              "Nein",
-              "Skizze oder Beschreibung",
-              "Architektenzeichnungen",
-              "Genehmigungsunterlagen"
-            ]
           ],
           [
             "Beschreiben Sie das Projekt",

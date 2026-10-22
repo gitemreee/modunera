@@ -1,0 +1,2 @@
+from,to,status,reason
+(none),,,"No route renamed or removed in this release; all new routes are additions. Existing MC->MD and Nordic redirects unchanged."

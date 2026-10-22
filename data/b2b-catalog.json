@@ -1,0 +1,676 @@
+{
+  "_comment": [
+    "The procurement layer added on 2026-10-22 on top of data/b2b.json: six product families, five industry pages, a capability (trust) page, an export-logistics page, a procurement FAQ, the quick enquiry and the French Africa hub.",
+    "Rendered by tools/build-modunera-v2.mjs (buildCatalog). English, plus fr_africa in French. No German twin yet: the pages carry no hreflang pair except en/africa <-> fr/afrique.",
+    "Honesty rules, the same as b2b.json: every family is status project_specific_concept — a web catalogue entry, not a certified, serially produced or delivered product. Technical rows carry a basis: 'reference' means the figure is MODUNERA's published tiny-house reference (2.55 m base width, steel frame, road/Ro-Ro/sea delivery); 'per_project' means the value is set by engineering for the project and is not published. No price, no certificate, no capacity, no delivered project, no client name.",
+    "The family codes (MOD-FP, MOD-PH ...) are catalogue codes for enquiries and internal routing, not product approvals.",
+    "Do not write 'own production' or 'own factory': data/blocked-claims.json blocks those phrases until evidence exists. Use 'built to MODUNERA's specification'."
+  ],
+  "updated": "2026-10-22",
+  "status_label": "Project-specific concept — subject to engineering and capacity confirmation",
+  "basis": {
+    "reference": "MODUNERA reference",
+    "per_project": "Set per project"
+  },
+  "systems": {
+    "h2": "Which building system fits which job",
+    "p": "Four ways to deliver a modular building. Which one a project uses depends on transport, site access, the number of units and how permanent the building is meant to be — decided in the feasibility step, not here.",
+    "rows": [
+      ["Flat-pack modular", "Large numbers of identical rooms shipped in compact packs: site offices, dormitories, sanitary units, storage", "Assembly on site needs a trained crew; finishes are simpler than a volumetric unit; local approval of the system is a project question"],
+      ["Panelised prefabricated", "Single-storey houses and buildings with a freer plan: staff housing, rural and serial housing, schools", "More site work than volumetric: foundations, panel erection, roofing and finishes on site"],
+      ["Modular volumetric", "Units fitted out before they leave the hall: hospitality units, homes, clinics and offices where finish quality matters", "Transport size and crane access set the limits; fewer units per truck or container"],
+      ["Mobile tiny house (MD 1–MD 8)", "Single premium units for private living, holiday rental and small hospitality", "A mobile unit and a permanent dwelling or hotel room are different permit categories in most countries"]
+    ]
+  },
+  "process": {
+    "h2": "From brief to installation",
+    "steps": [
+      ["Brief", "Your programme, site, country, quantities and timeline."],
+      ["Feasibility", "Export, customs, permits, transport and partner questions for the destination."],
+      ["Preliminary layout", "Module types, counts and a schematic site arrangement."],
+      ["Proposal", "Scope, exclusions, delivery terms and the open points."],
+      ["Engineering approval", "Structure, building physics and services against the applicable local codes, by qualified engineers."],
+      ["Production", "Built to MODUNERA's specification once drawings and specification are signed off."],
+      ["Quality checks", "Inspection points agreed in the contract."],
+      ["Shipment", "Road, Ro-Ro or sea freight to the agreed delivery point."],
+      ["Installation", "By MODUNERA's team, a local partner or the client's contractor — as the contract sets out."]
+    ]
+  },
+  "incoterms": "Delivery terms (EXW, FCA, FOB, CIF, DAP or other) are agreed per project and per Incoterms edition in the contract. Nothing on this page fixes a delivery term, a price or a lead time.",
+  "families": [
+    {
+      "id": "workforce-camps",
+      "code": "MOD-WC",
+      "slug": "en/solutions/workforce-camps",
+      "parent": "prefabricated-facilities",
+      "menu": ["Workforce camps", "Accommodation for remote project sites"],
+      "photo": "production-hall-unit",
+      "title": "Modular workforce camps for remote project sites | MODUNERA",
+      "description": "Workforce accommodation, sanitation, dining and administration modules structured around crew size, shift pattern, site access and phased delivery. Compliance and capacity confirmed per project.",
+      "h1": "Workforce accommodation for remote project sites.",
+      "lead": "Modular accommodation, sanitation, dining and administration concepts structured around workforce capacity, site access and phased delivery. Final technical compliance and production capacity are confirmed for each project.",
+      "cta": "Request a camp proposal",
+      "wa": "Hello MODUNERA, I am planning a modular workforce camp in __ for approximately __ people. Shift pattern: __. Target date: __.",
+      "who_for": [
+        "Mining and energy operators housing crews on sites far from towns",
+        "EPC and main contractors mobilising a project workforce",
+        "Infrastructure programmes with phased crews over several years"
+      ],
+      "use_cases": [
+        "A 100-person exploration or construction camp with rooms, sanitary block, dining and a site office",
+        "A camp that grows from a first phase to 300 or more beds as the project ramps up",
+        "A management compound with single rooms, offices and a meeting space inside a larger camp"
+      ],
+      "tech": [
+        ["Building system", "Flat-pack, panelised or volumetric, chosen per camp", "per_project"],
+        ["Unit width", "2.55 m base width for road-legal volumetric units", "reference"],
+        ["Structure", "Steel frame", "reference"],
+        ["Room types", "Single, twin or dormitory rooms, with or without en-suite", "per_project"],
+        ["Insulation and climate", "Specified for the site's climate zone", "per_project"],
+        ["Fire safety", "To the applicable local code, verified by a local engineer", "per_project"],
+        ["Wind and roof loads", "Calculated for the site", "per_project"],
+        ["Foundations", "Pads, strip or screw piles, by site investigation", "per_project"],
+        ["Power, water, waste", "Grid, generator or off-grid, assessed per site", "per_project"],
+        ["Delivery", "Road, Ro-Ro or sea", "reference"]
+      ],
+      "configurations": [
+        ["100 persons", "Accommodation blocks, one sanitary block, dining and kitchen module, site office", "Illustrative"],
+        ["300 persons", "Phased accommodation, two sanitary blocks, dining, laundry, first-aid room, administration, security", "Illustrative"],
+        ["Expansion", "Further accommodation blocks added in later phases on a reserved layout", "Illustrative"]
+      ],
+      "inputs": ["Beds per phase and shift ratio", "Meals per shift and dining seats", "Showers, toilets and laundry per bed", "Office, meeting and first-aid space", "Site access, nearest port and road conditions", "Power and water source"],
+      "site_readiness": [
+        "Level platform, drainage and access for trucks and a crane",
+        "Power, water and wastewater connection or the off-grid plant that replaces them",
+        "Foundation design from a site investigation",
+        "Camp operation, catering, security and maintenance arranged by the operator"
+      ],
+      "country_notes": "Workforce accommodation rules — room size, occupancy, sanitation ratios, fire separation — differ by country and often by sector. MODUNERA does not describe any camp as compliant before a local engineer has checked it against the code that applies.",
+      "faq": [
+        ["Can you supply a complete camp?", "A camp can be planned as accommodation, sanitary, dining and office modules with a site layout. Whether MODUNERA supplies the buildings only or also installation, and what remains with the operator or local contractors, is set in the proposal."],
+        ["How fast can a camp be delivered?", "That depends on quantities, specification, production slots and the transport route, and is stated in the proposal. No standard lead time is published."],
+        ["Are the camps certified for mining sites?", "No certification is claimed. Site-specific requirements — fire, HSE, occupancy — are reviewed with the client's engineers and local professionals for each project."]
+      ],
+      "industries": ["mining", "energy", "construction-epc"]
+    },
+    {
+      "id": "prefabricated-houses",
+      "code": "MOD-PH",
+      "slug": "en/solutions/prefabricated-houses",
+      "parent": "modular-housing",
+      "menu": ["Prefabricated houses", "Serial single-storey homes for developers"],
+      "photo": "unit-porch-sand",
+      "title": "Prefabricated houses for developers and housing programmes | MODUNERA",
+      "description": "Single-storey prefabricated and modular houses for developers, staff-housing and housing programmes — layouts, specification and delivery planned per project.",
+      "h1": "Prefabricated houses for developers and housing programmes.",
+      "lead": "Single-storey homes in series — staff housing, rural housing, a first phase of a community — planned around plot sizes, local building rules and the logistics to the site.",
+      "cta": "Plan a housing project",
+      "wa": "Hello MODUNERA, I am planning __ prefabricated houses in __. Plot status: __. Target date: __.",
+      "who_for": [
+        "Developers planning a series of homes on serviced land",
+        "Employers providing staff or worker housing",
+        "Public or donor-funded housing programmes working through a contractor"
+      ],
+      "use_cases": [
+        "20 two-bedroom homes as the first phase of a development",
+        "Staff housing beside a resort, mine or plant",
+        "Rural housing with a repeated plan and local finishes"
+      ],
+      "tech": [
+        ["Building system", "Panelised or volumetric, chosen per project", "per_project"],
+        ["Structure", "Steel frame", "reference"],
+        ["House types", "One to three bedrooms, set by the brief", "per_project"],
+        ["Insulation and climate", "Specified for the climate zone", "per_project"],
+        ["Roof and wind loads", "Calculated for the site", "per_project"],
+        ["Fire and accessibility", "To the local code, verified by a local engineer", "per_project"],
+        ["Foundations", "By site investigation", "per_project"],
+        ["Services", "Electrical, plumbing and drainage to local standards", "per_project"]
+      ],
+      "configurations": [
+        ["20 houses", "One or two repeated house types and a site layout", "Illustrative"],
+        ["80 houses", "Phased delivery, two to three house types, shared infrastructure", "Illustrative"],
+        ["Staff housing", "Homes or shared houses beside an operation, with laundry and parking", "Illustrative"]
+      ],
+      "inputs": ["Number of homes and phases", "House types and floor areas", "Plot status and masterplan", "Who builds roads, utilities and foundations", "Funding or tender stage"],
+      "site_readiness": [
+        "Serviced plots or a plan for roads, power, water and sewerage",
+        "Foundations by a local contractor to the engineer's design",
+        "Building permit for the house type in the destination",
+        "Access for delivery vehicles and lifting equipment"
+      ],
+      "country_notes": "Whether a prefabricated house can be approved as a permanent dwelling is decided by the local building authority. No page on this site says a house can be installed without a permit.",
+      "faq": [
+        ["Can the houses be adapted to local style?", "Plans, facades and finishes can be adapted within the building system. What changes and what it costs is set in the proposal."],
+        ["Do you build the foundations and roads?", "Usually not. Foundations, roads and utilities are normally local works by the developer's contractor, to the engineer's design."],
+        ["What does a house cost?", "No price per square metre is published for project housing. A price follows a brief, a specification and a delivery term."]
+      ],
+      "industries": ["public-housing", "hospitality"]
+    },
+    {
+      "id": "flat-pack-modular-units",
+      "code": "MOD-FP",
+      "slug": "en/solutions/flat-pack-modular-units",
+      "parent": "prefabricated-facilities",
+      "menu": ["Flat-pack modular units", "Offices, dormitories, sanitary modules"],
+      "photo": "production-frame-and-finish",
+      "title": "Flat-pack modular units for site offices, dormitories and sanitary blocks | MODUNERA",
+      "description": "Flat-pack and container-type modular units for site offices, dormitories, sanitary and storage — the system choice, dimensions and specification confirmed per project.",
+      "h1": "Flat-pack modular units for sites that need many rooms quickly.",
+      "lead": "Container-type modules shipped as compact packs and assembled on site: offices, dormitories, sanitary and storage units. A useful system where many identical rooms have to travel a long way.",
+      "cta": "Request a technical offer",
+      "wa": "Hello MODUNERA, I need about __ flat-pack modules (offices / dormitory / sanitary) in __. Target date: __.",
+      "who_for": [
+        "Contractors setting up a site compound",
+        "Operators needing extra rooms on an existing site",
+        "Distributors serving construction clients in their country"
+      ],
+      "use_cases": [
+        "A site office compound with meeting room, toilets and storage",
+        "Dormitory and sanitary modules for a project crew",
+        "Guard houses and storage units"
+      ],
+      "tech": [
+        ["Module type", "Flat-pack, container-type", "per_project"],
+        ["Module dimensions", "Confirmed in the technical offer", "per_project"],
+        ["Structure", "Steel frame", "reference"],
+        ["Wall and roof panels", "Panel type and thickness specified per climate", "per_project"],
+        ["Fire performance", "Not claimed; specified and verified per project", "per_project"],
+        ["Electrical and plumbing", "To the destination's standards", "per_project"],
+        ["Packing", "Packs per container or truck confirmed in the offer", "per_project"]
+      ],
+      "configurations": [
+        ["Site office", "Office modules, meeting module, sanitary module", "Illustrative"],
+        ["Dormitory block", "Rooms, corridor modules, sanitary module", "Illustrative"],
+        ["Sanitary block", "Toilets, showers, washbasins, laundry", "Illustrative"]
+      ],
+      "inputs": ["Number and type of modules", "Interior layout of each type", "Climate and site location", "Who assembles on site", "Nearest port and road access"],
+      "site_readiness": [
+        "Level foundations or pads",
+        "A trained assembly crew — MODUNERA supervision, local partner or client crew, as agreed",
+        "Power, water and drainage points"
+      ],
+      "country_notes": "Temporary site buildings are often regulated differently from permanent ones. The intended duration of use belongs in the brief.",
+      "faq": [
+        ["What are the module dimensions?", "Dimensions are confirmed in the technical offer for the system chosen. They are not published as a standard here."],
+        ["Can my team assemble the modules?", "That is possible with instructions and, where agreed, supervision. Who assembles and who is liable for assembly is set in the contract."],
+        ["Is there a datasheet?", "There is no published datasheet yet. Technical information is supplied with the offer."]
+      ],
+      "industries": ["construction-epc", "mining", "energy"]
+    },
+    {
+      "id": "site-offices-and-sanitary",
+      "code": "MOD-OF",
+      "slug": "en/solutions/site-offices-and-sanitary",
+      "parent": "prefabricated-facilities",
+      "menu": ["Site offices and sanitary", "EPC offices, meeting, security, washrooms"],
+      "photo": "production-interior-fitout",
+      "title": "Modular site offices and sanitary blocks for contractors | MODUNERA",
+      "description": "Modular site offices, meeting rooms, security and control buildings and sanitary blocks for EPC and construction sites — temporary or permanent, specified per project.",
+      "h1": "Site offices and sanitary blocks that move with the project.",
+      "lead": "Offices, meeting rooms, security cabins and washrooms for a construction or EPC site — relocatable when the project moves on, or specified for permanent use.",
+      "cta": "Request a technical offer",
+      "wa": "Hello MODUNERA, I need a site office / sanitary block for a project in __. Persons: __. Temporary or permanent: __.",
+      "who_for": [
+        "EPC contractors and their client representatives",
+        "Construction companies with several sites",
+        "Industrial sites needing security and control buildings"
+      ],
+      "use_cases": [
+        "A project management office for 20 to 40 staff with meeting rooms",
+        "A sanitary block for a site workforce",
+        "A gatehouse with security and control room"
+      ],
+      "tech": [
+        ["Building system", "Flat-pack or volumetric", "per_project"],
+        ["Structure", "Steel frame", "reference"],
+        ["Interior", "Office, meeting, kitchenette, toilets — to the brief", "per_project"],
+        ["Climate", "Insulation, shading and air-conditioning provision per site", "per_project"],
+        ["IT and electrical", "Cable routes and boards to the client's standard", "per_project"],
+        ["Relocation", "Design for dismantling and reuse, where requested", "per_project"]
+      ],
+      "configurations": [
+        ["Small office", "Two office modules, meeting module, toilet", "Illustrative"],
+        ["Project office", "Open office, private offices, meeting rooms, sanitary, kitchenette", "Illustrative"],
+        ["Gatehouse", "Security cabin, control room, toilet", "Illustrative"]
+      ],
+      "inputs": ["Staff numbers and room list", "Temporary or permanent", "Relocations expected", "Site location and access", "Client's HSE and IT standards"],
+      "site_readiness": [
+        "Pads or foundations",
+        "Power and data connection",
+        "Water and drainage for sanitary modules"
+      ],
+      "country_notes": "Permanent offices need a building permit in most countries; temporary site buildings may follow a simpler route. The contractor's local team confirms which applies.",
+      "faq": [
+        ["Can the offices be moved to the next project?", "If relocation is in the brief, the units can be designed for it. How often and how far is part of the specification."],
+        ["Can you match our company's site standard?", "Client standards for HSE, IT and branding are taken into the specification where the system allows."]
+      ],
+      "industries": ["construction-epc", "energy", "mining"]
+    },
+    {
+      "id": "modular-schools",
+      "code": "MOD-ED",
+      "slug": "en/solutions/modular-schools",
+      "parent": "prefabricated-facilities",
+      "menu": ["Modular schools", "Classroom buildings — the building, not the school"],
+      "photo": "interior-wood",
+      "title": "Modular classroom and school buildings | MODUNERA",
+      "description": "Modular classroom buildings with sanitary and administration space for public buyers, NGOs and contractors — the physical building only; education licensing and operation stay with the operator.",
+      "h1": "Modular classroom buildings.",
+      "lead": "Classroom, sanitary and staff modules arranged as a school building. MODUNERA supplies the building concept; school licensing, staffing, furniture standards and operation stay with the operator and the authority.",
+      "cta": "Request a school building proposal",
+      "wa": "Hello MODUNERA, I am planning a modular school building in __ with about __ classrooms. Buyer: __.",
+      "who_for": [
+        "Ministries, municipalities and agencies working through a contractor",
+        "NGOs and foundations funding school buildings",
+        "Private schools adding classrooms"
+      ],
+      "use_cases": [
+        "An 8-classroom block with toilets and a staff room",
+        "Extra classrooms on an existing school site",
+        "A temporary school while a permanent building is built"
+      ],
+      "tech": [
+        ["Building system", "Panelised or volumetric", "per_project"],
+        ["Structure", "Steel frame", "reference"],
+        ["Classroom size", "Set by the education authority's standard", "per_project"],
+        ["Daylight and ventilation", "Designed for the climate and the local standard", "per_project"],
+        ["Fire, escape and accessibility", "To the local code, verified by a local engineer", "per_project"],
+        ["Sanitary ratios", "By the local standard", "per_project"]
+      ],
+      "configurations": [
+        ["8 classrooms", "Classrooms, toilets, staff room, store", "Illustrative"],
+        ["4 classrooms", "Extension block on an existing site", "Illustrative"]
+      ],
+      "inputs": ["Pupils and classrooms", "The education authority's room standard", "Site and existing buildings", "Funding and tender route", "Who furnishes and operates"],
+      "site_readiness": [
+        "Site with foundations, drainage and safe access",
+        "Power and water connection",
+        "Building permit and approval of the education authority"
+      ],
+      "country_notes": "A modular classroom building is a building. It does not carry any approval to operate a school, and nothing here suggests it does.",
+      "faq": [
+        ["Do you build complete schools?", "MODUNERA can propose the building. Licensing, staffing, teaching equipment and operation are the operator's responsibility."],
+        ["Can it take part in a public tender?", "Tender participation depends on the tender's eligibility rules and documents. Send the tender reference with your brief."]
+      ],
+      "industries": ["public-housing"]
+    },
+    {
+      "id": "healthcare-buildings",
+      "code": "MOD-HC",
+      "slug": "en/solutions/healthcare-buildings",
+      "parent": "prefabricated-facilities",
+      "menu": ["Healthcare buildings", "Clinic buildings — not the medical operation"],
+      "photo": "interior-stair-white",
+      "title": "Modular healthcare facility buildings | MODUNERA",
+      "description": "Modular buildings for consultation, first-aid and clinic use — the physical building only. Medical licensing, equipment and operation remain with the healthcare operator.",
+      "h1": "Modular buildings for healthcare use.",
+      "lead": "Consultation rooms, first-aid stations and clinic buildings in modular form. MODUNERA plans the building; medical licensing, equipment, infection-control approval and operation are the healthcare operator's.",
+      "cta": "Request a clinic building proposal",
+      "wa": "Hello MODUNERA, I am planning a modular clinic / first-aid building in __. Rooms: __. Operator: __.",
+      "who_for": [
+        "Health ministries and agencies working through contractors",
+        "NGOs and operators running clinics",
+        "Industrial sites needing a first-aid station"
+      ],
+      "use_cases": [
+        "A first-aid station for a workforce camp",
+        "A small clinic with consultation, waiting and sanitary rooms",
+        "Additional consultation rooms beside an existing facility"
+      ],
+      "tech": [
+        ["Building system", "Volumetric or panelised", "per_project"],
+        ["Structure", "Steel frame", "reference"],
+        ["Hygiene surfaces", "Wall and floor finishes chosen with the operator", "per_project"],
+        ["Ventilation and cooling", "Designed with the operator's engineers", "per_project"],
+        ["Medical gases and equipment", "Not included unless specified with a qualified partner", "per_project"],
+        ["Accessibility and fire", "To the local code", "per_project"]
+      ],
+      "configurations": [
+        ["First-aid station", "Treatment room, rest room, toilet", "Illustrative"],
+        ["Small clinic", "Consultation rooms, waiting, store, sanitary, staff room", "Illustrative"]
+      ],
+      "inputs": ["Room list from the operator", "Operator's hygiene and equipment requirements", "Site and utilities", "Licensing authority in the destination"],
+      "site_readiness": [
+        "Foundations, utilities and drainage",
+        "The operator's licence and the health authority's approval of the building",
+        "Medical equipment by the operator or a specialist supplier"
+      ],
+      "country_notes": "A healthcare building needs the approval of the health authority for its use. MODUNERA does not supply or imply a medical licence.",
+      "faq": [
+        ["Do you supply medical equipment?", "No. Equipment and medical installations are specified and supplied by the operator or a qualified specialist."],
+        ["Is the building approved as a clinic?", "Approval for medical use is given by the local authority to the operator. The building is designed so the operator can apply for it."]
+      ],
+      "industries": ["public-housing", "mining"]
+    }
+  ],
+  "industries": [
+    {
+      "id": "mining",
+      "slug": "en/industries/mining",
+      "menu": ["Mining and remote camps", "Accommodation and facilities for remote sites"],
+      "photo": "transport-road",
+      "title": "Modular camps and facilities for mining projects | MODUNERA",
+      "description": "Modular workforce accommodation, sanitation, dining and site buildings for mining projects — structured around crew size, shift pattern, remoteness and phased expansion.",
+      "h1": "Modular camps and buildings for mining projects.",
+      "lead": "Remote sites need beds, meals, washrooms and offices before the first ore is moved. MODUNERA plans these as modules that travel well and can grow with the project.",
+      "cta": "Discuss a workforce camp",
+      "problems": [
+        "Crews arrive before permanent infrastructure exists",
+        "Long and uncertain transport routes to the site",
+        "Bed numbers that change between exploration, construction and operation",
+        "Heat, dust, rain or cold that wear standard buildings quickly"
+      ],
+      "approach": [
+        "A camp layout in phases, with space reserved for growth",
+        "Module types chosen for the transport route — flat-pack where volume matters, volumetric where finish matters",
+        "Climate options specified for the site and checked by engineers",
+        "Clear split between what MODUNERA supplies and what the operator or local contractors do"
+      ],
+      "inputs": ["Beds per phase and shift ratio", "Dining, laundry and recreation needs", "Site location, road and nearest port", "Power and water source", "HSE requirements of the operator"],
+      "families": ["workforce-camps", "flat-pack-modular-units", "site-offices-and-sanitary", "healthcare-buildings"],
+      "caution": "No camp is described as compliant with mining, HSE or occupancy rules until the operator's engineers and local professionals have checked it.",
+      "faq": [
+        ["Have you built mining camps?", "There is no completed MODUNERA mining camp to show. The pages describe a planning approach and module types, labelled as concepts."],
+        ["Can the camp be moved later?", "If relocation is in the brief, modules can be specified for dismantling and reuse."]
+      ]
+    },
+    {
+      "id": "construction-epc",
+      "slug": "en/industries/construction-epc",
+      "menu": ["Construction and EPC", "Site compounds, offices, crew housing"],
+      "photo": "transport-trailer-yard",
+      "title": "Modular site buildings for construction and EPC contractors | MODUNERA",
+      "description": "Site offices, sanitary blocks, crew accommodation and support buildings for construction and EPC contractors — temporary or permanent, supplied as a subcontract or direct.",
+      "h1": "Site buildings for construction and EPC contractors.",
+      "lead": "A project compound — offices, meeting rooms, washrooms, crew housing — delivered in batches to match mobilisation, with the documentation a contractor's QA/QC team asks for.",
+      "cta": "Send your project brief",
+      "problems": [
+        "Mobilisation dates that do not move",
+        "Several shipments to one or several sites",
+        "Temporary buildings that must still meet the client's HSE standard",
+        "RFQ packages that need a clear scope and exclusions"
+      ],
+      "approach": [
+        "Modules grouped into shipments that follow the mobilisation plan",
+        "Temporary or permanent specification stated up front",
+        "Scope and exclusion matrix in every proposal",
+        "Supply as an EPC subcontract, direct to the client or through a local partner"
+      ],
+      "inputs": ["Compound programme and staff numbers", "Mobilisation dates by phase", "Client HSE and QA/QC requirements", "Delivery point and Incoterm", "Installation responsibility"],
+      "families": ["site-offices-and-sanitary", "flat-pack-modular-units", "workforce-camps"],
+      "caution": "QA/QC documents, inspection and test plans are agreed per contract. No standard certificate is claimed.",
+      "faq": [
+        ["Can you work as our subcontractor?", "Yes, as a supply subcontract where the main contractor holds the client contract. Scope and liabilities are set in the subcontract."],
+        ["Do you answer RFQs with a fixed template?", "Send your RFQ package; the proposal answers it with scope, exclusions, open points and delivery terms."]
+      ]
+    },
+    {
+      "id": "energy",
+      "slug": "en/industries/energy",
+      "menu": ["Oil, gas and energy", "Phased mobilisation in harsh climates"],
+      "photo": "delivery-trailer",
+      "title": "Modular accommodation and site buildings for energy projects | MODUNERA",
+      "description": "Workforce accommodation, offices and support buildings for oil, gas, solar, wind and grid projects — planned for phased mobilisation, harsh climates and limited utilities.",
+      "h1": "Modular buildings for energy projects.",
+      "lead": "Solar parks, wind farms, grid lines, oil and gas sites: crews and offices for a fixed period, often far from towns, with heat, dust and limited power and water.",
+      "cta": "Request a technical proposal",
+      "problems": [
+        "Phased mobilisation along a construction programme",
+        "Hot, dusty or coastal sites",
+        "Limited or no grid power and water at the start",
+        "Strict client safety rules"
+      ],
+      "approach": [
+        "Accommodation and offices phased with the construction programme",
+        "Shading, insulation and filtration options chosen for the climate",
+        "Off-grid power and water options assessed with specialist partners",
+        "No hazardous-area equipment claimed; such requirements go to qualified specialists"
+      ],
+      "inputs": ["Crew size per phase", "Site climate and exposure", "Available power and water", "Client safety standards", "Duration of use"],
+      "families": ["workforce-camps", "site-offices-and-sanitary", "flat-pack-modular-units"],
+      "caution": "Buildings for hazardous areas (ATEX or similar) are not offered. Any such requirement must be raised in the brief and addressed by certified specialists.",
+      "faq": [
+        ["Are the buildings certified for hazardous areas?", "No. They are not offered as hazardous-area buildings."],
+        ["Can the camp run off-grid?", "Off-grid power and water are assessed per site with specialist partners. Capacity and approval are project questions."]
+      ]
+    },
+    {
+      "id": "public-housing",
+      "slug": "en/industries/public-housing",
+      "menu": ["Public and affordable housing", "Housing, schools and clinics for public buyers"],
+      "photo": "unit-trailer-gable",
+      "title": "Modular housing and public buildings for public buyers | MODUNERA",
+      "description": "Prefabricated housing, classroom and clinic buildings for municipalities, agencies, NGOs and contractors — unit types, masterplan and phasing planned per programme.",
+      "h1": "Housing and public buildings, planned as a programme.",
+      "lead": "Affordable and workforce housing, classrooms and clinic buildings for public buyers and the contractors who serve them — unit types, land, phasing and infrastructure set out before anything is specified.",
+      "cta": "Plan a modular housing project",
+      "problems": [
+        "Many units, limited budgets and fixed funding windows",
+        "Land and infrastructure that are not ready yet",
+        "Procurement through public tender with strict eligibility rules",
+        "Buildings that must be approved for permanent use"
+      ],
+      "approach": [
+        "Repeated unit types to keep production simple",
+        "Masterplan and phases aligned with funding",
+        "Infrastructure and foundations named as local works",
+        "Honest answers on what a tender requires and whether MODUNERA qualifies"
+      ],
+      "inputs": ["Number and type of units", "Land, masterplan and infrastructure status", "Funding and tender route", "Social and shared spaces", "Local permit route"],
+      "families": ["prefabricated-houses", "modular-schools", "healthcare-buildings"],
+      "caution": "No unit is described as installable without a permit. Approval for permanent housing, schools or clinics is given by the local authority.",
+      "faq": [
+        ["Can you bid in public tenders?", "That depends on each tender's eligibility rules. Share the tender reference and documents, and the reply says whether and how MODUNERA can take part."],
+        ["Do you deliver complete settlements?", "MODUNERA plans and supplies buildings. Roads, utilities and foundations are normally local works."]
+      ]
+    },
+    {
+      "id": "hospitality",
+      "slug": "en/industries/hospitality",
+      "menu": ["Hospitality and resorts", "Resort units, villages, staff housing"],
+      "photo": "unit-terrace-event",
+      "title": "Modular units for resorts and holiday villages | MODUNERA",
+      "description": "Accommodation units, reception and shared buildings for resorts, holiday villages and campgrounds — 20 to 80 units and more, planned with explicit parameters, never with guaranteed returns.",
+      "h1": "Modular units for resorts and holiday villages.",
+      "lead": "Guest units, reception, shared and staff buildings for resorts, holiday villages and campgrounds — where finish quality matters and the site layout sells the stay.",
+      "cta": "Discuss a resort project",
+      "problems": [
+        "A guest experience that depends on design and finish",
+        "Land with slopes, trees or views to work around",
+        "Opening dates tied to a season",
+        "Investors asking for numbers that cannot be promised"
+      ],
+      "approach": [
+        "Units from the MD 1–MD 8 collection or project-specific designs",
+        "A site layout around the landscape, labelled as a concept",
+        "Phased delivery around the season",
+        "Revenue assumptions only with explicit parameters, never as a forecast"
+      ],
+      "inputs": ["Number and type of units", "Site, slope and access", "Shared buildings: reception, restaurant, spa, staff", "Opening date", "Operator and permit status"],
+      "families": ["prefabricated-houses", "site-offices-and-sanitary"],
+      "caution": "No return on investment is promised. Any revenue example is an illustrative scenario with its inputs shown.",
+      "faq": [
+        ["Can I use the tiny-house models for a resort?", "Yes, MD 1 to MD 8 are designed for private living and holiday rental. Larger projects can also use project-specific units."],
+        ["What return will the resort make?", "No return is promised. Occupancy, rates and costs belong to the operator's own business plan."]
+      ]
+    }
+  ],
+  "capability": {
+    "slug": "en/company/capability",
+    "photo": "production-hall-unit",
+    "title": "Company and capability — what is verified, what is on request | MODUNERA",
+    "description": "MODUNERA's registered company data, history, production approach, quality process and document status — with each item marked verified, on request or under verification.",
+    "h1": "Company and capability.",
+    "lead": "What a procurement team needs to know before shortlisting a supplier — and the status of each item: verified, available on request, or still under verification.",
+    "facts_h2": "Company facts",
+    "docs_h2": "Documents and status",
+    "docs_p": "No document is published that does not exist. Items marked on request are sent with a proposal or under a confidentiality agreement; items under verification are not yet available.",
+    "docs": [
+      ["Company registration (MERSİS, tax number)", "Verified — published in the imprint"],
+      ["Company profile / capability statement", "On request"],
+      ["Product family matrix", "On request — technical details per offer"],
+      ["Scope and exclusion matrix", "Published on every solution page"],
+      ["Sample project brief template", "The project proposal form follows it; a document version on request"],
+      ["Quality process outline / inspection and test plan", "Agreed per contract"],
+      ["Certificates (ISO, CE or similar)", "None claimed — under verification"],
+      ["Completed project references", "None published for large projects — the concepts page shows planning studies only"]
+    ],
+    "process_h2": "How work is checked",
+    "process": [
+      "Drawings and specification signed off before production",
+      "Inspection points agreed in the contract, with photographs at agreed stages",
+      "Pre-shipment check of the units against the agreed specification",
+      "Factory visit on request, by appointment"
+    ],
+    "tender_h2": "Prequalification and tenders",
+    "tender_p": "Send the prequalification questionnaire or tender reference with your brief. The reply says which documents exist, which can be prepared and whether MODUNERA meets the eligibility rules — not a blanket yes."
+  },
+  "export_logistics": {
+    "slug": "en/company/export-logistics",
+    "photo": "transport-export-flags",
+    "title": "Export and logistics — from Türkiye to the site | MODUNERA",
+    "description": "How MODUNERA units travel from Türkiye to a project site: road, Ro-Ro and sea freight, port, customs, inland transport, site readiness — and who is responsible for each leg.",
+    "h1": "From Türkiye to your site.",
+    "lead": "Every leg of the route has an owner. This page shows the chain and the usual split of responsibility; the contract fixes it for your project.",
+    "chain_h2": "The chain",
+    "chain": [
+      ["Production", "Units or packs built to MODUNERA's specification in Türkiye.", "MODUNERA"],
+      ["Loading", "Truck, trailer or container loading at the hall.", "MODUNERA"],
+      ["Main carriage", "Road to Europe; Ro-Ro or container ship to overseas ports.", "MODUNERA or the buyer, by Incoterm"],
+      ["Port and customs", "Import clearance, duties, taxes and documents in the destination.", "Usually the buyer or their agent"],
+      ["Inland transport", "Port to site, including permits for oversized loads.", "By Incoterm and contract"],
+      ["Unloading and placing", "Crane, forklift or trailer placement at the site.", "Usually the buyer or local partner"],
+      ["Installation", "Assembly, connection and handover.", "As the contract sets out"]
+    ],
+    "readiness_h2": "Site readiness checklist",
+    "readiness": [
+      "Access road width, bends, bridges and overhead lines checked for the load",
+      "Unloading area and crane position",
+      "Foundations finished and checked before arrival",
+      "Power, water and drainage points ready",
+      "Customs agent and import documents arranged",
+      "Local installation partner or crew confirmed"
+    ],
+    "export_note": "Export documentation and origin certificates (for example A.TR or EUR.1 for Europe) depend on the destination and the goods. The guide on customs and import covers Europe; for other destinations they are clarified in feasibility."
+  },
+  "procurement_faq": {
+    "slug": "en/resources/procurement-faq",
+    "title": "Procurement FAQ for modular projects | MODUNERA",
+    "description": "Answers for procurement teams: supply models, EPC subcontracting, local installation, payment milestones, warranty, documents, lead times and what is not offered.",
+    "h1": "Procurement questions, answered plainly.",
+    "lead": "The questions procurement managers, contractors and developers ask before sending an RFQ — with the limits stated.",
+    "faq": [
+      ["Do you sell direct or through partners?", "Both are possible: direct supply to the project owner, supply as a subcontract to an EPC or main contractor, or through a local distributor where one exists. The model is agreed per project."],
+      ["Who installs the buildings?", "MODUNERA's team, a local installation partner or the client's contractor, with supervision where agreed. The contract names who is responsible."],
+      ["What payment milestones are usual?", "Milestones are agreed per contract — typically linked to order, production stages and shipment. No standard terms are published."],
+      ["What warranty applies?", "Warranty terms are part of the contract and depend on the scope supplied and installed. They are stated in the proposal."],
+      ["What documents can you provide?", "Company registration data is published. A company profile, technical information and quality documents are supplied with a proposal. No certificate is claimed that does not exist."],
+      ["What is the lead time?", "It depends on quantities, specification, production slots and transport, and is stated in the proposal. No standard lead time is published."],
+      ["Can you quote a price per square metre?", "Not for project buildings. A price follows a brief, a specification and a delivery term."],
+      ["Do you take part in public tenders?", "Where the tender's eligibility rules allow. Send the reference and documents with your brief."],
+      ["Do you handle permits?", "No. Permits are applied for by the client or local professionals. MODUNERA supplies the technical documents the application needs, where agreed."],
+      ["Can we visit the production?", "Yes, by appointment. Ask for a visit in your enquiry."],
+      ["Which countries do you deliver to?", "MODUNERA sells tiny houses in Europe and assesses project enquiries from Europe and selected African markets case by case. No country is listed as served without a project."],
+      ["Do you upload drawings through the website?", "Not yet. Send drawings by e-mail after the first reply; the website does not store files."]
+    ]
+  },
+  "quick": {
+    "form_name": "quick-enquiry",
+    "h2": "Quick enquiry — about a minute",
+    "p": "Seven fields. A person reads it and replies with the next step; the full project brief can follow.",
+    "fields": [
+      ["Work e-mail", "business_email", "email", true, ""],
+      ["Company", "organisation", "text", true, ""],
+      ["Your name", "contact_name", "text", true, ""],
+      ["Destination country", "site_country", "text", true, ""],
+      ["Project type", "solution", "select", true, ["Workforce camp", "Prefabricated houses", "Flat-pack modules", "Modular offices", "Education building", "Healthcare facility building", "Resort or hospitality", "Modular homes or residential community", "Other"]],
+      ["Units or capacity (optional)", "capacity_note", "text", false, "e.g. 100 persons, 20 houses"],
+      ["Brief message (optional)", "message", "textarea", false, ""]
+    ],
+    "submit": "Send quick enquiry",
+    "full_link": "Prefer the full project brief?"
+  },
+  "fr_africa": {
+    "slug": "fr/afrique",
+    "photo": "production-frame-and-finish",
+    "title": "Bâtiments modulaires et préfabriqués pour des projets en Afrique | MODUNERA",
+    "description": "Bases-vie, logements préfabriqués, bureaux de chantier, écoles et bâtiments de santé modulaires pour des projets en Afrique — étudiés au cas par cas : site, logistique, autorisations locales.",
+    "h1": "Solutions de bâtiments modulaires pour des projets en Afrique.",
+    "lead": "Hébergement des équipes, logements préfabriqués ou bâtiments de chantier : présentez-nous votre projet. MODUNERA étudie les contraintes du site, les spécifications techniques et la logistique d'exportation au cas par cas.",
+    "cta": "Présenter mon projet",
+    "answer_h": "Réponse directe",
+    "answer": "MODUNERA étudie des demandes de projets venant de marchés africains sélectionnés. Il n'existe à ce jour aucun projet MODUNERA livré en Afrique, et aucun pays n'est présenté comme desservi. Chaque projet passe d'abord par une étude de faisabilité : export, douane, autorisations locales, transport et partenaires sur place.",
+    "segments_h2": "Types de projets",
+    "segments": [
+      ["Bases-vie et hébergement des équipes", "Chantiers miniers, énergie, infrastructures — de 50 à 300 personnes et plus, par phases."],
+      ["Logements préfabriqués", "Programmes immobiliers, logements du personnel, logement social via un entrepreneur."],
+      ["Bâtiments de chantier", "Bureaux, salles de réunion, blocs sanitaires, postes de garde."],
+      ["Écoles modulaires", "Le bâtiment de salles de classe — l'agrément et l'exploitation restent à l'opérateur."],
+      ["Bâtiments de santé", "Postes de secours et petites cliniques — le bâtiment, pas l'activité médicale."],
+      ["Hôtellerie et resorts", "Unités d'hébergement et bâtiments communs, sans promesse de rendement."]
+    ],
+    "climate_h2": "Climat : des critères de conception, pas des garanties",
+    "climate": [
+      ["Chaud et sec", "Apports solaires, ombrage, isolation, filtration de la poussière, ventilation naturelle."],
+      ["Chaud et humide", "Ventilation, condensation, corrosion, durabilité des revêtements, eaux pluviales."],
+      ["Littoral", "Air salin : risque de corrosion des façades, fixations et quincaillerie."],
+      ["Altitude", "Écarts de température entre le jour et la nuit, isolation adaptée."],
+      ["Vent, séisme, inondation", "Conception entièrement dépendante de l'étude d'ingénierie locale."],
+      ["Hors réseau", "Solaire avec stockage, groupe électrogène, stockage et traitement de l'eau — capacité et autorisation à confirmer."]
+    ],
+    "scales_h2": "Ordres de grandeur, à titre d'illustration",
+    "scales": [
+      ["20 logements", "Un ou deux types de maisons, plan de masse, réseaux réalisés localement"],
+      ["Base-vie de 100 personnes", "Hébergement, bloc sanitaire, réfectoire, bureau"],
+      ["Base-vie de 300 personnes", "Hébergement par phases, deux blocs sanitaires, réfectoire, infirmerie, administration"],
+      ["École de 8 classes", "Salles de classe, sanitaires, salle des professeurs"]
+    ],
+    "scales_note": "Exemples illustratifs, non construits. Aucune surface ni aucun prix n'est publié sans étude du projet.",
+    "chain_h2": "De la Türkiye à votre site",
+    "chain": [
+      ["Fabrication", "Selon le cahier des charges de MODUNERA, en Türkiye.", "MODUNERA"],
+      ["Transport principal", "Navire Ro-Ro ou conteneur jusqu'au port de destination.", "Selon l'Incoterm"],
+      ["Port et douane", "Dédouanement, droits et taxes, documents.", "En général l'acheteur ou son transitaire"],
+      ["Transport intérieur", "Du port au site, convois exceptionnels compris.", "Selon l'Incoterm et le contrat"],
+      ["Déchargement et montage", "Grue, pose, raccordements, réception.", "Selon le contrat"]
+    ],
+    "models_h2": "Modèles d'achat",
+    "models": [
+      ["Clé en main", "Sous réserve du contrat et d'un partenaire local pour les travaux sur site."],
+      ["Fourniture seule", "Les bâtiments livrés au point convenu ; montage par le client."],
+      ["Sous-traitance EPC", "Fourniture à l'entrepreneur principal qui détient le contrat."],
+      ["Partenaire local", "Montage et service par une entreprise locale qualifiée."]
+    ],
+    "markets_h2": "Marchés à l'étude",
+    "markets_p": "Une hypothèse de travail sur l'origine des demandes — pas une liste de pays desservis. Chaque marché n'est ouvert qu'après l'étude de faisabilité.",
+    "markets": ["République démocratique du Congo", "Guinée", "Sénégal", "Côte d'Ivoire", "Ghana", "Nigeria", "Kenya", "Ouganda", "Tanzanie"],
+    "legal_note": "Les règles locales de marchés publics, de partenariat et de construction ne sont pas présentées ici comme un conseil juridique. Elles sont vérifiées pour chaque projet avec des professionnels locaux.",
+    "form_h2": "Présenter votre projet",
+    "form_p": "Le formulaire de demande de projet détaillé est en anglais. Vous pouvez y écrire en français ; une personne lit chaque demande.",
+    "form_cta": "Ouvrir le formulaire de projet",
+    "wa": "Bonjour MODUNERA, je prépare un projet modulaire en __ : type __, capacité environ __, calendrier __.",
+    "wa_label": "Écrire sur WhatsApp",
+    "en_link": "English version"
+  },
+  "en_africa": {
+    "segments_h2": "Project types",
+    "segments": ["workforce-camps", "prefabricated-houses", "site-offices-and-sanitary", "modular-schools", "healthcare-buildings", "flat-pack-modular-units"],
+    "scales_h2": "Project scales, for illustration",
+    "scales": [
+      ["20 houses", "One or two house types, site layout, infrastructure built locally"],
+      ["50-person camp", "Accommodation, sanitary block, dining module, office"],
+      ["100-person camp", "Accommodation blocks, sanitary, dining and kitchen, site office"],
+      ["300-person camp", "Phased accommodation, two sanitary blocks, dining, first-aid room, administration"],
+      ["8-classroom school", "Classrooms, toilets, staff room"]
+    ],
+    "scales_note": "Illustrative examples, not built. No floor area or price is published without a project study.",
+    "models_h2": "Procurement models",
+    "models": [
+      ["Turnkey, subject to contract", "With a local partner for site works; scope and liabilities set in the contract."],
+      ["Factory supply only", "Buildings delivered to the agreed point; installation by the client."],
+      ["EPC subcontractor supply", "Supply to the main contractor who holds the client contract."],
+      ["Local partner installation", "Assembly and service by a qualified local company."]
+    ],
+    "fr_link": "Version française"
+  }
+}

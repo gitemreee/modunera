@@ -136,7 +136,9 @@ for (const [de, en] of [["loesungen/", "en/solutions/"], ["so-arbeiten-wir/", "e
 b2bEn.solutions.forEach((s, i) => addCluster({ de: `${b2bDe.solutions[i].slug}/`, en: `${s.slug}/` }));
 b2bEn.concepts.forEach((c, i) => addCluster({ de: `${b2bDe.concepts[i].slug}/`, en: `${c.slug}/` }));
 addCluster({ de: `${b2bDe.regions.europe.slug}/`, en: `${b2bEn.regions.europe.slug}/` });
-addCluster({ de: `${b2bDe.regions.africa.slug}/`, en: `${b2bEn.regions.africa.slug}/` });
+// the French Africa hub (data/b2b-catalog.json) joins the DE/EN pair
+const b2bCatalog = await readJson("data/b2b-catalog.json");
+addCluster({ de: `${b2bDe.regions.africa.slug}/`, en: `${b2bEn.regions.africa.slug}/`, fr: `${b2bCatalog.fr_africa.slug}/` });
 addCluster({ de: `${b2bDe.proposal.slug}/`, en: `${b2bEn.proposal.slug}/` });
 
 /* Two generators route their own pages — the local news hubs and the production

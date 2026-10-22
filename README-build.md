@@ -609,3 +609,23 @@ now holds 22,400 words of per-subject source: five points, five mistakes and
 three questions for each of the 58 subjects. Article bodies run 490–850 words on
 top of the shared market appendix; taking them to 1,500 means roughly doubling
 that corpus again, subject by subject.
+
+## Procurement layer (2026-10-22)
+
+`data/b2b-catalog.json` feeds `buildCatalog()` in `tools/build-modunera-v2.mjs`:
+
+- six building-type pages under `/en/solutions/`
+- `/en/industries/` and its five industry pages
+- `/en/company/capability/`, `/en/company/export-logistics/` and `/en/resources/procurement-faq/`
+- the extra sections on `/en/africa/`
+- `/fr/afrique/`, in the hreflang cluster with `afrika/` and `en/africa/` (`tools/build-hreflang-v7.mjs`)
+
+The EN home reads the same file for its building-type and industry cards (`tools/build-modunera-europe.mjs`). It is English only, except `fr_africa`.
+
+The quick enquiry is a second Netlify form, `quick-enquiry`. Its field names are shared with `project-proposal`; see `docs/rfq-data-model.md`. Both forms are `data-rfq` forms:
+
+- `assets/js/main.js` shows the confirmation only after Netlify answers 2xx.
+- It fills the reference code, the UTM parameters and the landing page.
+- It does not copy the lead into `localStorage`.
+
+Adding a field to `project-proposal` means adding it to **both** `data/b2b.json` and `data/b2b-de.json`, because Netlify keeps one field list per form name. The honesty rules and the evidence status are in `docs/content-evidence-register.md`.

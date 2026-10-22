@@ -265,3 +265,13 @@ the pages currently cannot say.
 
 **Forms**
 - [ ] A mailbox that receives Netlify form notifications (`modunera.com` has no MX record; `emre@` and `ersan@` do not receive mail until DNS is set up at the mail provider)
+
+## 9. Procurement layer (2026-10-22)
+
+- [ ] Netlify notification for the new `quick-enquiry` form (and `project-proposal`) to emre@modunera.com
+- [ ] Evidence for "500+ units shipped since 2019" (shipment list or invoices), before it is used outside the capability page
+- [ ] Company profile / capability statement PDF (real document), to replace "on request"
+- [ ] Certificates, if any exist (ISO, CE, ...) — none is claimed today
+- [ ] Ghana / Nigeria / Kenya pilots: real enquiries, port and route experience, a local partner — needed before country pages are written
+- [ ] DRC / Guinea: confirmation of procurement and partnership rules by a local expert
+- [ ] CRM choice (HubSpot, Zoho, Pipedrive) for `crmEndpoint`
