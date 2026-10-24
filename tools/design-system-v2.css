@@ -1848,3 +1848,10 @@ form[aria-busy="true"] button{opacity:.6;pointer-events:none}
 @media(max-width:920px){.process-steps,.industry-flow{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:640px){.process-steps,.industry-flow,.division-grid{grid-template-columns:1fr}.rfq-box{padding:18px 16px 4px}}
 @media(prefers-reduced-motion:reduce){.division-card{transition:none}.division-card:hover{transform:none}}
+
+/* The dock is a column that keeps the closed panel's box in the layout, and
+   the dock itself took clicks across that empty box — on a phone it sat over
+   the proposal form's Continue button and swallowed the tap. Only the visible
+   controls, and the panel while open, take pointer events now. */
+.wa-dock{pointer-events:none}
+.wa-dock .wa-rail,.wa-dock .wa-launch,.wa-dock .wa-call,.wa-dock .wa-tip,.wa-dock.open .wa-panel{pointer-events:auto}
