@@ -1,7 +1,7 @@
 MODUNERA DAILY INTELLIGENCE REPORT
 
-Date:   2026-11-11
-Run ID: run-2026-11-11-001
+Date:   2026-11-12
+Run ID: run-2026-11-12-001
 Search provider:   (NOT CONFIGURED — no scan performed)
 Search Console:  1470 row(s) from 7 file(s)
 
@@ -114,9 +114,15 @@ RUN COUNTERS (section 72)
 
 REVIEW QUEUE
 
+  de-lossatal-lueptitz  status=planning-participation  due 2026-11-12
   ch-st-margrethen-baugesuch  status=public-building-application  due 2026-10-01
+  nl-lisse-tiny-houses  status=municipal-project  due 2026-11-12
   nl-meppel-nieuwveense-landen  status=agreement-and-planning  due 2026-09-15
   nl-vlaardingen-hoofdstedenbuurt  status=permit-or-planning  due 2026-10-01
+  dk-vinge-tiny-house-plots  status=construction-and-move-in  due 2026-11-12
+  dk-vejle-tommeliden  status=municipal-tiny-house-area  due 2026-11-12
+  dk-koege-tiny-varigheden  status=local-plan-process  due 2026-11-12
+  lu-niederanven-3d-print  status=completed-municipal-demonstrator  due 2026-11-12
 
 STORE
 
