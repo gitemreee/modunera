@@ -1,7 +1,7 @@
 MODUNERA DAILY INTELLIGENCE REPORT
 
-Date:   2026-11-15
-Run ID: run-2026-11-15-001
+Date:   2026-11-16
+Run ID: run-2026-11-16-001
 Search provider:   (NOT CONFIGURED — no scan performed)
 Search Console:  1470 row(s) from 7 file(s)
 
@@ -123,6 +123,7 @@ REVIEW QUEUE
   dk-vejle-tommeliden  status=municipal-tiny-house-area  due 2026-11-12
   dk-koege-tiny-varigheden  status=local-plan-process  due 2026-11-12
   lu-niederanven-3d-print  status=completed-municipal-demonstrator  due 2026-11-12
+  de-menden-sauerlandstrasse  status=planning-participation  due 2026-11-16
 
 STORE
 
