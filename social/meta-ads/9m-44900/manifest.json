@@ -1,0 +1,71 @@
+{
+  "price": "44.900 €",
+  "variants": {
+    "a-natur": {
+      "photo": "social/instagram/00-candidates/IMG_20250519_183120.jpg",
+      "headline": "Dein Zuhause in der Natur.",
+      "files": {
+        "1x1": {
+          "file": "social/meta-ads/9m-44900/a-natur/1x1.jpg",
+          "px": "1080x1080"
+        },
+        "4x5": {
+          "file": "social/meta-ads/9m-44900/a-natur/4x5.jpg",
+          "px": "1080x1350"
+        },
+        "9x16": {
+          "file": "social/meta-ads/9m-44900/a-natur/9x16.jpg",
+          "px": "1080x1920"
+        },
+        "191x1": {
+          "file": "social/meta-ads/9m-44900/a-natur/191x1.jpg",
+          "px": "1200x628"
+        }
+      }
+    },
+    "b-abend": {
+      "photo": "social/instagram/01-selected/IMG_20250913_193621.jpg",
+      "headline": "Ankommen. Abschalten.",
+      "files": {
+        "1x1": {
+          "file": "social/meta-ads/9m-44900/b-abend/1x1.jpg",
+          "px": "1080x1080"
+        },
+        "4x5": {
+          "file": "social/meta-ads/9m-44900/b-abend/4x5.jpg",
+          "px": "1080x1350"
+        },
+        "9x16": {
+          "file": "social/meta-ads/9m-44900/b-abend/9x16.jpg",
+          "px": "1080x1920"
+        },
+        "191x1": {
+          "file": "social/meta-ads/9m-44900/b-abend/191x1.jpg",
+          "px": "1200x628"
+        }
+      }
+    },
+    "c-innen": {
+      "photo": "social/instagram/01-selected/20240227_113020.jpg",
+      "headline": "Einziehen. Fertig.",
+      "files": {
+        "1x1": {
+          "file": "social/meta-ads/9m-44900/c-innen/1x1.jpg",
+          "px": "1080x1080"
+        },
+        "4x5": {
+          "file": "social/meta-ads/9m-44900/c-innen/4x5.jpg",
+          "px": "1080x1350"
+        },
+        "9x16": {
+          "file": "social/meta-ads/9m-44900/c-innen/9x16.jpg",
+          "px": "1080x1920"
+        },
+        "191x1": {
+          "file": "social/meta-ads/9m-44900/c-innen/191x1.jpg",
+          "px": "1200x628"
+        }
+      }
+    }
+  }
+}
