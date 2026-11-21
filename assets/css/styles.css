@@ -2159,4 +2159,31 @@ form[aria-busy="true"] button{opacity:.6;pointer-events:none}
    controls, and the panel while open, take pointer events now. */
 .wa-dock{pointer-events:none}
 .wa-dock .wa-rail,.wa-dock .wa-launch,.wa-dock .wa-call,.wa-dock .wa-tip,.wa-dock.open .wa-panel{pointer-events:auto}
+
+/* --- Photo heroes on phones (2026-11-21) ------------------------------------
+   A mobile audit of 47 page types found four things on every photo hero:
+   breadcrumbs and kicker kept their light-page colours and vanished on the
+   photograph; .country-hero inherited the muted paragraph colour of a plain
+   page hero; the overlay was too thin for white type on a bright photograph;
+   and .data-strip kept its pill radius after stacking, which turned it into
+   a circle that clipped its own labels. Buttons, trust items and captions
+   were under 11 px. */
+.location-hero .breadcrumbs,.location-hero .breadcrumbs a{color:rgba(255,255,255,.86)}
+.location-hero .hero-kicker{color:#fff}
+.location-hero .hero-kicker:before{background:#fff}
+.location-hero.country-hero h1,.location-hero.country-hero p{color:#fff}
+.location-hero h1,.location-hero p,.location-hero .breadcrumbs,.location-hero .hero-kicker{text-shadow:0 1px 10px rgba(16,26,19,.45)}
+@media (max-width:720px){
+  .location-hero-overlay,.article-visual-overlay{
+    background:linear-gradient(180deg,rgba(24,38,28,.58) 0%,rgba(24,38,28,.62) 45%,rgba(24,38,28,.86) 100%);
+  }
+  .location-hero .breadcrumbs{margin-bottom:14px}
+  .btn{font-size:12px}
+  .trust-item span,.project-caption small,.editorial-caption small{font-size:11px}
+  .model-specs span,.blog-meta,.footer-bottom span{font-size:11.5px}
+}
+@media (max-width:920px){
+  .data-strip{border-radius:var(--r-soft)}
+  .data-strip>div{padding:14px 18px}
+}
 /* MODUNERA BRAND PALETTE END */
