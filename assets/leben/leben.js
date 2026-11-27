@@ -224,7 +224,8 @@
     const v = (n) => Number(calc.elements[n].value);
     const area = v("area"), m2 = v("eur_m2"), equity = v("equity"), rate = v("rate"), years = v("years");
     const opt = calc.elements.model.selectedOptions[0];
-    const tiny = Number(opt.value) + (calc.elements.delivery.checked ? delivery : 0);
+    const withVat = calc.elements.eust.checked;
+    const tiny = Math.round((Number(opt.value) + (calc.elements.delivery.checked ? delivery : 0)) * (withVat ? 1.19 : 1));
     const efh = area * m2;
     const n = years * 12;
     const rE = annuity(efh - equity, rate, years), rT = annuity(tiny - equity, rate, years);
@@ -237,7 +238,8 @@
     $$('input[type="range"]', calc).forEach((r) => r.style.setProperty("--fillp", `${((r.value - r.min) / (r.max - r.min)) * 100}%`));
     out("efh").textContent = eur(efh);
     out("tiny").textContent = eur(tiny);
-    out("tinyname").textContent = `${opt.dataset.name}${calc.elements.delivery.checked ? " inkl. Lieferung" : " ab Werk"}`;
+    const parts = [calc.elements.delivery.checked ? "Lieferung" : "", withVat ? "19 % EUSt" : ""].filter(Boolean);
+    out("tinyname").textContent = `${opt.dataset.name}${parts.length ? ` inkl. ${parts.join(" und ")}` : " ab Werk"}`;
     const max = Math.max(efh, tiny);
     barOf("efh").style.width = `${(efh / max) * 100}%`;
     barOf("tiny").style.width = `${(tiny / max) * 100}%`;
@@ -249,7 +251,7 @@
     out("free").textContent = equity >= tiny
       ? `Mit ${eur(equity)} Eigenkapital wäre das ${opt.dataset.name} ohne Kredit bezahlt – und ${eur(equity - tiny)} blieben übrig.`
       : `Rund ${eur(rE - rT)} weniger Rate pro Monat und ${eur(iE - iT)} weniger Zinsen über ${years} Jahre – bei denselben Annahmen.`;
-    calcState = { name: opt.dataset.name, tiny, efh, area, m2, equity, rate, years, delivery: calc.elements.delivery.checked };
+    calcState = { name: opt.dataset.name, tiny, efh, area, m2, equity, rate, years, incl: parts.length ? ` inkl. ${parts.join(" und ")} (Richtwert)` : " ab Werk" };
   }
   calc.addEventListener("input", runCalc);
   calc.addEventListener("change", runCalc);
@@ -264,7 +266,7 @@
   }
   $("[data-calc-ask]").addEventListener("click", () => {
     const s = calcState;
-    ask(`Interesse an ${s.name}. Rechenbeispiel: ${eur(s.tiny)}${s.delivery ? " inkl. Lieferung (Richtwert)" : " ab Werk"} statt ${eur(s.efh)} Neubau (${s.area} m² × ${eur(s.m2)}).`);
+    ask(`Interesse an ${s.name}. Rechenbeispiel: ${eur(s.tiny)}${s.incl} statt ${eur(s.efh)} Neubau (${s.area} m² × ${eur(s.m2)}).`);
   });
   $$(".mcard-ask").forEach((b) => b.addEventListener("click", () => ask(`Interesse an ${b.dataset.ask}.`)));
 
@@ -444,6 +446,174 @@
     }, { threshold: 0.35 }).observe(bm);
   }
 
+
+  /* ------------------------------------------------------------ real photograph: day fades to evening */
+  const real = $("[data-real]");
+  let updateReal = () => {};
+  if (real) {
+    const night = $(".real-night", real), rbtns = $$("[data-real-set]", real);
+    const rPinned = !RM;
+    real.classList.toggle("pinned", rPinned);
+    let manual = null, manualP = 0, shown = -1;
+    const setNight = (v, soft) => {
+      if (Math.abs(v - shown) < 0.004) return;
+      shown = v;
+      night.style.transition = soft ? "opacity .9s ease" : "none";
+      night.style.opacity = v.toFixed(3);
+      rbtns.forEach((b) => b.setAttribute("aria-pressed", String((b.dataset.realSet === "1") === v > 0.5)));
+    };
+    updateReal = () => {
+      if (!rPinned) return;
+      const r = real.getBoundingClientRect();
+      if (r.bottom < -50 || r.top > vh + 50) return;
+      const p = pinProgress(real);
+      real.style.setProperty("--rp", p.toFixed(3));
+      if (manual !== null) { if (Math.abs(p - manualP) > 0.08) manual = null; else return; }
+      setNight(smooth(0.3, 0.72, p));
+    };
+    rbtns.forEach((b) => b.addEventListener("click", () => { manual = Number(b.dataset.realSet); manualP = pinProgress(real); setNight(manual, true); }));
+  }
+
+  /* ------------------------------------------------------------ look around: hotspots and list in step */
+  const look = $("[data-look]");
+  if (look) {
+    const ltabs = $$("[data-look-tab]", look), scenes = $$("[data-look-scene]", look);
+    let lUser = false, lTimer = 0, lIdx = -1, lVisible = false;
+    const current = () => scenes.find((sc) => sc.classList.contains("on"));
+    const setSpot = (k) => {
+      const sc = current();
+      $$(".hs", sc).forEach((h) => h.classList.toggle("on", Number(h.dataset.hs) === k));
+      $$(".look-list li", sc).forEach((li) => li.classList.toggle("on", Number(li.dataset.hs) === k));
+      lIdx = k;
+    };
+    const tour = () => {
+      clearInterval(lTimer);
+      if (!lVisible || lUser || RM) return;
+      lTimer = setInterval(() => { const n = $$(".hs", current()).length; setSpot((lIdx + 1) % n); }, 2800);
+    };
+    const setScene = (id, user) => {
+      scenes.forEach((sc) => sc.classList.toggle("on", sc.dataset.lookScene === id));
+      ltabs.forEach((t) => { const on = t.dataset.lookTab === id; t.setAttribute("aria-selected", String(on)); t.tabIndex = on ? 0 : -1; });
+      lIdx = -1; setSpot(0);
+      if (user) { lUser = false; tour(); }
+    };
+    ltabs.forEach((t, i) => {
+      t.addEventListener("click", () => setScene(t.dataset.lookTab, true));
+      t.addEventListener("keydown", (e) => { if (e.key === "ArrowRight" || e.key === "ArrowLeft") { e.preventDefault(); const n = ltabs[(i + (e.key === "ArrowRight" ? 1 : -1) + ltabs.length) % ltabs.length]; n.focus(); setScene(n.dataset.lookTab, true); } });
+    });
+    scenes.forEach((sc) => {
+      [...$$(".hs", sc), ...$$(".look-list li", sc)].forEach((el) => {
+        const pickSpot = () => { lUser = true; clearInterval(lTimer); setSpot(Number(el.dataset.hs)); };
+        el.addEventListener("click", pickSpot);
+        el.addEventListener("pointerenter", (e) => { if (e.pointerType === "mouse") pickSpot(); });
+        el.addEventListener("focus", pickSpot);
+      });
+    });
+    setSpot(0);
+    new IntersectionObserver(([e]) => { lVisible = e.isIntersecting; tour(); }, { threshold: 0.3 }).observe($(".look-stage", look));
+  }
+
+  /* ------------------------------------------------------------ production story */
+  const making = $("[data-making]");
+  let updateMaking = () => {}, layoutMaking = () => {};
+  if (making) {
+    const mPh = $$(".mk-ph", making), mSt = $$(".mk-steps li", making);
+    let mPinned = false, mIdx = -1;
+    layoutMaking = () => { mPinned = !RM && vw > 860; making.classList.toggle("pinned", mPinned); };
+    updateMaking = () => {
+      if (!mPinned) return;
+      const r = making.getBoundingClientRect();
+      if (r.bottom < -50 || r.top > vh + 50) return;
+      const p = pinProgress(making);
+      making.style.setProperty("--mp", p.toFixed(3));
+      const i = Math.min(mPh.length - 1, Math.floor(p * mPh.length * 0.999));
+      if (i === mIdx) return;
+      mIdx = i;
+      mPh.forEach((el, k) => el.classList.toggle("on", k === i));
+      mSt.forEach((el, k) => el.classList.toggle("on", k === i));
+    };
+  }
+
+  /* ------------------------------------------------------------ which house fits you */
+  const quiz = $("[data-quiz]");
+  if (quiz) {
+    const QD = JSON.parse($("[data-quiz-data]", quiz).textContent);
+    const qEls = $$(".quiz-q", quiz), resBox = $("[data-quiz-result]", quiz), qBody = $(".quiz-body", quiz);
+    const answers = {};
+    const esc = (t) => String(t).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+    const showQ = (i) => {
+      qEls.forEach((q, k) => q.classList.toggle("on", k === i));
+      resBox.hidden = true;
+      qBody.style.setProperty("--qp", (i / qEls.length).toFixed(3));
+    };
+    const finish = () => {
+      const score = {};
+      for (const key in QD.models) score[key] = 0;
+      let max = Infinity;
+      const picked = [];
+      QD.questions.forEach((q) => {
+        const o = q.options.find((x) => x.id === answers[q.id]);
+        if (!o) return;
+        picked.push(o);
+        if (o.w) for (const key in o.w) score[key] += o.w[key];
+        if (o.max) max = o.max;
+      });
+      for (const key in QD.models) if (QD.models[key].price > max) score[key] -= 6;
+      const order = Object.keys(QD.models).sort((a, b) => score[b] - score[a] || QD.models[a].price - QD.models[b].price);
+      const win = order[0], also = order[1], m = QD.models[win];
+      const why = picked.filter((o) => (o.w && o.w[win] >= 2) || (o.max && m.price <= o.max)).map((o) => o.why);
+      if (m.price > max) why.push(`liegt ${eur(m.price - max)} über deinem Rahmen – passt aber am besten zu deinen Antworten`);
+      const T = QD.text;
+      resBox.innerHTML = `<div class="qr-card"><div class="qr-img"><img src="${m.img}" width="${m.w}" height="${m.h}" alt="${esc(m.name)}"></div><div class="qr-body"><p class="eyebrow">${esc(T.kicker)}</p><h3>${esc(m.name)}</h3><p class="qr-price">${esc(m.label)} · ${esc(m.lengths)}</p><p class="qr-focus">${esc(m.focus)} · ${esc(m.layout)}</p><ul class="qr-why">${why.map((w) => `<li>${esc(w)}</li>`).join("")}</ul><div class="qr-btns"><button type="button" class="btn btn-sun" data-qr-ask>${esc(T.ask.replace("{model}", m.name))}</button><a class="btn btn-line" href="${m.url}#drawings">${esc(T.plans)}</a></div><p class="qr-also">${esc(T.also)}: <a href="${QD.models[also].url}">${esc(QD.models[also].name)}</a> · <button type="button" data-qr-again>${esc(T.again)}</button></p></div></div>`;
+      qEls.forEach((q) => q.classList.remove("on"));
+      resBox.hidden = false;
+      qBody.style.setProperty("--qp", "1");
+      const labels = picked.map((o) => o.label).join(", ");
+      $("[data-qr-ask]", resBox).addEventListener("click", () => ask(`Haus-Test: ${m.name} (${m.label}). Meine Antworten: ${labels}.`));
+      $("[data-qr-again]", resBox).addEventListener("click", () => showQ(0));
+      link(win, true); setTimeout(() => link(win, false), 2400);
+    };
+    qEls.forEach((q, i) => $$("button", q).forEach((b) => b.addEventListener("click", () => {
+      answers[q.dataset.q] = b.dataset.o;
+      if (i + 1 < qEls.length) showQ(i + 1); else finish();
+    })));
+    showQ(0);
+  }
+
+  /* ------------------------------------------------------------ lightbox */
+  const lb = $("[data-lightbox]");
+  if (lb && lb.showModal) {
+    const LB = JSON.parse($("[data-lb-data]", lb).textContent), img = $("[data-lb-img]", lb), cap = $("[data-lb-cap]", lb);
+    let li = 0;
+    const show = (i) => {
+      li = (i + LB.length) % LB.length;
+      const ph = LB[li];
+      img.src = ph.src; img.width = ph.w; img.height = ph.h; img.alt = ph.alt;
+      cap.textContent = `${ph.alt} · ${li + 1}/${LB.length}`;
+    };
+    $$("[data-lb]").forEach((b) => b.addEventListener("click", () => { show(Math.max(0, LB.findIndex((x) => x.name === b.dataset.lb))); lb.showModal(); }));
+    $("[data-lb-close]", lb).addEventListener("click", () => lb.close());
+    $("[data-lb-prev]", lb).addEventListener("click", () => show(li - 1));
+    $("[data-lb-next]", lb).addEventListener("click", () => show(li + 1));
+    lb.addEventListener("click", (e) => { if (e.target === lb) lb.close(); });
+    lb.addEventListener("keydown", (e) => { if (e.key === "ArrowLeft") show(li - 1); if (e.key === "ArrowRight") show(li + 1); });
+    let tx = null;
+    lb.addEventListener("touchstart", (e) => { tx = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener("touchend", (e) => { if (tx === null) return; const dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 50) show(li + (dx < 0 ? 1 : -1)); tx = null; }, { passive: true });
+  }
+
+  /* ------------------------------------------------------------ sticky offer bar on phones */
+  const stick = $("[data-stick]");
+  let updateStick = () => {};
+  if (stick) {
+    stick.hidden = false;
+    const formSec = $("#anfrage");
+    updateStick = () => {
+      const fr = formSec.getBoundingClientRect();
+      stick.classList.toggle("show", scrollY > vh * 1.6 && fr.top > vh * 0.9);
+    };
+  }
+
   /* ------------------------------------------------------------ the enquiry form */
   const status = $("[data-status]", lead);
   lead.addEventListener("submit", async (e) => {
@@ -457,7 +627,7 @@
       if (!res.ok) throw new Error(String(res.status));
       lead.classList.add("sent");
       status.className = "f-status ok";
-      status.textContent = "Danke! Deine Anfrage ist bei uns angekommen. Wir melden uns per E-Mail.";
+      status.textContent = "Danke! Deine Anfrage ist bei uns angekommen. Du bekommst innerhalb eines Werktags eine Antwort per E-Mail.";
       btn.textContent = "Gesendet";
     } catch {
       status.className = "f-status err";
@@ -477,6 +647,9 @@
     updateDay();
     updateExplode();
     updateRoute();
+    updateReal();
+    updateMaking();
+    updateStick();
   }
   const ask4 = () => { if (!ticking) { ticking = true; requestAnimationFrame(tick); } };
   addEventListener("scroll", ask4, { passive: true });
@@ -486,10 +659,10 @@
     rz = setTimeout(() => {
       if (Math.abs(innerWidth - vw) < 2 && Math.abs(innerHeight - vh) < 120) { vh = innerHeight; ask4(); return; }
       vw = innerWidth; vh = innerHeight;
-      layoutDay(); heroFlies.resize(); ctaSky.resize(); heroP = -1; exE = -1; routeP = -1; ask4();
+      layoutDay(); layoutMaking(); heroFlies.resize(); ctaSky.resize(); heroP = -1; exE = -1; routeP = -1; ask4();
     }, 150);
   });
-  layoutDay();
-  addEventListener("load", () => { layoutDay(); ask4(); });
+  layoutDay(); layoutMaking();
+  addEventListener("load", () => { layoutDay(); layoutMaking(); ask4(); });
   tick();
 })();

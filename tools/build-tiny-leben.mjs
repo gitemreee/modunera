@@ -433,6 +433,119 @@ function priceStrip() {
 
 const ART = { ridge, forestPath, grassPath, heroHouse, rng };
 
+/* ---------------------------------------------------------------- real photographs, front and centre */
+const WA = (text) => `https://wa.me/905535435342?text=${encodeURIComponent(text)}`;
+const still = (name, kind) => {
+  const file = `assets/leben/img/${name}-${kind}.webp`;
+  const [w, h] = webpSize(file);
+  return { file, w, h };
+};
+function realScene() {
+  const L = copy.real;
+  const pic = (name, cls) => {
+    const wide = still(name, "wide"), tall = still(name, "tall");
+    return `<picture class="real-img ${cls}"><source media="(max-width:720px)" srcset="${UP}${tall.file}" width="${tall.w}" height="${tall.h}"><img src="${UP}${wide.file}" width="${wide.w}" height="${wide.h}" alt="${esc(photo(name).alt)}" loading="lazy" decoding="async"></picture>`;
+  };
+  return `<section class="real" id="echt" data-real>
+  <div class="real-stage">
+    ${pic(L.day, "real-day")}
+    ${pic(L.night, "real-night")}
+    <div class="real-shade"></div>
+    <div class="real-copy">
+      <p class="eyebrow">${esc(L.kicker)}</p>
+      <h2>${esc(L.title)}</h2>
+      <p>${esc(L.text)}</p>
+      <div class="real-ui">
+        <div class="real-switch" role="group" aria-label="Tageszeit"><button type="button" data-real-set="0" aria-pressed="true">${esc(L.dayLabel)}</button><button type="button" data-real-set="1" aria-pressed="false">${esc(L.nightLabel)}</button></div>
+        <a class="btn btn-sun" href="#anfrage">${esc(L.cta)}</a>
+      </div>
+    </div>
+  </div>
+</section>`;
+}
+function ctaBand(title, text) {
+  return `<div class="band reveal"><div><h3>${esc(title)}</h3><p>${esc(text)}</p></div><div class="band-btns"><a class="btn btn-sun" href="#anfrage">Angebot anfordern</a><a class="btn btn-line" href="${WA("Hallo MODUNERA, ich interessiere mich für ein Tiny House. Bitte meldet euch bei mir.")}" rel="noopener">WhatsApp</a></div></div>`;
+}
+function lookSection() {
+  const L = copy.look;
+  const tabs = L.scenes.map((sc, i) => `<button type="button" role="tab" class="s-tab" id="look-tab-${sc.id}" aria-selected="${i === 0}" aria-controls="look-${sc.id}" data-look-tab="${sc.id}">${esc(sc.name)}</button>`).join("");
+  const scenes = L.scenes.map((sc, i) => {
+    const ph = sc.id === "aussen" ? (() => { const w = still(sc.photo, "wide"); return `<img src="${UP}${w.file}" width="${w.w}" height="${w.h}" alt="${esc(photo(sc.photo).alt)}" loading="lazy" decoding="async">`; })() : photoImg(sc.photo, "(max-width: 980px) 100vw, 760px");
+    const spots = sc.spots.map((sp, k) => `<button type="button" class="hs${sp.x > 72 ? " hs-r" : sp.x < 28 ? " hs-l" : ""}${sp.y < 22 ? " hs-b" : ""}" style="--x:${sp.x};--y:${sp.y}" data-hs="${k}" aria-label="${esc(sp.title)}"><i>${k + 1}</i><b>${esc(sp.title)}</b></button>`).join("");
+    const list = sc.spots.map((sp, k) => `<li data-hs="${k}" tabindex="0"><span>${k + 1}</span><div><strong>${esc(sp.title)}</strong><p>${esc(sp.text)}</p></div></li>`).join("");
+    return `<div class="look-scene${i === 0 ? " on" : ""}" id="look-${sc.id}" role="tabpanel" aria-labelledby="look-tab-${sc.id}" data-look-scene="${sc.id}"><div class="look-photo">${ph}${spots}</div><ol class="look-list">${list}</ol></div>`;
+  }).join("");
+  return `<section class="look" id="innen" data-look>
+  <div class="wrap">
+    <header class="sec-head reveal"><p class="eyebrow">${esc(L.kicker)}</p><h2>${esc(L.title)}</h2><p>${esc(L.intro)}</p></header>
+    <div class="s-tabs" role="tablist" aria-label="Aufnahmen">${tabs}</div>
+    <div class="look-stage">${scenes}</div>
+    ${ctaBand("Gefällt dir, was du siehst?", "Sag uns, wie dein Haus aussehen soll – du bekommst innerhalb eines Werktags eine Antwort.")}
+  </div>
+</section>`;
+}
+function makingSection() {
+  const L = copy.making;
+  const n = L.steps.length;
+  const photosHtml = L.steps.map((st, i) => `<figure class="mk-ph${i === 0 ? " on" : ""}" data-i="${i}">${photoImg(st.photo, "(max-width: 860px) 84vw, 60vw")}</figure>`).join("");
+  const steps = L.steps.map((st, i) => `<li class="${i === 0 ? "on" : ""}" data-i="${i}"><span>${String(i + 1).padStart(2, "0")}</span><div><strong>${esc(st.title)}</strong><p>${esc(st.text)}</p></div></li>`).join("");
+  const cards = L.steps.map((st, i) => `<article class="mk-card"><div class="mk-card-ph">${photoImg(st.photo, "84vw")}</div><div class="mk-card-tx"><span>${String(i + 1).padStart(2, "0")}</span><h3>${esc(st.title)}</h3><p>${esc(st.text)}</p></div></article>`).join("");
+  return `<section class="making" id="werk" data-making style="--n:${n}">
+  <div class="mk-stage">
+    <div class="mk-photos" aria-hidden="true">${photosHtml}</div>
+    <div class="mk-copy">
+      <p class="eyebrow">${esc(L.kicker)}</p><h2>${esc(L.title)}</h2><p class="mk-intro">${esc(L.intro)}</p>
+      <ol class="mk-steps">${steps}</ol>
+      <div class="mk-bar" aria-hidden="true"><i></i></div>
+    </div>
+    <div class="mk-track">${cards}</div>
+  </div>
+</section>`;
+}
+function quizBlock() {
+  const Q = copy.quiz;
+  const data = {
+    questions: Q.questions.map((q) => ({ id: q.id, options: q.options.map((o) => ({ id: o.id, label: o.label, w: o.w ?? null, max: o.max ?? null, why: o.why })) })),
+    models: Object.fromEntries(modelRows.map((m) => [m.key, { name: m.name, price: m.price, label: `ab ${eur(m.price)} ab Werk`, img: `${UP}${m.file}`, w: m.w, h: m.h, url: `${UP}modelle/md-${m.n}/`, plan: `${UP}assets/images/drawings/de/md-${m.n}-3d.svg`, focus: m.focus, lengths: m.lengths, layout: m.layout }])),
+    text: Q.result,
+  };
+  const qs = Q.questions.map((q, i) => `<fieldset class="quiz-q${i === 0 ? " on" : ""}" data-q="${q.id}"><legend><span>${i + 1}/${Q.questions.length}</span>${esc(q.q)}</legend><div class="quiz-opts">${q.options.map((o) => `<button type="button" data-o="${o.id}">${esc(o.label)}</button>`).join("")}</div></fieldset>`).join("");
+  return `<div class="quiz reveal" id="test" data-quiz>
+  <div class="quiz-head"><p class="eyebrow">${esc(Q.kicker)}</p><h3>${esc(Q.title)}</h3><p>${esc(Q.intro)}</p></div>
+  <div class="quiz-body"><div class="quiz-progress" aria-hidden="true"><i></i></div>${qs}<div class="quiz-result" data-quiz-result aria-live="polite" hidden></div></div>
+  <script type="application/json" data-quiz-data>${JSON.stringify(data).replace(/</g, "\\u003c")}</script>
+</div>`;
+}
+function kaufenSection() {
+  const K = copy.kaufen;
+  const m = modelRows.find((x) => x.n === "1");
+  const sub = m.price + deliveryDE, vat = Math.round(sub * 0.19);
+  const rows = [[K.cost.rows[0], eur(m.price)], [K.cost.rows[1], eur(deliveryDE)], [K.cost.rows[2], eur(vat)]];
+  const check = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  return `<section class="kaufen" id="kaufen">
+  <div class="wrap">
+    <header class="sec-head reveal"><p class="eyebrow">${esc(K.kicker)}</p><h2>${esc(K.title)}</h2><p>${esc(K.intro)}</p></header>
+    <div class="pay reveal">
+      <div class="pay-bar" role="img" aria-label="Zahlung in drei Schritten: ${K.pay.map((p) => `${p.pct} % ${p.when}`).join(", ")}">${K.pay.map((p, i) => `<i style="--w:${p.pct};--i:${i}"><b>${p.pct} %</b></i>`).join("")}</div>
+      <ol class="pay-steps">${K.pay.map((p, i) => `<li style="--w:${p.pct}"><span class="pay-n">${i + 1}</span><p class="pay-when"><b>${p.pct} %</b> ${esc(p.when)}</p><h3>${esc(p.title)}</h3><p>${esc(p.text)}</p></li>`).join("")}</ol>
+      <div class="pay-weeks"><strong>${esc(K.weeks)}</strong><span>${esc(K.weeks_label)}</span></div>
+    </div>
+    <div class="trust-grid">
+      <div class="tcard t-guar reveal">${K.guarantee.map((g) => `<div class="guar"><strong>${g.years}</strong><div><b>${esc(g.title)}</b><span>${esc(g.text)}</span></div></div>`).join("")}</div>
+      <div class="tcard reveal" style="--k:1"><h3>${esc(K.docs.title)}</h3><ul class="t-list">${K.docs.items.map((d) => `<li>${check}<span>${esc(d)}</span></li>`).join("")}</ul></div>
+      <div class="tcard reveal" style="--k:2"><h3>${esc(K.see.title)}</h3><ul class="t-list t-see">${K.see.items.map((d) => `<li>${check}<span><b>${esc(d.title)}</b>${esc(d.text)}</span></li>`).join("")}</ul></div>
+      <div class="tcard reveal" style="--k:3"><h3>${esc(K.service.title)}</h3><p>${esc(K.service.text)}</p><a class="btn btn-sun" href="#anfrage">Angebot anfordern</a></div>
+    </div>
+    <div class="cost reveal">
+      <div class="cost-copy"><h3>${esc(K.cost.title)}</h3><p>${esc(K.cost.note.replace("{model}", m.name))}</p></div>
+      <table class="cost-table"><tbody>${rows.map(([a, b]) => `<tr><th scope="row">${esc(a)}</th><td>${b}</td></tr>`).join("")}</tbody><tfoot><tr><th scope="row">${esc(K.cost.rows[3])}</th><td>${eur(sub + vat)}</td></tr></tfoot></table>
+    </div>
+    <p class="stated">${esc(K.stated)}</p>
+  </div>
+</section>`;
+}
+const allPhotos = photos.map((p) => { const ph = photo(p.name); return { src: `${UP}${ph.large.file}`, w: ph.w, h: ph.h, alt: ph.alt, name: p.name }; });
+
 /* the life section: family scene, findings on the body, children in numbers */
 function waffle(value, cls) {
   let s = "";
@@ -508,8 +621,8 @@ const modelCards = modelRows.map((m) => `<article class="mcard" data-tags="${m.t
 </article>`).join("");
 
 const marquee = (names) => {
-  const items = names.map((n) => `<li>${photoImg(n, "380px")}</li>`).join("");
-  return `<ul class="mq-row">${items}</ul><ul class="mq-row" aria-hidden="true">${items.replace(/alt="[^"]*"/g, 'alt=""')}</ul>`;
+  const items = names.map((n) => `<li><button type="button" class="mq-btn" data-lb="${n}" aria-label="Foto vergrößern">${photoImg(n, "380px")}</button></li>`).join("");
+  return `<ul class="mq-row">${items}</ul><ul class="mq-row" aria-hidden="true">${items.replace(/alt="[^"]*"/g, 'alt=""').replace(/<button type="button" class="mq-btn"/g, '<button type="button" class="mq-btn" tabindex="-1"')}</ul>`;
 };
 const rowA = ["aframe-olive-grove", "interior-tall-loft", "unit-standing-seam", "interior-wood", "unit-porch-sand", "interior-living-tv", "aframe-lawn"];
 const rowB = ["production-cladding", "interior-stair-white", "unit-angular-dark", "transport-road", "interior-door-kitchen", "detail-wood-and-metal", "delivery-trailer"];
@@ -559,7 +672,7 @@ const html = `<!doctype html>
 <meta property="og:image" content="${BASE}/${og.large.file}">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="${UP}assets/brand/modunera-mark-v1.png">
-<link rel="preload" href="${UP}assets/leben/fonts/Fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="${UP}assets/leben/fonts/BarlowSemiCondensed-700-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="${UP}assets/leben/fonts/Inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="${UP}assets/leben/leben.css">
 ${ld}
@@ -568,7 +681,7 @@ ${ld}
 <a class="skip" href="#warum">Zum Inhalt springen</a>
 <header class="bar" data-bar>
   <a class="bar-logo" href="${UP}" aria-label="MODUNERA Startseite"><img src="${UP}assets/brand/modunera-master-logo-mountain-v1-white-600.png" width="600" height="151" alt="MODUNERA"></a>
-  <nav class="bar-links" aria-label="Abschnitte"><a href="#leben">Leben</a><a href="#zahlen">Zahlen</a><a href="#rechner">Rechner</a><a href="#alltag">Alltag</a><a href="#aufbau">Aufbau</a><a href="#modelle">Modelle</a><a href="#faq">FAQ</a></nav>
+  <nav class="bar-links" aria-label="Abschnitte"><a href="#leben">Leben</a><a href="#rechner">Rechner</a><a href="#innen">Innen</a><a href="#werk">Werk</a><a href="#test">Haus-Test</a><a href="#modelle">Modelle</a><a href="#kaufen">Sicher kaufen</a><a href="#faq">FAQ</a></nav>
   <div class="bar-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cl-sun" cx="12" cy="12" r="5"/><path class="cl-moon" d="M15 4a8 8 0 1 0 5 13 7 7 0 0 1-5-13z"/></svg><span data-clock>05:40</span></div>
   <a class="bar-cta" href="#anfrage">Anfragen</a>
   <i class="bar-progress" data-progress></i>
@@ -599,6 +712,8 @@ ${ld}
     <p class="mani-text">${words}</p>
   </div>
 </section>
+
+${realScene()}
 
 ${lebenSection()}
 
@@ -639,6 +754,7 @@ ${lebenSection()}
         <label class="rng"><span>Baukosten pro m² <output data-o="eur_m2">${eur(cd.eur_m2)}</output></span><input type="range" name="eur_m2" min="2600" max="3800" step="50" value="${cd.eur_m2}"><small>${esc(copy.calculator.efh_cost_source)}</small></label>
         <label class="sel"><span>Tiny House</span><select name="model">${modelOptions}</select></label>
         <label class="chk"><input type="checkbox" name="delivery" checked><span>Lieferung nach Deutschland einrechnen (Richtwert ${eur(deliveryDE)})</span></label>
+        <label class="chk"><input type="checkbox" name="eust" checked><span>19 % Einfuhrumsatzsteuer einrechnen</span></label>
         <label class="rng"><span>Eigenkapital <output data-o="equity">${eur(cd.equity)}</output></span><input type="range" name="equity" min="0" max="100000" step="5000" value="${cd.equity}"></label>
         <label class="rng"><span>Zinssatz <output data-o="rate">${num(cd.rate, 1)} %</output></span><input type="range" name="rate" min="1" max="7" step="0.1" value="${cd.rate}"></label>
         <label class="rng"><span>Laufzeit <output data-o="years">${cd.years} Jahre</output></span><input type="range" name="years" min="5" max="30" step="1" value="${cd.years}"></label>
@@ -667,6 +783,8 @@ ${lebenSection()}
     <div class="day-track" data-track>${dayPanels}</div>
   </div>
 </section>
+
+${lookSection()}
 
 <section class="nature" id="natur">
   <div class="wrap nature-grid">
@@ -698,9 +816,12 @@ ${lebenSection()}
   </div>
 </section>
 
+${makingSection()}
+
 <section class="models" id="modelle">
   <div class="wrap">
     <header class="sec-head reveal"><p class="eyebrow">Acht Modelle</p><h2>Finde das Haus, das zu deinem Leben passt.</h2><p>Alle Preise sind Richtpreise ab Werk in Sakarya. Den verbindlichen Preis inklusive Lieferung nennt das schriftliche Angebot.</p></header>
+    ${quizBlock()}
     <div class="ps reveal"><h3>Alle Preise auf einem Strahl</h3><div class="ps-scroll">${priceStrip()}</div></div>
     <div class="m-tools"><div class="chips" role="group" aria-label="Nach Nutzung filtern">${filterChips}</div><button type="button" class="sort" data-sort aria-pressed="false">Nach Preis sortieren</button></div>
     <div class="m-grid" data-models>${modelCards}</div>
@@ -710,6 +831,7 @@ ${lebenSection()}
 </section>
 
 <section class="gallery" id="galerie" aria-label="Fotos ausgeführter Häuser">
+  <div class="wrap gallery-head"><div><p class="eyebrow">Galerie</p><h2>${photos.length} echte Aufnahmen.</h2></div><button type="button" class="btn btn-line" data-lb="${photos[0].name}">Alle Fotos ansehen</button></div>
   <div class="mq mq-a">${marquee(rowA)}</div>
   <div class="mq mq-b">${marquee(rowB)}</div>
 </section>
@@ -721,6 +843,8 @@ ${lebenSection()}
     <ol class="r-steps">${routeSteps}</ol>
   </div>
 </section>
+
+${kaufenSection()}
 
 <section class="honest" id="ehrlich">
   <div class="wrap">
@@ -777,6 +901,8 @@ ${lebenSection()}
     <p>Preise sind Richtpreise ab Werk, keine Angebote. Zahlen mit Quellenangabe; Herstellerangaben sind als solche gekennzeichnet. Stand: ${esc(copy.updated.split("-").reverse().join("."))}</p>
   </div>
 </footer>
+<dialog class="lb-dialog" data-lightbox aria-label="Fotogalerie"><button type="button" class="lb-x" data-lb-close aria-label="Schließen">×</button><button type="button" class="lb-nav lb-prev" data-lb-prev aria-label="Vorheriges Foto">‹</button><figure><img alt="" data-lb-img><figcaption data-lb-cap></figcaption></figure><button type="button" class="lb-nav lb-next" data-lb-next aria-label="Nächstes Foto">›</button><script type="application/json" data-lb-data>${JSON.stringify(allPhotos).replace(/</g, "\\u003c")}</script></dialog>
+<div class="stick" data-stick hidden><div><strong>${esc(copy.sticky.text.replace("{minPrice}", eur(minPrice)))}</strong><span>${esc(copy.sticky.sub)}</span></div><a class="stick-wa" href="${WA("Hallo MODUNERA, ich interessiere mich für ein Tiny House.")}" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/><path fill="#1FAF5A" d="M9.3 7.6c.2 0 .4 0 .5.4l.7 1.6c.1.2 0 .4-.1.5l-.5.6c-.1.2-.2.3 0 .6.5.9 1.300 1.700 2.300 2.200.3.100.4.100.6-.100l.6-.700c.200-.200.300-.200.500-.100l1.600.800c.200.100.400.200.400.400 0 .500-.300 1.100-.800 1.400-.500.300-1.200.400-2.100.100-2.200-.700-4.200-2.600-5-4.800-.300-.900 0-1.800.600-2.400.200-.300.500-.500.700-.500z"/></svg></a><a class="btn btn-sun" href="#anfrage">${esc(copy.sticky.cta)}</a></div>
 <div class="tip" data-tipbox role="tooltip" hidden></div>
 <script src="${UP}assets/leben/leben.js" defer></script>
 </body>
