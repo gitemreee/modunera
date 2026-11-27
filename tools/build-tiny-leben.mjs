@@ -21,6 +21,7 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { existsSync, readFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { familyScene, bodyMap, seasonScene, europeMap } from "./lib-leben-art.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const BASE = "https://modunera.com";
@@ -30,6 +31,8 @@ const copy = await read("data/tiny-leben.json");
 const pricing = await read("data/pricing.json");
 const models = await read("data/models.json");
 const photos = (await read("data/site-photos.json")).photos;
+const germany = await read("data/locations.json");
+const europeSrc = await read("data/europe-locations-source.json");
 
 const ROUTE = copy.route;
 const OUT = join(ROOT, ROUTE, "index.html");
@@ -382,63 +385,6 @@ function explodedSvg() {
 }
 
 /* =============================================================================
-   3  ROUTE — a stylised line from Sakarya to Germany, arc-length sampled here
-   ========================================================================== */
-function routeSvg() {
-  const segs = [
-    [[90, 330], [250, 336], [300, 200], [450, 214]],
-    [[450, 214], [600, 228], [640, 330], [800, 300]],
-    [[800, 300], [940, 274], [960, 140], [1110, 104]],
-  ];
-  const bz = (p, t) => { const u = 1 - t; return [0, 1].map((i) => u * u * u * p[0][i] + 3 * u * u * t * p[1][i] + 3 * u * t * t * p[2][i] + t * t * t * p[3][i]); };
-  const pts = [];
-  for (const s of segs) for (let i = 0; i <= 60; i++) pts.push(bz(s, i / 60));
-  const len = [0];
-  for (let i = 1; i < pts.length; i++) len.push(len[i - 1] + Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]));
-  const total = len[len.length - 1];
-  const at = (f) => { const target = f * total; const i = len.findIndex((l) => l >= target); return pts[Math.max(0, i)]; };
-  const d = `M${segs[0][0].join(" ")}` + segs.map((s) => ` C${s[1].join(" ")} ${s[2].join(" ")} ${s[3].join(" ")}`).join("");
-  const nodes = copy.route_steps.map((st, i) => {
-    const [x, y] = at(i / (copy.route_steps.length - 1)).map(r1);
-    return `<g class="r-node" data-i="${i}" transform="translate(${x} ${y})"><circle r="17"/><text y="5">${i + 1}</text></g>`;
-  }).join("");
-  const hills = ridge(71, 330, 60, 30).d.replace(/-100 1100/g, "-100 460").replace(/1700 1100/g, "1700 460");
-  return `<svg class="r-svg" viewBox="0 0 1200 420" role="img" aria-labelledby="r-title"><title id="r-title">Schematische Route vom Werk in Sakarya bis zum Stellplatz in Deutschland, fünf Schritte</title>
-<path class="r-hills" d="${hills}"/>
-<path class="r-track" d="${d}"/><path class="r-done" d="${d}" pathLength="1"/>
-${nodes}
-<text class="r-end" x="70" y="388">Sakarya, Türkei</text><text class="r-end" x="1130" y="70" text-anchor="end">Dein Stellplatz, Deutschland</text>
-<g class="r-truck"><g transform="translate(-34 -34)"><rect class="r-trailer" x="0" y="26" width="52" height="6" rx="2"/><path class="r-house" d="M4 26 V10 L28 4 L48 8 V26 Z"/><rect class="r-cab" x="52" y="14" width="16" height="18" rx="3"/><circle class="r-wheel" cx="12" cy="34" r="4"/><circle class="r-wheel" cx="40" cy="34" r="4"/><circle class="r-wheel" cx="62" cy="34" r="4"/></g></g>
-</svg>`;
-}
-
-/* =============================================================================
-   4  SEASON SCENE — the CSS variables of the active season repaint it
-   ========================================================================== */
-function seasonSvg() {
-  const R = rng(91);
-  const crown = [[300, 150, 64], [256, 176, 48], [346, 178, 50], [300, 108, 46], [270, 128, 40], [334, 128, 42]]
-    .map(([x, y, r]) => `<circle cx="${x}" cy="${y}" r="${r}"/>`).join("");
-  let blossoms = "", leaves = "", flakes = "";
-  for (let i = 0; i < 26; i++) blossoms += `<circle cx="${r1(240 + R() * 120)}" cy="${r1(80 + R() * 130)}" r="${r1(3 + R() * 2.5)}"/>`;
-  for (let i = 0; i < 12; i++) leaves += `<g transform="translate(${r1(240 + R() * 130)} ${r1(150 + R() * 40)})"><path style="--d:${r1(R() * 6)}s;--x:${r1(-40 + R() * 80)}px" d="M0 0 q6 -6 12 0 q-6 6 -12 0Z"/></g>`;
-  for (let i = 0; i < 46; i++) flakes += `<circle style="--d:${r1(R() * 8)}s;--x:${r1(-20 + R() * 40)}px" cx="${r1(R() * 600)}" cy="${r1(-20 - R() * 60)}" r="${r1(1.4 + R() * 2.2)}"/>`;
-  return `<svg class="s-svg" viewBox="0 0 600 400" aria-hidden="true" focusable="false">
-<rect class="s-sky" width="600" height="400"/>
-<circle class="s-sun" cx="470" cy="90" r="34"/>
-<path class="s-hill" d="M0 280 Q150 220 300 262 T600 246 V400 H0Z"/>
-<path class="s-ground" d="M0 320 Q200 296 420 312 T600 306 V400 H0Z"/>
-<path class="s-snowground" d="M0 320 Q200 296 420 312 T600 306 V316 Q420 322 200 306 T0 330Z"/>
-<g class="s-house" transform="translate(380 236)"><path class="s-roof" d="M-10 30 L150 16 L150 26 L-10 40Z"/><path class="s-wall" d="M0 38 L140 26 L140 86 L0 86Z"/><rect class="s-win" x="14" y="48" width="56" height="30"/><rect class="s-win" x="98" y="40" width="22" height="46"/><path class="s-snowroof" d="M-12 30 L152 16 L152 12 Q70 14 -12 24Z"/><rect class="s-deck" x="-16" y="86" width="176" height="6"/></g>
-<path class="s-trunk" d="M294 300 L298 180 L290 150 M298 196 L320 160 M296 220 L270 186"/>
-<g class="s-crown">${crown}</g>
-<g class="s-blossom">${blossoms}</g>
-<g class="s-leaves">${leaves}</g>
-<g class="s-flakes">${flakes}</g>
-</svg>`;
-}
-
-/* =============================================================================
    5  CHARTS
    ========================================================================== */
 function spaceChart() {
@@ -483,6 +429,55 @@ function priceStrip() {
     return `<g class="ps-dot" data-model="${m.key}" data-tip="${esc(`${m.name}: ab ${eur(m.price)} ab Werk · ${m.lengths}`)}" tabindex="0"><line class="stem" x1="${X(m.price)}" x2="${X(m.price)}" y1="100" y2="${up ? 62 : 138}"/><circle class="hit" cx="${X(m.price)}" cy="100" r="18"/><circle class="dot" cx="${X(m.price)}" cy="100" r="8"/><text x="${X(m.price)}" y="${up ? 52 : 160}">${esc(m.name)}</text></g>`;
   }).join("");
   return `<svg class="ps-svg" viewBox="0 0 1000 176" role="img" aria-label="${esc(`Preise ab Werk: ${sorted.map((m) => `${m.name} ${eur(m.price)}`).join(", ")}`)}"><line class="axis" x1="30" x2="970" y1="100" y2="100"/>${ticks}${dots}</svg>`;
+}
+
+const ART = { ridge, forestPath, grassPath, heroHouse, rng };
+
+/* the life section: family scene, findings on the body, children in numbers */
+function waffle(value, cls) {
+  let s = "";
+  for (let i = 0; i < 100; i++) s += `<i class="${i < Math.round(value) ? "on" : ""}" style="--i:${i}"></i>`;
+  return `<div class="waffle ${cls}" aria-hidden="true">${s}</div>`;
+}
+function ring24() {
+  // 24 hour segments: about 19–22 h indoors (80–90 %), the rest outside
+  const segs = [];
+  const cx = 110, cy = 110, r0 = 70, r1o = 100;
+  for (let h = 0; h < 24; h++) {
+    const a0 = (h / 24) * Math.PI * 2 - Math.PI / 2 + 0.012, a1 = ((h + 1) / 24) * Math.PI * 2 - Math.PI / 2 - 0.012;
+    const p = (r, a) => `${r1(cx + r * Math.cos(a))} ${r1(cy + r * Math.sin(a))}`;
+    const cls = h < 19 ? "in" : h < 22 ? "mid" : "out";
+    segs.push(`<path class="rg-${cls}" style="--i:${h}" d="M${p(r0, a0)} L${p(r1o, a0)} A${r1o} ${r1o} 0 0 1 ${p(r1o, a1)} L${p(r0, a1)} A${r0} ${r0} 0 0 0 ${p(r0, a0)}Z"/>`);
+  }
+  return `<svg class="ring24" viewBox="0 0 220 220" role="img" aria-label="Von 24 Stunden verbringen wir 80 bis 90 Prozent in Innenräumen"><g>${segs.join("")}</g><text x="110" y="106" class="rg-big">80–90 %</text><text x="110" y="128" class="rg-small">drinnen</text></svg>`;
+}
+function lebenSection() {
+  const L = copy.leben;
+  const cards = L.points.map((p, i) => `<article class="bm-card" data-spot="${p.id}" tabindex="0"><span class="bm-n">${i + 1}</span><div><p class="bm-part">${esc(p.part)}</p><h4>${esc(p.title)}</h4><p>${esc(p.text)}</p><small>${esc(p.source)}</small></div></article>`);
+  const k = L.kids;
+  return `<section class="leben" id="leben">
+  <div class="fam">${familyScene(ART)}</div>
+  <div class="wrap">
+    <header class="leben-head reveal"><p class="eyebrow">${esc(L.kicker)}</p><h2>${esc(L.title)}</h2><p>${esc(L.intro)}</p></header>
+    <div class="fam-cards">${L.family.map((f, i) => `<article class="fam-card reveal" style="--k:${i}"><span class="fam-i">0${i + 1}</span><h3>${esc(f.title)}</h3><p>${esc(f.text)}</p></article>`).join("")}</div>
+    <div class="body-map" data-bodymap>
+      <header class="sec-head reveal"><p class="eyebrow">Natur &amp; Körper</p><h2>${esc(L.body_title)}</h2><p>${esc(L.body_intro)}</p></header>
+      <div class="bm-grid">
+        <div class="bm-col">${cards.slice(0, 4).join("")}</div>
+        <div class="bm-fig">${bodyMap(L.points)}</div>
+        <div class="bm-col">${cards.slice(4).join("")}<aside class="oxy"><h4>${esc(L.oxygen.title)}</h4><p>${esc(L.oxygen.text)}</p><small>${esc(L.oxygen.source)}</small></aside></div>
+      </div>
+    </div>
+    <div class="kids">
+      <header class="sec-head reveal"><p class="eyebrow">Familie</p><h2>${esc(k.title)}</h2><p>${esc(k.intro)}</p></header>
+      <div class="kids-grid">
+        <div class="kcard reveal" data-tip="${esc(k.activity.source)}" tabindex="0"><h3>${esc(k.activity.title)}</h3><div class="waffles"><figure>${waffle(k.activity.girls, "w-girls")}<figcaption><strong>${num(k.activity.girls, 1)}</strong> Mädchen</figcaption></figure><figure>${waffle(k.activity.boys, "w-boys")}<figcaption><strong>${num(k.activity.boys, 1)}</strong> Jungen</figcaption></figure></div><small>${esc(k.activity.source)}</small></div>
+        <div class="kcard reveal" style="--k:1" data-tip="${esc(k.myopia.source)}" tabindex="0"><h3>${esc(k.myopia.title)}</h3><div class="myo"><div class="myo-row"><span>${esc(k.myopia.moreLabel)}</span><div class="myo-track"><i class="myo-bar myo-more" style="--v:${k.myopia.more}"></i></div><strong>${num(k.myopia.more, 1)} %</strong></div><div class="myo-row"><span>${esc(k.myopia.lessLabel)}</span><div class="myo-track"><i class="myo-bar myo-less" style="--v:${k.myopia.less}"></i></div><strong>${num(k.myopia.less, 1)} %</strong></div></div><small>${esc(k.myopia.source)}</small></div>
+        <div class="kcard reveal" style="--k:2" data-tip="${esc(k.indoors.source)}" tabindex="0"><h3>${esc(k.indoors.title)}</h3>${ring24()}<p class="ring-l">${esc(k.indoors.value)} ${esc(k.indoors.label)}</p><small>${esc(k.indoors.source)}</small></div>
+      </div>
+    </div>
+  </div>
+</section>`;
 }
 
 /* =============================================================================
@@ -573,7 +568,7 @@ ${ld}
 <a class="skip" href="#warum">Zum Inhalt springen</a>
 <header class="bar" data-bar>
   <a class="bar-logo" href="${UP}" aria-label="MODUNERA Startseite"><img src="${UP}assets/brand/modunera-master-logo-mountain-v1-white-600.png" width="600" height="151" alt="MODUNERA"></a>
-  <nav class="bar-links" aria-label="Abschnitte"><a href="#zahlen">Zahlen</a><a href="#rechner">Rechner</a><a href="#alltag">Alltag</a><a href="#aufbau">Aufbau</a><a href="#modelle">Modelle</a><a href="#faq">FAQ</a></nav>
+  <nav class="bar-links" aria-label="Abschnitte"><a href="#leben">Leben</a><a href="#zahlen">Zahlen</a><a href="#rechner">Rechner</a><a href="#alltag">Alltag</a><a href="#aufbau">Aufbau</a><a href="#modelle">Modelle</a><a href="#faq">FAQ</a></nav>
   <div class="bar-clock" aria-hidden="true"><svg viewBox="0 0 24 24"><circle class="cl-sun" cx="12" cy="12" r="5"/><path class="cl-moon" d="M15 4a8 8 0 1 0 5 13 7 7 0 0 1-5-13z"/></svg><span data-clock>05:40</span></div>
   <a class="bar-cta" href="#anfrage">Anfragen</a>
   <i class="bar-progress" data-progress></i>
@@ -604,6 +599,8 @@ ${ld}
     <p class="mani-text">${words}</p>
   </div>
 </section>
+
+${lebenSection()}
 
 <section class="numbers" id="zahlen">
   <div class="wrap">
@@ -676,7 +673,7 @@ ${ld}
     <div class="seasons reveal" data-seasons>
       <p class="eyebrow">Vier Jahreszeiten, ein Zuhause</p>
       <div class="s-tabs" role="tablist" aria-label="Jahreszeiten">${seasonTabs}</div>
-      <div class="s-scene season-${copy.seasons[0].id}" data-scene>${seasonSvg()}</div>
+      <div class="s-scene season-${copy.seasons[0].id}" data-scene>${seasonScene(ART)}</div>
       <div class="s-panel" id="s-panel" role="tabpanel" aria-live="polite"><h3>${esc(copy.seasons[0].title)}</h3><p>${esc(copy.seasons[0].text)}</p></div>
       ${seasonData}
     </div>
@@ -707,6 +704,7 @@ ${ld}
     <div class="ps reveal"><h3>Alle Preise auf einem Strahl</h3><div class="ps-scroll">${priceStrip()}</div></div>
     <div class="m-tools"><div class="chips" role="group" aria-label="Nach Nutzung filtern">${filterChips}</div><button type="button" class="sort" data-sort aria-pressed="false">Nach Preis sortieren</button></div>
     <div class="m-grid" data-models>${modelCards}</div>
+    <div class="plans reveal"><div class="plans-copy"><p class="eyebrow">Jedes Modell als Plan</p><h3>Grundriss, Ansichten, Schnitt und 3D-Modell.</h3><p>Auf jeder Modellseite: als Planungsskizze, mit Möblierung und Maßen. Verbindlich wird es mit der Werkplanung zum Angebot.</p></div><div class="plans-row">${[2, 4, 6, 7].map((n) => `<a class="plan-th" href="${UP}modelle/md-${n}/#drawings"><img src="${UP}assets/images/drawings/de/md-${n}-3d.svg" width="1160" height="800" alt="MD ${n} – 3D-Schnittmodell, Planungsskizze" loading="lazy" decoding="async"><span>MD ${n}</span></a>`).join("")}</div></div>
     <p class="m-more"><a href="${UP}modelle/">Alle Modelle mit Grundrissen und Details</a></p>
   </div>
 </section>
@@ -719,7 +717,7 @@ ${ld}
 <section class="route" id="weg" data-route>
   <div class="wrap">
     <header class="sec-head reveal"><p class="eyebrow">Der Weg zu dir</p><h2>Von Sakarya bis vor deine Tür.</h2></header>
-    <div class="r-fig">${routeSvg()}</div>
+    <div class="r-fig">${europeMap({ germany, others: Object.fromEntries(Object.entries(europeSrc).map(([c, v]) => [c, v.cities])) })}</div>
     <ol class="r-steps">${routeSteps}</ol>
   </div>
 </section>

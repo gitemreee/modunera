@@ -19,6 +19,7 @@ node tools/build-modunera-v2.mjs          # navigation, comparison pages, guide 
 node tools/build-modunera-depth.mjs --extend# appendix, product word, blocked-claim removal
 node tools/build-quality-spec.mjs         # the twelve component cards on /qualitaet/
 node tools/build-tiny-leben.mjs           # /tiny-house-leben/: the long-form landing page, own CSS/JS in assets/leben/
+node tools/build-model-drawings.mjs       # plans, elevations, section and 3D sketches on the forty model pages
 node tools/build-hreflang-v7.mjs          # reciprocal five-language clusters
 node tools/build-photo-placement.mjs      # real photographs on factory, projects, quality
 node tools/build-image-attrs.mjs          # intrinsic size, lazy loading, deferred place index

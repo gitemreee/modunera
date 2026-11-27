@@ -415,10 +415,33 @@
     const ang = clamp((Math.atan2(ahead.y - at.y, ahead.x - at.x) * 180) / Math.PI, -24, 24);
     truck.setAttribute("transform", `translate(${at.x.toFixed(1)} ${at.y.toFixed(1)}) rotate(${ang.toFixed(1)})`);
     rDone.style.strokeDashoffset = String(1 - p);
-    const reached = Math.floor(p * (rNodes.length - 1) + 0.02);
+    const reached = Math.min(rSteps.length - 1, Math.floor(p * rSteps.length * 0.999));
     rNodes.forEach((n, i) => n.classList.toggle("on", i <= reached));
     rSteps.forEach((s, i) => s.classList.toggle("on", i === reached));
-    if (rfig.scrollWidth > rfig.clientWidth + 4) rfig.scrollLeft = (at.x / 1200) * rsvg.clientWidth - rfig.clientWidth / 2;
+  }
+
+  /* ------------------------------------------------------------ body map: cards and hotspots in step */
+  const bm = $("[data-bodymap]");
+  if (bm) {
+    const spots = $$(".bm-spot", bm), bcards = $$(".bm-card", bm), ids = bcards.map((c) => c.dataset.spot);
+    let bmIdx = -1, bmUser = false, bmTimer = 0;
+    const bmSet = (id) => {
+      spots.forEach((s) => s.classList.toggle("on", s.dataset.spot === id));
+      bcards.forEach((c) => c.classList.toggle("on", c.dataset.spot === id));
+    };
+    const pick = (id) => { bmUser = true; clearInterval(bmTimer); bmSet(id); };
+    [...spots, ...bcards].forEach((el) => {
+      el.addEventListener("pointerenter", (e) => { if (e.pointerType === "mouse") pick(el.dataset.spot); });
+      el.addEventListener("focus", () => pick(el.dataset.spot));
+      el.addEventListener("click", () => {
+        pick(el.dataset.spot);
+        if (el.classList.contains("bm-spot")) { const c = bcards.find((x) => x.dataset.spot === el.dataset.spot); c && c.scrollIntoView({ behavior: RM ? "auto" : "smooth", block: "nearest" }); }
+      });
+    });
+    new IntersectionObserver(([e]) => {
+      clearInterval(bmTimer);
+      if (e.isIntersecting && !bmUser && !RM) bmTimer = setInterval(() => { bmIdx = (bmIdx + 1) % ids.length; bmSet(ids[bmIdx]); }, 3200);
+    }, { threshold: 0.35 }).observe(bm);
   }
 
   /* ------------------------------------------------------------ the enquiry form */

@@ -2159,4 +2159,16 @@ form[aria-busy="true"] button{opacity:.6;pointer-events:none}
    controls, and the panel while open, take pointer events now. */
 .wa-dock{pointer-events:none}
 .wa-dock .wa-rail,.wa-dock .wa-launch,.wa-dock .wa-call,.wa-dock .wa-tip,.wa-dock.open .wa-panel{pointer-events:auto}
+
+/* --- Technical drawings on the model pages (2026-11-27) ---
+   Planning sketches written by tools/build-model-drawings.mjs: the 3D cut-away
+   and the plans run full width, elevations and section sit side by side. */
+.drawings-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.drawing{margin:0;background:#FCFBF8;border:1px solid var(--line);border-radius:var(--r-soft);overflow:hidden;box-shadow:var(--lift-sm)}
+.drawing a{display:block;overflow:hidden}
+.drawing img{display:block;width:100%;height:auto;transition:transform .6s ease}
+.drawing a:hover img{transform:scale(1.012)}
+.drawing figcaption{padding:12px 16px;font-size:13.5px;color:var(--muted);border-top:1px solid var(--line)}
+.drawing-wide{grid-column:1/-1}
+@media (max-width:720px){.drawings-grid{grid-template-columns:1fr;gap:14px}}
 /* MODUNERA BRAND PALETTE END */

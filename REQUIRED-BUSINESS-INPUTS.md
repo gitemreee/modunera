@@ -275,3 +275,21 @@ the pages currently cannot say.
 - [ ] Ghana / Nigeria / Kenya pilots: real enquiries, port and route experience, a local partner — needed before country pages are written
 - [ ] DRC / Guinea: confirmation of procurement and partnership rules by a local expert
 - [ ] CRM choice (HubSpot, Zoho, Pipedrive) for `crmEndpoint`
+
+## 10. Model drawings (2026-11-27) — turns the planning sketches into plans
+
+The forty model pages now show plans, elevations, a long section and a 3D
+cut-away for MD 1–MD 8 (`tools/build-model-drawings.mjs`, data in
+`data/model-drawings.json`). The owner has no factory drawings yet, so these are
+labelled **Planungsskizze**: layouts follow the "Raumkonzept" text on each model
+page and the catalogue renders; heights are typical tiny-house values, marked "ca.".
+Once the factory confirms the following, edit the data file and rerun the pipeline:
+
+- [ ] Overall height per model (sketch: 4,00 m; MD 6 ca. 4,85 m to the ridge — check transport height)
+- [ ] Floor level above ground on the chassis (sketch: 0,70 m)
+- [ ] Clear height under the loft and loft floor level (sketch: 1,95 m / +2,07 m)
+- [ ] Real ground-floor layouts: kitchen length, bathroom size and fittings, stair or ladder, door positions
+- [ ] Window and door sizes and positions per facade
+- [ ] Facade material per model as built (sketch follows the renders)
+- [ ] Whether every model sits on the chassis with tandem axle as drawn
+- [ ] Shop drawings (DWG/PDF) per model, so the sketches can be replaced rather than corrected
