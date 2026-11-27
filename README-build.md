@@ -18,6 +18,7 @@ node tools/build-intelligence-dashboard.mjs# /intelligence/: market signals, can
 node tools/build-modunera-v2.mjs          # navigation, comparison pages, guide hubs, cookie notice
 node tools/build-modunera-depth.mjs --extend# appendix, product word, blocked-claim removal
 node tools/build-quality-spec.mjs         # the twelve component cards on /qualitaet/
+node tools/build-tiny-leben.mjs           # /tiny-house-leben/: the long-form landing page, own CSS/JS in assets/leben/
 node tools/build-hreflang-v7.mjs          # reciprocal five-language clusters
 node tools/build-photo-placement.mjs      # real photographs on factory, projects, quality
 node tools/build-image-attrs.mjs          # intrinsic size, lazy loading, deferred place index
@@ -71,6 +72,14 @@ navigation, the WhatsApp dock and the sitemap. The news and production-FAQ
 generators run there for the same reason: they emit an empty `<nav class="nav">`
 for v2 to fill, and v2 reads their hub paths and labels out of `data/news.json`
 and `data/production-faq.json` to build the menu entries that point at them.
+
+`build-tiny-leben.mjs` writes one self-contained page, `/tiny-house-leben/`,
+from `data/tiny-leben.json` (copy and sourced figures), `data/pricing.json`,
+`data/models.json` and `data/site-photos.json`. It has no `<nav class="nav">`
+on purpose, so the v2 navigation pass and `build-shell-v3.mjs` leave its own
+art direction alone; its styles and scripts live in `assets/leben/`. It runs
+after the content generators and before the V7 passes, so image attributes,
+lastmod and the sitemap pick it up like any other page.
 
 `build-quality-spec.mjs` runs **after** the `--extend` phase and not before it,
 because the claim pass renames the headings it matches on. The glazing card was
