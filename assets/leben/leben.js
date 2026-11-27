@@ -100,6 +100,12 @@
     const flies = Array.from({ length: opts.flies }, () => ({ x: R(), y: lerp(opts.yMin, opts.yMax, R()), a: R() * 6.28, sp: 0.00012 + R() * 0.00025, ph: R() * 6.28, r: 1.2 + R() * 1.6 }));
     const stars = Array.from({ length: opts.stars || 0 }, () => ({ x: R(), y: R() * (opts.starMax || 0.6), r: 0.4 + R() * R() * 1.6, ph: R() * 6.28, sp: 0.6 + R() * 2 }));
     let shoot = null, nextShoot = 2500;
+    /* one soft glow sprite, drawn once: a radial gradient reads as light, a flat disc reads as grey */
+    const sprite = d.createElement("canvas");
+    sprite.width = sprite.height = 64;
+    const sg = sprite.getContext("2d"), grad = sg.createRadialGradient(32, 32, 0, 32, 32, 32);
+    grad.addColorStop(0, "rgba(255,236,160,1)"); grad.addColorStop(0.18, "rgba(255,214,110,.75)"); grad.addColorStop(0.5, "rgba(255,190,80,.18)"); grad.addColorStop(1, "rgba(255,180,60,0)");
+    sg.fillStyle = grad; sg.fillRect(0, 0, 64, 64);
     function size() {
       dpr = Math.min(2, devicePixelRatio || 1);
       w = canvas.clientWidth; h = canvas.clientHeight;
@@ -137,12 +143,9 @@
         if (f.y < opts.yMin) f.a = Math.abs(f.a); if (f.y > opts.yMax) f.a = -Math.abs(f.a);
         const pulse = 0.35 + 0.65 * Math.max(0, Math.sin(t * 0.002 + f.ph));
         const x = f.x * w, y = f.y * h;
-        ctx.globalAlpha = alpha * pulse * 0.28;
-        ctx.fillStyle = "#FFD77A";
-        ctx.beginPath(); ctx.arc(x, y, f.r * 5, 0, 6.283); ctx.fill();
+        const R2 = f.r * 9;
         ctx.globalAlpha = alpha * pulse;
-        ctx.fillStyle = "#FFF3C4";
-        ctx.beginPath(); ctx.arc(x, y, f.r, 0, 6.283); ctx.fill();
+        ctx.drawImage(sprite, x - R2, y - R2, R2 * 2, R2 * 2);
       }
       ctx.globalAlpha = 1;
       ctx.globalCompositeOperation = "source-over";
