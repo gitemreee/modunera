@@ -537,7 +537,9 @@ main>section{overflow-x:clip}
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
   .hero{height:auto}
-  .hero-stage{position:relative;height:100svh;min-height:620px}
+  .hero-stage{position:relative;height:auto;min-height:100svh}
+  .hero-copy{position:relative;inset:auto;padding-bottom:max(300px,42vh)}
+  .hero-h1{font-size:clamp(2.4rem,6.4vw,5.4rem);max-width:14ch}
   .js .hero-h1{display:block}
   .js .hl{opacity:1!important;transform:none!important}
   .js .hero-foot{opacity:1!important;transform:none!important}

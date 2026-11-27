@@ -152,7 +152,7 @@
     new IntersectionObserver(([e]) => { visible = e.isIntersecting; if (visible) kick(); }, { rootMargin: "100px" }).observe(canvas);
     size();
     if (RM) { visible = true; frame(0); cancelAnimationFrame(raf); running = false; }
-    return { resize: () => { size(); if (RM) { frame(0); cancelAnimationFrame(raf); } }, alpha: (a) => { alpha = a; kick(); } };
+    return { resize: () => { size(); if (RM) { frame(0); cancelAnimationFrame(raf); } }, alpha: (a) => { alpha = a; if (RM) { frame(0); cancelAnimationFrame(raf); running = false; } else kick(); } };
   }
   const heroFlies = sky2d($('[data-flies="hero"]'), { flies: vw < 700 ? 18 : 34, yMin: 0.58, yMax: 0.95, seed: 11 });
   const ctaSky = sky2d($('[data-flies="cta"]'), { flies: vw < 700 ? 14 : 26, yMin: 0.62, yMax: 0.92, stars: vw < 700 ? 90 : 190, starMax: 0.55, shooting: true, seed: 29 });
@@ -431,7 +431,7 @@
       if (!res.ok) throw new Error(String(res.status));
       lead.classList.add("sent");
       status.className = "f-status ok";
-      status.textContent = "Danke! Deine Anfrage ist bei uns angekommen. Wir melden uns per E-Mail – meist schon mit einem ersten Vorschlag.";
+      status.textContent = "Danke! Deine Anfrage ist bei uns angekommen. Wir melden uns per E-Mail.";
       btn.textContent = "Gesendet";
     } catch {
       status.className = "f-status err";
@@ -446,7 +446,7 @@
     ticking = false;
     updateBar();
     const hr = hero.getBoundingClientRect();
-    if (hr.bottom > 0) setHero(RM ? 0.66 : pinProgress(hero));
+    if (hr.bottom > 0) setHero(RM ? 1 : pinProgress(hero));
     updateMani();
     updateDay();
     updateExplode();
