@@ -275,3 +275,43 @@ the pages currently cannot say.
 - [ ] Ghana / Nigeria / Kenya pilots: real enquiries, port and route experience, a local partner — needed before country pages are written
 - [ ] DRC / Guinea: confirmation of procurement and partnership rules by a local expert
 - [ ] CRM choice (HubSpot, Zoho, Pipedrive) for `crmEndpoint`
+
+## 10. Model drawings (2026-11-27) — turns the planning sketches into plans
+
+The forty model pages now show plans, elevations, a long section and a 3D
+cut-away for MD 1–MD 8 (`tools/build-model-drawings.mjs`, data in
+`data/model-drawings.json`). The owner has no factory drawings yet, so these are
+labelled **Planungsskizze**: layouts follow the "Raumkonzept" text on each model
+page and the catalogue renders; heights are typical tiny-house values, marked "ca.".
+Once the factory confirms the following, edit the data file and rerun the pipeline:
+
+- [ ] Overall height per model (sketch: 4,00 m; MD 6 ca. 4,85 m to the ridge — check transport height)
+- [ ] Floor level above ground on the chassis (sketch: 0,70 m)
+- [ ] Clear height under the loft and loft floor level (sketch: 1,95 m / +2,07 m)
+- [ ] Real ground-floor layouts: kitchen length, bathroom size and fittings, stair or ladder, door positions
+- [ ] Window and door sizes and positions per facade
+- [ ] Facade material per model as built (sketch follows the renders)
+- [ ] Whether every model sits on the chassis with tandem axle as drawn
+- [ ] Shop drawings (DWG/PDF) per model, so the sketches can be replaced rather than corrected
+
+## 11. Commercial terms stated by the owner (2026-11-27) — published on `/tiny-house-leben/` only
+
+The owner answered a structured set of questions on 2026-11-27. The answers are
+published on the landing page (`data/tiny-leben.json`, keys `kaufen`, `faq`,
+`making`) marked "Angaben des Herstellers", with "maßgeblich ist der
+Kaufvertrag". They are **not** yet used anywhere else on the site, and each one
+still needs the evidence listed here before it spreads to the model pages, the
+production FAQ or the catalogue.
+
+| Statement as published | Evidence still needed |
+|---|---|
+| Deliveries in Germany exist; photos, a customer quote and video are available | The photos, the quote (name or initials, town, consent) and the video — nothing is shown until they arrive |
+| Guarantee: 10 years on the load-bearing steel structure, 2 years on fit-out and services | Written guarantee conditions (§ 479 BGB asks for specific content); who the guarantor is |
+| Payment: 50 % on order, 30 % mid-production, 20 % before shipping | Contract template; review by a German lawyer (consumer contract, distance selling) |
+| Photo/video report for every production phase; inspection by live video or at the factory before the last payment | A named person responsible; this is now a published promise |
+| Delivery "in der Regel 6 bis 8 Wochen" from order and deposit | Two or three real order-to-delivery timelines |
+| Documents: structural calculation, material certificates, technical drawings and data sheet | One sample set; note section 10 — the owner also said no model drawings exist yet |
+| Prices exclude German import VAT (19 %) and any duty; the buyer pays them | Customs broker confirmation of the procedure and of duty treatment (see section 6) |
+| Show house in Germany by appointment; factory visit; live video tour | The show-house address and the partner's name (owner chose "auf Anfrage" for the site) |
+| After-sales service by a partner in Germany | Partner name, scope and a written agreement |
+| Reply to enquiries within one working day | Service hours and holiday cover; the WhatsApp dock still says "Antwort meist am selben Tag" (de) and "Meestal dezelfde dag antwoord" (nl), which the claim register does not catch |

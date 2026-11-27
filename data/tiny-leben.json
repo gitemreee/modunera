@@ -1,0 +1,980 @@
+{
+  "_comment": [
+    "Copy and figures for /tiny-house-leben/, read by tools/build-tiny-leben.mjs.",
+    "Every statistic carries its source in `source`; the page prints it beside the number.",
+    "Prices are not here: they come from data/pricing.json, model names from data/models.json.",
+    "Owner-stated facts (insulation, off-grid options, the Tiny-Dorf in Turkey) are marked",
+    "`owner_stated` and printed as 'Angabe des Herstellers'."
+  ],
+  "updated": "2026-11-27",
+  "route": "tiny-house-leben/",
+  "title": "Tiny House Leben in der Natur – Die Zukunft wohnt klein | MODUNERA",
+  "description": "Warum das Tiny House Leben in der Natur Zukunft hat: Zahlen zu Fläche und Baukosten, ein Kostenrechner und acht Modelle ab 42.900 € ab Werk.",
+  "hero": {
+    "lines": [
+      "Weniger Haus.",
+      "Mehr Himmel.",
+      "Die Zukunft wohnt klein."
+    ],
+    "lead": "Ein Tiny House von MODUNERA: bezugsfertig gebaut in Sakarya, geliefert bis vor deinen Wald, deinen See, deinen Hügel. Scroll durch einen Tag – von der Morgendämmerung bis unter die Sterne.",
+    "cue": "Scroll in den Morgen"
+  },
+  "manifesto": "Wir haben jahrzehntelang geglaubt, ein gutes Leben brauche mehr Quadratmeter. Mehr Zimmer, die wir heizen. Mehr Fläche, die wir putzen. Mehr Kredit, den wir abbezahlen. Ein Tiny House dreht die Rechnung um: weniger Haus – und dafür Morgennebel, Vogelstimmen, ein Horizont vor dem Fenster und Zeit, die wieder dir gehört.",
+  "stats": [
+    {
+      "id": "flaeche",
+      "value": 49.5,
+      "decimals": 1,
+      "unit": "m²",
+      "label": "Wohnfläche pro Kopf in Deutschland",
+      "source": "Destatis, Stand Ende 2025"
+    },
+    {
+      "id": "single",
+      "value": 41,
+      "decimals": 0,
+      "unit": "%",
+      "prefix": "≈ ",
+      "label": "aller Haushalte sind Einpersonenhaushalte",
+      "source": "Destatis, Mikrozensus"
+    },
+    {
+      "id": "baupreis",
+      "value": 37,
+      "decimals": 0,
+      "unit": "%",
+      "prefix": "+",
+      "label": "Baupreise für Wohngebäude seit 2021",
+      "source": "Destatis, Baupreisindex 137,0 im 1. Quartal 2026 (2021 = 100)"
+    },
+    {
+      "id": "last",
+      "value": 12,
+      "decimals": 0,
+      "unit": "%",
+      "prefix": "≈ ",
+      "label": "der Menschen geben über 40 % ihres Einkommens fürs Wohnen aus",
+      "source": "EU-SILC 2024 (Destatis)"
+    }
+  ],
+  "space": {
+    "title": "Wie viel Raum brauchst du wirklich?",
+    "intro": "Jedes Quadrat ist ein Quadratmeter. Was du nicht hast, musst du nicht heizen, nicht putzen und nicht finanzieren.",
+    "blocks": [
+      {
+        "id": "wohnung",
+        "m2": 94,
+        "label": "Durchschnittliche Wohnung",
+        "source": "Destatis, 2024",
+        "tone": "muted"
+      },
+      {
+        "id": "kopf",
+        "m2": 49.5,
+        "label": "Wohnfläche pro Kopf",
+        "source": "Destatis, Ende 2025",
+        "tone": "muted"
+      },
+      {
+        "id": "tiny",
+        "m2": 20.4,
+        "label": "MD 7 Grundfläche (8,00 × 2,55 m) – plus Schlafloft",
+        "source": "MODUNERA Modellmaße",
+        "tone": "accent"
+      }
+    ]
+  },
+  "buildcost": {
+    "title": "Bauen ist teurer geworden",
+    "note": "Baupreisindex für Wohngebäude, 2021 = 100",
+    "bars": [
+      {
+        "label": "2021",
+        "value": 100
+      },
+      {
+        "label": "1. Q. 2026",
+        "value": 137.0
+      }
+    ],
+    "source": "Destatis, Baupreisindex für Wohngebäude"
+  },
+  "forest": {
+    "title": "Ein Drittel Deutschlands ist Wald",
+    "value": 32,
+    "detail": "11,5 Millionen Hektar – jedes Baumsymbol steht für 1 % der Landesfläche.",
+    "source": "Bundeswaldinventur 2022"
+  },
+  "camping": {
+    "value": 44.7,
+    "label": "Übernachtungen auf Campingplätzen in Deutschland 2025 – so viele wie nie zuvor.",
+    "kicker": "Deutschland will raus",
+    "source": "Destatis, Tourismusstatistik 2025"
+  },
+  "interest": {
+    "title": "Wer kann sich ein Leben im Tiny House vorstellen?",
+    "bars": [
+      {
+        "label": "Erwachsene in Deutschland",
+        "value": 23,
+        "source": "YouGov für Interhyp, 2021"
+      },
+      {
+        "label": "Befragte insgesamt",
+        "value": 22,
+        "source": "Civey für DEVK, 2022"
+      },
+      {
+        "label": "Studierende",
+        "value": 33.7,
+        "source": "Civey für DEVK, 2022"
+      }
+    ]
+  },
+  "calculator": {
+    "title": "Rechne es dir aus",
+    "intro": "Ein Rechenbeispiel, kein Angebot: Baukosten eines neuen Einfamilienhauses gegen ein Tiny House – auf Wunsch mit Lieferung und 19 % Einfuhrumsatzsteuer. Grundstück, Erschließung, Fundament bzw. Stellplatz und Nebenkosten sind in beiden Fällen nicht enthalten.",
+    "efh_cost_source": "Baukosten Einfamilienhaus 2.600–3.800 €/m², Richtwerte von Banken und Bausparkassen 2024/2025",
+    "defaults": {
+      "area": 120,
+      "eur_m2": 3200,
+      "rate": 3.5,
+      "years": 20,
+      "equity": 20000
+    },
+    "rate_note": "Zinssatz und Eigenkapital sind Annahmen – stell sie auf deine Bank ein."
+  },
+  "day": [
+    {
+      "time": "06:30",
+      "title": "Aufwachen unter dem Dach",
+      "text": "Das Loft liegt direkt unter dem Himmel. Der Weg vom Bett zum Fenster ist eine Leiter lang.",
+      "photo": "interior-loft-ladder"
+    },
+    {
+      "time": "07:15",
+      "title": "Kaffee auf der Terrasse",
+      "text": "Die Terrasse ist kein Extra, sondern das zweite Wohnzimmer – barfuß, mit Blick in die Bäume.",
+      "photo": "aframe-deck-olive"
+    },
+    {
+      "time": "09:00",
+      "title": "Arbeiten mit Blick ins Grüne",
+      "text": "Ein Tisch am Fenster, gutes Licht, kein Pendeln. Homeoffice fühlt sich anders an, wenn draußen Wald ist.",
+      "photo": "interior-kitchen-desk"
+    },
+    {
+      "time": "12:30",
+      "title": "Kochen ohne Umwege",
+      "text": "Küchenzeile mit Backofen und Holzarbeitsplatte: alles in zwei Schritten erreichbar.",
+      "photo": "interior-kitchen-oven"
+    },
+    {
+      "time": "16:00",
+      "title": "Draußen sitzen, länger",
+      "text": "Hängesessel, Tisch, Sonnenschirm. Wenn das Haus klein ist, wird der Garten groß.",
+      "photo": "unit-exhibition-terrace"
+    },
+    {
+      "time": "19:30",
+      "title": "Sofa, Buch, Regen auf dem Dach",
+      "text": "Abends rückt alles zusammen. Regen klingt im kleinen Haus näher – und gemütlicher.",
+      "photo": "interior-stair-sofa"
+    },
+    {
+      "time": "22:00",
+      "title": "Licht an, Sterne an",
+      "text": "Warmes Licht hinter der Glasfront, darüber ein Himmel ohne Straßenlaternen.",
+      "photo": "aframe-night"
+    }
+  ],
+  "seasons": [
+    {
+      "id": "fruehling",
+      "name": "Frühling",
+      "title": "Fenster auf.",
+      "text": "Die Terrasse geht wieder in Betrieb, die Vögel sind früher wach als du. Ein kleines Haus ist schnell gelüftet und schnell geputzt – der Rest des Tages gehört draußen."
+    },
+    {
+      "id": "sommer",
+      "name": "Sommer",
+      "title": "Draußen wohnen.",
+      "text": "Große Glasflächen holen das Licht herein, Querlüftung bringt die Abendkühle. Verschattung und Klimatechnik werden nach Standort geplant – die Leitungen dafür liegen schon im Rohbau."
+    },
+    {
+      "id": "herbst",
+      "name": "Herbst",
+      "title": "Nebel über der Wiese.",
+      "text": "Holzfassade, Regen auf dem Dach, eine Decke auf dem Sofa. Die Fassade wird nach Standort gewählt: thermisch behandeltes Holz, Verbundplatte oder Stehfalzblech."
+    },
+    {
+      "id": "winter",
+      "name": "Winter",
+      "title": "Warm, auch wenn es schneit.",
+      "text": "Dämmung mit 10 cm Steinwolle (Angabe des Herstellers), Fenster in wärmeisolierten Profilen. Heizung und Frostschutz der Leitungen legen wir für deinen Standort fest – an der Ostsee anders als im Allgäu."
+    }
+  ],
+  "nature": {
+    "title": "Der Wald wirkt.",
+    "text": "In einer Metaanalyse von 2019 gingen Aufenthalte im Wald in den ausgewerteten Studien mit niedrigeren Cortisolwerten einher – einem Marker für Stress. Die Autoren werten das als kurzfristigen Effekt und mahnen weitere Forschung an. Wir versprechen also keine Heilung. Nur einen Wald vor der Tür.",
+    "source": "Antonelli et al., International Journal of Biometeorology, 2019"
+  },
+  "layers": [
+    {
+      "id": "dach",
+      "name": "Dach",
+      "text": "Eindeckung, Dämmung und Unterkonstruktion nach Paket."
+    },
+    {
+      "id": "innen",
+      "name": "Innenausbau",
+      "text": "Schlafloft, Küche mit lackierten Fronten, massive Paneel-Arbeitsplatte, Bad."
+    },
+    {
+      "id": "waende",
+      "name": "Wände",
+      "text": "Geschweißter Stahlrahmen, 10 cm Steinwolle (Angabe des Herstellers), Fassade aus Thermowood+, Verbundplatte oder Stehfalz."
+    },
+    {
+      "id": "fenster",
+      "name": "Fenster & Türen",
+      "text": "Wärmeisolierte PVC-Profile, Isolierverglasung nach Modell und Klima."
+    },
+    {
+      "id": "technik",
+      "name": "Haustechnik",
+      "text": "Halogenfreie 230-V-Installation, flammhemmende Kabelkanäle, vorbereitete Klima-Infrastruktur."
+    },
+    {
+      "id": "boden",
+      "name": "Boden",
+      "text": "Bodenaufbau auf dem Rahmen – Schichten und Stärken im technischen Datenblatt."
+    },
+    {
+      "id": "chassis",
+      "name": "Fahrgestell",
+      "text": "Stahlfahrgestell und vier Kurbelstützen zum Ausrichten am Stellplatz."
+    }
+  ],
+  "model_tags": {
+    "_comment": "Editorial filter tags, derived from use_de in data/pricing.json.",
+    "mc1": [
+      "wohnen",
+      "ferien"
+    ],
+    "mc2": [
+      "wohnen",
+      "familie",
+      "vermietung"
+    ],
+    "mc3": [
+      "buero",
+      "ferien"
+    ],
+    "mc4": [
+      "ferien",
+      "vermietung"
+    ],
+    "mc5": [
+      "wohnen",
+      "buero"
+    ],
+    "mc6": [
+      "ferien",
+      "vermietung"
+    ],
+    "mc7": [
+      "vermietung",
+      "buero"
+    ],
+    "mc8": [
+      "wohnen",
+      "buero"
+    ]
+  },
+  "tag_names": {
+    "alle": "Alle",
+    "wohnen": "Wohnen",
+    "familie": "Familie",
+    "ferien": "Ferien",
+    "vermietung": "Vermietung",
+    "buero": "Büro"
+  },
+  "route_steps": [
+    {
+      "title": "Gespräch",
+      "text": "Du erzählst uns von Ort, Nutzung und Budget – per Formular, Telefon oder WhatsApp."
+    },
+    {
+      "title": "Angebot",
+      "text": "Modell, Ausstattung, Grundriss und Lieferung, schriftlich und mit technischem Datenblatt."
+    },
+    {
+      "title": "Fertigung",
+      "text": "Gebaut im Werk in Sakarya, Türkei – mit Fotos und Videos zu jeder Bauphase."
+    },
+    {
+      "title": "Transport",
+      "text": "Auf dem Tieflader nach Deutschland; in der Regel 6 bis 8 Wochen nach Auftrag."
+    },
+    {
+      "title": "Ankommen",
+      "text": "Abstellen, ausrichten, anschließen lassen – und die erste Nacht unter deinem neuen Himmel."
+    }
+  ],
+  "honest": [
+    {
+      "title": "Baugenehmigung",
+      "text": "Wer in Deutschland dauerhaft in einem Tiny House wohnt, braucht in der Regel eine Baugenehmigung. Zuständig ist das örtliche Bauamt nach der Landesbauordnung. Frag dort früh nach – von uns bekommst du statische Berechnung, Materialnachweise, Zeichnungen und Datenblatt."
+    },
+    {
+      "title": "Grundstück",
+      "text": "Entscheidend ist, wo das Haus stehen darf: Baugrundstück, Ferienhausgebiet oder Campingplatz haben unterschiedliche Regeln für dauerhaftes Wohnen. Das Grundstück ist nicht Teil unseres Angebots."
+    },
+    {
+      "title": "Anschlüsse & Autarkie",
+      "text": "Wasser, Abwasser und Strom werden am Stellplatz von Fachbetrieben angeschlossen. Ohne Anschluss sind ein zusätzlicher Wassertank, eine Grauwasser-Lösung und Solarpaneele möglich (Angabe des Herstellers) – geplant je Standort."
+    },
+    {
+      "title": "Transport",
+      "text": "Mit 2,55 m Breite passt das Haus auf den Tieflader. Breite allein macht ein fertiges Haus aber nicht straßenzulässig – ob und wie es fahren darf, steht je Modell im Angebot."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Was kostet ein Tiny House von MODUNERA?",
+      "a": "Die acht Modelle liegen zwischen {minPrice} und {maxPrice} ab Werk. Für die Lieferung nach Deutschland rechnet unser Konfigurator mit einem Richtwert von {deliveryDE}. Dazu kommt die Einfuhrumsatzsteuer von 19 %, die du bei der Einfuhr zahlst. Den verbindlichen Preis nennt das schriftliche Angebot."
+    },
+    {
+      "q": "Brauche ich in Deutschland eine Baugenehmigung?",
+      "a": "Für dauerhaftes Wohnen in der Regel ja. Zuständig ist das Bauamt deiner Gemeinde nach der jeweiligen Landesbauordnung. Von uns bekommst du dafür die statische Berechnung, Materialnachweise sowie technische Zeichnungen und Datenblatt."
+    },
+    {
+      "q": "Wie läuft die Zahlung?",
+      "a": "In drei Schritten: 50 % bei Auftrag, 30 % zur Produktionsmitte, 20 % vor dem Versand. Grundlage ist ein schriftlicher Kaufvertrag; zu jeder Bauphase bekommst du Fotos und Videos, und vor der letzten Zahlung prüfst du das Haus per Live-Video oder im Werk (Angaben des Herstellers)."
+    },
+    {
+      "q": "Kann man im Tiny House auch im Winter wohnen?",
+      "a": "Ja, wenn das Haus dafür geplant ist: gedämmt wird mit 10 cm Steinwolle (Angabe des Herstellers), Fenster sitzen in wärmeisolierten Profilen. Heizung und Frostschutz legen wir für deinen Standort fest."
+    },
+    {
+      "q": "Geht das auch ohne Wasser- und Stromanschluss?",
+      "a": "Teilweise. Ein zusätzlicher Wassertank, eine Grauwasser-Lösung und Solarpaneele sind möglich (Angabe des Herstellers). Welche Kombination an deinem Ort funktioniert, klären wir im Gespräch."
+    },
+    {
+      "q": "Wie groß sind die Häuser?",
+      "a": "Je nach Modell 8,00 bis 9,70 m lang und 2,55 m breit, mit Schlafloft. Das MD 2 hat zwei Lofts, MD 3 und MD 5 bieten einen zusätzlichen Raum, das MD 4 eine Veranda."
+    },
+    {
+      "q": "Wo werden die Häuser gebaut?",
+      "a": "Im Werk in Sakarya in der Türkei. Von dort kommt das Haus bezugsfertig auf dem Tieflader zu dir."
+    },
+    {
+      "q": "Kann ich mehrere Häuser für einen Ferienpark bestellen?",
+      "a": "Ja. In der Türkei hat das Team ein Tiny-Dorf mit 190 Häusern umgesetzt (Angabe des Herstellers). Für Projekte mit mehreren Einheiten gib im Formular die Anzahl an."
+    },
+    {
+      "q": "Wie lange dauert es bis zur Lieferung?",
+      "a": "In der Regel 6 bis 8 Wochen ab Auftrag und Anzahlung (Angabe des Herstellers). Den Termin für dein Projekt nennt der Kaufvertrag."
+    },
+    {
+      "q": "Welche Garantie gibt es?",
+      "a": "10 Jahre auf die tragende Stahlkonstruktion und 2 Jahre auf Ausbau und Haustechnik (Angaben des Herstellers). Die genauen Bedingungen stehen im Kaufvertrag; deine gesetzlichen Rechte bleiben davon unberührt."
+    },
+    {
+      "q": "Kann ich ein Haus vorher ansehen?",
+      "a": "Ja: im Musterhaus in Deutschland nach Terminabsprache, bei einem Werksbesuch in Sakarya oder in einer Live-Videotour durch ein fertiges Haus."
+    }
+  ],
+  "cta": {
+    "title": "Dein erster Abend unter diesen Sternen beginnt mit einer Nachricht.",
+    "text": "Sag uns, wo dein Haus stehen soll und wie du dort leben willst. Du bekommst innerhalb eines Werktags eine Antwort.",
+    "units": [
+      "1 Haus",
+      "2–5 Häuser",
+      "6–20 Häuser",
+      "Mehr als 20 Häuser"
+    ],
+    "uses": [
+      "Privates Wohnen",
+      "Ferienhaus",
+      "Airbnb / Glamping",
+      "Homeoffice",
+      "Händler / Distributor"
+    ]
+  },
+  "leben": {
+    "kicker": "Kein Haus. Ein Leben.",
+    "title": "Wir verkaufen kein Haus. Wir verkaufen ein Leben.",
+    "intro": "Ein Tiny House ist kleiner als eine Wohnung – und größer als jede Wohnung, sobald du die Tür aufmachst. Die Wiese wird zum Wohnzimmer, der Waldrand zum Spielplatz, der Himmel zur Zimmerdecke.",
+    "family": [
+      {
+        "title": "Mehr Zeit zusammen",
+        "text": "Weniger Fläche heißt weniger putzen, weniger reparieren, weniger Kredit – und mehr Abende zusammen auf der Terrasse."
+      },
+      {
+        "title": "Draußen ist das Kinderzimmer",
+        "text": "Wiese, Bach, Baumhaus: Der Platz, den das Haus spart, liegt direkt vor der Tür."
+      },
+      {
+        "title": "Gemacht für Familien",
+        "text": "Im MD 2 liegen zwei Lofts an den Stirnseiten. Kinder und Eltern schlafen nicht übereinander, sondern mit dem ganzen Wohnraum dazwischen."
+      }
+    ],
+    "body_title": "Was die Natur mit deinem Körper macht",
+    "body_intro": "Sieben Befunde aus der Forschung. Sie zeigen Zusammenhänge, keine Heilversprechen – die Quelle steht bei jedem Punkt.",
+    "points": [
+      {
+        "id": "kopf",
+        "part": "Psyche",
+        "title": "Grün schützt die Psyche",
+        "text": "Wer als Kind mit wenig Grün ums Zuhause aufwuchs, hatte später ein bis zu 55 % höheres Risiko für psychische Erkrankungen – eine Studie mit über 900.000 Menschen.",
+        "source": "Engemann et al., PNAS 2019",
+        "x": 0,
+        "y": 6
+      },
+      {
+        "id": "augen",
+        "part": "Augen",
+        "title": "Kinderaugen sehen weiter",
+        "text": "Erstklässler mit täglich 40 Minuten mehr Zeit im Freien wurden seltener kurzsichtig: 30,4 % statt 39,5 % nach drei Jahren.",
+        "source": "He et al., JAMA 2015",
+        "x": -18,
+        "y": 64
+      },
+      {
+        "id": "schlaf",
+        "part": "Schlaf",
+        "title": "Die innere Uhr findet zurück",
+        "text": "Nach einer Woche Zelten bei reinem Tageslicht lag die innere Uhr rund zwei Stunden früher. Eine kleine Studie mit acht Personen – aber ein klares Signal.",
+        "source": "Wright et al., Current Biology 2013",
+        "x": -62,
+        "y": 30
+      },
+      {
+        "id": "ohren",
+        "part": "Ohren",
+        "title": "Ruhe statt Verkehr",
+        "text": "67 % der Menschen in Deutschland fühlen sich durch Straßenverkehrslärm zumindest etwas gestört. Im Grünen ist die Straße weit weg.",
+        "source": "Umweltbewusstseinsstudie 2024 (BMUV/UBA)",
+        "x": 56,
+        "y": 70
+      },
+      {
+        "id": "luft",
+        "part": "Lunge",
+        "title": "Sauberere Luft",
+        "text": "Abseits von Straßen ist die Luft meist weniger mit Feinstaub belastet; Bäume binden einen Teil davon auf ihren Blättern. Dazu kommt der Duft von Terpenen wie Pinen.",
+        "source": "Umweltbundesamt, Feinstaub-Belastung",
+        "x": -36,
+        "y": 215
+      },
+      {
+        "id": "herz",
+        "part": "Herz",
+        "title": "Ruhigerer Puls",
+        "text": "Mehr Grün im Alltag geht mit niedrigerer Herzfrequenz, niedrigerem diastolischem Blutdruck und seltener Typ-2-Diabetes einher – bei teils begrenzter Studienqualität.",
+        "source": "Twohig-Bennett & Jones, Environmental Research 2018 (143 Studien)",
+        "x": 26,
+        "y": 236
+      },
+      {
+        "id": "stress",
+        "part": "Hormone",
+        "title": "Weniger Stresshormon",
+        "text": "Zeit im Wald geht kurzfristig mit niedrigeren Cortisolwerten einher; die Forschenden betonen, dass die Datenlage noch begrenzt ist.",
+        "source": "Antonelli et al., Int J Biometeorol 2019",
+        "x": 0,
+        "y": 340
+      }
+    ],
+    "oxygen": {
+      "title": "Und der Sauerstoff?",
+      "text": "Ehrlich gesagt: Waldluft enthält nicht mehr Sauerstoff – er macht überall rund 21 % der Luft aus. Was du im Grünen wirklich atmest: weniger Feinstaub, weniger Abgase, mehr Ruhe. Das ist mehr wert als jedes Versprechen.",
+      "source": "NASA Earth Fact Sheet; Umweltbundesamt"
+    },
+    "kids": {
+      "title": "Kinder, die draußen groß werden",
+      "intro": "Ein kleines Haus schickt Kinder nach draußen – nicht als Erziehungsprogramm, sondern weil dort der Platz ist.",
+      "activity": {
+        "title": "Von 100 Kindern erreichen die empfohlenen 60 Minuten Bewegung am Tag …",
+        "girls": 22.4,
+        "boys": 29.4,
+        "source": "Robert Koch-Institut, KiGGS Welle 2 (2014–2017), 3- bis 17-Jährige"
+      },
+      "myopia": {
+        "title": "Kurzsichtig nach drei Jahren",
+        "less": 30.4,
+        "more": 39.5,
+        "lessLabel": "mit 40 Minuten mehr draußen pro Schultag",
+        "moreLabel": "ohne zusätzliche Zeit draußen",
+        "source": "He et al., JAMA 2015, Erstklässler in Guangzhou"
+      },
+      "indoors": {
+        "title": "Ein Tag hat 24 Stunden …",
+        "value": "80–90 %",
+        "label": "davon verbringen wir in Innenräumen.",
+        "source": "Umweltbundesamt, Innenraumluft"
+      }
+    }
+  },
+  "real": {
+    "kicker": "Echt gebaut",
+    "title": "Das ist kein Rendering.",
+    "text": "Dieses Haus steht. Gebaut im Werk in Sakarya, fotografiert an seinem Platz – am Tag und wenn abends das Licht angeht.",
+    "day": "aframe-lawn",
+    "night": "aframe-night",
+    "dayLabel": "Tag",
+    "nightLabel": "Abend",
+    "cta": "Angebot anfordern"
+  },
+  "look": {
+    "kicker": "Schau dich um",
+    "title": "Tipp auf die Punkte.",
+    "intro": "Drei echte Aufnahmen aus gebauten MODUNERA Häusern. Ausstattung, Farben und Geräte legst du im Projekt fest – das hier zeigt, wie es gebaut aussieht.",
+    "scenes": [
+      {
+        "id": "wohnen",
+        "name": "Wohnen",
+        "photo": "interior-loft-stair",
+        "spots": [
+          {
+            "x": 72,
+            "y": 47,
+            "title": "Treppe mit Stauraum",
+            "text": "Jede Stufe ist ein Schrank: Schubladen und Türen statt totem Raum unter der Treppe."
+          },
+          {
+            "x": 88,
+            "y": 19,
+            "title": "Schlafloft",
+            "text": "Oben liegt das Loft – offen zum Wohnraum, mit Brüstung und eigenem Fenster."
+          },
+          {
+            "x": 30,
+            "y": 79,
+            "title": "Sitzbereich",
+            "text": "Platz für ein vollwertiges Sofa, direkt an der Treppe und mit Blick durch den ganzen Raum."
+          },
+          {
+            "x": 94,
+            "y": 77,
+            "title": "Holzofen",
+            "text": "In diesem Haus steht ein Holzofen. Welches Heizkonzept zu deinem Standort passt, klären wir im Projekt."
+          },
+          {
+            "x": 34,
+            "y": 55,
+            "title": "Wand und Elektrik",
+            "text": "Helle Wandverkleidung, Schalter und Steckdosen fertig eingebaut – halogenfreie 230-V-Installation."
+          }
+        ]
+      },
+      {
+        "id": "kueche",
+        "name": "Küche",
+        "photo": "interior-kitchen-desk",
+        "spots": [
+          {
+            "x": 52,
+            "y": 49,
+            "title": "Arbeitsplatte",
+            "text": "Massives Paneel statt beschichteter Spanplatte – die Kante an Spüle und Kochfeld hält mehr aus."
+          },
+          {
+            "x": 65,
+            "y": 50,
+            "title": "Kochfeld",
+            "text": "Eingelassenes Kochfeld; Geräte und Marken legst du mit dem Angebot fest."
+          },
+          {
+            "x": 85,
+            "y": 51,
+            "title": "Spüle",
+            "text": "Einbauspüle mit Armatur, Wasseranschluss am Stellplatz durch einen Fachbetrieb."
+          },
+          {
+            "x": 66,
+            "y": 67,
+            "title": "Einbaugeräte",
+            "text": "Unter der Platte ist Platz für Einbaugeräte – hier ein Geschirrspüler."
+          },
+          {
+            "x": 22,
+            "y": 62,
+            "title": "Essplatz am Fenster",
+            "text": "Ein fester Tisch mit Ausblick: Frühstück, Homeoffice und Abendessen am selben Platz."
+          },
+          {
+            "x": 25,
+            "y": 27,
+            "title": "Fenster",
+            "text": "Fenster und Türen sitzen in wärmeisolierten Profilen; die Verglasung richtet sich nach dem Klima am Standort."
+          }
+        ]
+      },
+      {
+        "id": "aussen",
+        "name": "Außen",
+        "photo": "aframe-deck-olive",
+        "spots": [
+          {
+            "x": 45,
+            "y": 52,
+            "title": "A-Frame-Verglasung",
+            "text": "Die Glasfront im Giebel holt Licht und Landschaft in den Wohnraum."
+          },
+          {
+            "x": 57,
+            "y": 40,
+            "title": "Holzfassade",
+            "text": "Holzverkleidung an der Schauseite. Je nach Standort wählst du Holz, Verbundplatte oder Stehfalzblech."
+          },
+          {
+            "x": 79,
+            "y": 35,
+            "title": "Metallfassade",
+            "text": "Dunkle Metallverkleidung an den Längsseiten – robust gegen Wetter."
+          },
+          {
+            "x": 63,
+            "y": 27,
+            "title": "Loftfenster",
+            "text": "Ein eigenes Fenster im Schlafloft für Licht und Querlüftung."
+          },
+          {
+            "x": 55,
+            "y": 68,
+            "title": "Terrasse",
+            "text": "Die umlaufende Holzterrasse macht aus 20 m² Haus ein Vielfaches an Wohnraum."
+          },
+          {
+            "x": 22,
+            "y": 72,
+            "title": "Zugang",
+            "text": "Stufen und Terrasse werden am Stellplatz geplant und sind nicht Teil des Hauspreises."
+          }
+        ]
+      }
+    ]
+  },
+  "making": {
+    "kicker": "So entsteht dein Haus",
+    "title": "Du siehst es wachsen.",
+    "intro": "Zu jeder Bauphase bekommst du Fotos und Videos aus dem Werk. So weißt du, wo dein Haus steht – und wofür du bezahlst.",
+    "steps": [
+      {
+        "photo": "production-aframe-workshop",
+        "title": "Rohbau",
+        "text": "Der Stahlrahmen steht, die ersten Flächen sind geschlossen. Dein erstes Foto aus der Halle."
+      },
+      {
+        "photo": "production-cladding",
+        "title": "Fassade",
+        "text": "Holz und Metall werden montiert, die Fenster eingesetzt. Das Haus bekommt sein Gesicht."
+      },
+      {
+        "photo": "production-fitout-kitchen",
+        "title": "Innenausbau",
+        "text": "Küche, Bad, Treppe und Loft entstehen. Die Arbeitsplatte trägt noch Schutzfolie."
+      },
+      {
+        "photo": "production-hall-unit",
+        "title": "Abnahme",
+        "text": "Vor dem Versand prüfst du dein Haus – per Live-Video oder persönlich im Werk in Sakarya."
+      },
+      {
+        "photo": "delivery-trailer",
+        "title": "Verladung",
+        "text": "Das fertige Haus geht auf den Tieflader."
+      },
+      {
+        "photo": "transport-road",
+        "title": "Unterwegs",
+        "text": "Auf der Straße zu dir. In der Regel 6 bis 8 Wochen nach Auftrag und Anzahlung steht es an deinem Platz."
+      }
+    ]
+  },
+  "quiz": {
+    "kicker": "30 Sekunden",
+    "title": "Welches Haus passt zu dir?",
+    "intro": "Vier Fragen, eine Empfehlung – mit Preis, Plan und den Gründen dafür.",
+    "questions": [
+      {
+        "id": "personen",
+        "q": "Wie viele Menschen schlafen im Haus?",
+        "options": [
+          {
+            "id": "p2",
+            "label": "1–2",
+            "w": {
+              "mc1": 3,
+              "mc7": 3,
+              "mc8": 3,
+              "mc5": 2,
+              "mc3": 2,
+              "mc6": 2,
+              "mc4": 1,
+              "mc2": 0
+            },
+            "why": "für ein bis zwei Personen geschnitten"
+          },
+          {
+            "id": "p4",
+            "label": "3–4",
+            "w": {
+              "mc2": 3,
+              "mc4": 3,
+              "mc3": 2,
+              "mc5": 2,
+              "mc6": 2,
+              "mc1": 0,
+              "mc7": -6,
+              "mc8": -6
+            },
+            "why": "bietet Schlafplätze für bis zu vier"
+          },
+          {
+            "id": "p5",
+            "label": "4–5",
+            "w": {
+              "mc2": 10,
+              "mc4": -2,
+              "mc3": -2,
+              "mc5": -2,
+              "mc6": -2,
+              "mc1": -6,
+              "mc7": -8,
+              "mc8": -8
+            },
+            "why": "zwei Lofts für vier bis fünf Schlafplätze"
+          }
+        ]
+      },
+      {
+        "id": "nutzung",
+        "q": "Wofür ist es gedacht?",
+        "options": [
+          {
+            "id": "wohnen",
+            "label": "Dauerhaft wohnen",
+            "w": {
+              "mc1": 3,
+              "mc5": 3,
+              "mc8": 3,
+              "mc2": 2,
+              "mc3": 1,
+              "mc6": 1
+            },
+            "why": "für dauerhaftes Wohnen ausgelegt"
+          },
+          {
+            "id": "ferien",
+            "label": "Ferien & Wochenende",
+            "w": {
+              "mc1": 2,
+              "mc4": 3,
+              "mc6": 3,
+              "mc3": 1,
+              "mc7": 1
+            },
+            "why": "als Ferienhaus gedacht"
+          },
+          {
+            "id": "vermieten",
+            "label": "Vermieten",
+            "w": {
+              "mc7": 3,
+              "mc4": 3,
+              "mc2": 3,
+              "mc6": 2,
+              "mc8": 1
+            },
+            "why": "für Vermietung und Glamping geeignet"
+          },
+          {
+            "id": "arbeiten",
+            "label": "Arbeiten & Gäste",
+            "w": {
+              "mc3": 4,
+              "mc5": 3,
+              "mc8": 2,
+              "mc7": 1
+            },
+            "why": "mit Platz für Büro oder Gäste"
+          }
+        ]
+      },
+      {
+        "id": "wichtig",
+        "q": "Was ist dir am wichtigsten?",
+        "options": [
+          {
+            "id": "licht",
+            "label": "Licht und Weite",
+            "w": {
+              "mc1": 4,
+              "mc6": 2,
+              "mc8": 1
+            },
+            "why": "die durchgehende Glasfront holt die Landschaft herein"
+          },
+          {
+            "id": "tuer",
+            "label": "Ein Zimmer mit Tür",
+            "w": {
+              "mc3": 4,
+              "mc4": 3,
+              "mc5": 3
+            },
+            "why": "hat einen abschließbaren Raum im Erdgeschoss"
+          },
+          {
+            "id": "draussen",
+            "label": "Draußen sitzen",
+            "w": {
+              "mc4": 5,
+              "mc1": 1
+            },
+            "why": "die überdachte Veranda gehört zum Grundriss"
+          },
+          {
+            "id": "winter",
+            "label": "Winter und Berge",
+            "w": {
+              "mc6": 5
+            },
+            "why": "das Steildach lässt Schnee ablaufen und schafft Höhe"
+          },
+          {
+            "id": "preis",
+            "label": "Der kleinste Preis",
+            "w": {
+              "mc7": 5,
+              "mc1": 2,
+              "mc8": 2,
+              "mc5": 1
+            },
+            "why": "das günstigste Modell der Reihe"
+          }
+        ]
+      },
+      {
+        "id": "budget",
+        "q": "Dein Budget fürs Haus ab Werk?",
+        "options": [
+          {
+            "id": "b46",
+            "label": "bis 46.000 €",
+            "max": 46000,
+            "why": "liegt in deinem Budget"
+          },
+          {
+            "id": "b50",
+            "label": "bis 50.000 €",
+            "max": 50000,
+            "why": "liegt in deinem Budget"
+          },
+          {
+            "id": "b99",
+            "label": "über 50.000 €",
+            "max": 999999,
+            "why": "dein Budget lässt alle acht Modelle zu"
+          }
+        ]
+      }
+    ],
+    "result": {
+      "kicker": "Unsere Empfehlung",
+      "also": "Passt auch",
+      "ask": "Angebot für {model} anfordern",
+      "plans": "Pläne ansehen",
+      "again": "Noch einmal",
+      "because": "Warum dieses Haus"
+    }
+  },
+  "kaufen": {
+    "kicker": "Sicher kaufen",
+    "title": "Was du schwarz auf weiß bekommst.",
+    "intro": "Ein Haus kauft man nicht auf Zuruf. Das sind unsere Bedingungen – bevor du fragst.",
+    "stated": "Angaben des Herstellers, Stand 27.11.2026. Maßgeblich ist dein Kaufvertrag; deine gesetzlichen Rechte bleiben unberührt.",
+    "weeks": "6–8 Wochen",
+    "weeks_label": "von Auftrag und Anzahlung bis zur Lieferung, in der Regel",
+    "pay": [
+      {
+        "pct": 50,
+        "when": "bei Auftrag",
+        "title": "Vertrag",
+        "text": "Schriftlicher Kaufvertrag mit Liefertermin, Ausstattung und Garantiebedingungen."
+      },
+      {
+        "pct": 30,
+        "when": "zur Produktionsmitte",
+        "title": "Fertigung",
+        "text": "Fotos und Videos zu jeder Bauphase – du siehst, was gebaut ist."
+      },
+      {
+        "pct": 20,
+        "when": "vor dem Versand",
+        "title": "Abnahme",
+        "text": "Du prüfst dein Haus per Live-Video oder im Werk. Erst dann wird der Rest fällig."
+      }
+    ],
+    "guarantee": [
+      {
+        "years": 10,
+        "title": "Jahre Garantie",
+        "text": "auf die tragende Stahlkonstruktion"
+      },
+      {
+        "years": 2,
+        "title": "Jahre Garantie",
+        "text": "auf Ausbau und Haustechnik"
+      }
+    ],
+    "docs": {
+      "title": "Unterlagen fürs Bauamt",
+      "items": [
+        "Statische Berechnung",
+        "Nachweise der verbauten Materialien",
+        "Technische Zeichnungen und Datenblatt"
+      ]
+    },
+    "see": {
+      "title": "Vorher ansehen",
+      "items": [
+        {
+          "title": "Musterhaus in Deutschland",
+          "text": "Besichtigung nach Terminabsprache – den Ort nennen wir dir im Gespräch."
+        },
+        {
+          "title": "Werksbesuch in Sakarya",
+          "text": "Sieh dir die Fertigung an, bevor du unterschreibst."
+        },
+        {
+          "title": "Live-Videotour",
+          "text": "Wir führen dich per Videoanruf durch ein fertiges Haus."
+        }
+      ]
+    },
+    "service": {
+      "title": "Service in Deutschland",
+      "text": "Nach der Übergabe ist unser Partner in Deutschland dein Ansprechpartner vor Ort."
+    },
+    "cost": {
+      "title": "Was es wirklich kostet",
+      "note": "Rechenbeispiel für {model}. Die Einfuhrumsatzsteuer von 19 % zahlst du bei der Einfuhr; ob Zoll anfällt, klärt der Zollagent anhand der Warenpapiere. Grundstück, Stellplatz oder Fundament, Anschlüsse und Terrasse sind nicht enthalten.",
+      "rows": [
+        "Preis ab Werk",
+        "Lieferung nach Deutschland (Richtwert)",
+        "Einfuhrumsatzsteuer 19 %",
+        "Summe (Richtwert)"
+      ]
+    }
+  },
+  "sticky": {
+    "text": "Tiny House ab {minPrice}",
+    "sub": "Antwort in 1 Werktag",
+    "cta": "Anfragen"
+  }
+}
